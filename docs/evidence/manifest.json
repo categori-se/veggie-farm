@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "docs/evidence/README.md",
+      "bytes": 5204,
+      "sha256": "9a4b109537a46dcc974450ecd219da7d700ebfd9f2c560ad62e03c5ee539c31d"
+    },
+    {
+      "path": "docs/evidence/architecture.md",
+      "bytes": 1944,
+      "sha256": "be73cfeef1383ba490fd7854fe49993e95b1f351fdaf39c1d91a84df93a362a0"
+    },
+    {
+      "path": "docs/evidence/aws-readonly.json",
+      "bytes": 1375,
+      "sha256": "4e44a04d4504dad7c8f74cb9cc407d8a80cd016d6e7cdeb76e3a64db934892aa"
+    },
+    {
+      "path": "docs/evidence/aws-toolkit-connection.json",
+      "bytes": 2729,
+      "sha256": "ed9e8341ab0a070cae2093a445cee642087c96d9ab30f5e1f91573d68cb6cb33"
+    },
+    {
+      "path": "docs/evidence/console-connection.json",
+      "bytes": 1815,
+      "sha256": "210b3784c1d77ee97af9c1f166391ef5af93090d54912ed372deedd6c690d7cb"
+    },
+    {
+      "path": "docs/evidence/development-records.json",
+      "bytes": 2896,
+      "sha256": "497ebba9db6c877ddb6ebf36dc2d2955f9dce84ca465bc9937ea69088b8c5c06"
+    },
+    {
+      "path": "docs/evidence/github-verification.json",
+      "bytes": 3141,
+      "sha256": "ebe52505fb7bb395eb5ea81d43b6a00b8528cd55aa71b693a69c4c53412a71f5"
+    },
+    {
+      "path": "docs/evidence/hosted-browser.json",
+      "bytes": 1256,
+      "sha256": "93984fb4177c36744ce35a0bc83e3eed31220fcab986cc854209125624438b69"
+    },
+    {
+      "path": "docs/evidence/submission.md",
+      "bytes": 2851,
+      "sha256": "42d4f50d7921e4b004c49e54b2228f6d4fc40bf540225fe5a245194a99506754"
+    },
+    {
+      "path": "scripts/check-hosted-evidence.mjs",
+      "bytes": 4453,
+      "sha256": "ab9d081ad8605096a87febadd95073a6fc8576ef511a29e353b5502b0f831aa8"
+    }
+  ],
+  "externalMedia": [
+    {
+      "url": "https://veggie.farm/evidence/studio-sample-mobile-20260925.png",
+      "bytes": 72392,
+      "sha256": "97766a0e13b6047a2c85c51374be51104326ea982ae84d8305f0b065c7c0a8d2"
+    },
+    {
+      "url": "https://veggie.farm/evidence/studio-sample-desktop-20260925.png",
+      "bytes": 187041,
+      "sha256": "817df1db77e536709a0c021f5b1c3757aec8c31b3e1311ce79aaab164d24027c"
+    },
+    {
+      "url": "https://veggie.farm/evidence/aws-console-connection.png",
+      "sha256": "fd6adbc179d7d43b0b25708e7ae06a08c4d9d5e3c7f0f5d70c7969061d7fa159"
+    }
+  ],
+  "scope": "Hashes of selected records and actual screenshots; not independent certification"
+}

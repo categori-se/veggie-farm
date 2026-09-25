@@ -8,6 +8,42 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": ".githooks/pre-commit",
+      "bytes": 64,
+      "sha256": "483b92f94c7bfc9646d905f1038daed630bded92de76450da8d0a7686901334e",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": ".githooks/pre-push",
+      "bytes": 43,
+      "sha256": "0bd56a9c005d1280dea6cdbe3e445785d8872f5dff6e4cc70ad4c57a03392218",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug.md",
+      "bytes": 344,
+      "sha256": "9dac091d8a7286b6f5555505bb0eac2b16600ee7b3eb3c629eda8418ca124d2a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 274,
+      "sha256": "43345960d40ebfa5a44e95bc1fd6271ee869197ea6f63bf5b5a0fc7c054b0801",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": ".github/workflows/community.yml",
+      "bytes": 1014,
+      "sha256": "b97b437fca456cb22297f79597e56afd2138131e01886623703d2c5dbfe227e5",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": ".github/workflows/deploy-community.yml",
+      "bytes": 4238,
+      "sha256": "13cdd739152fd68aca297ff447e3b17ec7bc3fb14302f1e53d04d7dd73b1958c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": ".gitignore",
       "bytes": 892,
       "sha256": "0fdb12afaa3a3ac3b8856d4692784af01b837625244c5307d8a1aba79c3fe3cb",
@@ -21,9 +57,15 @@
     },
     {
       "path": "ACKNOWLEDGMENTS.md",
-      "bytes": 933,
-      "sha256": "762852b9551e3f8e7f2d3c2fc45c1333360e7983a18def6422b8d593d1927b77",
+      "bytes": 1271,
+      "sha256": "6930ddab2ff9f0a83ebeb1a9e87118af0c36b77550b4ce38349c896b96e67a21",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1791,
+      "sha256": "096b17e05611d01bdcd345dc7a5889e95b9ba467ea65abec8c28abcbf9caec20",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "LICENSE",
@@ -33,9 +75,15 @@
     },
     {
       "path": "NOTICE.md",
-      "bytes": 1886,
-      "sha256": "8d6187b93f5d54f9d9e9e38e75914c112449f1fcd7ff7ef70669cf00e2868d07",
+      "bytes": 2006,
+      "sha256": "4ba6c55ed5a034d5bff357eb4ffb8e4c7cc586c5198a6f1cf7e3d6360212a73e",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5535,
+      "sha256": "ceb9b95c114ed2dc58642576d25b7e25183e3dcd7ab6c29acd9e0495c4880147",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "SECURITY.md",
@@ -56,6 +104,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "community-release.json",
+      "bytes": 401,
+      "sha256": "7deea15a6be62237b8a335671a2e80f378a3190bcb8726090f04a7db0cd0998e",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "data/demo/community-garden.json",
       "bytes": 7135,
       "sha256": "1c936591e019c2eae04ccd021a1c9eead9d267f62791955c99bfa16e216601f5",
@@ -63,8 +117,8 @@
     },
     {
       "path": "data/reference/datasets.json",
-      "bytes": 2288,
-      "sha256": "df088b74061223fc309faa8b2f4d1c98395605d8cb19a1857bfad406a77c37aa",
+      "bytes": 2328,
+      "sha256": "b3f588196c00394fc9bf504693bc16bf542f1909c81b347da1f47bc4aeede8b3",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -284,21 +338,81 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/evidence/README.md",
+      "bytes": 5204,
+      "sha256": "9a4b109537a46dcc974450ecd219da7d700ebfd9f2c560ad62e03c5ee539c31d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/architecture.md",
+      "bytes": 1944,
+      "sha256": "be73cfeef1383ba490fd7854fe49993e95b1f351fdaf39c1d91a84df93a362a0",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/aws-readonly.json",
+      "bytes": 1375,
+      "sha256": "4e44a04d4504dad7c8f74cb9cc407d8a80cd016d6e7cdeb76e3a64db934892aa",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/aws-toolkit-connection.json",
+      "bytes": 2729,
+      "sha256": "ed9e8341ab0a070cae2093a445cee642087c96d9ab30f5e1f91573d68cb6cb33",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/console-connection.json",
+      "bytes": 1815,
+      "sha256": "210b3784c1d77ee97af9c1f166391ef5af93090d54912ed372deedd6c690d7cb",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/development-records.json",
+      "bytes": 2896,
+      "sha256": "497ebba9db6c877ddb6ebf36dc2d2955f9dce84ca465bc9937ea69088b8c5c06",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/github-verification.json",
+      "bytes": 3141,
+      "sha256": "ebe52505fb7bb395eb5ea81d43b6a00b8528cd55aa71b693a69c4c53412a71f5",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/hosted-browser.json",
+      "bytes": 1256,
+      "sha256": "93984fb4177c36744ce35a0bc83e3eed31220fcab986cc854209125624438b69",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/manifest.json",
+      "bytes": 2406,
+      "sha256": "de268ff066dd1209442bfe36543d0f3e246ef0a790b5c0a73ed86ea52ce0caf2",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/evidence/submission.md",
+      "bytes": 2851,
+      "sha256": "42d4f50d7921e4b004c49e54b2228f6d4fc40bf540225fe5a245194a99506754",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/licenses/NOTICE-GAPS.md",
-      "bytes": 2990,
-      "sha256": "80fa34bb0732932403173f88eb343408fc22bea7ed4c5c16adf2ca180209c373",
+      "bytes": 3735,
+      "sha256": "f8bf834d5dc78f306c291f305c74069ba1eb1b5583bd1e33d18c9aeed8d79ed1",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
     },
     {
       "path": "docs/licenses/PROJECT-RIGHTS.md",
-      "bytes": 2564,
-      "sha256": "99c295920b3436131ab316a8cdd607525e3d97b4e09165734aac2f69d4e9160f",
+      "bytes": 2598,
+      "sha256": "eff551320395623bc043b64f79b15e21b9abf7754a9c9db4108a7c5b454e9b98",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
     },
     {
       "path": "docs/licenses/README.md",
-      "bytes": 5581,
-      "sha256": "6476fe2ef2d34c42f5c2eb1790c71aff717706e09ebe385c3e32094338df8513",
+      "bytes": 5981,
+      "sha256": "3e66b16445e01d1fd432d24843fa980a68a76273b26c62b79c372132624d97c5",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
     },
     {
@@ -310,7 +424,7 @@
     {
       "path": "docs/licenses/browser-notice-map.json",
       "bytes": 41879,
-      "sha256": "71116a7fed1fdc4b710c9f156d16dc4faa656a0cb97185c4200d9959849914c2",
+      "sha256": "b82295d26595af36a8534eb23b549260eb1db0556deb56b1c51e322ca2c1f93e",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
     },
     {
@@ -363,14 +477,14 @@
     },
     {
       "path": "docs/licenses/runtime-npm-notices.json",
-      "bytes": 36554,
-      "sha256": "d1cf71c7d25d8256bc3560769a02cbd98a9f21e93b1cc056b029289c97bf91d8",
+      "bytes": 20447,
+      "sha256": "89c7e1df3b752e4e6b91ed17e3e13d8ebf9d9719080edc62f4264dfb73f754ec",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
     },
     {
       "path": "docs/licenses/runtime-npm-notices.md",
-      "bytes": 100482,
-      "sha256": "3940a1c39e4550892324e78e404dc4010bb5f3c320efe13da4e8517099519590",
+      "bytes": 26335,
+      "sha256": "1acf41bc5fc62e81f44b51d75fef491d610fe7309ac5eca02df6739b56fa28ad",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
     },
     {
@@ -525,8 +639,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 4186,
-      "sha256": "2c77b0fd8997880e4d611298e78a4c45be2d1fbecaf7a6e7d36289ed4723e105",
+      "bytes": 2300,
+      "sha256": "4ba7e703ebb99a68ae1d65ae7c8edf862b672ffb92946637640b1d6510d76b7f",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -608,6 +722,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "scripts/check-hosted-evidence.mjs",
+      "bytes": 4453,
+      "sha256": "ab9d081ad8605096a87febadd95073a6fc8576ef511a29e353b5502b0f831aa8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "scripts/check-public-boundary.mjs",
       "bytes": 2741,
       "sha256": "5fd94f207fdd823c9aaa0708c895ae0de0ce1ae51b7079e439ace72f825fc42b",
@@ -624,6 +744,12 @@
       "bytes": 1757,
       "sha256": "b3c0b184e4cb679910b5bc2483220a4991be3c8b19597803138817d95d723af8",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "scripts/check-source-notice-scope.mjs",
+      "bytes": 2216,
+      "sha256": "6089b9c30fe5ed534901e51da6bdc0a395d52e39671a08e1073802219d7c1535",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "scripts/check-studio-account-boundary.mjs",
@@ -765,8 +891,8 @@
     },
     {
       "path": "src/about/build-evidence.md",
-      "bytes": 5770,
-      "sha256": "e6950ffec2128cd5dcb49e880a5213483b23a981f9928a595a58b9ea80168c74",
+      "bytes": 7055,
+      "sha256": "aa2a82bb77cd85e340a5c4512962975537f8f412a020ca300be6c402077eecbf",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
@@ -804,6 +930,12 @@
       "bytes": 3223,
       "sha256": "6c53a9afd173cfb9d276d1dbaee68057d3508babfb4560dcc527ce3fda9e092b",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/catalog-images.js",
+      "bytes": 98,
+      "sha256": "af6b66b7fe7f7048b6c7f4a815b4cda30d4d2a927b9714139eb2919ab49ea7cf",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/content-card.js",
@@ -968,6 +1100,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/components/plant-report-files.js",
+      "bytes": 5408,
+      "sha256": "f86d6415d6cec90278b2950697344d6a112818ea44f5c08ad6018ee672142141",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/plant-report.js",
       "bytes": 4533,
       "sha256": "9a756db73868d241c9ec16eb8ff69baff55c9f45b4e64aba52c741abaf1dbc6a",
@@ -1065,8 +1203,8 @@
     },
     {
       "path": "src/content/compost/composting-at-home.md",
-      "bytes": 3164,
-      "sha256": "1e3e520feda129fabc648529bfc325c476130aa4e0ee9565d5f293da72880545",
+      "bytes": 3264,
+      "sha256": "953cf2459df00b05bb416a186a8e8c5669b406551b05af894d633540b2715772",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1077,152 +1215,152 @@
     },
     {
       "path": "src/content/fruits/apples.md",
-      "bytes": 7982,
-      "sha256": "44533550f51e19bfe257f78f44458a0b1046f0221ded2c0a0a44fcc0def2218a",
+      "bytes": 7514,
+      "sha256": "597130b8975ead96c47c1f82ebf2f0f85c8e1b59953b38f95b3259762293cc35",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/black-currants.md",
-      "bytes": 5468,
-      "sha256": "e574c72cba9c60d57b26ab5320fd3250de961939030e63617814abb1079e1a97",
+      "bytes": 5265,
+      "sha256": "ee3b5d117133224b10c9146a802ccb0b6026065783386de0b4c021338136dca3",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/blueberries.md",
-      "bytes": 12625,
-      "sha256": "37cb424ea786ce205fe076e104cc726b7b8c83b4f443589138d16cec65678259",
+      "bytes": 11089,
+      "sha256": "29fcbf2e6b15e41d4084c7a2adcfcc6c80ca262e085d766dbf342fe7236869fd",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/gooseberries.md",
-      "bytes": 4953,
-      "sha256": "b7945376eb5dd8bbbd295587003bbc92063124f01d447183dc94d1fec1ec70f2",
+      "bytes": 4736,
+      "sha256": "d0a4309429f942add1c1bc0ce563d5fce51661d5fcccd39f7b9a8674777a2234",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/ground-cherries.md",
-      "bytes": 4767,
-      "sha256": "a7dd2316090c2166e0c9194353d67aeb564e23e09b7d3b0c741f4be0af969699",
+      "bytes": 4557,
+      "sha256": "8acbc6c655494ef07c7a2cd3e0ef5fa4de888e6919aede9396fb2b7aec7ec9ab",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/index.md",
-      "bytes": 4960,
-      "sha256": "398c4fc40aa9da3b8d8b75de8720d0584abd57672266c3d1050714a90477be94",
+      "bytes": 5080,
+      "sha256": "e27ba6affb595d252135b16e3d124d5ccfcef66821b70c8089f36228e3b7cd0b",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/pears.md",
-      "bytes": 5912,
-      "sha256": "5a6b18947ea76e1d7172cef8ed82260a79bfd8c6b7a36cd647d8c813191060dc",
+      "bytes": 5716,
+      "sha256": "d462d1bb6da737e9df447097696fb20c0ee0cbb07e7ce5502fb57f02e2200a49",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/plums.md",
-      "bytes": 5193,
-      "sha256": "e6eaaad0d8a2ead222598ddada57d32c5a06f018d03adbaa55c211e22cc94ab7",
+      "bytes": 4963,
+      "sha256": "5ed38ef0be5762f238de5d6b04398c4247ce4a76d066f2c3c6ba86b16ce6b8b3",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/raspberries.md",
-      "bytes": 6787,
-      "sha256": "bf2be82b084ceb22a0825e83369f914914bda79d3a65ce8b05c8c9adeaff3106",
+      "bytes": 6568,
+      "sha256": "e75df881c0bd947ece321e6e3d14a5d6f9c645bd8c255d1119e5ce8b7667dfa3",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/sour-cherries.md",
-      "bytes": 5051,
-      "sha256": "1650961ce87971e32f1ecb8671e23a1bf710543be3dd18a77633b605a5b749e0",
+      "bytes": 4844,
+      "sha256": "ff99dc574ecb431feabed6715e57635add6726a6d5d21096ab03a2d8ea9eb7c0",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/fruits/strawberries.md",
-      "bytes": 6272,
-      "sha256": "5681e19076ed37cc6fc4200e933c6c0dae176b1571a7241af2bf91615f5e769e",
+      "bytes": 6034,
+      "sha256": "ce699ecbff7e0cd2101a0e9cd4f83ad1da69d0b4a9af77ae63675f6d028128da",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/garden/building-a-garden-that-improves-every-year.md",
-      "bytes": 3066,
-      "sha256": "a5faf57d272b0fb1c4f59591fe8c24b9f1b30dbd1c23319894df9b9373114caa",
+      "bytes": 3134,
+      "sha256": "868017ddf4d64a00a3b647882a76fab04f97318fea196e6ac7882d7fd3017728",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/garden/planning-your-vegetable-garden.md",
-      "bytes": 3706,
-      "sha256": "50d1d74890f55e63d48f2628b45941437fe5b3d86b3028c45fa227cb3ce93c7c",
+      "bytes": 3812,
+      "sha256": "345943759d905318ad8d0ba4fff698fd773980bc70ef3a5ea6bdf40b848f84b8",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/garden/understanding-your-climate.md",
-      "bytes": 3405,
-      "sha256": "a5d7d6fbdac4566e872be120b5171b67cc67c77c9cbbb9e3a9cdc8ac5e81b47b",
+      "bytes": 3541,
+      "sha256": "17957b61e62bd7c638bcccd99c9b9920fbbbca1fb450f7df2c2d48c23c5d0500",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/garden/watering-wisely.md",
-      "bytes": 3437,
-      "sha256": "aaabcaeb248ad460c00cf29b0b35fea44f5937f407ffae6b536eb3d634b48759",
+      "bytes": 3545,
+      "sha256": "97065668455e6ee3e566e6ffeea70ec959caab3e0dfbeab4eacff8a6af038729",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/basil.md",
-      "bytes": 3150,
-      "sha256": "4c974ea5f8c48af8bbe37224050716fcd767ea7c849aeb3d561ebcfc89305c7c",
+      "bytes": 2932,
+      "sha256": "a81a481b301982332f0e1bc678b4bae43f1ea14c0a7ecc7866c85e1e05d4da52",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/cilantro.md",
-      "bytes": 3098,
-      "sha256": "78ec572fef23d3c19c6c7279d5ba115098c4a2e06ff8b3f52ebd8c4ba29cb6c9",
+      "bytes": 2897,
+      "sha256": "462c84595e25d700d8562e1059d8b4e491b09881e213ccfe25d4010ce5b90911",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/dill.md",
-      "bytes": 3060,
-      "sha256": "ea4a941aad55a81b0442c24db8eb36c0656c8693b1c18fdfdc2f445c2ca91c2e",
+      "bytes": 2850,
+      "sha256": "0c0a2d946a93ae41dc8ccd76ff56c2957ff7e722ba66523869310dc1d11ee0f6",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/index.md",
-      "bytes": 2941,
-      "sha256": "6b9142f063aaeb027c4c4cfec926ba3e678e19bae06e9704c133e54381f605d7",
+      "bytes": 2723,
+      "sha256": "d619108e0579681b44c6b465b66f5b58635ef8eb38459fddfce22c7b675a5d06",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/mint.md",
-      "bytes": 3089,
-      "sha256": "9e761c18f0c9b5383198ddeff3133a92ae863f430bcb9b5528ce263ac66550b8",
+      "bytes": 2878,
+      "sha256": "a81a46db3b93d8a5566008e4224d991b728e0aaf9675192deecf35f2b1bd96e3",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/parsley.md",
-      "bytes": 3346,
-      "sha256": "239e2fff00ac365f0d78fce6c6a629fefdc18bf15bbc1eb85526d6dd6787d268",
+      "bytes": 2902,
+      "sha256": "99cec23dbdf4191d1417590ede06b9c429f85dd615380e88b1b28674ee007b83",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/rosemary.md",
-      "bytes": 3063,
-      "sha256": "c37e76fe60590be7b405609f0a5c2d17ec0d7f18b90e3f48417c776595feca53",
+      "bytes": 2863,
+      "sha256": "d9f4b2a11aa24c6223431ed722fb57a77397b7c9986b558b01d1c3d5a6cf0fee",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/sage.md",
-      "bytes": 2984,
-      "sha256": "ff964b57408871b415143061209687772891a29f9507bec613629f752ed560a5",
+      "bytes": 2774,
+      "sha256": "60f1a68591565716f3bf9fb6631623f438f4b755f6b0f1118caf05fe7827e481",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/herbs/thyme.md",
-      "bytes": 3000,
-      "sha256": "4504350a4e6adbb8e918c04a6896c407b0b24fc5eb47e8a66749fd5f0a3fc108",
+      "bytes": 2803,
+      "sha256": "cb5b74de7bd2e449be6e117adb034cff3764f9ae679e43468302af69f485965b",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/index.md",
-      "bytes": 2596,
-      "sha256": "5e8687f5461cdbf766e0e4983dd60830ce7069b54578b10a23aaccb152b109bf",
+      "bytes": 2664,
+      "sha256": "2161d27df8f3a533c187ee63d135435c81865a18504191e73c6bd8283a70dcc1",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1245,8 +1383,8 @@
     },
     {
       "path": "src/content/reference/garden-knowledge-graph.md",
-      "bytes": 2333,
-      "sha256": "84eaed78061018a68b1dc59a40d8ab53269aa3b12e4ded135e51e9c53b15852a",
+      "bytes": 2444,
+      "sha256": "ee8409e3ff7e2f2ddb4d5a13329fbc71478763ea6a10014a3be2767d9fe054f5",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1257,14 +1395,14 @@
     },
     {
       "path": "src/content/reference/illustrations.md",
-      "bytes": 3144,
-      "sha256": "bd0b81c9c0d2bae3413199208866d5ba866133ec5deb48d6673d45dbc95f4adb",
+      "bytes": 3351,
+      "sha256": "8fd1fdecb73832941719d270be3f5e56508749e7fd1d48db089f72f047496820",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/reference/image-credits.md",
-      "bytes": 4439,
-      "sha256": "29940fb0e82dd3db75fb7a95516d85373dca58108c121111943dfa79fd6fcdd3",
+      "bytes": 272,
+      "sha256": "68ee813bba111dde5d7785b7fdd69c7f0a8d1f7a2a053608d62ed08cf941f513",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1275,8 +1413,8 @@
     },
     {
       "path": "src/content/reference/plant-spacing.md",
-      "bytes": 5036,
-      "sha256": "afd2e8fa7a55c13bfbd9ca75c831fd8ee72b3fbacef951a8df45bf9915b658c4",
+      "bytes": 5140,
+      "sha256": "114c947073f13ba21da8eb42814d258147d990865abdbbd45c68e985c65ee74d",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1287,8 +1425,8 @@
     },
     {
       "path": "src/content/seasonal/april-peony-disease-prevention.md",
-      "bytes": 3590,
-      "sha256": "6c67b3e5f9b367e667710d25cede5b828b7f22ab0ac53143b5ffde986be2198c",
+      "bytes": 3677,
+      "sha256": "5a12b0f95f9313e1aabfec97e1c6259c61e47a689dc6b515f0f04bfb77e0f7ec",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1299,8 +1437,8 @@
     },
     {
       "path": "src/content/seasonal/august-overgrown-yellow-cucumbers.md",
-      "bytes": 3018,
-      "sha256": "ab6f86837226bc9888675fab388b17587a73e21c717a8e434788539e2296fd97",
+      "bytes": 2796,
+      "sha256": "eed73daf6975828c036fcc480a08d81206f6a1b59867e089f1b6e3aa5b6d5393",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1311,20 +1449,20 @@
     },
     {
       "path": "src/content/seasonal/july-cucumber-harvest-timing.md",
-      "bytes": 2860,
-      "sha256": "7208c89e26610a8b5986e64ca9df57ac86517b887ec0dc336c97c647a80b50e8",
+      "bytes": 2638,
+      "sha256": "c37092bd21a8f93a984493ee44fbf7b0503bc204331734fe7496140f025b9619",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/seasonal/october-peony-cleanup.md",
-      "bytes": 3051,
-      "sha256": "538584f407356f1b2643967e706b67a65d724539397f957443aa86738ceda0cc",
+      "bytes": 3138,
+      "sha256": "1eeb66c029cff390251e7d55ffd7d219f539113f6915755941facc768a409b57",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/seasonal/september-identifying-unknown-apples.md",
-      "bytes": 3498,
-      "sha256": "e0dd1b3b3adb4105f73300194d3efa2c3851c900ab04928e00882b6bf8689050",
+      "bytes": 3030,
+      "sha256": "ed1607bbe0d83791bef67e7071caeaed3e8d864bd63248fe55c9ce0adde22b6a",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1335,8 +1473,8 @@
     },
     {
       "path": "src/content/soil/building-healthy-soil.md",
-      "bytes": 3385,
-      "sha256": "06097d3c899032b6c39789a373020510bef4a20f5e97c7107f19e13ed5d41b26",
+      "bytes": 3508,
+      "sha256": "a947e36ec4dbaa45b96b27b30b51b6ef98e1ceb0e0d0e4acb6741ffc137e1994",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1353,8 +1491,8 @@
     },
     {
       "path": "src/content/soil/index.md",
-      "bytes": 3808,
-      "sha256": "19e0e1474b28eca4a3233490bb6540d0e5439b15c49cd5c83da9a8f9e1c16283",
+      "bytes": 3955,
+      "sha256": "07a3897fb8e8c7bc69c3d1c7e9f0a60b408ac809d42e8c2ba1b476fb661c7218",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1377,146 +1515,146 @@
     },
     {
       "path": "src/content/vegetables/arugula.md",
-      "bytes": 3204,
-      "sha256": "17c2e09a10b8db70c8cf5f5357fdffde2f0f7a45c6048c077dbc64c0e2754bfe",
+      "bytes": 3032,
+      "sha256": "202533e307529a5e82cf8edcac2982aeea0e0957c207c1ea2e58a4bd2068086e",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/beans.md",
-      "bytes": 3989,
-      "sha256": "b73b0333ca907b0d06c5e3b42300391c9913a1f439ab69d1952e86eaa4ae5895",
+      "bytes": 3535,
+      "sha256": "70bea4d2a050d35da65d0c935da2bc6b78090aa2b7dcc173454c68e906a9b01e",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/beets.md",
-      "bytes": 3618,
-      "sha256": "5de4cfd693f6fcb880710cdb210c4e1a6b7a6e5be77a4996bb7d61f67a336ffd",
+      "bytes": 3410,
+      "sha256": "fee6e906526f154c9850a08c23cb6dfc3f5a917af40ad0514d1cc9fff602c6c1",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/bok-choy.md",
-      "bytes": 3534,
-      "sha256": "834db2eef6ad20344e82a990cb2fbf4813c4a00b566ccd11c829b284a3763f60",
+      "bytes": 3335,
+      "sha256": "c575ca19e152e82ba46bbc30780de137806c264d4acc86ac9aaf6118e6c793da",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/carrots.md",
-      "bytes": 8470,
-      "sha256": "272a1795728845ae9d7f992c16b4241cf801a9180f0f30fd7a00b5784100f6c4",
+      "bytes": 7014,
+      "sha256": "5f7c54680310e37458be66e6b48cd0436bff9dba55db35759c8cc821484b1dbe",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/collards.md",
-      "bytes": 5606,
-      "sha256": "b348927a02c06f0775c6a4217fc89d90da984b6333666e8ec4b11bafd5401c45",
+      "bytes": 4157,
+      "sha256": "169b909eb193ececc9bde6a17c5d3cfed372df56198356820825d44bca9d46d3",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/corn.md",
-      "bytes": 3652,
-      "sha256": "689bcd00e222e7fd17378ef3ed8c9f53733231424db4fe6b78e2cb039060a2e6",
+      "bytes": 3447,
+      "sha256": "0d7f50b1fc9c1a80e5111435f666be2721baa4ba18e0616199a1f70ee5545c51",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/cucumbers.md",
-      "bytes": 3931,
-      "sha256": "4aea244278df20ac7b1182fc973eab3ba0e668935cc6d5ad7418431b7ab794e5",
+      "bytes": 3709,
+      "sha256": "36997872732b3ebff2af3542ed7710e493c66b7427143fe7e4c433cfeb1a2e58",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/garlic.md",
-      "bytes": 3581,
-      "sha256": "53d73b81002c43cb7c308247d0904f921844d789169a2faba7b7083b02f38ed2",
+      "bytes": 3344,
+      "sha256": "9bb2b94c90d08d6a4a8105dc7bd780b1e26792589288d26d30beee03a3eb4d13",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/index.md",
-      "bytes": 8724,
-      "sha256": "1aed1f43d22d1019c9d7adce802a282af258f4a83f6552c79d174223576abb3d",
+      "bytes": 8876,
+      "sha256": "d3bf209b766889f7b0773e5dc37c744496370478713eafc3814b727f85deaaa8",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/kale.md",
-      "bytes": 3487,
-      "sha256": "1900563762163a0791954b5562b6ef3b42f68825a6cffdb6e5e78bb6db2a4df6",
+      "bytes": 3296,
+      "sha256": "996f902496bcbdc2d332fe7b22b78654f79235215bb03cabec333d46645df9e2",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/lettuce.md",
-      "bytes": 3709,
-      "sha256": "dae490cb5562dd35004514f45b1f76d95acdc0cfeb5b5d6317d45933b10a111b",
+      "bytes": 3501,
+      "sha256": "ccab3bb3ab5ad81771fb9f5ae78dc78c3801c2ffdf9544808a0e2746340c7fc0",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/mizuna.md",
-      "bytes": 3445,
-      "sha256": "9eed86112c03107a54350133fdee8151437058de5f069f13be71992e44afa3b5",
+      "bytes": 3230,
+      "sha256": "0551afe285061ebefaabad0d84fbbcbd30e444276081033f7ca0e55ee34b474d",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/onions.md",
-      "bytes": 3695,
-      "sha256": "3d92a81f8e999eadff0344ab2c8609619bc3bebb4d214605e889b629dc1299b4",
+      "bytes": 3503,
+      "sha256": "2636d511c7245fa104c88e111d2ba86d2b99baaff7ad0651df5aab0b7e8ada82",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/peas.md",
-      "bytes": 3554,
-      "sha256": "1749f449bd081c2934378ef99b6ca5c43e6202a67f855be5fe7026ee8a4dd3fe",
+      "bytes": 3346,
+      "sha256": "d0485bdb03e7fba5b2ba0f01ee1bab65704faa74c5c3e431763f2c2f578d8a27",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/peppers.md",
-      "bytes": 3745,
-      "sha256": "0b50d94e341c296547c08ac561613c528390ed780b5ba0dff9757e9f2abe3e27",
+      "bytes": 3514,
+      "sha256": "649e4b36e0edf030f4b337f49a98c2dcab15293367e8b7bbced9a1dc09d9385b",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/potatoes.md",
-      "bytes": 3703,
-      "sha256": "670ead210ee4066a535f71e38b7dc0e2cd10855a1c47771d3f64a4c8aab8dde3",
+      "bytes": 3494,
+      "sha256": "3a0d257e37e06fd44b38d32f3c4aa7fce6e264c11d9d7040a6fd8eb079ab5dcf",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/radishes.md",
-      "bytes": 3709,
-      "sha256": "9cfdb89f136db1a9da5396e67b23e1adc35f0ce52209e12076b94f2dc07cf592",
+      "bytes": 3484,
+      "sha256": "00d7e38b7721ff241dce1c7f126c5c535c137db9ed4bf06278a850826f8fb8f0",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/spinach.md",
-      "bytes": 3623,
-      "sha256": "987d25a100ca2a078cbab4403ee955332a82d3aa0ce954992bc257e0a69e443f",
+      "bytes": 3385,
+      "sha256": "4f6d0480ea5ada587d699fc551bd5af16eb9858a8b7fb703d267af927daa6864",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/swiss-chard.md",
-      "bytes": 3681,
-      "sha256": "72a68d55fcb6e1960464e5d7bbf2387fb39d5575ed4b812aa415225e084791bb",
+      "bytes": 3418,
+      "sha256": "e1351b6ff3841f5b293e977db11903db17dda85f3ef65295a48f2f1481139e85",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/tomatoes.md",
-      "bytes": 9179,
-      "sha256": "14178f29b69c3bc41501eb02075aaff7a1aab355e429ed6e6d8610071d38c88c",
+      "bytes": 7692,
+      "sha256": "47799685de62d5caf952eae55f6c27d9f9a5215dc18a197126716e1ab57d3152",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/turnips.md",
-      "bytes": 3041,
-      "sha256": "914cb49a4850191c07156482042c0ecf1c3a933f7f489a6ad1bf47c527d76ae9",
+      "bytes": 2883,
+      "sha256": "bd959e490aba82d4e80c5e234deb4cf3ddd68f2b72539fd0646b3149b1eec4fc",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/winter-squash.md",
-      "bytes": 3620,
-      "sha256": "d5910b49e43890afe8f59e7a583eb3d6374ef4e054d0875c4409743adf76b096",
+      "bytes": 3421,
+      "sha256": "de9964a5a7817ff40cc2189eae03757a930c89891beb1046fb37e4661058de63",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/content/vegetables/zucchini.md",
-      "bytes": 3599,
-      "sha256": "9c25483f3cfa6ff70082b48595506119236351798f2815ccf263d20100c94e09",
+      "bytes": 3376,
+      "sha256": "e58bda23a3eadfe7776f653484a27f5f527fde78362ee310dfa164900ed8deaa",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1641,8 +1779,8 @@
     },
     {
       "path": "src/data/berkshireBotanicalSpatialEvidence.js",
-      "bytes": 1880,
-      "sha256": "bcdb333703df4dcc8264b0f99776a142ae5e1089ea48e54e8b8c989b9b05f73b",
+      "bytes": 57,
+      "sha256": "c765f7703a21621cc5783bb362e8fbe122a4a2e3038a04a2d5075420b98a4996",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1650,6 +1788,12 @@
       "bytes": 2520,
       "sha256": "f6763569751e3ee9466475e62c09cbda84eae9602674c16c0474b2dcd5ca664e",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/data/catalog-photo-preferences.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/data/community-garden.json",
@@ -1724,6 +1868,18 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/data/gardening-library.json",
+      "bytes": 200397,
+      "sha256": "f9c2f92403c884aa46dfbc4ccfdef58f4a8437168b28c6085ac274b9607fdd88",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/germination.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/data/gis-alignment.schema.json",
       "bytes": 5234,
       "sha256": "d7e4ce122b14d4ab1e1af0f38c497a4cdc10d5db37225a71c02d6e64a8ed251e",
@@ -1749,8 +1905,8 @@
     },
     {
       "path": "src/data/ma-spatial-catalog.json",
-      "bytes": 2557,
-      "sha256": "5d28cbe3e8b34e4ff4b80883f955d805c7d116e1f7d11e160bbcdc5b035d566f",
+      "bytes": 1525,
+      "sha256": "987bf502049384c9c27d347c1d877ef5d2d9ffb85d1769898566a339420fd2e4",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1772,6 +1928,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/data/nursery-catalog.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/data/nutrient-deficiencies.json",
       "bytes": 2256,
       "sha256": "00806b119b55790a6877a7579cf0c216f5b2bf4dc90144a9ce191b103d08b3df",
@@ -1788,6 +1950,354 @@
       "bytes": 1375,
       "sha256": "7b05684c5163b010566955ecfeb17195e5448fc465cd89b86e180372bb4ac6bc",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/data/plant-explorer.json",
+      "bytes": 36388,
+      "sha256": "303e84ed2d30c2296a94f6682dd19eb35429978514854f5940897038e1431230",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-image-attributions.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/0bc3435cd27c318d476f.json",
+      "bytes": 703,
+      "sha256": "1bb64f8fd521ae69055c01bf85476b97ec8dc2ad05bbe25612f28cce8cfc3f5b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/0edf37f0114275972ab7.json",
+      "bytes": 735,
+      "sha256": "f30046f81b57431c83f2bb5eb6477f17d55167fba99834368004afffa9b4ff3f",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/1768e66fd5fb3d77e8d0.json",
+      "bytes": 697,
+      "sha256": "ec2c80f05501c4ee1d76e22bac97dafdcc2efb65d69e8e5b51798cda3e68e30d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/1867109ad020879ee727.json",
+      "bytes": 557,
+      "sha256": "f7300114169f6deb587cb887ce729ef34160afd06e2ceba01da26263e677f22b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/1ab7a5d136bf033e3297.json",
+      "bytes": 723,
+      "sha256": "ed014b0d1e9656e62286e66b1667c38082e66b1e1a3a56dbff031defabca0878",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/1b03d9b986ca6e84a086.json",
+      "bytes": 731,
+      "sha256": "2fe7fead2c1a0ce945f74f45569064a0e6cad92c87eab7e66fd984285936215e",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/1f6789b1f461177453b9.json",
+      "bytes": 741,
+      "sha256": "e4122c4d01edfa9314b55b2c354dc0e4ae658af13e38d9d8ec59724d3773f297",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/243925dbb1acbe4a77d3.json",
+      "bytes": 730,
+      "sha256": "e57994095f5b4949bc7f98f5c891f5201e8449cdfd1e093545ef7eb0aebc6894",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/28de4a7466f22d2f2950.json",
+      "bytes": 562,
+      "sha256": "247aef2d72f681fbe9b9fd4cc56542ac706d6505399655f9e60e8e2a6a063681",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/2a9bece2ad61846764ce.json",
+      "bytes": 744,
+      "sha256": "316414700ea175efc987080bcd24a8b41af1d265d9a9206ab6f8d0d54a470225",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/2ad6eda95f515fbbbc7c.json",
+      "bytes": 671,
+      "sha256": "b2e27d0ca7844dbd1691f41b231d0136152d8b5e5805d8b0c9dbfab926712ecb",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/2b0109aa72bc8717bce9.json",
+      "bytes": 750,
+      "sha256": "baa5092a1ec9ce2c20c280bde36d572548e10f53043e878bbf55ba897852a9a9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/2fbf4fe45dbeec1b32c3.json",
+      "bytes": 697,
+      "sha256": "6a25b609fa7b00164c4268348bf2c342d8d86d391d08af572ce7664cc33bde12",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/372b7e50b275d4410966.json",
+      "bytes": 718,
+      "sha256": "90f7196344a7a877a70e7184239b6e6298a816fb470f302c14bcdf7a6a0dbbf7",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/372bad2ece81fe31b263.json",
+      "bytes": 667,
+      "sha256": "4b9ad15d1d0600fe184283675147adcb5876aa05cab0ac62f61fca992dd7ca3f",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/398ea6169d4d4e982daa.json",
+      "bytes": 663,
+      "sha256": "4b9b10fde0a30047fd5512e1427a5c27b3ce9a0ea2d17d475d3519de7ca6dc04",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/399bb9d81c077a1c5551.json",
+      "bytes": 703,
+      "sha256": "c476bddec04cdcc7b4e2dd35428df1bd59623c6c4d82a3de47571e1fcc73a94f",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/39bc04f791796ce1c8a7.json",
+      "bytes": 725,
+      "sha256": "c1ce8028e0027785031d00e5878d54861c764c02b6d3c88287628380cca5709a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/3a88c42fea0f9ec932de.json",
+      "bytes": 719,
+      "sha256": "4d11ef74f578d2b12640daf832fd374433774f200808bbe8f3813eefb413903c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/3b67fc061f9270d0748e.json",
+      "bytes": 667,
+      "sha256": "d5be72b6e03227bfa42d6e02141abde6deec1f06331be49e47f38f61a8ed2c8d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/403eef72ca0fb326c000.json",
+      "bytes": 679,
+      "sha256": "c5445f5217fddecbf25e36a8283f9c139b7045d56e2bf183217d529f6a70f7c8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/452710cc537348ef9d88.json",
+      "bytes": 679,
+      "sha256": "e1ef1b16f9f04d1b93522b646fa2e4910dbf6c5cd65b91c278feea169da8a1c8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/48eb9bc675534d025c47.json",
+      "bytes": 741,
+      "sha256": "ef1bc8e58e257bf4b50e6fd1eb8e76d1b1003b37e40c8bb366bf7e0239282376",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/495e259a346b55c00f0e.json",
+      "bytes": 747,
+      "sha256": "3a674dd406b7512368db86a6b6ddbf2e7c5f7526cdb5777b844743ec0d46cd01",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/5dc405f33f150ca92cf8.json",
+      "bytes": 550,
+      "sha256": "e4248aa55c61b6d845f75b88069a25e8153cb12d45bb529f6b5b86363b0da740",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/5fabfc53256e2ee5b5ad.json",
+      "bytes": 738,
+      "sha256": "0f5c193d23ecdbc42a3aa087570e838c4a354057a820e3a754b1dcb01f502df9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/63453c8e1fe52e241c39.json",
+      "bytes": 563,
+      "sha256": "b6b87b6c2e2a49316d5af74fa3f90b5078480e55c846813c7c348ea4b9b98a51",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/68b9ee041a9e1602402d.json",
+      "bytes": 728,
+      "sha256": "93204d2b43f51eb41c5d2c532a99b1e553f83feb2e1040874efd1c7de5c102a9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/6d9727e1a8fca7057358.json",
+      "bytes": 566,
+      "sha256": "b1b6c1352867bf2aaf7220afe1bc630eb461a41425ee7f94a189f7a12ca20ed8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/6e039cdc3ae60f4ec1b6.json",
+      "bytes": 566,
+      "sha256": "17a0e5f65210b106286b51753d5f8fccf4450eefbde7f9630f578829a0150102",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/7907a852774c4384ed8b.json",
+      "bytes": 736,
+      "sha256": "c7f229c25dfb785de7f2c32df36a1851ceaa5638c6ab0d8edb038b59adefef8a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/7ec2e9676e709e217e26.json",
+      "bytes": 671,
+      "sha256": "9cc71e68e2fdcbd0c9f1eff0e8d71088a8f7b577b6626f37ec527f9b8fe140a2",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/80af8214a4df608223f9.json",
+      "bytes": 693,
+      "sha256": "9920193ffd6a24fd4f911d1f97f552ec30a5474c771b71a8ce57c300fbcb5901",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/8baec0f5dbc9b24012b9.json",
+      "bytes": 746,
+      "sha256": "24444e3660bd4454cf85a32d03e32178f338c8346d5fc11e3b77214e8240a080",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/8c4837a1392c6ff605f9.json",
+      "bytes": 750,
+      "sha256": "e1ea63464acfbffcdfeefe9e9efcf125db091cc6971b0b8472e02f920f05f78b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/97a064eda43bfaaa13b1.json",
+      "bytes": 554,
+      "sha256": "9316f85bc43df59ce0cebe6b4546b85b369f8299e37593d6bfb080cb1f036b50",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/9ac6f63115f88ec2ebf2.json",
+      "bytes": 742,
+      "sha256": "b571aa84eff15cc5e11c45ec525c053d082aadc481cacc325a09a9bd11298bea",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/b42a998cfddf96a8a527.json",
+      "bytes": 559,
+      "sha256": "d66f2ee5a1fc7d5b30ccd394c86ddf32f6628ec46df01f1d5d189464ff5f796c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/b48c0a2630cdfe4ba1d0.json",
+      "bytes": 693,
+      "sha256": "8a953b803fe88921a7b5afb26ac394bff6b8c303e928ae38092f70161db0a3ef",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/b92c868df51dbdd94f93.json",
+      "bytes": 560,
+      "sha256": "2caee44fe6d540e78cd3963481135664ce7676743aa3f58ba98156f8c26aa06b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/ba9eb7f9c69ab24019b6.json",
+      "bytes": 575,
+      "sha256": "36731b44f7e2dcf4bca32d676c9e0624341e1a0f004fd2b6086f5755ef3a9ad0",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/bfae92b39936e7b8fd87.json",
+      "bytes": 732,
+      "sha256": "d54c3ee693a3f4f9a6bc39da2ccb8d72b0e9e32a266f340e5819209f5b9121fd",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/cddb2b24b7d5e4a3c6ab.json",
+      "bytes": 560,
+      "sha256": "c260c12a7db551080fca0023bfdd9ec8d082109511d0f0cc17a6e4e2f0f417dc",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/d9269bb2cffce621ac1f.json",
+      "bytes": 675,
+      "sha256": "b643f9de3efa5ed41c835f15974087f7d6769ae958de5f9f6f6a9e1c857ce350",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/de76b72e2b53ca6ab0ac.json",
+      "bytes": 705,
+      "sha256": "f94d56a2ad7a7dd3c36f82c048f8b884deb3aa4f4272ef15d91d1105841ffcb2",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/e533bb055d29f2be2202.json",
+      "bytes": 564,
+      "sha256": "3c40f3eba803657c3bc24d3a5dcddfb5d1aa296c756aacf623694a8ea14af362",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/e6604887725a211a7004.json",
+      "bytes": 738,
+      "sha256": "983906758392265bd350b0cd0d768e6d14f2462365799f2f91319f06bb127462",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/e66733a68acce8f629aa.json",
+      "bytes": 554,
+      "sha256": "e5f3040901e3a54b9f99e9b8ad74bb93d03c072d9521c5c88d30af6eea546db8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/e8f622e420690a505f77.json",
+      "bytes": 663,
+      "sha256": "d92e281889558b7f818bebb9729a5ec84507ff592dc01657cc3845e96c4a0c08",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/e965cd200a68000b013b.json",
+      "bytes": 675,
+      "sha256": "cd2408408fa83c2970065fc2e5a6ba31b516ced4bc0b3d3ce72368f7c0d15ce9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/ea1eecac2f33d77b199b.json",
+      "bytes": 738,
+      "sha256": "6ecd16af0ee83753b9140349c7d0cb1ea795bb4dc714fcc3ba7f8c86011c180f",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/f0ffa699b81c7a556613.json",
+      "bytes": 718,
+      "sha256": "d9b40bb45809542898dc89fa1e26d20641af4a4df02a54e5e1cfb5fd4e0474ce",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/f6174cf439203e6012f6.json",
+      "bytes": 709,
+      "sha256": "1717eae244b792390b5c17d628e12b3062cf322a9c460b3f784ff1087549d659",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plant-reports/f731a9c12ab8daa26ef8.json",
+      "bytes": 663,
+      "sha256": "177ecae1b761878f965f96966d6727fcc3c8539862ca4e6096e393aba7d8ae10",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/planting-rules.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/data/plants.json",
+      "bytes": 36239,
+      "sha256": "a2057323102a98f948304cec482a2f54e2689a8745de993fa21f7715c56843a8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/data/propertyContext.js",
@@ -1808,6 +2318,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/data/reviewed-plant-media.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/data/rotation-families.json",
       "bytes": 2945,
       "sha256": "5f0d0b091fda1834b3e0dc737a00fdf218a81b6fb5ec58ee3af036fc7281fa36",
@@ -1815,8 +2331,8 @@
     },
     {
       "path": "src/data/runtime-capabilities.js",
-      "bytes": 130,
-      "sha256": "aec4fe7aa46ea5f9c9afce99d53f94e50a40ca7f31bb2b8e95ab8a0098a0c8d1",
+      "bytes": 41,
+      "sha256": "31318362873083690da9464290023afc14156ead3ffb95f206a06b9cf53008f2",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1850,9 +2366,15 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/data/soil-preferences.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/data/source-citations.json",
-      "bytes": 626978,
-      "sha256": "7e82b5bf4ff0a46207aa1da69b73735824076f5eb741e71932a355d2f038614b",
+      "bytes": 11177,
+      "sha256": "4b5a9884d5acd27163e1a7341a0517d51364edc484e2d17ba78a8e05ecd6dcb0",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1860,6 +2382,12 @@
       "bytes": 29636,
       "sha256": "d27f652eb7c593daae9f29385c58cafd21deb02afff2ea09c2b6c7e5ec65bb75",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/data/spacing.json",
+      "bytes": 10795,
+      "sha256": "6f5236a2f138bfcbb6a091bba28a916c900d7310f139c7df0103022b7c08bc57",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/data/studio-public-collection.json",
@@ -2307,8 +2835,8 @@
     },
     {
       "path": "src/studio.md",
-      "bytes": 13082,
-      "sha256": "57f027b27853113a79bf0faa0b1034a80887347074faf9e9b6ea4dfcf17febd9",
+      "bytes": 12080,
+      "sha256": "399a03ae77e3ac56430a72e5caef5d0506dfa61e740808669c6bf2ad419ae74f",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2385,8 +2913,8 @@
     },
     {
       "path": "src/tools.md",
-      "bytes": 7843,
-      "sha256": "975e350b55281dd05172aae78749a86a41a81af5df69e7cb77fd1df061f5a6a2",
+      "bytes": 7978,
+      "sha256": "7a9c034d8ff37cb81871a808db31bb653adda7a3f3e8ca85c0e0aea5f71ea877",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2571,8 +3099,8 @@
     },
     {
       "path": "tests/gardenPlannerSourceEvidence.test.js",
-      "bytes": 2948,
-      "sha256": "923cc5fb79afdd1dde6670d9c90931e685acca61f92a37594912ade47425eaa6",
+      "bytes": 1462,
+      "sha256": "84c8f141c7318f67fc045b9f7eca67fc2f08cd6455d7c7743ebf831f070a6430",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2613,8 +3141,8 @@
     },
     {
       "path": "tests/groundOverlay.test.js",
-      "bytes": 2267,
-      "sha256": "ba22738b17552f0f91530c199d31aa2a38616bcb67580691336c53fb96e378c6",
+      "bytes": 1285,
+      "sha256": "ece1231e49cca17294fa949eae599969e55df57d09bc35b13e45b02138bdf980",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2637,8 +3165,8 @@
     },
     {
       "path": "tests/kmlToGeoJson.test.js",
-      "bytes": 10889,
-      "sha256": "1815523b18c6f0e6c807fd94c5ae2ce327209493d8136f06feef4caccc03eadf",
+      "bytes": 5985,
+      "sha256": "24ae6bf7c71ce5f174f3ba4a8d5fa4116c753905704e55d1e56096ca606ac180",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2840,6 +3368,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "tests/sourceNoticeScope.test.mjs",
+      "bytes": 925,
+      "sha256": "84494947493a1ad8fd388f9cd5407eae6192617ae459b470fd51c3d608cd839d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "tests/spatialInterchange.test.js",
       "bytes": 8603,
       "sha256": "3cf6ded2872c9eafd984933fe219f4623fd1df51f46ddfcaff91d948facc5ff2",
@@ -2932,8 +3466,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5340,
-      "sha256": "11f4123b3b11dda9f6932649b00863db6c521969a29fde851f1517eeba9add7b"
+      "bytes": 5535,
+      "sha256": "ceb9b95c114ed2dc58642576d25b7e25183e3dcd7ab6c29acd9e0495c4880147"
     },
     {
       "path": "SECURITY.md",
@@ -3144,6 +3678,51 @@
       "path": "docs/architecture/studio-integration.md",
       "bytes": 3593,
       "sha256": "bf910689ae8d5031cb22db9ab22bd46b3601be8c699e74dd2053a5bd25d4f82f"
+    },
+    {
+      "path": "docs/evidence/README.md",
+      "bytes": 3726,
+      "sha256": "2eb86601914a90c9485c59557fc776caf20272e3d842e85ac08517e78bb19c76"
+    },
+    {
+      "path": "docs/evidence/architecture.md",
+      "bytes": 1944,
+      "sha256": "be73cfeef1383ba490fd7854fe49993e95b1f351fdaf39c1d91a84df93a362a0"
+    },
+    {
+      "path": "docs/evidence/aws-readonly.json",
+      "bytes": 1375,
+      "sha256": "4e44a04d4504dad7c8f74cb9cc407d8a80cd016d6e7cdeb76e3a64db934892aa"
+    },
+    {
+      "path": "docs/evidence/console-connection.json",
+      "bytes": 1815,
+      "sha256": "210b3784c1d77ee97af9c1f166391ef5af93090d54912ed372deedd6c690d7cb"
+    },
+    {
+      "path": "docs/evidence/development-records.json",
+      "bytes": 2896,
+      "sha256": "497ebba9db6c877ddb6ebf36dc2d2955f9dce84ca465bc9937ea69088b8c5c06"
+    },
+    {
+      "path": "docs/evidence/github-verification.json",
+      "bytes": 3141,
+      "sha256": "ebe52505fb7bb395eb5ea81d43b6a00b8528cd55aa71b693a69c4c53412a71f5"
+    },
+    {
+      "path": "docs/evidence/hosted-browser.json",
+      "bytes": 1256,
+      "sha256": "93984fb4177c36744ce35a0bc83e3eed31220fcab986cc854209125624438b69"
+    },
+    {
+      "path": "docs/evidence/manifest.json",
+      "bytes": 2230,
+      "sha256": "579975f249ec9dcec31d23eb35041f01c33b7e757724ad33cfc7135566312d61"
+    },
+    {
+      "path": "docs/evidence/submission.md",
+      "bytes": 2210,
+      "sha256": "bb5a8f135d6cf6bd1ae6bd13ece16562bcfdbeb45afb087695f5112aec262e8e"
     },
     {
       "path": "docs/licenses/NOTICE-GAPS.md",
@@ -3414,6 +3993,11 @@
       "path": "scripts/check-garden-decisions.mjs",
       "bytes": 7711,
       "sha256": "6b939b3b8b3b6fdee025fea97f8bbe92c1b32f0dd925b6e094ff1debac9ed8c4"
+    },
+    {
+      "path": "scripts/check-hosted-evidence.mjs",
+      "bytes": 4453,
+      "sha256": "ab9d081ad8605096a87febadd95073a6fc8576ef511a29e353b5502b0f831aa8"
     },
     {
       "path": "scripts/check-public-boundary.mjs",

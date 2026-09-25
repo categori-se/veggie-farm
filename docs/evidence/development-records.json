@@ -1,0 +1,42 @@
+{
+  "assembledAt": "2026-09-25T20:55:45.050371+00:00",
+  "episodes": [
+    {
+      "title": "Restore the public Studio route",
+      "date": "2026-09-22T10:37:00.305845+00:00",
+      "summary": "The retained September 22 record shows /studio previously rendered the homepage. After publishing HTML aliases, a fresh anonymous browser found the planner save control without page or HTTP errors.",
+      "basis": "Summary of an existing retained development/release record, assembled September 25; not a verbatim agent transcript",
+      "originalRecordSha256": "7ddc2553d1bc92b1ccd00cda15dd2346ce06730c0a6cb9918a6619cb135bffc5",
+      "originalRecordBytes": 1053
+    },
+    {
+      "title": "Deploy account infrastructure and verify local recovery",
+      "date": "2026-09-22",
+      "summary": "The September 22 record reports account infrastructure CREATE_COMPLETE, a completed site invalidation, retained rollback copies and browser-local bed/plant/version recovery. Cloud ownership checks were separate later observations.",
+      "basis": "Summary of an existing retained development/release record, assembled September 25; not a verbatim agent transcript",
+      "originalRecordSha256": "7623a72516996c9084d3dd3f1ec59b06f565c078f82422e4bd01232189993688",
+      "originalRecordBytes": 1980
+    },
+    {
+      "title": "Check real account ownership and recovery",
+      "date": "2026-09-22",
+      "summary": "The September 22 record reports hosted checks using two disposable Cognito users, including fresh-profile recovery, stale-update handling and owner isolation. This was synthetic technical acceptance, not gardener feedback.",
+      "basis": "Summary of an existing retained development/release record, assembled September 25; not a verbatim agent transcript",
+      "originalRecordSha256": "8d2c51ab4d9aa462c8878c2e147a8d430676e6fbf4255e7a653eaec30211115d",
+      "originalRecordBytes": 3868
+    },
+    {
+      "title": "Verify the personal-garden release",
+      "date": "2026-09-23",
+      "summary": "The September 23 record reports deployment and hosted acceptance with synthetic users/gardens. External imagery was blocked, and signup/email delivery were outside scope.",
+      "basis": "Summary of an existing retained development/release record, assembled September 25; not a verbatim agent transcript",
+      "originalRecordSha256": "e13ebea15df73bb8eb1ddef2cc80a5a67e023d6b4a4cae9c63792fc5088a8366",
+      "originalRecordBytes": 6030
+    }
+  ],
+  "limits": [
+    "Original operational records are retained privately; these selected summaries are not independently signed attestations.",
+    "The public Git history starts with the September 25 source release and is not retroactively presented as earlier development history.",
+    "The console record, AWS API checks, browser tests and CI establish different observations; none alone proves continuous console access."
+  ]
+}

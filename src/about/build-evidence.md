@@ -22,6 +22,14 @@ On September 22, 2026, the agent controlled Chromium connected to the actual AWS
 
 [View the actual redacted console screenshot](https://veggie.farm/evidence/aws-console-connection.png). Account identifiers, stack ARN and session name were masked during capture. The preserved screenshot SHA-256 is `fd6adbc179d7d43b0b25708e7ae06a08c4d9d5e3c7f0f5d70c7969061d7fa159`. The image is hosted separately from the source repository. It documents an observation; AWS decides whether this method meets the event requirement.
 
+![Actual redacted AWS console capture from the Codex-controlled browser, September 22](https://veggie.farm/evidence/aws-console-connection.png)
+
+### Official AWS MCP connection
+
+On September 25, Codex also connected through AWS's official MCP Proxy to the managed AWS MCP Server, a component of Agent Toolkit for AWS. A successful `aws___run_script` call executed `CloudFormation.DescribeStacks` and returned `UPDATE_COMPLETE`. Authentication used a 15-minute STS session restricted to reading this application's stack; no resources were changed. Codex launched a Python MCP client through its shell tool. This documents an actual MCP interaction, not native MCP tool availability in the existing conversation or installation of the complete Toolkit plugin.
+
+[Inspect the actual request and result](https://github.com/categori-se/veggie-farm/blob/main/docs/evidence/aws-toolkit-connection.json), or browse the [public evidence pack](https://github.com/categori-se/veggie-farm/tree/main/docs/evidence) for dated development records, live browser checks, screenshots, architecture and GitHub CI. The connection follows [AWS's documented SigV4 method](https://docs.aws.amazon.com/agent-toolkit/latest/userguide/getting-started-aws-mcp-server.html).
+
 ## Implementation and evidence
 
 | Claim | What supports it | Limits |
@@ -32,7 +40,7 @@ On September 22, 2026, the agent controlled Chromium connected to the actual AWS
 | Recoverable planning | Recorded browser acceptance covers sample editing, saving, reloading and backup interchange | A test observation is not a gardener testimonial or a guarantee against all data loss |
 | Community impact | The public application offers a concrete gardening workflow without requiring a home address for the sample | No measured adoption, yield improvement or consented pilot results are claimed |
 
-Development combined owner direction, agent-assisted implementation, automated checks and browser acceptance. Existing software retains its own rights. Media is distributed separately and is not part of the planned public source repository. Harvesting implementations and private operational records are excluded.
+Development combined owner direction, agent-assisted implementation, automated checks and browser acceptance. Existing software retains its own rights. Media is distributed separately and is not part of the public source repository. Harvesting implementations and private operational records are excluded.
 
 ## Zero to Shipped status
 

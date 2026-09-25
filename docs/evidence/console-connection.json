@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-22",
+  "method": "Agent-controlled Chromium, authenticated AWS federated session",
+  "connection": "AWS documented STS GetFederationToken plus federation sign-in; session scoped to read-only operations on the existing veggie-farm-accounts CloudFormation stack",
+  "sessionDurationSeconds": 900,
+  "observation": {
+    "host": "us-east-1.console.aws.amazon.com",
+    "title": "Stack veggie-farm-accounts | CloudFormation | us-east-1",
+    "stackStatus": "CREATE_COMPLETE",
+    "cloudFormationResponses": [
+      {
+        "service": "cloudformation",
+        "status": 200
+      },
+      {
+        "service": "cloudformation",
+        "status": 403
+      }
+    ]
+  },
+  "screenshotSha256": "fd6adbc179d7d43b0b25708e7ae06a08c4d9d5e3c7f0f5d70c7969061d7fa159",
+  "redaction": "Account number including hyphenated form, stack ARN and federated session name masked during browser capture; screenshot visually reviewed",
+  "startedAt": "2026-09-22T22:44:21.158Z",
+  "finishedAt": "2026-09-22T22:44:33.776Z",
+  "limits": [
+    "Global stack listing correctly denied by stack-scoped policy",
+    "Telemetry and ancillary console endpoints blocked; screenshot retains related console warnings",
+    "Additional requests over each 180-request ceiling were blocked, not sent",
+    "First attempt blocked AWS static JavaScript; second screenshot missed formatted account ID; final capture corrected masking",
+    "No claim of persistent MCP console integration or organizer acceptance of evidence"
+  ],
+  "officialMethodReference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html",
+  "screenshotUrl": "https://veggie.farm/evidence/aws-console-connection.png",
+  "originalRecordSha256": "8438553b8ba595aa5cebd654c758cb8ad7a5603b8249661731a5348ee1f72bce"
+}

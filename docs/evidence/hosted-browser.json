@@ -1,0 +1,37 @@
+{
+  "observedAt": "2026-09-25T20:58:09.549Z",
+  "kind": "Fresh anonymous browser acceptance of deployed Studio",
+  "url": "https://studio.veggie.farm/",
+  "checks": [
+    {
+      "width": 390,
+      "sample": true,
+      "plantDateEdit": true,
+      "export": true,
+      "reloadPreservesBedsAndPlantings": true,
+      "reimportPreservesBedsAndPlantings": true,
+      "requests": 246,
+      "screenshotSha256": "97766a0e13b6047a2c85c51374be51104326ea982ae84d8305f0b065c7c0a8d2"
+    },
+    {
+      "width": 1440,
+      "sample": true,
+      "plantDateEdit": true,
+      "export": true,
+      "reloadPreservesBedsAndPlantings": true,
+      "reimportPreservesBedsAndPlantings": true,
+      "requests": 246,
+      "screenshotSha256": "817df1db77e536709a0c021f5b1c3757aec8c31b3e1311ce79aaab164d24027c"
+    }
+  ],
+  "errors": [],
+  "blockedNonGET": 0,
+  "blockedExternal": 4,
+  "passed": true,
+  "limits": [
+    "Synthetic browser-local plan in disposable contexts; no sign-in or cloud save.",
+    "External services blocked; this is not their availability test.",
+    "Screenshots are current UI captures, not reconstructions of earlier sessions.",
+    "Reload/import adds a default Planting name; original fields are preserved, not byte-identical JSON."
+  ]
+}
