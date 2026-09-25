@@ -42,7 +42,7 @@ const studioModelAssets = Object.fromEntries(Object.entries(optionalMedia).filte
 const studioHome = document.createElement("div");
 studioHome.className = "studio-transfer-note";
 if (location.hostname === "studio.veggie.farm") {
-  studioHome.innerHTML = '<details open><summary>Find your earlier gardens</summary><p><a href="https://veggie.farm/studio.html">Open the previous planner</a>, export your JSON backup, then use Restore backup here. Browser-saved plans stay on their original site. If you uploaded an account copy, sign in here and choose it to restore. Earlier browser drafts can also be downloaded with the recovery button below.</p></details>';
+  studioHome.innerHTML = '<details><summary>Find your earlier gardens</summary><p><a href="https://veggie.farm/studio.html">Open the previous planner</a>, export your JSON backup, then use Restore backup here. Browser-saved plans stay on their original site. If you uploaded an account copy, sign in here and choose it to restore. Earlier browser drafts can also be downloaded with the recovery button below.</p></details>';
 } else {
   studioHome.textContent = 'Your plan stays in this browser. Download a JSON backup to keep a copy, or explicitly save a private account copy to return to on another device.';
 }
