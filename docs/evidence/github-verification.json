@@ -1,0 +1,103 @@
+{
+  "observedAt": "2026-09-25T20:53:45.042167+00:00",
+  "repository": "https://github.com/categori-se/veggie-farm",
+  "commit": {
+    "sha": "efe1f07a86c57c611503e4ded1e852878dbf1389",
+    "url": "https://github.com/categori-se/veggie-farm/commit/efe1f07a86c57c611503e4ded1e852878dbf1389",
+    "author": "aaronkyle",
+    "committer": "aaronkyle",
+    "date": "2026-09-25T20:34:26Z"
+  },
+  "ci": {
+    "url": "https://github.com/categori-se/veggie-farm/actions/runs/36186691611",
+    "status": "completed",
+    "conclusion": "success",
+    "headSha": "efe1f07a86c57c611503e4ded1e852878dbf1389",
+    "jobs": [
+      {
+        "name": "core",
+        "conclusion": "success",
+        "startedAt": "2026-09-25T20:35:37Z",
+        "completedAt": "2026-09-25T20:36:15Z",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm install --global npm@11.16.0",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm ci --ignore-scripts",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run build:dependency-notices",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run check:dependency-notices",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run check:public-git",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run check:public",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm test",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run test:notices",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run validate:data",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run validate:plants",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run validate:source-notices",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run build",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "GitHub verifies the published snapshot and CI run; the initial commit is not a history of earlier development.",
+    "No deployment is performed by this CI workflow."
+  ]
+}

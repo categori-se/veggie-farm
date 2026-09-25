@@ -16,7 +16,7 @@ export function siteHeader({path='/'}) {
 }
 export function sharedPersistenceCopy(md) {
  if(community) md.core.ruler.before('block','community-links',state=>{
-  state.src=state.src.replace(/https:\/\/studio\.veggie\.farm\/(?=[#"')\s]|$)/g,'/studio').replace(/https:\/\/studio\.veggie\.farm(?=\/)/g,'').replace(/https:\/\/veggie\.farm(?=\/)/g,'');
+  state.src=state.src.replace(/https:\/\/studio\.veggie\.farm\/(?=[#"')\s]|$)/g,'/studio').replace(/https:\/\/studio\.veggie\.farm(?=\/)/g,'').replace(/https:\/\/veggie\.farm(?=\/)(?!\/evidence\/)/g,'');
  });
  md.core.ruler.before('block','fruit-dashboard',state=>{
   const cropPage=state.src.includes('cropGuide(')||state.src.includes('<!-- fruit-growing-profile -->');

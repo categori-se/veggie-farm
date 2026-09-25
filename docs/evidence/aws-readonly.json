@@ -1,0 +1,41 @@
+{
+  "observedAt": "2026-09-25T20:52:43.076070+00:00",
+  "kind": "Fresh agent-executed read-only AWS API verification; not a new console session",
+  "operations": [
+    "CloudFormation DescribeStacks",
+    "CloudFormation ListStackResources",
+    "CloudFront GetDistribution"
+  ],
+  "stack": {
+    "status": "UPDATE_COMPLETE",
+    "createdAt": "2026-09-22 21:38:28.888000+00:00",
+    "resourceTypes": [
+      "AWS::ApiGatewayV2::Api",
+      "AWS::ApiGatewayV2::Stage",
+      "AWS::Cognito::UserPoolClient",
+      "AWS::IAM::Role",
+      "AWS::Lambda::Function",
+      "AWS::Lambda::Permission",
+      "AWS::Logs::LogGroup",
+      "AWS::S3::Bucket",
+      "AWS::S3::BucketPolicy"
+    ],
+    "resourcesComplete": true
+  },
+  "hosting": {
+    "distributionStatus": "Deployed",
+    "enabled": true,
+    "publicDomains": [
+      "www.veggie.farm",
+      "veggie.farm",
+      "studio.veggie.farm"
+    ]
+  },
+  "originalResponseSha256": "2c1cf6ccaced7c64167aa1af076d25340d27c12bc796ff7e35eb4a1dd6e055d2",
+  "handling": "Account IDs, resource ARNs, physical IDs and service outputs omitted. Original response retained privately.",
+  "limits": [
+    "An operator-produced, dated observation; not AWS or organizer certification.",
+    "Resource status alone does not demonstrate application correctness.",
+    "No account data was read or written; no AWS resources were changed."
+  ]
+}

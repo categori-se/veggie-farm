@@ -29,7 +29,7 @@ npm run build
 npm run verify:community
 ```
 
-Strict notice verification currently stops on two documented upstream-text gaps. Resolve them before publication/deployment. Do not bypass the gate just because a static build succeeds. Serve `dist/` with a local server for acceptance; a basic server may require `/studio.html` rather than `/studio` unless it implements the documented rewrites.
+The source-only verification gate accounts for two documented build-tool notice gaps while excluding those tools from redistribution; it still requires complete runtime/browser notices. The broader `validate:dependency-notices` check remains incomplete. See [the precise scope](../../docs/licenses/NOTICE-GAPS.md); do not bundle build tools or bypass the release checks. Serve `dist/` with a local server for acceptance; a basic server may require `/studio.html` rather than `/studio` unless it implements the documented rewrites.
 
 ## Establish static hosting
 
@@ -87,3 +87,5 @@ For rollback, use the private receipt's `previousOriginPath`. Fetch the current 
 The baseline does not provision WAF, budgets, access-log retention, monitoring, alarms, domain registration or backups of user-owned browser data. Configure appropriate host-level abuse limits before advertising the demo widely. The demo's client quotas do not rate-limit static asset traffic.
 
 Official references: [S3 origin access control](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html), [CloudFront URL rewrites](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/example_cloudfront_functions_url_rewrite_single_page_apps_section.html), [CloudFront certificates](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html), [AWS credentials action and OIDC](https://github.com/aws-actions/configure-aws-credentials).
+
+For development-time agent access, see [Connect Codex to your own AWS account](../../docs/architecture/codex-aws.md). Keep that read role separate from deployment credentials.

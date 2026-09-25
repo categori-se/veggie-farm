@@ -1,0 +1,58 @@
+{
+  "observedAt": "2026-09-25T21:05:29.908988+00:00",
+  "proxyVersion": "1.7.0",
+  "endpoint": "https://aws-mcp.us-east-1.api.aws/mcp",
+  "credentialScope": "900-second STS federation; DescribeStacks and ListStackResources on the account stack only",
+  "transport": "Codex executed Python MCP client through official AWS stdio proxy; not a native tool in this already-running conversation",
+  "tools": [
+    "aws___get_presigned_url",
+    "aws___get_tasks",
+    "aws___run_script",
+    "aws___get_regional_availability",
+    "aws___list_regions",
+    "aws___read_documentation",
+    "aws___retrieve_skill",
+    "aws___search_documentation"
+  ],
+  "tool": "aws___run_script",
+  "submittedCode": "response = await call_boto3(service_name='cloudformation', operation_name='DescribeStacks', region_name='us-east-1', params={'StackName': 'veggie-farm-accounts'})\nresult = {'stacks': [{'name': s['StackName'], 'status': s['StackStatus'], 'createdAt': str(s['CreationTime'])} for s in response['Stacks']]}\nresult",
+  "responseSha256": "caa3736357fd53477da315d4cbd486717a8142f15cfa260d8b85d6dc76edd0fb",
+  "status": "verified-success",
+  "response": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "stacks": [
+        {
+          "name": "veggie-farm-accounts",
+          "status": "UPDATE_COMPLETE",
+          "createdAt": "2026-09-22T21:38:28.888000+00:00"
+        }
+      ]
+    },
+    "api_calls": [
+      {
+        "service": "cloudformation",
+        "operation": "DescribeStacks",
+        "status": "success",
+        "n_items": {
+          "Stacks": 1
+        }
+      }
+    ]
+  },
+  "security": {
+    "persistentIamChanges": false,
+    "resourceWrites": false,
+    "credentialsPublished": false,
+    "policyActions": [
+      "cloudformation:DescribeStacks",
+      "cloudformation:ListStackResources"
+    ],
+    "policyResource": "Only the named application stack; account identifier omitted",
+    "enforcement": "STS session policy enforces read-only access. The general run_script tool remains visible; the proxy read-only filter was not used because it hides this tool."
+  },
+  "method": "Codex invoked a Python MCP ClientSession through the official mcp-proxy-for-aws-cli package. Initialize, tools/list and tools/call completed against the managed AWS MCP endpoint. This is not a claim that native MCP tools were loaded into this already-running Codex conversation.",
+  "correction": "An earlier attempt used describe_stacks and returned OperationNotFoundError. The successful attempt used the AWS API operation name DescribeStacks. Both private responses were retained.",
+  "officialDocumentation": "https://docs.aws.amazon.com/agent-toolkit/latest/userguide/getting-started-aws-mcp-server.html"
+}
