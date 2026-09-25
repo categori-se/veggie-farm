@@ -81,8 +81,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5535,
-      "sha256": "ceb9b95c114ed2dc58642576d25b7e25183e3dcd7ab6c29acd9e0495c4880147",
+      "bytes": 5633,
+      "sha256": "0c139d07c597f4c410a0e63bbe612c71da03f302619cf9342a5894c8e0629fa8",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -290,9 +290,15 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/codex-aws.md",
+      "bytes": 8393,
+      "sha256": "03f267af9bb87459d2c02732d13da51109bce2cb1a003f0af663803514722829",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/community-workflow.md",
-      "bytes": 5842,
-      "sha256": "cf14fa8fbeea407929e9b190443a3345674edbd90b3fc30658d42b8937a42832",
+      "bytes": 6278,
+      "sha256": "0c75fd3eea232d15e9ae4f1c7587662b9abb5624d3ede3b838419ee18787c8be",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
@@ -591,8 +597,8 @@
     },
     {
       "path": "examples/aws/DEPLOYMENT.md",
-      "bytes": 9876,
-      "sha256": "33290d780598b15c9f0e35296c1ff109508fb896a5f401ca2bbb49071bd48b2a",
+      "bytes": 10238,
+      "sha256": "03e2c239adbc5f70b17b190d55fe70328605a6307cb9d5d69abe3c29c792d874",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
@@ -849,8 +855,8 @@
     },
     {
       "path": "scripts/lib/site-shell.mjs",
-      "bytes": 5015,
-      "sha256": "0c9e236636c83c4722da3c36052c78d9d1f0b1bf74bac1ac647db8f51f5f9e20",
+      "bytes": 5031,
+      "sha256": "6c46314d4488be05a4426ce4cb9827c8aca16c406c40a0cca4e08532d260c6b7",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -891,8 +897,8 @@
     },
     {
       "path": "src/about/build-evidence.md",
-      "bytes": 7055,
-      "sha256": "aa2a82bb77cd85e340a5c4512962975537f8f412a020ca300be6c402077eecbf",
+      "bytes": 7134,
+      "sha256": "26f78c7b8ba33345442a87e25912b2720a34e887de13538124749d0dec8d5ecb",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {

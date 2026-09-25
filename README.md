@@ -62,3 +62,5 @@ See [the documented build and agent usage](src/about/build-evidence.md), linked 
 Source repository: [categori-se/veggie-farm](https://github.com/categori-se/veggie-farm). This source release excludes installed dependencies, build artifacts, media and private comparison inputs. See the [source distribution notice policy](docs/licenses/NOTICE-GAPS.md#distribution-scope).
 
 [Build evidence pack](docs/evidence/README.md): console method, dated development records, fresh AWS/browser observations, CI proof and submission-ready text. Screenshots are hosted separately.
+
+Develop with your own agent and account: [Connect Codex to AWS](docs/architecture/codex-aws.md).

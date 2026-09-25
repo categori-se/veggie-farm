@@ -22,7 +22,7 @@ On September 22, 2026, the agent controlled Chromium connected to the actual AWS
 
 [View the actual redacted console screenshot](https://veggie.farm/evidence/aws-console-connection.png). Account identifiers, stack ARN and session name were masked during capture. The preserved screenshot SHA-256 is `fd6adbc179d7d43b0b25708e7ae06a08c4d9d5e3c7f0f5d70c7969061d7fa159`. The image is hosted separately from the source repository. It documents an observation; AWS decides whether this method meets the event requirement.
 
-![Actual redacted AWS console capture from the Codex-controlled browser, September 22](https://veggie.farm/evidence/aws-console-connection.png)
+<img src="https://veggie.farm/evidence/aws-console-connection.png" rel="external" alt="Actual redacted AWS console capture from the Codex-controlled browser, September 22" loading="lazy" style="max-width:100%;height:auto">
 
 ### Official AWS MCP connection
 
