@@ -42,7 +42,7 @@ const studioModelAssets = Object.fromEntries(Object.entries(optionalMedia).filte
 const studioHome = document.createElement("div");
 studioHome.className = "studio-transfer-note";
 if (location.hostname === "studio.veggie.farm") {
-  studioHome.innerHTML = '<details open><summary>Find your earlier gardens</summary><p><a href="https://veggie.farm/studio.html">Open the previous planner</a>, export your JSON backup, then use Restore backup here. Browser-saved plans stay on their original site. If you uploaded an account copy, sign in here and choose it to restore. Earlier browser drafts can also be downloaded with the recovery button below.</p></details>';
+  studioHome.innerHTML = '<details><summary>Find your earlier gardens</summary><p><a href="https://veggie.farm/studio.html">Open the previous planner</a>, export your JSON backup, then use Restore backup here. Browser-saved plans stay on their original site. If you uploaded an account copy, sign in here and choose it to restore. Earlier browser drafts can also be downloaded with the recovery button below.</p></details>';
 } else {
   studioHome.textContent = 'Your plan stays in this browser. Download a JSON backup to keep a copy, or explicitly save a private account copy to return to on another device.';
 }
@@ -68,7 +68,8 @@ display(studioHome);
     <p class="kicker">Garden layout tool · Massachusetts</p>
     <h1 id="studio-title">Garden Planning Studio</h1>
     <p>Design your own collection of gardens, spaces and beds. Arrange plants in 2D or 3D, keep named versions, and save private account copies to return from another browser. Try the editable practice bed without an account.</p>
-    <p><a href="https://veggie.farm/tools">Find guidance for your next gardening decision</a> · <a href="https://veggie.farm/about/">Why veggie.farm?</a></p>
+    <p>For Massachusetts and New England home gardeners: turn growing guidance into a plan for your own space. The practice garden needs no account or home address.</p>
+    <p><a href="https://veggie.farm/tools">Gardening guidance</a> · <a href="https://veggie.farm/about/build-evidence">How it was built: AWS and Codex evidence</a> · <a href="https://github.com/categori-se/veggie-farm">Open-source code</a></p>
     <details class="studio-first-visit"><summary>First visit? Try a plan in two minutes</summary><ol><li>Select <strong>Start a practice garden</strong> for an editable 4 × 8 ft bed.</li><li>Name or resize the bed. Open <strong>Plants</strong>, add a supported plant and inspect its spacing.</li><li>Compare 2D and 3D if available. Save, reload and download a JSON backup to keep outside this browser.</li></ol><p>Public-garden studies are incomplete references. The preview shows layout and plant representations; it does not simulate sunlight or predict yield. Account uploads are optional and explicit.</p></details>
   </div>
   <details class="studio-study-details" id="public-garden-examples">
