@@ -1,0 +1,783 @@
+[
+  {
+    "officialUrl": "https://planthardiness.ars.usda.gov/pages/map-downloads",
+    "license": "U.S. federal government source; verify individual downloadable artifacts before redistribution.",
+    "reliabilityScore": 0.8,
+    "recommendedUse": [
+      "USDA hardiness zones",
+      "average annual extreme minimum temperature",
+      "perennial suitability"
+    ],
+    "citationFormat": "USDA Agricultural Research Service. USDA Plant Hardiness Zone Map. https://planthardiness.ars.usda.gov/pages/map-downloads.",
+    "id": "source:usda-phzm",
+    "name": "USDA Plant Hardiness Zone Map",
+    "organization": "USDA Agricultural Research Service",
+    "kind": "climate",
+    "bestFor": [
+      "USDA hardiness zones",
+      "average annual extreme minimum temperature",
+      "perennial suitability"
+    ],
+    "licensing": "U.S. federal government source; verify individual downloadable artifacts before redistribution.",
+    "updateFrequency": "Periodic map releases",
+    "geographicCoverage": "United States and territories",
+    "apiAvailability": "Download pages and map assets; future GIS import should verify current service endpoints.",
+    "downloadFormat": [
+      "PNG",
+      "PDF",
+      "SVG",
+      "TIF",
+      "EPS",
+      "JPG"
+    ],
+    "citationUrl": "https://planthardiness.ars.usda.gov/pages/map-downloads",
+    "localCacheStrategy": "Cache zone geometry and simplified lookup tables by map edition; keep the edition year on every derived node.",
+    "status": "candidate"
+  },
+  {
+    "officialUrl": "https://www.ncei.noaa.gov/cdo-web/webservices/v2",
+    "license": "NOAA public data; API token and rate limits apply.",
+    "reliabilityScore": 0.8,
+    "recommendedUse": [
+      "daily observations",
+      "temperature history",
+      "precipitation history",
+      "station metadata",
+      "climate normals"
+    ],
+    "citationFormat": "NOAA National Centers for Environmental Information. NOAA Climate Data Online Web Services. https://www.ncei.noaa.gov/cdo-web/webservices/v2.",
+    "id": "source:noaa-cdo",
+    "name": "NOAA Climate Data Online Web Services",
+    "organization": "NOAA National Centers for Environmental Information",
+    "kind": "weather-climate",
+    "bestFor": [
+      "daily observations",
+      "temperature history",
+      "precipitation history",
+      "station metadata",
+      "climate normals"
+    ],
+    "licensing": "NOAA public data; API token and rate limits apply.",
+    "updateFrequency": "Varies by dataset and station",
+    "geographicCoverage": "United States and global station datasets",
+    "apiAvailability": "REST API with token",
+    "downloadFormat": [
+      "JSON"
+    ],
+    "citationUrl": "https://www.ncei.noaa.gov/cdo-web/webservices/v2",
+    "localCacheStrategy": "Cache station metadata, daily summaries, and derived frost metrics by location and date range.",
+    "status": "candidate"
+  },
+  {
+    "officialUrl": "https://gml.noaa.gov/grad/solcalc/",
+    "license": "NOAA public reference; calculator page notes it is no longer actively supported.",
+    "reliabilityScore": 0.8,
+    "recommendedUse": [
+      "sunrise",
+      "sunset",
+      "solar noon",
+      "solar position reference"
+    ],
+    "citationFormat": "NOAA Global Monitoring Laboratory. NOAA Solar Calculator. https://gml.noaa.gov/grad/solcalc/.",
+    "id": "source:noaa-solar-calculator",
+    "name": "NOAA Solar Calculator",
+    "organization": "NOAA Global Monitoring Laboratory",
+    "kind": "solar",
+    "bestFor": [
+      "sunrise",
+      "sunset",
+      "solar noon",
+      "solar position reference"
+    ],
+    "licensing": "NOAA public reference; calculator page notes it is no longer actively supported.",
+    "updateFrequency": "Static reference/calculator",
+    "geographicCoverage": "Global coordinate-based calculations",
+    "apiAvailability": "No stable public API identified; use as formula/reference source only.",
+    "downloadFormat": [
+      "HTML calculator"
+    ],
+    "citationUrl": "https://gml.noaa.gov/grad/solcalc/",
+    "localCacheStrategy": "Implement local deterministic day-length calculations and cite formula/source assumptions.",
+    "status": "candidate"
+  },
+  {
+    "officialUrl": "https://sdmdataaccess.nrcs.usda.gov/",
+    "license": "U.S. federal government source; verify generated extracts and attribution requirements.",
+    "reliabilityScore": 0.8,
+    "recommendedUse": [
+      "SSURGO tabular data",
+      "soil map units",
+      "soil texture",
+      "drainage",
+      "available water capacity",
+      "restrictive layers"
+    ],
+    "citationFormat": "USDA Natural Resources Conservation Service. NRCS Soil Data Access. https://sdmdataaccess.nrcs.usda.gov/.",
+    "id": "source:nrcs-soil-data-access",
+    "name": "NRCS Soil Data Access",
+    "organization": "USDA Natural Resources Conservation Service",
+    "kind": "soil",
+    "bestFor": [
+      "SSURGO tabular data",
+      "soil map units",
+      "soil texture",
+      "drainage",
+      "available water capacity",
+      "restrictive layers"
+    ],
+    "licensing": "U.S. federal government source; verify generated extracts and attribution requirements.",
+    "updateFrequency": "Continuously maintained soil survey data",
+    "geographicCoverage": "United States",
+    "apiAvailability": "Web services and SQL-style query endpoints",
+    "downloadFormat": [
+      "Tabular query results",
+      "Spatial query results"
+    ],
+    "citationUrl": "https://sdmdataaccess.nrcs.usda.gov/",
+    "localCacheStrategy": "Cache derived garden-scale soil attributes by coordinate or area of interest with survey date metadata.",
+    "status": "candidate"
+  },
+  {
+    "officialUrl": "https://rest.isric.org/soilgrids/v2.0/docs",
+    "license": "Verify ISRIC/SoilGrids license and citation requirements before redistribution.",
+    "reliabilityScore": 0.8,
+    "recommendedUse": [
+      "global soil property estimates",
+      "clay",
+      "sand",
+      "silt",
+      "pH",
+      "soil organic carbon",
+      "nitrogen"
+    ],
+    "citationFormat": "ISRIC - World Soil Information. SoilGrids. https://rest.isric.org/soilgrids/v2.0/docs.",
+    "id": "source:soilgrids",
+    "name": "SoilGrids",
+    "organization": "ISRIC - World Soil Information",
+    "kind": "soil",
+    "bestFor": [
+      "global soil property estimates",
+      "clay",
+      "sand",
+      "silt",
+      "pH",
+      "soil organic carbon",
+      "nitrogen"
+    ],
+    "licensing": "Verify ISRIC/SoilGrids license and citation requirements before redistribution.",
+    "updateFrequency": "Model release based",
+    "geographicCoverage": "Global",
+    "apiAvailability": "REST API",
+    "downloadFormat": [
+      "JSON",
+      "raster tiles"
+    ],
+    "citationUrl": "https://rest.isric.org/soilgrids/v2.0/docs",
+    "localCacheStrategy": "Cache coordinate lookups and uncertainty bands; prefer SSURGO where U.S. high-resolution survey data exists.",
+    "status": "candidate"
+  },
+  {
+    "officialUrl": "https://www.rareseeds.com",
+    "license": "Commercial catalog content. Use factual fields and source URLs only; do not republish catalog prose or copy images.",
+    "reliabilityScore": 0.7,
+    "recommendedUse": [
+      "cultivar growing facts",
+      "seed depth",
+      "germination window",
+      "ideal germination temperature",
+      "plant spacing",
+      "frost hardiness"
+    ],
+    "citationFormat": "Baker Creek Heirloom Seeds. Rare Seeds product pages. https://www.rareseeds.com.",
+    "id": "source:rareseeds",
+    "name": "Rare Seeds product pages",
+    "organization": "Baker Creek Heirloom Seeds",
+    "kind": "seed-catalog-reference",
+    "bestFor": [
+      "cultivar growing facts",
+      "seed depth",
+      "germination window",
+      "ideal germination temperature",
+      "plant spacing",
+      "frost hardiness"
+    ],
+    "licensing": "Commercial catalog content. Use factual fields and source URLs only; do not republish catalog prose or copy images.",
+    "updateFrequency": "Catalog/product updates",
+    "geographicCoverage": "Seed catalog, not location-specific",
+    "apiAvailability": "No public API identified",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://www.rareseeds.com",
+    "localCacheStrategy": "Cache fact-only product records with retrieval time, source URL, parser version, and review status.",
+    "status": "active"
+  },
+  {
+    "id": "source:usda-plants",
+    "name": "USDA PLANTS Database",
+    "organization": "USDA Natural Resources Conservation Service",
+    "kind": "taxonomy",
+    "officialUrl": "https://plants.usda.gov/home",
+    "license": "U.S. federal government source; verify media and partner-contributed material before reuse.",
+    "licensing": "U.S. federal government source; verify media and partner-contributed material before reuse.",
+    "bestFor": [
+      "taxonomy",
+      "scientific names",
+      "common names",
+      "distribution",
+      "growth habit",
+      "native status"
+    ],
+    "recommendedUse": [
+      "taxonomy",
+      "scientific names",
+      "common names",
+      "distribution",
+      "growth habit",
+      "native status"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://plants.usda.gov/home",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.9,
+    "citationFormat": "USDA Natural Resources Conservation Service. USDA PLANTS Database. https://plants.usda.gov/home.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:umd-extension",
+    "name": "University of Maryland Extension",
+    "organization": "University of Maryland Extension",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://extension.umd.edu/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "vegetable gardening",
+      "pest management",
+      "disease guidance"
+    ],
+    "recommendedUse": [
+      "vegetable gardening",
+      "pest management",
+      "disease guidance"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://extension.umd.edu/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.82,
+    "citationFormat": "University of Maryland Extension. University of Maryland Extension. https://extension.umd.edu/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:cornell-extension",
+    "name": "Cornell Cooperative Extension / Cornell CALS Gardening",
+    "organization": "Cornell University",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://gardening.cals.cornell.edu/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "home gardening guidance",
+      "crop practices",
+      "diagnostics"
+    ],
+    "recommendedUse": [
+      "home gardening guidance",
+      "crop practices",
+      "diagnostics"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://gardening.cals.cornell.edu/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.84,
+    "citationFormat": "Cornell University. Cornell Cooperative Extension / Cornell CALS Gardening. https://gardening.cals.cornell.edu/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:penn-state-extension",
+    "name": "Penn State Extension",
+    "organization": "Penn State University",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://extension.psu.edu/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "pests",
+      "diseases",
+      "vegetable production"
+    ],
+    "recommendedUse": [
+      "pests",
+      "diseases",
+      "vegetable production"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://extension.psu.edu/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.82,
+    "citationFormat": "Penn State University. Penn State Extension. https://extension.psu.edu/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:nc-state-extension",
+    "name": "North Carolina State Extension Publications",
+    "organization": "North Carolina State University",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://content.ces.ncsu.edu/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "southern gardening",
+      "pests",
+      "disease management"
+    ],
+    "recommendedUse": [
+      "southern gardening",
+      "pests",
+      "disease management"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://content.ces.ncsu.edu/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.82,
+    "citationFormat": "North Carolina State University. North Carolina State Extension Publications. https://content.ces.ncsu.edu/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:oregon-state-extension",
+    "name": "Oregon State Extension Gardening",
+    "organization": "Oregon State University",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://extension.oregonstate.edu/gardening",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "Pacific Northwest gardening",
+      "soil",
+      "vegetables"
+    ],
+    "recommendedUse": [
+      "Pacific Northwest gardening",
+      "soil",
+      "vegetables"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://extension.oregonstate.edu/gardening",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.82,
+    "citationFormat": "Oregon State University. Oregon State Extension Gardening. https://extension.oregonstate.edu/gardening.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:washington-state-extension",
+    "name": "Washington State University Extension",
+    "organization": "Washington State University",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://extension.wsu.edu/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "Pacific Northwest crops",
+      "pest management"
+    ],
+    "recommendedUse": [
+      "Pacific Northwest crops",
+      "pest management"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://extension.wsu.edu/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.8,
+    "citationFormat": "Washington State University. Washington State University Extension. https://extension.wsu.edu/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:minnesota-extension",
+    "name": "University of Minnesota Extension Yard and Garden",
+    "organization": "University of Minnesota Extension",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://extension.umn.edu/yard-and-garden",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "cold-climate gardening",
+      "vegetables",
+      "fruit"
+    ],
+    "recommendedUse": [
+      "cold-climate gardening",
+      "vegetables",
+      "fruit"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://extension.umn.edu/yard-and-garden",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.84,
+    "citationFormat": "University of Minnesota Extension. University of Minnesota Extension Yard and Garden. https://extension.umn.edu/yard-and-garden.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:iowa-state-extension",
+    "name": "Iowa State Extension Horticulture and Home Pest News",
+    "organization": "Iowa State University Extension and Outreach",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://hortnews.extension.iastate.edu/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "Midwest horticulture",
+      "pests",
+      "diagnostics"
+    ],
+    "recommendedUse": [
+      "Midwest horticulture",
+      "pests",
+      "diagnostics"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://hortnews.extension.iastate.edu/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.8,
+    "citationFormat": "Iowa State University Extension and Outreach. Iowa State Extension Horticulture and Home Pest News. https://hortnews.extension.iastate.edu/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:michigan-state-extension",
+    "name": "Michigan State University Extension Home Gardening",
+    "organization": "Michigan State University",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://www.canr.msu.edu/home_gardening/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "home gardening",
+      "soil",
+      "vegetables"
+    ],
+    "recommendedUse": [
+      "home gardening",
+      "soil",
+      "vegetables"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://www.canr.msu.edu/home_gardening/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.8,
+    "citationFormat": "Michigan State University. Michigan State University Extension Home Gardening. https://www.canr.msu.edu/home_gardening/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:texas-agrilife",
+    "name": "Texas A&M AgriLife Extension",
+    "organization": "Texas A&M AgriLife Extension Service",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://agrilifeextension.tamu.edu/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "hot-climate gardening",
+      "vegetables",
+      "water management"
+    ],
+    "recommendedUse": [
+      "hot-climate gardening",
+      "vegetables",
+      "water management"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://agrilifeextension.tamu.edu/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.8,
+    "citationFormat": "Texas A&M AgriLife Extension Service. Texas A&M AgriLife Extension. https://agrilifeextension.tamu.edu/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:uc-anr",
+    "name": "University of California Agriculture and Natural Resources",
+    "organization": "University of California ANR",
+    "kind": "cooperative-extension",
+    "officialUrl": "https://ucanr.edu/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "IPM",
+      "California gardening",
+      "fruit and vegetables"
+    ],
+    "recommendedUse": [
+      "IPM",
+      "California gardening",
+      "fruit and vegetables"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://ucanr.edu/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.84,
+    "citationFormat": "University of California ANR. University of California Agriculture and Natural Resources. https://ucanr.edu/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:rhs",
+    "name": "Royal Horticultural Society",
+    "organization": "Royal Horticultural Society",
+    "kind": "horticultural-reference",
+    "officialUrl": "https://www.rhs.org.uk/",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "ornamental plants",
+      "pruning",
+      "plant care",
+      "garden design"
+    ],
+    "recommendedUse": [
+      "ornamental plants",
+      "pruning",
+      "plant care",
+      "garden design"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://www.rhs.org.uk/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.78,
+    "citationFormat": "Royal Horticultural Society. Royal Horticultural Society. https://www.rhs.org.uk/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:missouri-botanical-garden",
+    "name": "Missouri Botanical Garden Plant Finder",
+    "organization": "Missouri Botanical Garden",
+    "kind": "botanical-reference",
+    "officialUrl": "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderSearch.aspx",
+    "license": "Verify page-level copyright and reuse terms.",
+    "licensing": "Verify page-level copyright and reuse terms.",
+    "bestFor": [
+      "plant characteristics",
+      "taxonomy",
+      "cultivars",
+      "native ranges"
+    ],
+    "recommendedUse": [
+      "plant characteristics",
+      "taxonomy",
+      "cultivars",
+      "native ranges"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderSearch.aspx",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.86,
+    "citationFormat": "Missouri Botanical Garden. Missouri Botanical Garden Plant Finder. https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderSearch.aspx.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:kew-powo",
+    "name": "Plants of the World Online",
+    "organization": "Royal Botanic Gardens, Kew",
+    "kind": "botanical-taxonomy",
+    "officialUrl": "https://powo.science.kew.org/",
+    "license": "Verify Kew data terms before redistribution.",
+    "licensing": "Verify Kew data terms before redistribution.",
+    "bestFor": [
+      "accepted scientific names",
+      "taxonomy",
+      "distribution"
+    ],
+    "recommendedUse": [
+      "accepted scientific names",
+      "taxonomy",
+      "distribution"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://powo.science.kew.org/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.9,
+    "citationFormat": "Royal Botanic Gardens, Kew. Plants of the World Online. https://powo.science.kew.org/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:fao",
+    "name": "FAO Soils Portal and agriculture resources",
+    "organization": "Food and Agriculture Organization of the United Nations",
+    "kind": "global-agronomy",
+    "officialUrl": "https://www.fao.org/soils-portal/",
+    "license": "Verify FAO page and dataset terms before redistribution.",
+    "licensing": "Verify FAO page and dataset terms before redistribution.",
+    "bestFor": [
+      "soil",
+      "agronomy",
+      "crop physiology",
+      "global production"
+    ],
+    "recommendedUse": [
+      "soil",
+      "agronomy",
+      "crop physiology",
+      "global production"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "https://www.fao.org/soils-portal/",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.84,
+    "citationFormat": "Food and Agriculture Organization of the United Nations. FAO Soils Portal and agriculture resources. https://www.fao.org/soils-portal/.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:extension-review-needed",
+    "name": "Extension review needed",
+    "organization": "veggie.farm",
+    "kind": "internal-quality-marker",
+    "officialUrl": "/content/reference/garden-knowledge-base",
+    "license": "Project-authored placeholder; not an external source.",
+    "licensing": "Project-authored placeholder; not an external source.",
+    "bestFor": [
+      "marks records requiring extension validation"
+    ],
+    "recommendedUse": [
+      "marks records requiring extension validation"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "/content/reference/garden-knowledge-base",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.25,
+    "citationFormat": "veggie.farm. Extension review needed. /content/reference/garden-knowledge-base.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:internal-editorial",
+    "name": "veggie.farm editorial dataset",
+    "organization": "veggie.farm",
+    "kind": "internal",
+    "officialUrl": "/content/reference/garden-knowledge-base",
+    "license": "Project-authored content.",
+    "licensing": "Project-authored content.",
+    "bestFor": [
+      "initial structured records"
+    ],
+    "recommendedUse": [
+      "initial structured records"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "/content/reference/garden-knowledge-base",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.35,
+    "citationFormat": "veggie.farm. veggie.farm editorial dataset. /content/reference/garden-knowledge-base.",
+    "status": "candidate"
+  },
+  {
+    "id": "source:bed-observation",
+    "name": "Garden bed observation",
+    "organization": "veggie.farm",
+    "kind": "user-observation",
+    "officialUrl": "/content/field-notes/field-notes-template",
+    "license": "User/project-authored observation.",
+    "licensing": "User/project-authored observation.",
+    "bestFor": [
+      "bed-level soil overrides"
+    ],
+    "recommendedUse": [
+      "bed-level soil overrides"
+    ],
+    "updateFrequency": "Varies by publication or dataset",
+    "geographicCoverage": "Varies",
+    "apiAvailability": "Unknown or page-specific",
+    "downloadFormat": [
+      "HTML"
+    ],
+    "citationUrl": "/content/field-notes/field-notes-template",
+    "localCacheStrategy": "Cache normalized facts with source URL, retrieval date, license note, and review status.",
+    "reliabilityScore": 0.4,
+    "citationFormat": "veggie.farm. Garden bed observation. /content/field-notes/field-notes-template.",
+    "status": "candidate"
+  }
+]

@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {notebookEvents,notebookSignals} from '../src/lib/garden/notebookEvents.js';
+test('history keeps plans, observed events and dismissed actions distinct; undated records survive',()=>{
+ const snapshot={plantings:[{id:'p',crop:'Tomato',date:'2026-04-03',method:'transplanting'}],journal:[{id:'o',crop:'Tomato',date:'2026-04-04',type:'transplanted',notes:'Settled in'},{id:'old',date:'invalid',notes:'Old note'}],actions:[{id:'a',date:'2026-04-02',status:'dismissed',title:'Prepare bed'}],soilTests:[{id:'s',date:'2026-04-01',ph:0,report:'Lab text'}]};const before=JSON.stringify(snapshot),rows=notebookEvents(snapshot);
+ assert.equal(rows.length,5);assert.equal(rows[0].label,'Transplanting observed');assert.equal(rows[1].label,'Planned planting');assert.equal(rows[2].label,'Prompt dismissed');assert.match(rows[3].detail,/pH 0/);assert.equal(rows.at(-1).date,null);assert.equal(JSON.stringify(snapshot),before);
+});
+test('signals use only repeated observations in the same crop/bed and do not diagnose',()=>{
+ const journal=[{id:'1',date:'2026-09-10',crop:'Tomato',bed:'A',type:'pest_seen'},{id:'2',date:'2026-09-15',crop:'Tomato',bed:'A',type:'pest_seen'},{id:'3',date:'2026-10-01',crop:'Tomato',bed:'A',type:'pest_seen'},{id:'4',date:'2026-09-15',crop:'Tomato',bed:'B',type:'pest_seen'}];const events=notebookEvents({journal,actions:[{id:'a',date:'2026-09-01',reviewDate:'2026-09-20',title:'Inspect mulch'},{id:'b',date:'2026-09-01',reviewDate:'2026-09-20',title:'Dismissed',status:'dismissed'}]});const signals=notebookSignals(events,'2026-09-24');assert.equal(signals.length,2);assert.match(signals[1].label,/^2 /);assert.match(signals[1].detail,/do not establish/);assert.equal(notebookSignals(events,'invalid').length,0);
+});

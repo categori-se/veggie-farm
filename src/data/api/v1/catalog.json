@@ -1,0 +1,39 @@
+{
+  "title": "veggie.farm public garden data API",
+  "description": "Versioned, project-owned JSON and GeoJSON compiled from cited public sources. Canonical parcels, site context, beds, and plants form the spatial core; browser plans are editable views over that core, not its source of truth.",
+  "version": "1.0.0",
+  "updated": "2026-08-24",
+  "storageProfile": "static-json",
+  "implementationProfile": "client-query-adapter",
+  "standards": [
+    {
+      "name": "GeoJSON",
+      "reference": "https://www.rfc-editor.org/rfc/rfc7946",
+      "use": "All collection item responses are RFC 7946 FeatureCollections; non-spatial records use null geometry."
+    },
+    {
+      "name": "JSON Schema Draft 2020-12",
+      "reference": "https://json-schema.org/draft/2020-12/schema",
+      "use": "Schemas version and validate the maintained collection records."
+    },
+    {
+      "name": "OGC API - Features",
+      "reference": "https://ogcapi.ogc.org/features/",
+      "use": "Collection/item path layout and bbox, limit, offset, and ids query semantics. This static deployment uses an in-browser adapter and does not claim full HTTP conformance."
+    }
+  ],
+  "queryParameters": {
+    "bbox": "minLon,minLat,maxLon,maxLat",
+    "limit": "positive integer",
+    "offset": "non-negative integer",
+    "ids": "comma-separated feature identifiers",
+    "gardenId": "project extension selecting canonical layer features for one garden identifier",
+    "q": "case-insensitive text search across properties",
+    "property": "exact property filters supplied as a key/value object to the client adapter"
+  },
+  "links": [
+    {"rel": "self", "type": "application/json", "href": "./catalog.json"},
+    {"rel": "data", "type": "application/json", "href": "./collections.json"},
+    {"rel": "service-desc", "type": "application/schema+json", "href": "./schemas/catalog.schema.json"}
+  ]
+}

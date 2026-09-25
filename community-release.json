@@ -1,0 +1,10 @@
+{
+  "profile": "community",
+  "schemaVersion": 1,
+  "publicationApproved": true,
+  "privateServicesIncluded": false,
+  "partnerCatalogIncluded": false,
+  "review": "See docs/architecture/public-release.md",
+  "publicationScope": "Source and lockfile only; no installed dependencies, build artifacts, media or private comparison inputs",
+  "destination": "https://github.com/categori-se/veggie-farm"
+}

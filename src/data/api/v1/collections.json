@@ -1,0 +1,99 @@
+{
+  "title": "veggie.farm public data collections",
+  "version": "1.0.0",
+  "collections": [
+    {
+      "id": "gardens",
+      "title": "Reference gardens",
+      "description": "Public-garden records with parcel geometry, mapping confidence, planning scope, and source lineage.",
+      "itemType": "feature",
+      "crs": ["http://www.opengis.net/def/crs/OGC/1.3/CRS84"],
+      "extent": {"spatial": {"bbox": [[-73.33715567879969, 42.20578520120109, -73.16186269686197, 42.33576265495631]]}},
+      "links": [
+        {"rel": "items", "type": "application/geo+json", "href": "./collections/gardens/items.json"},
+        {"rel": "describedby", "type": "application/schema+json", "href": "./schemas/garden-feature.schema.json"}
+      ]
+    },
+    {
+      "id": "garden-parcels",
+      "title": "Garden parcel boundaries",
+      "description": "Canonical tax-parcel and garden-property boundaries in OGC CRS84. These are the geographic containers for site, bed, and plant observations.",
+      "itemType": "feature",
+      "crs": ["http://www.opengis.net/def/crs/OGC/1.3/CRS84"],
+      "links": [
+        {"rel": "items", "type": "application/geo+json", "href": "./collections/garden-parcels/items.json"},
+        {"rel": "describedby", "type": "application/schema+json", "href": "./schemas/garden-spatial-feature.schema.json"}
+      ]
+    },
+    {
+      "id": "garden-site",
+      "title": "Garden site context",
+      "description": "Canonical outdoor-space context including continuous paths and roads, buildings, parking, utilities, fences, water, garden sections, and vegetation cover.",
+      "itemType": "feature",
+      "crs": ["http://www.opengis.net/def/crs/OGC/1.3/CRS84"],
+      "links": [
+        {"rel": "items", "type": "application/geo+json", "href": "./collections/garden-site/items.json"},
+        {"rel": "describedby", "type": "application/schema+json", "href": "./schemas/garden-spatial-feature.schema.json"}
+      ]
+    },
+    {
+      "id": "garden-beds",
+      "title": "Garden beds and plots",
+      "description": "Canonical polygon footprints for beds, plots, and subplots, linked to their containing parcel and site hierarchy.",
+      "itemType": "feature",
+      "crs": ["http://www.opengis.net/def/crs/OGC/1.3/CRS84"],
+      "links": [
+        {"rel": "items", "type": "application/geo+json", "href": "./collections/garden-beds/items.json"},
+        {"rel": "describedby", "type": "application/schema+json", "href": "./schemas/garden-spatial-feature.schema.json"}
+      ]
+    },
+    {
+      "id": "garden-plants",
+      "title": "Mapped garden plants",
+      "description": "Canonical point or multipoint plant observations and planning placements, linked to a bed when known and honest about taxonomic certainty.",
+      "itemType": "feature",
+      "crs": ["http://www.opengis.net/def/crs/OGC/1.3/CRS84"],
+      "links": [
+        {"rel": "items", "type": "application/geo+json", "href": "./collections/garden-plants/items.json"},
+        {"rel": "describedby", "type": "application/schema+json", "href": "./schemas/garden-spatial-feature.schema.json"}
+      ]
+    },
+    {
+      "id": "flowers",
+      "title": "Flower planning references",
+      "description": "Curated condition and planning records derived from cited government, Extension, and open research sources.",
+      "itemType": "feature",
+      "crs": ["http://www.opengis.net/def/crs/OGC/1.3/CRS84"],
+      "links": [
+        {"rel": "items", "type": "application/geo+json", "href": "./collections/flowers/items.json"},
+        {"rel": "describedby", "type": "application/schema+json", "href": "./schemas/flower-feature.schema.json"}
+      ]
+    },
+    {
+      "id": "sources",
+      "title": "Public source registry",
+      "description": "Stable source identifiers, publishers, URLs, access notes, and the fields each source supports.",
+      "itemType": "feature",
+      "crs": ["http://www.opengis.net/def/crs/OGC/1.3/CRS84"],
+      "links": [
+        {"rel": "items", "type": "application/geo+json", "href": "./collections/sources/items.json"},
+        {"rel": "describedby", "type": "application/schema+json", "href": "./schemas/source-feature.schema.json"}
+      ]
+    },
+    {
+      "id": "models",
+      "title": "Garden 3D model assets",
+      "description": "Redistributable GLB assets with creator, license, source, checksum, byte size, plant mappings, and representation limits.",
+      "itemType": "feature",
+      "crs": ["http://www.opengis.net/def/crs/OGC/1.3/CRS84"],
+      "links": [
+        {"rel": "items", "type": "application/geo+json", "href": "./collections/models/items.json"},
+        {"rel": "describedby", "type": "application/schema+json", "href": "./schemas/model-feature.schema.json"}
+      ]
+    }
+  ],
+  "links": [
+    {"rel": "self", "type": "application/json", "href": "./collections.json"},
+    {"rel": "root", "type": "application/json", "href": "./catalog.json"}
+  ]
+}

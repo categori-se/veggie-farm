@@ -1,0 +1,1609 @@
+[
+  {
+    "id": "plant:community:apples",
+    "name": "Apples",
+    "commonName": "Apples",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/apples",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:arugula",
+    "name": "Arugula",
+    "commonName": "Arugula",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Brassica",
+    "sourceUrl": "https://veggie.farm/content/vegetables/arugula",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "2-4 in for baby leaf; 6 in for mature plants"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "21-50"
+    }
+  },
+  {
+    "id": "plant:community:basil",
+    "name": "Basil",
+    "commonName": "Basil",
+    "scientificName": null,
+    "primaryUse": "herb",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/herbs/basil",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:beans",
+    "name": "Beans",
+    "commonName": "Beans",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Legume",
+    "sourceUrl": "https://veggie.farm/content/vegetables/beans",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "Bush beans 4-6 in; pole beans 6-8 in with support"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "50-70"
+    }
+  },
+  {
+    "id": "plant:community:beets",
+    "name": "Beets",
+    "commonName": "Beets",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Amaranth",
+    "sourceUrl": "https://veggie.farm/content/vegetables/beets",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "3-4 in between plants; 12-18 in between rows"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "45-65"
+    }
+  },
+  {
+    "id": "plant:community:black-currants",
+    "name": "Black Currants",
+    "commonName": "Black Currants",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/black-currants",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-black-eyed-susan",
+    "name": "Black-eyed Susan",
+    "commonName": "Black-eyed Susan",
+    "scientificName": "Rudbeckia hirta",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-blazing-star",
+    "name": "Blazing Star",
+    "commonName": "Blazing Star",
+    "scientificName": "Liatris spicata",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-blue-flag-iris",
+    "name": "Blue Flag Iris",
+    "commonName": "Blue Flag Iris",
+    "scientificName": "Iris versicolor",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:blueberries",
+    "name": "Blueberries",
+    "commonName": "Blueberries",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/blueberries",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:bok-choy",
+    "name": "Bok Choy",
+    "commonName": "Bok Choy",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Brassica",
+    "sourceUrl": "https://veggie.farm/content/vegetables/bok-choy",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "6-12 in depending on full-size or baby harvest"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "30-55"
+    }
+  },
+  {
+    "id": "plant:community:flower-butterfly-weed",
+    "name": "Butterfly Weed",
+    "commonName": "Butterfly Weed",
+    "scientificName": "Asclepias tuberosa",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-cardinal-flower",
+    "name": "Cardinal Flower",
+    "commonName": "Cardinal Flower",
+    "scientificName": "Lobelia cardinalis",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:carrots",
+    "name": "Carrots",
+    "commonName": "Carrots",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Umbellifer",
+    "sourceUrl": "https://veggie.farm/content/vegetables/carrots",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "1-3 in after thinning; 12-18 in between rows"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "55-80"
+    }
+  },
+  {
+    "id": "plant:community:cilantro",
+    "name": "Cilantro",
+    "commonName": "Cilantro",
+    "scientificName": null,
+    "primaryUse": "herb",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/herbs/cilantro",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:collards",
+    "name": "Collards",
+    "commonName": "Collards",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Brassica",
+    "sourceUrl": "https://veggie.farm/content/vegetables/collards",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "12-18 in for regular harvest; wider for full plants"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "55-80"
+    }
+  },
+  {
+    "id": "plant:community:corn",
+    "name": "Corn",
+    "commonName": "Corn",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Grass",
+    "sourceUrl": "https://veggie.farm/content/vegetables/corn",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "8-12 in in blocks; 24-36 in between rows"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "65-100"
+    }
+  },
+  {
+    "id": "plant:community:cucumbers",
+    "name": "Cucumbers",
+    "commonName": "Cucumbers",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Cucurbit",
+    "sourceUrl": "https://veggie.farm/content/vegetables/cucumbers",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "12-18 in on trellis; more for sprawling plants"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "50-70"
+    }
+  },
+  {
+    "id": "plant:community:dill",
+    "name": "Dill",
+    "commonName": "Dill",
+    "scientificName": null,
+    "primaryUse": "herb",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/herbs/dill",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-peony",
+    "name": "Garden Peony",
+    "commonName": "Garden Peony",
+    "scientificName": "Paeonia lactiflora",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:garlic",
+    "name": "Garlic",
+    "commonName": "Garlic",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Allium",
+    "sourceUrl": "https://veggie.farm/content/vegetables/garlic",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "4-6 in between cloves; 8-12 in between rows"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "8-10 months"
+    }
+  },
+  {
+    "id": "plant:community:gooseberries",
+    "name": "Gooseberries",
+    "commonName": "Gooseberries",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/gooseberries",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:ground-cherries",
+    "name": "Ground Cherries",
+    "commonName": "Ground Cherries",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/ground-cherries",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:kale",
+    "name": "Kale",
+    "commonName": "Kale",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Brassica",
+    "sourceUrl": "https://veggie.farm/content/vegetables/kale",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "12-18 in between plants"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "50-70"
+    }
+  },
+  {
+    "id": "plant:community:lettuce",
+    "name": "Lettuce",
+    "commonName": "Lettuce",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Aster",
+    "sourceUrl": "https://veggie.farm/content/vegetables/lettuce",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "6-12 in depending on harvest stage"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "25-60"
+    }
+  },
+  {
+    "id": "plant:community:mint",
+    "name": "Mint",
+    "commonName": "Mint",
+    "scientificName": null,
+    "primaryUse": "herb",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/herbs/mint",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:mizuna",
+    "name": "Mizuna",
+    "commonName": "Mizuna",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Brassica",
+    "sourceUrl": "https://veggie.farm/content/vegetables/mizuna",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "4-8 in for cut greens; wider for full plants"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "25-45"
+    }
+  },
+  {
+    "id": "plant:community:onions",
+    "name": "Onions",
+    "commonName": "Onions",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Allium",
+    "sourceUrl": "https://veggie.farm/content/vegetables/onions",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "4-6 in for bulbs; closer for scallions"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "90-120"
+    }
+  },
+  {
+    "id": "plant:community:parsley",
+    "name": "Parsley",
+    "commonName": "Parsley",
+    "scientificName": null,
+    "primaryUse": "herb",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/herbs/parsley",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:pears",
+    "name": "Pears",
+    "commonName": "Pears",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/pears",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:peas",
+    "name": "Peas",
+    "commonName": "Peas",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Legume",
+    "sourceUrl": "https://veggie.farm/content/vegetables/peas",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "2-3 in with support for taller varieties"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "55-75"
+    }
+  },
+  {
+    "id": "plant:community:peppers",
+    "name": "Peppers",
+    "commonName": "Peppers",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Nightshade",
+    "sourceUrl": "https://veggie.farm/content/vegetables/peppers",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "18-24 in between plants; 24-36 in between rows"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "60-100"
+    }
+  },
+  {
+    "id": "plant:community:plums",
+    "name": "Plums",
+    "commonName": "Plums",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/plums",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:potatoes",
+    "name": "Potatoes",
+    "commonName": "Potatoes",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Nightshade",
+    "sourceUrl": "https://veggie.farm/content/vegetables/potatoes",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "10-12 in between seed pieces; 30-36 in between rows"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "70-120"
+    }
+  },
+  {
+    "id": "plant:community:radishes",
+    "name": "Radishes",
+    "commonName": "Radishes",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Brassica",
+    "sourceUrl": "https://veggie.farm/content/vegetables/radishes",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "1-2 in for small radishes; more for daikon"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "22-60"
+    }
+  },
+  {
+    "id": "plant:community:raspberries",
+    "name": "Raspberries",
+    "commonName": "Raspberries",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/raspberries",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-red-columbine",
+    "name": "Red Columbine",
+    "commonName": "Red Columbine",
+    "scientificName": "Aquilegia canadensis",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:rosemary",
+    "name": "Rosemary",
+    "commonName": "Rosemary",
+    "scientificName": null,
+    "primaryUse": "herb",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/herbs/rosemary",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:sage",
+    "name": "Sage",
+    "commonName": "Sage",
+    "scientificName": null,
+    "primaryUse": "herb",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/herbs/sage",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-smooth-aster",
+    "name": "Smooth Aster",
+    "commonName": "Smooth Aster",
+    "scientificName": "Symphyotrichum laeve",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:sour-cherries",
+    "name": "Sour Cherries",
+    "commonName": "Sour Cherries",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/sour-cherries",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:spinach",
+    "name": "Spinach",
+    "commonName": "Spinach",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Amaranth",
+    "sourceUrl": "https://veggie.farm/content/vegetables/spinach",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "4-6 in for mature plants; closer for baby leaf"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "30-50"
+    }
+  },
+  {
+    "id": "plant:community:strawberries",
+    "name": "Strawberries",
+    "commonName": "Strawberries",
+    "scientificName": null,
+    "primaryUse": "fruit",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/fruits/strawberries",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:swiss-chard",
+    "name": "Swiss Chard",
+    "commonName": "Swiss Chard",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Amaranth",
+    "sourceUrl": "https://veggie.farm/content/vegetables/swiss-chard",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "8-12 in between plants"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "45-60"
+    }
+  },
+  {
+    "id": "plant:community:thyme",
+    "name": "Thyme",
+    "commonName": "Thyme",
+    "scientificName": null,
+    "primaryUse": "herb",
+    "family": null,
+    "sourceUrl": "https://veggie.farm/content/herbs/thyme",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:tomatoes",
+    "name": "Tomatoes",
+    "commonName": "Tomatoes",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Nightshade",
+    "sourceUrl": "https://veggie.farm/content/vegetables/tomatoes",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "18-24 in between plants; 30-36 in between rows"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "60-90"
+    }
+  },
+  {
+    "id": "plant:community:turnips",
+    "name": "Turnips",
+    "commonName": "Turnips",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Brassica",
+    "sourceUrl": "https://veggie.farm/content/vegetables/turnips",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "2-4 in for small roots; wider for large varieties"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "30-60"
+    }
+  },
+  {
+    "id": "plant:community:flower-virginia-rose",
+    "name": "Virginia Rose",
+    "commonName": "Virginia Rose",
+    "scientificName": "Rosa virginiana",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-bee-balm",
+    "name": "Wild Bergamot",
+    "commonName": "Wild Bergamot",
+    "scientificName": "Monarda fistulosa",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-wild-blue-phlox",
+    "name": "Wild Blue Phlox",
+    "commonName": "Wild Blue Phlox",
+    "scientificName": "Phlox divaricata",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:flower-wild-geranium",
+    "name": "Wild Geranium",
+    "commonName": "Wild Geranium",
+    "scientificName": "Geranium maculatum",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:winter-squash",
+    "name": "Winter Squash",
+    "commonName": "Winter Squash",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Cucurbit",
+    "sourceUrl": "https://veggie.farm/content/vegetables/winter-squash",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "36-72 in depending on vine length"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "80-110"
+    }
+  },
+  {
+    "id": "plant:community:flower-goldenrod",
+    "name": "Wrinkle-leaved Goldenrod",
+    "commonName": "Wrinkle-leaved Goldenrod",
+    "scientificName": "Solidago rugosa",
+    "primaryUse": "flower-or-ornamental",
+    "sourceUrl": "https://massnrc.org/ppd/",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": null
+    }
+  },
+  {
+    "id": "plant:community:zucchini",
+    "name": "Zucchini",
+    "commonName": "Zucchini",
+    "scientificName": null,
+    "primaryUse": "vegetable",
+    "family": "Cucurbit",
+    "sourceUrl": "https://veggie.farm/content/vegetables/zucchini",
+    "sourceIds": [
+      "source:community-guides"
+    ],
+    "reviewStatus": "community-reference",
+    "confidence": null,
+    "sun": null,
+    "spacingInches": {
+      "min": null,
+      "max": null,
+      "text": "24-36 in between plants"
+    },
+    "germinationDays": {
+      "min": null,
+      "max": null,
+      "text": null
+    },
+    "daysToMaturity": {
+      "min": null,
+      "max": null,
+      "text": "45-60"
+    }
+  }
+]

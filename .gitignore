@@ -1,0 +1,56 @@
+# Installed/generated content
+node_modules/
+/dist/
+/src/.observablehq/
+/coverage/
+/src.zip
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+# Private operational history retained on disk
+/.ai-studio/
+/.agents/
+/.codex/
+/tools/
+/.launch-private/
+
+# Partner agreements: harvesting implementations must never enter public releases.
+/scripts/*rareseeds*
+/scripts/harvest-catalog-images.py
+/tests/rareseeds_catalog_test.py
+
+# Local runtime inputs and downloads; these are never community source inputs.
+/data/raw/
+/data/spatial/source-cache/
+/private-data/
+/local-data/
+/credentials/
+/browser-profile/
+**/auth-config.json
+**/account-config.json
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+*.db
+*.gpkg
+*.tif
+*.tiff
+*.las
+*.laz
+*.shp
+*.shx
+*.dbf
+*.tmp
+*.swp
+.idea/
+.vscode/
+
+# All media is distributed separately from public source.
+/src/assets/
+**/media-config.json

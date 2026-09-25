@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "excerpts": [
+    {
+      "name": "is-module",
+      "version": "1.0.0",
+      "filename": "README.md",
+      "fileSha256": "17259ca2b9369bd675251b0e2a882f59d7d40fd11caba850bdd2307f29fd34b1",
+      "startByte": 478,
+      "endByte": 1575,
+      "sha256": "bf50994b8ab7b38f4c9d85fe4cd96051d1595b9ba6e19a6f8b69997ce9a48dd4",
+      "basis": "Full license section inspected in the installed locked package; preserve exact bytes through end of file."
+    },
+    {
+      "name": "isarray",
+      "version": "1.0.0",
+      "filename": "README.md",
+      "fileSha256": "ff138e683771b187f3629c383db72ee7d632009010a36d08e18e8d2a34222ec7",
+      "startByte": 793,
+      "endByte": 1890,
+      "sha256": "41199fc577f56d37d06db42992c3a89f669b3ea406da5699bb458bf5f7a0bb25",
+      "basis": "Full license section inspected in the installed locked package; preserve exact bytes through end of file."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+# SPDX-License-Identifier: GPL-3.0-only
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Community static hosting reference; no accounts, media or private data
+Parameters:
+  ActiveReleasePrefix:
+    Type: String
+    Default: releases/unpublished
+    AllowedPattern: 'releases/[A-Za-z0-9-]+'
+    Description: On stack updates supply the currently serving release prefix from the private receipt
+Resources:
+  SiteBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      VersioningConfiguration: {Status: Enabled}
+      OwnershipControls:
+        Rules: [{ObjectOwnership: BucketOwnerEnforced}]
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}
+  OriginAccess:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub '${AWS::StackName}-oac'
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+  PageRoutes:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: !Sub '${AWS::StackName}-routes'
+      AutoPublish: true
+      FunctionConfig:
+        Comment: Observable HTML routes; preserve real static asset keys
+        Runtime: cloudfront-js-2.0
+      FunctionCode: |
+        function handler(event) {
+          var request = event.request;
+          var uri = request.uri.replace(/\/$/, '') || '/';
+          var directories = ['/', '/about', '/content', '/content/fruits', '/content/soil', '/content/herbs', '/content/seasonal', '/content/vegetables'];
+          if (directories.indexOf(uri) >= 0) request.uri = (uri === '/' ? '' : uri) + '/index.html';
+          else if (uri.split('/').pop().indexOf('.') < 0) request.uri = uri + '.html';
+          return request;
+        }
+  SiteCache:
+    Type: AWS::CloudFront::CachePolicy
+    Properties:
+      CachePolicyConfig:
+        Name: !Sub '${AWS::StackName}-cache'
+        MinTTL: 0
+        DefaultTTL: 60
+        MaxTTL: 86400
+        ParametersInCacheKeyAndForwardedToOrigin:
+          EnableAcceptEncodingGzip: true
+          EnableAcceptEncodingBrotli: true
+          CookiesConfig: {CookieBehavior: none}
+          HeadersConfig: {HeaderBehavior: none}
+          QueryStringsConfig: {QueryStringBehavior: none}
+  SiteDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        DefaultRootObject: index.html
+        PriceClass: PriceClass_100
+        HttpVersion: http2and3
+        IPV6Enabled: true
+        Origins:
+          - Id: community-site
+            DomainName: !GetAtt SiteBucket.RegionalDomainName
+            OriginPath: !Sub '/${ActiveReleasePrefix}'
+            OriginAccessControlId: !GetAtt OriginAccess.Id
+            S3OriginConfig: {OriginAccessIdentity: ''}
+        DefaultCacheBehavior:
+          TargetOriginId: community-site
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods: [GET, HEAD]
+          CachedMethods: [GET, HEAD]
+          Compress: true
+          CachePolicyId: !Ref SiteCache
+          FunctionAssociations:
+            - EventType: viewer-request
+              FunctionARN: !GetAtt PageRoutes.FunctionARN
+        ViewerCertificate: {CloudFrontDefaultCertificate: true}
+  SitePolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref SiteBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: CloudFrontReadOnly
+            Effect: Allow
+            Principal: {Service: cloudfront.amazonaws.com}
+            Action: s3:GetObject
+            Resource: !Sub '${SiteBucket.Arn}/releases/*'
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub 'arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${SiteDistribution}'
+          - Sid: RequireTLS
+            Effect: Deny
+            Principal: '*'
+            Action: s3:*
+            Resource: [!GetAtt SiteBucket.Arn, !Sub '${SiteBucket.Arn}/*']
+            Condition: {Bool: {'aws:SecureTransport': false}}
+Outputs:
+  BucketName: {Value: !Ref SiteBucket}
+  DistributionId: {Value: !Ref SiteDistribution}
+  OriginId: {Value: community-site}
+  SiteUrl: {Value: !Sub 'https://${SiteDistribution.DomainName}'}

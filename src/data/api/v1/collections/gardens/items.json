@@ -1,0 +1,1739 @@
+{
+  "type": "FeatureCollection",
+  "timeStamp": "2026-08-23T00:00:00Z",
+  "numberMatched": 4,
+  "numberReturned": 4,
+  "features": [
+    {
+      "type": "Feature",
+      "id": "berkshire-botanical-garden",
+      "bbox": [
+        -73.33818277237299,
+        42.2986222007259,
+        -73.33419149523897,
+        42.30302573661912
+      ],
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -73.33516089761378,
+                42.29863320810301
+              ],
+              [
+                -73.33481358252021,
+                42.29969789428284
+              ],
+              [
+                -73.33702272489342,
+                42.30092678639225
+              ],
+              [
+                -73.33715567879969,
+                42.30075567543592
+              ],
+              [
+                -73.33715537341061,
+                42.30048585307181
+              ],
+              [
+                -73.3369926748123,
+                42.29914508607478
+              ],
+              [
+                -73.33696661720076,
+                42.29901249725596
+              ],
+              [
+                -73.33693542631964,
+                42.29888102131546
+              ],
+              [
+                -73.3368991492982,
+                42.29875085691283
+              ],
+              [
+                -73.33685784095088,
+                42.2986222007259
+              ],
+              [
+                -73.33516089761378,
+                42.29863320810301
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -73.33614499223535,
+                42.302995605954
+              ],
+              [
+                -73.33714662067382,
+                42.30302573661912
+              ],
+              [
+                -73.3372446131944,
+                42.30237280847778
+              ],
+              [
+                -73.33783482792295,
+                42.30212326109437
+              ],
+              [
+                -73.33818277237299,
+                42.30181972209545
+              ],
+              [
+                -73.3372132471692,
+                42.30128545650967
+              ],
+              [
+                -73.33720936272717,
+                42.3013105220544
+              ],
+              [
+                -73.3372016698636,
+                42.30133469208281
+              ],
+              [
+                -73.33719035159464,
+                42.30135739158084
+              ],
+              [
+                -73.33717567718615,
+                42.3013780805189
+              ],
+              [
+                -73.33715799574782,
+                42.30139626669939
+              ],
+              [
+                -73.33713772792768,
+                42.30141151746626
+              ],
+              [
+                -73.33711535590481,
+                42.30142346999804
+              ],
+              [
+                -73.33701238985292,
+                42.30147494108062
+              ],
+              [
+                -73.33626872215203,
+                42.30146279127351
+              ],
+              [
+                -73.33628459399905,
+                42.30156003634275
+              ],
+              [
+                -73.33624863797411,
+                42.30192979556158
+              ],
+              [
+                -73.33614499223535,
+                42.302995605954
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -73.33480448870269,
+                42.30139347328625
+              ],
+              [
+                -73.33544701124386,
+                42.30152551278439
+              ],
+              [
+                -73.33545268911978,
+                42.30152411724935
+              ],
+              [
+                -73.33571509151483,
+                42.30145825041987
+              ],
+              [
+                -73.33626872215203,
+                42.30146279127351
+              ],
+              [
+                -73.33701238985292,
+                42.30147494108062
+              ],
+              [
+                -73.33711535590481,
+                42.30142346999804
+              ],
+              [
+                -73.33713772792768,
+                42.30141151746626
+              ],
+              [
+                -73.33715799574782,
+                42.30139626669939
+              ],
+              [
+                -73.33717567718615,
+                42.3013780805189
+              ],
+              [
+                -73.33719035159464,
+                42.30135739158084
+              ],
+              [
+                -73.3372016698636,
+                42.30133469208281
+              ],
+              [
+                -73.33720936272717,
+                42.3013105220544
+              ],
+              [
+                -73.3372132471692,
+                42.30128545650967
+              ],
+              [
+                -73.33485086648318,
+                42.299983573532
+              ],
+              [
+                -73.3347289661893,
+                42.29996415610867
+              ],
+              [
+                -73.33434732713378,
+                42.30118057493444
+              ],
+              [
+                -73.33480448870269,
+                42.30139347328625
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -73.33597519630868,
+                42.30293546929188
+              ],
+              [
+                -73.33614499223535,
+                42.302995605954
+              ],
+              [
+                -73.33624863797411,
+                42.30192979556158
+              ],
+              [
+                -73.33567543196565,
+                42.30192434265478
+              ],
+              [
+                -73.33549533901696,
+                42.30185210506878
+              ],
+              [
+                -73.33553845509283,
+                42.30161049511457
+              ],
+              [
+                -73.33545154690512,
+                42.30152961502963
+              ],
+              [
+                -73.33544701124386,
+                42.30152551278439
+              ],
+              [
+                -73.3350687469896,
+                42.30152048570394
+              ],
+              [
+                -73.33480448870269,
+                42.30139347328625
+              ],
+              [
+                -73.33434732713378,
+                42.30118057493444
+              ],
+              [
+                -73.3341957015491,
+                42.30166384734133
+              ],
+              [
+                -73.33419149523897,
+                42.30252893539336
+              ],
+              [
+                -73.33597519630868,
+                42.30293546929188
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Berkshire Botanical Garden",
+        "town": "Stockbridge",
+        "county": "Berkshire County",
+        "region": "Massachusetts",
+        "kind": "Public botanical garden",
+        "planningFocus": "Multi-scale public-garden, bed, and infrastructure planning",
+        "summary": "A four-parcel campus interpretation with all 33 numbered visitor-map landmarks, 47 regularized bed-grid cell estimates, one separate Discovery Garden planning bed, and connected circulation modeled independently from beds.",
+        "campusAcreage": 24,
+        "parcelAcreage": 23.86,
+        "mapping": {
+          "parcelStatus": "matched",
+          "layoutStatus": "aerial-interpreted",
+          "confidence": "medium",
+          "method": "The complete public campus was matched to four adjacent MassGIS Level 3 parcel records totaling 23.86 acres. The official visitor map supplies the 1–33 landmark vocabulary and schematic relationships, while MassGIS orthophotos support independent interior interpretation. The 47 bed cells are a regularized grid inferred from six retained raster center controls; their dimensions, rotations, and polygon edges are not individually traced or surveyed. One planning-only Discovery Garden bed remains separate, and paths and drives are connected infrastructure rather than bed-like rectangles.",
+          "layoutCalibration": {
+            "revision": 3,
+            "status": "aerial-calibrated",
+            "target": "Full 33-landmark campus with 35 Edible Gardens and 12 Children's Vegetable Garden regularized bed-grid cells, one separate Discovery Garden planning bed, and continuous road, path, and trail networks",
+            "imagery": "MassGIS 2019, 2021, and 2025 aerial imagery",
+            "reference": "Berkshire Botanical Garden 2024 self-guided visitor map",
+            "confidence": "medium",
+            "estimatedHorizontalAccuracyFeet": 15,
+            "note": "The 35-cell Edible Gardens grid and 12-cell Children's Vegetable Garden grid are regularized estimates. Six cell centers have explicit raster controls; the other centers are interpolated, and all cell boundaries use generalized dimensions and rotation. Crop taxa are not claimed as observations. The Discovery food-and-flower bed is a low-confidence planning proposal. Roads, paths, and trails are connected LineString centerlines in an infrastructure edit collection distinct from beds. Every interior feature remains non-surveyed.",
+            "featureInventory": {
+              "numberedLandmarks": 33,
+              "representedLandmarks": 33,
+              "gridEstimatedBedCells": 47,
+              "gridEstimateGroups": [
+                {
+                  "id": "bbg-edible-gardens-section",
+                  "mapNumber": 8,
+                  "rows": 7,
+                  "columns": 5,
+                  "count": 35,
+                  "confidence": "low",
+                  "geometryBasis": "Regular-grid interpolation from four retained Edible Gardens center controls; generalized cell dimensions and rotation"
+                },
+                {
+                  "id": "bbg-childrens-vegetable-garden-section",
+                  "mapNumber": 12,
+                  "rows": 4,
+                  "columns": 3,
+                  "count": 12,
+                  "confidence": "low",
+                  "geometryBasis": "Regular-grid interpolation from two retained Children's Garden center controls; generalized cell dimensions and rotation"
+                }
+              ],
+              "plannedStudyBeds": 1,
+              "plannedStudyBedIds": [
+                "bbg-discovery-food-flowers"
+              ],
+              "canonicalPlantObservations": 0,
+              "cropTaxaObservationStatus": "not-observed",
+              "infrastructure": {
+                "collection": "infrastructure",
+                "geometryModel": "Connected LineString centerlines with shared endpoint and topology-node identifiers",
+                "editScope": "independent-from-beds",
+                "surveyStatus": "not-surveyed"
+              }
+            },
+            "provenance": {
+              "landmarkSemanticsSourceId": "source:bbg-visitor-map",
+              "parcelGeometrySourceId": "source:massgis-parcels",
+              "interiorGeometrySourceIds": [
+                "source:massgis-aerial-2019",
+                "source:massgis-aerial-2021",
+                "source:massgis-aerial-2025"
+              ],
+              "surveyStatus": "not-surveyed",
+              "evidenceBoundary": "The visitor map supplies names, numbers, and schematic relationships; orthophotos supply editable metric geometry; planned study beds and planting assignments are proposals rather than observations. The user-supplied KMZ is an opt-in comparison layer and contributes zero canonical features."
+            },
+            "referenceMapPresentation": {
+              "northFromPageUpDegrees": -33,
+              "suggestedComparisonBearingDegrees": 33,
+              "appliesTo": "display-only",
+              "note": "The illustrated visitor map is rotated. A browser bearing near +30 to +33 degrees can aid comparison, but canonical local and CRS84 geometry remains north-up."
+            }
+          },
+          "layoutAnchor": {
+            "type": "Point",
+            "coordinates": [
+              -73.33659599658195,
+              42.29949110795708
+            ],
+            "role": "editable-layout-origin",
+            "confidence": "medium",
+            "method": "Aerial-calibrated local origin for the editable BBG interpretation; interior features remain non-surveyed."
+          },
+          "parcelId": "215_1",
+          "parcelIds": [
+            "215_1",
+            "215_29",
+            "215_31",
+            "215_32"
+          ],
+          "parcelFiscalYear": 2026
+        },
+        "sources": [
+          {
+            "id": "source:bbg-gardens",
+            "label": "Official garden guide",
+            "url": "https://www.berkshirebotanical.org/our-gardens"
+          },
+          {
+            "id": "source:bbg-visitor-map",
+            "label": "Official visitor map",
+            "url": "https://www.berkshirebotanical.org/sites/default/files/2026-03/2024%20BBG%20Map%20Self%20Guided%20Tour%20Kiosk.pdf"
+          },
+          {
+            "id": "source:massgis-parcels",
+            "label": "MassGIS Level 3 parcels",
+            "url": "https://www.mass.gov/info-details/massgis-data-property-tax-parcels"
+          },
+          {
+            "id": "source:massgis-aerial-2025",
+            "label": "MassGIS 2025 aerial imagery",
+            "url": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery"
+          },
+          {
+            "id": "source:massgis-aerial-2021",
+            "label": "MassGIS 2021 aerial imagery",
+            "url": "https://www.mass.gov/info-details/massgis-data-2021-aerial-imagery"
+          },
+          {
+            "id": "source:massgis-aerial-2019",
+            "label": "MassGIS 2019 aerial imagery",
+            "url": "https://www.mass.gov/info-details/massgis-data-2019-aerial-imagery"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "the-mount-kitchen-garden",
+      "bbox": [
+        -73.28574200317281,
+        42.33002960693435,
+        -73.27979952023186,
+        42.33576265495631
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28108547468197,
+              42.33576265495631
+            ],
+            [
+              -73.28367771383635,
+              42.33573285925084
+            ],
+            [
+              -73.28569835800776,
+              42.33231236279272
+            ],
+            [
+              -73.28574055075181,
+              42.33188922489093
+            ],
+            [
+              -73.28574200317281,
+              42.33187480813204
+            ],
+            [
+              -73.28343852497072,
+              42.33182208217473
+            ],
+            [
+              -73.28346030674724,
+              42.33002960693435
+            ],
+            [
+              -73.28200580987392,
+              42.33023705094259
+            ],
+            [
+              -73.281631325275,
+              42.3301199182588
+            ],
+            [
+              -73.27979952023186,
+              42.33066592316308
+            ],
+            [
+              -73.28008751703543,
+              42.33185748640317
+            ],
+            [
+              -73.28008753197466,
+              42.33185754290203
+            ],
+            [
+              -73.28107931939917,
+              42.33573857245534
+            ],
+            [
+              -73.28108547468197,
+              42.33576265495631
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "The Mount · formal gardens",
+        "town": "Lenox",
+        "county": "Berkshire County",
+        "region": "Massachusetts",
+        "kind": "Historic estate garden",
+        "planningFocus": "Aerial-interpreted garden rooms and circulation",
+        "summary": "Manually reconstructed site features from 2025 aerial imagery, cross-referenced with publisher maps. Canopy-obscured boundaries remain uncertain; planting-bed design is deferred.",
+        "parcelAcreage": 48,
+        "mapping": {
+          "parcelStatus": "matched",
+          "layoutStatus": "aerial-traced-site",
+          "confidence": "high",
+          "method": "The official published location was matched to MassGIS Level 3 parcel 1_5_0. The editable origin is registered to the rectangular former kitchen-garden lawn immediately north of the stable using The Mount's garden documentation, the 2018 SculptureNow estate map, and MassGIS 2025 aerial imagery; the kitchen-bed geometry remains diagrammatic.",
+          "layoutCalibration": {
+            "revision": 3,
+            "status": "site-reconstructed",
+            "target": "Reviewed public-garden site features",
+            "imagery": "MassGIS 2025 aerial imagery",
+            "reference": "The Mount garden documentation and 2018 SculptureNow estate map",
+            "confidence": "mixed",
+            "note": "Source pixel picks retained per feature. Garden boundaries obscured by canopy remain low confidence; planting design is deferred."
+          },
+          "layoutAnchor": {
+            "type": "Point",
+            "coordinates": [
+              -73.28225255012512,
+              42.3348783508493
+            ],
+            "role": "editable-layout-origin",
+            "confidence": "medium",
+            "method": "Historical local coordinate origin retained for saved-workspace compatibility; the reviewed site viewport and geographic feature geometry determine display."
+          },
+          "parcelId": "1_5_0",
+          "parcelFiscalYear": 2026
+        },
+        "sources": [
+          {
+            "id": "source:mount-gardens",
+            "label": "The Mount gardens",
+            "url": "https://edithwharton.org/the-gardens/"
+          },
+          {
+            "id": "source:mount-contact",
+            "label": "The Mount official location",
+            "url": "https://edithwharton.org/contact-us/"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "label": "SculptureNow at The Mount 2018 estate map",
+            "url": "https://www.sculpturenow.org/wp-content/uploads/2018/06/sculpture-guide-2018.pdf"
+          },
+          {
+            "id": "source:massgis-aerial-2025",
+            "label": "MassGIS 2025 aerial imagery",
+            "url": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery"
+          },
+          {
+            "id": "source:massgis-parcels",
+            "label": "MassGIS Level 3 parcels",
+            "url": "https://www.mass.gov/info-details/massgis-data-property-tax-parcels"
+          }
+        ],
+        "siteReconstructionRevision": 1,
+        "starterLayout": {
+          "revision": 3,
+          "viewport": {
+            "x": -1085.1772430058238,
+            "y": 12193.264667109188,
+            "width": 6633.993991473568,
+            "height": 9176.256890345807
+          },
+          "beds": [],
+          "placements": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-garden-rooms",
+      "bbox": [
+        -73.32084181413572,
+        42.28532994151136,
+        -73.31452996460708,
+        42.2907356776336
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31452996460708,
+              42.28793601400671
+            ],
+            [
+              -73.31459220245176,
+              42.28797689424241
+            ],
+            [
+              -73.31465310068545,
+              42.2880197445413
+            ],
+            [
+              -73.31475674230988,
+              42.28809665615921
+            ],
+            [
+              -73.31485626750073,
+              42.28817882500774
+            ],
+            [
+              -73.31495140987238,
+              42.28826603115662
+            ],
+            [
+              -73.31504191477006,
+              42.28835804119292
+            ],
+            [
+              -73.31512753995153,
+              42.2884546088458
+            ],
+            [
+              -73.31520805623543,
+              42.28855547564564
+            ],
+            [
+              -73.3152832481147,
+              42.2886603716159
+            ],
+            [
+              -73.31535291433335,
+              42.28876901599571
+            ],
+            [
+              -73.31541686842525,
+              42.2888811179913
+            ],
+            [
+              -73.31547493921309,
+              42.28899637755438
+            ],
+            [
+              -73.31552697126665,
+              42.28911448618526
+            ],
+            [
+              -73.31591556042517,
+              42.29014858642192
+            ],
+            [
+              -73.31597308091068,
+              42.29029864905549
+            ],
+            [
+              -73.31603574946234,
+              42.29044663572003
+            ],
+            [
+              -73.31610349131623,
+              42.29059236986662
+            ],
+            [
+              -73.31617622565592,
+              42.2907356776336
+            ],
+            [
+              -73.31635236975629,
+              42.29068881402225
+            ],
+            [
+              -73.31652342095067,
+              42.29066917882932
+            ],
+            [
+              -73.31705300387942,
+              42.29065700420034
+            ],
+            [
+              -73.31718276128393,
+              42.29065402126093
+            ],
+            [
+              -73.31717393406937,
+              42.29056961873644
+            ],
+            [
+              -73.31962410117053,
+              42.29026612575954
+            ],
+            [
+              -73.31962901850594,
+              42.2902049887819
+            ],
+            [
+              -73.32001417131434,
+              42.29018097127235
+            ],
+            [
+              -73.32084181413572,
+              42.29012935708192
+            ],
+            [
+              -73.32083345383165,
+              42.29005903922953
+            ],
+            [
+              -73.31963486340659,
+              42.29013232155689
+            ],
+            [
+              -73.3196504506176,
+              42.28993851645546
+            ],
+            [
+              -73.31966630602072,
+              42.28974138606193
+            ],
+            [
+              -73.3196832272243,
+              42.28953099786657
+            ],
+            [
+              -73.31969933864697,
+              42.28933067113164
+            ],
+            [
+              -73.31971804419749,
+              42.2890981024173
+            ],
+            [
+              -73.3197428386556,
+              42.28878980718073
+            ],
+            [
+              -73.31977958553178,
+              42.28833289722036
+            ],
+            [
+              -73.31979993001728,
+              42.28807993952853
+            ],
+            [
+              -73.31981172076861,
+              42.28793333458489
+            ],
+            [
+              -73.31981441394262,
+              42.28789985465413
+            ],
+            [
+              -73.31981458113401,
+              42.28788786368643
+            ],
+            [
+              -73.31982994133057,
+              42.28770333086989
+            ],
+            [
+              -73.31985280883909,
+              42.28744213142608
+            ],
+            [
+              -73.31988729501485,
+              42.28704823338304
+            ],
+            [
+              -73.32049029004234,
+              42.28715437159953
+            ],
+            [
+              -73.32044756733784,
+              42.28678536121549
+            ],
+            [
+              -73.31990860021132,
+              42.28666107905527
+            ],
+            [
+              -73.31848949593565,
+              42.2863733402003
+            ],
+            [
+              -73.3183852995193,
+              42.28632101767429
+            ],
+            [
+              -73.31832928578432,
+              42.28637473662768
+            ],
+            [
+              -73.3162061796784,
+              42.28532994151136
+            ],
+            [
+              -73.31600817594109,
+              42.28578471473325
+            ],
+            [
+              -73.31570602429044,
+              42.28647868048008
+            ],
+            [
+              -73.31537197442303,
+              42.28707334019027
+            ],
+            [
+              -73.31452996460708,
+              42.28793601400671
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Naumkeag · Garden Rooms",
+        "town": "Stockbridge",
+        "county": "Berkshire County",
+        "region": "Massachusetts",
+        "kind": "Historic public garden",
+        "planningFocus": "Aerial-interpreted garden rooms and circulation",
+        "summary": "Manually reconstructed site features from 2025 aerial imagery, cross-referenced with publisher maps. Canopy-obscured boundaries remain uncertain; planting-bed design is deferred.",
+        "campusAcreage": 48,
+        "parcelAcreage": 44,
+        "mapping": {
+          "parcelStatus": "matched",
+          "layoutStatus": "aerial-traced-site",
+          "confidence": "high",
+          "method": "The Trustees’ published location was matched to MassGIS Level 3 parcel geometry. The Trustees/UMass landscape tour, its 1957 aerial, the Cultural Landscape Foundation room sequence, National Trust archival drawings, and 2025 MassGIS aerial imagery were cross-registered to visible site landmarks. Named room planting shapes remain interpretive.",
+          "layoutCalibration": {
+            "revision": 6,
+            "status": "site-reconstructed",
+            "target": "Reviewed public-garden site features",
+            "imagery": "MassGIS 2025 aerial imagery",
+            "reference": "The Trustees/UMass Naumkeag landscape tour and historic aerial; National Trust archival plans; Cultural Landscape Foundation Naumkeag profile",
+            "confidence": "mixed",
+            "note": "Source pixel picks retained per feature. Garden boundaries obscured by canopy remain low confidence; planting design is deferred."
+          },
+          "layoutAnchor": {
+            "type": "Point",
+            "coordinates": [
+              -73.31647217273712,
+              42.28985986572721
+            ],
+            "role": "editable-layout-origin",
+            "confidence": "medium",
+            "method": "Historical local coordinate origin retained for saved-workspace compatibility; the reviewed site viewport and geographic feature geometry determine display."
+          },
+          "parcelId": "219_55",
+          "parcelFiscalYear": 2026
+        },
+        "starterLayout": {
+          "revision": 6,
+          "viewport": {
+            "x": -4896.500410357249,
+            "y": -3632.60142919577,
+            "width": 8131.474525104043,
+            "height": 8317.488908344963
+          },
+          "beds": [],
+          "placements": []
+        },
+        "sources": [
+          {
+            "id": "source:naumkeag-guide",
+            "label": "Naumkeag property guide",
+            "url": "https://thetrustees.org/place/naumkeag/"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "label": "Official Naumkeag house and gardens map",
+            "url": "https://thetrustees.org/wp-content/uploads/2023/03/naumkeag-trail-map.pdf"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "label": "Naumkeag’s Landscape: A Vision & A View",
+            "url": "https://www.lovearboreal.com/files/Naumkeag%20Garden%20Tour.pdf"
+          },
+          {
+            "id": "source:naumkeag-tclf",
+            "label": "Cultural Landscape Foundation Naumkeag profile",
+            "url": "https://www.tclf.org/naumkeag"
+          },
+          {
+            "id": "source:naumkeag-archive-plans",
+            "label": "National Trust archival Naumkeag garden plans",
+            "url": "https://savingplaces.org/stories/the-making-of-naumkeag-gardens"
+          },
+          {
+            "id": "source:massgis-aerial-2025",
+            "label": "MassGIS 2025 aerial imagery",
+            "url": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery"
+          },
+          {
+            "id": "source:massgis-parcels",
+            "label": "MassGIS Level 3 parcels",
+            "url": "https://www.mass.gov/info-details/massgis-data-property-tax-parcels"
+          }
+        ],
+        "siteReconstructionRevision": 3,
+        "siteReconstructionAdditions": [
+          {
+            "revision": 5,
+            "structureIds": [
+              "naumkeag-chinese-pool",
+              "naumkeag-chinese-west-approach"
+            ]
+          },
+          {
+            "revision": 6,
+            "structureIds": [
+              "naumkeag-southern-drive"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-terrace-garden",
+      "bbox": [
+        -73.17754892828717,
+        42.20692392986848,
+        -73.16492142053633,
+        42.21603125047392
+      ],
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -73.17537302032227,
+                42.21373413048177
+              ],
+              [
+                -73.17534325428188,
+                42.21369777610673
+              ],
+              [
+                -73.17417982567291,
+                42.2122841390268
+              ],
+              [
+                -73.17177996649444,
+                42.2133026314246
+              ],
+              [
+                -73.17336581487935,
+                42.215139673131254
+              ],
+              [
+                -73.17379843303112,
+                42.2147744110927
+              ],
+              [
+                -73.1739724640104,
+                42.2145554546411
+              ],
+              [
+                -73.17461618902718,
+                42.21419584265907
+              ],
+              [
+                -73.17528676046132,
+                42.2137867552285
+              ],
+              [
+                -73.17537302032227,
+                42.21373413048177
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -73.17338882254563,
+                42.21601721346359
+              ],
+              [
+                -73.17364496691073,
+                42.216017179349265
+              ],
+              [
+                -73.17390109661076,
+                42.21601992046124
+              ],
+              [
+                -73.17421470772948,
+                42.216022876564125
+              ],
+              [
+                -73.17452832461672,
+                42.21602061374462
+              ],
+              [
+                -73.17484186042844,
+                42.21601313262933
+              ],
+              [
+                -73.17515522834303,
+                42.21600043528985
+              ],
+              [
+                -73.17546834158534,
+                42.21598252524223
+              ],
+              [
+                -73.1757811134508,
+                42.21595940744596
+              ],
+              [
+                -73.17613470773064,
+                42.21594644853953
+              ],
+              [
+                -73.17619202098905,
+                42.2159444047117
+              ],
+              [
+                -73.1762487627841,
+                42.215936076715664
+              ],
+              [
+                -73.17630424618466,
+                42.21592156537234
+              ],
+              [
+                -73.17635779949407,
+                42.21590104635987
+              ],
+              [
+                -73.17640877438188,
+                42.21587476808681
+              ],
+              [
+                -73.17645655373269,
+                42.215843048684874
+              ],
+              [
+                -73.17650055911707,
+                42.21580627215748
+              ],
+              [
+                -73.17654025779429,
+                42.215764883730955
+              ],
+              [
+                -73.17664116611054,
+                42.215619419888505
+              ],
+              [
+                -73.17668888000952,
+                42.21556545879021
+              ],
+              [
+                -73.17674004620667,
+                42.21551475931729
+              ],
+              [
+                -73.17679444225772,
+                42.21546754188495
+              ],
+              [
+                -73.17644155155068,
+                42.2152819406624
+              ],
+              [
+                -73.17649442336302,
+                42.21481276159809
+              ],
+              [
+                -73.17594927905476,
+                42.2144379266517
+              ],
+              [
+                -73.17537302032227,
+                42.21373413048177
+              ],
+              [
+                -73.17528676046132,
+                42.2137867552285
+              ],
+              [
+                -73.17461618902718,
+                42.21419584265907
+              ],
+              [
+                -73.1739724640104,
+                42.2145554546411
+              ],
+              [
+                -73.17379843303112,
+                42.2147744110927
+              ],
+              [
+                -73.17336581487935,
+                42.215139673131254
+              ],
+              [
+                -73.17349106225886,
+                42.215716632976786
+              ],
+              [
+                -73.17338882254563,
+                42.21601721346359
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -73.1680821925531,
+                42.21478167440389
+              ],
+              [
+                -73.16821882799987,
+                42.21490120257481
+              ],
+              [
+                -73.16836264495878,
+                42.21493299894095
+              ],
+              [
+                -73.1685769820308,
+                42.21497835035111
+              ],
+              [
+                -73.1687926129359,
+                42.21501708591124
+              ],
+              [
+                -73.16900933351565,
+                42.21504916894669
+              ],
+              [
+                -73.16922693857994,
+                42.21507456908139
+              ],
+              [
+                -73.16940325605553,
+                42.21508622964813
+              ],
+              [
+                -73.16957907398987,
+                42.2151038896306
+              ],
+              [
+                -73.16975418830522,
+                42.215127528530246
+              ],
+              [
+                -73.16986712071682,
+                42.215148317788376
+              ],
+              [
+                -73.1699789770911,
+                42.215174280730714
+              ],
+              [
+                -73.17008952054104,
+                42.2152053623735
+              ],
+              [
+                -73.17019851696008,
+                42.215241496892695
+              ],
+              [
+                -73.17030573551797,
+                42.215282607763385
+              ],
+              [
+                -73.17041094914951,
+                42.215328607921855
+              ],
+              [
+                -73.17051393503556,
+                42.215379399949946
+              ],
+              [
+                -73.17067340688278,
+                42.215461850577746
+              ],
+              [
+                -73.1708349191017,
+                42.21554022901373
+              ],
+              [
+                -73.17099836772779,
+                42.215614484806146
+              ],
+              [
+                -73.17116364755016,
+                42.21568457015698
+              ],
+              [
+                -73.17133441319177,
+                42.215750063175605
+              ],
+              [
+                -73.1715073643524,
+                42.21580954540725
+              ],
+              [
+                -73.17168228953133,
+                42.215862944111535
+              ],
+              [
+                -73.17185897481384,
+                42.21591019398757
+              ],
+              [
+                -73.1720372041328,
+                42.21595123725384
+              ],
+              [
+                -73.1721627073168,
+                42.21598113970813
+              ],
+              [
+                -73.17228965499531,
+                42.216004150420616
+              ],
+              [
+                -73.1724176690171,
+                42.21602020084709
+              ],
+              [
+                -73.17254636805455,
+                42.21602924317661
+              ],
+              [
+                -73.17267536873953,
+                42.21603125047392
+              ],
+              [
+                -73.17280428680532,
+                42.216026216759694
+              ],
+              [
+                -73.17309652721237,
+                42.216019932079305
+              ],
+              [
+                -73.17338882254563,
+                42.21601721346359
+              ],
+              [
+                -73.17349106225886,
+                42.215716632976786
+              ],
+              [
+                -73.17336581487935,
+                42.215139673131254
+              ],
+              [
+                -73.17177996649444,
+                42.2133026314246
+              ],
+              [
+                -73.17417982567291,
+                42.2122841390268
+              ],
+              [
+                -73.17534325428188,
+                42.21369777610673
+              ],
+              [
+                -73.17537302032227,
+                42.21373413048177
+              ],
+              [
+                -73.17699997394487,
+                42.212741677816474
+              ],
+              [
+                -73.17692120834398,
+                42.21269501385106
+              ],
+              [
+                -73.17683989185953,
+                42.212652952290135
+              ],
+              [
+                -73.17680235585802,
+                42.21263195861455
+              ],
+              [
+                -73.17676297102366,
+                42.212614680864455
+              ],
+              [
+                -73.17672210415088,
+                42.21260127994904
+              ],
+              [
+                -73.17654273457204,
+                42.212544404108414
+              ],
+              [
+                -73.17636526140572,
+                42.21248186146459
+              ],
+              [
+                -73.17618986363242,
+                42.21241371509141
+              ],
+              [
+                -73.17601671813958,
+                42.21234003371402
+              ],
+              [
+                -73.1758459995433,
+                42.21226089163961
+              ],
+              [
+                -73.17567788001212,
+                42.21217636868241
+              ],
+              [
+                -73.17551252909344,
+                42.21208655008326
+              ],
+              [
+                -73.1744450557415,
+                42.21141919617614
+              ],
+              [
+                -73.1742841284666,
+                42.21131273516059
+              ],
+              [
+                -73.17411954498894,
+                42.21121201865486
+              ],
+              [
+                -73.17395151027665,
+                42.211117172088755
+              ],
+              [
+                -73.17378023359588,
+                42.21102831358177
+              ],
+              [
+                -73.17360592825027,
+                42.210945553796044
+              ],
+              [
+                -73.17342881131529,
+                42.21086899579852
+              ],
+              [
+                -73.17331588143682,
+                42.210835531206996
+              ],
+              [
+                -73.17320503452964,
+                42.21079570659773
+              ],
+              [
+                -73.17309662845895,
+                42.21074965054303
+              ],
+              [
+                -73.17299101320984,
+                42.210697511733194
+              ],
+              [
+                -73.1728885297573,
+                42.21063945849648
+              ],
+              [
+                -73.17278950896545,
+                42.21057567825567
+              ],
+              [
+                -73.17269427051933,
+                42.21050637692295
+              ],
+              [
+                -73.1726031218928,
+                42.21043177823517
+              ],
+              [
+                -73.17251635735592,
+                42.21035212303148
+              ],
+              [
+                -73.17243425702483,
+                42.21026766847582
+              ],
+              [
+                -73.17235708595749,
+                42.210178687226666
+              ],
+              [
+                -73.17228509329787,
+                42.210085466556755
+              ],
+              [
+                -73.1722185114717,
+                42.20998830742565
+              ],
+              [
+                -73.17215755543596,
+                42.209887523508065
+              ],
+              [
+                -73.17210242198502,
+                42.20978344018124
+              ],
+              [
+                -73.17205328911521,
+                42.20967639347442
+              ],
+              [
+                -73.17201031545024,
+                42.209566728984015
+              ],
+              [
+                -73.17194641797755,
+                42.209400640564745
+              ],
+              [
+                -73.17187596559064,
+                42.20923722480293
+              ],
+              [
+                -73.17179906976926,
+                42.20907674027818
+              ],
+              [
+                -73.1717158521889,
+                42.208919440931865
+              ],
+              [
+                -73.1716264445282,
+                42.208765575665346
+              ],
+              [
+                -73.17153098826067,
+                42.208615387946075
+              ],
+              [
+                -73.17119281664546,
+                42.20904123013085
+              ],
+              [
+                -73.16960891017789,
+                42.21103256461096
+              ],
+              [
+                -73.16790689116104,
+                42.21025267567148
+              ],
+              [
+                -73.16965159629004,
+                42.20833263154133
+              ],
+              [
+                -73.17046680675115,
+                42.20743520590737
+              ],
+              [
+                -73.170404720369,
+                42.207383162750794
+              ],
+              [
+                -73.16987167465462,
+                42.20692392986848
+              ],
+              [
+                -73.16948355316745,
+                42.207359330607105
+              ],
+              [
+                -73.1682756789881,
+                42.20885290265003
+              ],
+              [
+                -73.16809534157461,
+                42.208764711879425
+              ],
+              [
+                -73.16492142053633,
+                42.21261718461036
+              ],
+              [
+                -73.1663252610379,
+                42.213684226800325
+              ],
+              [
+                -73.1667278908921,
+                42.213876930560346
+              ],
+              [
+                -73.16755703799528,
+                42.21429677395094
+              ],
+              [
+                -73.1680821925531,
+                42.21478167440389
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -73.17537302032227,
+                42.21373413048177
+              ],
+              [
+                -73.17594927905476,
+                42.2144379266517
+              ],
+              [
+                -73.17649442336302,
+                42.21481276159809
+              ],
+              [
+                -73.17644155155068,
+                42.2152819406624
+              ],
+              [
+                -73.17679444225772,
+                42.21546754188495
+              ],
+              [
+                -73.1768447408857,
+                42.215428214050306
+              ],
+              [
+                -73.17689696562562,
+                42.21539148249583
+              ],
+              [
+                -73.17695098259765,
+                42.2153574413841
+              ],
+              [
+                -73.17700162903142,
+                42.21533252186501
+              ],
+              [
+                -73.1770546188216,
+                42.215313076407384
+              ],
+              [
+                -73.1771093622583,
+                42.215299321414754
+              ],
+              [
+                -73.1771652501158,
+                42.21529140996294
+              ],
+              [
+                -73.17715971617106,
+                42.2152811812801
+              ],
+              [
+                -73.17714654770336,
+                42.21521370831377
+              ],
+              [
+                -73.17714042771581,
+                42.21514523528638
+              ],
+              [
+                -73.17714142183844,
+                42.21507649649495
+              ],
+              [
+                -73.17714951941042,
+                42.215008229086514
+              ],
+              [
+                -73.17716463359427,
+                42.214941165153036
+              ],
+              [
+                -73.17749665859407,
+                42.213906599733654
+              ],
+              [
+                -73.17752021649447,
+                42.21382947885372
+              ],
+              [
+                -73.17753685855462,
+                42.213750576086795
+              ],
+              [
+                -73.1775464542405,
+                42.21367051031629
+              ],
+              [
+                -73.17754892828717,
+                42.213589909547764
+              ],
+              [
+                -73.17754426128916,
+                42.2135094059831
+              ],
+              [
+                -73.17753248985264,
+                42.21342963106176
+              ],
+              [
+                -73.17751370630828,
+                42.21335121050798
+              ],
+              [
+                -73.17748805798709,
+                42.21327475942287
+              ],
+              [
+                -73.17745574606478,
+                42.21320087745978
+              ],
+              [
+                -73.17740556345099,
+                42.213122131632616
+              ],
+              [
+                -73.17734988912926,
+                42.21304716784187
+              ],
+              [
+                -73.17728900700502,
+                42.21297636835761
+              ],
+              [
+                -73.17722322754035,
+                42.212910094214465
+              ],
+              [
+                -73.17715288617079,
+                42.212848683370545
+              ],
+              [
+                -73.17707834159485,
+                42.212792448984075
+              ],
+              [
+                -73.17699997394487,
+                42.212741677816474
+              ],
+              [
+                -73.17537302032227,
+                42.21373413048177
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ashintully · Terrace Garden",
+        "town": "Tyringham",
+        "county": "Berkshire County",
+        "region": "Massachusetts",
+        "kind": "Public woodland garden",
+        "planningFocus": "Aerial-interpreted garden rooms and circulation",
+        "summary": "Manually reconstructed site features from 2025 aerial imagery, cross-referenced with publisher maps. Canopy-obscured boundaries remain uncertain; planting-bed design is deferred.",
+        "campusAcreage": 120,
+        "parcelAcreage": 121.82697428833792,
+        "mapping": {
+          "parcelStatus": "matched",
+          "layoutStatus": "aerial-traced-site",
+          "confidence": "high",
+          "method": "Four MassGIS parcels recorded for The Trustees east of Main Road, checked against the publisher entrance and south-up trail map. Parcel context does not establish public access; the private house is excluded from site features.",
+          "layoutCalibration": {
+            "revision": 4,
+            "status": "site-reconstructed",
+            "target": "Reviewed public-garden site features",
+            "imagery": "MassGIS 2025 aerial imagery",
+            "reference": "The Trustees Ashintully Gardens trail map, October 2021",
+            "confidence": "mixed",
+            "note": "Source pixel picks retained per feature. Garden boundaries obscured by canopy remain low confidence; planting design is deferred."
+          },
+          "layoutAnchor": {
+            "type": "Point",
+            "coordinates": [
+              -73.17923426628113,
+              42.21450985502208
+            ],
+            "role": "editable-layout-origin",
+            "confidence": "medium",
+            "method": "Historical local coordinate origin retained for saved-workspace compatibility; the reviewed site viewport and geographic feature geometry determine display."
+          },
+          "parcelId": "409_6_0+409_6_1+409_7_0+409_8_0",
+          "parcelFiscalYear": 2025
+        },
+        "sources": [
+          {
+            "id": "source:ashintully-guide",
+            "label": "Ashintully property guide",
+            "url": "https://thetrustees.org/place/ashintully-gardens/"
+          },
+          {
+            "id": "source:ashintully-map",
+            "label": "Ashintully public map",
+            "url": "https://thetrustees.org/wp-content/uploads/2022/02/ashintully-trail-map.pdf"
+          },
+          {
+            "id": "source:massgis-aerial-2025",
+            "label": "MassGIS 2025 aerial imagery",
+            "url": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery"
+          },
+          {
+            "id": "source:massgis-parcels",
+            "label": "MassGIS Level 3 parcels",
+            "url": "https://www.mass.gov/info-details/massgis-data-property-tax-parcels"
+          }
+        ],
+        "siteReconstructionRevision": 2,
+        "starterLayout": {
+          "revision": 4,
+          "viewport": {
+            "x": 6238.923126854962,
+            "y": -4462.960191271215,
+            "width": 12664.989801748514,
+            "height": 11497.497766235905
+          },
+          "beds": [],
+          "placements": []
+        },
+        "siteReconstructionAdditions": [
+          {
+            "revision": 4,
+            "vegetationIds": [
+              "ashintully-meadow-crown-north",
+              "ashintully-meadow-crown-south"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/geo+json",
+      "href": "./items.json"
+    },
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "href": "../../collections.json#gardens"
+    },
+    {
+      "rel": "describedby",
+      "type": "application/schema+json",
+      "href": "../../schemas/garden-feature.schema.json"
+    }
+  ]
+}

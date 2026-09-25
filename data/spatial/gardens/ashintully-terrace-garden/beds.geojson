@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "gardenId": "ashintully-terrace-garden",
+    "layer": "beds",
+    "status": "Reviewed site interpretation; planting design deferred"
+  },
+  "features": []
+}

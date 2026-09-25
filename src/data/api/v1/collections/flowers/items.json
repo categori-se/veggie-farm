@@ -1,0 +1,794 @@
+{
+  "type": "FeatureCollection",
+  "timeStamp": "2026-08-24T00:00:00Z",
+  "numberMatched": 13,
+  "numberReturned": 13,
+  "features": [
+    {
+      "type": "Feature",
+      "id": "flower-peony",
+      "geometry": null,
+      "properties": {
+        "name": "Garden Peony",
+        "scientificName": "Paeonia lactiflora",
+        "group": "Flower",
+        "matureDiameter": 30,
+        "spacing": 30,
+        "height": 32,
+        "sun": "Full sun",
+        "light": [
+          "Full sun"
+        ],
+        "moisture": [
+          "Average"
+        ],
+        "soil": "Fertile, well-drained soil",
+        "flowerColors": [
+          "white",
+          "pink",
+          "red"
+        ],
+        "bloomSeasons": [
+          "spring"
+        ],
+        "bloomDetail": "Late spring to early summer; timing varies by cultivar",
+        "nativeToNewEngland": false,
+        "pollinatorRewards": "Formal-garden reference; pollinator value varies by cultivar",
+        "naumkeagUse": "Peony Terraces",
+        "sourceIds": [
+          "umass-drought-plants",
+          "usda-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Moderate watering",
+        "waterCadence": "Water during establishment; adjust to rainfall and soil",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#d97894",
+        "leafColor": "#3f704c",
+        "visual": {
+          "habit": "mounded",
+          "leafShape": "oval",
+          "leafCount": 35,
+          "density": 1.16,
+          "layers": 3,
+          "leafLength": 9,
+          "leafWidth": 3.5999999999999996,
+          "heightProfile": "mounded",
+          "flowerColor": "#d97894"
+        },
+        "seed": 201
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-virginia-rose",
+      "geometry": null,
+      "properties": {
+        "name": "Virginia Rose",
+        "scientificName": "Rosa virginiana",
+        "group": "Flower",
+        "matureDiameter": 48,
+        "spacing": 48,
+        "height": 60,
+        "sun": "Full sun to Part shade",
+        "light": [
+          "Full sun",
+          "Part shade"
+        ],
+        "moisture": [
+          "Dry",
+          "Average"
+        ],
+        "soil": "Coarse to medium, well-drained soil",
+        "flowerColors": [
+          "pink"
+        ],
+        "bloomSeasons": [
+          "summer"
+        ],
+        "bloomDetail": "Early summer",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Pollen and nectar; hips add later-season habitat value",
+        "naumkeagUse": "Rose Garden native-species alternative",
+        "sourceIds": [
+          "umass-pollinator-list",
+          "csnap-native-plants",
+          "usda-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Moderate watering",
+        "waterCadence": "Water during establishment; adjust to rainfall and soil",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#d96f86",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "shrub",
+          "leafShape": "oval",
+          "leafCount": 55,
+          "density": 1.16,
+          "layers": 5,
+          "leafLength": 14.399999999999999,
+          "leafWidth": 5.76,
+          "heightProfile": "mounded",
+          "flowerColor": "#d96f86"
+        },
+        "seed": 211
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-wild-geranium",
+      "geometry": null,
+      "properties": {
+        "name": "Wild Geranium",
+        "scientificName": "Geranium maculatum",
+        "group": "Flower",
+        "matureDiameter": 18,
+        "spacing": 18,
+        "height": 18,
+        "sun": "Part shade to Shade",
+        "light": [
+          "Part shade",
+          "Shade"
+        ],
+        "moisture": [
+          "Average",
+          "Moist"
+        ],
+        "soil": "Average to moist woodland soil",
+        "flowerColors": [
+          "pink",
+          "lavender"
+        ],
+        "bloomSeasons": [
+          "spring"
+        ],
+        "bloomDetail": "April to May; about six to seven weeks",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Nectar and pollen; supports a specialist bee",
+        "naumkeagUse": "Afternoon Garden shaded border",
+        "sourceIds": [
+          "umass-pollinator-profiles",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Consistent moisture",
+        "waterCadence": "Maintain even moisture during establishment and dry periods",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#b984bd",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "mounded",
+          "leafShape": "oval",
+          "leafCount": 21,
+          "density": 1.16,
+          "layers": 3,
+          "leafLength": 5.3999999999999995,
+          "leafWidth": 2.16,
+          "heightProfile": "mounded",
+          "flowerColor": "#b984bd"
+        },
+        "seed": 223
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-red-columbine",
+      "geometry": null,
+      "properties": {
+        "name": "Red Columbine",
+        "scientificName": "Aquilegia canadensis",
+        "group": "Flower",
+        "matureDiameter": 18,
+        "spacing": 18,
+        "height": 24,
+        "sun": "Full sun to Part shade",
+        "light": [
+          "Full sun",
+          "Part shade"
+        ],
+        "moisture": [
+          "Dry",
+          "Average"
+        ],
+        "soil": "Dry to average, well-drained soil",
+        "flowerColors": [
+          "red",
+          "yellow",
+          "pink"
+        ],
+        "bloomSeasons": [
+          "spring"
+        ],
+        "bloomDetail": "Spring",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Early-season native flower reference",
+        "naumkeagUse": "Afternoon Garden bright woodland edge",
+        "sourceIds": [
+          "mdar-pollinator",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Moderate watering",
+        "waterCadence": "Water during establishment; adjust to rainfall and soil",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#cf5148",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "upright",
+          "leafShape": "oval",
+          "leafCount": 21,
+          "density": 0.92,
+          "layers": 3,
+          "leafLength": 5.3999999999999995,
+          "leafWidth": 2.16,
+          "heightProfile": "upright",
+          "flowerColor": "#cf5148"
+        },
+        "seed": 233
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-butterfly-weed",
+      "geometry": null,
+      "properties": {
+        "name": "Butterfly Weed",
+        "scientificName": "Asclepias tuberosa",
+        "group": "Flower",
+        "matureDiameter": 24,
+        "spacing": 24,
+        "height": 30,
+        "sun": "Full sun",
+        "light": [
+          "Full sun"
+        ],
+        "moisture": [
+          "Dry"
+        ],
+        "soil": "Dry, well-drained soil",
+        "flowerColors": [
+          "orange"
+        ],
+        "bloomSeasons": [
+          "summer"
+        ],
+        "bloomDetail": "June to August; roughly eight weeks",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Nectar and pollen; milkweed host plant",
+        "naumkeagUse": "Sunny Rose Garden edge or kitchen pollinator strip",
+        "sourceIds": [
+          "mdar-pollinator",
+          "umass-pollinator-profiles",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Moderate watering",
+        "waterCadence": "Water during establishment; adjust to rainfall and soil",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#e77728",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "upright",
+          "leafShape": "oval",
+          "leafCount": 28,
+          "density": 0.92,
+          "layers": 3,
+          "leafLength": 7.199999999999999,
+          "leafWidth": 2.88,
+          "heightProfile": "upright",
+          "flowerColor": "#e77728"
+        },
+        "seed": 241
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-bee-balm",
+      "geometry": null,
+      "properties": {
+        "name": "Wild Bergamot",
+        "scientificName": "Monarda fistulosa",
+        "group": "Flower",
+        "matureDiameter": 18,
+        "spacing": 18,
+        "height": 36,
+        "sun": "Full sun to Part shade",
+        "light": [
+          "Full sun",
+          "Part shade"
+        ],
+        "moisture": [
+          "Average",
+          "Moist"
+        ],
+        "soil": "Average to moist soil with room to spread",
+        "flowerColors": [
+          "lavender",
+          "pink"
+        ],
+        "bloomSeasons": [
+          "summer",
+          "fall"
+        ],
+        "bloomDetail": "Midsummer into fall; about six weeks",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Nectar and pollen",
+        "naumkeagUse": "Afternoon Garden middle border",
+        "sourceIds": [
+          "umass-pollinator-profiles",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Consistent moisture",
+        "waterCadence": "Maintain even moisture during establishment and dry periods",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#aa72ad",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "upright",
+          "leafShape": "oval",
+          "leafCount": 21,
+          "density": 0.92,
+          "layers": 5,
+          "leafLength": 5.3999999999999995,
+          "leafWidth": 2.16,
+          "heightProfile": "upright",
+          "flowerColor": "#aa72ad"
+        },
+        "seed": 251
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-black-eyed-susan",
+      "geometry": null,
+      "properties": {
+        "name": "Black-eyed Susan",
+        "scientificName": "Rudbeckia hirta",
+        "group": "Flower",
+        "matureDiameter": 18,
+        "spacing": 18,
+        "height": 30,
+        "sun": "Full sun",
+        "light": [
+          "Full sun"
+        ],
+        "moisture": [
+          "Dry",
+          "Average"
+        ],
+        "soil": "Dry to average, well-drained soil",
+        "flowerColors": [
+          "yellow"
+        ],
+        "bloomSeasons": [
+          "summer"
+        ],
+        "bloomDetail": "June through late summer",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Nectar and pollen; supports specialist bees",
+        "naumkeagUse": "Sunny seasonal border",
+        "sourceIds": [
+          "umass-pollinator-profiles",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Moderate watering",
+        "waterCadence": "Water during establishment; adjust to rainfall and soil",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#d5a52b",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "upright",
+          "leafShape": "oval",
+          "leafCount": 21,
+          "density": 0.92,
+          "layers": 3,
+          "leafLength": 5.3999999999999995,
+          "leafWidth": 2.16,
+          "heightProfile": "upright",
+          "flowerColor": "#d5a52b"
+        },
+        "seed": 263
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-blue-flag-iris",
+      "geometry": null,
+      "properties": {
+        "name": "Blue Flag Iris",
+        "scientificName": "Iris versicolor",
+        "group": "Flower",
+        "matureDiameter": 24,
+        "spacing": 24,
+        "height": 30,
+        "sun": "Full sun to Part shade",
+        "light": [
+          "Full sun",
+          "Part shade"
+        ],
+        "moisture": [
+          "Average",
+          "Moist"
+        ],
+        "soil": "Average to moist soil",
+        "flowerColors": [
+          "purple"
+        ],
+        "bloomSeasons": [
+          "summer"
+        ],
+        "bloomDetail": "Summer",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Native wet-border flower reference",
+        "naumkeagUse": "Formal pool or moist border edge",
+        "sourceIds": [
+          "mdar-pollinator",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Consistent moisture",
+        "waterCadence": "Maintain even moisture during establishment and dry periods",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#6866af",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "grasslike",
+          "leafShape": "filament",
+          "leafCount": 28,
+          "density": 1.16,
+          "layers": 3,
+          "leafLength": 7.199999999999999,
+          "leafWidth": 1.1,
+          "heightProfile": "mounded",
+          "flowerColor": "#6866af"
+        },
+        "seed": 271
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-blazing-star",
+      "geometry": null,
+      "properties": {
+        "name": "Blazing Star",
+        "scientificName": "Liatris spicata",
+        "group": "Flower",
+        "matureDiameter": 18,
+        "spacing": 18,
+        "height": 42,
+        "sun": "Full sun to Part shade",
+        "light": [
+          "Full sun",
+          "Part shade"
+        ],
+        "moisture": [
+          "Average",
+          "Moist"
+        ],
+        "soil": "Average to moist soil",
+        "flowerColors": [
+          "purple",
+          "white"
+        ],
+        "bloomSeasons": [
+          "summer",
+          "fall"
+        ],
+        "bloomDetail": "Summer into fall",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Late-season flower resource",
+        "naumkeagUse": "Peony Terrace succession after spring bloom",
+        "sourceIds": [
+          "mdar-pollinator",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Consistent moisture",
+        "waterCadence": "Maintain even moisture during establishment and dry periods",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#914ea0",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "upright",
+          "leafShape": "oval",
+          "leafCount": 21,
+          "density": 0.92,
+          "layers": 5,
+          "leafLength": 5.3999999999999995,
+          "leafWidth": 2.16,
+          "heightProfile": "upright",
+          "flowerColor": "#914ea0"
+        },
+        "seed": 281
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-cardinal-flower",
+      "geometry": null,
+      "properties": {
+        "name": "Cardinal Flower",
+        "scientificName": "Lobelia cardinalis",
+        "group": "Flower",
+        "matureDiameter": 18,
+        "spacing": 18,
+        "height": 36,
+        "sun": "Full sun to Part shade to Shade",
+        "light": [
+          "Full sun",
+          "Part shade",
+          "Shade"
+        ],
+        "moisture": [
+          "Moist",
+          "Wet"
+        ],
+        "soil": "Moist to wet, humus-rich soil",
+        "flowerColors": [
+          "red"
+        ],
+        "bloomSeasons": [
+          "summer"
+        ],
+        "bloomDetail": "Summer",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Hummingbird and pollinator flower reference",
+        "naumkeagUse": "Formal pool or shaded moist border",
+        "sourceIds": [
+          "mdar-pollinator",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Consistent moisture",
+        "waterCadence": "Keep evenly moist; do not allow the root zone to dry",
+        "emitter": "Moisture-zone dripline",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#c82e42",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "upright",
+          "leafShape": "oval",
+          "leafCount": 21,
+          "density": 0.92,
+          "layers": 5,
+          "leafLength": 5.3999999999999995,
+          "leafWidth": 2.16,
+          "heightProfile": "upright",
+          "flowerColor": "#c82e42"
+        },
+        "seed": 293
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-smooth-aster",
+      "geometry": null,
+      "properties": {
+        "name": "Smooth Aster",
+        "scientificName": "Symphyotrichum laeve",
+        "group": "Flower",
+        "matureDiameter": 24,
+        "spacing": 24,
+        "height": 36,
+        "sun": "Full sun to Part shade",
+        "light": [
+          "Full sun",
+          "Part shade"
+        ],
+        "moisture": [
+          "Dry",
+          "Average"
+        ],
+        "soil": "Dry to average soil",
+        "flowerColors": [
+          "purple"
+        ],
+        "bloomSeasons": [
+          "fall"
+        ],
+        "bloomDetail": "Fall",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Late-season native flower resource",
+        "naumkeagUse": "Afternoon Garden late-season border",
+        "sourceIds": [
+          "mdar-pollinator",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Moderate watering",
+        "waterCadence": "Water during establishment; adjust to rainfall and soil",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#7778b7",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "upright",
+          "leafShape": "oval",
+          "leafCount": 28,
+          "density": 0.92,
+          "layers": 5,
+          "leafLength": 7.199999999999999,
+          "leafWidth": 2.88,
+          "heightProfile": "upright",
+          "flowerColor": "#7778b7"
+        },
+        "seed": 307
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-wild-blue-phlox",
+      "geometry": null,
+      "properties": {
+        "name": "Wild Blue Phlox",
+        "scientificName": "Phlox divaricata",
+        "group": "Flower",
+        "matureDiameter": 18,
+        "spacing": 18,
+        "height": 15,
+        "sun": "Part shade to Shade",
+        "light": [
+          "Part shade",
+          "Shade"
+        ],
+        "moisture": [
+          "Average",
+          "Moist"
+        ],
+        "soil": "Average to moist woodland soil",
+        "flowerColors": [
+          "pink",
+          "lavender"
+        ],
+        "bloomSeasons": [
+          "spring"
+        ],
+        "bloomDetail": "Spring",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Spring woodland flower resource",
+        "naumkeagUse": "Afternoon Garden foreground",
+        "sourceIds": [
+          "mdar-pollinator",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Consistent moisture",
+        "waterCadence": "Maintain even moisture during establishment and dry periods",
+        "emitter": "Dripline or individual emitter",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#8d86c0",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "mounded",
+          "leafShape": "oval",
+          "leafCount": 21,
+          "density": 1.16,
+          "layers": 3,
+          "leafLength": 5.3999999999999995,
+          "leafWidth": 2.16,
+          "heightProfile": "mounded",
+          "flowerColor": "#8d86c0"
+        },
+        "seed": 317
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "flower-goldenrod",
+      "geometry": null,
+      "properties": {
+        "name": "Wrinkle-leaved Goldenrod",
+        "scientificName": "Solidago rugosa",
+        "group": "Flower",
+        "matureDiameter": 24,
+        "spacing": 24,
+        "height": 48,
+        "sun": "Full sun to Part shade",
+        "light": [
+          "Full sun",
+          "Part shade"
+        ],
+        "moisture": [
+          "Dry",
+          "Average",
+          "Moist",
+          "Wet"
+        ],
+        "soil": "Adaptable from dry to wet soil",
+        "flowerColors": [
+          "yellow"
+        ],
+        "bloomSeasons": [
+          "summer",
+          "fall"
+        ],
+        "bloomDetail": "Late summer into fall",
+        "nativeToNewEngland": true,
+        "pollinatorRewards": "Nectar and pollen; valuable late-season resource",
+        "naumkeagUse": "Naturalized edge or late-season border",
+        "sourceIds": [
+          "mdar-pollinator",
+          "umass-pollinator-profiles",
+          "csnap-native-plants"
+        ],
+        "dataConfidence": "reference",
+        "geometryBasis": "Planner footprint derived from typical mature spread; verify cultivar dimensions before installation.",
+        "interpretation": "Condition-matching design reference; not a documented Naumkeag planting inventory.",
+        "waterStyle": "Consistent moisture",
+        "waterCadence": "Keep evenly moist; do not allow the root zone to dry",
+        "emitter": "Moisture-zone dripline",
+        "zone": "Flowers",
+        "gauge": "Group by moisture need",
+        "color": "#c8a627",
+        "leafColor": "#477653",
+        "visual": {
+          "habit": "upright",
+          "leafShape": "oval",
+          "leafCount": 28,
+          "density": 0.92,
+          "layers": 5,
+          "leafLength": 7.199999999999999,
+          "leafWidth": 2.88,
+          "heightProfile": "upright",
+          "flowerColor": "#c8a627"
+        },
+        "seed": 331
+      }
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/geo+json",
+      "href": "./items.json"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "feature": "Bed and layout model",
+    "priority": "P0",
+    "description": "Represent beds, paths, containers, rows, and protected structures as editable objects.",
+    "dataNeeded": [
+      "bed dimensions",
+      "path dimensions",
+      "shape",
+      "sun exposure",
+      "protection type",
+      "soil notes"
+    ],
+    "sourceInfluence": "GrowVeg describes planning for rows, containers, raised beds, square-foot gardening, and varied garden shapes."
+  },
+  {
+    "feature": "Plant spacing engine",
+    "priority": "P0",
+    "description": "Use crop spacing data to warn about overcrowding and estimate how many plants fit in a bed.",
+    "dataNeeded": [
+      "in-row spacing",
+      "between-row spacing",
+      "square-foot spacing",
+      "trellis requirement",
+      "mature spread"
+    ],
+    "sourceInfluence": "GrowVeg emphasizes automatic spacing to avoid overcrowding."
+  },
+  {
+    "feature": "Climate-aware planting calendar",
+    "priority": "P0",
+    "description": "Generate sow, transplant, protect, and harvest windows from frost dates, crop tolerance, and season length.",
+    "dataNeeded": [
+      "location",
+      "frost dates",
+      "hardiness zone",
+      "soil temperature thresholds",
+      "crop frost tolerance",
+      "days to maturity"
+    ],
+    "sourceInfluence": "GrowVeg describes calendars tailored to local climate and weather-station data."
+  },
+  {
+    "feature": "Crop rotation memory",
+    "priority": "P1",
+    "description": "Track crop families by bed and year, then warn when a family repeats too often.",
+    "dataNeeded": [
+      "crop family",
+      "bed history",
+      "year",
+      "disease notes",
+      "pest notes"
+    ],
+    "sourceInfluence": "GrowVeg describes crop rotation notifications for soil-borne pest and disease prevention."
+  },
+  {
+    "feature": "Succession planting timeline",
+    "priority": "P1",
+    "description": "Show when a bed is occupied and identify windows for follow-up crops.",
+    "dataNeeded": [
+      "planting date",
+      "harvest window",
+      "days to maturity",
+      "crop removal date",
+      "next crop constraints"
+    ],
+    "sourceInfluence": "GrowVeg describes succession planting for seeing when and where more crops can be grown."
+  },
+  {
+    "feature": "Garden journal",
+    "priority": "P1",
+    "description": "Attach notes, photos, watering, observations, issues, and harvests to plants and beds.",
+    "dataNeeded": [
+      "journal entries",
+      "photo references",
+      "measurement fields",
+      "harvest records",
+      "issue records"
+    ],
+    "sourceInfluence": "Atami and GrowVeg both emphasize garden journaling for learning what worked."
+  },
+  {
+    "feature": "Companion and ecology recommendations",
+    "priority": "P2",
+    "description": "Recommend nearby flowers, herbs, and habitat based on pollinators, beneficial insects, and pest pressure.",
+    "dataNeeded": [
+      "crop",
+      "pest relationships",
+      "beneficial insect habitat",
+      "flowering window",
+      "source evidence"
+    ],
+    "sourceInfluence": "GrowVeg describes evidence-based companion planting; veggie.farm should build its own cited model before making strong claims."
+  },
+  {
+    "feature": "Seed inventory",
+    "priority": "P2",
+    "description": "Track seed packets, age, source, quantity, germination notes, and planned use.",
+    "dataNeeded": [
+      "packet name",
+      "crop",
+      "variety",
+      "source",
+      "packedForYear",
+      "quantity",
+      "germinationTest",
+      "notes"
+    ],
+    "sourceInfluence": "GrowVeg lists seed inventory as a planned feature."
+  }
+]

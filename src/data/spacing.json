@@ -1,0 +1,380 @@
+[
+  {
+    "plantId": "plant:community:apples",
+    "name": "Apples",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:arugula",
+    "name": "Arugula",
+    "plantSpacingText": "2-4 in for baby leaf; 6 in for mature plants",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:basil",
+    "name": "Basil",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:beans",
+    "name": "Beans",
+    "plantSpacingText": "Bush beans 4-6 in; pole beans 6-8 in with support",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:beets",
+    "name": "Beets",
+    "plantSpacingText": "3-4 in between plants; 12-18 in between rows",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:black-currants",
+    "name": "Black Currants",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-black-eyed-susan",
+    "name": "Black-eyed Susan",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-blazing-star",
+    "name": "Blazing Star",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-blue-flag-iris",
+    "name": "Blue Flag Iris",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:blueberries",
+    "name": "Blueberries",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:bok-choy",
+    "name": "Bok Choy",
+    "plantSpacingText": "6-12 in depending on full-size or baby harvest",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-butterfly-weed",
+    "name": "Butterfly Weed",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-cardinal-flower",
+    "name": "Cardinal Flower",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:carrots",
+    "name": "Carrots",
+    "plantSpacingText": "1-3 in after thinning; 12-18 in between rows",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:cilantro",
+    "name": "Cilantro",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:collards",
+    "name": "Collards",
+    "plantSpacingText": "12-18 in for regular harvest; wider for full plants",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:corn",
+    "name": "Corn",
+    "plantSpacingText": "8-12 in in blocks; 24-36 in between rows",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:cucumbers",
+    "name": "Cucumbers",
+    "plantSpacingText": "12-18 in on trellis; more for sprawling plants",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:dill",
+    "name": "Dill",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-peony",
+    "name": "Garden Peony",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:garlic",
+    "name": "Garlic",
+    "plantSpacingText": "4-6 in between cloves; 8-12 in between rows",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:gooseberries",
+    "name": "Gooseberries",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:ground-cherries",
+    "name": "Ground Cherries",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:kale",
+    "name": "Kale",
+    "plantSpacingText": "12-18 in between plants",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:lettuce",
+    "name": "Lettuce",
+    "plantSpacingText": "6-12 in depending on harvest stage",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:mint",
+    "name": "Mint",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:mizuna",
+    "name": "Mizuna",
+    "plantSpacingText": "4-8 in for cut greens; wider for full plants",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:onions",
+    "name": "Onions",
+    "plantSpacingText": "4-6 in for bulbs; closer for scallions",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:parsley",
+    "name": "Parsley",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:pears",
+    "name": "Pears",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:peas",
+    "name": "Peas",
+    "plantSpacingText": "2-3 in with support for taller varieties",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:peppers",
+    "name": "Peppers",
+    "plantSpacingText": "18-24 in between plants; 24-36 in between rows",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:plums",
+    "name": "Plums",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:potatoes",
+    "name": "Potatoes",
+    "plantSpacingText": "10-12 in between seed pieces; 30-36 in between rows",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:radishes",
+    "name": "Radishes",
+    "plantSpacingText": "1-2 in for small radishes; more for daikon",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:raspberries",
+    "name": "Raspberries",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-red-columbine",
+    "name": "Red Columbine",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:rosemary",
+    "name": "Rosemary",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:sage",
+    "name": "Sage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-smooth-aster",
+    "name": "Smooth Aster",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:sour-cherries",
+    "name": "Sour Cherries",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:spinach",
+    "name": "Spinach",
+    "plantSpacingText": "4-6 in for mature plants; closer for baby leaf",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:strawberries",
+    "name": "Strawberries",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:swiss-chard",
+    "name": "Swiss Chard",
+    "plantSpacingText": "8-12 in between plants",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:thyme",
+    "name": "Thyme",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:tomatoes",
+    "name": "Tomatoes",
+    "plantSpacingText": "18-24 in between plants; 30-36 in between rows",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:turnips",
+    "name": "Turnips",
+    "plantSpacingText": "2-4 in for small roots; wider for large varieties",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-virginia-rose",
+    "name": "Virginia Rose",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-bee-balm",
+    "name": "Wild Bergamot",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-wild-blue-phlox",
+    "name": "Wild Blue Phlox",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-wild-geranium",
+    "name": "Wild Geranium",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:winter-squash",
+    "name": "Winter Squash",
+    "plantSpacingText": "36-72 in depending on vine length",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:flower-goldenrod",
+    "name": "Wrinkle-leaved Goldenrod",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:zucchini",
+    "name": "Zucchini",
+    "plantSpacingText": "24-36 in between plants",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  }
+]

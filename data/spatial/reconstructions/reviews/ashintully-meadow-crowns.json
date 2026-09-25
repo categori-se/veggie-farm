@@ -1,0 +1,287 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "gardenId": "ashintully-terrace-garden",
+    "status": "Offline crown interpretation draft; not canonical or deployed",
+    "raster": {
+      "id": "ashintully-reviewed-campus-2025-z20",
+      "sourceId": "source:massgis-aerial-2025",
+      "zoom": 20,
+      "tileOrigin": [
+        311139,
+        388398
+      ],
+      "tileSize": 256,
+      "pixelSize": [
+        4096,
+        4096
+      ],
+      "rotationDegrees": 0,
+      "sha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+      "missingTiles": [
+        [
+          311149,
+          388398
+        ],
+        [
+          311150,
+          388398
+        ],
+        [
+          311151,
+          388398
+        ],
+        [
+          311152,
+          388398
+        ],
+        [
+          311153,
+          388398
+        ],
+        [
+          311154,
+          388398
+        ],
+        [
+          311149,
+          388399
+        ],
+        [
+          311150,
+          388399
+        ],
+        [
+          311151,
+          388399
+        ],
+        [
+          311152,
+          388399
+        ],
+        [
+          311153,
+          388399
+        ],
+        [
+          311154,
+          388399
+        ],
+        [
+          311149,
+          388400
+        ],
+        [
+          311150,
+          388400
+        ],
+        [
+          311151,
+          388400
+        ],
+        [
+          311152,
+          388400
+        ],
+        [
+          311153,
+          388400
+        ],
+        [
+          311154,
+          388400
+        ],
+        [
+          311149,
+          388401
+        ],
+        [
+          311150,
+          388401
+        ],
+        [
+          311151,
+          388401
+        ],
+        [
+          311152,
+          388401
+        ],
+        [
+          311153,
+          388401
+        ],
+        [
+          311154,
+          388401
+        ],
+        [
+          311143,
+          388410
+        ],
+        [
+          311144,
+          388410
+        ],
+        [
+          311143,
+          388411
+        ],
+        [
+          311144,
+          388411
+        ],
+        [
+          311143,
+          388412
+        ],
+        [
+          311144,
+          388412
+        ],
+        [
+          311139,
+          388413
+        ],
+        [
+          311140,
+          388413
+        ],
+        [
+          311141,
+          388413
+        ],
+        [
+          311142,
+          388413
+        ],
+        [
+          311143,
+          388413
+        ],
+        [
+          311144,
+          388413
+        ]
+      ]
+    },
+    "limits": [
+      "No verified trunk, species, age, height or mature habit",
+      "Crown axes are approximate aerial observations, not growth predictions",
+      "No planting-bed or crop records added",
+      "Requires integration and saved-workspace migration review before publication"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ashintully-meadow-crown-north",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.17463025450706,
+          42.21515348954663
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "collection": "vegetation",
+        "kind": "tree",
+        "name": "Meadow tree crown 1 · identity unknown",
+        "localGeometry": {
+          "type": "Point",
+          "coordinates": [
+            14967.011877553368,
+            -2814.696148232746
+          ]
+        },
+        "localUnit": "inch",
+        "crownWidthFeet": 59.946522958449954,
+        "crownDepthFeet": 63.34481944291061,
+        "crownAxisRotationDegrees": 0,
+        "centerBasis": "Approximate visible crown center; trunk not resolved",
+        "crownBasis": "Visible foliage footprint, excluding cast shadow; not mature habit",
+        "confidence": "low",
+        "species": null,
+        "heightEstimateFeet": null,
+        "surveyStatus": "not-surveyed",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "observed canopy geometry"
+          }
+        ],
+        "provenance": {
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            3185,
+            1680
+          ],
+          "crownAxesPixels": {
+            "width": 165,
+            "depth": 175
+          },
+          "digitizationUncertaintyPixels": 20,
+          "reviewDate": "2026-09-23"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-meadow-crown-south",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.174619525671,
+          42.214537666526006
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "collection": "vegetation",
+        "kind": "tree",
+        "name": "Meadow tree crown 2 · identity unknown",
+        "localGeometry": {
+          "type": "Point",
+          "coordinates": [
+            15001.889854547375,
+            -121.62326598804088
+          ]
+        },
+        "localUnit": "inch",
+        "crownWidthFeet": 56.31340035490742,
+        "crownDepthFeet": 57.915828218986654,
+        "crownAxisRotationDegrees": 0,
+        "centerBasis": "Approximate visible crown center; trunk not resolved",
+        "crownBasis": "Visible foliage footprint, excluding cast shadow; not mature habit",
+        "confidence": "low",
+        "species": null,
+        "heightEstimateFeet": null,
+        "surveyStatus": "not-surveyed",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "observed canopy geometry"
+          }
+        ],
+        "provenance": {
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            3193,
+            2300
+          ],
+          "crownAxesPixels": {
+            "width": 155,
+            "depth": 160
+          },
+          "digitizationUncertaintyPixels": 20,
+          "reviewDate": "2026-09-23"
+        }
+      }
+    }
+  ]
+}

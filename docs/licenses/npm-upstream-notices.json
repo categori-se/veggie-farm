@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "notices": [
+    {
+      "name": "saxes",
+      "version": "6.0.0",
+      "metadata": "docs/licenses/upstream/saxes/6.0.0/metadata.json",
+      "metadataSha256": "49e633171169d15e096b3a85f976a723bfcd25f97d2d63915901e0990b0e8c42",
+      "text": "docs/licenses/upstream/saxes/6.0.0/LICENSE",
+      "sha256": "0fac2374380621b22e6b50451057721a9c52935b02d16d106a9f04897f061d0e",
+      "url": "https://raw.githubusercontent.com/lddubeau/saxes/211fa0ebec9b628affc09219199639887174bfc3/LICENSE",
+      "gitHead": "211fa0ebec9b628affc09219199639887174bfc3",
+      "basis": "Exact-version npm registry gitHead links to upstream license at that commit"
+    },
+    {
+      "name": "@rollup/plugin-virtual",
+      "version": "3.0.2",
+      "metadata": "docs/licenses/upstream/rollup-plugin-virtual/3.0.2/metadata.json",
+      "metadataSha256": "a13e7711489289ae7a7698379f9f84d93fcf2b467df391cefddbee025a477a8a",
+      "text": "docs/licenses/upstream/rollup-plugin-virtual/3.0.2/LICENSE",
+      "sha256": "7b8136f76c483d03597500bfa991aae9be68d4629e1121cbf9b93aa727efe305",
+      "url": "https://raw.githubusercontent.com/rollup/plugins/841a0391c1dd11fed16771a202e6eff97cf4139b/LICENSE",
+      "gitHead": "841a0391c1dd11fed16771a202e6eff97cf4139b",
+      "basis": "Repository root license at exact npm gitHead; package metadata declares MIT and repository directory packages/virtual; exact tree has no package-local license"
+    },
+    {
+      "name": "@esbuild/linux-x64",
+      "version": "0.27.7",
+      "metadata": "docs/licenses/upstream/@esbuild__linux-x64/0.27.7/metadata.json",
+      "metadataSha256": "b8b6c0874734a21b6b3f2f5c02069056992f73be3cd66b0c9a837dbc3142818c",
+      "text": "docs/licenses/upstream/@esbuild__linux-x64/0.27.7/LICENSE",
+      "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+      "url": "https://raw.githubusercontent.com/evanw/esbuild/2025c9ff6ab15ba6b0f9d074fd732250cc46e4a3/LICENSE.md",
+      "gitHead": "2025c9ff6ab15ba6b0f9d074fd732250cc46e4a3",
+      "basis": "Exact-version registry metadata links the locked archive to this upstream commit."
+    },
+    {
+      "name": "@esbuild/linux-x64",
+      "version": "0.28.1",
+      "metadata": "docs/licenses/upstream/@esbuild__linux-x64/0.28.1/metadata.json",
+      "metadataSha256": "452f9e60e2947cdde5a8fc53b67ff8c06966565324fa13a47920f0a33b0e0299",
+      "text": "docs/licenses/upstream/@esbuild__linux-x64/0.28.1/LICENSE",
+      "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+      "url": "https://raw.githubusercontent.com/evanw/esbuild/bb9db84c02433fbe37b3509f53f9f3e3cc48725e/LICENSE.md",
+      "gitHead": "bb9db84c02433fbe37b3509f53f9f3e3cc48725e",
+      "basis": "Exact-version registry metadata links the locked archive to this upstream commit."
+    },
+    {
+      "name": "@rollup/rollup-linux-x64-gnu",
+      "version": "4.62.2",
+      "metadata": "docs/licenses/upstream/@rollup__rollup-linux-x64-gnu/4.62.2/metadata.json",
+      "metadataSha256": "70b446a33f7dee74d6417fea71435b6aeb92bf9e012dcb0f2c33907359b114d0",
+      "text": "docs/licenses/upstream/@rollup__rollup-linux-x64-gnu/4.62.2/LICENSE",
+      "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+      "url": "https://raw.githubusercontent.com/rollup/rollup/8faa18777374582bb813d54ce3623f4acf1f9e0b/LICENSE.md",
+      "gitHead": "8faa18777374582bb813d54ce3623f4acf1f9e0b",
+      "basis": "Exact-version registry metadata links the locked archive to this upstream commit."
+    },
+    {
+      "name": "@rollup/rollup-linux-x64-musl",
+      "version": "4.62.2",
+      "metadata": "docs/licenses/upstream/@rollup__rollup-linux-x64-musl/4.62.2/metadata.json",
+      "metadataSha256": "82acb235d6e8868c4db023f265cf28d473b5bdf6cd29f107ecaa888f5562c5a8",
+      "text": "docs/licenses/upstream/@rollup__rollup-linux-x64-musl/4.62.2/LICENSE",
+      "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+      "url": "https://raw.githubusercontent.com/rollup/rollup/8faa18777374582bb813d54ce3623f4acf1f9e0b/LICENSE.md",
+      "gitHead": "8faa18777374582bb813d54ce3623f4acf1f9e0b",
+      "basis": "Exact-version registry metadata links the locked archive to this upstream commit."
+    }
+  ]
+}

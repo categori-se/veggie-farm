@@ -1,0 +1,313 @@
+{
+  "id": "community-garden",
+  "name": "Synthetic community garden",
+  "property": {
+    "id": "community-garden",
+    "name": "Synthetic community garden",
+    "version": 1,
+    "units": "inches",
+    "northDegrees": 0,
+    "spatialStatus": "concept",
+    "acreage": null,
+    "source": "Independent synthetic fixture, not a real property.",
+    "boundary": [
+      [
+        -240,
+        -180
+      ],
+      [
+        240,
+        -180
+      ],
+      [
+        240,
+        180
+      ],
+      [
+        -240,
+        180
+      ],
+      [
+        -240,
+        -180
+      ]
+    ],
+    "parcel": {
+      "attributes": {}
+    },
+    "imagery": {
+      "enabled": false,
+      "name": "Synthetic concept; no imagery"
+    },
+    "importSources": []
+  },
+  "beds": [
+    {
+      "id": "salad-bed",
+      "name": "Salad bed",
+      "x": -120,
+      "y": 0,
+      "width": 96,
+      "height": 48,
+      "rotation": 0,
+      "grid": 6,
+      "safeMargin": 6,
+      "notes": "Synthetic assumption: morning sun, pH 6.5; no measured soil test."
+    },
+    {
+      "id": "summer-bed",
+      "name": "Summer bed",
+      "x": 30,
+      "y": 0,
+      "width": 96,
+      "height": 48,
+      "rotation": 0,
+      "grid": 6,
+      "safeMargin": 6,
+      "notes": "Synthetic assumption: six hours sun. Dates are a planning exercise."
+    }
+  ],
+  "structures": [],
+  "vegetation": [],
+  "placements": [
+    {
+      "id": "lettuce-1",
+      "plantId": "demo-lettuce",
+      "bedId": "salad-bed",
+      "x": 18,
+      "y": 18,
+      "quantity": 1,
+      "notes": "Synthetic spring planting."
+    },
+    {
+      "id": "tomato-1",
+      "plantId": "demo-tomato",
+      "bedId": "summer-bed",
+      "x": 24,
+      "y": 24,
+      "quantity": 1,
+      "notes": "Synthetic summer planting; not frost advice."
+    }
+  ],
+  "activeBedId": "salad-bed",
+  "backupFormat": "veggie.farm/planner",
+  "backupVersion": 1,
+  "activeParcelId": "community-garden",
+  "parcels": [
+    {
+      "id": "community-garden",
+      "name": "Synthetic community garden",
+      "property": {
+        "id": "community-garden",
+        "name": "Synthetic community garden",
+        "version": 1,
+        "units": "inches",
+        "northDegrees": 0,
+        "spatialStatus": "concept",
+        "acreage": null,
+        "source": "Independent synthetic fixture, not a real property.",
+        "boundary": [
+          [
+            -240,
+            -180
+          ],
+          [
+            240,
+            -180
+          ],
+          [
+            240,
+            180
+          ],
+          [
+            -240,
+            180
+          ],
+          [
+            -240,
+            -180
+          ]
+        ],
+        "parcel": {
+          "attributes": {}
+        },
+        "imagery": {
+          "enabled": false,
+          "name": "Synthetic concept; no imagery"
+        },
+        "importSources": []
+      },
+      "beds": [
+        {
+          "id": "salad-bed",
+          "name": "Salad bed",
+          "x": -120,
+          "y": 0,
+          "width": 96,
+          "height": 48,
+          "rotation": 0,
+          "grid": 6,
+          "safeMargin": 6,
+          "notes": "Synthetic assumption: morning sun, pH 6.5; no measured soil test."
+        },
+        {
+          "id": "summer-bed",
+          "name": "Summer bed",
+          "x": 30,
+          "y": 0,
+          "width": 96,
+          "height": 48,
+          "rotation": 0,
+          "grid": 6,
+          "safeMargin": 6,
+          "notes": "Synthetic assumption: six hours sun. Dates are a planning exercise."
+        }
+      ],
+      "structures": [],
+      "vegetation": [],
+      "placements": [
+        {
+          "id": "lettuce-1",
+          "plantId": "demo-lettuce",
+          "bedId": "salad-bed",
+          "x": 18,
+          "y": 18,
+          "quantity": 1,
+          "notes": "Synthetic spring planting."
+        },
+        {
+          "id": "tomato-1",
+          "plantId": "demo-tomato",
+          "bedId": "summer-bed",
+          "x": 24,
+          "y": 24,
+          "quantity": 1,
+          "notes": "Synthetic summer planting; not frost advice."
+        }
+      ],
+      "activeBedId": "salad-bed"
+    }
+  ],
+  "plants": [
+    {
+      "id": "demo-lettuce",
+      "name": "Lettuce",
+      "category": "vegetable",
+      "spacing": 12,
+      "matureDiameter": 12,
+      "height": 10,
+      "color": "#79a94a"
+    },
+    {
+      "id": "demo-tomato",
+      "name": "Tomato",
+      "category": "vegetable",
+      "spacing": 24,
+      "matureDiameter": 24,
+      "height": 48,
+      "color": "#cb5946"
+    }
+  ],
+  "layouts": [
+    {
+      "id": "spring-example",
+      "name": "Synthetic spring layout",
+      "gardenId": "community-garden",
+      "workspace": {
+        "id": "community-garden",
+        "name": "Synthetic community garden",
+        "property": {
+          "id": "community-garden",
+          "name": "Synthetic community garden",
+          "version": 1,
+          "units": "inches",
+          "northDegrees": 0,
+          "spatialStatus": "concept",
+          "acreage": null,
+          "source": "Independent synthetic fixture, not a real property.",
+          "boundary": [
+            [
+              -240,
+              -180
+            ],
+            [
+              240,
+              -180
+            ],
+            [
+              240,
+              180
+            ],
+            [
+              -240,
+              180
+            ],
+            [
+              -240,
+              -180
+            ]
+          ],
+          "parcel": {
+            "attributes": {}
+          },
+          "imagery": {
+            "enabled": false,
+            "name": "Synthetic concept; no imagery"
+          },
+          "importSources": []
+        },
+        "beds": [
+          {
+            "id": "salad-bed",
+            "name": "Salad bed",
+            "x": -120,
+            "y": 0,
+            "width": 96,
+            "height": 48,
+            "rotation": 0,
+            "grid": 6,
+            "safeMargin": 6,
+            "notes": "Synthetic assumption: morning sun, pH 6.5; no measured soil test."
+          },
+          {
+            "id": "summer-bed",
+            "name": "Summer bed",
+            "x": 30,
+            "y": 0,
+            "width": 96,
+            "height": 48,
+            "rotation": 0,
+            "grid": 6,
+            "safeMargin": 6,
+            "notes": "Synthetic assumption: six hours sun. Dates are a planning exercise."
+          }
+        ],
+        "structures": [],
+        "vegetation": [],
+        "placements": [
+          {
+            "id": "lettuce-1",
+            "plantId": "demo-lettuce",
+            "bedId": "salad-bed",
+            "x": 18,
+            "y": 18,
+            "quantity": 1,
+            "notes": "Synthetic spring planting."
+          },
+          {
+            "id": "tomato-1",
+            "plantId": "demo-tomato",
+            "bedId": "summer-bed",
+            "x": 24,
+            "y": 24,
+            "quantity": 1,
+            "notes": "Synthetic summer planting; not frost advice."
+          }
+        ],
+        "activeBedId": "salad-bed"
+      }
+    }
+  ],
+  "viewMode": "bed",
+  "viewPresentation": "2d"
+}

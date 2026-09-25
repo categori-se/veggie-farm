@@ -1,0 +1,5 @@
+import {NOTEBOOK_STORAGE} from '../../data/runtime-capabilities.js';
+import {getAccessToken} from './auth.js';
+export function notebookOwner(){try{const token=getAccessToken();if(!token)return null;const claim=JSON.parse(atob(token.split('.')[1].replace(/-/g,'+').replace(/_/g,'/')));return typeof claim.sub==='string'&&claim.sub.length<=200?claim.sub:null;}catch{return null;}}
+export function notebookStorage({mode=NOTEBOOK_STORAGE}={}){if(mode==='local'){try{return globalThis.localStorage??null;}catch{return null;}}const owner=notebookOwner();if(!owner)return null;try{const raw=globalThis.localStorage,prefix=`veggie.farm:account-notebook:${encodeURIComponent(owner)}:`;return {getItem:k=>raw.getItem(prefix+k),setItem:(k,v)=>raw.setItem(prefix+k,v),removeItem:k=>raw.removeItem(prefix+k)};}catch{return null;}}
+export function markNotebookChanged(){const s=notebookStorage();if(!s)return;try{const meta=JSON.parse(s.getItem('sync')||'{}');s.setItem('sync',JSON.stringify({...meta,dirty:true}));globalThis.dispatchEvent?.(new Event('notebook-draft-changed'));}catch{}}

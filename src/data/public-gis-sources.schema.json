@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veggie.farm/schema/public-gis-sources.schema.json",
+  "title": "veggie.farm public GIS source registry",
+  "type": "object",
+  "required": ["schemaVersion", "coordinateReferenceSystem", "outputContract", "sources"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "reviewedAt": {"type": "string", "format": "date"},
+    "coordinateReferenceSystem": {"const": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"},
+    "outputContract": {
+      "type": "object",
+      "required": ["mediaType", "format", "axisOrder", "storagePattern"],
+      "properties": {
+        "mediaType": {"const": "application/geo+json"},
+        "format": {"const": "RFC 7946 GeoJSON FeatureCollection"},
+        "axisOrder": {"const": "longitude, latitude"},
+        "storagePattern": {"type": "string"},
+        "rule": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "massgisCredit": {"type": "string"},
+    "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+    "berkshireBotanicalAudit": {"type": "object"}
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["id", "name", "authority", "role", "priority", "kind", "endpoint", "sourcePage", "rights", "cache", "fitness"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "name": {"type": "string"},
+        "authority": {"type": "string"},
+        "role": {"type": "string"},
+        "priority": {"type": "integer", "minimum": 1},
+        "kind": {"enum": ["arcgis-feature-service", "overpass-ql", "xyz-raster"]},
+        "endpoint": {"type": "string", "format": "uri"},
+        "sourcePage": {"type": "string", "format": "uri"},
+        "query": {"type": "object"},
+        "tile": {"type": "object"},
+        "rights": {
+          "type": "object",
+          "required": ["license", "attribution", "redistributable", "licenseUrl"],
+          "properties": {
+            "license": {"type": "string"},
+            "attribution": {"type": "string"},
+            "redistributable": {"type": "boolean"},
+            "shareAlike": {"type": "boolean"},
+            "licenseUrl": {"type": "string", "format": "uri"}
+          }
+        },
+        "cache": {
+          "type": "object",
+          "required": ["strategy", "note"],
+          "properties": {
+            "strategy": {"type": "string"},
+            "providerTtl": {"type": ["string", "null"]},
+            "note": {"type": "string"}
+          }
+        },
+        "fitness": {
+          "type": "object",
+          "required": ["resolves", "doesNotResolve"],
+          "properties": {
+            "resolves": {"type": "array", "items": {"type": "string"}},
+            "doesNotResolve": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    }
+  }
+}

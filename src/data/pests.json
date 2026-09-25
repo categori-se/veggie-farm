@@ -1,0 +1,159 @@
+[
+  {
+    "id": "pest:aphids",
+    "commonName": "Aphids",
+    "scientificName": null,
+    "appearance": "Clusters on tender growth, sticky honeydew, distorted leaves",
+    "lifeCycle": null,
+    "hostPlants": [
+      "plant:tomatoes",
+      "plant:peppers",
+      "plant:beans",
+      "plant:lettuce",
+      "plant:kale"
+    ],
+    "beneficialPredators": [
+      "beneficial:lady-beetles",
+      "beneficial:lacewings",
+      "beneficial:parasitic-wasps"
+    ],
+    "seasonality": null,
+    "eggStage": null,
+    "larvalStage": null,
+    "adultStage": null,
+    "monitoring": "Clusters on tender growth, sticky honeydew, distorted leaves",
+    "management": [
+      "Inspect undersides of leaves, spray with water, and protect beneficial insects"
+    ],
+    "favoredConditions": "Soft new growth and stressed plants",
+    "provenance": {
+      "sourceId": "source:internal-editorial",
+      "citation": "veggie.farm initial pest reference dataset; requires extension review.",
+      "confidence": 0.45,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "Project-authored summary."
+    }
+  },
+  {
+    "id": "pest:cabbage-worms",
+    "commonName": "Cabbage Worms",
+    "scientificName": null,
+    "appearance": "Chewed brassica leaves and green caterpillars near leaf veins",
+    "lifeCycle": null,
+    "hostPlants": [
+      "plant:kale",
+      "plant:bok-choy",
+      "plant:mizuna",
+      "plant:radishes"
+    ],
+    "beneficialPredators": [],
+    "seasonality": null,
+    "eggStage": null,
+    "larvalStage": null,
+    "adultStage": null,
+    "monitoring": "Chewed brassica leaves and green caterpillars near leaf veins",
+    "management": [
+      "Hand-pick, use row cover early, and encourage predators"
+    ],
+    "favoredConditions": "Uncovered brassicas during moth activity",
+    "provenance": {
+      "sourceId": "source:internal-editorial",
+      "citation": "veggie.farm initial pest reference dataset; requires extension review.",
+      "confidence": 0.45,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "Project-authored summary."
+    }
+  },
+  {
+    "id": "pest:flea-beetles",
+    "commonName": "Flea Beetles",
+    "scientificName": null,
+    "appearance": "Small shot holes in leaves, especially brassicas and eggplants",
+    "lifeCycle": null,
+    "hostPlants": [
+      "plant:kale",
+      "plant:bok-choy",
+      "plant:mizuna",
+      "plant:radishes",
+      "plant:eggplant"
+    ],
+    "beneficialPredators": [],
+    "seasonality": null,
+    "eggStage": null,
+    "larvalStage": null,
+    "adultStage": null,
+    "monitoring": "Small shot holes in leaves, especially brassicas and eggplants",
+    "management": [
+      "Use row cover, transplant sturdy seedlings, and reduce weed hosts"
+    ],
+    "favoredConditions": "Young stressed seedlings in spring",
+    "provenance": {
+      "sourceId": "source:internal-editorial",
+      "citation": "veggie.farm initial pest reference dataset; requires extension review.",
+      "confidence": 0.45,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "Project-authored summary."
+    }
+  },
+  {
+    "id": "pest:squash-bugs",
+    "commonName": "Squash Bugs",
+    "scientificName": null,
+    "appearance": "Wilting cucurbit leaves, bronze egg clusters, nymphs under leaves",
+    "lifeCycle": null,
+    "hostPlants": [
+      "plant:cucumbers",
+      "plant:zucchini",
+      "plant:winter-squash"
+    ],
+    "beneficialPredators": [],
+    "seasonality": null,
+    "eggStage": null,
+    "larvalStage": null,
+    "adultStage": null,
+    "monitoring": "Wilting cucurbit leaves, bronze egg clusters, nymphs under leaves",
+    "management": [
+      "Scout leaf undersides, remove eggs, and rotate cucurbit beds"
+    ],
+    "favoredConditions": "Dense squash plantings and overwintering debris",
+    "provenance": {
+      "sourceId": "source:internal-editorial",
+      "citation": "veggie.farm initial pest reference dataset; requires extension review.",
+      "confidence": 0.45,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "Project-authored summary."
+    }
+  },
+  {
+    "id": "pest:slugs",
+    "commonName": "Slugs",
+    "scientificName": null,
+    "appearance": "Ragged holes, slime trails, damage on seedlings and low leaves",
+    "lifeCycle": null,
+    "hostPlants": [
+      "plant:lettuce",
+      "plant:spinach",
+      "plant:bok-choy",
+      "plant:mizuna"
+    ],
+    "beneficialPredators": [
+      "beneficial:ground-beetles"
+    ],
+    "seasonality": null,
+    "eggStage": null,
+    "larvalStage": null,
+    "adultStage": null,
+    "monitoring": "Ragged holes, slime trails, damage on seedlings and low leaves",
+    "management": [
+      "Reduce hiding places near seedlings, water in morning, and use traps selectively"
+    ],
+    "favoredConditions": "Cool damp mulch, dense cover, and poor airflow",
+    "provenance": {
+      "sourceId": "source:internal-editorial",
+      "citation": "veggie.farm initial pest reference dataset; requires extension review.",
+      "confidence": 0.45,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "Project-authored summary."
+    }
+  }
+]

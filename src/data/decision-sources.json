@@ -1,0 +1,90 @@
+[
+  {
+    "id": "sun",
+    "name": "Iowa State Extension: vegetables in partial shade",
+    "url": "https://yardandgarden.extension.iastate.edu/faq/which-vegetables-will-grow-partial-shade",
+    "reviewedAt": "2026-09-24",
+    "scope": "US Extension guidance; adapt timing to Massachusetts",
+    "archivePolicy": "Reference copy retained outside public site; original rights remain with publisher.",
+    "finalUrl": "https://yardandgarden.extension.iastate.edu/faq/which-vegetables-will-grow-partial-shade",
+    "retrievedAt": "2026-09-24T21:43:50.399956+00:00",
+    "sha256": "08d02ec5e9f7adf44cc27b37a6b0f2b7537c84e18dd2e213bd73464a3cd6f4fe",
+    "bytes": 40039,
+    "archive": "data/raw/gardening-decisions/sun.html",
+    "archiveStatus": "original-html-retained"
+  },
+  {
+    "id": "companions",
+    "name": "University of Minnesota Extension: companion planting",
+    "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/companion-planting-in-home-gardens",
+    "reviewedAt": "2026-09-24",
+    "scope": "US Extension guidance; adapt timing to Massachusetts",
+    "archivePolicy": "Reference copy retained outside public site; original rights remain with publisher.",
+    "archiveError": "HTTP Error 403: Forbidden",
+    "reviewArchive": "data/raw/gardening-decisions/companions-review.json",
+    "reviewArchiveSha256": "b6da308766a739bf7321590ba1105d41de1598b56dbf4feb38178bb5c4086e78",
+    "archiveStatus": "review-note-only; raw page unavailable"
+  },
+  {
+    "id": "disease",
+    "name": "University of Minnesota Extension: managing plant diseases",
+    "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/yard-and-garden-problems/managing-plant-diseases-in-the-home-garden",
+    "reviewedAt": "2026-09-24",
+    "scope": "US Extension guidance; adapt timing to Massachusetts",
+    "archivePolicy": "Reference copy retained outside public site; original rights remain with publisher.",
+    "archiveError": "HTTP Error 403: Forbidden",
+    "reviewArchive": "data/raw/gardening-decisions/disease-review.json",
+    "reviewArchiveSha256": "8a80d0d082a804fca138a956c73c30e12b7861feb402484adb766eae77bebce5",
+    "archiveStatus": "review-note-only; raw page unavailable"
+  },
+  {
+    "id": "pruning",
+    "name": "University of Minnesota Extension: pruning trees and shrubs",
+    "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/pruning-trees-and-shrubs",
+    "reviewedAt": "2026-09-24",
+    "scope": "US Extension guidance; adapt timing to Massachusetts",
+    "archivePolicy": "Reference copy retained outside public site; original rights remain with publisher.",
+    "archiveError": "HTTP Error 403: Forbidden",
+    "reviewArchive": "data/raw/gardening-decisions/pruning-review.json",
+    "reviewArchiveSha256": "9cba206f1c8d7356c0b32751abea94af792b0d0fe88ae6c13bbf1329e6587d03",
+    "archiveStatus": "review-note-only; raw page unavailable"
+  },
+  {
+    "id": "mildew",
+    "name": "University of Minnesota Extension: powdery mildew of cucurbits",
+    "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/disease-management/powdery-mildew-of-cucurbits",
+    "reviewedAt": "2026-09-24",
+    "scope": "US Extension guidance; adapt timing to Massachusetts",
+    "archivePolicy": "Reference copy retained outside public site; original rights remain with publisher.",
+    "archiveError": "HTTP Error 403: Forbidden",
+    "reviewArchive": "data/raw/gardening-decisions/mildew-review.json",
+    "reviewArchiveSha256": "9824d000234671cf2f75e36f6f1305b79874651fbe321931cd905668ae6eade3",
+    "archiveStatus": "review-note-only; raw page unavailable"
+  },
+  {
+    "id": "harvest",
+    "name": "University of Minnesota Extension: harvesting vegetables",
+    "url": "https://extension.umn.edu/planting-and-growing-guides/harvesting-and-storing-home-garden-vegetables",
+    "reviewedAt": "2026-09-24",
+    "scope": "US Extension guidance; adapt timing to Massachusetts",
+    "archivePolicy": "Reference copy retained outside public site; original rights remain with publisher.",
+    "archiveError": "HTTP Error 403: Forbidden",
+    "reviewArchive": "data/raw/gardening-decisions/harvest-review.json",
+    "reviewArchiveSha256": "ec2908d3c1ca27ce6238ee46983e2ad44bdc4e4f810c958b877a7fd8faf63add",
+    "archiveStatus": "review-note-only; raw page unavailable"
+  },
+  {
+    "id": "noaa",
+    "name": "NOAA NCEI: data access documentation",
+    "url": "https://www.ncei.noaa.gov/access/search/documentation/data-service/",
+    "reviewedAt": "2026-09-24",
+    "scope": "US station observations",
+    "archivePolicy": "Reference copy retained outside public site; original rights remain with publisher.",
+    "finalUrl": "https://www.ncei.noaa.gov/access/search/documentation/data-service/",
+    "retrievedAt": "2026-09-24T21:43:51.069477+00:00",
+    "sha256": "e5d980ce87f52169b607e50fa8830c435c49123a8590f565310e610a8c7375f6",
+    "bytes": 49256,
+    "archive": "data/raw/gardening-decisions/noaa.html",
+    "archiveStatus": "original-html-retained"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "timeStamp": "2026-08-24T00:00:00Z",
+  "numberMatched": 0,
+  "numberReturned": 0,
+  "features": [],
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/geo+json",
+      "href": "./items.json"
+    },
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "href": "../../collections.json"
+    },
+    {
+      "rel": "describedby",
+      "type": "application/schema+json",
+      "href": "../../schemas/garden-spatial-feature.schema.json"
+    }
+  ]
+}

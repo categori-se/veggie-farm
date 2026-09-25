@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "0.1.0",
+  "description": "Inputs needed to turn plant facts into local garden recommendations.",
+  "required": [
+    "date",
+    "usdaZone",
+    "lastFrostDate",
+    "firstFrostDate",
+    "sunHours",
+    "soilTexture"
+  ],
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "usdaZone": {
+      "type": "string",
+      "examples": [
+        "6b"
+      ]
+    },
+    "lastFrostDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "firstFrostDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "soilTemperatureF": {
+      "type": "number"
+    },
+    "sunHours": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 14
+    },
+    "soilTexture": {
+      "type": "string",
+      "enum": [
+        "clay",
+        "silty clay",
+        "loam",
+        "sandy loam",
+        "sand",
+        "managed raised-bed loam"
+      ]
+    },
+    "drainage": {
+      "type": "string",
+      "enum": [
+        "slow",
+        "moderate",
+        "fast"
+      ]
+    },
+    "bedDepthInches": {
+      "type": "number"
+    },
+    "previousCropFamilies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "observedPests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

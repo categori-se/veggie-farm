@@ -1,0 +1,63 @@
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 900px;
+  font-size: clamp(2.35rem, 7vw, 5.25rem);
+  line-height: 0.96;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+h2 {
+  margin-top: 3.2rem;
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.08rem;
+}
+
+p,
+blockquote,
+ol,
+ul,
+figure,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table {
+  max-width: var(--max-content);
+}
+
+.kicker,
+.metadata,
+.article-meta {
+  font-family: var(--sans);
+}
+
+.kicker {
+  color: var(--green);
+  font-size: 0.76rem;
+  font-weight: 720;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.deck {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: clamp(1.15rem, 2vw, 1.42rem);
+  line-height: 1.45;
+}

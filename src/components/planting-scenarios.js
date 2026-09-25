@@ -1,0 +1,9 @@
+import {recommendGardenToday} from '../lib/recommendations/gardenToday.js';
+import {gardenActions} from './garden-actions.js';
+const el=(tag,text)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;return n;};
+export function plantingScenarios(crops,rules,context,evidence){
+ const root=el('section');root.className='decision-workbench';root.append(el('h2','What if I wait?'),el('p','Compare one crop now, in a week and in two weeks. Frost dates and soil temperature stay fixed so you can isolate the effect of time. Future weather is unknown; the current forecast is not carried forward.'));
+ const label=el('label','Crop '),select=el('select');for(const c of crops){const o=el('option',c.name);o.value=c.slug;select.append(o);}label.append(select);root.append(label);const cards=el('div');cards.className='garden-record-grid';root.append(cards);
+ function render(){cards.replaceChildren();const crop=crops.find(c=>c.slug===select.value);for(const offset of [0,7,14]){const start=new Date(`${context.date}T12:00:00Z`);if(Number.isNaN(start.getTime())){cards.append(el('p','Enter a valid planting date above.'));return;}start.setUTCDate(start.getUTCDate()+offset);const date=start.toISOString().slice(0,10);const result=recommendGardenToday([crop],rules,{...context,date,forecast:offset?null:context.forecast},evidence)[0];const card=el('article');card.className='garden-record-card';card.append(el('h3',offset?`Wait ${offset} days`:'Plant on entered date'),el('p',date),el('strong',result.status.replaceAll('_',' ')),el('p',result.explanation[0]));if(result.harvestWindow)card.append(el('p',`Estimated harvest check: ${result.harvestWindow.earliest}–${result.harvestWindow.latest}`));card.append(gardenActions({crop:crop.name,cropSlug:crop.slug,date}));cards.append(card);}}
+ select.onchange=render;render();return root;
+}

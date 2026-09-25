@@ -1,0 +1,62 @@
+[
+  {
+    "from": "plant:tomatoes",
+    "relationship": "compatible_with",
+    "to": "plant:basil",
+    "confidence": 0.42,
+    "reason": "commonly recommended pairing; needs source review",
+    "sourceIds": [
+      "source:extension-review-needed"
+    ],
+    "id": "plant:tomatoes|compatible_with|plant:basil",
+    "status": "needs-extension-review"
+  },
+  {
+    "from": "plant:tomatoes",
+    "relationship": "competes_with",
+    "to": "plant:potatoes",
+    "confidence": 0.65,
+    "reason": "shared nightshade disease and pest concerns",
+    "sourceIds": [
+      "source:extension-review-needed"
+    ],
+    "id": "plant:tomatoes|competes_with|plant:potatoes",
+    "status": "needs-extension-review"
+  },
+  {
+    "from": "plant:carrots",
+    "relationship": "compatible_with",
+    "to": "plant:onions",
+    "confidence": 0.45,
+    "reason": "different root/canopy habits; companion claim needs review",
+    "sourceIds": [
+      "source:extension-review-needed"
+    ],
+    "id": "plant:carrots|compatible_with|plant:onions",
+    "status": "needs-extension-review"
+  },
+  {
+    "from": "plant:peas",
+    "relationship": "good_predecessor_for",
+    "to": "plant:tomatoes",
+    "confidence": 0.62,
+    "reason": "early cool-season legume can vacate bed before tomato transplanting",
+    "sourceIds": [
+      "source:extension-review-needed"
+    ],
+    "id": "plant:peas|good_predecessor_for|plant:tomatoes",
+    "status": "needs-extension-review"
+  },
+  {
+    "from": "plant:beans",
+    "relationship": "good_predecessor_for",
+    "to": "plant:corn",
+    "confidence": 0.58,
+    "reason": "legume residues may contribute nitrogen if biomass is returned",
+    "sourceIds": [
+      "source:extension-review-needed"
+    ],
+    "id": "plant:beans|good_predecessor_for|plant:corn",
+    "status": "needs-extension-review"
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veggie.farm/data/api/v1/schemas/garden-spatial-feature.schema.json",
+  "title": "Canonical garden spatial feature",
+  "description": "A CRS84 feature from one of the canonical parcel, site, bed, or plant layers. Local planner coordinates are derived views, not the stored geometry.",
+  "type": "object",
+  "required": ["type", "id", "geometry", "properties"],
+  "properties": {
+    "type": {"const": "Feature"},
+    "id": {"type": "string", "minLength": 1},
+    "bbox": {
+      "type": "array",
+      "prefixItems": [
+        {"type": "number"},
+        {"type": "number"},
+        {"type": "number"},
+        {"type": "number"}
+      ],
+      "items": false
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": {"enum": ["Point", "MultiPoint", "LineString", "MultiLineString", "Polygon", "MultiPolygon"]},
+        "coordinates": {"type": "array", "minItems": 1}
+      }
+    },
+    "properties": {
+      "type": "object",
+      "required": ["gardenId", "layer"],
+      "properties": {
+        "gardenId": {"type": "string", "minLength": 1},
+        "layer": {"enum": ["parcels", "site", "beds", "plants"]},
+        "name": {"type": ["string", "null"]},
+        "kind": {"type": ["string", "null"]},
+        "parcelId": {"type": ["string", "null"]},
+        "parentId": {"type": ["string", "null"]},
+        "bedId": {"type": ["string", "null"]},
+        "taxonId": {"type": ["string", "null"]},
+        "taxonStatus": {"enum": ["observed", "interpreted", "planned", "unknown", null]},
+        "confidence": {"type": ["string", "null"]},
+        "provenance": {
+          "type": ["object", "null"],
+          "properties": {
+            "sourceId": {"type": "string"},
+            "sourceFeatureId": {"type": ["string", "null"]},
+            "geometryMethod": {"type": ["string", "null"]},
+            "confidence": {"type": ["string", "null"]},
+            "surveyStatus": {"type": ["string", "null"]}
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"properties": {"properties": {"layer": {"const": "parcels"}}}}},
+      "then": {"properties": {"geometry": {"properties": {"type": {"enum": ["Polygon", "MultiPolygon"]}}}}}
+    },
+    {
+      "if": {"properties": {"properties": {"properties": {"layer": {"const": "site"}}}}},
+      "then": {"properties": {"geometry": {"properties": {"type": {"enum": ["Point", "LineString", "MultiLineString", "Polygon", "MultiPolygon"]}}}}}
+    },
+    {
+      "if": {"properties": {"properties": {"properties": {"layer": {"const": "beds"}}}}},
+      "then": {"properties": {"geometry": {"properties": {"type": {"enum": ["Polygon", "MultiPolygon"]}}}}}
+    },
+    {
+      "if": {"properties": {"properties": {"properties": {"layer": {"const": "plants"}}}}},
+      "then": {"properties": {"geometry": {"properties": {"type": {"enum": ["Point", "MultiPoint"]}}}}}
+    }
+  ]
+}

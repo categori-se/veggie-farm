@@ -1,0 +1,284 @@
+{
+  "$schema": "./public-gis-sources.schema.json",
+  "schemaVersion": "1.0.0",
+  "reviewedAt": "2026-08-23",
+  "coordinateReferenceSystem": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+  "outputContract": {
+    "mediaType": "application/geo+json",
+    "format": "RFC 7946 GeoJSON FeatureCollection",
+    "axisOrder": "longitude, latitude",
+    "storagePattern": "data/spatial/source-cache/{gardenId}/{sourceId}.geojson",
+    "rule": "Keep each provider snapshot as a separate FeatureCollection. A rendered map may combine layers, but source provenance and license boundaries must remain recoverable."
+  },
+  "massgisCredit": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS",
+  "sources": [
+    {
+      "id": "massgis-l3-parcels",
+      "name": "MassGIS Level 3 Property Tax Parcels",
+      "authority": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS",
+      "role": "parcel-boundary",
+      "priority": 1,
+      "kind": "arcgis-feature-service",
+      "endpoint": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/L3Parcels_feature_service/FeatureServer/0",
+      "sourcePage": "https://www.mass.gov/info-details/massgis-data-property-tax-parcels",
+      "query": {
+        "outFields": ["OBJECTID", "MAP_PAR_ID", "POLY_TYPE", "TOWN_ID", "FY"],
+        "idField": "OBJECTID",
+        "pageSize": 2000,
+        "maxPages": 8
+      },
+      "rights": {
+        "license": "Massachusetts public record; MassGIS describes its data as public domain",
+        "attribution": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS",
+        "redistributable": true,
+        "licenseUrl": "https://www.mass.gov/info-details/about-massgis"
+      },
+      "cache": {
+        "strategy": "bounded-versioned-snapshot",
+        "providerTtl": null,
+        "note": "Persist parcel geometry and the allowlisted non-identifying fields, not address, owner, sale, or assessor-detail fields."
+      },
+      "fitness": {
+        "resolves": ["tax parcel polygons", "parcel identifiers", "parcel vintage"],
+        "doesNotResolve": ["surveyed legal boundaries", "garden rooms", "beds", "paths", "plants", "structures"]
+      }
+    },
+    {
+      "id": "massgis-building-structures",
+      "name": "MassGIS Building Structures (2-D)",
+      "authority": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS",
+      "role": "building-roofprints",
+      "priority": 1,
+      "kind": "arcgis-feature-service",
+      "endpoint": "https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/Building_Structures/FeatureServer/0",
+      "sourcePage": "https://www.mass.gov/info-details/massgis-data-building-structures-2-d",
+      "query": {
+        "outFields": ["OBJECTID", "STRUCT_ID", "SOURCE", "SOURCETYPE", "SOURCEDATE", "SOURCEDATA", "AREA_SQ_FT", "EDIT_DATE"],
+        "idField": "STRUCT_ID",
+        "pageSize": 2000,
+        "maxPages": 4
+      },
+      "rights": {
+        "license": "Massachusetts public record; MassGIS describes its data as public domain",
+        "attribution": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS; City of Boston where applicable",
+        "redistributable": true,
+        "licenseUrl": "https://www.mass.gov/info-details/about-massgis"
+      },
+      "cache": {
+        "strategy": "bounded-versioned-snapshot",
+        "providerTtl": null,
+        "note": "Clip the bounded response to the selected parcel union before treating it as garden context. Retain source date because roofprints span several imagery vintages."
+      },
+      "fitness": {
+        "resolves": ["roofprints of covered structures of roughly 150 square feet or larger", "structure source vintage"],
+        "doesNotResolve": ["unroofed decks", "fences", "garden beds", "small site furniture", "building use", "plants"]
+      }
+    },
+    {
+      "id": "massgis-massdot-roads",
+      "name": "MassGIS-MassDOT Roads",
+      "authority": "MassGIS and Massachusetts Department of Transportation",
+      "role": "road-centerlines",
+      "priority": 2,
+      "kind": "arcgis-feature-service",
+      "endpoint": "https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/MassDOTRoads_gdb/FeatureServer/0",
+      "sourcePage": "https://www.mass.gov/info-details/massgis-data-massgis-massdot-roads",
+      "query": {
+        "outFields": ["OBJECTID", "STREET_NAME", "CLASS", "RDTYPE", "JURISDICTN", "RT_NUMBER", "ROUTE_ID", "FACILITY", "ROW_WIDTH"],
+        "idField": "OBJECTID",
+        "pageSize": 2000,
+        "maxPages": 4
+      },
+      "rights": {
+        "license": "Massachusetts public record; MassGIS describes its data as public domain",
+        "attribution": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS; Massachusetts Department of Transportation",
+        "redistributable": true,
+        "licenseUrl": "https://www.mass.gov/info-details/about-massgis"
+      },
+      "cache": {
+        "strategy": "bounded-versioned-snapshot",
+        "providerTtl": null,
+        "note": "Use as public-road context. It is not an inventory of a private garden's walks and drive aisles."
+      },
+      "fitness": {
+        "resolves": ["public and many private road centerlines", "route and road-width context"],
+        "doesNotResolve": ["most garden paths", "walk edges", "parking stalls", "bed access aisles"]
+      }
+    },
+    {
+      "id": "massgis-land-cover-2016",
+      "name": "MassGIS Land Cover/Land Use (2016)",
+      "authority": "MassGIS, NOAA Office for Coastal Management, and Massachusetts EEA",
+      "role": "coarse-land-cover",
+      "priority": 3,
+      "kind": "arcgis-feature-service",
+      "endpoint": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/LandCoverLandUse2016/FeatureServer/0",
+      "sourcePage": "https://www.mass.gov/info-details/massgis-data-2016-land-coverland-use",
+      "query": {
+        "outFields": ["OBJECTID", "COVERNAME", "COVERCODE", "USEGENNAME", "USEGENCODE", "POLY_TYPE", "FY"],
+        "idField": "OBJECTID",
+        "pageSize": 2000,
+        "maxPages": 8
+      },
+      "rights": {
+        "license": "Massachusetts public record; MassGIS describes its data as public domain",
+        "attribution": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS; NOAA; Massachusetts EEA",
+        "redistributable": true,
+        "licenseUrl": "https://www.mass.gov/info-details/about-massgis"
+      },
+      "cache": {
+        "strategy": "bounded-versioned-snapshot",
+        "providerTtl": null,
+        "note": "The one-meter 2016 classification is useful as prior evidence. Do not present it as current bed-, canopy-, or pavement-edge geometry."
+      },
+      "fitness": {
+        "resolves": ["2016 forest", "grass", "scrub", "water", "wetland", "impervious and developed-open-space classes"],
+        "doesNotResolve": ["current tree crowns", "individual trees", "beds", "narrow paths", "current parking edges", "plants"]
+      }
+    },
+    {
+      "id": "massgis-open-space",
+      "name": "MassGIS Protected and Recreational Open Space",
+      "authority": "MassGIS and Massachusetts EEA",
+      "role": "recreation-and-conservation-context",
+      "priority": 4,
+      "kind": "arcgis-feature-service",
+      "endpoint": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0",
+      "sourcePage": "https://www.mass.gov/info-details/massgis-data-protected-and-recreational-openspace",
+      "query": {
+        "outFields": ["OBJECTID", "TOWN_ID", "POLY_ID", "SITE_NAME", "ALT_SITE_NAME", "FORMAL_SITE_NAME", "OWNER_TYPE", "PRIM_PURP", "PUB_ACCESS", "LEV_PROT", "GIS_ACRES", "OS_ID", "ATT_DATE"],
+        "idField": "OBJECTID",
+        "pageSize": 2000,
+        "maxPages": 4
+      },
+      "rights": {
+        "license": "Massachusetts public record; MassGIS describes its data as public domain",
+        "attribution": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS; Massachusetts EEA",
+        "redistributable": true,
+        "licenseUrl": "https://www.mass.gov/info-details/about-massgis"
+      },
+      "cache": {
+        "strategy": "bounded-versioned-snapshot",
+        "providerTtl": null,
+        "note": "Regional planning context only; the source warns that boundaries vary in accuracy and are not legal ownership records."
+      },
+      "fitness": {
+        "resolves": ["recognized conservation and recreation properties when present"],
+        "doesNotResolve": ["tax parcel ownership", "internal garden layout", "beds", "paths", "plants"]
+      }
+    },
+    {
+      "id": "massgis-aerial-2025",
+      "name": "MassGIS 2025 Natural-color Aerial Imagery",
+      "authority": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS",
+      "role": "orthophoto-reference",
+      "priority": 1,
+      "kind": "xyz-raster",
+      "endpoint": "https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Aerial_Imagery_2025/MapServer/tile/{z}/{y}/{x}",
+      "sourcePage": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery",
+      "tile": {"size": 256, "minZoom": 0, "maxZoom": 23, "crs": "EPSG:3857"},
+      "rights": {
+        "license": "MassGIS states that the imagery is available for public use and distribution",
+        "attribution": "MassGIS (Bureau of Geographic Information), Commonwealth of Massachusetts EOTSS",
+        "redistributable": true,
+        "licenseUrl": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery"
+      },
+      "cache": {
+        "strategy": "viewport-cache-or-bounded-project-derivative",
+        "providerTtl": null,
+        "note": "Use only visible tiles at runtime or publish a parcel-bounded, versioned derivative. Never refetch a statewide archive for repeated visits."
+      },
+      "fitness": {
+        "resolves": ["15 cm leaf-off visual evidence in western Massachusetts", "current roof, path, bed, canopy, parking and surface interpretation"],
+        "doesNotResolve": ["object semantics", "plant taxon", "ownership", "survey accuracy"]
+      }
+    },
+    {
+      "id": "osm-overpass-site-context",
+      "name": "OpenStreetMap site-context extract via Overpass API",
+      "authority": "OpenStreetMap contributors; public Overpass instance operated separately from OSMF",
+      "role": "supplementary-site-context",
+      "priority": 3,
+      "kind": "overpass-ql",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "sourcePage": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+      "query": {
+        "timeoutSeconds": 25,
+        "selectors": [
+          "nwr[\"leisure\"=\"garden\"]",
+          "nwr[\"building\"]",
+          "nwr[\"highway\"~\"^(service|track|path|footway|steps|pedestrian)$\"]",
+          "nwr[\"amenity\"=\"parking\"]",
+          "nwr[\"barrier\"]",
+          "nwr[\"power\"~\"^(pole|tower|line|minor_line)$\"]",
+          "nwr[\"man_made\"~\"^(utility_pole|water_tap|well|water_tower)$\"]",
+          "nwr[\"natural\"~\"^(tree|tree_row|wood|water)$\"]",
+          "nwr[\"landuse\"~\"^(forest|meadow|grass|orchard|allotments|flowerbed|farmland)$\"]",
+          "nwr[\"waterway\"]"
+        ]
+      },
+      "rights": {
+        "license": "Open Data Commons Open Database License 1.0 (ODbL)",
+        "attribution": "© OpenStreetMap contributors",
+        "redistributable": true,
+        "shareAlike": true,
+        "licenseUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "cache": {
+        "strategy": "build-time-bounded-snapshot",
+        "providerTtl": null,
+        "note": "Do not use the public Overpass instance as the production application's live backend. Store each bounded result with timestamp and ODbL attribution; operate a provider or self-hosted extract for sustained traffic."
+      },
+      "fitness": {
+        "resolves": ["community-mapped buildings", "roads and service drives", "mapped footpaths", "mapped barriers", "mapped parking", "mapped utility objects", "mapped land-cover objects"],
+        "doesNotResolve": ["unmapped private-parcel details", "complete beds", "plant inventory", "authoritative parcel geometry", "survey accuracy"]
+      }
+    },
+    {
+      "id": "osm-standard-raster",
+      "name": "OpenStreetMap Standard raster tiles",
+      "authority": "OpenStreetMap Foundation",
+      "role": "optional-visual-basemap-only",
+      "priority": 5,
+      "kind": "xyz-raster",
+      "endpoint": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "sourcePage": "https://operations.osmfoundation.org/policies/tiles/",
+      "tile": {"size": 256, "minZoom": 0, "maxZoom": 19, "crs": "EPSG:3857"},
+      "rights": {
+        "license": "Open Data Commons Open Database License 1.0 (ODbL) for underlying data; OSMF tile policy also applies",
+        "attribution": "© OpenStreetMap contributors",
+        "redistributable": false,
+        "licenseUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "cache": {
+        "strategy": "normal-interactive-browser-cache-only",
+        "providerTtl": "Honor Cache-Control/Expires/ETag; cache at least seven days when headers cannot be read",
+        "note": "No bulk download, pre-seeding, offline archive, or automated high-zoom scan. Use a provider or self-hosted OSM tiles for production/offline needs."
+      },
+      "fitness": {
+        "resolves": ["visual OSM context"],
+        "doesNotResolve": ["portable GIS features", "orthophoto evidence", "parcel-level survey geometry"]
+      }
+    }
+  ],
+  "berkshireBotanicalAudit": {
+    "bbox": [-73.34, 42.296, -73.331, 42.304],
+    "bboxIsParcelClipped": false,
+    "checkedAt": "2026-08-24T03:41:40Z",
+    "observations": [
+      "The bounded MassGIS parcel query returned 49 neighboring parcel features; the selected garden parcel union must be chosen and then used to clip every context layer.",
+      "The bounded MassGIS Building Structures query returned 73 roofprints from the garden and neighboring properties.",
+      "The bounded MassGIS-MassDOT Roads query returned 20 road segments, principally public-road context rather than interior walks.",
+      "The bounded 2016 land-cover query returned 837 polygons across thirteen cover classes. This is useful historical/coarse evidence, not current bed geometry.",
+      "The bounded OSM query returned 93 mapped elements, including a garden polygon, buildings, public roads, and some service drives, but no complete internal bed, plant, path, parking, fence, or utility inventory.",
+      "The OSM garden polygon cites an older MassGIS OpenSpace import. The current 2026 MassGIS OpenSpace query returned no Berkshire Botanical Garden feature in this bbox, so that OSM polygon must not replace the current four-parcel MassGIS boundary."
+    ],
+    "remainingAcquisition": [
+      "Use current MassGIS parcels for the site skeleton and clip all other source snapshots to the selected parcel union.",
+      "Use current MassGIS roofprints before tracing structures from imagery.",
+      "Use 2025 orthophotos and the user-supplied georeferenced KMZ for internal drive, parking, path, plot, bed, and initial plant geometry.",
+      "Verify beds and plants by field observation or a higher-resolution garden inventory; neither statewide MassGIS nor current OSM supplies those semantics completely.",
+      "No statewide public source found here provides local telephone/electric poles, fences, or irrigation assets comprehensively. OSM can supplement them only where contributors have mapped them."
+    ]
+  }
+}

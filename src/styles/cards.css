@@ -1,0 +1,78 @@
+.content-card-grid,
+.related-pages,
+.section-grid,
+.pillar-grid,
+.tool-grid,
+.start-grid {
+  max-width: var(--max-wide);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.content-card,
+.related-pages a,
+.section-card,
+.pillar-card,
+.tool-card,
+.start-card {
+  display: block;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--paper) 94%, var(--bg));
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.content-card:hover,
+.related-pages a:hover,
+.section-card:hover,
+.tool-card:hover,
+.start-card:hover {
+  border-color: color-mix(in srgb, var(--green) 50%, var(--line));
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.content-card span,
+.related-pages span,
+.section-card span,
+.tool-card span,
+.start-card span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--moss);
+  font: 0.72rem/1.2 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.content-card h2,
+.related-pages strong,
+.section-card strong,
+.tool-card strong,
+.start-card strong,
+.pillar-card strong {
+  display: block;
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.content-card p,
+.related-pages p,
+.section-card p,
+.tool-card p,
+.start-card p,
+.pillar-card p {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font: 0.92rem/1.55 var(--sans);
+}

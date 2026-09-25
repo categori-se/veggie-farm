@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0.0",
+  "observationEvents": [
+    "seeded",
+    "germinated",
+    "transplanted",
+    "flowered",
+    "fruit_set",
+    "harvested",
+    "bolted",
+    "frost_damage",
+    "heat_damage",
+    "pest_seen",
+    "disease_seen",
+    "watering",
+    "rain",
+    "soil_test",
+    "note"
+  ],
+  "provenanceClass": "user_observation",
+  "currentStorage": "browser_local",
+  "entryTypes": [
+    {
+      "type": "planting",
+      "label": "Planting",
+      "fields": [
+        "date",
+        "bedId",
+        "crop",
+        "variety",
+        "source",
+        "method",
+        "spacing",
+        "notes"
+      ]
+    },
+    {
+      "type": "observation",
+      "label": "Observation",
+      "fields": [
+        "date",
+        "bedId",
+        "crop",
+        "growthStage",
+        "height",
+        "width",
+        "leafCondition",
+        "soilMoisture",
+        "pests",
+        "diseaseSigns",
+        "photoRefs",
+        "notes"
+      ]
+    },
+    {
+      "type": "watering",
+      "label": "Watering",
+      "fields": [
+        "date",
+        "bedId",
+        "method",
+        "duration",
+        "estimatedVolume",
+        "rainfall",
+        "soilMoistureBefore",
+        "soilMoistureAfter",
+        "notes"
+      ]
+    },
+    {
+      "type": "environment",
+      "label": "Environment",
+      "fields": [
+        "date",
+        "location",
+        "highTemperature",
+        "lowTemperature",
+        "humidity",
+        "rainfall",
+        "wind",
+        "soilTemperature",
+        "soilPh",
+        "notes"
+      ]
+    },
+    {
+      "type": "harvest",
+      "label": "Harvest",
+      "fields": [
+        "date",
+        "bedId",
+        "crop",
+        "variety",
+        "weight",
+        "count",
+        "quality",
+        "flavor",
+        "storage",
+        "notes"
+      ]
+    },
+    {
+      "type": "issue",
+      "label": "Pest, Disease, or Stress",
+      "fields": [
+        "date",
+        "bedId",
+        "crop",
+        "symptoms",
+        "suspectedCause",
+        "severity",
+        "actionTaken",
+        "followUpDate",
+        "outcome",
+        "notes"
+      ]
+    }
+  ],
+  "reportingGoals": [
+    "Summarize what was planted where.",
+    "Compare expected planting dates with actual planting dates.",
+    "Track watering and rainfall against plant stress.",
+    "Measure harvest weight or count by crop, variety, and bed.",
+    "Identify recurring pest, disease, and soil problems.",
+    "Carry forward lessons into next year's garden plan."
+  ],
+  "sourceInfluence": [
+    {
+      "name": "Atami plant observation journal article",
+      "url": "https://atami.com/blog/cultivation/grow-a-garden-and-record-plant-progress-journal",
+      "usedFor": "Journal categories, measurement ideas, weekly observation rhythm, and harvest report concepts."
+    },
+    {
+      "name": "GrowVeg Garden Journal feature description",
+      "url": "https://www.growveg.com/garden-planner-intro.aspx",
+      "usedFor": "Garden journal integration with reminders, reports, harvest tracking, and next-season planning."
+    }
+  ]
+}

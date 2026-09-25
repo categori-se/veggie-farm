@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-09-25T18:12:04.837594+00:00",
+  "application": "https://veggie.farm",
+  "evidencePage": "https://veggie.farm/about/build-evidence",
+  "discoverableFrom": "https://veggie.farm/about/",
+  "consoleProof": "https://veggie.farm/evidence/aws-console-connection.png",
+  "consoleProofSha256": "fd6adbc179d7d43b0b25708e7ae06a08c4d9d5e3c7f0f5d70c7969061d7fa159",
+  "hostedBrowserAcceptance": {
+    "passed": true,
+    "checks": [
+      {
+        "width": 390,
+        "colorScheme": "light",
+        "aboutLink": true,
+        "awsAndAgentText": true,
+        "proofLink": true,
+        "noOverflow": true
+      },
+      {
+        "width": 390,
+        "colorScheme": "dark",
+        "aboutLink": true,
+        "awsAndAgentText": true,
+        "proofLink": true,
+        "noOverflow": true
+      },
+      {
+        "width": 1440,
+        "colorScheme": "light",
+        "aboutLink": true,
+        "awsAndAgentText": true,
+        "proofLink": true,
+        "noOverflow": true
+      },
+      {
+        "width": 1440,
+        "colorScheme": "dark",
+        "aboutLink": true,
+        "awsAndAgentText": true,
+        "proofLink": true,
+        "noOverflow": true
+      }
+    ],
+    "errors": []
+  },
+  "publicObjectChecks": [
+    {
+      "path": "/about/build-evidence.html",
+      "sha256": "2e145b7eb2044b377f7e059c43532a8e3f3c57d9bdd7f76f69db77b5449d1c8e",
+      "httpStatus": 200
+    },
+    {
+      "path": "/about/index.html",
+      "sha256": "2609b5af793cd1abf05bd2c8dc594036499833dc8e3b91a352b0e512c1755367",
+      "httpStatus": 200
+    },
+    {
+      "path": "/evidence/aws-console-connection.png",
+      "sha256": "fd6adbc179d7d43b0b25708e7ae06a08c4d9d5e3c7f0f5d70c7969061d7fa159",
+      "httpStatus": 200
+    },
+    {
+      "path": "/about/build-evidence",
+      "sha256": "2e145b7eb2044b377f7e059c43532a8e3f3c57d9bdd7f76f69db77b5449d1c8e",
+      "httpStatus": 200
+    }
+  ],
+  "limits": [
+    "Dated deployment and browser observations, not organizer acceptance.",
+    "Owner will update Builder Center; submission remains unverified.",
+    "Media is hosted separately and excluded from this source repository."
+  ]
+}

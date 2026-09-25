@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veggie.farm/data/api/v1/schemas/garden-feature.schema.json",
+  "title": "Garden catalog feature",
+  "type": "object",
+  "required": ["type", "id", "bbox", "geometry", "properties"],
+  "properties": {
+    "type": {"const": "Feature"},
+    "id": {"type": "string", "minLength": 1},
+    "bbox": {
+      "type": "array",
+      "prefixItems": [{"type": "number"}, {"type": "number"}, {"type": "number"}, {"type": "number"}],
+      "items": false
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": {"enum": ["Polygon", "MultiPolygon"]},
+        "coordinates": {"type": "array", "minItems": 1}
+      }
+    },
+    "properties": {
+      "type": "object",
+      "required": ["name", "town", "county", "region", "kind", "planningFocus", "summary", "mapping", "sources"],
+      "properties": {
+        "name": {"type": "string"},
+        "town": {"type": "string"},
+        "county": {"const": "Berkshire County"},
+        "region": {"const": "Massachusetts"},
+        "kind": {"type": "string"},
+        "planningFocus": {"type": "string"},
+        "summary": {"type": "string"},
+        "mapping": {
+          "type": "object",
+          "required": ["parcelStatus", "layoutStatus", "confidence", "method", "parcelId", "parcelFiscalYear"],
+          "properties": {
+            "parcelStatus": {"enum": ["matched", "candidate", "unmapped"]},
+            "layoutStatus": {"enum": ["surveyed", "aerial-interpreted", "diagrammatic"]},
+            "confidence": {"enum": ["high", "medium", "low"]},
+            "method": {"type": "string"},
+            "layoutCalibration": {
+              "type": "object",
+              "required": ["revision", "status", "target", "confidence", "note"],
+              "properties": {
+                "revision": {"type": "integer", "minimum": 1},
+                "status": {"enum": ["unregistered", "aerial-calibrated", "surveyed"]},
+                "target": {"type": "string"},
+                "imagery": {"type": "string"},
+                "reference": {"type": "string"},
+                "confidence": {"enum": ["high", "medium", "low"]},
+                "estimatedHorizontalAccuracyFeet": {"type": "number", "exclusiveMinimum": 0},
+                "note": {"type": "string"},
+                "featureInventory": {
+                  "type": "object",
+                  "required": ["numberedLandmarks", "representedLandmarks", "gridEstimatedBedCells", "gridEstimateGroups", "plannedStudyBeds", "plannedStudyBedIds", "cropTaxaObservationStatus", "infrastructure"],
+                  "properties": {
+                    "numberedLandmarks": {"type": "integer", "minimum": 0},
+                    "representedLandmarks": {"type": "integer", "minimum": 0},
+                    "gridEstimatedBedCells": {"type": "integer", "minimum": 0},
+                    "gridEstimateGroups": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": ["id", "mapNumber", "count", "confidence", "geometryBasis"],
+                        "properties": {
+                          "id": {"type": "string"},
+                          "mapNumber": {"type": "integer", "minimum": 1},
+                          "rows": {"type": "integer", "minimum": 1},
+                          "columns": {"type": "integer", "minimum": 1},
+                          "count": {"type": "integer", "minimum": 1},
+                          "confidence": {"enum": ["high", "medium", "low"]},
+                          "geometryBasis": {"type": "string"}
+                        }
+                      }
+                    },
+                    "plannedStudyBeds": {"type": "integer", "minimum": 0},
+                    "plannedStudyBedIds": {"type": "array", "items": {"type": "string"}},
+                    "cropTaxaObservationStatus": {"enum": ["observed", "not-observed", "mixed", "unknown"]},
+                    "infrastructure": {
+                      "type": "object",
+                      "required": ["collection", "geometryModel", "editScope", "surveyStatus"],
+                      "properties": {
+                        "collection": {"type": "string"},
+                        "geometryModel": {"type": "string"},
+                        "editScope": {"type": "string"},
+                        "surveyStatus": {"enum": ["surveyed", "not-surveyed", "mixed"]}
+                      }
+                    }
+                  }
+                },
+                "provenance": {
+                  "type": "object",
+                  "required": ["landmarkSemanticsSourceId", "parcelGeometrySourceId", "interiorGeometrySourceIds", "surveyStatus", "evidenceBoundary"],
+                  "properties": {
+                    "landmarkSemanticsSourceId": {"type": "string"},
+                    "parcelGeometrySourceId": {"type": "string"},
+                    "interiorGeometrySourceIds": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+                    "surveyStatus": {"enum": ["surveyed", "not-surveyed", "mixed"]},
+                    "evidenceBoundary": {"type": "string"}
+                  }
+                },
+                "referenceMapPresentation": {
+                  "type": "object",
+                  "required": ["northFromPageUpDegrees", "suggestedComparisonBearingDegrees", "appliesTo", "note"],
+                  "properties": {
+                    "northFromPageUpDegrees": {"type": "number"},
+                    "suggestedComparisonBearingDegrees": {"type": "number"},
+                    "appliesTo": {"const": "display-only"},
+                    "note": {"type": "string"}
+                  }
+                }
+              }
+            },
+            "layoutAnchor": {
+              "type": "object",
+              "required": ["type", "coordinates", "role", "confidence", "method"],
+              "properties": {
+                "type": {"const": "Point"},
+                "coordinates": {
+                  "type": "array",
+                  "prefixItems": [{"type": "number"}, {"type": "number"}],
+                  "items": false
+                },
+                "role": {"const": "editable-layout-origin"},
+                "confidence": {"enum": ["high", "medium", "low"]},
+                "method": {"type": "string"}
+              }
+            },
+            "parcelId": {"type": "string"},
+            "parcelFiscalYear": {"type": "integer"}
+          }
+        },
+        "starterLayout": {
+          "type": "object",
+          "required": ["revision", "localUnit", "localAxes", "origin", "viewport", "beds", "structures", "vegetation", "placements"],
+          "properties": {
+            "revision": {"type": "integer", "minimum": 1},
+            "localUnit": {"const": "inch"},
+            "localAxes": {
+              "type": "object",
+              "required": ["x", "y"],
+              "properties": {"x": {"const": "east"}, "y": {"const": "south"}}
+            },
+            "origin": {"const": "properties.mapping.layoutAnchor"},
+            "viewport": {
+              "type": "object",
+              "required": ["x", "y", "width", "height"],
+              "properties": {
+                "x": {"type": "number"},
+                "y": {"type": "number"},
+                "width": {"type": "number", "exclusiveMinimum": 0},
+                "height": {"type": "number", "exclusiveMinimum": 0}
+              }
+            },
+            "beds": {"type": "array", "items": {"$ref": "#/$defs/localFeature"}},
+            "structures": {"type": "array", "items": {"$ref": "#/$defs/localFeature"}},
+            "vegetation": {"type": "array", "items": {"$ref": "#/$defs/localFeature"}},
+            "placements": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["id", "bedId", "plantId", "x", "y"],
+                "properties": {
+                  "id": {"type": "string"},
+                  "bedId": {"type": "string"},
+                  "plantId": {"type": "string"},
+                  "x": {"type": "number"},
+                  "y": {"type": "number"}
+                }
+              }
+            }
+          }
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "url"],
+            "properties": {
+              "id": {"type": "string"},
+              "label": {"type": "string"},
+              "url": {"type": "string", "format": "uri"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "localFeature": {
+      "type": "object",
+      "required": ["id", "name", "x", "y", "width", "height"],
+      "properties": {
+        "id": {"type": "string"},
+        "name": {"type": "string"},
+        "x": {"type": "number"},
+        "y": {"type": "number"},
+        "width": {"type": "number", "exclusiveMinimum": 0},
+        "height": {"type": "number", "exclusiveMinimum": 0},
+        "rotation": {"type": "number"}
+      }
+    }
+  }
+}

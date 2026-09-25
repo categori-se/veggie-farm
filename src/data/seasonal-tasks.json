@@ -1,0 +1,90 @@
+[
+  {
+    "id": "task:peony-spring-watch",
+    "start": "04-01",
+    "end": "05-31",
+    "priority": 80,
+    "category": "Watch",
+    "action": "Check emerging peony shoots",
+    "why": "Botrytis can affect young growth before leaf spotting becomes obvious.",
+    "observe": "Soft, darkened shoots; crowded crowns; debris left from last year.",
+    "path": "/content/seasonal/april-peony-disease-prevention"
+  },
+  {
+    "id": "task:cucumber-harvest",
+    "start": "07-01",
+    "end": "09-10",
+    "priority": 86,
+    "category": "Harvest",
+    "action": "Check cucumbers before they turn yellow",
+    "why": "Young fruit has better texture, and regular picking helps the plant keep producing.",
+    "observe": "Fruit hidden under leaves, coarsening skin, a widening seed cavity, or yellowing.",
+    "path": "/content/seasonal/july-cucumber-harvest-timing"
+  },
+  {
+    "id": "task:peony-summer-spotting",
+    "start": "07-15",
+    "end": "09-30",
+    "priority": 62,
+    "category": "Watch",
+    "action": "Inspect spotted peony foliage",
+    "why": "Recurring late-season spots often point to a disease cycle carried in infected debris, not a nutrient shortage.",
+    "observe": "When spots began, whether foliage stays wet, and how crowded the planting is.",
+    "path": "/content/seasonal/october-peony-cleanup"
+  },
+  {
+    "id": "task:fall-sowing",
+    "start": "08-10",
+    "end": "09-15",
+    "priority": 100,
+    "category": "Plant",
+    "action": "Use the fall sowing window",
+    "why": "Cooling nights favor quick greens and roots while warm soil still supports germination.",
+    "observe": "Seedbed moisture, days to maturity, first-frost runway, and afternoon soil heat.",
+    "path": "/content/seasonal/august-fall-planting-massachusetts"
+  },
+  {
+    "id": "task:apple-id-notebook",
+    "start": "08-15",
+    "end": "10-20",
+    "priority": 56,
+    "category": "Record",
+    "action": "Record clues from unknown apples",
+    "why": "Ripening date, flavor, flesh, seeds, and tree habit narrow an identity more reliably than one photograph.",
+    "observe": "First ripe fruit, drop date, skin pattern, russeting, flesh texture, acidity, and seed color.",
+    "path": "/content/seasonal/september-identifying-unknown-apples"
+  },
+  {
+    "id": "task:september-succession",
+    "start": "09-01",
+    "end": "09-30",
+    "priority": 92,
+    "category": "Plant",
+    "action": "Sow a small September succession",
+    "why": "Short rows of fast greens and radishes spread harvest and risk better than one large sowing.",
+    "observe": "Shortening days, slower growth, moisture, and the need for row cover.",
+    "path": "/content/seasonal/september-succession-gardening"
+  },
+  {
+    "id": "task:garlic-bed-prep",
+    "start": "09-01",
+    "end": "10-15",
+    "priority": 74,
+    "category": "Prepare",
+    "action": "Prepare the garlic bed",
+    "why": "A weed-free, well-drained bed is easier to ready before cold, wet weather arrives.",
+    "observe": "Drainage, previous allium disease, available mulch, and the local planting window.",
+    "path": "/content/vegetables/garlic"
+  },
+  {
+    "id": "task:peony-fall-cleanup",
+    "start": "10-01",
+    "end": "11-20",
+    "priority": 96,
+    "category": "Clean up",
+    "action": "Break the peony disease cycle",
+    "why": "Removing infected foliage after frost reduces the material in which disease can overwinter.",
+    "observe": "Dead stems, fallen leaves, plant labels, airflow, and whether symptoms repeated this year.",
+    "path": "/content/seasonal/october-peony-cleanup"
+  }
+]

@@ -1,0 +1,1488 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "gardenId": "ashintully-terrace-garden",
+    "layer": "site",
+    "status": "Reviewed site interpretation; planting design deferred"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ashintully-music-barn",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.17680397033692,
+              42.21546179610642
+            ],
+            [
+              -73.17659797668456,
+              42.215362629624586
+            ],
+            [
+              -73.17667694091797,
+              42.215258377514225
+            ],
+            [
+              -73.1768898010254,
+              42.21535754415977
+            ],
+            [
+              -73.17680397033692,
+              42.21546179610642
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Music barn visible roof envelope",
+        "kind": "building",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                7900.559348664047,
+                -4162.960191271215
+              ],
+              [
+                8570.216506995184,
+                -3729.292474891492
+              ],
+              [
+                8313.514596282334,
+                -3273.384654091757
+              ],
+              [
+                7621.535532711989,
+                -3707.0530864231646
+              ],
+              [
+                7900.559348664047,
+                -4162.960191271215
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              1564.16,
+              1369.6
+            ],
+            [
+              1717.76,
+              1469.44
+            ],
+            [
+              1658.88,
+              1574.4
+            ],
+            [
+              1500.16,
+              1474.56
+            ],
+            [
+              1564.16,
+              1369.6
+            ]
+          ],
+          "digitizationUncertaintyPixels": 10,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-upper-lawn",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.17697906494142,
+              42.21485153836426
+            ],
+            [
+              -73.176900100708,
+              42.21485662386982
+            ],
+            [
+              -73.17681770324707,
+              42.21482356807642
+            ],
+            [
+              -73.17673873901367,
+              42.214754913681
+            ],
+            [
+              -73.17667350769044,
+              42.21467608817201
+            ],
+            [
+              -73.17665634155274,
+              42.214609976378924
+            ],
+            [
+              -73.17669754028321,
+              42.21454386451664
+            ],
+            [
+              -73.17674903869629,
+              42.21451843685889
+            ],
+            [
+              -73.17681083679199,
+              42.21453115068905
+            ],
+            [
+              -73.17686920166017,
+              42.21458709151136
+            ],
+            [
+              -73.17691040039062,
+              42.21466083161053
+            ],
+            [
+              -73.1769515991211,
+              42.21474728541024
+            ],
+            [
+              -73.17697906494142,
+              42.21485153836426
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Upper Lawn curved terrace",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                7331.350764094131,
+                -1494.224983993493
+              ],
+              [
+                7588.052674853179,
+                -1516.4645506651498
+              ],
+              [
+                7855.915538139437,
+                -1371.9073356360511
+              ],
+              [
+                8112.61744880609,
+                -1071.6728780708384
+              ],
+              [
+                8324.675548901936,
+                -726.9588391836899
+              ],
+              [
+                8380.480312092348,
+                -437.8435070158062
+              ],
+              [
+                8246.54888042612,
+                -148.72787225960192
+              ],
+              [
+                8079.134590901083,
+                -37.52947067040573
+              ],
+              [
+                7878.23744342484,
+                -93.12867707367006
+              ],
+              [
+                7688.501248522003,
+                -337.7650523614843
+              ],
+              [
+                7554.569816901973,
+                -660.2399432848854
+              ],
+              [
+                7420.638385235746,
+                -1038.3134737789214
+              ],
+              [
+                7331.350764094131,
+                -1494.224983993493
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              1433.6,
+              1984
+            ],
+            [
+              1492.48,
+              1978.88
+            ],
+            [
+              1553.92,
+              2012.16
+            ],
+            [
+              1612.8,
+              2081.28
+            ],
+            [
+              1661.44,
+              2160.64
+            ],
+            [
+              1674.24,
+              2227.2
+            ],
+            [
+              1643.52,
+              2293.76
+            ],
+            [
+              1605.12,
+              2319.36
+            ],
+            [
+              1559.04,
+              2306.56
+            ],
+            [
+              1515.52,
+              2250.24
+            ],
+            [
+              1484.8,
+              2176
+            ],
+            [
+              1454.08,
+              2088.96
+            ],
+            [
+              1433.6,
+              1984
+            ]
+          ],
+          "digitizationUncertaintyPixels": 24,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-bowling-green",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.1763816833496,
+              42.214650660567486
+            ],
+            [
+              -73.17621345520018,
+              42.214508265792915
+            ],
+            [
+              -73.17631301879884,
+              42.21444469659346
+            ],
+            [
+              -73.17645721435547,
+              42.21457437769245
+            ],
+            [
+              -73.1763816833496,
+              42.214650660567486
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Bowling Green terrace",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                9273.356523185132,
+                -615.760670361911
+              ],
+              [
+                9820.243202469645,
+                6.94990252495639
+              ],
+              [
+                9496.57557590058,
+                284.9461473287931
+              ],
+              [
+                9027.81556513808,
+                -282.1658951466891
+              ],
+              [
+                9273.356523185132,
+                -615.760670361911
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              1879.04,
+              2186.24
+            ],
+            [
+              2004.48,
+              2329.6
+            ],
+            [
+              1930.24,
+              2393.6
+            ],
+            [
+              1822.72,
+              2263.04
+            ],
+            [
+              1879.04,
+              2186.24
+            ]
+          ],
+          "digitizationUncertaintyPixels": 24,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-stream-garden",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.17719535827638,
+              42.21493290640392
+            ],
+            [
+              -73.1770648956299,
+              42.21490239340133
+            ],
+            [
+              -73.17699279785157,
+              42.21483628184515
+            ],
+            [
+              -73.1769515991211,
+              42.214726943350364
+            ],
+            [
+              -73.17691726684569,
+              42.21463031847649
+            ],
+            [
+              -73.1768726348877,
+              42.21452606515727
+            ],
+            [
+              -73.17695846557618,
+              42.214459953207175
+            ],
+            [
+              -73.17708549499513,
+              42.21451080855955
+            ],
+            [
+              -73.17716789245605,
+              42.21461506190394
+            ],
+            [
+              -73.17722282409667,
+              42.21472185783437
+            ],
+            [
+              -73.17719535827638,
+              42.21493290640392
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Stream-side garden area",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                6628.210747904183,
+                -1850.0578349073385
+              ],
+              [
+                7052.326948142072,
+                -1716.6205695475335
+              ],
+              [
+                7286.70695356952,
+                -1427.5062734137216
+              ],
+              [
+                7420.638385235746,
+                -949.3550425610598
+              ],
+              [
+                7532.247911662767,
+                -526.8021030445584
+              ],
+              [
+                7677.340295902401,
+                -70.88899577392583
+              ],
+              [
+                7398.316479950342,
+                218.22702301278335
+              ],
+              [
+                6985.361232332057,
+                -4.169941403111238
+              ],
+              [
+                6717.498369045799,
+                -460.0831587651815
+              ],
+              [
+                6538.923126854962,
+                -927.1154302743224
+              ],
+              [
+                6628.210747904183,
+                -1850.0578349073385
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              1272.32,
+              1902.08
+            ],
+            [
+              1369.6,
+              1932.8
+            ],
+            [
+              1423.36,
+              1999.36
+            ],
+            [
+              1454.08,
+              2109.44
+            ],
+            [
+              1479.68,
+              2206.72
+            ],
+            [
+              1512.96,
+              2311.68
+            ],
+            [
+              1448.96,
+              2378.24
+            ],
+            [
+              1354.24,
+              2327.04
+            ],
+            [
+              1292.8,
+              2222.08
+            ],
+            [
+              1251.84,
+              2114.56
+            ],
+            [
+              1272.32,
+              1902.08
+            ]
+          ],
+          "digitizationUncertaintyPixels": 24,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-terrace-link",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.17697906494142,
+            42.21485153836426
+          ],
+          [
+            -73.17691383361817,
+            42.214777798487766
+          ],
+          [
+            -73.17686233520507,
+            42.21468880197043
+          ],
+          [
+            -73.17680397033692,
+            42.21459980532771
+          ],
+          [
+            -73.17675933837891,
+            42.21455912110639
+          ],
+          [
+            -73.17671127319336,
+            42.214561663870995
+          ],
+          [
+            -73.17668380737304,
+            42.21459726256463
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Upper Lawn terrace edge walk",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              7331.350764094131,
+              -1494.224983993493
+            ],
+            [
+              7543.408864236173,
+              -1171.7510668650582
+            ],
+            [
+              7710.823153853606,
+              -782.5579067841169
+            ],
+            [
+              7900.559348664047,
+              -393.36419835894714
+            ],
+            [
+              8045.651732949878,
+              -215.44689176657423
+            ],
+            [
+              8201.90506990151,
+              -226.56672680778013
+            ],
+            [
+              8291.192691043127,
+              -382.244369998424
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              1433.6,
+              1984
+            ],
+            [
+              1482.24,
+              2058.24
+            ],
+            [
+              1520.64,
+              2147.84
+            ],
+            [
+              1564.16,
+              2237.44
+            ],
+            [
+              1597.44,
+              2278.4
+            ],
+            [
+              1633.28,
+              2275.84
+            ],
+            [
+              1653.76,
+              2240
+            ]
+          ],
+          "digitizationUncertaintyPixels": 24,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-public-garden-approach",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.17709922790527,
+            42.21493544915347
+          ],
+          [
+            -73.17706146240235,
+            42.21487442313601
+          ],
+          [
+            -73.17702026367188,
+            42.21479559777619
+          ],
+          [
+            -73.17697906494142,
+            42.21473457162358
+          ],
+          [
+            -73.1769344329834,
+            42.21468371645139
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Garden approach beyond house area",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              6940.717421807446,
+              -1861.1776041360508
+            ],
+            [
+              7063.487900807872,
+              -1594.303019660249
+            ],
+            [
+              7197.4193324741,
+              -1249.5896330873966
+            ],
+            [
+              7331.350764094131,
+              -982.7144576042151
+            ],
+            [
+              7476.443148426159,
+              -760.3182811670869
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              1344,
+              1899.52
+            ],
+            [
+              1372.16,
+              1960.96
+            ],
+            [
+              1402.88,
+              2040.32
+            ],
+            [
+              1433.6,
+              2101.76
+            ],
+            [
+              1466.88,
+              2152.96
+            ]
+          ],
+          "digitizationUncertaintyPixels": 24,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-meadow-crossing",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.17611732482911,
+            42.21441926889577
+          ],
+          [
+            -73.17598342895508,
+            42.21451843685889
+          ],
+          [
+            -73.1757911682129,
+            42.21467354541202
+          ],
+          [
+            -73.17556800842284,
+            42.214800683286235
+          ],
+          [
+            -73.17534828186037,
+            42.21491256440383
+          ],
+          [
+            -73.17510795593262,
+            42.21501681708503
+          ],
+          [
+            -73.17488479614258,
+            42.2151312405614
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Visible mown meadow path",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              10132.749876280512,
+              396.1447235790029
+            ],
+            [
+              10568.027029184203,
+              -37.52947067040573
+            ],
+            [
+              11193.040376898334,
+              -715.839024308824
+            ],
+            [
+              11918.50229841988,
+              -1271.8292193660807
+            ],
+            [
+              12632.803267183235,
+              -1761.0996651682942
+            ],
+            [
+              13414.069951895193,
+              -2217.009982306139
+            ],
+            [
+              14139.531873370546,
+              -2717.3984883873354
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              2076.16,
+              2419.2
+            ],
+            [
+              2176,
+              2319.36
+            ],
+            [
+              2319.36,
+              2163.2
+            ],
+            [
+              2485.76,
+              2035.2
+            ],
+            [
+              2649.6,
+              1922.56
+            ],
+            [
+              2828.8,
+              1817.6
+            ],
+            [
+              2995.2,
+              1702.4
+            ]
+          ],
+          "digitizationUncertaintyPixels": 10,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-meadow-branch",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.1757911682129,
+            42.21467354541202
+          ],
+          [
+            -73.1756504058838,
+            42.21458963427482
+          ],
+          [
+            -73.17551307678222,
+            42.21450572302616
+          ],
+          [
+            -73.17538948059082,
+            42.214424354436126
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Visible mown meadow branch",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              11193.040376898334,
+              -715.839024308824
+            ],
+            [
+              11650.639435041228,
+              -348.8848823999464
+            ],
+            [
+              12097.077540610719,
+              18.069746981264053
+            ],
+            [
+              12498.871835563206,
+              373.9050047431433
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              2319.36,
+              2163.2
+            ],
+            [
+              2424.32,
+              2247.68
+            ],
+            [
+              2526.72,
+              2332.16
+            ],
+            [
+              2618.88,
+              2414.08
+            ]
+          ],
+          "digitizationUncertaintyPixels": 10,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-north-meadow-link",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.17650527954102,
+            42.214937991902936
+          ],
+          [
+            -73.17633018493653,
+            42.21493544915347
+          ],
+          [
+            -73.17618255615236,
+            42.214953248397464
+          ],
+          [
+            -73.17604522705078,
+            42.21499138961766
+          ],
+          [
+            -73.17591819763183,
+            42.215047330032334
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Visible northern meadow link",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              8871.562228186449,
+              -1872.2973729608148
+            ],
+            [
+              9440.770812710169,
+              -1861.1776041360508
+            ],
+            [
+              9920.691776138468,
+              -1939.0159760592755
+            ],
+            [
+              10367.12988170796,
+              -2105.8124132853827
+            ],
+            [
+              10780.085129326244,
+              -2350.4470059184464
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              1786.88,
+              1896.96
+            ],
+            [
+              1917.44,
+              1899.52
+            ],
+            [
+              2027.52,
+              1881.6
+            ],
+            [
+              2129.92,
+              1843.2
+            ],
+            [
+              2224.64,
+              1786.88
+            ]
+          ],
+          "digitizationUncertaintyPixels": 10,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-marble-palace",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.17407112121582,
+              42.2131122714476
+            ],
+            [
+              -73.17364540100098,
+              42.213346210721355
+            ],
+            [
+              -73.17351150512695,
+              42.21320381300575
+            ],
+            [
+              -73.17393035888672,
+              42.21296987320456
+            ],
+            [
+              -73.17407112121582,
+              42.2131122714476
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Marble Palace ruins outline",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                16784.677648605295,
+                6111.811834007044
+              ],
+              [
+                18168.635775699786,
+                5088.765450316619
+              ],
+              [
+                18603.912928603477,
+                5711.4888847296925
+              ],
+              [
+                17242.27670674819,
+                6734.53757496469
+              ],
+              [
+                16784.677648605295,
+                6111.811834007044
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              3601.92,
+              3735.04
+            ],
+            [
+              3919.36,
+              3499.52
+            ],
+            [
+              4019.2,
+              3642.88
+            ],
+            [
+              3706.88,
+              3878.4
+            ],
+            [
+              3601.92,
+              3735.04
+            ]
+          ],
+          "digitizationUncertaintyPixels": 10,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-meadow-crown-north",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.17463025450706,
+          42.21515348954663
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Meadow tree crown 1 · identity unknown",
+        "kind": "tree",
+        "collection": "vegetation",
+        "crownWidthFeet": 59.946522958449954,
+        "crownDepthFeet": 63.34481944291061,
+        "crownAxisRotationDegrees": 0,
+        "crownMeasurementMethod": "Visible foliage footprint, excluding cast shadow; not mature habit",
+        "observationType": "aerial-crown",
+        "heightEstimateFeet": null,
+        "identificationStatus": "unidentified",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Point",
+          "coordinates": [
+            14967.011877553368,
+            -2814.696148232746
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              3185,
+              1680
+            ]
+          ],
+          "digitizationUncertaintyPixels": 20,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Approximate visible crown center; trunk not resolved; species, height and mature habit unknown."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashintully-meadow-crown-south",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.174619525671,
+          42.214537666526006
+        ]
+      },
+      "properties": {
+        "gardenId": "ashintully-terrace-garden",
+        "layer": "site",
+        "name": "Meadow tree crown 2 · identity unknown",
+        "kind": "tree",
+        "collection": "vegetation",
+        "crownWidthFeet": 56.31340035490742,
+        "crownDepthFeet": 57.915828218986654,
+        "crownAxisRotationDegrees": 0,
+        "crownMeasurementMethod": "Visible foliage footprint, excluding cast shadow; not mature habit",
+        "observationType": "aerial-crown",
+        "heightEstimateFeet": null,
+        "identificationStatus": "unidentified",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Point",
+          "coordinates": [
+            15001.889854547375,
+            -121.62326598804088
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:ashintully-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:ashintully-guide",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "ashintully-reviewed-campus-2025-z20",
+          "rasterSha256": "25bcabf2b448aa9e33ce57eedd077d464daee1a3b4c63ec165be684bcef28764",
+          "observedRasterPixels": [
+            [
+              3193,
+              2300
+            ]
+          ],
+          "digitizationUncertaintyPixels": 20,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Approximate visible crown center; trunk not resolved; species, height and mature habit unknown."
+      }
+    }
+  ]
+}

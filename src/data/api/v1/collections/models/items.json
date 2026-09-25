@@ -1,0 +1,305 @@
+{
+  "type": "FeatureCollection",
+  "timeStamp": "2026-08-22T00:00:00Z",
+  "numberMatched": 9,
+  "numberReturned": 9,
+  "features": [
+    {
+      "type": "Feature",
+      "id": "quaternius-mixed-crops",
+      "geometry": null,
+      "properties": {
+        "name": "Mixed crops at mature growth",
+        "creator": "Quaternius",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/Ro6K0Yg7mx",
+        "sourceUrl": "https://static.poly.pizza/2df95a2a-38b4-40dd-ac8d-9b290b550c63.glb",
+        "file": "assets/models/vendor/quaternius/ultimate-crops.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 1976880,
+        "sha256": "6e1cd75a7a9287c09f72a72f30cef4a75542932b7bff087454435b85228dc27b",
+        "categories": [
+          "vegetable",
+          "garden-bed"
+        ],
+        "appliesToPlantIds": [],
+        "representation": "Mixed-crop bed reference; the distributor GLB is a merged mature-stage scene.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 6,
+          "animations": 0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "quaternius-tomato",
+      "geometry": null,
+      "properties": {
+        "name": "Tomato",
+        "creator": "Quaternius",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/ByggGxctjw",
+        "sourceUrl": "https://static.poly.pizza/b6127a55-27db-41e1-bee3-e74827ba8f53.glb",
+        "file": "assets/models/vendor/quaternius/tomato.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 27128,
+        "sha256": "194b8f3c1870fa84a7023769ad7556532dc51af82f5b563df5a69ce37f2a8a6f",
+        "categories": [
+          "vegetable",
+          "fruiting-crop"
+        ],
+        "appliesToPlantIds": [
+          "tomato"
+        ],
+        "representation": "Stylized mature produce reference.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 2,
+          "animations": 0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "quaternius-carrot",
+      "geometry": null,
+      "properties": {
+        "name": "Carrot",
+        "creator": "Quaternius",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/l4YmYv8hFK",
+        "sourceUrl": "https://static.poly.pizza/fe46376d-6648-4a39-b1db-0d23f6464bde.glb",
+        "file": "assets/models/vendor/quaternius/carrot.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 49256,
+        "sha256": "35a93d9d035df040d52c6d880d11ccacd8fea08ca2e725e056f71b12e196405d",
+        "categories": [
+          "vegetable",
+          "root-crop"
+        ],
+        "appliesToPlantIds": [
+          "carrot"
+        ],
+        "representation": "Stylized mature whole-crop reference.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 2,
+          "animations": 0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "quaternius-lettuce",
+      "geometry": null,
+      "properties": {
+        "name": "Lettuce",
+        "creator": "Quaternius",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/MEmUwHUHNR",
+        "sourceUrl": "https://static.poly.pizza/043e31a4-34b4-4c15-b973-91ffcd919f40.glb",
+        "file": "assets/models/vendor/quaternius/lettuce.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 33396,
+        "sha256": "02708cb7bd5a88700824ce2646693d078dd50dac7cbbdb7590d262616be3b94e",
+        "categories": [
+          "vegetable",
+          "leaf-crop"
+        ],
+        "appliesToPlantIds": [
+          "lettuce"
+        ],
+        "representation": "Stylized mature head reference.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 1,
+          "animations": 0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "quaternius-corn",
+      "geometry": null,
+      "properties": {
+        "name": "Corn plant",
+        "creator": "Quaternius",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/IhhB7kGaAQ",
+        "sourceUrl": "https://static.poly.pizza/89af1f9b-305a-40a0-8c7a-e2ad81a529b9.glb",
+        "file": "assets/models/vendor/quaternius/corn.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 43288,
+        "sha256": "fb3731a9814a2bdaeef2b15642119f03bcacbc48d96b5e05df5904aeebee7395",
+        "categories": [
+          "vegetable",
+          "upright-crop"
+        ],
+        "appliesToPlantIds": [
+          "corn"
+        ],
+        "representation": "Stylized mature crop reference.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 2,
+          "animations": 0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "quaternius-berry-shrub",
+      "geometry": null,
+      "properties": {
+        "name": "Berry-bearing shrub",
+        "creator": "Quaternius",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/TSbIxkDtxF",
+        "sourceUrl": "https://static.poly.pizza/30a7c72d-c014-40c4-8e1d-aaa949ebc465.glb",
+        "file": "assets/models/vendor/quaternius/berry-shrub.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 45716,
+        "sha256": "2c283119655dd9a573e879bda54ee28b8b38b470015516774e2fd9206768cbf5",
+        "categories": [
+          "fruit",
+          "shrub"
+        ],
+        "appliesToPlantIds": [
+          "blueberry",
+          "raspberries",
+          "black-currants",
+          "gooseberries"
+        ],
+        "representation": "Generic berry-bearing shrub; not a botanical species model.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 2,
+          "animations": 0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "maverickfx-apple-tree",
+      "geometry": null,
+      "properties": {
+        "name": "Apple tree",
+        "creator": "MaverickFX",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/lK8qleSDnT",
+        "sourceUrl": "https://static.poly.pizza/92fe0f82-2369-48af-9f88-8d999e9210c3.glb",
+        "file": "assets/models/vendor/maverickfx/apple-tree.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 15688,
+        "sha256": "5c09fd026b130dc6e8517cbe20613bb7260122ce5677be8acd298009af9cf0ea",
+        "categories": [
+          "fruit",
+          "tree"
+        ],
+        "appliesToPlantIds": [
+          "apples"
+        ],
+        "representation": "Stylized fruit-tree reference.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 2,
+          "animations": 0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "quaternius-flowering-plant",
+      "geometry": null,
+      "properties": {
+        "name": "Flowering plant",
+        "creator": "Quaternius",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/uwJ1rwrZlB",
+        "sourceUrl": "https://static.poly.pizza/ddf51174-fd7b-4225-9696-1dce54f945c2.glb",
+        "file": "assets/models/vendor/quaternius/flowering-plant.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 683868,
+        "sha256": "c22842627435a5ccbca1b44a358a13672962d7b44bef4fa89837f76924602792",
+        "categories": [
+          "flower",
+          "ornamental"
+        ],
+        "appliesToPlantIds": [
+          "flower:*"
+        ],
+        "representation": "Generic purple flowering perennial; not a botanical species model.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 1,
+          "animations": 0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "quaternius-pumpkin",
+      "geometry": null,
+      "properties": {
+        "name": "Pumpkin",
+        "creator": "Quaternius",
+        "distributor": "Poly Pizza",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://poly.pizza/m/bvLvqnU1jX",
+        "sourceUrl": "https://static.poly.pizza/49202ae4-62ac-4035-9726-1834228e7d08.glb",
+        "file": "assets/models/vendor/quaternius/pumpkin.glb",
+        "mediaType": "model/gltf-binary",
+        "bytes": 37424,
+        "sha256": "af4ae31ba704f8b05b69bec18726468feaf527a221e929bbfdf11d6b4c26bd0b",
+        "categories": [
+          "vegetable",
+          "fruiting-crop"
+        ],
+        "appliesToPlantIds": [
+          "winter-squash",
+          "pumpkin"
+        ],
+        "representation": "Stylized mature produce reference.",
+        "inspection": {
+          "nodes": 2,
+          "meshes": 1,
+          "materials": 2,
+          "animations": 0
+        }
+      }
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/geo+json",
+      "href": "./items.json"
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+[
+  {
+    "id": "climate:usda-zone-1a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "1",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": -60,
+      "max": -55
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-1b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "1",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": -55,
+      "max": -50
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-2a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "2",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": -50,
+      "max": -45
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-2b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "2",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": -45,
+      "max": -40
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-3a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "3",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": -40,
+      "max": -35
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-3b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "3",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": -35,
+      "max": -30
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-4a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "4",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": -30,
+      "max": -25
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-4b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "4",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": -25,
+      "max": -20
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-5a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "5",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": -20,
+      "max": -15
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-5b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "5",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": -15,
+      "max": -10
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-6a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "6",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": -10,
+      "max": -5
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-6b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "6",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": -5,
+      "max": 0
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-7a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "7",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": 0,
+      "max": 5
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-7b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "7",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": 5,
+      "max": 10
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-8a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "8",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": 10,
+      "max": 15
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-8b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "8",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": 15,
+      "max": 20
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-9a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "9",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": 20,
+      "max": 25
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-9b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "9",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": 25,
+      "max": 30
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-10a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "10",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": 30,
+      "max": 35
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-10b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "10",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": 35,
+      "max": 40
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-11a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "11",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": 40,
+      "max": 45
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-11b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "11",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": 45,
+      "max": 50
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-12a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "12",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": 50,
+      "max": 55
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-12b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "12",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": 55,
+      "max": 60
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-13a",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "13",
+    "subzone": "a",
+    "averageAnnualExtremeMinimumF": {
+      "min": 60,
+      "max": 65
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  },
+  {
+    "id": "climate:usda-zone-13b",
+    "system": "USDA Plant Hardiness Zone",
+    "zone": "13",
+    "subzone": "b",
+    "averageAnnualExtremeMinimumF": {
+      "min": 65,
+      "max": 70
+    },
+    "geometry": null,
+    "lookup": {
+      "zip": null,
+      "coordinate": null
+    },
+    "use": [
+      "perennial survival",
+      "winter injury risk"
+    ],
+    "limitations": "Hardiness zones describe winter minimums, not summer heat, rainfall, soil, or frost dates.",
+    "provenance": {
+      "sourceId": "source:usda-phzm",
+      "citation": "USDA Agricultural Research Service Plant Hardiness Zone Map.",
+      "confidence": 0.85,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "U.S. federal government source; verify map artifact terms before redistribution."
+    }
+  }
+]

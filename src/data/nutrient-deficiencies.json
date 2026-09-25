@@ -1,0 +1,92 @@
+[
+  {
+    "id": "deficiency:nitrogen",
+    "nutrient": "Nitrogen",
+    "symptoms": [
+      "general yellowing",
+      "older leaves affected first",
+      "reduced vigor"
+    ],
+    "affectedLeaves": "older",
+    "leafColor": "pale green to yellow",
+    "leafPosition": "lower canopy first",
+    "veinColor": "often similar to leaf tissue",
+    "soilCauses": [
+      "low organic matter",
+      "leaching",
+      "temporary immobilization in high-carbon residues"
+    ],
+    "corrections": [
+      "soil test",
+      "compost",
+      "appropriate nitrogen fertilizer",
+      "avoid overcorrecting"
+    ],
+    "confidence": 0.45,
+    "photos": [],
+    "provenance": {
+      "sourceId": "source:extension-review-needed",
+      "confidence": 0.45,
+      "dateCollected": "2026-07-03T02:31:16.600Z"
+    }
+  },
+  {
+    "id": "deficiency:phosphorus",
+    "nutrient": "Phosphorus",
+    "symptoms": [
+      "purpling",
+      "stunting",
+      "slow root growth"
+    ],
+    "affectedLeaves": "older or whole seedling",
+    "leafColor": "dark green to purple",
+    "leafPosition": "variable",
+    "veinColor": "may appear purple",
+    "soilCauses": [
+      "cold soil",
+      "pH imbalance",
+      "low phosphorus availability"
+    ],
+    "corrections": [
+      "confirm with soil test",
+      "warm soil before planting tender crops",
+      "adjust pH if needed"
+    ],
+    "confidence": 0.38,
+    "photos": [],
+    "provenance": {
+      "sourceId": "source:extension-review-needed",
+      "confidence": 0.38,
+      "dateCollected": "2026-07-03T02:31:16.600Z"
+    }
+  },
+  {
+    "id": "deficiency:iron",
+    "nutrient": "Iron",
+    "symptoms": [
+      "interveinal chlorosis",
+      "new leaves affected first"
+    ],
+    "affectedLeaves": "new",
+    "leafColor": "yellow with green veins",
+    "leafPosition": "growing tips",
+    "veinColor": "green",
+    "soilCauses": [
+      "high pH",
+      "waterlogged soil",
+      "root stress"
+    ],
+    "corrections": [
+      "soil pH test",
+      "improve drainage",
+      "avoid unnecessary phosphorus excess"
+    ],
+    "confidence": 0.38,
+    "photos": [],
+    "provenance": {
+      "sourceId": "source:extension-review-needed",
+      "confidence": 0.38,
+      "dateCollected": "2026-07-03T02:31:16.600Z"
+    }
+  }
+]

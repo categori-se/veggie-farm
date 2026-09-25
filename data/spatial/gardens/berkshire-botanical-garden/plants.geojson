@@ -1,0 +1,12 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "schemaVersion": "1.0.0",
+    "gardenId": "berkshire-botanical-garden",
+    "layer": "plants",
+    "coordinateReferenceSystem": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+    "generatedBy": "scripts/build-bbg-spatial-baseline.mjs",
+    "curationPolicy": "Canonical features are rebuilt only from maintained GIS/aerial interpretation and bounded public-provider snapshots. User-supplied KML/KMZ is indicative comparison evidence only and contributes zero parcel, site, bed, or plant features. Provider roofprints use representative-point parcel membership; crossing linear and areal layers must use true intersection plus clipping before any future promotion."
+  },
+  "features": []
+}

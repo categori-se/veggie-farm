@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veggie.farm/data/api/v1/schemas/flower-feature.schema.json",
+  "title": "Flower planning feature",
+  "type": "object",
+  "required": ["type", "id", "geometry", "properties"],
+  "properties": {
+    "type": {"const": "Feature"},
+    "id": {"type": "string", "minLength": 1},
+    "geometry": {"type": "null"},
+    "properties": {
+      "type": "object",
+      "required": ["name", "scientificName", "group", "light", "moisture", "bloomSeasons", "sourceIds"],
+      "properties": {
+        "name": {"type": "string"},
+        "scientificName": {"type": "string"},
+        "group": {"const": "Flower"},
+        "light": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "moisture": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "bloomSeasons": {"type": "array", "minItems": 1, "items": {"enum": ["spring", "summer", "fall", "winter"]}},
+        "sourceIds": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veggie.farm/data/api/v1/schemas/model-feature.schema.json",
+  "title": "Garden 3D model feature",
+  "type": "object",
+  "required": ["type", "id", "geometry", "properties"],
+  "properties": {
+    "type": {"const": "Feature"},
+    "id": {"type": "string", "minLength": 1},
+    "geometry": {"type": "null"},
+    "properties": {
+      "type": "object",
+      "required": ["name", "creator", "license", "sourcePage", "file", "bytes", "sha256", "categories", "appliesToPlantIds", "representation"],
+      "properties": {
+        "name": {"type": "string"},
+        "creator": {"type": "string"},
+        "license": {"const": "CC0-1.0"},
+        "licenseUrl": {"type": "string", "format": "uri"},
+        "sourcePage": {"type": "string", "format": "uri"},
+        "file": {"type": "string"},
+        "mediaType": {"const": "model/gltf-binary"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "categories": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "appliesToPlantIds": {"type": "array", "items": {"type": "string"}},
+        "representation": {"type": "string"}
+      }
+    }
+  }
+}

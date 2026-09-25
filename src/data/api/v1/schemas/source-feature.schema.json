@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veggie.farm/data/api/v1/schemas/source-feature.schema.json",
+  "title": "Public source feature",
+  "type": "object",
+  "required": ["type", "id", "geometry", "properties"],
+  "properties": {
+    "type": {"const": "Feature"},
+    "id": {"type": "string", "minLength": 1},
+    "geometry": {"type": "null"},
+    "properties": {
+      "type": "object",
+      "required": ["title", "publisher", "url", "access"],
+      "properties": {
+        "title": {"type": "string"},
+        "publisher": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "originalUrl": {"type": "string", "format": "uri"},
+        "access": {"type": "string"},
+        "sourceType": {"type": "string"},
+        "summary": {"type": "string"},
+        "description": {"type": "string"},
+        "retrievedAt": {"type": "string", "format": "date"},
+        "supports": {"type": "array", "items": {"type": "string"}},
+        "fields": {"type": "array", "items": {"type": "string"}},
+        "usedBy": {"type": "array", "items": {"type": "string"}},
+        "rights": {
+          "type": "object",
+          "required": ["redistribution", "copyrightHolder", "note"],
+          "properties": {
+            "redistribution": {"enum": ["open-public-data", "restricted", "unknown"]},
+            "copyrightHolder": {"type": "string"},
+            "note": {"type": "string"}
+          }
+        },
+        "archive": {
+          "type": "object",
+          "required": ["status", "scope", "renderAssetId", "fragment", "mediaType"],
+          "properties": {
+            "status": {"enum": ["local-record", "local-data-and-record", "private-research-copy"]},
+            "scope": {"type": "string"},
+            "renderAssetId": {"type": "string"},
+            "fragment": {"type": "string"},
+            "mediaType": {"type": "string"},
+            "preview": {
+              "type": "object",
+              "required": ["file", "mediaType", "sourcePage", "width", "height", "quality", "alt", "caption", "generator"],
+              "properties": {
+                "file": {
+                  "type": "string",
+                  "pattern": "^src/assets/garden-references/previews/[a-zA-Z0-9][a-zA-Z0-9._/-]*\\.webp$"
+                },
+                "mediaType": {"const": "image/webp"},
+                "sourcePage": {"type": "integer", "minimum": 1},
+                "width": {"type": "integer", "minimum": 1},
+                "height": {"type": "integer", "minimum": 1},
+                "quality": {"type": "integer", "minimum": 1, "maximum": 100},
+                "alt": {"type": "string", "minLength": 1},
+                "caption": {"type": "string", "minLength": 1},
+                "generator": {"type": "string", "minLength": 1}
+              }
+            },
+            "researchFile": {"type": "string"},
+            "researchFiles": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["url", "file"],
+                "properties": {
+                  "url": {"type": "string", "format": "uri"},
+                  "file": {"type": "string"}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Lady Beetles",
+    "role": "Predator",
+    "helpsWith": "Aphids and other soft-bodied insects",
+    "habitat": "Flowering plants, undisturbed edges, and reduced broad-spectrum pesticide use"
+  },
+  {
+    "name": "Lacewings",
+    "role": "Predator",
+    "helpsWith": "Aphids, mites, small caterpillars, and insect eggs",
+    "habitat": "Small flowers, mixed plantings, and sheltered vegetation"
+  },
+  {
+    "name": "Hoverflies",
+    "role": "Pollinator and predator",
+    "helpsWith": "Pollination as adults; aphid control as larvae",
+    "habitat": "Umbel-shaped flowers, alyssum, dill, cilantro, and other small blooms"
+  },
+  {
+    "name": "Parasitic Wasps",
+    "role": "Parasitoid",
+    "helpsWith": "Caterpillars, aphids, and other host insects",
+    "habitat": "Tiny flowers, continuous bloom, and pesticide restraint"
+  },
+  {
+    "name": "Ground Beetles",
+    "role": "Predator",
+    "helpsWith": "Slugs, cutworms, and soil-surface pests",
+    "habitat": "Mulched paths, perennial edges, stones, and low-disturbance soil"
+  }
+]

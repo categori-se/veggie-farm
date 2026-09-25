@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {xyzRasterPixelToLocalPoint} from '../src/lib/spatial/gisAlignment.js';
+const read=path=>JSON.parse(readFileSync(new URL('../'+path,import.meta.url)));
+test('southern drive retains reviewed pixels, uncertainty and a single additive migration',()=>{
+ const review=read('data/spatial/reconstructions/reviews/naumkeag-southern-drive.json');
+ const site=read('data/spatial/gardens/naumkeag-garden-rooms/site.geojson');
+ const garden=read('src/data/api/v1/collections/gardens/items.json').features.find(f=>f.id===review.gardenId);
+ const feature=site.features.find(f=>f.id==='naumkeag-southern-drive');
+ assert.equal(feature.geometry.type,'LineString');
+ assert.deepEqual(feature.properties.provenance.observedRasterPixels,review.features[0].observedRasterPixels);
+ assert.equal(feature.properties.provenance.digitizationUncertaintyPixels,12);
+ const origin=read('data/spatial/calibrations/naumkeag-garden-rooms.json').origin;
+ assert.deepEqual(feature.properties.localGeometry.coordinates,review.features[0].observedRasterPixels.map(p=>xyzRasterPixelToLocalPoint(p,review.raster,{localOrigin:origin})));
+ assert.match(feature.properties.notes,/width is symbolic/);
+ assert.equal(garden.properties.starterLayout.revision,6);
+ assert.deepEqual(garden.properties.starterLayout.beds,[]);
+ const additions=garden.properties.siteReconstructionAdditions;
+ assert.deepEqual(additions.at(-1),{revision:6,structureIds:['naumkeag-southern-drive']});
+});

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Aphids",
+    "signs": "Clusters on tender growth, sticky honeydew, distorted leaves",
+    "favoredConditions": "Soft new growth and stressed plants",
+    "firstResponse": "Inspect undersides of leaves, spray with water, and protect beneficial insects"
+  },
+  {
+    "name": "Cabbage Worms",
+    "signs": "Chewed brassica leaves and green caterpillars near leaf veins",
+    "favoredConditions": "Uncovered brassicas during moth activity",
+    "firstResponse": "Hand-pick, use row cover early, and encourage predators"
+  },
+  {
+    "name": "Flea Beetles",
+    "signs": "Small shot holes in leaves, especially brassicas and eggplants",
+    "favoredConditions": "Young stressed seedlings in spring",
+    "firstResponse": "Use row cover, transplant sturdy seedlings, and reduce weed hosts"
+  },
+  {
+    "name": "Squash Bugs",
+    "signs": "Wilting cucurbit leaves, bronze egg clusters, nymphs under leaves",
+    "favoredConditions": "Dense squash plantings and overwintering debris",
+    "firstResponse": "Scout leaf undersides, remove eggs, and rotate cucurbit beds"
+  },
+  {
+    "name": "Slugs",
+    "signs": "Ragged holes, slime trails, damage on seedlings and low leaves",
+    "favoredConditions": "Cool damp mulch, dense cover, and poor airflow",
+    "firstResponse": "Reduce hiding places near seedlings, water in morning, and use traps selectively"
+  }
+]

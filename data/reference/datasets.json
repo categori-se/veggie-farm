@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "datasets": [
+    {
+      "dataset": "community-crop-guides",
+      "source": "Original project crop guides",
+      "source_url": "https://veggie.farm/",
+      "license": "GPL-3.0-only original articles and documentation",
+      "version": "2026-09-25",
+      "checksum": "Per-file SHA-256 in source-manifest.json",
+      "download_method": "Bundled small reference records; no external acquisition",
+      "processing_script": "scripts/build-community-data.mjs",
+      "public_sample": "src/data/vegetables.json",
+      "scope": "Generic crops; no partner descriptions or cultivar images"
+    },
+    {
+      "dataset": "synthetic-garden",
+      "source": "Independent authored fixture",
+      "source_url": null,
+      "license": "GPL-3.0-only test fixture",
+      "version": "1",
+      "checksum": "Per-file SHA-256 in source-manifest.json",
+      "download_method": "Bundled",
+      "processing_script": null,
+      "public_sample": "data/demo/community-garden.json",
+      "scope": "Local inch coordinates; fictional beds, soil and sun notes; no property geolocation"
+    },
+    {
+      "dataset": "optional-media",
+      "source": "Separately operated media storage; private rights records",
+      "source_url": null,
+      "license": "Not redistributed; operator-specific agreements",
+      "version": null,
+      "checksum": "Maintained outside source control",
+      "download_method": "Optional runtime manifest; no media acquisition or harvesting scripts distributed",
+      "processing_script": null,
+      "public_sample": null,
+      "scope": "All photographs, illustrations, fonts and model assets excluded from GitHub"
+    },
+    {
+      "dataset": "public-garden-geometry",
+      "source": "Named public estates and cited GIS sources",
+      "source_url": "https://www.mass.gov/orgs/massgis-bureau-of-geographic-information",
+      "license": "MassGIS data-use policy; project-authored interpretations; no source imagery included",
+      "version": "See curated records",
+      "checksum": "Per-file source manifest",
+      "download_method": "Small curated records; statewide downloads remain external",
+      "processing_script": "scripts/build-public-data-api.mjs",
+      "public_sample": "data/spatial/gardens/",
+      "scope": "Incomplete examples; not owner property"
+    }
+  ]
+}

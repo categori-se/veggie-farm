@@ -1,0 +1,48 @@
+.table-wrap {
+  max-width: var(--max-wide);
+  overflow-x: auto;
+  margin: 1.25rem 0 2rem;
+}
+
+table,
+.data-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+td,
+th {
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+td {
+  color: color-mix(in srgb, var(--ink) 88%, var(--muted));
+}
+
+tbody tr:hover {
+  background: color-mix(in srgb, var(--green-soft) 44%, transparent);
+}
+
+/* Wide comparison tables scroll inside their explicit container. Plain article
+   tables fit the reading column instead of widening the entire mobile page. */
+.table-wrap table {
+  min-width: 680px;
+}
+
+#observablehq-main > table {
+  table-layout: fixed;
+  overflow-wrap: anywhere;
+}

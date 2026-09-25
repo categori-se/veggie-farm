@@ -1,0 +1,37 @@
+{
+  "name": "veggie.farm",
+  "version": "0.1.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build-community.mjs --dev",
+    "build": "node scripts/build-community.mjs",
+    "build:data": "node scripts/build-community-data.mjs",
+    "test": "node --test tests/*.test.js tests/*.test.mjs",
+    "validate:plants": "node scripts/validate-plants.js",
+    "validate:data": "node scripts/validate-sources.js && node scripts/validate-spacing.js && node scripts/check-citations.js && node scripts/validate-horticultural-evidence.mjs && node scripts/align-garden-gis.mjs --check && node scripts/render-garden-reference-previews.mjs --check",
+    "check:public": "node scripts/check-public-boundary.mjs",
+    "check:browser-dependencies": "node scripts/check-browser-dependencies.mjs",
+    "build:dependency-notices": "node scripts/build-dependency-notices.mjs && node scripts/build-dependency-notices.mjs --build-tools && node scripts/build-browser-notice-map.mjs",
+    "check:dependency-notices": "node scripts/build-dependency-notices.mjs --check && node scripts/build-dependency-notices.mjs --build-tools --check && node scripts/build-browser-notice-map.mjs --check --require-complete",
+    "validate:dependency-notices": "npm run check:dependency-notices && node scripts/build-dependency-notices.mjs --check --require-complete && node scripts/build-dependency-notices.mjs --build-tools --check --require-complete",
+    "test:notices": "python3 tests/dependency_notices_test.py",
+    "check:public-git": "node scripts/check-public-git.mjs",
+    "hooks:install": "node scripts/install-community-hooks.mjs",
+    "verify:community": "npm run check:public && npm run check:public-git && npm test && npm run test:notices && npm run validate:data && npm run validate:plants && npm run validate:source-notices && npm run build",
+    "validate:source-notices": "npm run check:dependency-notices && node scripts/build-dependency-notices.mjs --check --require-complete && node scripts/check-source-notice-scope.mjs"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@observablehq/framework": "1.13.4"
+  },
+  "engines": {
+    "node": "24.x",
+    "npm": "11.x"
+  },
+  "packageManager": "npm@11.16.0"
+}

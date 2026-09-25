@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "_npm/d3-array@3.2.4/b8e751b6.js",
+      "bytes": 16637,
+      "sha256": "8528e839bc7a919d3eb984f87e0789e6bfe5da0b5a4503b9d32ef81762e8eaf4"
+    },
+    {
+      "path": "_npm/d3-axis@3.0.0/c662ea05.js",
+      "bytes": 3020,
+      "sha256": "01d36716182e166092c7c2203102efb73c2e808a45dc48341aa1b46b01c244a1"
+    },
+    {
+      "path": "_npm/d3-brush@3.0.0/d162d8c6.js",
+      "bytes": 9795,
+      "sha256": "ba67aedfc74a9452868e64dbd10de48088007ac358741e3de8a5ee2c3b63affb"
+    },
+    {
+      "path": "_npm/d3-chord@3.0.1/5cedd0be.js",
+      "bytes": 4337,
+      "sha256": "2983bfe383e4731887c6c8ba2c39c65e3730c0259c42a10b3134203c3271530b"
+    },
+    {
+      "path": "_npm/d3-color@3.1.0/65d51007.js",
+      "bytes": 10445,
+      "sha256": "9b9c2db371f42ac1f61d7c900c0c69d113167e95104eff65cb1d7b406e249be0"
+    },
+    {
+      "path": "_npm/d3-contour@4.0.2/c576a91a.js",
+      "bytes": 5724,
+      "sha256": "df7b05fde6bb508f7756aec92d31f8ee8b8a55cf676b58c95ed1a59b1480180c"
+    },
+    {
+      "path": "_npm/d3-delaunay@6.0.4/8b43826d.js",
+      "bytes": 11485,
+      "sha256": "3a85833c2163ca7bbbb2bf8a404ea78490a9a25cde66bd91012d973f50b6e33f"
+    },
+    {
+      "path": "_npm/d3-dispatch@3.0.1/3fb06f14.js",
+      "bytes": 1801,
+      "sha256": "8bff4ff413a2a0cd266dde44241ee425533fea03d45309e8f9ea4d575faf4440"
+    },
+    {
+      "path": "_npm/d3-drag@3.0.0/20b76948.js",
+      "bytes": 4076,
+      "sha256": "1e6e2a30c707eba514cd38dffba0d64878df5ff044aee2c888027acb27906102"
+    },
+    {
+      "path": "_npm/d3-dsv@3.0.1/097745a2.js",
+      "bytes": 3345,
+      "sha256": "53fd860a129312e16a6dda5c2375506b8b2ff9bd1ab9b13f2ce25e3330062199"
+    },
+    {
+      "path": "_npm/d3-ease@3.0.1/8683b012.js",
+      "bytes": 3125,
+      "sha256": "563538c46f32f530091d46a3aaceb9688951cd4a434e5a1f6e9c2e655731ffc8"
+    },
+    {
+      "path": "_npm/d3-fetch@3.0.1/5c319046.js",
+      "bytes": 1580,
+      "sha256": "1d6c1f23f0f7f3470411772686fb5c57879bb67054a123a10d98a063df3fa72c"
+    },
+    {
+      "path": "_npm/d3-force@3.0.0/33924f3e.js",
+      "bytes": 8273,
+      "sha256": "60879d7820f6c58efd1cf74bab3476e106d575d79f37fb90df915fd5743cf856"
+    },
+    {
+      "path": "_npm/d3-format@3.1.2/8d67a1ae.js",
+      "bytes": 5317,
+      "sha256": "7a8434101086a7de8c51f2b0765ad89042e113cba4efbf075c3c8e68bf8620c7"
+    },
+    {
+      "path": "_npm/d3-geo@3.1.1/8037bd0b.js",
+      "bytes": 36728,
+      "sha256": "87dc3222a75d22b8c6bb6130210f60aa0731bf460037d73993a80c3d4dd05cbc"
+    },
+    {
+      "path": "_npm/d3-hierarchy@3.1.2/a9ba0229.js",
+      "bytes": 14985,
+      "sha256": "172633aafe8d077940a703db4ea5189810240f1fea0c1efd8ce8ab7d9c667faf"
+    },
+    {
+      "path": "_npm/d3-interpolate@3.0.1/e0a47f97.js",
+      "bytes": 7949,
+      "sha256": "86471d89cc15b763571e98dfac171930800c5f1478dbf9b2270b0ca8ab72b5ea"
+    },
+    {
+      "path": "_npm/d3-path@3.1.0/f9e9e0ab.js",
+      "bytes": 2386,
+      "sha256": "eb598d90b8f5cd698c063ff5509dce9beed0fe67110ab424ea8e0f6d511d3ab9"
+    },
+    {
+      "path": "_npm/d3-polygon@3.0.1/2da8eb3b.js",
+      "bytes": 1544,
+      "sha256": "9e849d4c9116b8d296082f010c5a64da1cb3d63cfdc4d8ba11f72a324fcc9012"
+    },
+    {
+      "path": "_npm/d3-quadtree@3.0.1/09002e01.js",
+      "bytes": 5207,
+      "sha256": "830b8032d6d82060c2bb6bba66c77966c9e7a6238e5a576e4035baf33f0a703e"
+    },
+    {
+      "path": "_npm/d3-random@3.0.1/5108797c.js",
+      "bytes": 4046,
+      "sha256": "82bec713a9afaadc9791eae9b212d688fbb2bc9d32c169133f79bcf45a5ec71c"
+    },
+    {
+      "path": "_npm/d3-scale-chromatic@3.1.0/f3c78e0d.js",
+      "bytes": 19854,
+      "sha256": "030be90f531121ae956464e9e94b02d58310e0a8229ad4a1046affe795b1d95c"
+    },
+    {
+      "path": "_npm/d3-scale@4.0.2/c9f2571b.js",
+      "bytes": 15968,
+      "sha256": "04cf893415dc88018198437459cb6b513d333462766e5f809e563f6e5080b4af"
+    },
+    {
+      "path": "_npm/d3-selection@3.0.0/28717d05.js",
+      "bytes": 13656,
+      "sha256": "95b9734e86381b035ef57134f47eb64d37fb2c28925916dababbfbc8f38f2f8f"
+    },
+    {
+      "path": "_npm/d3-shape@3.2.0/7c6e2a50.js",
+      "bytes": 31290,
+      "sha256": "4e509a08b971b17609000a28ff2240abfbcf2e21ff12fda02105831de5acb9a6"
+    },
+    {
+      "path": "_npm/d3-time-format@4.1.0/643581a8.js",
+      "bytes": 9730,
+      "sha256": "ea013a37442cb791d6443903c726e8256552f254982446ff23702ab3ce0bb92d"
+    },
+    {
+      "path": "_npm/d3-time@3.1.0/3d1d57c6.js",
+      "bytes": 5916,
+      "sha256": "9da1a37d1d451d83a380441344f5c4cc7f29147b86fdf55713ac3ac8cd8f4ab6"
+    },
+    {
+      "path": "_npm/d3-timer@3.0.1/e99232db.js",
+      "bytes": 1867,
+      "sha256": "96660de86a3104494298df6e5c8b20077b49885cf28a163604380a0bb7cca950"
+    },
+    {
+      "path": "_npm/d3-transition@3.0.1/bd07fd9a.js",
+      "bytes": 11871,
+      "sha256": "d91c7e57621764cbb6e50cb8b5ec6810a0cace36beedc034f3c285f8b360598c"
+    },
+    {
+      "path": "_npm/d3-zoom@3.0.0/d09f7cc9.js",
+      "bytes": 9866,
+      "sha256": "0effd56c9fd3fbe823b72c5b2a55857bf3f17bf98a6cbff028eed3ec5745554e"
+    },
+    {
+      "path": "_npm/d3@7.9.0/080cf928.js",
+      "bytes": 1576,
+      "sha256": "70040473f841e68d39aea5c2222c28acb38a46d852aa859dc098bc723106dc5d"
+    },
+    {
+      "path": "_npm/delaunator@5.1.0/7b06abe7.js",
+      "bytes": 5628,
+      "sha256": "05461d0227fe157d100bcf7de6e08bfde290f9e1da7f70bdae52abc8f78e1785"
+    },
+    {
+      "path": "_npm/htl@1.0.0/11521f02.js",
+      "bytes": 7739,
+      "sha256": "edec87875df602697895fbfd25397f4ab22f6721635244dcc77dd770ce63f54e"
+    },
+    {
+      "path": "_npm/internmap@2.0.3/af036d7e.js",
+      "bytes": 1187,
+      "sha256": "16fbd1d39c1417336b3ab077be551a3a212f0ca8d22c240ac6711e927a555f76"
+    },
+    {
+      "path": "_npm/isoformat@0.2.1/604cb63b.js",
+      "bytes": 942,
+      "sha256": "3d06812bab33d6ca67326421fee9697953713a4799c25bd6d9a924a19322ea12"
+    },
+    {
+      "path": "_npm/robust-predicates@3.0.3/b42f30a7.js",
+      "bytes": 24185,
+      "sha256": "5f076f56e38f3a9f4d3d188f6553814f9f705cafa53cabec61f6a5f7640ed011"
+    },
+    {
+      "path": "_npm/three@0.184.0/725d175e.js",
+      "bytes": 732842,
+      "sha256": "53c0020905a29b8ee0bd5be7103ec3fe3455587cf1822aefd2e8c433ac2bc2e4"
+    },
+    {
+      "path": "_observablehq/client.7b6ddb1f.js",
+      "bytes": 12331,
+      "sha256": "a77e37f1b505ddd5170a197b8f01f09471d4ea47d3ee0c36ee9c99bb59efd707"
+    },
+    {
+      "path": "_observablehq/runtime.607a8173.js",
+      "bytes": 30887,
+      "sha256": "e833a5db9dd1d6316ad7dac91a914c666af7ac4f8a142d5fcb49cbed822c113e"
+    },
+    {
+      "path": "_observablehq/stdlib/inputs.f7175400.js",
+      "bytes": 27233,
+      "sha256": "6d4667efe31d05068f75c9d9d2674f5709b4f053997acfbefd9087962f08b4e6"
+    },
+    {
+      "path": "_observablehq/stdlib/inputs.f7bf0e12.css",
+      "bytes": 3998,
+      "sha256": "f7bf0e12f9a8e154b08336c5667425d476bdb39ee9a2eb8b129fc860c4617db1"
+    },
+    {
+      "path": "_observablehq/stdlib.23790ac1.js",
+      "bytes": 7608,
+      "sha256": "115ac34804e98703499884ad5ca9ef124c71f387a48495cf04379e36526c74f3"
+    }
+  ]
+}

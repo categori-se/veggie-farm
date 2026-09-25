@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Garden",
+    "path": "/garden",
+    "description": "Core practices: planning, climate, water, and long-term garden improvement."
+  },
+  {
+    "title": "Vegetables",
+    "path": "/vegetables",
+    "description": "Crop guides for annual vegetables."
+  },
+  {
+    "title": "Fruits",
+    "path": "/fruits",
+    "description": "Perennial fruit and small fruit guides."
+  },
+  {
+    "title": "Herbs",
+    "path": "/herbs",
+    "description": "Culinary herbs and garden companions."
+  },
+  {
+    "title": "Soil",
+    "path": "/soil",
+    "description": "Soil structure, compost, mulch, amendments, and testing."
+  },
+  {
+    "title": "Wildlife",
+    "path": "/wildlife",
+    "description": "Beneficial insects, pollinators, and garden ecology."
+  },
+  {
+    "title": "Seasons",
+    "path": "/content/seasonal/",
+    "description": "Timely New England field notes, seasonal rhythms, and planning."
+  },
+  {
+    "title": "Reference",
+    "path": "/reference",
+    "description": "Plain reference material for repeated use."
+  },
+  {
+    "title": "Field Notes",
+    "path": "/field-notes",
+    "description": "Templates and observations from the garden."
+  }
+]

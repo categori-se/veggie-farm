@@ -1,0 +1,47 @@
+@import url("observablehq:default.css");
+@import url("observablehq:theme-air.css") (prefers-color-scheme: light);
+@import url("observablehq:theme-near-midnight.css") (prefers-color-scheme: dark);
+
+@import url("./styles/tokens.css");
+@import url("./styles/base.css");
+@import url("./styles/navigation.css");
+@import url("./styles/layout.css");
+@import url("./styles/typography.css");
+@import url("./styles/cards.css");
+@import url("./styles/article.css");
+@import url("./styles/tables.css");
+@import url("./styles/tools.css");
+@import url("./styles/diagrams.css");
+@import url("./styles/application.css");
+
+/* Shared garden actions keep a task beside the guide that prompted it. */
+.garden-actions {margin:1rem 0; padding:.8rem 0; border-top:1px solid var(--line)}
+.garden-action-bar {display:flex;gap:.6rem;flex-wrap:wrap}
+.garden-actions button,.garden-action-form button {min-height:44px;padding:.65rem 1rem;border:1px solid var(--green);border-radius:.5rem;background:var(--green-soft);color:var(--ink);cursor:pointer;font:inherit}
+.garden-action-form {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:.8rem;margin:1rem 0;align-items:end}
+.garden-action-form .decision-input {display:grid;gap:.3rem;margin:0;min-width:0}
+.garden-action-form input,.garden-action-form select,.garden-action-form textarea {box-sizing:border-box;width:100%;min-height:44px;padding:.5rem;border:1px solid var(--muted);border-radius:.3rem;font:inherit;background:var(--paper);color:var(--ink)}
+.garden-action-form details {grid-column:1/-1}
+.garden-action-form textarea {min-height:80px}
+.garden-record-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1rem}
+.garden-record-card {padding:1rem;border:1px solid var(--line);border-radius:.7rem;background:var(--paper);color:var(--ink);min-width:0}
+.planting-timeline {display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;font-size:.8rem}
+.planting-timeline li {padding:.35rem;border-bottom:3px solid var(--moss)}
+.garden-dashboard {margin:2rem 0;padding:1rem;border-block:1px solid var(--line)}
+.notebook-profile {margin:1rem 0;padding:1rem;border:1px solid var(--line);border-radius:.6rem}
+.notebook-profile>summary {font-weight:700;cursor:pointer;min-height:44px;display:list-item;align-content:center}
+.season-record-months {display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;margin:1rem 0}
+.season-record-months button {min-height:44px;padding:.5rem;background:var(--green-soft);border:1px solid var(--green);border-radius:.4rem;color:var(--ink);cursor:pointer}
+.season-record-months button[aria-pressed=true] {background:var(--green);color:var(--bg);outline:2px solid var(--green);outline-offset:2px}
+
+.garden-planner-app [hidden] { display: none !important; }
+
+/* Collection controls share the planner's theme tokens and remain disclosures. */
+.studio-collections .collection-controls {display:flex;flex-wrap:wrap;gap:.65rem;align-items:end;}
+.studio-collections label {display:inline-flex;flex-direction:column;gap:.25rem;margin:.35rem .6rem .35rem 0;max-width:100%;}
+.studio-collections label:has(input[type="checkbox"]) {display:flex;flex-direction:row;align-items:start;}
+.studio-collections input:not([type="checkbox"]), .studio-collections select {max-width:100%;min-height:2.4rem;}
+.studio-collections li, .public-collection li {margin-block:.65rem;overflow-wrap:anywhere;}
+.studio-collections button, .public-collection button {margin:.25rem .35rem .25rem 0;}
+.studio-collections details {margin-block:.6rem;}
+@media(max-width:600px){.studio-collections .collection-controls{display:block}.studio-collections label{display:flex}.studio-collections button,.public-collection button{max-width:100%;white-space:normal}}

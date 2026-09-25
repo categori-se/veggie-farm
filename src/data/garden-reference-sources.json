@@ -1,0 +1,477 @@
+[
+  {
+    "id": "source:bbg-gardens",
+    "title": "Official garden guide",
+    "publisher": "Berkshire Botanical Garden",
+    "sourceType": "official-website",
+    "originalUrl": "https://www.berkshirebotanical.org/our-gardens",
+    "summary": "Official overview of Berkshire Botanical Garden's 24-acre campus and named display gardens.",
+    "description": "Used to identify the Edible Gardens, Children's Discovery Garden, greenhouses, woodland and water gardens, and the site's Zone 5b home-gardening context.",
+    "supports": [
+      "garden identity",
+      "campus acreage",
+      "named garden features",
+      "program and climate context"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "Berkshire Botanical Garden",
+      "note": "Project-authored factual record is deployable; the publisher page remains the authoritative original."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-bbg-gardens",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:bbg-visitor-map",
+    "title": "2024 self-guided visitor map",
+    "publisher": "Berkshire Botanical Garden",
+    "sourceType": "visitor-map",
+    "originalUrl": "https://www.berkshirebotanical.org/sites/default/files/2026-03/2024%20BBG%20Map%20Self%20Guided%20Tour%20Kiosk.pdf",
+    "summary": "One-page numbered visitor map locating the Edible Gardens, Children's Vegetable Garden, greenhouses, paths, buildings, parking, woodland, and other named landmarks.",
+    "description": "Used with 2019, 2021, and 2025 orthophotos to identify persistent features; schematic artwork was not treated as surveyed geometry.",
+    "supports": [
+      "garden plan",
+      "landmark names",
+      "circulation",
+      "structure identification"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "Berkshire Botanical Garden",
+      "note": "Berkshire Botanical Garden retains copyright. This release links to the authoritative original; the research copy and rendered preview remain private. No open redistribution license is asserted."
+    },
+    "archive": {
+      "status": "private-research-copy",
+      "scope": "source-link-and-facts-used",
+      "researchFile": "data/raw/garden-references/source-bbg-visitor-map/original.pdf",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-bbg-visitor-map",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:mount-gardens",
+    "title": "The Mount gardens",
+    "publisher": "The Mount, Edith Wharton's Home",
+    "sourceType": "official-website",
+    "originalUrl": "https://edithwharton.org/the-gardens/",
+    "summary": "Official interpretation of The Mount's formal gardens and Beatrix Farrand's landscape work.",
+    "description": "Used to establish the historic estate-garden context and to distinguish the kitchen-garden study from the surviving formal garden rooms.",
+    "supports": [
+      "garden identity",
+      "historic design context",
+      "named garden features",
+      "Beatrix Farrand reference"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "The Mount, Edith Wharton's Home",
+      "note": "The Mount's terms restrict republication; only the project-authored factual record is deployed."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-mount-gardens",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:mount-contact",
+    "title": "The Mount official location",
+    "publisher": "The Mount, Edith Wharton's Home",
+    "sourceType": "location-reference",
+    "originalUrl": "https://edithwharton.org/contact-us/",
+    "summary": "Official location and contact reference for matching The Mount to the correct Lenox parcel.",
+    "description": "Used for garden identity and parcel matching, not for interior bed geometry.",
+    "supports": [
+      "published location",
+      "parcel identification"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "The Mount, Edith Wharton's Home",
+      "note": "Only a project-authored factual location record is deployed."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-mount-contact",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:mount-estate-map",
+    "title": "SculptureNow at The Mount 2018 estate map",
+    "publisher": "SculptureNow",
+    "sourceType": "estate-map",
+    "originalUrl": "https://www.sculpturenow.org/wp-content/uploads/2018/06/sculpture-guide-2018.pdf",
+    "summary": "2018 estate guide and map used to cross-reference stable, lawn, drives, and other persistent estate landmarks.",
+    "description": "Supports the aerial registration of the former kitchen-garden lawn north of the stable; it does not supply a surveyed kitchen-bed plan.",
+    "supports": [
+      "estate plan",
+      "stable location",
+      "circulation",
+      "landmark registration"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "unknown",
+      "copyrightHolder": "SculptureNow and credited contributors",
+      "note": "Research copy is retained outside the public build pending permission."
+    },
+    "archive": {
+      "status": "private-research-copy",
+      "scope": "publisher-file-and-facts-used",
+      "researchFile": "data/raw/garden-references/source-mount-estate-map/original.pdf",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-mount-estate-map",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:naumkeag-guide",
+    "title": "Naumkeag property guide",
+    "publisher": "The Trustees of Reservations",
+    "sourceType": "official-website",
+    "originalUrl": "https://thetrustees.org/place/naumkeag/",
+    "summary": "Official visitor and property overview for Naumkeag's house, garden rooms, and public access.",
+    "description": "Used for site identity, acreage, public-garden context, and named landscape features.",
+    "supports": [
+      "garden identity",
+      "campus acreage",
+      "published location",
+      "visitor context"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "The Trustees of Reservations",
+      "note": "Only the project-authored factual record is deployed."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-naumkeag-guide",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:naumkeag-map",
+    "title": "Official Naumkeag house and gardens map",
+    "publisher": "The Trustees of Reservations",
+    "sourceType": "property-map",
+    "originalUrl": "https://thetrustees.org/wp-content/uploads/2023/03/naumkeag-trail-map.pdf",
+    "summary": "One-page property map identifying the house, gardens, visitor facilities, entrance, and surrounding parkland.",
+    "description": "Used as a broad landmark and circulation reference; the garden-room geometry comes from cross-registration with more detailed sources and aerial imagery.",
+    "supports": [
+      "property map",
+      "visitor circulation",
+      "house location",
+      "garden context"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "The Trustees of Reservations",
+      "note": "Research copy is retained outside the public build; the local fallback is a project-authored record."
+    },
+    "archive": {
+      "status": "private-research-copy",
+      "scope": "publisher-file-and-facts-used",
+      "researchFile": "data/raw/garden-references/source-naumkeag-map/original.pdf",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-naumkeag-map",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:naumkeag-landscape-tour",
+    "title": "Naumkeag's Landscape: A Vision & A View",
+    "publisher": "The Trustees of Reservations / UMass Amherst",
+    "sourceType": "landscape-tour",
+    "originalUrl": "https://www.lovearboreal.com/files/Naumkeag%20Garden%20Tour.pdf",
+    "summary": "Ten-page landscape tour describing Fletcher Steele and Mabel Choate's outdoor rooms, their sequence, and historic visual evidence.",
+    "description": "Primary interpretive reference for the Rose Garden, Evergreen Garden, Peony Terraces, Afternoon Garden, Blue Steps, and historic aerial relationships.",
+    "supports": [
+      "garden-room sequence",
+      "historic aerial",
+      "landscape history",
+      "named features"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "The Trustees of Reservations / UMass Amherst",
+      "note": "Research copy is retained outside the public build; locally authored source facts remain available in the application."
+    },
+    "archive": {
+      "status": "private-research-copy",
+      "scope": "publisher-file-and-facts-used",
+      "researchFile": "data/raw/garden-references/source-naumkeag-landscape-tour/original.pdf",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-naumkeag-landscape-tour",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:naumkeag-tclf",
+    "title": "Cultural Landscape Foundation Naumkeag profile",
+    "publisher": "The Cultural Landscape Foundation",
+    "sourceType": "landscape-profile",
+    "originalUrl": "https://www.tclf.org/naumkeag",
+    "summary": "Landscape-history profile describing Naumkeag's design chronology, designers, and principal garden rooms.",
+    "description": "Used to cross-check room names, chronology, and spatial sequence rather than exact bed boundaries.",
+    "supports": [
+      "landscape chronology",
+      "designer attribution",
+      "garden-room names",
+      "historic context"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "unknown",
+      "copyrightHolder": "The Cultural Landscape Foundation",
+      "note": "Only a project-authored factual record is deployed."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-naumkeag-tclf",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:naumkeag-archive-plans",
+    "title": "National Trust archival Naumkeag garden plans",
+    "publisher": "National Trust for Historic Preservation",
+    "sourceType": "archival-plans",
+    "originalUrl": "https://savingplaces.org/stories/the-making-of-naumkeag-gardens",
+    "summary": "Archival article presenting plans, sketches, blueprint fragments, and historic aerial evidence for Naumkeag's garden development.",
+    "description": "Used to check the Blue Steps, garden-room geometry, and the relationship between designed plans and the built landscape.",
+    "supports": [
+      "archival drawings",
+      "garden plans",
+      "historic aerial",
+      "Blue Steps design"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "National Trust for Historic Preservation",
+      "note": "Six cited research images are retained outside the public build; the deployable fallback is a project-authored factual record."
+    },
+    "archive": {
+      "status": "private-research-copy",
+      "scope": "cited-images-and-facts-used",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-naumkeag-archive-plans",
+      "mediaType": "text/html",
+      "researchFiles": [
+        {
+          "url": "https://cdn.savingplaces.org/2023/03/24/22/53/24/751/Naumkeag_bluestepsplans_edit.webp",
+          "file": "data/raw/garden-references/source-naumkeag-archive-plans/blue-steps-plan.webp"
+        },
+        {
+          "url": "https://cdn.savingplaces.org/2023/03/24/20/12/30/899/Naumkeag_bluestepssketch_edit.webp",
+          "file": "data/raw/garden-references/source-naumkeag-archive-plans/blue-steps-sketch.webp"
+        },
+        {
+          "url": "https://cdn.savingplaces.org/2023/03/24/23/52/43/365/Naumkeag_drawings_edit.webp",
+          "file": "data/raw/garden-references/source-naumkeag-archive-plans/garden-drawings.webp"
+        },
+        {
+          "url": "https://cdn.savingplaces.org/2023/03/25/03/02/14/812/Naumkeag_Blueprint_edit.webp",
+          "file": "data/raw/garden-references/source-naumkeag-archive-plans/blueprint.webp"
+        },
+        {
+          "url": "https://cdn.savingplaces.org/2023/03/24/15/40/23/808/Naumkeag_sketch_edit.webp",
+          "file": "data/raw/garden-references/source-naumkeag-archive-plans/garden-sketch.webp"
+        },
+        {
+          "url": "https://cdn.savingplaces.org/2023/03/24/17/30/25/284/Naumkeag_aerial_edit.webp",
+          "file": "data/raw/garden-references/source-naumkeag-archive-plans/historic-aerial.webp"
+        }
+      ]
+    }
+  },
+  {
+    "id": "source:ashintully-guide",
+    "title": "Ashintully property guide",
+    "publisher": "The Trustees of Reservations",
+    "sourceType": "official-website",
+    "originalUrl": "https://thetrustees.org/place/ashintully-gardens/",
+    "summary": "Official overview of Ashintully Gardens, its public terrace gardens, woodland setting, and Marble Palace ruins.",
+    "description": "Used to identify the public garden, establish landscape character, and distinguish the garden parcel from the adjacent private residence.",
+    "supports": [
+      "garden identity",
+      "property context",
+      "named landmarks",
+      "woodland character"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "The Trustees of Reservations",
+      "note": "Only the project-authored factual record is deployed."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-ashintully-guide",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:ashintully-map",
+    "title": "Ashintully public map",
+    "publisher": "The Trustees of Reservations",
+    "sourceType": "property-map",
+    "originalUrl": "https://thetrustees.org/wp-content/uploads/2022/02/ashintully-trail-map.pdf",
+    "summary": "Trustees GIS map of the public garden, terrace area, paths, Marble Palace ruins, and private-house exclusion; its printed north orientation is reversed.",
+    "description": "Used with aerial imagery to select the correct public parcel and register the editable terrace cluster; interior borders and paths remain diagrammatic.",
+    "supports": [
+      "property map",
+      "parcel selection",
+      "terrace location",
+      "private-house exclusion"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "restricted",
+      "copyrightHolder": "The Trustees of Reservations",
+      "note": "Research copy is retained outside the public build; a project-authored source record is deployed."
+    },
+    "archive": {
+      "status": "private-research-copy",
+      "scope": "publisher-file-and-facts-used",
+      "researchFile": "data/raw/garden-references/source-ashintully-map/original.pdf",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-ashintully-map",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:massgis-parcels",
+    "title": "MassGIS Level 3 property tax parcels",
+    "publisher": "MassGIS",
+    "sourceType": "government-dataset",
+    "originalUrl": "https://www.mass.gov/info-details/massgis-data-property-tax-parcels",
+    "summary": "Massachusetts statewide standardized assessor parcel geometry used to identify and bound each featured garden parcel.",
+    "description": "The application stores only the matched public geometry and minimum parcel identifiers; owner and searched-address fields are not retained, and parcel boundaries are not surveys.",
+    "supports": [
+      "parcel geometry",
+      "parcel identifier",
+      "fiscal year",
+      "parcel acreage"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "open-public-data",
+      "copyrightHolder": "Commonwealth of Massachusetts EOTSS",
+      "note": "Project-owned bounded parcel records and factual source metadata are deployed with MassGIS attribution."
+    },
+    "archive": {
+      "status": "local-data-and-record",
+      "scope": "matched-feature-and-facts-used",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-massgis-parcels",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:massgis-aerial-2019",
+    "title": "MassGIS 2019 aerial imagery",
+    "publisher": "MassGIS",
+    "sourceType": "aerial-imagery",
+    "originalUrl": "https://www.mass.gov/info-details/massgis-data-2019-aerial-imagery",
+    "summary": "Spring 2019 leaf-off, four-band Massachusetts orthophotography used to check persistent paths and planting-grid divisions.",
+    "description": "A cross-vintage alignment reference for Berkshire Botanical Garden; the application does not treat changing crop edges as surveyed features.",
+    "supports": [
+      "orthophoto registration",
+      "cross-vintage comparison",
+      "persistent feature interpretation"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "open-public-data",
+      "copyrightHolder": "Commonwealth of Massachusetts EOTSS / USGS",
+      "note": "MassGIS states that the imagery is available for public use and distribution; attribution is retained."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used-and-spatial-cache-contract",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-massgis-aerial-2019",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:massgis-aerial-2021",
+    "title": "MassGIS 2021 aerial imagery",
+    "publisher": "MassGIS",
+    "sourceType": "aerial-imagery",
+    "originalUrl": "https://www.mass.gov/info-details/massgis-data-2021-aerial-imagery",
+    "summary": "Spring 2021 leaf-off, 15 cm, four-band statewide orthophotography used for cross-vintage garden alignment.",
+    "description": "Used at Berkshire Botanical Garden to separate persistent paths and plot divisions from seasonal vegetation and temporary objects.",
+    "supports": [
+      "orthophoto registration",
+      "cross-vintage comparison",
+      "persistent feature interpretation"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "open-public-data",
+      "copyrightHolder": "Commonwealth of Massachusetts EOTSS",
+      "note": "MassGIS source record and bounded delivery contract are retained locally with attribution."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used-and-spatial-cache-contract",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-massgis-aerial-2021",
+      "mediaType": "text/html"
+    }
+  },
+  {
+    "id": "source:massgis-aerial-2025",
+    "title": "MassGIS 2025 aerial imagery",
+    "publisher": "MassGIS",
+    "sourceType": "aerial-imagery",
+    "originalUrl": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery",
+    "summary": "Current MassGIS natural-color and color-infrared aerial reference used for parcel context and garden-feature registration.",
+    "description": "The studio requests bounded parcel and viewport tile mosaics and caches them; source metadata and alignment observations are checked into the project.",
+    "supports": [
+      "aerial imagery",
+      "visible structures",
+      "paths",
+      "garden-room registration"
+    ],
+    "retrievedAt": "2026-08-23",
+    "rights": {
+      "redistribution": "open-public-data",
+      "copyrightHolder": "Commonwealth of Massachusetts EOTSS",
+      "note": "MassGIS attribution is retained; bounded project-hosted derivatives can replace the live service."
+    },
+    "archive": {
+      "status": "local-record",
+      "scope": "facts-used-and-spatial-cache-contract",
+      "renderAssetId": "garden-reference-index",
+      "fragment": "source-massgis-aerial-2025",
+      "mediaType": "text/html"
+    }
+  }
+]

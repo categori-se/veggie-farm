@@ -1,0 +1,32 @@
+[
+  {
+    "id": "umaine-highbush-blueberries",
+    "label": "Highbush blueberries",
+    "min": 4.5,
+    "max": 5.2,
+    "unit": "pH",
+    "region": "Maine / northern New England",
+    "sourceUrl": "https://extension.umaine.edu/publications/2253e/",
+    "sourceTitle": "UMaine Extension: Growing Highbush Blueberries",
+    "section": "Selecting and Preparing a Planting Site",
+    "retrievedAt": "2026-09-25T14:21:28.038676+00:00",
+    "sourceSha256": "9d40ef50c812df0ad457e590945c19c39ed0ec3481a817ccde9dd71adf31e3cc",
+    "reviewStatus": "source_checked",
+    "applicability": "Published crop guidance; compare with the laboratory interpretation and your growing system."
+  },
+  {
+    "id": "umn-tomatoes",
+    "label": "Tomatoes",
+    "min": 5.5,
+    "max": 7,
+    "unit": "pH",
+    "region": "Minnesota home gardens",
+    "sourceUrl": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-tomatoes",
+    "sourceTitle": "UMN Extension: Growing tomatoes in home gardens",
+    "section": "Soil pH and fertility",
+    "retrievedAt": "2026-09-25T14:21:28.295785+00:00",
+    "sourceSha256": "ada01ab908c2d888e44bed3b5243c4d69262e2f08d82d6d5a638b913b5ad7a01",
+    "reviewStatus": "source_checked",
+    "applicability": "Published crop guidance; compare with the laboratory interpretation and your growing system."
+  }
+]

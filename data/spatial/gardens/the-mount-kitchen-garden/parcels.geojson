@@ -1,0 +1,94 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "gardenId": "the-mount-kitchen-garden",
+    "layer": "parcels",
+    "status": "Reviewed site interpretation; planting design deferred"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "the-mount-kitchen-garden-parcel-1_5_0",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28108547468197,
+              42.33576265495631
+            ],
+            [
+              -73.28367771383635,
+              42.33573285925084
+            ],
+            [
+              -73.28569835800776,
+              42.33231236279272
+            ],
+            [
+              -73.28574055075181,
+              42.33188922489093
+            ],
+            [
+              -73.28574200317281,
+              42.33187480813204
+            ],
+            [
+              -73.28343852497072,
+              42.33182208217473
+            ],
+            [
+              -73.28346030674724,
+              42.33002960693435
+            ],
+            [
+              -73.28200580987392,
+              42.33023705094259
+            ],
+            [
+              -73.281631325275,
+              42.3301199182588
+            ],
+            [
+              -73.27979952023186,
+              42.33066592316308
+            ],
+            [
+              -73.28008751703543,
+              42.33185748640317
+            ],
+            [
+              -73.28008753197466,
+              42.33185754290203
+            ],
+            [
+              -73.28107931939917,
+              42.33573857245534
+            ],
+            [
+              -73.28108547468197,
+              42.33576265495631
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "parcels",
+        "name": "The Mount · formal gardens · 1_5_0",
+        "source": "MassGIS Level 3 parcels",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-parcels",
+            "role": "parcel context"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-parcels",
+          "sourceFeatureId": "1_5_0"
+        },
+        "MAP_PAR_ID": "1_5_0"
+      }
+    }
+  ]
+}

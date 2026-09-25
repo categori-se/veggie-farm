@@ -1,0 +1,3996 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-21T02:25:27.508Z",
+  "generator": "scripts/import-extension-evidence.mjs",
+  "sourceSnapshots": [
+    "data/raw/extension/umaine-home-vegetable-garden-2021.json",
+    "data/raw/extension/umaine-plant-spring-to-fall-2016.json",
+    "data/raw/extension/umaine-growing-garlic-2063.json",
+    "data/raw/extension/umn-collards-kale.json",
+    "data/raw/extension/usu-leafy-greens-spacing.json",
+    "data/raw/extension/umd-bok-choy-planting.json",
+    "data/raw/extension/psu-mizuna-2026.json"
+  ],
+  "sourceIds": [
+    "source:umaine-home-vegetable-chart",
+    "source:umaine-spring-to-fall",
+    "source:umaine-growing-garlic",
+    "source:umn-collards-kale",
+    "source:usu-leafy-greens-spacing",
+    "source:umd-vegetable-planting-calendar",
+    "source:psu-mizuna"
+  ],
+  "evidence": [
+    {
+      "id": "evidence:usu-leafy-greens-spacing:arugula:general:plant-spacing",
+      "cropSlug": "arugula",
+      "cropLabel": "Arugula",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 8,
+        "max": 12
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Utah commercial production",
+        "sourceNote": "Spacing is a production benchmark, not a New England calendar rule."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:usu-leafy-greens-spacing",
+      "sourceUrl": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:usu-leafy-greens-spacing:arugula:general:row-spacing",
+      "cropSlug": "arugula",
+      "cropLabel": "Arugula",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 15,
+        "max": 24
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Utah commercial production",
+        "sourceNote": "Spacing is a production benchmark, not a New England calendar rule."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:usu-leafy-greens-spacing",
+      "sourceUrl": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:pole:average-yield",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Pole",
+      "form": "pole",
+      "trait": "average_yield",
+      "value": {
+        "text": "12 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:pole:plant-spacing",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Pole",
+      "form": "pole",
+      "trait": "plant_spacing",
+      "value": {
+        "min": 24,
+        "max": 24,
+        "note": "hills"
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:pole:planting-depth",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Pole",
+      "form": "pole",
+      "trait": "planting_depth",
+      "value": {
+        "min": 1,
+        "max": 1
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:pole:planting-window-1",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Pole",
+      "form": "pole",
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-15",
+        "endMonthDay": "06-15"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:pole:row-spacing",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Pole",
+      "form": "pole",
+      "trait": "row_spacing",
+      "value": {
+        "min": 36,
+        "max": 36
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:pole:seed-or-plants-per-row",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Pole",
+      "form": "pole",
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "1 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:snap:average-yield",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Snap",
+      "form": "snap",
+      "trait": "average_yield",
+      "value": {
+        "text": "8 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:snap:plant-spacing",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Snap",
+      "form": "snap",
+      "trait": "plant_spacing",
+      "value": {
+        "min": 2,
+        "max": 4,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:snap:planting-depth",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Snap",
+      "form": "snap",
+      "trait": "planting_depth",
+      "value": {
+        "min": 1,
+        "max": 1
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:snap:planting-window-1",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Snap",
+      "form": "snap",
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-15",
+        "endMonthDay": "07-15"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:snap:row-spacing",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Snap",
+      "form": "snap",
+      "trait": "row_spacing",
+      "value": {
+        "min": 24,
+        "max": 24
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beans:snap:seed-or-plants-per-row",
+      "cropSlug": "beans",
+      "cropLabel": "Beans, Snap",
+      "form": "snap",
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "1–2 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:beans:general:planting-cue-early-spring-plus-one-week",
+      "cropSlug": "beans",
+      "cropLabel": "Beans",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "one week after the earliest spring group",
+        "phase": "early_spring_plus_one_week"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beets:general:average-yield",
+      "cropSlug": "beets",
+      "cropLabel": "Beets",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "10 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beets:general:plant-spacing",
+      "cropSlug": "beets",
+      "cropLabel": "Beets",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 2,
+        "max": 3,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beets:general:planting-depth",
+      "cropSlug": "beets",
+      "cropLabel": "Beets",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beets:general:planting-window-1",
+      "cropSlug": "beets",
+      "cropLabel": "Beets",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "04-25",
+        "endMonthDay": "08-01"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beets:general:row-spacing",
+      "cropSlug": "beets",
+      "cropLabel": "Beets",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 12,
+        "max": 18
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:beets:general:seed-or-plants-per-row",
+      "cropSlug": "beets",
+      "cropLabel": "Beets",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.1 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:beets:general:planting-cue-midspring",
+      "cropSlug": "beets",
+      "cropLabel": "Beets",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "two weeks before the average last frost date",
+        "phase": "midspring"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:beets:general:planting-cue-midsummer-to-fall",
+      "cropSlug": "beets",
+      "cropLabel": "Beets",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "late June to early July",
+        "phase": "midsummer_to_fall"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umd-vegetable-planting-calendar:bok-choy:general:fall-harvest-window",
+      "cropSlug": "bok-choy",
+      "cropLabel": "Bok choy",
+      "form": null,
+      "trait": "harvest_window",
+      "value": {
+        "startMonthDay": "09-15",
+        "endMonthDay": "11-21",
+        "datePrecision": "week"
+      },
+      "unit": "month_day",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Central Maryland",
+        "sourceNote": "Calendar uses a roughly May 1 last frost and October 31 first frost; values are retained as a comparison source, not New England defaults."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umd-vegetable-planting-calendar",
+      "sourceUrl": "https://extension.umd.edu/resource/when-plant-vegetables",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umd-vegetable-planting-calendar:bok-choy:general:fall-planting-window",
+      "cropSlug": "bok-choy",
+      "cropLabel": "Bok choy",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "08-08",
+        "endMonthDay": "09-07",
+        "datePrecision": "week"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Central Maryland",
+        "sourceNote": "Calendar uses a roughly May 1 last frost and October 31 first frost; values are retained as a comparison source, not New England defaults."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umd-vegetable-planting-calendar",
+      "sourceUrl": "https://extension.umd.edu/resource/when-plant-vegetables",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umd-vegetable-planting-calendar:bok-choy:general:spring-harvest-window",
+      "cropSlug": "bok-choy",
+      "cropLabel": "Bok choy",
+      "form": null,
+      "trait": "harvest_window",
+      "value": {
+        "startMonthDay": "05-15",
+        "endMonthDay": "07-07",
+        "datePrecision": "week"
+      },
+      "unit": "month_day",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Central Maryland",
+        "sourceNote": "Calendar uses a roughly May 1 last frost and October 31 first frost; values are retained as a comparison source, not New England defaults."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umd-vegetable-planting-calendar",
+      "sourceUrl": "https://extension.umd.edu/resource/when-plant-vegetables",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umd-vegetable-planting-calendar:bok-choy:general:spring-planting-window",
+      "cropSlug": "bok-choy",
+      "cropLabel": "Bok choy",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "04-01",
+        "endMonthDay": "05-07",
+        "datePrecision": "week"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Central Maryland",
+        "sourceNote": "Calendar uses a roughly May 1 last frost and October 31 first frost; values are retained as a comparison source, not New England defaults."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umd-vegetable-planting-calendar",
+      "sourceUrl": "https://extension.umd.edu/resource/when-plant-vegetables",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:carrots:general:average-yield",
+      "cropSlug": "carrots",
+      "cropLabel": "Carrots",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "10 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:carrots:general:plant-spacing",
+      "cropSlug": "carrots",
+      "cropLabel": "Carrots",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 2,
+        "max": 3,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:carrots:general:planting-depth",
+      "cropSlug": "carrots",
+      "cropLabel": "Carrots",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:carrots:general:planting-window-1",
+      "cropSlug": "carrots",
+      "cropLabel": "Carrots",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-01",
+        "endMonthDay": "07-15"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:carrots:general:row-spacing",
+      "cropSlug": "carrots",
+      "cropLabel": "Carrots",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 12,
+        "max": 18
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:carrots:general:seed-or-plants-per-row",
+      "cropSlug": "carrots",
+      "cropLabel": "Carrots",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.05 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:carrots:general:planting-cue-midspring",
+      "cropSlug": "carrots",
+      "cropLabel": "Carrots",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "two weeks before the average last frost date",
+        "phase": "midspring"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:carrots:general:planting-cue-midsummer-to-fall",
+      "cropSlug": "carrots",
+      "cropLabel": "Carrots",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "late June to early July",
+        "phase": "midsummer_to_fall"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:collards:general:crop-rotation-interval",
+      "cropSlug": "collards",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "crop_rotation_interval",
+      "value": {
+        "min": 4,
+        "max": 4
+      },
+      "unit": "year",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:collards:general:fall-direct-sow",
+      "cropSlug": "collards",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "planting_relative_to_first_frost",
+      "value": {
+        "min": 12,
+        "max": 12,
+        "direction": "before"
+      },
+      "unit": "week",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:collards:general:plant-spacing",
+      "cropSlug": "collards",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 8,
+        "max": 12,
+        "stage": "after thinning"
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:collards:general:planting-depth",
+      "cropSlug": "collards",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 0.25,
+        "max": 0.5
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:collards:general:row-spacing",
+      "cropSlug": "collards",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 18,
+        "max": 30
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:collards:general:sow-indoors-lead",
+      "cropSlug": "collards",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "sow_indoors_lead",
+      "value": {
+        "min": 4,
+        "max": 4
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:collards:general:spring-direct-sow",
+      "cropSlug": "collards",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "spring as soon as soil is workable"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:collards:general:weekly-water-target",
+      "cropSlug": "collards",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "weekly_water_target",
+      "value": {
+        "min": 1,
+        "max": 1
+      },
+      "unit": "inch_per_week",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:corn:general:average-yield",
+      "cropSlug": "corn",
+      "cropLabel": "Corn",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "20–24 ears per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:corn:general:plant-spacing",
+      "cropSlug": "corn",
+      "cropLabel": "Corn",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 6,
+        "max": 8,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:corn:general:planting-depth",
+      "cropSlug": "corn",
+      "cropLabel": "Corn",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 1,
+        "max": 1
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:corn:general:planting-window-1",
+      "cropSlug": "corn",
+      "cropLabel": "Corn",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-15",
+        "endMonthDay": "07-01"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:corn:general:row-spacing",
+      "cropSlug": "corn",
+      "cropLabel": "Corn",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 24,
+        "max": 36
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:corn:general:seed-or-plants-per-row",
+      "cropSlug": "corn",
+      "cropLabel": "Corn",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.5 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:corn:general:planting-cue-early-spring-plus-one-week",
+      "cropSlug": "corn",
+      "cropLabel": "Corn",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "one week after the earliest spring group",
+        "phase": "early_spring_plus_one_week"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:cucumbers:general:average-yield",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "10 fruits per plant"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:cucumbers:general:plant-spacing",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 48,
+        "max": 48,
+        "note": "hills"
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:cucumbers:general:planting-depth",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 0.75,
+        "max": 0.75
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:cucumbers:general:planting-window-1",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "06-01",
+        "endMonthDay": "07-15"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:cucumbers:general:row-spacing",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 48,
+        "max": 72
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:cucumbers:general:seed-or-plants-per-row",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.05 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:cucumbers:general:germination-duration",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "germination_duration",
+      "value": {
+        "min": 1,
+        "max": 2
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:cucumbers:general:planting-cue-early-summer",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "when soil and sun are warm",
+        "phase": "early_summer"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:cucumbers:general:sow-indoors-lead",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "sow_indoors_lead",
+      "value": {
+        "min": 2,
+        "max": 3
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:cucumbers:general:transplant-window",
+      "cropSlug": "cucumbers",
+      "cropLabel": "Cucumbers",
+      "form": null,
+      "trait": "transplant_window",
+      "value": {
+        "text": "2 weeks after last frost"
+      },
+      "unit": "source_text",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:fall-planting-window",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "09-15",
+        "endMonthDay": "10-31",
+        "datePrecision": "half_month"
+      },
+      "unit": "month_day",
+      "method": "plant_cloves",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:mulch-depth",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "mulch_depth",
+      "value": {
+        "min": 3,
+        "max": 3
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:plant-spacing",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 4,
+        "max": 6
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:planting-depth",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 2,
+        "max": 4,
+        "measurement": "clove point below soil surface"
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:row-spacing",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 6,
+        "max": 12
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:site-drainage",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "site_drainage",
+      "value": {
+        "text": "well-drained soil"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:site-sun",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "site_sun",
+      "value": {
+        "text": "day-long sun"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:soil-organic-matter",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "soil_organic_matter",
+      "value": {
+        "min": 5,
+        "max": 8
+      },
+      "unit": "percent",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-growing-garlic:garlic:general:soil-ph",
+      "cropSlug": "garlic",
+      "cropLabel": "Hardneck garlic",
+      "form": null,
+      "trait": "soil_ph",
+      "value": {
+        "target": 6.5
+      },
+      "unit": "pH",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Hardneck garlic guidance for Maine, with planting timing progressing north to south."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-growing-garlic",
+      "sourceUrl": "https://extension.umaine.edu/publications/2063e/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:kale:general:crop-rotation-interval",
+      "cropSlug": "kale",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "crop_rotation_interval",
+      "value": {
+        "min": 4,
+        "max": 4
+      },
+      "unit": "year",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:kale:general:fall-direct-sow",
+      "cropSlug": "kale",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "planting_relative_to_first_frost",
+      "value": {
+        "min": 12,
+        "max": 12,
+        "direction": "before"
+      },
+      "unit": "week",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:kale:general:plant-spacing",
+      "cropSlug": "kale",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 8,
+        "max": 12,
+        "stage": "after thinning"
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:kale:general:planting-depth",
+      "cropSlug": "kale",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 0.25,
+        "max": 0.5
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:kale:general:row-spacing",
+      "cropSlug": "kale",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 18,
+        "max": 30
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:kale:general:sow-indoors-lead",
+      "cropSlug": "kale",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "sow_indoors_lead",
+      "value": {
+        "min": 4,
+        "max": 4
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:kale:general:spring-direct-sow",
+      "cropSlug": "kale",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "spring as soon as soil is workable"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umn-collards-kale:kale:general:weekly-water-target",
+      "cropSlug": "kale",
+      "cropLabel": "Collards and kale",
+      "form": null,
+      "trait": "weekly_water_target",
+      "value": {
+        "min": 1,
+        "max": 1
+      },
+      "unit": "inch_per_week",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Minnesota",
+        "sourceNote": "Cold-climate home-garden guidance; local frost dates and site observations still control."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umn-collards-kale",
+      "sourceUrl": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:lettuce:general:germination-duration",
+      "cropSlug": "lettuce",
+      "cropLabel": "Head Lettuce",
+      "form": null,
+      "trait": "germination_duration",
+      "value": {
+        "min": 2,
+        "max": 3
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:lettuce:general:planting-cue-early-spring",
+      "cropSlug": "lettuce",
+      "cropLabel": "Lettuce",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "as soon as the ground can be worked",
+        "phase": "early_spring"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:lettuce:general:planting-cue-midsummer-to-fall",
+      "cropSlug": "lettuce",
+      "cropLabel": "Lettuce",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "late June to early July, with another planting in early August",
+        "phase": "midsummer_to_fall"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:lettuce:general:sow-indoors-lead",
+      "cropSlug": "lettuce",
+      "cropLabel": "Head Lettuce",
+      "form": null,
+      "trait": "sow_indoors_lead",
+      "value": {
+        "min": 3,
+        "max": 5
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:lettuce:general:transplant-window",
+      "cropSlug": "lettuce",
+      "cropLabel": "Head Lettuce",
+      "form": null,
+      "trait": "transplant_window",
+      "value": {
+        "text": "after last frost"
+      },
+      "unit": "source_text",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:psu-mizuna:mizuna:general:frost-tolerance",
+      "cropSlug": "mizuna",
+      "cropLabel": "Mizuna",
+      "form": null,
+      "trait": "frost_tolerance",
+      "value": {
+        "text": "tolerant of light frost"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Pennsylvania / temperate home garden",
+        "sourceNote": "General temperate-garden guidance; seed-packet depth and spacing take priority."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:psu-mizuna",
+      "sourceUrl": "https://extension.psu.edu/mizuna-an-asian-green",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:psu-mizuna:mizuna:general:germination-temperature",
+      "cropSlug": "mizuna",
+      "cropLabel": "Mizuna",
+      "form": null,
+      "trait": "germination_temperature",
+      "value": {
+        "min": 55,
+        "max": 75,
+        "classification": "ideal"
+      },
+      "unit": "degree_fahrenheit",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Pennsylvania / temperate home garden",
+        "sourceNote": "General temperate-garden guidance; seed-packet depth and spacing take priority."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:psu-mizuna",
+      "sourceUrl": "https://extension.psu.edu/mizuna-an-asian-green",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:psu-mizuna:mizuna:general:germination-temperature-minimum",
+      "cropSlug": "mizuna",
+      "cropLabel": "Mizuna",
+      "form": null,
+      "trait": "germination_temperature_minimum",
+      "value": {
+        "min": 40,
+        "max": 40
+      },
+      "unit": "degree_fahrenheit",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Pennsylvania / temperate home garden",
+        "sourceNote": "General temperate-garden guidance; seed-packet depth and spacing take priority."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:psu-mizuna",
+      "sourceUrl": "https://extension.psu.edu/mizuna-an-asian-green",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:psu-mizuna:mizuna:general:minimum-sun",
+      "cropSlug": "mizuna",
+      "cropLabel": "Mizuna",
+      "form": null,
+      "trait": "minimum_sun",
+      "value": {
+        "min": 6,
+        "max": 6
+      },
+      "unit": "hour_per_day",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Pennsylvania / temperate home garden",
+        "sourceNote": "General temperate-garden guidance; seed-packet depth and spacing take priority."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:psu-mizuna",
+      "sourceUrl": "https://extension.psu.edu/mizuna-an-asian-green",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:psu-mizuna:mizuna:general:planting-cue",
+      "cropSlug": "mizuna",
+      "cropLabel": "Mizuna",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "early spring or fall"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Pennsylvania / temperate home garden",
+        "sourceNote": "General temperate-garden guidance; seed-packet depth and spacing take priority."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:psu-mizuna",
+      "sourceUrl": "https://extension.psu.edu/mizuna-an-asian-green",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:psu-mizuna:mizuna:general:site-drainage",
+      "cropSlug": "mizuna",
+      "cropLabel": "Mizuna",
+      "form": null,
+      "trait": "site_drainage",
+      "value": {
+        "text": "well-drained soil rich in organic matter"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "Pennsylvania / temperate home garden",
+        "sourceNote": "General temperate-garden guidance; seed-packet depth and spacing take priority."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:psu-mizuna",
+      "sourceUrl": "https://extension.psu.edu/mizuna-an-asian-green",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:onions:general:average-yield",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "1 lb sets yields 30–40 lb onions"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:onions:general:plant-spacing",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 1,
+        "max": 3,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:onions:general:planting-depth",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:onions:general:planting-window-1",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "04-20",
+        "endMonthDay": "05-15"
+      },
+      "unit": "month_day",
+      "method": "plant_sets",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:onions:general:row-spacing",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 12,
+        "max": 18
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:onions:general:seed-or-plants-per-row",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.1 lb sets",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:onions:general:germination-duration",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "germination_duration",
+      "value": {
+        "min": 2,
+        "max": 3
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:onions:general:planting-cue-early-spring",
+      "cropSlug": "onions",
+      "cropLabel": "Onion sets",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "as soon as the ground can be worked",
+        "phase": "early_spring"
+      },
+      "unit": "source_text",
+      "method": "plant_sets",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:onions:general:planting-cue-midspring",
+      "cropSlug": "onions",
+      "cropLabel": "Onion sets",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "two weeks before the average last frost date",
+        "phase": "midspring"
+      },
+      "unit": "source_text",
+      "method": "plant_sets",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:onions:general:sow-indoors-lead",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "sow_indoors_lead",
+      "value": {
+        "min": 6,
+        "max": 8
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:onions:general:transplant-window",
+      "cropSlug": "onions",
+      "cropLabel": "Onions",
+      "form": null,
+      "trait": "transplant_window",
+      "value": {
+        "text": "after last frost"
+      },
+      "unit": "source_text",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peas:general:average-yield",
+      "cropSlug": "peas",
+      "cropLabel": "Peas",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "10 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peas:general:plant-spacing",
+      "cropSlug": "peas",
+      "cropLabel": "Peas",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 1,
+        "max": 2,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peas:general:planting-depth",
+      "cropSlug": "peas",
+      "cropLabel": "Peas",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 1,
+        "max": 1
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peas:general:planting-window-1",
+      "cropSlug": "peas",
+      "cropLabel": "Peas",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "04-15",
+        "endMonthDay": "07-15"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peas:general:row-spacing",
+      "cropSlug": "peas",
+      "cropLabel": "Peas",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 18,
+        "max": 36
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peas:general:seed-or-plants-per-row",
+      "cropSlug": "peas",
+      "cropLabel": "Peas",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.1 lb seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:peas:general:planting-cue-early-spring",
+      "cropSlug": "peas",
+      "cropLabel": "Peas",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "as soon as the ground can be worked",
+        "phase": "early_spring"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peppers:general:average-yield",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "6–12 fruits per plant"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peppers:general:plant-spacing",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 18,
+        "max": 18,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peppers:general:planting-window-1",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-25",
+        "endMonthDay": "06-20"
+      },
+      "unit": "month_day",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peppers:general:row-spacing",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 18,
+        "max": 24
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:peppers:general:seed-or-plants-per-row",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "6–7 plants",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:peppers:general:germination-duration",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "germination_duration",
+      "value": {
+        "min": 1,
+        "max": 2
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:peppers:general:planting-cue-early-summer",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "when soil and sun are warm",
+        "phase": "early_summer"
+      },
+      "unit": "source_text",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:peppers:general:sow-indoors-lead",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "sow_indoors_lead",
+      "value": {
+        "min": 8,
+        "max": 10
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:peppers:general:transplant-window",
+      "cropSlug": "peppers",
+      "cropLabel": "Peppers",
+      "form": null,
+      "trait": "transplant_window",
+      "value": {
+        "text": "mid to late spring"
+      },
+      "unit": "source_text",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:potatoes:general:average-yield",
+      "cropSlug": "potatoes",
+      "cropLabel": "Potatoes",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "5 lb seed potatoes yields 50 lb potatoes"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:potatoes:general:plant-spacing",
+      "cropSlug": "potatoes",
+      "cropLabel": "Potatoes",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 8,
+        "max": 12,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:potatoes:general:planting-depth",
+      "cropSlug": "potatoes",
+      "cropLabel": "Potatoes",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 4,
+        "max": 6
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:potatoes:general:planting-window-1",
+      "cropSlug": "potatoes",
+      "cropLabel": "Potatoes",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-01",
+        "endMonthDay": "06-01"
+      },
+      "unit": "month_day",
+      "method": "plant_seed_potatoes",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:potatoes:general:row-spacing",
+      "cropSlug": "potatoes",
+      "cropLabel": "Potatoes",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 30,
+        "max": 36
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:potatoes:general:seed-or-plants-per-row",
+      "cropSlug": "potatoes",
+      "cropLabel": "Potatoes",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "2 lb seed potatoes",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:potatoes:general:planting-cue-early-spring-plus-one-week",
+      "cropSlug": "potatoes",
+      "cropLabel": "Early potatoes",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "one week after the earliest spring group",
+        "phase": "early_spring_plus_one_week"
+      },
+      "unit": "source_text",
+      "method": "plant_seed_potatoes",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:radishes:general:planting-cue-early-spring",
+      "cropSlug": "radishes",
+      "cropLabel": "Radishes",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "as soon as the ground can be worked",
+        "phase": "early_spring"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:radishes:general:planting-cue-midsummer-to-fall",
+      "cropSlug": "radishes",
+      "cropLabel": "Radishes",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "late June to early July",
+        "phase": "midsummer_to_fall"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:spinach:general:average-yield",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "4–5 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:spinach:general:plant-spacing",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 3,
+        "max": 4,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:spinach:general:planting-depth",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:spinach:general:planting-window-1",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "04-10",
+        "endMonthDay": "05-10"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:spinach:general:planting-window-2",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "07-01",
+        "endMonthDay": "08-01"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:spinach:general:row-spacing",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 12,
+        "max": 18
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:spinach:general:seed-or-plants-per-row",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.1 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:spinach:general:planting-cue-early-spring",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "as soon as the ground can be worked",
+        "phase": "early_spring"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:spinach:general:planting-cue-midsummer-to-fall",
+      "cropSlug": "spinach",
+      "cropLabel": "Spinach",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "early August",
+        "phase": "midsummer_to_fall"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:swiss-chard:general:planting-cue-midspring",
+      "cropSlug": "swiss-chard",
+      "cropLabel": "Swiss chard",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "two weeks before the average last frost date",
+        "phase": "midspring"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:tomatoes:general:average-yield",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "8 lb per plant"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:tomatoes:general:plant-spacing",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 18,
+        "max": 36,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:tomatoes:general:planting-window-1",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-25",
+        "endMonthDay": "06-20"
+      },
+      "unit": "month_day",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:tomatoes:general:row-spacing",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 24,
+        "max": 48
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:tomatoes:general:seed-or-plants-per-row",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "3–6 plants",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:tomatoes:general:germination-duration",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "germination_duration",
+      "value": {
+        "min": 2,
+        "max": 3
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:tomatoes:general:planting-cue-early-summer",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "when soil and sun are warm",
+        "phase": "early_summer"
+      },
+      "unit": "source_text",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:tomatoes:general:sow-indoors-lead",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "sow_indoors_lead",
+      "value": {
+        "min": 6,
+        "max": 8
+      },
+      "unit": "week",
+      "method": "start_indoors",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:tomatoes:general:transplant-window",
+      "cropSlug": "tomatoes",
+      "cropLabel": "Tomatoes",
+      "form": null,
+      "trait": "transplant_window",
+      "value": {
+        "text": "mid to late spring"
+      },
+      "unit": "source_text",
+      "method": "transplant",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:turnips:general:average-yield",
+      "cropSlug": "turnips",
+      "cropLabel": "Turnip",
+      "form": null,
+      "trait": "average_yield",
+      "value": {
+        "text": "25 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:turnips:general:plant-spacing",
+      "cropSlug": "turnips",
+      "cropLabel": "Turnip",
+      "form": null,
+      "trait": "plant_spacing",
+      "value": {
+        "min": 1,
+        "max": 1,
+        "note": null
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:turnips:general:planting-depth",
+      "cropSlug": "turnips",
+      "cropLabel": "Turnip",
+      "form": null,
+      "trait": "planting_depth",
+      "value": {
+        "min": 0.25,
+        "max": 0.5
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:turnips:general:planting-window-1",
+      "cropSlug": "turnips",
+      "cropLabel": "Turnip",
+      "form": null,
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-01",
+        "endMonthDay": "08-01"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:turnips:general:row-spacing",
+      "cropSlug": "turnips",
+      "cropLabel": "Turnip",
+      "form": null,
+      "trait": "row_spacing",
+      "value": {
+        "min": 12,
+        "max": 18
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:turnips:general:seed-or-plants-per-row",
+      "cropSlug": "turnips",
+      "cropLabel": "Turnip",
+      "form": null,
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.033 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:turnips:general:planting-cue-early-spring",
+      "cropSlug": "turnips",
+      "cropLabel": "Turnips",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "as soon as the ground can be worked",
+        "phase": "early_spring"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:turnips:general:planting-cue-midsummer-to-fall",
+      "cropSlug": "turnips",
+      "cropLabel": "Turnips",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "early August",
+        "phase": "midsummer_to_fall"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:winter-squash:winter-squash:average-yield",
+      "cropSlug": "winter-squash",
+      "cropLabel": "Squash, Winter",
+      "form": "winter_squash",
+      "trait": "average_yield",
+      "value": {
+        "text": "10 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:winter-squash:winter-squash:plant-spacing",
+      "cropSlug": "winter-squash",
+      "cropLabel": "Squash, Winter",
+      "form": "winter_squash",
+      "trait": "plant_spacing",
+      "value": {
+        "min": 72,
+        "max": 72,
+        "note": "hills"
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:winter-squash:winter-squash:planting-depth",
+      "cropSlug": "winter-squash",
+      "cropLabel": "Squash, Winter",
+      "form": "winter_squash",
+      "trait": "planting_depth",
+      "value": {
+        "min": 1,
+        "max": 1
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:winter-squash:winter-squash:planting-window-1",
+      "cropSlug": "winter-squash",
+      "cropLabel": "Squash, Winter",
+      "form": "winter_squash",
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-20",
+        "endMonthDay": "06-10"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:winter-squash:winter-squash:row-spacing",
+      "cropSlug": "winter-squash",
+      "cropLabel": "Squash, Winter",
+      "form": "winter_squash",
+      "trait": "row_spacing",
+      "value": {
+        "min": 72,
+        "max": 96
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:winter-squash:winter-squash:seed-or-plants-per-row",
+      "cropSlug": "winter-squash",
+      "cropLabel": "Squash, Winter",
+      "form": "winter_squash",
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.1 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:winter-squash:general:planting-cue-early-summer",
+      "cropSlug": "winter-squash",
+      "cropLabel": "Winter squash",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "when soil and sun are warm",
+        "phase": "early_summer"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:zucchini:summer-squash:average-yield",
+      "cropSlug": "zucchini",
+      "cropLabel": "Squash, Summer",
+      "form": "summer_squash",
+      "trait": "average_yield",
+      "value": {
+        "text": "15 lb per 10 ft row"
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:zucchini:summer-squash:plant-spacing",
+      "cropSlug": "zucchini",
+      "cropLabel": "Squash, Summer",
+      "form": "summer_squash",
+      "trait": "plant_spacing",
+      "value": {
+        "min": 48,
+        "max": 48,
+        "note": "hills"
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:zucchini:summer-squash:planting-depth",
+      "cropSlug": "zucchini",
+      "cropLabel": "Squash, Summer",
+      "form": "summer_squash",
+      "trait": "planting_depth",
+      "value": {
+        "min": 1,
+        "max": 1
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:zucchini:summer-squash:planting-window-1",
+      "cropSlug": "zucchini",
+      "cropLabel": "Squash, Summer",
+      "form": "summer_squash",
+      "trait": "planting_window",
+      "value": {
+        "startMonthDay": "05-25",
+        "endMonthDay": "07-15"
+      },
+      "unit": "month_day",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:zucchini:summer-squash:row-spacing",
+      "cropSlug": "zucchini",
+      "cropLabel": "Squash, Summer",
+      "form": "summer_squash",
+      "trait": "row_spacing",
+      "value": {
+        "min": 36,
+        "max": 36
+      },
+      "unit": "inch",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-home-vegetable-chart:zucchini:summer-squash:seed-or-plants-per-row",
+      "cropSlug": "zucchini",
+      "cropLabel": "Squash, Summer",
+      "form": "summer_squash",
+      "trait": "seed_or_plants_per_row",
+      "value": {
+        "text": "0.1 oz seed",
+        "rowLengthFt": 10
+      },
+      "unit": "source_text",
+      "method": null,
+      "geographicScope": {
+        "referenceLocation": "central Maine",
+        "coastalAdjustmentDays": -12,
+        "northernAdjustmentDays": 12,
+        "sourceNote": "The source advises planting 10–14 days earlier in coastal Maine and 10–14 days later in northern Maine. A 12-day midpoint is stored only as a machine-readable convenience; the full source range remains authoritative."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-home-vegetable-chart",
+      "sourceUrl": "https://extension.umaine.edu/gardening/2021/05/01/maine-home-garden-news-may-2021/#planting-chart-for-the-home-vegetable-garden",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    },
+    {
+      "id": "evidence:umaine-spring-to-fall:zucchini:general:planting-cue-early-summer",
+      "cropSlug": "zucchini",
+      "cropLabel": "Summer squash",
+      "form": null,
+      "trait": "planting_cue",
+      "value": {
+        "text": "when soil and sun are warm",
+        "phase": "early_summer"
+      },
+      "unit": "source_text",
+      "method": "direct_sow",
+      "geographicScope": {
+        "referenceLocation": "Maine",
+        "sourceNote": "Timing categories are regional guidance and should be interpreted with local frost dates and site conditions."
+      },
+      "applicability": "regional_reference",
+      "sourceId": "source:umaine-spring-to-fall",
+      "sourceUrl": "https://extension.umaine.edu/gardening/manual/propagation/plant-from-spring-to-fall/",
+      "retrievedAt": "2026-08-20",
+      "reviewStatus": "human_transcribed",
+      "confidenceClass": "reviewed_extension"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "gardenId": "naumkeag-garden-rooms",
+  "baselineSha256": "c5a5adc7911d9b5a04eea175cb2eb66e992623306268e47f80d8ccb1ec85b3f5",
+  "reviewDate": "2026-09-23",
+  "status": "Provisional addition under visual review; not canonical or deployed",
+  "raster": {
+    "id": "naumkeag-garden-rooms-2025-review-z20",
+    "gardenId": "naumkeag-garden-rooms",
+    "sourceId": "source:massgis-aerial-2025",
+    "zoom": 20,
+    "tileOrigin": [
+      310733,
+      388104
+    ],
+    "tileSize": 256,
+    "pixelSize": [
+      2560,
+      3072
+    ],
+    "rotationDegrees": 0,
+    "localOrigin": [
+      -73.31647217273712,
+      42.28985986572721
+    ],
+    "sha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b"
+  },
+  "referenceSources": [
+    "source:massgis-aerial-2025"
+  ],
+  "method": "Native-scale manual centerline trace of visibly continuous southern drive; no visitor-map warp used.",
+  "limits": [
+    "Only the visible segment is traced; endpoints do not assert a connection to the public road.",
+    "Width, material, accessibility, legal access and elevation are not verified.",
+    "No southern garden boundaries or planting beds inferred."
+  ],
+  "features": [
+    {
+      "id": "naumkeag-southern-drive",
+      "name": "Southern visible drive centerline",
+      "kind": "path",
+      "geometryType": "LineString",
+      "observedRasterPixels": [
+        [
+          1805,
+          2205
+        ],
+        [
+          1825,
+          2280
+        ],
+        [
+          1850,
+          2355
+        ],
+        [
+          1882,
+          2425
+        ],
+        [
+          1925,
+          2490
+        ],
+        [
+          1975,
+          2550
+        ],
+        [
+          2020,
+          2598
+        ],
+        [
+          2030,
+          2615
+        ]
+      ],
+      "confidence": "medium",
+      "digitizationUncertaintyPixels": 12,
+      "status": "reviewed-provisional"
+    }
+  ]
+}

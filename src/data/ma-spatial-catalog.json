@@ -1,0 +1,43 @@
+{
+  "id": "ma-garden-spatial-v1",
+  "region": "Massachusetts",
+  "stateCode": "MA",
+  "reviewedAt": "2026-08-22",
+  "runtimeLayers": [
+    {
+      "id": "massgis-l3-parcels",
+      "name": "Property parcels",
+      "status": "active",
+      "source": "MassGIS Level 3 Property Tax Parcels",
+      "delivery": "parcel-sized ArcGIS query",
+      "privacy": "identifying assessor fields are discarded after selection"
+    },
+    {
+      "id": "massgis-2025-aerial",
+      "name": "2025 aerial imagery",
+      "status": "active",
+      "source": "MassGIS 2025 Aerial Imagery",
+      "delivery": "visible 256 px map tiles",
+      "privacy": "no address is embedded in tile URLs"
+    },
+    {
+      "id": "massgis-2025-cir",
+      "name": "2025 color-infrared imagery",
+      "status": "active",
+      "source": "MassGIS 2025 CIR",
+      "delivery": "visible 256 px map tiles",
+      "privacy": "no address is embedded in tile URLs"
+    }
+  ],
+  "deliveryContract": {
+    "derivedPrefix": "spatial/ma/v1/",
+    "manifest": "spatial/ma/manifest.json",
+    "vectorPattern": "spatial/ma/v1/{layer}/{z}/{x}/{y}.pbf",
+    "rasterPattern": "spatial/ma/v1/{layer}/{z}/{x}/{y}.webp",
+    "parcelPattern": "spatial/ma/v1/parcels/{municipality}/{z}/{x}/{y}.pbf",
+    "immutableCacheControl": "public,max-age=31536000,immutable",
+    "manifestCacheControl": "public,max-age=300,stale-while-revalidate=86400",
+    "browserCache": "Cache Storage, versioned by ma-spatial-v1",
+    "edgeCache": "CloudFront in front of a private S3 origin"
+  }
+}

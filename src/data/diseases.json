@@ -1,0 +1,132 @@
+[
+  {
+    "id": "disease:early-blight",
+    "scientificName": "Alternaria solani",
+    "commonName": "Early blight",
+    "affectedPlants": [
+      "plant:tomatoes",
+      "plant:potatoes"
+    ],
+    "weatherConditions": [
+      "warm temperatures",
+      "leaf wetness",
+      "humidity"
+    ],
+    "symptoms": [
+      "dark target-like leaf spots",
+      "lower leaf yellowing",
+      "progressive defoliation"
+    ],
+    "progression": "Often starts on older lower leaves and moves upward under favorable conditions.",
+    "treatment": [
+      "remove infected debris",
+      "improve airflow",
+      "avoid overhead irrigation"
+    ],
+    "organicControl": [
+      "mulch to reduce soil splash",
+      "copper products where appropriate and label-compliant"
+    ],
+    "chemicalControl": [],
+    "prevention": [
+      "rotate nightshades",
+      "stake or prune for airflow",
+      "sanitize residue"
+    ],
+    "diagnosticConfidence": 0.55,
+    "photoReferences": [],
+    "provenance": {
+      "sourceId": "source:extension-review-needed",
+      "confidence": 0.45,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "Project-authored placeholder for extension validation."
+    }
+  },
+  {
+    "id": "disease:powdery-mildew",
+    "scientificName": null,
+    "commonName": "Powdery mildew",
+    "affectedPlants": [
+      "plant:cucumbers",
+      "plant:zucchini",
+      "plant:winter-squash"
+    ],
+    "weatherConditions": [
+      "humid air",
+      "dense canopy",
+      "dry leaf surfaces can still show infection"
+    ],
+    "symptoms": [
+      "white powdery patches",
+      "yellowing leaves",
+      "reduced vigor"
+    ],
+    "progression": "Usually appears on older leaves and expands across cucurbit foliage.",
+    "treatment": [
+      "remove severely affected leaves",
+      "improve spacing",
+      "choose resistant varieties"
+    ],
+    "organicControl": [
+      "horticultural oils or sulfur where crop and temperature allow"
+    ],
+    "chemicalControl": [],
+    "prevention": [
+      "resistant cultivars",
+      "airflow",
+      "avoid overcrowding"
+    ],
+    "diagnosticConfidence": 0.55,
+    "photoReferences": [],
+    "provenance": {
+      "sourceId": "source:extension-review-needed",
+      "confidence": 0.45,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "Project-authored placeholder for extension validation."
+    }
+  },
+  {
+    "id": "disease:damping-off",
+    "scientificName": null,
+    "commonName": "Damping off",
+    "affectedPlants": [
+      "plant:tomatoes",
+      "plant:peppers",
+      "plant:lettuce",
+      "plant:kale"
+    ],
+    "weatherConditions": [
+      "cool wet seed-starting media",
+      "poor airflow"
+    ],
+    "symptoms": [
+      "seedlings collapse at soil line",
+      "poor emergence",
+      "water-soaked stems"
+    ],
+    "progression": "Can kill seedlings quickly before or soon after emergence.",
+    "treatment": [
+      "discard infected media",
+      "improve sanitation",
+      "increase airflow"
+    ],
+    "organicControl": [
+      "sterile seed-starting mix",
+      "avoid overwatering"
+    ],
+    "chemicalControl": [],
+    "prevention": [
+      "clean trays",
+      "well-drained media",
+      "proper temperature"
+    ],
+    "diagnosticConfidence": 0.5,
+    "photoReferences": [],
+    "provenance": {
+      "sourceId": "source:extension-review-needed",
+      "confidence": 0.42,
+      "dateCollected": "2026-07-03T02:31:16.600Z",
+      "license": "Project-authored placeholder for extension validation."
+    }
+  }
+]

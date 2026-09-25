@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Apples",
+    "slug": "apples",
+    "type": "Tree fruit",
+    "bearingAge": "2-5 years depending on rootstock",
+    "mainCare": "Pruning, thinning, pest monitoring, and consistent young-tree watering",
+    "path": "/content/fruits/apples"
+  },
+  {
+    "name": "Pears",
+    "slug": "pears",
+    "type": "Tree fruit",
+    "bearingAge": "3-6 years",
+    "mainCare": "Training, pruning, fire blight awareness, and harvest timing",
+    "path": "/content/fruits/pears"
+  },
+  {
+    "name": "Plums",
+    "slug": "plums",
+    "type": "Tree fruit",
+    "bearingAge": "3-5 years",
+    "mainCare": "Pruning, thinning, brown rot prevention, and wildlife protection",
+    "path": "/content/fruits/plums"
+  },
+  {
+    "name": "Sour Cherries",
+    "slug": "sour-cherries",
+    "type": "Tree fruit",
+    "bearingAge": "3-5 years",
+    "mainCare": "Open structure, harvest timing, and bird protection",
+    "path": "/content/fruits/sour-cherries"
+  },
+  {
+    "name": "Blueberries",
+    "slug": "blueberries",
+    "type": "Small fruit",
+    "bearingAge": "2-4 years",
+    "mainCare": "Acid soil, mulch, steady moisture, and patient establishment",
+    "path": "/content/fruits/blueberries"
+  },
+  {
+    "name": "Raspberries",
+    "slug": "raspberries",
+    "type": "Cane fruit",
+    "bearingAge": "1-2 years",
+    "mainCare": "Cane renewal, trellising, pruning type, and harvest discipline",
+    "path": "/content/fruits/raspberries"
+  },
+  {
+    "name": "Black Currants",
+    "slug": "black-currants",
+    "type": "Shrub fruit",
+    "bearingAge": "2-3 years",
+    "mainCare": "Renewal pruning, mulch, and summer moisture",
+    "path": "/content/fruits/black-currants"
+  },
+  {
+    "name": "Gooseberries",
+    "slug": "gooseberries",
+    "type": "Shrub fruit",
+    "bearingAge": "2-3 years",
+    "mainCare": "Airflow, pruning, and harvest access around thorny canes",
+    "path": "/content/fruits/gooseberries"
+  },
+  {
+    "name": "Strawberries",
+    "slug": "strawberries",
+    "type": "Small fruit",
+    "bearingAge": "First or second year depending on system",
+    "mainCare": "Runner management, mulch, renovation, and clean harvest",
+    "path": "/content/fruits/strawberries"
+  },
+  {
+    "name": "Ground Cherries",
+    "slug": "ground-cherries",
+    "type": "Annual fruiting crop",
+    "bearingAge": "Same season",
+    "mainCare": "Warm soil, spacing, harvest from fallen husks, and volunteer management",
+    "path": "/content/fruits/ground-cherries"
+  }
+]

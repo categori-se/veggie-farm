@@ -1,0 +1,3054 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "gardenId": "the-mount-kitchen-garden",
+    "layer": "site",
+    "status": "Reviewed site interpretation; planting design deferred"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "mount-flower-garden",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28134059906006,
+              42.33170767179827
+            ],
+            [
+              -73.28094243854284,
+              42.33161772984369
+            ],
+            [
+              -73.28104019165039,
+              42.331339089407194
+            ],
+            [
+              -73.28144788742065,
+              42.331432561241456
+            ],
+            [
+              -73.28134059906006,
+              42.33170767179827
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Formal flower garden enclosure",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                2958.992048674202,
+                13866.077345843265
+              ],
+              [
+                4250.896680061593,
+                14259.413309129006
+              ],
+              [
+                3933.7188411786447,
+                15477.969265749074
+              ],
+              [
+                2610.875337065472,
+                15069.196361688277
+              ],
+              [
+                2958.992048674202,
+                13866.077345843265
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1440,
+              706.19
+            ],
+            [
+              1736.89,
+              796.91
+            ],
+            [
+              1664,
+              1077.96
+            ],
+            [
+              1360,
+              983.68
+            ],
+            [
+              1440,
+              706.19
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-flower-pool",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28123808503152,
+              42.3315507194348
+            ],
+            [
+              -73.28114270567893,
+              42.33152955249839
+            ],
+            [
+              -73.28116416335105,
+              42.331488993257445
+            ],
+            [
+              -73.2812571555376,
+              42.33151016020752
+            ],
+            [
+              -73.28123808503152,
+              42.3315507194348
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Formal flower garden rectangular pool",
+        "kind": "water",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                3291.617566588677,
+                14552.464575973137
+              ],
+              [
+                3601.093323264169,
+                14645.03224767974
+              ],
+              [
+                3531.4699809424237,
+                14822.406735277164
+              ],
+              [
+                3229.7398211371133,
+                14729.839003816034
+              ],
+              [
+                3291.617566588677,
+                14552.464575973137
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1516.44,
+              864.5
+            ],
+            [
+              1587.56,
+              885.85
+            ],
+            [
+              1571.56,
+              926.76
+            ],
+            [
+              1502.22,
+              905.41
+            ],
+            [
+              1516.44,
+              864.5
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-house-roof",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28206538558005,
+              42.331219166069765
+            ],
+            [
+              -73.28184366077184,
+              42.33117331238536
+            ],
+            [
+              -73.28188657611608,
+              42.33107632057912
+            ],
+            [
+              -73.2818531960249,
+              42.3310622124873
+            ],
+            [
+              -73.28189611136914,
+              42.33095286723272
+            ],
+            [
+              -73.28193187862635,
+              42.33095816149459
+            ],
+            [
+              -73.28197718113661,
+              42.330857639843266
+            ],
+            [
+              -73.28203201889993,
+              42.33086116935657
+            ],
+            [
+              -73.28206062465907,
+              42.330829423558384
+            ],
+            [
+              -73.28221797645092,
+              42.33086468895533
+            ],
+            [
+              -73.28206538558005,
+              42.331219166069765
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Main house visible roof envelope",
+        "kind": "building",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                607.2896034290947,
+                16002.420415046772
+              ],
+              [
+                1326.7163025482635,
+                16202.948669190013
+              ],
+              [
+                1187.4696179047717,
+                16627.115185436243
+              ],
+              [
+                1295.777429776372,
+                16688.812976100922
+              ],
+              [
+                1156.5307451328802,
+                17167.003840924182
+              ],
+              [
+                1040.4773363910979,
+                17143.850868495232
+              ],
+              [
+                893.4850549235337,
+                17583.45417421917
+              ],
+              [
+                715.5539006840779,
+                17568.018835723105
+              ],
+              [
+                622.7372824606223,
+                17706.85019831622
+              ],
+              [
+                112.18061030669118,
+                17552.62685567839
+              ],
+              [
+                607.2896034290947,
+                16002.420415046772
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              899.56,
+              1198.92
+            ],
+            [
+              1064.89,
+              1245.17
+            ],
+            [
+              1032.89,
+              1343
+            ],
+            [
+              1057.78,
+              1357.23
+            ],
+            [
+              1025.78,
+              1467.52
+            ],
+            [
+              999.11,
+              1462.18
+            ],
+            [
+              965.33,
+              1563.57
+            ],
+            [
+              924.44,
+              1560.01
+            ],
+            [
+              903.11,
+              1592.03
+            ],
+            [
+              785.78,
+              1556.46
+            ],
+            [
+              899.56,
+              1198.92
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-forecourt",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28225613087416,
+              42.33120858750381
+            ],
+            [
+              -73.28209161758423,
+              42.33117331238536
+            ],
+            [
+              -73.2821917578578,
+              42.33097403436321
+            ],
+            [
+              -73.28234672248364,
+              42.33100048583055
+            ],
+            [
+              -73.2823777154088,
+              42.33103223154241
+            ],
+            [
+              -73.28238487690687,
+              42.33107985008015
+            ],
+            [
+              -73.28236103206874,
+              42.33114509624209
+            ],
+            [
+              -73.2822847366333,
+              42.331166263307885
+            ],
+            [
+              -73.28225613087416,
+              42.33120858750381
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Main house arrival forecourt",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -11.618395259163293,
+                16048.682812277264
+              ],
+              [
+                522.1750674130944,
+                16202.948669190013
+              ],
+              [
+                197.2516317060745,
+                17074.435320473334
+              ],
+              [
+                -305.5594436237844,
+                16958.757231909512
+              ],
+              [
+                -406.1216586713122,
+                16819.92624682954
+              ],
+              [
+                -429.35844918963886,
+                16611.679900604282
+              ],
+              [
+                -351.98951004382064,
+                16326.34407399026
+              ],
+              [
+                -104.43501348261888,
+                16233.77583646452
+              ],
+              [
+                -11.618395259163293,
+                16048.682812277264
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              757.33,
+              1209.59
+            ],
+            [
+              880,
+              1245.17
+            ],
+            [
+              805.33,
+              1446.17
+            ],
+            [
+              689.78,
+              1419.49
+            ],
+            [
+              666.67,
+              1387.47
+            ],
+            [
+              661.33,
+              1339.44
+            ],
+            [
+              679.11,
+              1273.63
+            ],
+            [
+              736,
+              1252.28
+            ],
+            [
+              757.33,
+              1209.59
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-terrace-lawn",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28182220309972,
+              42.331169792803884
+            ],
+            [
+              -73.28149795085191,
+              42.33110630150299
+            ],
+            [
+              -73.2816386193037,
+              42.33075535327174
+            ],
+            [
+              -73.28196525871753,
+              42.33082765880086
+            ],
+            [
+              -73.28182220309972,
+              42.331169792803884
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "House terrace garden envelope",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                1396.3396448700096,
+                16218.340573632664
+              ],
+              [
+                2448.4353765202704,
+                16496.002006654406
+              ],
+              [
+                1992.0108529938311,
+                18030.77586442768
+              ],
+              [
+                932.1695245194976,
+                17714.567871401843
+              ],
+              [
+                1396.3396448700096,
+                16218.340573632664
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1080.89,
+              1248.72
+            ],
+            [
+              1322.67,
+              1312.76
+            ],
+            [
+              1217.78,
+              1666.74
+            ],
+            [
+              974.22,
+              1593.81
+            ],
+            [
+              1080.89,
+              1248.72
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-lime-walk-envelope",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28131199330092,
+              42.331386707712625
+            ],
+            [
+              -73.28118562102317,
+              42.33136025640772
+            ],
+            [
+              -73.28146457076072,
+              42.3307059697274
+            ],
+            [
+              -73.28159809112549,
+              42.33073418606765
+            ],
+            [
+              -73.28131199330092,
+              42.331386707712625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Lime Walk planted corridor",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                3051.8086668976575,
+                15269.723935475098
+              ],
+              [
+                3461.8466386206774,
+                15385.401313665401
+              ],
+              [
+                2556.7431884379807,
+                18246.740972992447
+              ],
+              [
+                2123.5119408132505,
+                18123.34470673885
+              ],
+              [
+                3051.8086668976575,
+                15269.723935475098
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1461.33,
+              1029.93
+            ],
+            [
+              1555.56,
+              1056.61
+            ],
+            [
+              1347.56,
+              1716.55
+            ],
+            [
+              1248,
+              1688.09
+            ],
+            [
+              1461.33,
+              1029.93
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-walled-garden",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28183173835278,
+              42.33043085478923
+            ],
+            [
+              -73.28156948536635,
+              42.33038323576017
+            ],
+            [
+              -73.28162669688463,
+              42.330252731873564
+            ],
+            [
+              -73.28188657611608,
+              42.33030210585931
+            ],
+            [
+              -73.28183173835278,
+              42.33043085478923
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Walled garden and circular-pool enclosure",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                1365.4007720981178,
+                19449.87914947036
+              ],
+              [
+                2216.3285590367063,
+                19658.1276443106
+              ],
+              [
+                2030.695322589795,
+                20228.849863914944
+              ],
+              [
+                1187.4696179047717,
+                20012.926557200717
+              ],
+              [
+                1365.4007720981178,
+                19449.87914947036
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1073.78,
+              1994.04
+            ],
+            [
+              1269.33,
+              2042.07
+            ],
+            [
+              1226.67,
+              2173.7
+            ],
+            [
+              1032.89,
+              2123.9
+            ],
+            [
+              1073.78,
+              1994.04
+            ]
+          ],
+          "digitizationUncertaintyPixels": 16,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-southern-rooms",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28158616870641,
+              42.33072007789911
+            ],
+            [
+              -73.28142404258251,
+              42.330684812421076
+            ],
+            [
+              -73.28155756294727,
+              42.33039028492539
+            ],
+            [
+              -73.28171968907118,
+              42.33043261955788
+            ],
+            [
+              -73.28158616870641,
+              42.33072007789911
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Southern formal garden rooms",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                2162.1964104092144,
+                18185.042832936237
+              ],
+              [
+                2688.2442762112905,
+                18339.266530185963
+              ],
+              [
+                2255.0130286326703,
+                19627.300093308237
+              ],
+              [
+                1728.9651627844848,
+                19442.16142772348
+              ],
+              [
+                2162.1964104092144,
+                18185.042832936237
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1256.89,
+              1702.32
+            ],
+            [
+              1377.78,
+              1737.89
+            ],
+            [
+              1278.22,
+              2034.96
+            ],
+            [
+              1157.33,
+              1992.26
+            ],
+            [
+              1256.89,
+              1702.32
+            ]
+          ],
+          "digitizationUncertaintyPixels": 16,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-lime-walk",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28126430362462,
+            42.33138141348683
+          ],
+          [
+            -73.28134059906006,
+            42.33120858750381
+          ],
+          [
+            -73.28140019774436,
+            42.331074555828515
+          ],
+          [
+            -73.28146934509277,
+            42.33091583713015
+          ],
+          [
+            -73.28152894377708,
+            42.33078180483104
+          ],
+          [
+            -73.28158616870641,
+            42.330688332029695
+          ],
+          [
+            -73.28162432312966,
+            42.330596633767904
+          ],
+          [
+            -73.28165768980979,
+            42.33051020984317
+          ],
+          [
+            -73.28169106990099,
+            42.33042379571412
+          ],
+          [
+            -73.28173161149026,
+            42.3303761766797
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Lime Walk centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              3206.5465452354033,
+              15292.876750112322
+            ],
+            [
+              2958.992048674202,
+              16048.682812277264
+            ],
+            [
+              2765.6132154032184,
+              16634.83282825618
+            ],
+            [
+              2541.2519947437263,
+              17328.944629655
+            ],
+            [
+              2347.8731614727426,
+              17915.097373709355
+            ],
+            [
+              2162.1964104092144,
+              18323.87450704217
+            ],
+            [
+              2038.3974047972506,
+              18724.891188329537
+            ],
+            [
+              1930.1331075422672,
+              19102.842032807377
+            ],
+            [
+              1821.8252956245572,
+              19480.75003860194
+            ],
+            [
+              1690.280693188521,
+              19688.99855690275
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1496.89,
+              1035.27
+            ],
+            [
+              1440,
+              1209.59
+            ],
+            [
+              1395.56,
+              1344.78
+            ],
+            [
+              1344,
+              1504.87
+            ],
+            [
+              1299.56,
+              1640.06
+            ],
+            [
+              1256.89,
+              1734.34
+            ],
+            [
+              1228.44,
+              1826.83
+            ],
+            [
+              1203.56,
+              1914
+            ],
+            [
+              1178.67,
+              2001.16
+            ],
+            [
+              1148.44,
+              2049.19
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-house-cross-axis",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28186989277602,
+            42.33099167198079
+          ],
+          [
+            -73.28179598450662,
+            42.33097403436321
+          ],
+          [
+            -73.28169584423304,
+            42.33095286723272
+          ],
+          [
+            -73.28159094303847,
+            42.3309299452548
+          ],
+          [
+            -73.28146934509277,
+            42.33090525851319
+          ],
+          [
+            -73.28140497207642,
+            42.33088585611549
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "House-to-Lime-Walk axis",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              1241.6017665322634,
+              16997.302136809503
+            ],
+            [
+              1481.410666223283,
+              17074.435320473334
+            ],
+            [
+              1806.334101930303,
+              17167.003840924182
+            ],
+            [
+              2146.7052167149604,
+              17267.24669539923
+            ],
+            [
+              2541.2519947437263,
+              17375.207249931776
+            ],
+            [
+              2750.122021708964,
+              17460.0582054642
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1045.33,
+              1428.38
+            ],
+            [
+              1100.44,
+              1446.17
+            ],
+            [
+              1175.11,
+              1467.52
+            ],
+            [
+              1253.33,
+              1490.64
+            ],
+            [
+              1344,
+              1515.54
+            ],
+            [
+              1392,
+              1535.11
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-flower-perimeter",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28131436705588,
+            42.33164595568918
+          ],
+          [
+            -73.28101634681225,
+            42.331573641186495
+          ],
+          [
+            -73.28109025508165,
+            42.33139023719625
+          ],
+          [
+            -73.2813835144043,
+            42.33146254199555
+          ],
+          [
+            -73.28131436705588,
+            42.33164595568918
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Flower garden perimeter walk",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              3044.106584690202,
+              14135.97547438758
+            ],
+            [
+              4011.087780324463,
+              14452.222710819296
+            ],
+            [
+              3771.2788806334434,
+              15254.288726742376
+            ],
+            [
+              2819.74536403071,
+              14938.083925378982
+            ],
+            [
+              3044.106584690202,
+              14135.97547438758
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1459.56,
+              768.44
+            ],
+            [
+              1681.78,
+              841.38
+            ],
+            [
+              1626.67,
+              1026.37
+            ],
+            [
+              1408,
+              953.44
+            ],
+            [
+              1459.56,
+              768.44
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-flower-cross-east-west",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28135966956616,
+            42.33154895469752
+          ],
+          [
+            -73.28126430362462,
+            42.33152426819885
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Flower garden cross walk",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              2897.1143031765278,
+              14560.18216053008
+            ],
+            [
+              3206.5465452354033,
+              14668.141652625249
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1425.78,
+              866.28
+            ],
+            [
+              1496.89,
+              891.18
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-flower-cross-east",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28114270567893,
+            42.33151544450823
+          ],
+          [
+            -73.28099488914013,
+            42.33147488525821
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Flower garden east cross walk",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              3601.093323264169,
+              14706.729593774455
+            ],
+            [
+              4080.711122646209,
+              14884.104121052864
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1587.56,
+              900.08
+            ],
+            [
+              1697.78,
+              940.99
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-flower-cross-north",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28117371201516,
+            42.33155776846919
+          ],
+          [
+            -73.28113794475794,
+            42.33164419095457
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Flower garden north cross walk",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              3500.4875935539144,
+              14521.637597128929
+            ],
+            [
+              3616.541002295697,
+              14143.69304726085
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1564.44,
+              857.39
+            ],
+            [
+              1591.11,
+              770.22
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-flower-cross-south",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.2812166273594,
+            42.33148194421535
+          ],
+          [
+            -73.28124999403953,
+            42.33140787469712
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Flower garden south cross walk",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              3361.240908910423,
+              14853.233747836224
+            ],
+            [
+              3252.9766116554397,
+              15177.15605349346
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1532.44,
+              933.87
+            ],
+            [
+              1507.56,
+              1008.58
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-flower-west-approach",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28136205673218,
+            42.33155953320622
+          ],
+          [
+            -73.28144073933363,
+            42.331580700132555
+          ],
+          [
+            -73.28149318993091,
+            42.331580700132555
+          ],
+          [
+            -73.28153849244119,
+            42.33156129794322
+          ],
+          [
+            -73.28160047829151,
+            42.33151016020752
+          ],
+          [
+            -73.28167677372694,
+            42.331455483036216
+          ],
+          [
+            -73.28175068199634,
+            42.33142374745226
+          ],
+          [
+            -73.2818341255188,
+            42.33140787469712
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Flower garden west approach",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              2889.368706352456,
+              14513.920013690637
+            ],
+            [
+              2634.0686129671817,
+              14421.3523860464
+            ],
+            [
+              2463.883055597908,
+              14421.3523860464
+            ],
+            [
+              2316.890774084234,
+              14506.202430376641
+            ],
+            [
+              2115.7663439891785,
+              14729.839003816034
+            ],
+            [
+              1868.2118474279766,
+              14968.95430819736
+            ],
+            [
+              1628.402947736957,
+              15107.74100171692
+            ],
+            [
+              1357.6551752740456,
+              15177.15605349346
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1424,
+              855.61
+            ],
+            [
+              1365.33,
+              834.26
+            ],
+            [
+              1326.22,
+              834.26
+            ],
+            [
+              1292.44,
+              853.83
+            ],
+            [
+              1246.22,
+              905.41
+            ],
+            [
+              1189.33,
+              960.56
+            ],
+            [
+              1134.22,
+              992.57
+            ],
+            [
+              1072,
+              1008.58
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-flower-east-approach",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28099488914013,
+            42.33147488525821
+          ],
+          [
+            -73.28092336803675,
+            42.33145372821053
+          ],
+          [
+            -73.28085422068834,
+            42.33145196347052
+          ],
+          [
+            -73.28078747391702,
+            42.33147312051879
+          ],
+          [
+            -73.28072071373462,
+            42.33150663073062
+          ],
+          [
+            -73.28063488304615,
+            42.33153837618702
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Flower garden east approach",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              4080.711122646209,
+              14884.104121052864
+            ],
+            [
+              4312.774425513156,
+              14976.628547136348
+            ],
+            [
+              4537.135646172648,
+              14984.346143625551
+            ],
+            [
+              4753.707755345342,
+              14891.821714962958
+            ],
+            [
+              4970.323379180761,
+              14745.27418312206
+            ],
+            [
+              5248.816748467744,
+              14606.444315231141
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1697.78,
+              940.99
+            ],
+            [
+              1751.11,
+              962.33
+            ],
+            [
+              1802.67,
+              964.11
+            ],
+            [
+              1852.44,
+              942.77
+            ],
+            [
+              1902.22,
+              908.97
+            ],
+            [
+              1966.22,
+              876.95
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-forecourt-garden-path",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28197479397059,
+            42.331219166069765
+          ],
+          [
+            -73.28200817406177,
+            42.33123680361861
+          ],
+          [
+            -73.28206301182509,
+            42.33124386260248
+          ],
+          [
+            -73.28211068809033,
+            42.331233274126376
+          ],
+          [
+            -73.28216076493264,
+            42.33123503887252
+          ],
+          [
+            -73.28222275078296,
+            42.33125973539899
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Forecourt garden approach",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              901.2306517476061,
+              16002.420415046772
+            ],
+            [
+              792.9228398760058,
+              15925.287531988924
+            ],
+            [
+              614.99168563655,
+              15894.417041873412
+            ],
+            [
+              460.2973219154208,
+              15940.72277835177
+            ],
+            [
+              297.8138467536023,
+              15933.005155046054
+            ],
+            [
+              96.68941665854659,
+              15825.001809186384
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              967.11,
+              1198.92
+            ],
+            [
+              942.22,
+              1181.13
+            ],
+            [
+              901.33,
+              1174.01
+            ],
+            [
+              865.78,
+              1184.69
+            ],
+            [
+              828.44,
+              1182.91
+            ],
+            [
+              782.22,
+              1158
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-forecourt-loop",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28238248974085,
+            42.33126150014439
+          ],
+          [
+            -73.28244208842516,
+            42.33128618674619
+          ],
+          [
+            -73.2824802428484,
+            42.331323216630715
+          ],
+          [
+            -73.28249453902244,
+            42.33136554072101
+          ],
+          [
+            -73.28247785568237,
+            42.33140963943837
+          ],
+          [
+            -73.28244447559118,
+            42.331443139769746
+          ],
+          [
+            -73.28239917308092,
+            42.33146254199555
+          ],
+          [
+            -73.28234196156264,
+            42.33146783621453
+          ],
+          [
+            -73.28229188472032,
+            42.33145372821053
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Forecourt woodland loop",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -421.61285236556654,
+              15817.28418911232
+            ],
+            [
+              -614.99168563655,
+              15709.324246014954
+            ],
+            [
+              -738.7906912024046,
+              15547.384410839628
+            ],
+            [
+              -785.1772430058238,
+              15362.29184859248
+            ],
+            [
+              -731.0450943783321,
+              15169.43845159745
+            ],
+            [
+              -622.7372824606223,
+              15022.934129178926
+            ],
+            [
+              -475.74500099305817,
+              14938.083925378982
+            ],
+            [
+              -290.11176454614696,
+              14914.931140541337
+            ],
+            [
+              -127.62828938432855,
+              14976.628547136348
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              663.11,
+              1156.22
+            ],
+            [
+              618.67,
+              1131.32
+            ],
+            [
+              590.22,
+              1093.97
+            ],
+            [
+              579.56,
+              1051.28
+            ],
+            [
+              592,
+              1006.8
+            ],
+            [
+              616.89,
+              973.01
+            ],
+            [
+              650.67,
+              953.44
+            ],
+            [
+              693.33,
+              948.1
+            ],
+            [
+              730.67,
+              962.33
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-northern-woodland-approach",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28112124800681,
+            42.331737652421204
+          ],
+          [
+            -73.2811689376831,
+            42.33179056461671
+          ],
+          [
+            -73.28123092353344,
+            42.33183993739531
+          ],
+          [
+            -73.28129768371582,
+            42.33188402586585
+          ],
+          [
+            -73.28132628947496,
+            42.33192987903213
+          ],
+          [
+            -73.28134059906006,
+            42.33197220271422
+          ],
+          [
+            -73.2813501343131,
+            42.332021585264414
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Visible northern woodland path",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              3670.716665585915,
+              13734.965483121508
+            ],
+            [
+              3515.9787872481693,
+              13503.568806375652
+            ],
+            [
+              3314.8543571070036,
+              13287.65077878602
+            ],
+            [
+              3098.2387333176935,
+              13094.842193399138
+            ],
+            [
+              3005.422115094238,
+              12894.316205111567
+            ],
+            [
+              2958.992048674202,
+              12709.225428042608
+            ],
+            [
+              2928.0531759484197,
+              12493.264667109188
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1603.56,
+              675.95
+            ],
+            [
+              1568,
+              622.58
+            ],
+            [
+              1521.78,
+              572.78
+            ],
+            [
+              1472,
+              528.31
+            ],
+            [
+              1450.67,
+              482.06
+            ],
+            [
+              1440,
+              439.37
+            ],
+            [
+              1432.89,
+              389.56
+            ]
+          ],
+          "digitizationUncertaintyPixels": 16,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-east-meadow-path",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28155517578125,
+            42.330356784033235
+          ],
+          [
+            -73.28151703476907,
+            42.3303761766797
+          ],
+          [
+            -73.28148841559887,
+            42.330374421823905
+          ],
+          [
+            -73.28146934509277,
+            42.330356784033235
+          ],
+          [
+            -73.28147888034582,
+            42.3303232732088
+          ],
+          [
+            -73.28150987327099,
+            42.33026507537364
+          ],
+          [
+            -73.28154564052821,
+            42.33019100442243
+          ],
+          [
+            -73.28158855587245,
+            42.330116933383984
+          ],
+          [
+            -73.28164815455675,
+            42.330060500137
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Walled garden meadow approach",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              2262.7586254567427,
+              19773.806868148316
+            ],
+            [
+              2386.51411640598,
+              19688.99855690275
+            ],
+            [
+              2479.3742492460524,
+              19696.672927531643
+            ],
+            [
+              2541.2519947437263,
+              19773.806868148316
+            ],
+            [
+              2510.3131220179444,
+              19920.357079030517
+            ],
+            [
+              2409.7509069243065,
+              20174.869021326704
+            ],
+            [
+              2293.6974981825247,
+              20498.797593720687
+            ],
+            [
+              2154.450813539033,
+              20822.726547636295
+            ],
+            [
+              1961.071980268049,
+              21069.521557454995
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1280,
+              2068.75
+            ],
+            [
+              1308.44,
+              2049.19
+            ],
+            [
+              1329.78,
+              2050.96
+            ],
+            [
+              1344,
+              2068.75
+            ],
+            [
+              1336.89,
+              2102.55
+            ],
+            [
+              1313.78,
+              2161.25
+            ],
+            [
+              1287.11,
+              2235.96
+            ],
+            [
+              1255.11,
+              2310.67
+            ],
+            [
+              1210.67,
+              2367.59
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-pool-approach",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.28173161149026,
+            42.3303761766797
+          ],
+          [
+            -73.2817459076643,
+            42.330362068430844
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Circular pool north approach",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              1690.280693188521,
+              19688.99855690275
+            ],
+            [
+              1643.8941413851014,
+              19750.697034325007
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1148.44,
+              2049.19
+            ],
+            [
+              1137.78,
+              2063.42
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-walled-pool",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.28172444999218,
+              42.33033385192366
+            ],
+            [
+              -73.28172550946475,
+              42.330327923084624
+            ],
+            [
+              -73.28172860741614,
+              42.33032239082296
+            ],
+            [
+              -73.28173352926969,
+              42.33031764180223
+            ],
+            [
+              -73.28173995316028,
+              42.330314003199476
+            ],
+            [
+              -73.28174742311238,
+              42.33031171296168
+            ],
+            [
+              -73.28175544291734,
+              42.33031092972015
+            ],
+            [
+              -73.28176346272231,
+              42.33031171296168
+            ],
+            [
+              -73.28177094608546,
+              42.330314003199476
+            ],
+            [
+              -73.28177736997606,
+              42.33031764180223
+            ],
+            [
+              -73.28178229182957,
+              42.33032239082296
+            ],
+            [
+              -73.28178538978099,
+              42.330327923084624
+            ],
+            [
+              -73.2817864358425,
+              42.33033385192366
+            ],
+            [
+              -73.28178538978099,
+              42.33033979067657
+            ],
+            [
+              -73.28178229182957,
+              42.330345322936715
+            ],
+            [
+              -73.28177736997606,
+              42.330350062040885
+            ],
+            [
+              -73.28177094608546,
+              42.33035371055601
+            ],
+            [
+              -73.28176346272231,
+              42.33035600079227
+            ],
+            [
+              -73.28175544291734,
+              42.330356784033235
+            ],
+            [
+              -73.28174742311238,
+              42.33035600079227
+            ],
+            [
+              -73.28173995316028,
+              42.33035371055601
+            ],
+            [
+              -73.28173352926969,
+              42.330350062040885
+            ],
+            [
+              -73.28172860741614,
+              42.330345322936715
+            ],
+            [
+              -73.28172550946475,
+              42.33033979067657
+            ],
+            [
+              -73.28172444999218,
+              42.33033385192366
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "the-mount-kitchen-garden",
+        "layer": "site",
+        "name": "Walled garden circular pool",
+        "kind": "water",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                1713.5174837068473,
+                19874.094030590637
+              ],
+              [
+                1710.0798311612673,
+                19900.022148618922
+              ],
+              [
+                1700.0279611781186,
+                19924.21594652263
+              ],
+              [
+                1684.0581070238463,
+                19944.984459396877
+              ],
+              [
+                1663.2146188978297,
+                19960.896870092896
+              ],
+              [
+                1638.9769928889598,
+                19970.91258404384
+              ],
+              [
+                1612.9552686593195,
+                19974.33787165241
+              ],
+              [
+                1586.9335444296794,
+                19970.91258404384
+              ],
+              [
+                1562.652403804192,
+                19960.896870092896
+              ],
+              [
+                1541.8089156781757,
+                19944.984459396877
+              ],
+              [
+                1525.8390616161228,
+                19924.21594652263
+              ],
+              [
+                1515.787191540755,
+                19900.022148618922
+              ],
+              [
+                1512.3930536117916,
+                19874.094030590637
+              ],
+              [
+                1515.787191540755,
+                19848.122557031915
+              ],
+              [
+                1525.8390616161228,
+                19823.92876577796
+              ],
+              [
+                1541.8089156781757,
+                19803.203620179964
+              ],
+              [
+                1562.652403804192,
+                19787.24786051004
+              ],
+              [
+                1586.9335444296794,
+                19777.232153270998
+              ],
+              [
+                1612.9552686593195,
+                19773.806868148316
+              ],
+              [
+                1638.9769928889598,
+                19777.232153270998
+              ],
+              [
+                1663.2146188978297,
+                19787.24786051004
+              ],
+              [
+                1684.0581070238463,
+                19803.203620179964
+              ],
+              [
+                1700.0279611781186,
+                19823.92876577796
+              ],
+              [
+                1710.0798311612673,
+                19848.122557031915
+              ],
+              [
+                1713.5174837068473,
+                19874.094030590637
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:mount-estate-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:mount-gardens",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "the-mount-kitchen-garden-formal-2025-z20",
+          "rasterSha256": "38c0a8aaf5b38a080719dab460e7080ec02365d30b62549ab659a3dca96e0e4c",
+          "observedRasterPixels": [
+            [
+              1153.78,
+              2091.88
+            ],
+            [
+              1152.99,
+              2097.86
+            ],
+            [
+              1150.68,
+              2103.44
+            ],
+            [
+              1147.01,
+              2108.23
+            ],
+            [
+              1142.22,
+              2111.9
+            ],
+            [
+              1136.65,
+              2114.21
+            ],
+            [
+              1130.67,
+              2115
+            ],
+            [
+              1124.69,
+              2114.21
+            ],
+            [
+              1119.11,
+              2111.9
+            ],
+            [
+              1114.32,
+              2108.23
+            ],
+            [
+              1110.65,
+              2103.44
+            ],
+            [
+              1108.34,
+              2097.86
+            ],
+            [
+              1107.56,
+              2091.88
+            ],
+            [
+              1108.34,
+              2085.89
+            ],
+            [
+              1110.65,
+              2080.31
+            ],
+            [
+              1114.32,
+              2075.53
+            ],
+            [
+              1119.11,
+              2071.85
+            ],
+            [
+              1124.69,
+              2069.54
+            ],
+            [
+              1130.67,
+              2068.75
+            ],
+            [
+              1136.65,
+              2069.54
+            ],
+            [
+              1142.22,
+              2071.85
+            ],
+            [
+              1147.01,
+              2075.53
+            ],
+            [
+              1150.68,
+              2080.31
+            ],
+            [
+              1152.99,
+              2085.89
+            ],
+            [
+              1153.78,
+              2091.88
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    }
+  ]
+}

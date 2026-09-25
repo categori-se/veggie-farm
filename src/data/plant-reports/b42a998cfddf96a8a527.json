@@ -1,0 +1,23 @@
+{
+  "id": "plant:community:flower-smooth-aster",
+  "name": "Smooth Aster",
+  "common": "Smooth Aster",
+  "scientific": "Symphyotrichum laeve",
+  "category": "flower-or-ornamental",
+  "source": "https://massnrc.org/ppd/",
+  "sourceKind": "botanical-reference",
+  "imageIds": [],
+  "light": null,
+  "spacing": null,
+  "spacingMin": null,
+  "spacingMax": null,
+  "maturity": null,
+  "maturityMax": null,
+  "frost": null,
+  "directSow": null,
+  "transplant": null,
+  "careNotes": [],
+  "additionalFacts": [],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

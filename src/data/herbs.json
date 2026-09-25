@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Basil",
+    "slug": "basil",
+    "season": "Warm season annual",
+    "use": "Leaves for fresh cooking, pesto, and companion plantings",
+    "mainCare": "Warmth, regular harvest, and pinching before flowering",
+    "path": "/content/herbs/basil"
+  },
+  {
+    "name": "Cilantro",
+    "slug": "cilantro",
+    "season": "Cool season annual",
+    "use": "Leaves, stems, flowers, and coriander seed",
+    "mainCare": "Succession sowing and shade during warming weather",
+    "path": "/content/herbs/cilantro"
+  },
+  {
+    "name": "Dill",
+    "slug": "dill",
+    "season": "Cool to warm annual",
+    "use": "Leaves, flowers, seed, and beneficial insect support",
+    "mainCare": "Direct sowing, reseeding, and wind protection",
+    "path": "/content/herbs/dill"
+  },
+  {
+    "name": "Mint",
+    "slug": "mint",
+    "season": "Hardy perennial",
+    "use": "Tea, sauces, and aromatic groundcover where contained",
+    "mainCare": "Containment, moisture, and regular cutting",
+    "path": "/content/herbs/mint"
+  },
+  {
+    "name": "Parsley",
+    "slug": "parsley",
+    "season": "Biennial grown mostly as annual",
+    "use": "Leaves, stems, and pollinator flowers in the second year",
+    "mainCare": "Patience during germination and steady moisture",
+    "path": "/content/herbs/parsley"
+  },
+  {
+    "name": "Rosemary",
+    "slug": "rosemary",
+    "season": "Tender or hardy perennial depending on climate",
+    "use": "Woody herb for cooking and fragrance",
+    "mainCare": "Drainage, sun, and winter protection where needed",
+    "path": "/content/herbs/rosemary"
+  },
+  {
+    "name": "Sage",
+    "slug": "sage",
+    "season": "Perennial",
+    "use": "Leaves for cooking and flowers for insects",
+    "mainCare": "Drainage, pruning, and avoiding wet crowns",
+    "path": "/content/herbs/sage"
+  },
+  {
+    "name": "Thyme",
+    "slug": "thyme",
+    "season": "Perennial",
+    "use": "Leaves, flowers, edging, and pollinator support",
+    "mainCare": "Lean soil, drainage, and light trimming",
+    "path": "/content/herbs/thyme"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "scope": "Explicitly reviewed versioned browser-package evidence; not a claim of bundle equivalence or complete notices",
+  "packages": [
+    {
+      "name": "htl",
+      "version": "1.0.0",
+      "license": "ISC",
+      "metadataPath": "docs/licenses/browser/htl-1.0.0/package.json",
+      "metadataSha256": "b41acd686cbdb5eff7eb67148d71a884af7251bc58a86e297eed247666b2d66e",
+      "sources": [
+        {
+          "url": "https://cdn.jsdelivr.net/npm/htl@1.0.0/package.json",
+          "bytes": 748,
+          "sha256": "b41acd686cbdb5eff7eb67148d71a884af7251bc58a86e297eed247666b2d66e",
+          "status": 200
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/htl@1.0.0/LICENSE",
+          "bytes": 735,
+          "sha256": "dfbe8087b4f047679121abcf24ae28c0a54283a30d0e1c73ecea8cf2b1938e43",
+          "status": 200
+        }
+      ],
+      "retrieved": "2026-09-23",
+      "texts": [
+        {
+          "filename": "LICENSE",
+          "path": "docs/licenses/browser/htl-1.0.0/LICENSE",
+          "sha256": "dfbe8087b4f047679121abcf24ae28c0a54283a30d0e1c73ecea8cf2b1938e43"
+        }
+      ]
+    }
+  ]
+}

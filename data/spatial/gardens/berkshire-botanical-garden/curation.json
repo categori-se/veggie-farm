@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "gardenId": "berkshire-botanical-garden",
+  "policy": "Canonical features are rebuilt only from maintained GIS/aerial interpretation and bounded public-provider snapshots. User-supplied KML/KMZ is indicative comparison evidence only and contributes zero parcel, site, bed, or plant features. Provider roofprints use representative-point parcel membership; crossing linear and areal layers must use true intersection plus clipping before any future promotion.",
+  "reviewEvidence": [
+    {
+      "sourceId": "bbg-google-earth-example-2026-08-23",
+      "sourcePath": "data/spatial/sources/berkshire-botanical-garden/google-earth-example.geojson",
+      "sourceRevision": 3,
+      "role": "opt-in visual comparison only",
+      "canonicalPromotion": "none",
+      "notes": "The archive is intentionally preserved unchanged. Its raster overlay and hand-drawn vectors may reveal review questions, but neither geometry nor labels enter the canonical builder."
+    }
+  ],
+  "structurePromotion": {
+    "sourceId": "massgis-building-structures",
+    "sourcePath": "data/spatial/source-cache/berkshire-botanical-garden/massgis-building-structures.geojson",
+    "snapshotPath": "data/spatial/source-cache/berkshire-botanical-garden/massgis-building-structures.geojson",
+    "selectionMethod": "representative point within canonical parcel polygon",
+    "aerialRetraceFeatureIds": [
+      "bbg-passive-solar-greenhouse",
+      "bbg-fitzpatrick-conservatory",
+      "bbg-lexan-greenhouse"
+    ],
+    "aerialRetracePolicy": "These three named roof envelopes use the reviewed 2025 orthophoto trace rather than the 2012 provider roofprint. Preserve the superseded provider geometry and source vintage in provenance; do not shift other features."
+  }
+}

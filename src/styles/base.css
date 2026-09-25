@@ -1,0 +1,42 @@
+html {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  max-width: none;
+  margin: 0;
+  background:
+    radial-gradient(circle at 85% -10%, color-mix(in srgb, var(--green-soft) 55%, transparent), transparent 28rem),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.68;
+}
+
+a[href] {
+  color: var(--green);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a[href]:hover {
+  color: color-mix(in srgb, var(--green) 78%, var(--ink));
+}
+
+*:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--green) 22%, transparent);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--sans);
+}

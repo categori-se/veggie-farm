@@ -1,0 +1,157 @@
+[
+  {
+    "family": "Solanaceae",
+    "label": "Nightshades",
+    "crops": [
+      "tomatoes",
+      "peppers",
+      "eggplant",
+      "potatoes",
+      "tomatillos",
+      "ground cherries"
+    ],
+    "intervalYears": 3,
+    "demand": "high",
+    "commonRisks": [
+      "early blight",
+      "late blight",
+      "Verticillium/Fusarium complexes"
+    ],
+    "avoidFollowingSameFamily": true
+  },
+  {
+    "family": "Brassicaceae",
+    "label": "Brassicas",
+    "crops": [
+      "cabbage",
+      "kale",
+      "broccoli",
+      "cauliflower",
+      "radishes",
+      "turnips",
+      "mustards",
+      "bok choy",
+      "mizuna"
+    ],
+    "intervalYears": 3,
+    "demand": "moderate to high",
+    "commonRisks": [
+      "cabbage worms",
+      "flea beetles",
+      "clubroot"
+    ],
+    "avoidFollowingSameFamily": true
+  },
+  {
+    "family": "Cucurbitaceae",
+    "label": "Cucurbits",
+    "crops": [
+      "cucumbers",
+      "squash",
+      "melons",
+      "gourds",
+      "watermelons"
+    ],
+    "intervalYears": 3,
+    "demand": "high",
+    "commonRisks": [
+      "powdery mildew",
+      "squash bugs",
+      "cucumber beetles"
+    ],
+    "avoidFollowingSameFamily": true
+  },
+  {
+    "family": "Fabaceae",
+    "label": "Legumes",
+    "crops": [
+      "beans",
+      "peas",
+      "cowpeas",
+      "favas",
+      "peanuts"
+    ],
+    "intervalYears": 2,
+    "demand": "low to moderate",
+    "commonRisks": [
+      "bean beetles",
+      "root rots"
+    ],
+    "avoidFollowingSameFamily": false,
+    "soilContribution": "May contribute nitrogen if nodulated and residues are returned."
+  },
+  {
+    "family": "Apiaceae",
+    "label": "Carrot family",
+    "crops": [
+      "carrots",
+      "celery",
+      "parsnips",
+      "parsley",
+      "cilantro",
+      "dill",
+      "fennel"
+    ],
+    "intervalYears": 2,
+    "demand": "moderate",
+    "commonRisks": [
+      "carrot rust fly",
+      "soil compaction"
+    ],
+    "avoidFollowingSameFamily": true
+  },
+  {
+    "family": "Amaranthaceae",
+    "label": "Amaranths and chenopods",
+    "crops": [
+      "beets",
+      "chard",
+      "spinach",
+      "amaranth"
+    ],
+    "intervalYears": 2,
+    "demand": "moderate",
+    "commonRisks": [
+      "leaf miners",
+      "leaf spots"
+    ],
+    "avoidFollowingSameFamily": true
+  },
+  {
+    "family": "Amaryllidaceae",
+    "label": "Alliums",
+    "crops": [
+      "onions",
+      "garlic",
+      "leeks",
+      "chives"
+    ],
+    "intervalYears": 3,
+    "demand": "moderate",
+    "commonRisks": [
+      "onion maggots",
+      "white rot"
+    ],
+    "avoidFollowingSameFamily": true
+  },
+  {
+    "family": "Asteraceae",
+    "label": "Asters",
+    "crops": [
+      "lettuce",
+      "chicory",
+      "endive",
+      "radicchio",
+      "artichoke",
+      "sunflower"
+    ],
+    "intervalYears": 2,
+    "demand": "moderate",
+    "commonRisks": [
+      "aphids",
+      "slugs",
+      "bolting stress"
+    ],
+    "avoidFollowingSameFamily": false
+  }
+]

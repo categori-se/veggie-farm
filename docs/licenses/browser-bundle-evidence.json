@@ -1,0 +1,299 @@
+{
+  "version": 1,
+  "scope": "Five exact-byte local Framework reconstructions with contributing module evidence; not a general legal clearance",
+  "bundles": [
+    {
+      "path": "_observablehq/runtime.607a8173.js",
+      "sha256": "e833a5db9dd1d6316ad7dac91a914c666af7ac4f8a142d5fcb49cbed822c113e",
+      "method": "Installed Framework rollupClient(runtime.js), minify=true, keepNames=true; local resolver; output chunk.modules captured without changing generated code",
+      "packages": [
+        {
+          "name": "@observablehq/inspector",
+          "version": "5.0.1"
+        },
+        {
+          "name": "isoformat",
+          "version": "0.2.1"
+        },
+        {
+          "name": "@observablehq/runtime",
+          "version": "6.0.0"
+        },
+        {
+          "name": "@observablehq/framework",
+          "version": "1.13.4"
+        }
+      ],
+      "sourceModules": [
+        {
+          "path": "node_modules/@observablehq/inspector/src/dispatch.js",
+          "sha256": "1c629f6524f3bbb1264129730381082aacab41335e038344ec263541d6722210"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/array.js",
+          "sha256": "f85875daabc07806ac404425af0d3ce457624e69c97ac3f7d55f1fd0b0997d7e"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/inspectName.js",
+          "sha256": "350bf71012ce2e85bb715969b9055ce3ed86e2653fbce22bab04d0ad9fd0599c"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/formatSymbol.js",
+          "sha256": "31e90898b712ca843d92697d65979a594d45fdbce91d8b7660fd31b4471db9d2"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/object.js",
+          "sha256": "03d062ffe5ef2b1862608bc71119c00ec81acd697ef8ed357a44b3479400eb04"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/immutable.js",
+          "sha256": "3e344af0de0907dc7a637af9a00317b11af13a4cb1394472b13f5296b42039ce"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/expanded.js",
+          "sha256": "71de2f575399eb43584fc94f52aae5652920b7a3d999cb9bab5fe449204ba461"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/collapsed.js",
+          "sha256": "3281506d527ee6319c4b2a44abd8a88804d8cbe3272d8ece548dbd20166e9b81"
+        },
+        {
+          "path": "node_modules/isoformat/src/format.js",
+          "sha256": "31673964d158e239d543c4345ae12d879cc34f39b636eac13c31675ef8a7dd27"
+        },
+        {
+          "path": "node_modules/isoformat/src/parse.js",
+          "sha256": "35ae70dfb6a6bc8f518f209f3712ebab2d5e58480d9e516c46760a890242f0be"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/formatDate.js",
+          "sha256": "d1a8821e6e1c86a7b3183b68f782b5e47a8fd338b4b3659e2805ecd69e955c9d"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/formatError.js",
+          "sha256": "f20c8136ab4f3985dd64932be826285cf6885fa0609903809141f2f214c59cb4"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/formatRegExp.js",
+          "sha256": "7c0b9fc103e0427415bbb62bf7c6dac77ad25c7f94e51f4a439bacc4429b9d0c"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/formatString.js",
+          "sha256": "f9723fa222a54e9c62035f9fc7a25070c3183cdf385f816a2d0d9cc2f0b5b25a"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/inspectFunction.js",
+          "sha256": "ea3984fed5df1ee1a8fdee9149207536530e37b0a43b9da391aa480cde01c84d"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/inspect.js",
+          "sha256": "585d5f1ca4c2dfc7cc91a9a6a9653991eccf1a973104fe7c8393e0614edc852a"
+        },
+        {
+          "path": "node_modules/@observablehq/inspector/src/index.js",
+          "sha256": "3d8a74a114567bae8ec5b837b5c03823934c3031c8e19a52172482792d308e34"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/errors.js",
+          "sha256": "48fa87e022cebbf64537197ad14ac8a6729f074d3d6170c35b912c46d81a975e"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/generatorish.js",
+          "sha256": "fe0c7f860b32668a5a97a4655dc5e8b91eb479c1310c86d40852958b573bb011"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/constant.js",
+          "sha256": "3b7c77727407d3a5a3a0099bd01ec0766aedbc568e4b32e0c5c902bebcdb9a36"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/identity.js",
+          "sha256": "527fcf5d23512eb4f95b4def8923fbe7010a15c055c60ed4e63e8d8938a9a4d6"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/rethrow.js",
+          "sha256": "a807230c773ac79fec7ee3b8e53269df57925f34d9413dfce3c006dc251271ce"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/array.js",
+          "sha256": "497b24d473249dab9a101bf29ed115a33bd527f8d109bd9c60f881fd7c665f9c"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/noop.js",
+          "sha256": "2a3956f81e8799b24a446a01cc6fcbcca88376aeb3f620f70092d4167035bb8c"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/variable.js",
+          "sha256": "4ae49f278234edc9758be904e98a09f31bfcbea89c33e5fa34f9bfe34617b746"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/module.js",
+          "sha256": "6f0aeeac32794cf39ba5ab8bdca8c1fcf3593747304def504d2c2e6a0497c6f8"
+        },
+        {
+          "path": "node_modules/@observablehq/runtime/src/runtime.js",
+          "sha256": "53c2c1d8bbcae2ff4e4585037fa5622ff0db50ab39e365000483cc8849e1c832"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/runtime.js",
+          "sha256": "23b8fd3ac579557e673ff7bc6bb1503ab79bc8e092fc930e3ed88c6a29282ad2"
+        }
+      ]
+    },
+    {
+      "path": "_observablehq/stdlib/inputs.f7bf0e12.css",
+      "sha256": "f7bf0e12f9a8e154b08336c5667425d476bdb39ee9a2eb8b129fc860c4617db1",
+      "method": "Installed Framework bundleStyles(stdlib/inputs.css), minify=true; namespace rewrite; no imports",
+      "packages": [
+        {
+          "name": "@observablehq/framework",
+          "version": "1.13.4"
+        }
+      ],
+      "sourceModules": [
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/inputs.css",
+          "sha256": "9888991b4a0d594cbe2d35c9a8b81ba2eb167f2174b245c68dbaf536f9e60b2e"
+        }
+      ]
+    },
+    {
+      "path": "_observablehq/client.7b6ddb1f.js",
+      "sha256": "a77e37f1b505ddd5170a197b8f01f09471d4ea47d3ee0c36ee9c99bb59efd707",
+      "method": "Installed Framework rollupClient, minify=true, keepNames=true; output chunk.modules captured; offline external versions from shipped references, Framework subpath rules and reviewed hashed aliases applied",
+      "packages": [
+        {
+          "name": "@observablehq/framework",
+          "version": "1.13.4"
+        }
+      ],
+      "sourceModules": [
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/pre.js",
+          "sha256": "2099ab857faadbbf855f12a27833c48c4e5bb8bf7966a782335f880b8a0dcc80"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/sidebar.js",
+          "sha256": "4d0e54b42b20dcac8f19c34b94149a6f1f4d34ca3465af51e30c90128cf0d8df"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/toc.js",
+          "sha256": "27cfebab0939a213d0b0fd31f2884cffe45c2eb931678af8c8c9bf8355d99ede"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/inspect.js",
+          "sha256": "500b4e0320dc8ce849accf07eae3aef9185a68f5f37eabe63bd505554c4d79aa"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/recommendedLibraries.js",
+          "sha256": "892d8eea613fa81427cb1dc6ceed8e155af107d00f0e41b7630c26cde8bcace4"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/sampleDatasets.js",
+          "sha256": "58fbefad5ce4cd20bba5dccf7706bce7353468b5bb692522246662462fa953d4"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/main.js",
+          "sha256": "bd9446f33f71f3fc07fabbe61a214f7530c3565fd316bc3d27183fde18742e41"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/index.js",
+          "sha256": "0e3013c85f7167628f3e29d69de8f7d8d510769ebf06508c39c03a61e0259a72"
+        }
+      ]
+    },
+    {
+      "path": "_observablehq/stdlib.23790ac1.js",
+      "sha256": "115ac34804e98703499884ad5ca9ef124c71f387a48495cf04379e36526c74f3",
+      "method": "Installed Framework rollupClient, minify=true, keepNames=true; output chunk.modules captured; offline external versions from shipped references, Framework subpath rules and reviewed hashed aliases applied",
+      "packages": [
+        {
+          "name": "@observablehq/framework",
+          "version": "1.13.4"
+        }
+      ],
+      "sourceModules": [
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/fileAttachment.js",
+          "sha256": "d7d1a66fa5f1625519b4f1308590aeeb2ca1b82e8f1366a890ceef4845394e1a"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/generators/observe.js",
+          "sha256": "238f02acd965fdfb3cd3eb4a957c31e2c174169fecbf899314552f6aaa5e9233"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/generators/dark.js",
+          "sha256": "326687ccaff0f1a97e7f7b89cfefddf33233a885d01f0df3a2a8bb9cc44172e9"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/generators/input.js",
+          "sha256": "c9425cde6bfdcc5ca1014b86cea0949d6b1b60938dd6fadb8cc51314f148e07d"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/generators/now.js",
+          "sha256": "ff6c3bec085334b902c6a1cbec972078039f4ce52c5a618656de3fe6a7bb57c9"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/generators/queue.js",
+          "sha256": "af30ed3ecb2e3257a80d2731cdb758544a6360c39423fbc3e6777c5f0f583a3b"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/generators/width.js",
+          "sha256": "5a677be5ad6ebba7728605c25130d339278a045ac9b73ea13a47ecfe1120536b"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/generators/index.js",
+          "sha256": "f4702482e8ab2f464149b0b0841e5027ca2fa9a7dbdc14a7647deaca179591f2"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/mutable.js",
+          "sha256": "493cc3e9eb56ce6e25bbf1b9f2bd004a6da96403324fe4449ddb6ff91f2e57b8"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/resize.js",
+          "sha256": "a8f62737ba2485cdcc5ae1ab057ba6a5728f998f5a5b5e84176b02a16b1e34b7"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib.js",
+          "sha256": "a0784b8d9cc87dd3d99fcb3c8548d920b0aedd3c6229fd15cf615b8d43b162ce"
+        }
+      ]
+    },
+    {
+      "path": "_observablehq/stdlib/inputs.f7175400.js",
+      "sha256": "6d4667efe31d05068f75c9d9d2674f5709b4f053997acfbefd9087962f08b4e6",
+      "method": "Installed Framework rollupClient, minify=true, keepNames=true; output chunk.modules captured; offline external versions from shipped references, Framework subpath rules and reviewed hashed aliases applied",
+      "packages": [
+        {
+          "name": "isoformat",
+          "version": "0.2.1"
+        },
+        {
+          "name": "@observablehq/inputs",
+          "version": "0.12.0"
+        },
+        {
+          "name": "@observablehq/framework",
+          "version": "1.13.4"
+        }
+      ],
+      "sourceModules": [
+        {
+          "path": "node_modules/isoformat/src/format.js",
+          "sha256": "31673964d158e239d543c4345ae12d879cc34f39b636eac13c31675ef8a7dd27"
+        },
+        {
+          "path": "node_modules/isoformat/src/parse.js",
+          "sha256": "35ae70dfb6a6bc8f518f209f3712ebab2d5e58480d9e516c46760a890242f0be"
+        },
+        {
+          "path": "node_modules/@observablehq/inputs/dist/index.js",
+          "sha256": "c0c5e0e6d2fe60a176e3f8b6912275c9df3cdfab0111473edba270b15ce41071"
+        },
+        {
+          "path": "node_modules/@observablehq/framework/dist/client/stdlib/inputs.js",
+          "sha256": "bcf3119d1297a0c2aecaf281c97420462499bef0181ddd1e16ed2aaf953e0b97"
+        }
+      ]
+    }
+  ]
+}

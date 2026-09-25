@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "gardenId": "naumkeag-garden-rooms",
+  "baselineSha256": "6dd6336a621ce5fc6ca04cba3532825c8ddb2ec4a40d3790915a43cfd15bae5d",
+  "reviewDate": "2026-09-23",
+  "status": "Reviewed additions; not canonical or deployed",
+  "raster": {
+    "id": "naumkeag-garden-rooms-2025-review-z20",
+    "gardenId": "naumkeag-garden-rooms",
+    "sourceId": "source:massgis-aerial-2025",
+    "zoom": 20,
+    "tileOrigin": [
+      310733,
+      388104
+    ],
+    "tileSize": 256,
+    "pixelSize": [
+      2560,
+      3072
+    ],
+    "rotationDegrees": 0,
+    "localOrigin": [
+      -73.31647217273712,
+      42.28985986572721
+    ],
+    "sha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b"
+  },
+  "referenceSources": [
+    "source:naumkeag-map",
+    "source:naumkeag-landscape-tour"
+  ],
+  "method": "Manual visual digitization of the cached 2025 orthophoto; visitor map used for contextual identification, not geometric fitting.",
+  "limits": [
+    "Visible roof envelopes are not ground footprints.",
+    "Canopy obscures parts of garden boundaries; low-confidence envelopes require closer review.",
+    "No plant species or surveyed accuracy inferred.",
+    "Bed design and plant placements are outside this pass.",
+    "Western approach trace indicates visible circulation only; no stair count, slope, accessibility or surveyed width inferred."
+  ],
+  "features": [
+    {
+      "id": "naumkeag-chinese-pool",
+      "name": "Chinese Garden visible pool",
+      "kind": "water",
+      "geometryType": "Polygon",
+      "observedRasterPixels": [
+        [
+          1733.33,
+          1309.2
+        ],
+        [
+          1754.67,
+          1303.87
+        ],
+        [
+          1776,
+          1376.8
+        ],
+        [
+          1745.78,
+          1378.58
+        ],
+        [
+          1722.67,
+          1353.67
+        ],
+        [
+          1733.33,
+          1309.2
+        ]
+      ],
+      "confidence": "medium",
+      "digitizationUncertaintyPixels": 8,
+      "status": "visually reviewed follow-up; pending canonical integration"
+    },
+    {
+      "id": "naumkeag-chinese-west-approach",
+      "name": "Chinese Garden western approach centerline",
+      "kind": "path",
+      "geometryType": "LineString",
+      "observedRasterPixels": [
+        [
+          1326.22,
+          1307.42
+        ],
+        [
+          1372.44,
+          1294.97
+        ],
+        [
+          1422.22,
+          1280.74
+        ],
+        [
+          1470.22,
+          1268.29
+        ],
+        [
+          1514.67,
+          1254.06
+        ]
+      ],
+      "confidence": "medium",
+      "digitizationUncertaintyPixels": 8,
+      "status": "visually reviewed follow-up; pending canonical integration"
+    }
+  ]
+}

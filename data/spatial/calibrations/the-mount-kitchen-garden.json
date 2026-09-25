@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "gardenId": "the-mount-kitchen-garden",
+  "calibrationRevision": 3,
+  "method": "direct-observation",
+  "origin": [
+    -73.28225255012512,
+    42.3348783508493
+  ],
+  "localCoordinateSystem": {
+    "unit": "inch",
+    "xAxis": "east",
+    "yAxis": "south"
+  },
+  "controlPoints": [
+    {
+      "id": "historical-coordinate-origin",
+      "role": "coordinate-frame",
+      "expectedLocal": [
+        0,
+        0
+      ],
+      "targetLonLat": [
+        -73.28225255012512,
+        42.3348783508493
+      ],
+      "observation": "Historical coordinate-frame origin retained for saved-workspace compatibility; not evidence of a current garden feature."
+    }
+  ],
+  "maximumResidualFeet": 0.02,
+  "imageryCoverageCheck": {
+    "viewport": {
+      "x": -1085.1772430058238,
+      "y": 12193.264667109188,
+      "width": 6633.993991473568,
+      "height": 9176.256890345807
+    },
+    "bearing": 35,
+    "imagery": {
+      "tileUrl": "https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Aerial_Imagery_2025/MapServer/tile/{z}/{y}/{x}",
+      "zoom": 19,
+      "minZoom": 7,
+      "maxZoom": 20,
+      "coverage": "parcel-and-viewport",
+      "tilePadding": 1,
+      "maxTileCount": 384
+    }
+  },
+  "sources": [
+    {
+      "id": "source:massgis-aerial-2025",
+      "url": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery",
+      "role": "orthophoto registration",
+      "vintage": 2025
+    },
+    {
+      "id": "source:mount-gardens",
+      "url": "https://edithwharton.org/the-gardens/",
+      "role": "historic garden interpretation"
+    },
+    {
+      "id": "source:mount-estate-map",
+      "url": "https://www.sculpturenow.org/wp-content/uploads/2018/06/sculpture-guide-2018.pdf",
+      "role": "estate-landmark cross-reference",
+      "vintage": 2018
+    }
+  ],
+  "assumptions": [
+    "The origin is a historical coordinate frame retained for existing user edits; conversion residuals do not measure positional accuracy.",
+    "Site geometry is manually interpreted from georeferenced 2025 aerial imagery. Source pixel picks and uncertainty are retained per feature.",
+    "Publisher diagrams inform identity and context; perspective and canopy prevent treating them as surveyed geometry.",
+    "Parcel ownership and feature interpretation do not establish public access. Planting-bed design is deferred."
+  ],
+  "operatorNotes": [
+    "Add distributed control points only if a plan with identifiable surviving landmarks is acquired; do not imply precision by inventing points on the conceptual bed grid.",
+    "September 23 site reconstruction retains this coordinate origin; do not interpret conversion residuals as visual alignment or surveyed accuracy."
+  ],
+  "originRole": "historical-coordinate-frame"
+}

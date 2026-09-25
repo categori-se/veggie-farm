@@ -1,0 +1,411 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "schemaVersion": "1.0.0",
+    "gardenId": "berkshire-botanical-garden",
+    "layer": "parcels",
+    "coordinateReferenceSystem": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+    "generatedBy": "scripts/build-bbg-spatial-baseline.mjs",
+    "curationPolicy": "Canonical features are rebuilt only from maintained GIS/aerial interpretation and bounded public-provider snapshots. User-supplied KML/KMZ is indicative comparison evidence only and contributes zero parcel, site, bed, or plant features. Provider roofprints use representative-point parcel membership; crossing linear and areal layers must use true intersection plus clipping before any future promotion."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bbg-parcel-215-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.33516089761378,
+              42.29863320810301
+            ],
+            [
+              -73.33481358252021,
+              42.299697894282836
+            ],
+            [
+              -73.33702272489342,
+              42.30092678639225
+            ],
+            [
+              -73.33715567879969,
+              42.300755675435916
+            ],
+            [
+              -73.33715537341061,
+              42.30048585307181
+            ],
+            [
+              -73.3369926748123,
+              42.29914508607478
+            ],
+            [
+              -73.33696661720076,
+              42.29901249725596
+            ],
+            [
+              -73.33693542631964,
+              42.29888102131546
+            ],
+            [
+              -73.3368991492982,
+              42.29875085691283
+            ],
+            [
+              -73.33685784095088,
+              42.2986222007259
+            ],
+            [
+              -73.33516089761378,
+              42.29863320810301
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "berkshire-botanical-garden",
+        "layer": "parcels",
+        "name": "MassGIS parcel 215_1",
+        "kind": "tax-parcel",
+        "parcelId": "bbg-parcel-215-1",
+        "mapParcelId": "215_1",
+        "sourceFeatureId": "761705",
+        "acreage": 8.2,
+        "fiscalYear": 2026,
+        "provenance": {
+          "sourceId": "massgis-l3-parcels",
+          "sourceFeatureId": "761705",
+          "mapParcelId": "215_1",
+          "geometryMethod": "MassGIS Level 3 parcel geometry in CRS84",
+          "confidence": "source-explicit",
+          "surveyStatus": "assessor mapping; not a legal survey",
+          "retrievedAt": "2026-08-24T04:11:10.563Z",
+          "snapshot": {
+            "path": "data/spatial/source-cache/berkshire-botanical-garden/massgis-l3-parcels.geojson",
+            "queryFingerprint": "674850931b32c2a0f3dad7732b58824d3ad5fe17f62534d93711d7f53b34a469",
+            "sha256": "01ed4ffa0e3c53af5ef28005aa433f7ef4263a2b0147b351fe21fef2751fa72c",
+            "byteLength": 211606
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bbg-parcel-215-29",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.33614499223535,
+              42.302995605954
+            ],
+            [
+              -73.33714662067382,
+              42.30302573661912
+            ],
+            [
+              -73.3372446131944,
+              42.302372808477784
+            ],
+            [
+              -73.33783482792295,
+              42.30212326109437
+            ],
+            [
+              -73.33818277237299,
+              42.301819722095445
+            ],
+            [
+              -73.3372132471692,
+              42.30128545650967
+            ],
+            [
+              -73.33720936272717,
+              42.3013105220544
+            ],
+            [
+              -73.3372016698636,
+              42.30133469208281
+            ],
+            [
+              -73.33719035159464,
+              42.30135739158084
+            ],
+            [
+              -73.33717567718615,
+              42.3013780805189
+            ],
+            [
+              -73.33715799574782,
+              42.30139626669939
+            ],
+            [
+              -73.33713772792768,
+              42.30141151746626
+            ],
+            [
+              -73.33711535590481,
+              42.301423469998035
+            ],
+            [
+              -73.33701238985292,
+              42.30147494108062
+            ],
+            [
+              -73.33626872215203,
+              42.30146279127351
+            ],
+            [
+              -73.33628459399905,
+              42.30156003634275
+            ],
+            [
+              -73.33624863797411,
+              42.301929795561584
+            ],
+            [
+              -73.33614499223535,
+              42.302995605954
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "berkshire-botanical-garden",
+        "layer": "parcels",
+        "name": "MassGIS parcel 215_29",
+        "kind": "tax-parcel",
+        "parcelId": "bbg-parcel-215-29",
+        "mapParcelId": "215_29",
+        "sourceFeatureId": "130942",
+        "acreage": 4.8,
+        "fiscalYear": 2026,
+        "provenance": {
+          "sourceId": "massgis-l3-parcels",
+          "sourceFeatureId": "130942",
+          "mapParcelId": "215_29",
+          "geometryMethod": "MassGIS Level 3 parcel geometry in CRS84",
+          "confidence": "source-explicit",
+          "surveyStatus": "assessor mapping; not a legal survey",
+          "retrievedAt": "2026-08-24T04:11:10.563Z",
+          "snapshot": {
+            "path": "data/spatial/source-cache/berkshire-botanical-garden/massgis-l3-parcels.geojson",
+            "queryFingerprint": "674850931b32c2a0f3dad7732b58824d3ad5fe17f62534d93711d7f53b34a469",
+            "sha256": "01ed4ffa0e3c53af5ef28005aa433f7ef4263a2b0147b351fe21fef2751fa72c",
+            "byteLength": 211606
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bbg-parcel-215-31",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.33480448870269,
+              42.301393473286254
+            ],
+            [
+              -73.33544701124386,
+              42.30152551278439
+            ],
+            [
+              -73.33545268911978,
+              42.30152411724935
+            ],
+            [
+              -73.33571509151483,
+              42.30145825041987
+            ],
+            [
+              -73.33626872215203,
+              42.30146279127351
+            ],
+            [
+              -73.33701238985292,
+              42.30147494108062
+            ],
+            [
+              -73.33711535590481,
+              42.301423469998035
+            ],
+            [
+              -73.33713772792768,
+              42.30141151746626
+            ],
+            [
+              -73.33715799574782,
+              42.30139626669939
+            ],
+            [
+              -73.33717567718615,
+              42.3013780805189
+            ],
+            [
+              -73.33719035159464,
+              42.30135739158084
+            ],
+            [
+              -73.3372016698636,
+              42.30133469208281
+            ],
+            [
+              -73.33720936272717,
+              42.3013105220544
+            ],
+            [
+              -73.3372132471692,
+              42.30128545650967
+            ],
+            [
+              -73.33485086648318,
+              42.299983573531996
+            ],
+            [
+              -73.3347289661893,
+              42.29996415610867
+            ],
+            [
+              -73.33434732713378,
+              42.30118057493444
+            ],
+            [
+              -73.33480448870269,
+              42.301393473286254
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "berkshire-botanical-garden",
+        "layer": "parcels",
+        "name": "MassGIS parcel 215_31",
+        "kind": "tax-parcel",
+        "parcelId": "bbg-parcel-215-31",
+        "mapParcelId": "215_31",
+        "sourceFeatureId": "130944",
+        "acreage": 5.46,
+        "fiscalYear": 2026,
+        "provenance": {
+          "sourceId": "massgis-l3-parcels",
+          "sourceFeatureId": "130944",
+          "mapParcelId": "215_31",
+          "geometryMethod": "MassGIS Level 3 parcel geometry in CRS84",
+          "confidence": "source-explicit",
+          "surveyStatus": "assessor mapping; not a legal survey",
+          "retrievedAt": "2026-08-24T04:11:10.563Z",
+          "snapshot": {
+            "path": "data/spatial/source-cache/berkshire-botanical-garden/massgis-l3-parcels.geojson",
+            "queryFingerprint": "674850931b32c2a0f3dad7732b58824d3ad5fe17f62534d93711d7f53b34a469",
+            "sha256": "01ed4ffa0e3c53af5ef28005aa433f7ef4263a2b0147b351fe21fef2751fa72c",
+            "byteLength": 211606
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bbg-parcel-215-32",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.33597519630868,
+              42.30293546929188
+            ],
+            [
+              -73.33614499223535,
+              42.302995605954
+            ],
+            [
+              -73.33624863797411,
+              42.301929795561584
+            ],
+            [
+              -73.33567543196565,
+              42.30192434265478
+            ],
+            [
+              -73.33549533901696,
+              42.301852105068775
+            ],
+            [
+              -73.33553845509283,
+              42.30161049511457
+            ],
+            [
+              -73.33545154690512,
+              42.30152961502963
+            ],
+            [
+              -73.33544701124386,
+              42.30152551278439
+            ],
+            [
+              -73.3350687469896,
+              42.30152048570394
+            ],
+            [
+              -73.33480448870269,
+              42.301393473286254
+            ],
+            [
+              -73.33434732713378,
+              42.30118057493444
+            ],
+            [
+              -73.3341957015491,
+              42.30166384734133
+            ],
+            [
+              -73.33419149523897,
+              42.30252893539336
+            ],
+            [
+              -73.33597519630868,
+              42.30293546929188
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "berkshire-botanical-garden",
+        "layer": "parcels",
+        "name": "MassGIS parcel 215_32",
+        "kind": "tax-parcel",
+        "parcelId": "bbg-parcel-215-32",
+        "mapParcelId": "215_32",
+        "sourceFeatureId": "119824",
+        "acreage": 5.4,
+        "fiscalYear": 2026,
+        "provenance": {
+          "sourceId": "massgis-l3-parcels",
+          "sourceFeatureId": "119824",
+          "mapParcelId": "215_32",
+          "geometryMethod": "MassGIS Level 3 parcel geometry in CRS84",
+          "confidence": "source-explicit",
+          "surveyStatus": "assessor mapping; not a legal survey",
+          "retrievedAt": "2026-08-24T04:11:10.563Z",
+          "snapshot": {
+            "path": "data/spatial/source-cache/berkshire-botanical-garden/massgis-l3-parcels.geojson",
+            "queryFingerprint": "674850931b32c2a0f3dad7732b58824d3ad5fe17f62534d93711d7f53b34a469",
+            "sha256": "01ed4ffa0e3c53af5ef28005aa433f7ef4263a2b0147b351fe21fef2751fa72c",
+            "byteLength": 211606
+          }
+        }
+      }
+    }
+  ],
+  "bbox": [
+    -73.33818277237299,
+    42.2986222007259,
+    -73.33419149523897,
+    42.30302573661912
+  ]
+}

@@ -1,0 +1,51 @@
+# SPDX-License-Identifier: GPL-3.0-only
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Narrow GitHub environment OIDC role for community static release uploads
+Parameters:
+  GitHubOidcProviderArn:
+    Type: String
+    Description: Existing token.actions.githubusercontent.com IAM OIDC provider in this AWS account
+  Repository:
+    Type: String
+    AllowedPattern: '[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+'
+    Description: Exact GitHub owner/repository; no wildcards
+  SiteBucket:
+    Type: String
+    Description: BucketName output of the static-site stack
+  DistributionId:
+    Type: String
+    Description: DistributionId output of the static-site stack
+Resources:
+  DeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Ref GitHubOidcProviderArn}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: !Sub 'repo:${Repository}:environment:community-production'
+      Policies:
+        - PolicyName: CommunityReleaseOnly
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: s3:ListBucket
+                Resource: !Sub 'arn:${AWS::Partition}:s3:::${SiteBucket}'
+                Condition: {StringLike: {'s3:prefix': ['releases/*']}}
+              - Effect: Allow
+                Action: s3:PutObject
+                Resource:
+                  - !Sub 'arn:${AWS::Partition}:s3:::${SiteBucket}/releases/*'
+                  - !Sub 'arn:${AWS::Partition}:s3:::${SiteBucket}/operations/*'
+              - Effect: Allow
+                Action: [cloudfront:GetDistribution, cloudfront:GetDistributionConfig, cloudfront:UpdateDistribution, cloudfront:CreateInvalidation, cloudfront:GetInvalidation]
+                Resource: !Sub 'arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${DistributionId}'
+Outputs:
+  RoleArn: {Value: !GetAtt DeployRole.Arn}

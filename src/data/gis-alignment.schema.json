@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veggie.farm/schemas/gis-alignment-1.0.0.json",
+  "title": "veggie.farm garden GIS alignment manifest",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "gardenId",
+    "calibrationRevision",
+    "method",
+    "origin",
+    "controlPoints",
+    "sources",
+    "assumptions"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "1.0.0"},
+    "gardenId": {"type": "string", "minLength": 1},
+    "calibrationRevision": {"type": "integer", "minimum": 1},
+    "method": {"enum": ["direct-observation", "similarity"]},
+    "origin": {
+      "description": "CRS84 [longitude, latitude] anchor for the application's local inch plane.",
+      "$ref": "#/$defs/position"
+    },
+    "localCoordinateSystem": {
+      "type": "object",
+      "properties": {
+        "unit": {"const": "inch"},
+        "xAxis": {"const": "east"},
+        "yAxis": {"const": "south"}
+      },
+      "required": ["unit", "xAxis", "yAxis"],
+      "additionalProperties": false
+    },
+    "digitizationRasters": {
+      "description": "Reproducible registrations for stitched XYZ imagery used to trace editable geometry.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "sourceId", "zoom", "tileOrigin", "tileSize", "pixelSize", "rotationDegrees"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "sourceId": {"type": "string", "minLength": 1},
+          "zoom": {"type": "integer", "minimum": 0, "maximum": 23},
+          "tileOrigin": {"$ref": "#/$defs/position"},
+          "tileSize": {"type": "integer", "minimum": 1},
+          "pixelSize": {"$ref": "#/$defs/positiveSize"},
+          "rotationDegrees": {"type": "number"},
+          "observation": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "controlPoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "targetLonLat"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "featureId": {"type": "string"},
+          "role": {"type": "string"},
+          "digitizationRasterId": {"type": "string", "minLength": 1},
+          "sourcePixel": {"$ref": "#/$defs/position"},
+          "sourceLocal": {"$ref": "#/$defs/position"},
+          "expectedLocal": {"$ref": "#/$defs/position"},
+          "targetLonLat": {"$ref": "#/$defs/position"},
+          "weight": {"type": "number", "exclusiveMinimum": 0},
+          "observation": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "maximumResidualFeet": {"type": "number", "minimum": 0},
+    "maximumRasterPixelResidual": {"type": "number", "minimum": 0},
+    "imageryCoverageCheck": {
+      "type": "object",
+      "required": ["viewport", "bearing", "imagery"],
+      "properties": {
+        "viewport": {
+          "type": "object",
+          "required": ["x", "y", "width", "height"],
+          "properties": {
+            "x": {"type": "number"},
+            "y": {"type": "number"},
+            "width": {"type": "number", "exclusiveMinimum": 0},
+            "height": {"type": "number", "exclusiveMinimum": 0}
+          },
+          "additionalProperties": false
+        },
+        "bearing": {"type": "number"},
+        "imagery": {
+          "type": "object",
+          "required": ["tileUrl", "zoom", "minZoom", "maxZoom", "coverage", "tilePadding", "maxTileCount"],
+          "properties": {
+            "tileUrl": {"type": "string", "pattern": "\\{z\\}.*\\{y\\}.*\\{x\\}|\\{z\\}.*\\{x\\}.*\\{y\\}"},
+            "zoom": {"type": "integer", "minimum": 0, "maximum": 23},
+            "minZoom": {"type": "integer", "minimum": 0, "maximum": 23},
+            "maxZoom": {"type": "integer", "minimum": 0, "maximum": 23},
+            "coverage": {"enum": ["parcel", "viewport", "parcel-and-viewport"]},
+            "tilePadding": {"type": "integer", "minimum": 0},
+            "maxTileCount": {"type": "integer", "minimum": 1}
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "url", "role"],
+        "properties": {
+          "id": {"type": "string"},
+          "url": {"type": "string", "format": "uri"},
+          "role": {"type": "string"},
+          "vintage": {"type": ["string", "number"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "operatorNotes": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "position": {
+      "type": "array",
+      "prefixItems": [{"type": "number"}, {"type": "number"}],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "positiveSize": {
+      "type": "array",
+      "prefixItems": [{"type": "number", "exclusiveMinimum": 0}, {"type": "number", "exclusiveMinimum": 0}],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    }
+  },
+  "additionalProperties": false
+}

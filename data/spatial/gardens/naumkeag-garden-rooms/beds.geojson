@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "gardenId": "naumkeag-garden-rooms",
+    "layer": "beds",
+    "status": "Reviewed site interpretation; planting design deferred"
+  },
+  "features": []
+}

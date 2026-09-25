@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "gardenId": "the-mount-kitchen-garden",
+    "layer": "beds",
+    "status": "Reviewed site interpretation; planting design deferred"
+  },
+  "features": []
+}

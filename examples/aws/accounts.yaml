@@ -1,0 +1,186 @@
+# SPDX-License-Identifier: GPL-3.0-only
+# Parameterized reference from the project hosting configuration; not a deployed stack export.
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: veggie.farm private account saves; review before deployment
+Parameters:
+  UserPoolId:
+    Type: String
+    AllowedPattern: 'us-east-1_[A-Za-z0-9]+'
+  HostedUiBaseUrl:
+    Type: String
+    AllowedPattern: 'https://[a-zA-Z0-9.-]+'
+  StudioOrigin:
+    Type: String
+    Description: Exact HTTPS Studio origin, without a trailing slash
+    AllowedPattern: 'https://[a-z0-9]([a-z0-9.-]*[a-z0-9])?'
+  WebOrigin:
+    Type: String
+    Description: Exact HTTPS site origin, without a trailing slash or path
+    AllowedPattern: 'https://[a-z0-9]([a-z0-9.-]*[a-z0-9])?'
+  CodeBucket:
+    Type: String
+    Description: Existing artifact bucket in the stack region
+    MinLength: 3
+  CodeKey:
+    Type: String
+    Description: Key of the reviewed account-service ZIP; use a content-addressed key
+    MinLength: 1
+Resources:
+  WebClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      UserPoolId: !Ref UserPoolId
+      ClientName: !Sub '${AWS::StackName}-web'
+      GenerateSecret: false
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthFlows: [code]
+      AllowedOAuthScopes: [openid, email, profile]
+      SupportedIdentityProviders: [COGNITO]
+      CallbackURLs: [!Sub '${WebOrigin}/login', !Sub '${StudioOrigin}/login']
+      LogoutURLs: [!Sub '${WebOrigin}/login', !Sub '${StudioOrigin}/login']
+      PreventUserExistenceErrors: ENABLED
+      EnableTokenRevocation: true
+      AccessTokenValidity: 60
+      IdTokenValidity: 60
+      RefreshTokenValidity: 1
+      TokenValidityUnits: {AccessToken: minutes, IdToken: minutes, RefreshToken: days}
+  Saves:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      VersioningConfiguration: {Status: Enabled}
+      OwnershipControls:
+        Rules: [{ObjectOwnership: BucketOwnerEnforced}]
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}
+  SavesPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Saves
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource: [!GetAtt Saves.Arn, !Sub '${Saves.Arn}/*']
+            Condition: {Bool: {'aws:SecureTransport': 'false'}}
+  Logs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${AWS::StackName}-accounts'
+      RetentionInDays: 7
+  ExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: {Service: lambda.amazonaws.com}
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: PrivateSaves
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: [s3:ListBucket, s3:ListBucketVersions]
+                Resource: !GetAtt Saves.Arn
+                Condition: {StringLike: {'s3:prefix': ['owners/*/plans/*', 'owners/*/workspaces/*', 'collaboration/workspaces/*']}}
+              - Effect: Allow
+                Action: [s3:GetObject, s3:GetObjectVersion, s3:PutObject, s3:DeleteObject]
+                Resource: !Sub '${Saves.Arn}/owners/*/plans/*'
+              - Effect: Allow
+                Action: [s3:GetObject, s3:GetObjectVersion, s3:PutObject]
+                Resource: [!Sub '${Saves.Arn}/owners/*/workspaces/*', !Sub '${Saves.Arn}/collaboration/workspaces/*', !Sub '${Saves.Arn}/collaboration/editions/*']
+              - Effect: Allow
+                Action: [cognito-idp:ListUsers, cognito-idp:AdminGetUser]
+                Resource: !Sub 'arn:${AWS::Partition}:cognito-idp:${AWS::Region}:${AWS::AccountId}:userpool/${UserPoolId}'
+              - Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents]
+                Resource: !GetAtt Logs.Arn
+  Api:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: '$default'
+      DefaultRouteSettings:
+        ThrottlingRateLimit: 2
+        ThrottlingBurstLimit: 4
+      CorsConfiguration:
+        AllowOrigins: [!Ref WebOrigin, !Ref StudioOrigin]
+        AllowMethods: [GET, POST, PUT, DELETE, OPTIONS]
+        AllowHeaders: [authorization, content-type, if-match]
+        MaxAge: 600
+      Auth:
+        DefaultAuthorizer: Cognito
+        Authorizers:
+          Cognito:
+            IdentitySource: '$request.header.Authorization'
+            JwtConfiguration:
+              issuer: !Sub 'https://cognito-idp.${AWS::Region}.amazonaws.com/${UserPoolId}'
+              audience: [!Ref WebClient]
+            AuthorizationScopes: [openid]
+  Accounts:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub '${AWS::StackName}-accounts'
+      CodeUri:
+        Bucket: !Ref CodeBucket
+        Key: !Ref CodeKey
+      Handler: services/accounts/index.handler
+      Runtime: nodejs24.x
+      Architectures: [arm64]
+      MemorySize: 256
+      Timeout: 10
+      ReservedConcurrentExecutions: 2
+      Role: !GetAtt ExecutionRole.Arn
+      Environment:
+        Variables:
+          SAVE_BUCKET: !Ref Saves
+          COGNITO_ISSUER: !Sub 'https://cognito-idp.${AWS::Region}.amazonaws.com/${UserPoolId}'
+          COGNITO_CLIENT_ID: !Ref WebClient
+      Events:
+        List:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: /plans, Method: GET}
+        Create:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: /plans, Method: POST}
+        Read:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: '/plans/{id}', Method: GET}
+        Update:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: '/plans/{id}', Method: PUT}
+        Delete:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: '/plans/{id}', Method: DELETE}
+        Workspaces:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: '/workspaces', Method: ANY}
+        WorkspaceResources:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: '/workspaces/{proxy+}', Method: ANY}
+        PublicCollection:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref Api
+            Path: '/public/collections/{workspace}/{collection}'
+            Method: GET
+            Auth: {Authorizer: NONE}
+Outputs:
+  AccountConfigJson:
+    Value: !Sub '{"version":1,"apiBaseUrl":"https://${Api}.execute-api.${AWS::Region}.amazonaws.com"}'
+  AuthConfigJson:
+    Value: !Sub '{"version":1,"region":"${AWS::Region}","userPoolId":"${UserPoolId}","clientId":"${WebClient}","hostedUiBaseUrl":"${HostedUiBaseUrl}","redirectUri":"${WebOrigin}/login","logoutUri":"${WebOrigin}/login","scopes":["openid","email","profile"]}'
+  PrivateBucket:
+    Value: !Ref Saves

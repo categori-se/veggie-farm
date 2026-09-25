@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "gardenId": "naumkeag-garden-rooms",
+  "calibrationRevision": 6,
+  "method": "direct-observation",
+  "origin": [
+    -73.31647217273712,
+    42.28985986572721
+  ],
+  "localCoordinateSystem": {
+    "unit": "inch",
+    "xAxis": "east",
+    "yAxis": "south"
+  },
+  "controlPoints": [
+    {
+      "id": "historical-coordinate-origin",
+      "role": "coordinate-frame",
+      "expectedLocal": [
+        0,
+        0
+      ],
+      "targetLonLat": [
+        -73.31647217273712,
+        42.28985986572721
+      ],
+      "observation": "Historical coordinate-frame origin retained for saved-workspace compatibility; not evidence of a current garden feature."
+    }
+  ],
+  "maximumResidualFeet": 0.02,
+  "imageryCoverageCheck": {
+    "viewport": {
+      "x": -4896.500410357249,
+      "y": -3632.60142919577,
+      "width": 8131.474525104043,
+      "height": 8317.488908344963
+    },
+    "bearing": 35,
+    "imagery": {
+      "tileUrl": "https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Aerial_Imagery_2025/MapServer/tile/{z}/{y}/{x}",
+      "zoom": 20,
+      "minZoom": 7,
+      "maxZoom": 20,
+      "coverage": "parcel-and-viewport",
+      "tilePadding": 1,
+      "maxTileCount": 384
+    }
+  },
+  "sources": [
+    {
+      "id": "source:massgis-aerial-2025",
+      "url": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery",
+      "role": "current orthophoto registration",
+      "vintage": 2025
+    },
+    {
+      "id": "source:naumkeag-landscape-tour",
+      "url": "https://www.lovearboreal.com/files/Naumkeag%20Garden%20Tour.pdf",
+      "role": "room sequence and historic aerial interpretation"
+    },
+    {
+      "id": "source:naumkeag-map",
+      "url": "https://thetrustees.org/wp-content/uploads/2023/03/naumkeag-trail-map.pdf",
+      "role": "official landmark reference"
+    },
+    {
+      "id": "source:naumkeag-archive-plans",
+      "url": "https://savingplaces.org/stories/the-making-of-naumkeag-gardens",
+      "role": "archival plan context"
+    }
+  ],
+  "assumptions": [
+    "The origin is a historical coordinate frame retained for existing user edits; conversion residuals do not measure positional accuracy.",
+    "Site geometry is manually interpreted from georeferenced 2025 aerial imagery. Source pixel picks and uncertainty are retained per feature.",
+    "Publisher diagrams inform identity and context; perspective and canopy prevent treating them as surveyed geometry.",
+    "Parcel ownership and feature interpretation do not establish public access. Planting-bed design is deferred."
+  ],
+  "operatorNotes": [
+    "The Rose Garden is the local origin; moving it requires rebasing every other local feature and a starter-layout migration.",
+    "September 23 site reconstruction retains this coordinate origin; do not interpret conversion residuals as visual alignment or surveyed accuracy."
+  ],
+  "originRole": "historical-coordinate-frame"
+}

@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1.0.0",
+  "gardenId": "berkshire-botanical-garden",
+  "calibrationRevision": 3,
+  "method": "direct-observation",
+  "origin": [-73.33659599658195, 42.29949110795708],
+  "localCoordinateSystem": {
+    "unit": "inch",
+    "xAxis": "east",
+    "yAxis": "south"
+  },
+  "digitizationRasters": [
+    {
+      "id": "massgis-2025-south-campus-z20",
+      "sourceId": "source:massgis-aerial-2025",
+      "zoom": 20,
+      "tileOrigin": [310678, 388067],
+      "tileSize": 256,
+      "pixelSize": [1792, 2560],
+      "rotationDegrees": 0,
+      "observation": "North-up seven-by-ten XYZ mosaic used for direct tracing. Pixel [430.5893604122102, 1449.1497353976592] is the stored local origin; the visitor-map artwork is never substituted for this registration."
+    },
+    {
+      "id": "massgis-2025-north-campus-z20",
+      "sourceId": "source:massgis-aerial-2025",
+      "zoom": 20,
+      "tileOrigin": [310676, 388063],
+      "tileSize": 256,
+      "pixelSize": [3072, 2304],
+      "rotationDegrees": 0,
+      "observation": "North-up twelve-by-nine XYZ mosaic used for northern garden rooms. The revision-3 Center House control is pixel [1015, 650] and Lucy's Garden is pixel [2100, 760], providing independent checks on the raster origin."
+    },
+    {
+      "id": "massgis-2025-south-campus-wide-z20",
+      "sourceId": "source:massgis-aerial-2025",
+      "zoom": 20,
+      "tileOrigin": [310677, 388066],
+      "tileSize": 256,
+      "pixelSize": [2304, 3072],
+      "rotationDegrees": 0,
+      "observation": "North-up nine-by-twelve mosaic used to trace the complete south-campus circulation and bed grids. The stored local origin projects to pixel [686.589360416, 1705.149735391]."
+    }
+  ],
+  "controlPoints": [
+    {
+      "id": "edible-grid-northwest-cell",
+      "featureId": "bbg-edible-west-1",
+      "role": "bed-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [1191, 1118],
+      "expectedLocal": [2198, -2547],
+      "targetLonLat": [-73.33591896005005, 42.30007351993697],
+      "observation": "Center of physical bed r1c3 in the persistent 5-by-7 Edible Gardens grid; the planned West 1 assignment is snapped to this observed footprint."
+    },
+    {
+      "id": "edible-grid-southwest-cell",
+      "featureId": "bbg-edible-west-3",
+      "role": "bed-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [1151, 1152],
+      "expectedLocal": [2023, -2399],
+      "targetLonLat": [-73.33597286423253, 42.300039677387694],
+      "observation": "Center of physical bed r3c3 in the persistent 5-by-7 Edible Gardens grid."
+    },
+    {
+      "id": "edible-grid-northeast-cell",
+      "featureId": "bbg-edible-east-1",
+      "role": "bed-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [1237, 1135],
+      "expectedLocal": [2395, -2472],
+      "targetLonLat": [-73.33585827934178, 42.30005636999646],
+      "observation": "Center of physical bed r1c5, checked against the complete persistent grid and adjoining walk."
+    },
+    {
+      "id": "edible-grid-southeast-cell",
+      "featureId": "bbg-edible-east-4",
+      "role": "bed-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [1176, 1186],
+      "expectedLocal": [2132, -2251],
+      "targetLonLat": [-73.33593928962745, 42.30000583483841],
+      "observation": "Center of physical bed r4c5 in the persistent 5-by-7 Edible Gardens grid."
+    },
+    {
+      "id": "childrens-grid-northwest-bed",
+      "featureId": "bbg-childrens-1",
+      "role": "bed-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [1529, 1660],
+      "expectedLocal": [3668, -198],
+      "targetLonLat": [-73.33546616491726, 42.29953638380004],
+      "observation": "Center of physical teaching bed r1c1 in the aerial-visible 3-by-4 grid beside Mother Earth Lodge."
+    },
+    {
+      "id": "childrens-grid-southeast-bed",
+      "featureId": "bbg-childrens-4",
+      "role": "bed-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [1543, 1744],
+      "expectedLocal": [3728, 168],
+      "targetLonLat": [-73.33544768348327, 42.29945269209033],
+      "observation": "Center of physical teaching bed r4c3 in the aerial-visible 3-by-4 grid beside Mother Earth Lodge."
+    },
+    {
+      "id": "visitor-center-roof-center",
+      "featureId": "bbg-visitor-center",
+      "role": "building-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [776, 797],
+      "expectedLocal": [389, -3939],
+      "targetLonLat": [-73.3364761752849, 42.300391822832935],
+      "observation": "Approximate center of the Barbara Euston Visitor Center and Shop roof visible in the 2025 orthophoto; distinct from Center House."
+    },
+    {
+      "id": "education-center-roof-center",
+      "featureId": "bbg-education-center",
+      "role": "building-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [1290, 1500],
+      "expectedLocal": [2628, -889],
+      "targetLonLat": [-73.33578650977311, 42.299694391918656],
+      "observation": "Approximate center of the irregular Education Center roof complex visible in the 2025 orthophoto."
+    },
+    {
+      "id": "williams-amphitheater-center",
+      "featureId": "bbg-williams-family-amphitheater",
+      "role": "named-landscape-center",
+      "digitizationRasterId": "massgis-2025-south-campus-wide-z20",
+      "sourcePixel": [713, 1598],
+      "expectedLocal": [113, -466],
+      "targetLonLat": [-73.33656118988127, 42.29959766625415],
+      "observation": "Approximate center of the Williams Family Amphitheater area, located from visitor-map relationships and checked against the south-campus orthophoto."
+    },
+    {
+      "id": "center-house-roof-center",
+      "featureId": "bbg-center-house",
+      "role": "building-center",
+      "digitizationRasterId": "massgis-2025-north-campus-z20",
+      "sourcePixel": [1015, 650],
+      "expectedLocal": [315, -7909],
+      "targetLonLat": [-73.3364989690535, 42.30129962635087],
+      "observation": "Approximate Center House roof center identified in the north-campus orthophoto and visitor map; this point anchors nearby lower-confidence garden-area polygons."
+    },
+    {
+      "id": "lucys-garden-area-center",
+      "featureId": "bbg-lucys-garden",
+      "role": "named-garden-area-center",
+      "digitizationRasterId": "massgis-2025-north-campus-z20",
+      "sourcePixel": [2100, 760],
+      "expectedLocal": [5039, -7431],
+      "targetLonLat": [-73.33504386415055, 42.30119032406332],
+      "observation": "Approximate center of Lucy's Garden derived from the visitor-map sequence and aerial context; its editable polygon is schematic-located, not surveyed."
+    }
+  ],
+  "maximumResidualFeet": 0.02,
+  "maximumRasterPixelResidual": 0.75,
+  "imageryCoverageCheck": {
+    "viewport": {"x": -5600, "y": -16000, "width": 14000, "height": 20500},
+    "bearing": 0,
+    "imagery": {
+      "tileUrl": "https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Aerial_Imagery_2025/MapServer/tile/{z}/{y}/{x}",
+      "zoom": 20,
+      "minZoom": 7,
+      "maxZoom": 20,
+      "coverage": "parcel-and-viewport",
+      "tilePadding": 1,
+      "maxTileCount": 384
+    }
+  },
+  "sources": [
+    {
+      "id": "source:massgis-aerial-2025",
+      "url": "https://www.mass.gov/info-details/massgis-data-2025-aerial-imagery",
+      "role": "primary natural-color orthophoto registration",
+      "vintage": 2025
+    },
+    {
+      "id": "source:massgis-aerial-2021",
+      "url": "https://www.mass.gov/info-details/massgis-data-2021-aerial-imagery",
+      "role": "cross-vintage check for persistent paths and planting divisions",
+      "vintage": 2021
+    },
+    {
+      "id": "source:massgis-aerial-2019",
+      "url": "https://www.mass.gov/info-details/massgis-data-2019-aerial-imagery",
+      "role": "cross-vintage check for persistent paths and planting divisions",
+      "vintage": 2019
+    },
+    {
+      "id": "source:bbg-visitor-map",
+      "url": "https://www.berkshirebotanical.org/sites/default/files/2026-03/2024%20BBG%20Map%20Self%20Guided%20Tour%20Kiosk.pdf",
+      "role": "named garden and landmark interpretation",
+      "vintage": 2024
+    }
+  ],
+  "assumptions": [
+    "The four MassGIS parcel members (215_1, 215_29, 215_31, and 215_32) are authoritative only for assessor-parcel context; together they total 23.86 acres and closely approximate the published 24-acre campus, but they are not evidence for interior garden boundaries.",
+    "The application local plane uses x east, y south, and inches, matching screen orientation while retaining a reversible CRS84 origin.",
+    "Visible planting edges vary by season, so persistent paths and repeated plot divisions across 2019, 2021, and 2025 receive more weight than crop edges.",
+    "Bed centers and dimensions are aerial interpretations for planning and remain editable; none are survey-grade observations.",
+    "The official visitor map is authoritative for the numbered 1–33 landmark names and schematic relationships, not for metric geometry.",
+    "The visitor-map page is rotated: north is approximately 33 degrees counterclockwise from page-up. A roughly +30 to +33 degree browser bearing may aid visual comparison, but that presentation rotation is never applied to canonical coordinates.",
+    "South-campus roofs, paths, and bed grids have the clearest orthophoto evidence; north-campus collection polygons are deliberately lower-confidence, schematic-located interpretations pending field or plan verification."
+  ],
+  "operatorNotes": [
+    "Control-point coordinates record the completed revision-3 orthophoto trace across both campus areas and allow drift to be detected in tests.",
+    "The direct-observation residual measures reproducibility of the stored local-to-CRS84 conversion, not the real-world positional accuracy of interpreted garden edges; use the garden API's 15-foot estimate and per-feature confidence when communicating accuracy.",
+    "When replacing these observations, increment both this calibrationRevision and the garden API layoutCalibration revision so saved starter layouts can migrate safely."
+  ]
+}

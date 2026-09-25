@@ -1,0 +1,3946 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "gardenId": "naumkeag-garden-rooms",
+    "layer": "site",
+    "status": "Reviewed site interpretation; planting design deferred"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "naumkeag-rose-room",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31655025184155,
+              42.28991602748216
+            ],
+            [
+              -73.31640243530273,
+              42.28993544251281
+            ],
+            [
+              -73.31634759753942,
+              42.2899001442564
+            ],
+            [
+              -73.31632375270128,
+              42.28985073856922
+            ],
+            [
+              -73.31630229502916,
+              42.28980132292245
+            ],
+            [
+              -73.3163785904646,
+              42.28976073678406
+            ],
+            [
+              -73.31646919548511,
+              42.28976073678406
+            ],
+            [
+              -73.31651687175035,
+              42.28979073739339
+            ],
+            [
+              -73.31655025184155,
+              42.28991602748216
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Rose Garden area",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -253.52254149373647,
+                -245.60578024448307
+              ],
+              [
+                226.43717205761615,
+                -330.5113134787035
+              ],
+              [
+                404.49517141137943,
+                -176.14548545085987
+              ],
+              [
+                481.9192660018512,
+                39.914756243681076
+              ],
+              [
+                551.5922420195792,
+                256.01855308408057
+              ],
+              [
+                303.8612666480879,
+                433.50927066474424
+              ],
+              [
+                9.667125431688284,
+                433.50927066474424
+              ],
+              [
+                -145.13751815770124,
+                302.3110367646905
+              ],
+              [
+                -253.52254149373647,
+                -245.60578024448307
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1297.78,
+              1629.39
+            ],
+            [
+              1408,
+              1609.82
+            ],
+            [
+              1448.89,
+              1645.4
+            ],
+            [
+              1466.67,
+              1695.2
+            ],
+            [
+              1482.67,
+              1745.01
+            ],
+            [
+              1425.78,
+              1785.92
+            ],
+            [
+              1358.22,
+              1785.92
+            ],
+            [
+              1322.67,
+              1755.68
+            ],
+            [
+              1297.78,
+              1629.39
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-afternoon-room",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31615447849035,
+              42.28953661471633
+            ],
+            [
+              -73.31602097153664,
+              42.28956308360283
+            ],
+            [
+              -73.31596374660731,
+              42.2894836669891
+            ],
+            [
+              -73.31598759144545,
+              42.289448378400444
+            ],
+            [
+              -73.31609010547399,
+              42.28943602689369
+            ],
+            [
+              -73.31612825989724,
+              42.28946954957181
+            ],
+            [
+              -73.31615447849035,
+              42.28953661471633
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Afternoon Garden area",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                1031.5519555709318,
+                1413.6366788146295
+              ],
+              [
+                1465.0485031850908,
+                1297.8833244890204
+              ],
+              [
+                1650.8576211115978,
+                1645.1869192134714
+              ],
+              [
+                1573.4335265211262,
+                1799.5104683712793
+              ],
+              [
+                1240.570883624116,
+                1853.525900338995
+              ],
+              [
+                1116.6836230964507,
+                1706.925005762961
+              ],
+              [
+                1031.5519555709318,
+                1413.6366788146295
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1592.89,
+              2011.83
+            ],
+            [
+              1692.44,
+              1985.15
+            ],
+            [
+              1735.11,
+              2065.2
+            ],
+            [
+              1717.33,
+              2100.77
+            ],
+            [
+              1640.89,
+              2113.22
+            ],
+            [
+              1612.44,
+              2079.43
+            ],
+            [
+              1592.89,
+              2011.83
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-chinese-room",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31629514694214,
+              42.29047368390776
+            ],
+            [
+              -73.3162379220128,
+              42.29051426958678
+            ],
+            [
+              -73.31616162657737,
+              42.290533684433036
+            ],
+            [
+              -73.31610441505909,
+              42.29051250369857
+            ],
+            [
+              -73.31604719012975,
+              42.290459566712364
+            ],
+            [
+              -73.31600666195155,
+              42.290383683012685
+            ],
+            [
+              -73.31595182418823,
+              42.29022661765055
+            ],
+            [
+              -73.31591368317605,
+              42.29015779726331
+            ],
+            [
+              -73.31599951386453,
+              42.29013838230119
+            ],
+            [
+              -73.31613063365221,
+              42.29015073367023
+            ],
+            [
+              -73.31619500666856,
+              42.290178968196265
+            ],
+            [
+              -73.31622838675976,
+              42.29023014944294
+            ],
+            [
+              -73.31626415401698,
+              42.29033073599747
+            ],
+            [
+              -73.31629514694214,
+              42.29047368390776
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Chinese Garden enclosure",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                574.8020521462564,
+                -2684.3408526488843
+              ],
+              [
+                760.6111700727633,
+                -2861.8295613062105
+              ],
+              [
+                1008.3421454442547,
+                -2946.73428815585
+              ],
+              [
+                1194.107717733065,
+                -2854.107004356911
+              ],
+              [
+                1379.9168356595721,
+                -2622.6037364580584
+              ],
+              [
+                1511.511669076142,
+                -2290.7502307245904
+              ],
+              [
+                1689.569668429905,
+                -1603.8742445407956
+              ],
+              [
+                1813.4133832737311,
+                -1302.9099153308505
+              ],
+              [
+                1534.721479202819,
+                -1218.0046817680452
+              ],
+              [
+                1108.9760501614035,
+                -1272.0195115031088
+              ],
+              [
+                899.9571221082196,
+                -1395.4943353038861
+              ],
+              [
+                791.5720987721842,
+                -1619.3194282922918
+              ],
+              [
+                675.4359568634053,
+                -2059.2031041242944
+              ],
+              [
+                574.8020521462564,
+                -2684.3408526488843
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1488,
+              1067.28
+            ],
+            [
+              1530.67,
+              1026.37
+            ],
+            [
+              1587.56,
+              1006.8
+            ],
+            [
+              1630.22,
+              1028.15
+            ],
+            [
+              1672.89,
+              1081.51
+            ],
+            [
+              1703.11,
+              1158
+            ],
+            [
+              1744,
+              1316.32
+            ],
+            [
+              1772.44,
+              1385.69
+            ],
+            [
+              1708.44,
+              1405.26
+            ],
+            [
+              1610.67,
+              1392.81
+            ],
+            [
+              1562.67,
+              1364.35
+            ],
+            [
+              1537.78,
+              1312.76
+            ],
+            [
+              1511.11,
+              1211.37
+            ],
+            [
+              1488,
+              1067.28
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-evergreen-room",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31669569462538,
+              42.29031308698251
+            ],
+            [
+              -73.31654549092055,
+              42.29032544823802
+            ],
+            [
+              -73.31643581539393,
+              42.290242500793966
+            ],
+            [
+              -73.31639051288366,
+              42.29013485050368
+            ],
+            [
+              -73.31649065315723,
+              42.29008367910034
+            ],
+            [
+              -73.31662654727697,
+              42.290101328179595
+            ],
+            [
+              -73.3166837722063,
+              42.29018073409383
+            ],
+            [
+              -73.31669569462538,
+              42.29031308698251
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Evergreen Garden area",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -725.7746820638994,
+                -1982.0206853263976
+              ],
+              [
+                -238.06384993980302,
+                -2036.0787504314453
+              ],
+              [
+                118.05214872158092,
+                -1673.3341792253323
+              ],
+              [
+                265.14921937592334,
+                -1202.5594756126618
+              ],
+              [
+                -60.005850586039756,
+                -978.7774293789882
+              ],
+              [
+                -501.2535168190852,
+                -1055.960129328582
+              ],
+              [
+                -687.062634745592,
+                -1403.2169331767916
+              ],
+              [
+                -725.7746820638994,
+                -1982.0206853263976
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1189.33,
+              1229.16
+            ],
+            [
+              1301.33,
+              1216.7
+            ],
+            [
+              1383.11,
+              1300.31
+            ],
+            [
+              1416.89,
+              1408.82
+            ],
+            [
+              1342.22,
+              1460.4
+            ],
+            [
+              1240.89,
+              1442.61
+            ],
+            [
+              1198.22,
+              1362.57
+            ],
+            [
+              1189.33,
+              1229.16
+            ]
+          ],
+          "digitizationUncertaintyPixels": 16,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-main-house-roof",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31624508351088,
+              42.289838387141366
+            ],
+            [
+              -73.31620931625366,
+              42.28987014369917
+            ],
+            [
+              -73.31614733040333,
+              42.28985426046186
+            ],
+            [
+              -73.31610917598009,
+              42.289861324088186
+            ],
+            [
+              -73.3160710349679,
+              42.289841909034706
+            ],
+            [
+              -73.31601858437061,
+              42.28984897266241
+            ],
+            [
+              -73.31598996520042,
+              42.28980485473868
+            ],
+            [
+              -73.31599712669849,
+              42.289755439055924
+            ],
+            [
+              -73.31595659852029,
+              42.28973250207056
+            ],
+            [
+              -73.31598759144545,
+              42.2896725007821
+            ],
+            [
+              -73.31595421135425,
+              42.2896124994365
+            ],
+            [
+              -73.31599951386453,
+              42.28957720099915
+            ],
+            [
+              -73.31599473953247,
+              42.289550732118585
+            ],
+            [
+              -73.31604957729579,
+              42.28953838063191
+            ],
+            [
+              -73.31607818305493,
+              42.28956131768796
+            ],
+            [
+              -73.31614016890525,
+              42.28954366845741
+            ],
+            [
+              -73.3162045419216,
+              42.28957014726182
+            ],
+            [
+              -73.31622362583876,
+              42.28963190463983
+            ],
+            [
+              -73.31625700592996,
+              42.2896989696115
+            ],
+            [
+              -73.31624508351088,
+              42.28973073616042
+            ],
+            [
+              -73.31626891493796,
+              42.28975897087472
+            ],
+            [
+              -73.31624508351088,
+              42.289838387141366
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Historic house visible roof envelope",
+        "kind": "building",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                737.3578143083896,
+                93.92984317288631
+              ],
+              [
+                853.4939562171685,
+                -44.947479380629524
+              ],
+              [
+                1054.761765697609,
+                24.51286593826549
+              ],
+              [
+                1178.6490261791316,
+                -6.377683281694485
+              ],
+              [
+                1302.4927410229577,
+                78.5279497912088
+              ],
+              [
+                1472.7996218039773,
+                47.63739454301836
+              ],
+              [
+                1565.7259535860792,
+                240.5732650814855
+              ],
+              [
+                1542.4725978217052,
+                456.67721927734397
+              ],
+              [
+                1674.067431238275,
+                556.9849143048642
+              ],
+              [
+                1573.4335265211262,
+                819.3816873385168
+              ],
+              [
+                1681.8185498571613,
+                1081.7787102951468
+              ],
+              [
+                1534.721479202819,
+                1236.145329636995
+              ],
+              [
+                1550.223716394449,
+                1351.8986580163541
+              ],
+              [
+                1372.1657170406856,
+                1405.914002170775
+              ],
+              [
+                1279.2829308962805,
+                1305.60599802554
+              ],
+              [
+                1078.0151214619827,
+                1382.7893596200367
+              ],
+              [
+                868.9961934087987,
+                1266.9926324248574
+              ],
+              [
+                807.0307903261177,
+                996.9161537452476
+              ],
+              [
+                698.6457669900824,
+                703.6285827183718
+              ],
+              [
+                737.3578143083896,
+                564.7075671465306
+              ],
+              [
+                659.9772653556145,
+                441.2319200261951
+              ],
+              [
+                737.3578143083896,
+                93.92984317288631
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1525.33,
+              1707.65
+            ],
+            [
+              1552,
+              1675.64
+            ],
+            [
+              1598.22,
+              1691.65
+            ],
+            [
+              1626.67,
+              1684.53
+            ],
+            [
+              1655.11,
+              1704.1
+            ],
+            [
+              1694.22,
+              1696.98
+            ],
+            [
+              1715.56,
+              1741.45
+            ],
+            [
+              1710.22,
+              1791.26
+            ],
+            [
+              1740.44,
+              1814.38
+            ],
+            [
+              1717.33,
+              1874.86
+            ],
+            [
+              1742.22,
+              1935.34
+            ],
+            [
+              1708.44,
+              1970.92
+            ],
+            [
+              1712,
+              1997.6
+            ],
+            [
+              1671.11,
+              2010.05
+            ],
+            [
+              1649.78,
+              1986.93
+            ],
+            [
+              1603.56,
+              2004.72
+            ],
+            [
+              1555.56,
+              1978.03
+            ],
+            [
+              1541.33,
+              1915.78
+            ],
+            [
+              1516.44,
+              1848.18
+            ],
+            [
+              1525.33,
+              1816.16
+            ],
+            [
+              1507.56,
+              1787.7
+            ],
+            [
+              1525.33,
+              1707.65
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-greenhouse-roof",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31683158874512,
+              42.28972367251945
+            ],
+            [
+              -73.31675768047572,
+              42.28973426798063
+            ],
+            [
+              -73.31672430038452,
+              42.28966190531054
+            ],
+            [
+              -73.31680774390698,
+              42.28964250011646
+            ],
+            [
+              -73.31683158874512,
+              42.28972367251945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Cutting garden greenhouse roof",
+        "kind": "greenhouse",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -1167.0223482969448,
+                595.5981804086709
+              ],
+              [
+                -927.0424915443398,
+                549.262261742858
+              ],
+              [
+                -818.6574682083045,
+                865.7176514335719
+              ],
+              [
+                -1089.5982537064729,
+                950.5801675259654
+              ],
+              [
+                -1167.0223482969448,
+                595.5981804086709
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1088,
+              1823.28
+            ],
+            [
+              1143.11,
+              1812.6
+            ],
+            [
+              1168,
+              1885.54
+            ],
+            [
+              1105.78,
+              1905.1
+            ],
+            [
+              1088,
+              1823.28
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-service-roof",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31688165217638,
+              42.28994426211338
+            ],
+            [
+              -73.31683397591114,
+              42.2899566234413
+            ],
+            [
+              -73.3167624413967,
+              42.289788971484924
+            ],
+            [
+              -73.31679820865392,
+              42.28976426860256
+            ],
+            [
+              -73.31688165217638,
+              42.28994426211338
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Garden service building roof",
+        "kind": "building",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -1329.578110459078,
+                -369.08106405517657
+              ],
+              [
+                -1174.7734668696885,
+                -423.13944579769
+              ],
+              [
+                -942.5011830521306,
+                310.03368230411905
+              ],
+              [
+                -1058.6373249609096,
+                418.06397271867627
+              ],
+              [
+                -1329.578110459078,
+                -369.08106405517657
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1050.67,
+              1600.93
+            ],
+            [
+              1086.22,
+              1588.47
+            ],
+            [
+              1139.56,
+              1757.46
+            ],
+            [
+              1112.89,
+              1782.36
+            ],
+            [
+              1050.67,
+              1600.93
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-cutting-north",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31678867340088,
+              42.28958778656408
+            ],
+            [
+              -73.31667661070823,
+              42.289605435782285
+            ],
+            [
+              -73.31661701202393,
+              42.289473081406655
+            ],
+            [
+              -73.3167362228036,
+              42.289437792812066
+            ],
+            [
+              -73.31678867340088,
+              42.28958778656408
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Cutting garden northern area",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -1027.6763962614887,
+                1189.8526890980997
+              ],
+              [
+                -663.8092789812184,
+                1112.669381478017
+              ],
+              [
+                -470.2925881196643,
+                1691.4796363481814
+              ],
+              [
+                -857.3695155266117,
+                1845.803211452239
+              ],
+              [
+                -1027.6763962614887,
+                1189.8526890980997
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1120,
+              1960.25
+            ],
+            [
+              1203.56,
+              1942.46
+            ],
+            [
+              1248,
+              2075.87
+            ],
+            [
+              1159.11,
+              2111.44
+            ],
+            [
+              1120,
+              1960.25
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-cutting-south",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31674098372459,
+              42.28943249505677
+            ],
+            [
+              -73.31660747677088,
+              42.289466027657674
+            ],
+            [
+              -73.31654786467551,
+              42.28935484419911
+            ],
+            [
+              -73.31653356850147,
+              42.28931425777303
+            ],
+            [
+              -73.31658363193273,
+              42.28928778878197
+            ],
+            [
+              -73.31668138504028,
+              42.28927190539781
+            ],
+            [
+              -73.31674098372459,
+              42.28943249505677
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Cutting garden southern area",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -872.8282070344026,
+                1868.9712788271936
+              ],
+              [
+                -439.33165942024345,
+                1722.3269900963423
+              ],
+              [
+                -245.77142287485015,
+                2208.5528944734883
+              ],
+              [
+                -199.35180262149586,
+                2386.0448701831374
+              ],
+              [
+                -361.9075647836291,
+                2501.798681784207
+              ],
+              [
+                -679.3115161728484,
+                2571.259669296086
+              ],
+              [
+                -872.8282070344026,
+                1868.9712788271936
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1155.56,
+              2116.78
+            ],
+            [
+              1255.11,
+              2082.98
+            ],
+            [
+              1299.56,
+              2195.05
+            ],
+            [
+              1310.22,
+              2235.96
+            ],
+            [
+              1272.89,
+              2262.64
+            ],
+            [
+              1200,
+              2278.65
+            ],
+            [
+              1155.56,
+              2116.78
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-terrace-area",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31646442115307,
+              42.289695437789334
+            ],
+            [
+              -73.3163261398673,
+              42.28972543842978
+            ],
+            [
+              -73.31625700592996,
+              42.28958073282794
+            ],
+            [
+              -73.31621409058572,
+              42.28951543364659
+            ],
+            [
+              -73.31630229502916,
+              42.289494262490635
+            ],
+            [
+              -73.31637620329856,
+              42.28950837990236
+            ],
+            [
+              -73.31641197055578,
+              42.289564849517646
+            ],
+            [
+              -73.31646442115307,
+              42.289695437789334
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Terrace garden area below the house",
+        "kind": "garden-section",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                25.169362577175736,
+                719.0738966982898
+              ],
+              [
+                474.1681474291074,
+                587.8755267280239
+              ],
+              [
+                698.6457669900824,
+                1220.6999866656388
+              ],
+              [
+                837.9917190255385,
+                1506.2654288407978
+              ],
+              [
+                551.5922420195792,
+                1598.850824051014
+              ],
+              [
+                311.61238526697423,
+                1537.1127618319592
+              ],
+              [
+                195.47624335819526,
+                1290.1606511700147
+              ],
+              [
+                25.169362577175736,
+                719.0738966982898
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1361.78,
+              1851.74
+            ],
+            [
+              1464.89,
+              1821.5
+            ],
+            [
+              1516.44,
+              1967.36
+            ],
+            [
+              1548.44,
+              2033.18
+            ],
+            [
+              1482.67,
+              2054.52
+            ],
+            [
+              1427.56,
+              2040.29
+            ],
+            [
+              1400.89,
+              1983.37
+            ],
+            [
+              1361.78,
+              1851.74
+            ]
+          ],
+          "digitizationUncertaintyPixels": 16,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-parking",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31730365753174,
+              42.29006956181757
+            ],
+            [
+              -73.31707715839147,
+              42.290117211354605
+            ],
+            [
+              -73.31702709496021,
+              42.28999897535612
+            ],
+            [
+              -73.31696987003087,
+              42.28984720675556
+            ],
+            [
+              -73.3169174194336,
+              42.2896760226847
+            ],
+            [
+              -73.31695079952479,
+              42.289575435084664
+            ],
+            [
+              -73.31704377830029,
+              42.289584264656554
+            ],
+            [
+              -73.31716060191393,
+              42.28971132106668
+            ],
+            [
+              -73.31722021400928,
+              42.28985602636852
+            ],
+            [
+              -73.31730365753174,
+              42.29006956181757
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Visitor parking surface",
+        "kind": "parking",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -2699.8278206869613,
+                -917.0399310791418
+              ],
+              [
+                -1964.386013191374,
+                -1125.420202196319
+              ],
+              [
+                -1801.8302510292408,
+                -608.3522315127389
+              ],
+              [
+                -1616.0211331027338,
+                55.36003302879576
+              ],
+              [
+                -1445.714252367857,
+                803.9797534682606
+              ],
+              [
+                -1554.099275703892,
+                1243.8680014955535
+              ],
+              [
+                -1856.0009899014813,
+                1205.2546445021896
+              ],
+              [
+                -2235.3267986895426,
+                649.6133762810513
+              ],
+              [
+                -2428.887035188793,
+                16.79022829146862
+              ],
+              [
+                -2699.8278206869613,
+                -917.0399310791418
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              736,
+              1474.63
+            ],
+            [
+              904.89,
+              1426.6
+            ],
+            [
+              942.22,
+              1545.78
+            ],
+            [
+              984.89,
+              1698.76
+            ],
+            [
+              1024,
+              1871.31
+            ],
+            [
+              999.11,
+              1972.7
+            ],
+            [
+              929.78,
+              1963.8
+            ],
+            [
+              842.67,
+              1835.73
+            ],
+            [
+              798.22,
+              1689.87
+            ],
+            [
+              736,
+              1474.63
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-drive",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.31696987003087,
+            42.28885718991138
+          ],
+          [
+            -73.316991327703,
+            42.28913425254102
+          ],
+          [
+            -73.316991327703,
+            42.289335438910406
+          ],
+          [
+            -73.31696033477783,
+            42.28949073065698
+          ],
+          [
+            -73.3168840393424,
+            42.28959661613423
+          ],
+          [
+            -73.31685782074929,
+            42.28966720304655
+          ],
+          [
+            -73.31687211692334,
+            42.28976250269334
+          ],
+          [
+            -73.31691264510154,
+            42.2899001442564
+          ],
+          [
+            -73.31695794761181,
+            42.290027209950196
+          ],
+          [
+            -73.31697940528393,
+            42.290117211354605
+          ],
+          [
+            -73.3169770181179,
+            42.29015603136512
+          ],
+          [
+            -73.31694602519273,
+            42.29018249999132
+          ],
+          [
+            -73.31690549701452,
+            42.290184265888776
+          ],
+          [
+            -73.3168697297573,
+            42.29016485093483
+          ],
+          [
+            -73.3168292015791,
+            42.29010661595785
+          ],
+          [
+            -73.31677913814784,
+            42.29005191272942
+          ],
+          [
+            -73.31670522987842,
+            42.290007794947826
+          ],
+          [
+            -73.31662178635598,
+            42.289970740749396
+          ],
+          [
+            -73.31652403324843,
+            42.289947793921606
+          ],
+          [
+            -73.31643104106188,
+            42.289947793921606
+          ],
+          [
+            -73.31633806228638,
+            42.289961911231686
+          ],
+          [
+            -73.31628083735704,
+            42.289991911745226
+          ],
+          [
+            -73.3162522315979,
+            42.290039561341004
+          ],
+          [
+            -73.31624508351088,
+            42.290081913200076
+          ],
+          [
+            -73.31618785858154,
+            42.29010838185743
+          ],
+          [
+            -73.31615686565638,
+            42.29010838185743
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Garden arrival drive centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -1616.0211331027338,
+              4384.887479149193
+            ],
+            [
+              -1685.694109120462,
+              3173.2411659017157
+            ],
+            [
+              -1685.694109120462,
+              2293.4158243697225
+            ],
+            [
+              -1585.060204403313,
+              1614.2961882765437
+            ],
+            [
+              -1337.3292290318218,
+              1151.239339686634
+            ],
+            [
+              -1252.197561506303,
+              842.5496683916971
+            ],
+            [
+              -1298.6171817596573,
+              425.7866215518801
+            ],
+            [
+              -1430.2120151762267,
+              -176.14548545085987
+            ],
+            [
+              -1577.3090858305693,
+              -731.8273528719434
+            ],
+            [
+              -1646.9820618482975,
+              -1125.420202196319
+            ],
+            [
+              -1639.230943229411,
+              -1295.1873147234903
+            ],
+            [
+              -1538.597038512262,
+              -1410.9395307078898
+            ],
+            [
+              -1407.0022050495497,
+              -1418.6621281146945
+            ],
+            [
+              -1290.8660631407708,
+              -1333.7569303173184
+            ],
+            [
+              -1159.271229724201,
+              -1079.0845652725966
+            ],
+            [
+              -996.7154675620677,
+              -839.8571922257102
+            ],
+            [
+              -756.7356107633202,
+              -646.9219433096675
+            ],
+            [
+              -485.79482531129435,
+              -484.87705484296606
+            ],
+            [
+              -168.390873922075,
+              -384.52631706917634
+            ],
+            [
+              133.55438591321095,
+              -384.52631706917634
+            ],
+            [
+              435.45610011080026,
+              -446.2639347839179
+            ],
+            [
+              621.2652180373074,
+              -577.4617497841012
+            ],
+            [
+              714.1480041817125,
+              -785.8422777846866
+            ],
+            [
+              737.3578143083896,
+              -971.0548196982089
+            ],
+            [
+              923.1669322348966,
+              -1086.8071719392606
+            ],
+            [
+              1023.8008369520455,
+              -1086.8071719392606
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              984.89,
+              2696.67
+            ],
+            [
+              968.89,
+              2417.4
+            ],
+            [
+              968.89,
+              2214.61
+            ],
+            [
+              992,
+              2058.08
+            ],
+            [
+              1048.89,
+              1951.35
+            ],
+            [
+              1068.44,
+              1880.2
+            ],
+            [
+              1057.78,
+              1784.14
+            ],
+            [
+              1027.56,
+              1645.4
+            ],
+            [
+              993.78,
+              1517.32
+            ],
+            [
+              977.78,
+              1426.6
+            ],
+            [
+              979.56,
+              1387.47
+            ],
+            [
+              1002.67,
+              1360.79
+            ],
+            [
+              1032.89,
+              1359.01
+            ],
+            [
+              1059.56,
+              1378.58
+            ],
+            [
+              1089.78,
+              1437.28
+            ],
+            [
+              1127.11,
+              1492.42
+            ],
+            [
+              1182.22,
+              1536.89
+            ],
+            [
+              1244.44,
+              1574.24
+            ],
+            [
+              1317.33,
+              1597.37
+            ],
+            [
+              1386.67,
+              1597.37
+            ],
+            [
+              1456,
+              1583.14
+            ],
+            [
+              1498.67,
+              1552.9
+            ],
+            [
+              1520,
+              1504.87
+            ],
+            [
+              1525.33,
+              1462.18
+            ],
+            [
+              1568,
+              1435.5
+            ],
+            [
+              1591.11,
+              1435.5
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-parking-entry",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.31788778901101,
+            42.289788971484924
+          ],
+          [
+            -73.31773758530618,
+            42.28975720496535
+          ],
+          [
+            -73.31758022010327,
+            42.289704267344376
+          ],
+          [
+            -73.31741809397936,
+            42.289640734203815
+          ],
+          [
+            -73.31720829159022,
+            42.28955426394886
+          ],
+          [
+            -73.31711531281472,
+            42.28951896547886
+          ],
+          [
+            -73.31702470779419,
+            42.28952073139493
+          ],
+          [
+            -73.31695556044578,
+            42.2895472002881
+          ],
+          [
+            -73.3168840393424,
+            42.28959661613423
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Parking entrance centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -4596.500410357249,
+              310.03368230411905
+            ],
+            [
+              -4108.7895782331525,
+              448.95456954301284
+            ],
+            [
+              -3597.8253903446825,
+              680.4606133798457
+            ],
+            [
+              -3071.402510902279,
+              958.3028313365255
+            ],
+            [
+              -2390.1749879166287,
+              1336.4533085817407
+            ],
+            [
+              -2088.2732737190395,
+              1490.8200706745722
+            ],
+            [
+              -1794.0791324564973,
+              1483.097391886656
+            ],
+            [
+              -1569.5579672116828,
+              1367.3440083831686
+            ],
+            [
+              -1337.3292290318218,
+              1151.239339686634
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              300.44,
+              1757.46
+            ],
+            [
+              412.44,
+              1789.48
+            ],
+            [
+              529.78,
+              1842.84
+            ],
+            [
+              650.67,
+              1906.88
+            ],
+            [
+              807.11,
+              1994.04
+            ],
+            [
+              876.44,
+              2029.62
+            ],
+            [
+              944,
+              2027.84
+            ],
+            [
+              995.56,
+              2001.16
+            ],
+            [
+              1048.89,
+              1951.35
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-chinese-approach",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.31624508351088,
+            42.290081913200076
+          ],
+          [
+            -73.31628322452306,
+            42.29018073409383
+          ],
+          [
+            -73.31632375270128,
+            42.290283086621955
+          ],
+          [
+            -73.31635474562644,
+            42.29036956579713
+          ],
+          [
+            -73.3163785904646,
+            42.29046308857098
+          ],
+          [
+            -73.31638812571764,
+            42.29052132321838
+          ],
+          [
+            -73.31636190712452,
+            42.290576035959866
+          ],
+          [
+            -73.31629514694214,
+            42.290621919228634
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Chinese Garden approach centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              737.3578143083896,
+              -971.0548196982089
+            ],
+            [
+              613.5140994645635,
+              -1403.2169331767916
+            ],
+            [
+              481.9192660018512,
+              -1850.8235393665752
+            ],
+            [
+              381.2853612847023,
+              -2229.0130263786623
+            ],
+            [
+              303.8612666480879,
+              -2638.00547798426
+            ],
+            [
+              272.9003379486671,
+              -2892.676401722582
+            ],
+            [
+              358.0320055203285,
+              -3131.945377110465
+            ],
+            [
+              574.8020521462564,
+              -3332.60142919577
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1525.33,
+              1462.18
+            ],
+            [
+              1496.89,
+              1362.57
+            ],
+            [
+              1466.67,
+              1259.4
+            ],
+            [
+              1443.56,
+              1172.23
+            ],
+            [
+              1425.78,
+              1077.96
+            ],
+            [
+              1418.67,
+              1019.26
+            ],
+            [
+              1438.22,
+              964.11
+            ],
+            [
+              1488,
+              917.86
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-cutting-walk",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.31682681441306,
+            42.28960190395486
+          ],
+          [
+            -73.31677436381578,
+            42.2894836669891
+          ],
+          [
+            -73.31672430038452,
+            42.289367195721766
+          ],
+          [
+            -73.31667661070823,
+            42.289248958315454
+          ],
+          [
+            -73.3166098639369,
+            42.289143082174746
+          ],
+          [
+            -73.31654310375453,
+            42.289076016611254
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Cutting garden walk centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -1151.5201111053148,
+              1128.1147184522163
+            ],
+            [
+              -981.2132303704377,
+              1645.1869192134714
+            ],
+            [
+              -818.6574682083045,
+              2154.537392963609
+            ],
+            [
+              -663.8092789812184,
+              2671.6115203348895
+            ],
+            [
+              -447.08277799298713,
+              3134.627538476962
+            ],
+            [
+              -230.3127313670593,
+              3427.9176976655463
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1091.56,
+              1946.02
+            ],
+            [
+              1130.67,
+              2065.2
+            ],
+            [
+              1168,
+              2182.6
+            ],
+            [
+              1203.56,
+              2301.78
+            ],
+            [
+              1253.33,
+              2408.5
+            ],
+            [
+              1303.11,
+              2476.1
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-lower-terrace-walk",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.3166837722063,
+            42.289266607628576
+          ],
+          [
+            -73.31653118133545,
+            42.28929131070608
+          ],
+          [
+            -73.31644535064697,
+            42.28930896000735
+          ],
+          [
+            -73.31633091419936,
+            42.289347790436885
+          ],
+          [
+            -73.3161926329136,
+            42.28937955716291
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Lower terrace walk centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -687.062634745592,
+              2594.427797636959
+            ],
+            [
+              -191.6006840487521,
+              2486.396653823838
+            ],
+            [
+              87.09122002216006,
+              2409.2129829873334
+            ],
+            [
+              458.6659102374774,
+              2239.400306142379
+            ],
+            [
+              907.6646950432665,
+              2100.4785160672177
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1198.22,
+              2283.99
+            ],
+            [
+              1312,
+              2259.09
+            ],
+            [
+              1376,
+              2241.3
+            ],
+            [
+              1461.33,
+              2202.16
+            ],
+            [
+              1564.44,
+              2170.14
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-terrace-axis",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.31651211082935,
+            42.289755439055924
+          ],
+          [
+            -73.31647158265115,
+            42.2896725007821
+          ],
+          [
+            -73.31643104106188,
+            42.289584264656554
+          ],
+          [
+            -73.31639766097068,
+            42.28950837990236
+          ],
+          [
+            -73.31631899178028,
+            42.289365429801414
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Garden terrace walk centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -129.6788266037678,
+              456.67721927734397
+            ],
+            [
+              1.9160068128019678,
+              819.3816873385168
+            ],
+            [
+              133.55438591321095,
+              1205.2546445021896
+            ],
+            [
+              241.93940924924618,
+              1537.1127618319592
+            ],
+            [
+              497.3779575557846,
+              2162.2600904887568
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "low",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1326.22,
+              1791.26
+            ],
+            [
+              1356.44,
+              1874.86
+            ],
+            [
+              1386.67,
+              1963.8
+            ],
+            [
+              1411.56,
+              2040.29
+            ],
+            [
+              1470.22,
+              2184.38
+            ]
+          ],
+          "digitizationUncertaintyPixels": 16,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Canopy or shadow obscures part of this interpretation; check on site."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-evergreen-pool",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31654071658849,
+              42.290224851754296
+            ],
+            [
+              -73.31654201745987,
+              42.29021755007033
+            ],
+            [
+              -73.31654582619667,
+              42.29021073450313
+            ],
+            [
+              -73.31655188798904,
+              42.29020489117056
+            ],
+            [
+              -73.31655978709459,
+              42.29020040698289
+            ],
+            [
+              -73.3165689870715,
+              42.290197579563504
+            ],
+            [
+              -73.31657887101174,
+              42.29019661724881
+            ],
+            [
+              -73.31658874154091,
+              42.290197579563504
+            ],
+            [
+              -73.31659794151783,
+              42.29020040698289
+            ],
+            [
+              -73.31660584062338,
+              42.29020489117056
+            ],
+            [
+              -73.31661190241574,
+              42.29021073450313
+            ],
+            [
+              -73.31661571115255,
+              42.29021755007033
+            ],
+            [
+              -73.31661701202393,
+              42.290224851754296
+            ],
+            [
+              -73.31661571115255,
+              42.290232163358176
+            ],
+            [
+              -73.31661190241574,
+              42.290238969002274
+            ],
+            [
+              -73.31660584062338,
+              42.290244822252454
+            ],
+            [
+              -73.31659794151783,
+              42.290249306436955
+            ],
+            [
+              -73.31658874154091,
+              42.290252133854025
+            ],
+            [
+              -73.31657887101174,
+              42.290253086247105
+            ],
+            [
+              -73.3165689870715,
+              42.290252133854025
+            ],
+            [
+              -73.31655978709459,
+              42.290249306436955
+            ],
+            [
+              -73.31655188798904,
+              42.290244822252454
+            ],
+            [
+              -73.31654582619667,
+              42.290238969002274
+            ],
+            [
+              -73.31654201745987,
+              42.290232163358176
+            ],
+            [
+              -73.31654071658849,
+              42.290224851754296
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Evergreen Garden pool",
+        "kind": "water",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -222.561612748173,
+                -1596.1516523853873
+              ],
+              [
+                -226.7855369284763,
+                -1564.220032923218
+              ],
+              [
+                -239.15249019008002,
+                -1534.4142922998146
+              ],
+              [
+                -258.83510587817415,
+                -1508.8603142324598
+              ],
+              [
+                -284.4834701931573,
+                -1489.2501291075127
+              ],
+              [
+                -314.35575864230117,
+                -1476.8852992482457
+              ],
+              [
+                -346.44887327583825,
+                -1472.6769184487466
+              ],
+              [
+                -378.49844222553617,
+                -1476.8852992482457
+              ],
+              [
+                -408.37073067468,
+                -1489.2501291075127
+              ],
+              [
+                -434.0190949896632,
+                -1508.8603142324598
+              ],
+              [
+                -453.70171067775726,
+                -1534.4142922998146
+              ],
+              [
+                -466.068663939361,
+                -1564.220032923218
+              ],
+              [
+                -470.2925881196643,
+                -1596.1516523853873
+              ],
+              [
+                -466.068663939361,
+                -1628.1266534798128
+              ],
+              [
+                -453.70171067775726,
+                -1657.8889985190247
+              ],
+              [
+                -434.0190949896632,
+                -1683.486348150869
+              ],
+              [
+                -408.37073067468,
+                -1703.096519417101
+              ],
+              [
+                -378.49844222553617,
+                -1715.461339146455
+              ],
+              [
+                -346.44887327583825,
+                -1719.6263308871667
+              ],
+              [
+                -314.35575864230117,
+                -1715.461339146455
+              ],
+              [
+                -284.4834701931573,
+                -1703.096519417101
+              ],
+              [
+                -258.83510587817415,
+                -1683.486348150869
+              ],
+              [
+                -239.15249019008002,
+                -1657.8889985190247
+              ],
+              [
+                -226.7855369284763,
+                -1628.1266534798128
+              ],
+              [
+                -222.561612748173,
+                -1596.1516523853873
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1304.89,
+              1318.1
+            ],
+            [
+              1303.92,
+              1325.46
+            ],
+            [
+              1301.08,
+              1332.33
+            ],
+            [
+              1296.56,
+              1338.22
+            ],
+            [
+              1290.67,
+              1342.74
+            ],
+            [
+              1283.81,
+              1345.59
+            ],
+            [
+              1276.44,
+              1346.56
+            ],
+            [
+              1269.08,
+              1345.59
+            ],
+            [
+              1262.22,
+              1342.74
+            ],
+            [
+              1256.33,
+              1338.22
+            ],
+            [
+              1251.81,
+              1332.33
+            ],
+            [
+              1248.97,
+              1325.46
+            ],
+            [
+              1248,
+              1318.1
+            ],
+            [
+              1248.97,
+              1310.73
+            ],
+            [
+              1251.81,
+              1303.87
+            ],
+            [
+              1256.33,
+              1297.97
+            ],
+            [
+              1262.22,
+              1293.45
+            ],
+            [
+              1269.08,
+              1290.6
+            ],
+            [
+              1276.44,
+              1289.64
+            ],
+            [
+              1283.81,
+              1290.6
+            ],
+            [
+              1290.67,
+              1293.45
+            ],
+            [
+              1296.56,
+              1297.97
+            ],
+            [
+              1301.08,
+              1303.87
+            ],
+            [
+              1303.92,
+              1310.73
+            ],
+            [
+              1304.89,
+              1318.1
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-afternoon-pool",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31601858437061,
+              42.28948896474009
+            ],
+            [
+              -73.31601930856704,
+              42.289484857494976
+            ],
+            [
+              -73.31602145433426,
+              42.289481028034324
+            ],
+            [
+              -73.3160248607397,
+              42.289477734301116
+            ],
+            [
+              -73.31602931320667,
+              42.28947521439671
+            ],
+            [
+              -73.31603448987008,
+              42.28947362705529
+            ],
+            [
+              -73.31604004204273,
+              42.289473081406655
+            ],
+            [
+              -73.3160455942154,
+              42.28947362705529
+            ],
+            [
+              -73.31605077087879,
+              42.28947521439671
+            ],
+            [
+              -73.31605520993472,
+              42.289477734301116
+            ],
+            [
+              -73.31605861634016,
+              42.289481028034324
+            ],
+            [
+              -73.31606076210738,
+              42.289484857494976
+            ],
+            [
+              -73.31606149971485,
+              42.28948896474009
+            ],
+            [
+              -73.31606076210738,
+              42.289493071984936
+            ],
+            [
+              -73.31605861634016,
+              42.28949691136574
+            ],
+            [
+              -73.31605520993472,
+              42.28950019517705
+            ],
+            [
+              -73.31605077087879,
+              42.289502725001356
+            ],
+            [
+              -73.3160455942154,
+              42.28950431234203
+            ],
+            [
+              -73.31604004204273,
+              42.28950484806951
+            ],
+            [
+              -73.31603448987008,
+              42.28950431234203
+            ],
+            [
+              -73.31602931320667,
+              42.289502725001356
+            ],
+            [
+              -73.3160248607397,
+              42.28950019517705
+            ],
+            [
+              -73.31602145433426,
+              42.28949691136574
+            ],
+            [
+              -73.31601930856704,
+              42.289493071984936
+            ],
+            [
+              -73.31601858437061,
+              42.28948896474009
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Afternoon Garden pool",
+        "kind": "water",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                1472.7996218039773,
+                1622.0188706689685
+              ],
+              [
+                1470.4481588910646,
+                1639.9806160081116
+              ],
+              [
+                1463.480861243149,
+                1656.7275583421774
+              ],
+              [
+                1452.4202763280202,
+                1671.1316651085467
+              ],
+              [
+                1437.9631337951132,
+                1682.151674870669
+              ],
+              [
+                1421.1545283031508,
+                1689.0934135860982
+              ],
+              [
+                1403.1266457862491,
+                1691.4796363481814
+              ],
+              [
+                1385.0987632232052,
+                1689.0934135860982
+              ],
+              [
+                1368.290157777385,
+                1682.151674870669
+              ],
+              [
+                1353.8765608360322,
+                1671.1316651085467
+              ],
+              [
+                1342.8159759209034,
+                1656.7275583421774
+              ],
+              [
+                1335.8486782729879,
+                1639.9806160081116
+              ],
+              [
+                1333.453669768521,
+                1622.0188706689685
+              ],
+              [
+                1335.8486782729879,
+                1604.0571264795399
+              ],
+              [
+                1342.8159759209034,
+                1587.2668014877968
+              ],
+              [
+                1353.8765608360322,
+                1572.9060850231494
+              ],
+              [
+                1368.290157777385,
+                1561.8426936909177
+              ],
+              [
+                1385.0987632232052,
+                1554.9009582381905
+              ],
+              [
+                1403.1266457862491,
+                1552.5581225151268
+              ],
+              [
+                1421.1545283031508,
+                1554.9009582381905
+              ],
+              [
+                1437.9631337951132,
+                1561.8426936909177
+              ],
+              [
+                1452.4202763280202,
+                1572.9060850231494
+              ],
+              [
+                1463.480861243149,
+                1587.2668014877968
+              ],
+              [
+                1470.4481588910646,
+                1604.0571264795399
+              ],
+              [
+                1472.7996218039773,
+                1622.0188706689685
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1694.22,
+              2059.86
+            ],
+            [
+              1693.68,
+              2064
+            ],
+            [
+              1692.08,
+              2067.86
+            ],
+            [
+              1689.54,
+              2071.18
+            ],
+            [
+              1686.22,
+              2073.72
+            ],
+            [
+              1682.36,
+              2075.32
+            ],
+            [
+              1678.22,
+              2075.87
+            ],
+            [
+              1674.08,
+              2075.32
+            ],
+            [
+              1670.22,
+              2073.72
+            ],
+            [
+              1666.91,
+              2071.18
+            ],
+            [
+              1664.37,
+              2067.86
+            ],
+            [
+              1662.77,
+              2064
+            ],
+            [
+              1662.22,
+              2059.86
+            ],
+            [
+              1662.77,
+              2055.72
+            ],
+            [
+              1664.37,
+              2051.85
+            ],
+            [
+              1666.91,
+              2048.54
+            ],
+            [
+              1670.22,
+              2045.99
+            ],
+            [
+              1674.08,
+              2044.39
+            ],
+            [
+              1678.22,
+              2043.85
+            ],
+            [
+              1682.36,
+              2044.39
+            ],
+            [
+              1686.22,
+              2045.99
+            ],
+            [
+              1689.54,
+              2048.54
+            ],
+            [
+              1692.08,
+              2051.85
+            ],
+            [
+              1693.68,
+              2055.72
+            ],
+            [
+              1694.22,
+              2059.86
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-chinese-pool",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.31596613377333,
+              42.29023368123512
+            ],
+            [
+              -73.31593751460314,
+              42.290238969002274
+            ],
+            [
+              -73.315908908844,
+              42.290166616832785
+            ],
+            [
+              -73.31594943702221,
+              42.29016485093483
+            ],
+            [
+              -73.31598042994737,
+              42.290189563580846
+            ],
+            [
+              -73.31596613377333,
+              42.29023368123512
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Chinese Garden visible pool",
+        "kind": "water",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                1643.1065025388543,
+                -1634.7646111426607
+              ],
+              [
+                1736.032834320956,
+                -1657.8889985190247
+              ],
+              [
+                1828.9156204653614,
+                -1341.479529899258
+              ],
+              [
+                1697.320787002649,
+                -1333.7569303173184
+              ],
+              [
+                1596.6868822855,
+                -1441.829918998955
+              ],
+              [
+                1643.1065025388543,
+                -1634.7646111426607
+              ]
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1733.33,
+              1309.2
+            ],
+            [
+              1754.67,
+              1303.87
+            ],
+            [
+              1776,
+              1376.8
+            ],
+            [
+              1745.78,
+              1378.58
+            ],
+            [
+              1722.67,
+              1353.67
+            ],
+            [
+              1733.33,
+              1309.2
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-chinese-west-approach",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.31651211082935,
+            42.290235447131145
+          ],
+          [
+            -73.31645012497903,
+            42.29024779848115
+          ],
+          [
+            -73.31638336479664,
+            42.29026191572399
+          ],
+          [
+            -73.31631899178028,
+            42.29027426706879
+          ],
+          [
+            -73.31625937968492,
+            42.29028838430571
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Chinese Garden western approach centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -129.6788266037678,
+              -1642.4872022726481
+            ],
+            [
+              71.58898283053001,
+              -1696.501948731126
+            ],
+            [
+              288.3590295026005,
+              -1758.2392723987293
+            ],
+            [
+              497.3779575557846,
+              -1812.2539961115126
+            ],
+            [
+              690.9381940550353,
+              -1873.9912938950126
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1326.22,
+              1307.42
+            ],
+            [
+              1372.44,
+              1294.97
+            ],
+            [
+              1422.22,
+              1280.74
+            ],
+            [
+              1470.22,
+              1268.29
+            ],
+            [
+              1514.67,
+              1254.06
+            ]
+          ],
+          "digitizationUncertaintyPixels": 8,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible aerial outline; not a surveyed boundary or planting inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naumkeag-southern-drive",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.31587001681328,
+            42.28934497290013
+          ],
+          [
+            -73.31584319472313,
+            42.28927056607417
+          ],
+          [
+            -73.31580966711044,
+            42.289196159160326
+          ],
+          [
+            -73.3157667517662,
+            42.28912671262811
+          ],
+          [
+            -73.31570908427238,
+            42.28906222649392
+          ],
+          [
+            -73.31564202904701,
+            42.289002700773004
+          ],
+          [
+            -73.31558167934418,
+            42.28895508015576
+          ],
+          [
+            -73.3155682682991,
+            42.28893821451186
+          ]
+        ]
+      },
+      "properties": {
+        "gardenId": "naumkeag-garden-rooms",
+        "layer": "site",
+        "name": "Southern visible drive centerline",
+        "kind": "path",
+        "collection": "infrastructure",
+        "boundaryPolicy": "reference-locator",
+        "localGeometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              1955.1978894974932,
+              2251.721917411273
+            ],
+            [
+              2042.2891095196533,
+              2577.116780199726
+            ],
+            [
+              2151.1531345473536,
+              2902.5120273344805
+            ],
+            [
+              2290.4990865828095,
+              3206.2146047535593
+            ],
+            [
+              2477.7452096304537,
+              3488.224440770737
+            ],
+            [
+              2695.4732596858535,
+              3748.5414686715244
+            ],
+            [
+              2891.428504735714,
+              3956.795268166198
+            ],
+            [
+              2934.974114746794,
+              4030.551859876298
+            ]
+          ]
+        },
+        "localUnit": "inch",
+        "confidence": "medium",
+        "surveyStatus": "not-surveyed",
+        "geometryBasis": "Manual 2025 orthophoto interpretation",
+        "source": "MassGIS 2025 aerial imagery",
+        "sourceReferences": [
+          {
+            "id": "source:massgis-aerial-2025",
+            "role": "geometry"
+          },
+          {
+            "id": "source:naumkeag-map",
+            "role": "feature identity and site context; not traced geometry"
+          },
+          {
+            "id": "source:naumkeag-landscape-tour",
+            "role": "feature identity and site context; not traced geometry"
+          }
+        ],
+        "provenance": {
+          "sourceId": "source:massgis-aerial-2025",
+          "rasterId": "naumkeag-garden-rooms-2025-review-z20",
+          "rasterSha256": "4a184e9085277c34c44f6411208c0b4f57650b83508aae98e0293896f417218b",
+          "observedRasterPixels": [
+            [
+              1805,
+              2205
+            ],
+            [
+              1825,
+              2280
+            ],
+            [
+              1850,
+              2355
+            ],
+            [
+              1882,
+              2425
+            ],
+            [
+              1925,
+              2490
+            ],
+            [
+              1975,
+              2550
+            ],
+            [
+              2020,
+              2598
+            ],
+            [
+              2030,
+              2615
+            ]
+          ],
+          "digitizationUncertaintyPixels": 12,
+          "reviewDate": "2026-09-23",
+          "geometryMethod": "Manual aerial digitization; obscured boundaries remain low confidence"
+        },
+        "notes": "Visible southern drive segment traced from the aerial. Display width is symbolic; actual width, surface, access and elevation are unverified. Endpoints do not establish a public-road connection."
+      }
+    }
+  ]
+}
