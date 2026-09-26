@@ -5416,7 +5416,7 @@ function normalizeParcelViewport(state, viewport) {
 }
 
 function clampParcelViewport(viewport, bounds) {
-  return clampViewportToExtent(viewport, bounds, {minimumSpan: MIN_GARDEN_VIEW_SPAN_INCHES});
+  return clampViewportToExtent(viewport, bounds, {minimumSpan: MIN_GARDEN_VIEW_SPAN_INCHES, panPaddingRatio: 0.5});
 }
 
 function zoomParcelViewport(state, factor, anchor = null) {

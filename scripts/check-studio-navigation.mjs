@@ -14,7 +14,7 @@ try {for(const [width,height] of [[390,844],[844,390],[1440,1000]]){
   await page.locator(`[data-presentation="${mode}"]`).click();
   const nav=page.locator('.view-navigation:visible');await nav.locator('[data-view-nav="pan"]').click();
   assert.equal(await root.getAttribute('data-active-tool'),'select');
-  await nav.locator('[data-view-nav="zoom-in"]').click();await nav.locator('[data-view-nav="zoom-in"]').click();
+
   const surface=page.locator(mode==='map'?'.parcel-svg':mode==='2d'?'.plan-svg':'.three-host canvas');await surface.scrollIntoViewIfNeeded();
   
   const before=await geometry();const view=()=>page.evaluate(()=>{const s=JSON.parse(localStorage.getItem('veggie.farm:garden-studio:v8'));return JSON.stringify([s.parcelViewport,s.bedCameras]);});const cameraBefore=await view();

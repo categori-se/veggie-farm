@@ -795,8 +795,8 @@
     },
     {
       "path": "scripts/check-studio-navigation.mjs",
-      "bytes": 3960,
-      "sha256": "bc85e7b2df52bdf8800401308d9e87715203dcc415558c7098e5f551dc57d03a",
+      "bytes": 3848,
+      "sha256": "a293e7391d8059d26d61b52d9f7e883620f57137af221f1b524b3e1c0b70b87d",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1053,8 +1053,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 491448,
-      "sha256": "6d670897fc5f4490d4b4e9f2cd3f8a3c02d7c18452f214df226df5d72a4abf17",
+      "bytes": 491470,
+      "sha256": "4079805361df96f01f52784fce082fb09a2539b62cc115c1d96a825d676dd987",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2769,8 +2769,8 @@
     },
     {
       "path": "src/lib/spatial/gardenViewScale.js",
-      "bytes": 9730,
-      "sha256": "807f5afeb349996c70f6a3981003abe51d62a28ee62940425ec704a480c2759e",
+      "bytes": 9945,
+      "sha256": "ed6d58ae4982e5544860ef5c760920c4022b2248c7b9518f8f182c54aecadeb5",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3177,8 +3177,8 @@
     },
     {
       "path": "tests/gardenViewScale.test.js",
-      "bytes": 5593,
-      "sha256": "4674d2c1d13de68270b9aa31c8d0e6cb45541029b1c79d68f401ffed8bc37541",
+      "bytes": 6136,
+      "sha256": "0dee770074c895ffb88b1dba2f4abb2685de3a3ac78626ebab3d3dac1a764802",
       "basis": "community source policy; rights status in release review"
     },
     {
