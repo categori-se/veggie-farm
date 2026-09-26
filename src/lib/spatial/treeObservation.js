@@ -60,7 +60,7 @@ export function deriveTreeShadowVector(tree = {}, {
   const heightFeet = positiveNumber(tree.heightEstimateFeet);
   const altitude = Number(solarAltitudeDegrees);
   const azimuth = Number(solarAzimuthDegrees);
-  if (heightFeet == null || !Number.isFinite(altitude) || !Number.isFinite(azimuth) || altitude <= 0 || altitude >= 90) {
+  if (heightFeet == null || !Number.isFinite(altitude) || !Number.isFinite(azimuth) || altitude <= 0 || altitude > 90) {
     return null;
   }
   const lengthFeet = heightFeet / Math.tan(altitude * Math.PI / 180);
@@ -79,7 +79,7 @@ export function deriveTreeShadowVector(tree = {}, {
   };
 }
 
-/** A conservative ellipse that encloses the translated crown shadow. */
+/** Legacy visual ellipse; not a containment bound. Use derivedTreeShadowPolygon for shade overlays. */
 export function derivedTreeShadowEllipse(tree = {}, solar = {}) {
   const vector = deriveTreeShadowVector(tree, solar);
   if (!vector) return null;
@@ -108,4 +108,32 @@ export function updateTreeHeightEstimate(tree, input) {
   tree.heightEstimateMethod = blank ? null : "User-entered estimate; not independently measured";
   tree.heightConfidence = blank ? "unknown" : "low";
   return true;
+}
+
+/**
+ * Flat-ground shadow of an opaque column with the entered elliptical crown.
+ * The hull sweeps that crown from ground to entered top height. This is a
+ * deliberately full column, not a model of branches, crown base or leaf gaps.
+ * A circumscribed 48-gon covers the analytic ellipse (radial excess <0.22%);
+ * applying the crown's rotation before projection preserves its actual axes.
+ */
+export function derivedTreeShadowPolygon(tree = {}, solar = {}) {
+  const vector = deriveTreeShadowVector(tree, solar);
+  if (!vector) return null;
+  const crown = derivedTreeCanopyEllipse(tree);
+  const segments = 48, scale = 1 / Math.cos(Math.PI / segments);
+  const angle = crown.rotationDegrees * Math.PI / 180;
+  const points = [];
+  for (let i = 0; i < segments; i++) {
+    const t = 2 * Math.PI * i / segments;
+    const x = crown.rx * scale * Math.cos(t), y = crown.ry * scale * Math.sin(t);
+    const p = [crown.cx + x * Math.cos(angle) - y * Math.sin(angle), crown.cy + x * Math.sin(angle) + y * Math.cos(angle)];
+    points.push(p, [p[0] + vector.dxInches, p[1] + vector.dyInches]);
+  }
+  if (!points.every(p => p.every(Number.isFinite))) return null;
+  points.sort((a,b) => a[0] - b[0] || a[1] - b[1]);
+  const cross = (o,a,b) => (a[0]-o[0])*(b[1]-o[1]) - (a[1]-o[1])*(b[0]-o[0]);
+  const half = rows => {const out=[]; for (const p of rows) {while(out.length>1 && cross(out.at(-2),out.at(-1),p)<=0) out.pop(); out.push(p);}return out;};
+  const lower=half(points),upper=half([...points].reverse());lower.pop();upper.pop();
+  return {points:lower.concat(upper),vector,derivedFrom:'rotated elliptical crown swept through an opaque column to entered height'};
 }

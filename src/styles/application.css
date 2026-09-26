@@ -295,3 +295,10 @@ figure[data-crop-original][hidden]{display:none}
 .bed-fit-compare-scroll tbody th{text-transform:none;letter-spacing:normal}
 .bed-fit-comparison p{font:inherit;margin:8px 0}
 .bed-fit-compare-scroll details{font-size:.8rem}
+
+.planner-sun-preview {font: .85rem/1.5 var(--sans); border-top:1px solid var(--line); padding:8px 12px; color:var(--ink)}
+.planner-sun-preview [data-sun-controls]:not([hidden]) {display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center}
+.planner-sun-preview label {display:inline-flex; align-items:center; gap:8px; min-height:36px}
+.planner-sun-preview input[type=date] {background:var(--paper); color:var(--ink); border:1px solid var(--line); padding:6px}
+.planner-sun-preview output {flex-basis:100%; color:var(--muted)}
+.planner-sun-preview details {max-width:70ch}
