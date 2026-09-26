@@ -1,3 +1,5 @@
+import {illustrativePlanting} from "../lib/spatial/illustrativePlanting.js";
+import {gardenResearch} from "../data/gardenResearch.js";
 import {visiblePlannedPlacements} from "../lib/garden/plannedOccupancy.js";
 import {plannerTimePreview} from "./planner-time-preview.js";
 import {mappedSoil} from "./mapped-soil.js";
@@ -58,7 +60,7 @@ import {
   treeCrownAxesInches,
   updateTreeHeightEstimate
 } from "../lib/spatial/treeObservation.js";
-import {localSiteGeometryError, localSiteGeometryVertices, updateConnectedSiteVertices} from "../lib/spatial/siteGeometryEditor.js";
+import {changeSiteGeometryVertex, localSiteGeometryError, localSiteGeometryVertices, updateConnectedSiteVertices} from "../lib/spatial/siteGeometryEditor.js";
 import {getGardenSpatialDataset} from "../lib/data/publicCatalogApi.js";
 import {
   BERKSHIRE_BOTANICAL_STARTER_LAYOUT_REVISION,
@@ -169,8 +171,14 @@ export function plannerEditLayerForTool(tool) {
   return PLANNER_EDIT_LAYER_BY_TOOL[tool] || null;
 }
 
+const explicitEditSessions = new WeakMap();
 export function plannerCanEditFeature(state, featureType) {
-  return plannerEditLayerForTool(state?.activeTool) === PLANNER_EDIT_LAYER_BY_FEATURE[featureType];
+  const session = state && explicitEditSessions.get(state);
+  return Boolean(session && session.gardenId === state.activeParcelId && session.tool === state.activeTool && session.layer === PLANNER_EDIT_LAYER_BY_FEATURE[featureType]);
+}
+function beginExplicitEditing(state) {
+  const layer = plannerEditLayerForTool(state.activeTool);
+  if (layer) explicitEditSessions.set(state, {gardenId: state.activeParcelId, tool: state.activeTool, layer});
 }
 
 function plannerEditToolForFeature(state, featureType) {
@@ -574,6 +582,19 @@ const CORE_PLANTS = [
 
 const DEFAULT_PLANTS = [...CORE_PLANTS, ...FLOWER_CATALOG];
 
+function proposedBedPlantings(beds, existing = [], plants = DEFAULT_PLANTS) {
+  const occupied = new Set(existing.map(p => p.bedId));
+  const palette = ["lettuce", "kale", "carrot", "basil", "tomato", "nasturtium"].map(id => plants.find(p => p.id === id)).filter(Boolean);
+  const blooms = plants.filter(p => /\b(aster|coneflower|bee balm|goldenrod)\b/i.test(p.name));
+  return beds.filter(b => !occupied.has(b.id)).flatMap((bed, index) => {
+    const flowering = /flower|border|terrace|spring greens/i.test(bed.name);
+    const choices = flowering && blooms.length ? blooms : palette;
+    const plant = choices[index % choices.length];
+    if (!plant) return [];
+    return bedFillPositions(normalizeBed(bed), plant).slice(0, 24).map((point, j) => ({id:`${bed.id}-proposal-${j}`,bedId:bed.id,plantId:plant.id,...point,health:"planned",rotation:0,notes:"Illustrative planting inspired by public garden themes; species and placement are proposed, not verified specimens."}));
+  });
+}
+
 const DEFAULT_STATE = {
   viewMode: "garden",
   viewPresentation: "map",
@@ -626,6 +647,8 @@ const DEFAULT_STATE = {
 };
 
 DEFAULT_STATE.parcels[0].placements = DEFAULT_STATE.placements;
+DEFAULT_STATE.placements = [...DEFAULT_STATE.placements, ...proposedBedPlantings(DEFAULT_BEDS, DEFAULT_STATE.placements)];
+DEFAULT_STATE.parcels[0].placements = DEFAULT_STATE.placements;
 DEFAULT_STATE.parcels[0].selectedPlacementId = DEFAULT_STATE.selectedPlacementId;
 for (const reference of BERKSHIRE_GARDEN_REFERENCES.filter((garden) => garden.id !== PROPERTY_CONTEXT.id)) {
   DEFAULT_STATE.parcels.push(createReferenceGardenWorkspace(reference));
@@ -639,6 +662,11 @@ export function gardenPlanner(options = {}) {
   let hadSavedState = false;
   try { hadSavedState = Boolean((options.storage || localStorage).getItem(STORAGE_KEY)); } catch { /* Fresh, nonpersistent canvas. */ }
   const state = loadState(options.storage);
+  if (!options.initialState) {
+    explicitEditSessions.delete(state); state.activeTool = "select";
+    state.inspectorOpen = false;
+    state.toolDrawerOpen = false;
+  }
   if(options.initialState){Object.assign(state,parsePlannerBackup(JSON.stringify(options.initialState)));normalizeStateShape(state);}
   if(options.storage)plannerStorageOverrides.set(state,options.storage);
   let exploringDemos = !PLANNER_OWNER;
@@ -660,19 +688,32 @@ export function gardenPlanner(options = {}) {
   for (const event of ['pointerdown','keydown','input']) root.addEventListener(event,() => {interacted = true;},{capture:true});
   const viewNavigationMarkup = `
     <div class="view-navigation" aria-label="Shared view navigation" title="Drag to pan · wheel to zoom · Ctrl-drag or right-drag to rotate and change pitch">
+      <button data-view-nav="pan" type="button" aria-label="Pan mode — move the view without editing" title="Pan mode: drag anywhere without moving garden elements">Pan</button>
       <button data-view-nav="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
       <button data-view-nav="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
-      <button data-view-nav="reset-bearing" type="button" aria-label="Reset map bearing to north" title="Reset bearing to north"><span data-role="view-compass" aria-hidden="true">↑</span></button>
-      <button data-view-nav="fit-parcel" type="button" aria-label="Fit the full estate or parcel" title="Fit estate / parcel">◇</button>
-      <button data-view-nav="fit-plan" type="button" aria-label="Fit mapped garden features" title="Fit mapped plan">▦</button>
-      <button data-view-nav="fit-selection" type="button" aria-label="Fit selected bed or plant" title="Fit selection">⌖</button>
-      <small data-role="view-navigation-status"></small>
+      <details class="camera-panel"><summary>Camera</summary><div class="camera-panel-body">
+        <button data-view-nav="north-up" type="button" aria-label="Reset north and overhead"><span data-role="view-compass" aria-hidden="true">↑</span> North / overhead</button>
+        <label>Heading <input data-camera="bearing" type="range" min="-180" max="180" step="1" aria-label="Camera heading in degrees"></label>
+        <label>Tilt <input data-camera="pitch" type="range" min="0" max="75" step="1" aria-label="Camera tilt in degrees"></label>
+        <small data-role="view-navigation-status"></small>
+        <button data-view-nav="fit-parcel" type="button">Fit garden</button>
+        <button data-view-nav="fit-plan" type="button">Fit features</button>
+        <button data-view-nav="fit-selection" type="button">Fit selection</button>
+        <button data-view-nav="capture" type="button">Save 3D image</button>
+        <small data-role="capture-status" role="status"></small>
+        <div class="walk-buttons" data-role="walk-controls" hidden>
+          <button data-view-nav="walk-forward" type="button">Step forward</button><button data-view-nav="walk-back" type="button">Step back</button>
+          <button data-view-nav="walk-left" type="button">Turn left</button><button data-view-nav="walk-right" type="button">Turn right</button>
+        </div>
+        <p>Drag to pan. Ctrl/right-drag rotates and tilts. On touch, use these sliders and +/−. Walk uses a flat surface at 5½ ft eye height; no obstacle collision. Image captures are illustrative, not measured sunlight.</p>
+        <button data-view-nav="close-camera" type="button">Close camera controls</button>
+      </div></details>
     </div>
-    <div class="view-gesture-hint">Drag pan · wheel zoom · Ctrl/right-drag rotate + pitch</div>
+    <div class="view-gesture-hint">Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate</div>
   `;
   root.innerHTML = `
     <section class="planner-quick-start" aria-label="Start a garden plan">
-      <div><strong>Try a garden of your own</strong><p>Start with an editable 4 × 8 ft bed. No address or account needed. Existing gardens stay in your collection.</p></div>
+      <div><strong>Garden Planning Studio</strong><p>Try an editable 4 × 8 ft bed. No account needed.</p></div>
       <button data-role="start-practice-garden" type="button">Start a practice garden</button>
     </section>
     <div class="garden-shell">
@@ -685,7 +726,7 @@ export function gardenPlanner(options = {}) {
 
       <div class="garden-layout" data-role="garden-layout">
         <nav class="garden-tool-rail" aria-label="Planner tools">
-          <button data-tool="select" type="button" aria-label="Close tools and return to the canvas" title="Canvas"><span aria-hidden="true">↖</span><small>Canvas</small></button>
+          <button data-tool="select" type="button" aria-label="Pan mode — close editing tools" title="Pan without editing"><span aria-hidden="true">↔</span><small>Pan</small></button>
           <button data-tool="parcel" type="button" aria-label="Open garden and parcel tools" title="Garden and parcel"><span aria-hidden="true">◇</span><small>Garden</small></button>
           <button data-tool="beds" type="button" aria-label="Open garden bed tools" title="Beds"><span aria-hidden="true">▦</span><small>Beds</small></button>
           <button data-tool="plants" type="button" aria-label="Open plant library" title="Plants"><span aria-hidden="true">♧</span><small>Plants</small></button>
@@ -709,6 +750,7 @@ export function gardenPlanner(options = {}) {
           <section class="planner-section tool-panel" data-tool-panel="beds">
             <div class="section-heading"><span>Garden beds</span><span class="section-count" data-role="bed-count"></span></div>
             <div class="bed-list" data-role="bed-list"></div>
+            <details class="advanced-disclosure"><summary>Seasonal examples &amp; snapshots</summary><label>Month<input data-role="snapshot-month" type="month" value="${todayIso().slice(0,7)}"></label><button type="button" data-action="populate-empty-beds">Populate empty example beds</button><button type="button" data-action="seasonal-example">Add seasonal example beds</button><button type="button" data-action="bed-snapshot">Save selected bed snapshot</button><p data-role="snapshot-status" role="status">Example plantings are proposed designs, not records of this garden. Winter beds may be resting.</p></details>
             <div class="drawer-action-row">
               <button data-action="add-bed" type="button">+ Add bed</button>
               <button data-action="draw-bed" type="button">Draw polygon</button>
@@ -793,6 +835,7 @@ export function gardenPlanner(options = {}) {
 
           <section class="planner-section tool-panel" data-tool-panel="structures">
             <div class="section-heading"><span>Site features</span><span class="section-count" data-role="structure-count"></span></div>
+            <label>Find site features<input type="search" data-role="structure-search" placeholder="Name or type"></label>
             <div class="structure-list" data-role="structure-list"></div>
             <button data-action="add-structure" type="button">+ Add site feature</button>
             <div data-role="reference-map-inspector"></div>
@@ -800,6 +843,15 @@ export function gardenPlanner(options = {}) {
 
           <section class="planner-section tool-panel" data-tool-panel="vegetation">
             <div class="section-heading"><span>Site trees & vegetation</span><span class="section-count" data-role="vegetation-count"></span></div>
+            <div class="planting-palette" aria-label="Structural planting palette">
+              <button type="button" data-planting="tree"><span aria-hidden="true">♣</span>Deciduous tree</button>
+              <button type="button" data-planting="evergreen"><span aria-hidden="true">▲</span>Evergreen tree</button>
+              <button type="button" data-planting="shrub"><span aria-hidden="true">●</span>Shrub</button>
+              <button type="button" data-planting="hedge"><span aria-hidden="true">▰</span>Hedge mass</button>
+              <button type="button" data-planting="canopy"><span aria-hidden="true">♣♣</span>Canopy area</button>
+            </div>
+            <p>Choose a form, then click the map to place it. Sizes are editable planning estimates; species is unspecified. Hedge masses are area placeholders, not traced hedge lines.</p>
+            <label>Find vegetation features<input type="search" data-role="vegetation-search" placeholder="Name or type"></label>
             <div class="vegetation-list" data-role="vegetation-list"></div>
             <button data-action="add-vegetation" type="button">+ Plan a tree</button>
             <button data-action="mark-tree" type="button">Mark existing tree on map</button>
@@ -821,7 +873,8 @@ export function gardenPlanner(options = {}) {
             </div>
             <span class="edit-mode-status" data-role="edit-mode-status" role="status">
               <span data-role="edit-mode-icon" aria-hidden="true">✎</span>
-              <strong data-role="edit-mode-label">Editing beds</strong>
+              <strong data-role="edit-mode-label">Inspect only</strong>
+              <button data-action="toggle-edit-lock" type="button">Edit layer</button>
               <button data-action="cancel-tree" type="button" hidden>Cancel tree placement</button>
             </span>
             <label class="focus-control">
@@ -868,18 +921,12 @@ export function gardenPlanner(options = {}) {
             </details>
           </section>
 
-          <div data-role="time-preview-host"></div>
+          <details class="studio-preview-options"><summary>Date &amp; sunlight previews</summary><div data-role="time-preview-host"></div></details>
           <nav class="planning-scope" aria-label="Planning scope" style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 12px">
             <button type="button" data-scope="attributes">Site map & features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
           </nav>
-          <p data-role="planning-scope-help" style="margin:0;padding:0 12px 8px"></p>
-          <p data-role="imagery-status" role="status" hidden></p>
-          <div class="planner-storage-notice">
-            <p data-role="storage-status" role="status" aria-live="polite"></p>
-            <button data-role="storage-backup" type="button" hidden>Download unsaved planner JSON</button>
-          </div>
           <section class="planner-view parcel-map-view">
             <div class="view-heading parcel-heading">
               <span>Garden canvas</span>
@@ -956,12 +1003,19 @@ export function gardenPlanner(options = {}) {
             </section>
             <section class="planner-view three-d-view">
               <div class="view-heading">
-                <span>3D canopy preview</span>
+                <span>3D garden · illustrative heights</span>
+                <select data-role="camera-angle" aria-label="3D viewing angle"><option value="60">Oblique</option><option value="0">Overhead</option><option value="75">Low angle</option><option value="walk">Walk at eye level</option></select>
                 <span data-role="three-status">WebGL</span>
               </div>
               ${viewNavigationMarkup}
               <div class="three-host" data-role="three-host"></div>
             </section>
+          </div>
+          <p data-role="planning-scope-help" style="margin:0;padding:0 12px 8px"></p>
+          <p data-role="imagery-status" role="status" hidden></p>
+          <div class="planner-storage-notice">
+            <p data-role="storage-status" role="status" aria-live="polite"></p>
+            <button data-role="storage-backup" type="button" hidden>Download unsaved planner JSON</button>
           </div>
           <footer class="garden-statusbar" data-role="metrics" aria-label="Garden plan status"></footer>
           <details class="garden-information-card" data-role="garden-information-card">
@@ -1110,6 +1164,7 @@ export function gardenPlanner(options = {}) {
     },
     onPlan: id => {
       selectGardenFeature(state,"bed",id);
+      state.walkCamera = null;
       state.viewMode = "bed";
       if (state.viewPresentation === "map") state.viewPresentation = "2d";
       state.activeTool = "beds";state.inspectorOpen = false;state.toolDrawerOpen = false;
@@ -1143,7 +1198,7 @@ export function gardenPlanner(options = {}) {
       event.preventDefault(); event.stopImmediatePropagation(); renderAll();
     }
   }, true);
-  setupControls(refs, state, () => renderAll());
+  setupControls(refs, state, () => renderAll(), renderSharedViews);
   setupActions(refs, state, () => renderAll());
   const accountPanel = plannerAccount({
     ...(options.accountAdapter || {}),
@@ -1158,7 +1213,7 @@ export function gardenPlanner(options = {}) {
       catch (error) { Object.assign(state, previous); renderAll(); throw error; }
     }
   });
-  root.querySelector(".planner-quick-start").after(accountPanel);
+  root.append(accountPanel);
   const copySharedGarden = garden => {
     const selected = selectedSharedGarden(garden);
     // Sharing opens an explicit new personal/browser copy. Never overwrite a
@@ -2349,7 +2404,12 @@ function referenceSiteWorkspace(reference) {
 }
 
 function referenceStarterBeds(reference) {
-  if (reference.siteReconstructionRevision) return structuredCloneCompat(referenceSiteWorkspace(reference).beds);
+  if (reference.siteReconstructionRevision) {
+    const observed = structuredCloneCompat(referenceSiteWorkspace(reference).beds);
+    if (observed.length) return observed;
+    const viewport = referenceStarterViewport(reference), x = viewport.x + viewport.width / 2, y = viewport.y + viewport.height / 2;
+    return ["Spring greens", "Summer kitchen", "Seasonal flowers"].map((name, i) => referenceBed(reference, `illustrative-${i}`, `${name} · proposed`, "Illustrative seasonal design", x + (i - 1) * 96, y, 60, 120));
+  }
   if (Array.isArray(reference.starterLayout?.beds)) {
     return reference.starterLayout.beds.map((bed) => normalizeBed(structuredCloneCompat(bed)));
   }
@@ -2420,7 +2480,12 @@ function referenceStarterVegetation(reference) {
 }
 
 function referenceStarterPlacements(reference, beds) {
-  if (reference.siteReconstructionRevision) return structuredCloneCompat(referenceSiteWorkspace(reference).placements);
+  if (reference.siteReconstructionRevision) {
+    const observed = structuredCloneCompat(referenceSiteWorkspace(reference).placements);
+    const proposals = beds.filter(b => b.id.includes("-illustrative-"));
+    const plants = [CORE_PLANTS.find(p => p.id === "lettuce"), CORE_PLANTS.find(p => p.id === "basil"), CORE_PLANTS.find(p => p.id === "nasturtium")];
+    return [...observed, ...proposals.flatMap((bed,i) => bedFillPositions(bed, plants[i % plants.length]).slice(0,24).map((point,j) => ({id:`${bed.id}-plant-${j}`,bedId:bed.id,plantId:plants[i % plants.length].id,...point,health:"planned",notes:"Illustrative seasonal planting, not an institutional inventory",rotation:0})))];
+  }
   const candidates = Array.isArray(reference.starterLayout?.placements)
     ? structuredCloneCompat(reference.starterLayout.placements)
     : [];
@@ -2439,7 +2504,7 @@ function createReferenceGardenWorkspace(reference) {
     beds,
     structures: referenceStarterStructures(reference),
     vegetation: referenceStarterVegetation(reference),
-    placements: referenceStarterPlacements(reference, beds),
+    placements: [...referenceStarterPlacements(reference, beds), ...proposedBedPlantings(beds, referenceStarterPlacements(reference, beds))],
     selectedVegetationId: null,
     selectedStructureId: null,
     selectedPlacementId: null,
@@ -2500,6 +2565,8 @@ function syncActiveParcelWorkspace(state) {
 
 function applyParcelWorkspace(state, workspace) {
   const normalized = normalizeParcelWorkspace(workspace);
+  state.walkCamera = null;
+  explicitEditSessions.delete(state);
   state.activeParcelId = normalized.id;
   state.property = structuredCloneCompat(normalized.property);
   state.activeBedId = normalized.activeBedId;
@@ -3203,7 +3270,20 @@ function closePlannerPanel(refs, state, renderAll, panel) {
   (tool || refs.toolButtons[0]).focus({preventScroll: true});
 }
 
-function setupControls(refs, state, renderAll) {
+function setupControls(refs, state, renderAll, renderSharedViews = renderAll) {
+  refs.root.querySelector('[data-role="structure-search"]').addEventListener('input',()=>renderStructureList(refs,state,renderAll));
+  refs.root.querySelector('[data-role="vegetation-search"]').addEventListener('input',()=>renderVegetationList(refs,state,renderAll));
+  for (const slider of refs.root.querySelectorAll('[data-camera]')) {
+    slider.addEventListener('input', () => {
+      setPlanningOrientation(state, slider.dataset.camera === 'bearing' ? Number(slider.value) : planningBearing(state), slider.dataset.camera === 'pitch' ? Number(slider.value) : planningPitch(state));
+      renderSharedViews();
+    });
+    slider.addEventListener('change', renderAll);
+  }
+  refs.root.addEventListener('keydown', event => {
+    const panel=event.target.closest?.('.camera-panel[open]');
+    if(event.key==='Escape' && panel){event.preventDefault();event.stopImmediatePropagation();panel.open=false;panel.querySelector('summary').focus();}
+  },true);
   // Inspection is view-only: fading overlays neither changes geometry nor
   // reloads imagery. Fully hidden features must not intercept map clicks.
   refs.featureOpacity.addEventListener("input", () => {
@@ -3217,11 +3297,17 @@ function setupControls(refs, state, renderAll) {
     refs.actions.deleteLayout.disabled = !hasSavedVersion;
   });
 
+  refs.root.querySelector('[data-action="toggle-edit-lock"]').addEventListener("click", () => {
+    if(explicitEditSessions.has(state)) {explicitEditSessions.delete(state);state.drawMode=null;state.draftBedPoints=[];}
+    else beginExplicitEditing(state);
+    renderAll();
+  });
   for (const button of refs.toolButtons) {
     button.addEventListener("click", () => {
+      explicitEditSessions.delete(state);
       const tool = button.dataset.tool;
       if (tool === "select") {
-        state.activeTool = "select";
+        explicitEditSessions.delete(state); state.activeTool = "select";
         state.toolDrawerOpen = false;
         state.inspectorOpen = false;
       } else {
@@ -3242,13 +3328,27 @@ function setupControls(refs, state, renderAll) {
     });
   }
 
+  for(const button of refs.root.querySelectorAll('[data-planting]'))button.addEventListener('click',()=>{
+    state.pendingPlantingKind=button.dataset.planting;state.drawMode='planting-point';state.viewMode='garden';state.viewPresentation='map';state.toolDrawerOpen=false;state.inspectorOpen=false;renderAll();refs.parcelSvg.focus({preventScroll:true});
+  });
   for (const button of refs.presentationButtons) {
     button.addEventListener("click", () => {
+      state.walkCamera = null;
       state.viewPresentation = normalizeViewPresentation(button.dataset.presentation);
+      if (["3d", "split"].includes(state.viewPresentation) && planningPitch(state) < 55) {
+        setPlanningOrientation(state, planningBearing(state) || 30, 60);
+      }
       renderAll();
     });
   }
 
+  refs.root.querySelector('[data-role="camera-angle"]').addEventListener("change", event => {
+    if(event.target.value==='walk'){
+      state.viewMode='garden';state.viewPresentation='3d';state.activeTool='select';state.toolDrawerOpen=false;state.inspectorOpen=false;
+      const bounds=parcelViewportBounds(state);state.walkCamera={x:bounds.x+bounds.width/2,y:bounds.y+bounds.height/2,look:0};
+    }else{state.walkCamera=null;setPlanningOrientation(state, planningBearing(state), Number(event.target.value));}
+    renderAll();
+  });
   const inspectorId = `inspector-${crypto.randomUUID()}`;
   for (const panel of refs.inspectorPanels) {
     panel.id = `${inspectorId}-${panel.dataset.inspectorPanel}`;
@@ -3427,6 +3527,27 @@ function setupActions(refs, state, renderAll) {
   for (const button of refs.viewNavigationButtons) {
     button.addEventListener("click", () => {
       const action = button.dataset.viewNav;
+      if(action==='close-camera'){const panel=button.closest('details');panel.open=false;panel.querySelector('summary').focus();return;}
+      if(action==='north-up'){state.walkCamera=null;setPlanningOrientation(state,0,0);renderAll();return;}
+      if(action.startsWith('walk-')){moveWalkCamera(state,action.slice(5));renderAll();return;}
+      if(action==='capture'){
+        const canvas=refs.root.querySelector('.three-canvas'),status=button.closest('details').querySelector('[data-role="capture-status"]');
+        try{if(!canvas)throw Error('3D is unavailable');canvas.toBlob(blob=>{
+          if(!blob){status.textContent='Image capture unavailable.';return;}
+          const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='garden-view.png';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent='3D image downloaded.';
+        },'image/png');}catch{status.textContent='Image capture unavailable in this browser.';}return;
+      }
+      if(state.walkCamera && ['zoom-in','zoom-out'].includes(action)){moveWalkCamera(state,action==='zoom-in'?'forward':'back');renderAll();return;}
+      if(action==='pan'||action.startsWith('fit'))state.walkCamera=null;
+      if (action === "pan") {
+        explicitEditSessions.delete(state); state.activeTool = "select";
+        state.toolDrawerOpen = false;
+        state.inspectorOpen = false;
+        state.drawMode = null;
+        state.draftBedPoints = [];
+        renderAll();
+        return;
+      }
       if (state.viewMode === "bed" && !button.closest(".parcel-map-view")) {
         if (action === "zoom-in") zoomPlanningViewport(state,0.78);
         if (action === "zoom-out") zoomPlanningViewport(state,1.28);
@@ -3477,6 +3598,41 @@ function setupActions(refs, state, renderAll) {
     fillBedWithSelectedPlant(state, positions);
     if (state.selectedPlacementId) openInspector(state, "placement");
     renderAll();
+  });
+
+  refs.root.querySelector('[data-action="populate-empty-beds"]').addEventListener("click", () => {
+    const additions=proposedBedPlantings(state.beds,state.placements,state.plants);
+    state.placements.push(...additions);renderAll();
+    refs.root.querySelector('[data-role="snapshot-status"]').textContent=`Added ${additions.length} proposed plantings to empty beds. Existing plantings were preserved.`;
+  });
+  refs.root.querySelector('[data-action="seasonal-example"]').addEventListener("click", () => {
+    const month = refs.root.querySelector('[data-role="snapshot-month"]').value;
+    if (!/^\d{4}-(0[1-9]|1[0-2])$/.test(month)) return;
+    const season=Number(month.slice(5)), bounds=parcelViewportBounds(state), cx=bounds.x+bounds.width/2,cy=bounds.y+bounds.height/2;
+    const ids=season<3||season>11?[]:season<6||season>8?["lettuce","kale","carrot"]:["tomato","basil","pepper"];
+    const flowers=state.plants.filter(p=>/\b(zinnia|marigold|aster)\b/i.test(p.name));
+    const choices=[state.plants.find(p=>p.id===ids[0]),state.plants.find(p=>p.id===ids[1]),season>4&&season<11?flowers[0]:null];
+    let created=0;
+    for(let i=0;i<3;i++){
+      const id=`${state.activeParcelId}-seasonal-${month}-${i}`;
+      if(state.beds.some(b=>b.id===id))continue;
+      const bed=normalizeBed({id,name:`${month} · ${i===2?"Flower border":"Kitchen bed "+(i+1)} · proposed`,zone:"Seasonal design study",x:cx+(i-1)*84,y:cy,width:48,height:96,rotation:0,notes:"Illustrative placement at view center. Move to a suitable area; check light, access and local planting dates. Not an observed garden bed.",safeMargin:6,grid:6});
+      state.beds.push(bed);const plant=choices[i];
+      if(plant)for(const point of bedFillPositions(bed,plant).slice(0,32))state.placements.push({id:uniquePlacementId(state),bedId:id,plantId:plant.id,...point,planted:`${month}-15`,health:"planned",notes:"Seasonal example, not field observation",rotation:0});
+      state.activeBedId=id;created++;
+    }
+    state.activeTool="beds";state.viewMode="garden";renderAll();
+    refs.root.querySelector('[data-role="snapshot-status"]').textContent=created?`Added ${created} proposed beds. Adjust their location and dates before using the plan.`:"Examples for this month already exist; your edits were preserved.";
+  });
+  refs.root.querySelector('[data-action="bed-snapshot"]').addEventListener("click", () => {
+    const bed=activeBed(state),month=refs.root.querySelector('[data-role="snapshot-month"]').value;
+    if(!bed?.id||!state.beds.some(b=>b.id===bed.id)||!/^\d{4}-(0[1-9]|1[0-2])$/.test(month))return;
+    const previous=state.layouts.find(l=>l.bedSnapshot?.bedId===bed.id&&l.gardenId===state.activeParcelId);
+    const count=placementsForBed(state,bed.id).length;
+    saveNamedLayout(state,`${month} · ${bed.name} · ${new Date().toISOString()}`);
+    state.layouts[0].bedSnapshot={bedId:bed.id,month,plantCount:count};
+    renderAll();
+    refs.root.querySelector('[data-role="snapshot-status"]').textContent=previous?`Saved ${month}: ${count} plantings; ${previous.bedSnapshot.month}: ${previous.bedSnapshot.plantCount}. Saved versions retain each full plan for review and export.`:`Saved ${month}: ${count} plantings. Save another month to compare. Snapshots use the existing 48-version limit; export a backup for long-term history.`;
   });
 
   refs.actions.saveLayout.addEventListener("click", () => {
@@ -3746,6 +3902,13 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
   const svg = d3.select(refs.planSvg);
   let navigationState = null;
   let suppressNextPlanClick = false;
+  refs.planSvg.addEventListener("click", event => {
+    if (!suppressNextPlanClick) return;
+    suppressNextPlanClick = false;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }, true);
+
 
   svg.on("wheel", (event) => {
     refs.planSvg.focus({preventScroll: true});
@@ -3756,10 +3919,12 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
   }, {passive: false});
 
   svg.on("pointerdown", (event) => {
+    if (navigationState) return;
+    suppressNextPlanClick = false;
     const rotating = event.ctrlKey || event.button === 2;
     if (!rotating && event.button !== 0 && event.button !== 1) return;
     const targetFeatureType = svgFeatureTypeFromTarget(event.target);
-    if (!rotating && targetFeatureType && plannerCanEditFeature(state, targetFeatureType)) return;
+    if (!rotating && event.button !== 1 && targetFeatureType && plannerCanEditFeature(state, targetFeatureType)) return;
     refs.planSvg.focus({preventScroll: true});
     navigationState = {
       pointerId: event.pointerId,
@@ -3799,7 +3964,7 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
 
   const finishNavigation = (event) => {
     if (!navigationState || event.pointerId !== navigationState.pointerId) return;
-    refs.planSvg.releasePointerCapture?.(event.pointerId);
+    if (refs.planSvg.hasPointerCapture?.(event.pointerId)) refs.planSvg.releasePointerCapture(event.pointerId);
     const didMove = navigationState.moved;
     navigationState = null;
     if (didMove) {
@@ -3809,16 +3974,18 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
   };
   svg.on("pointerup", finishNavigation);
   svg.on("pointercancel", finishNavigation);
+  svg.on("lostpointercapture", finishNavigation);
   svg.on("contextmenu", (event) => event.preventDefault());
 
   // Capture placement before feature-selection handlers; an existing crown or
   // mapped polygon must not steal the click intended for a new observation.
   refs.parcelSvg.addEventListener("click", event => {
-    if (state.drawMode !== "tree-point") return;
+    if (!["tree-point","planting-point"].includes(state.drawMode) || refs.parcelSvg.dataset.panMoved === "true") return;
     event.preventDefault();
     event.stopImmediatePropagation();
     const [x, y] = pointerInSharedWorld(event, refs.parcelSvg);
-    addVegetation(state, {x, y});
+    if(state.drawMode==='planting-point')addPlannedPlanting(state,state.pendingPlantingKind,{x,y});
+    else addVegetation(state, {x, y});
     state.drawMode = null;
     openInspector(state, "vegetation");
     renderAll();
@@ -3863,6 +4030,13 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
   const svg = d3.select(refs.parcelSvg);
   let panState = null;
   let suppressNextParcelClick = false;
+  refs.parcelSvg.addEventListener("click", event => {
+    if (!suppressNextParcelClick) return;
+    suppressNextParcelClick = false;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }, true);
+
 
   svg.on("wheel", (event) => {
     refs.parcelSvg.focus({preventScroll: true});
@@ -3873,10 +4047,13 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
   }, {passive: false});
 
   svg.on("pointerdown", (event) => {
+    if (panState) return;
+    suppressNextParcelClick = false;
+    refs.parcelSvg.dataset.panMoved="false";
     const rotating = event.ctrlKey || event.button === 2;
     if (!rotating && event.button !== 0 && event.button !== 1) return;
     const targetFeatureType = svgFeatureTypeFromTarget(event.target);
-    if (!rotating && targetFeatureType && plannerCanEditFeature(state, targetFeatureType)) return;
+    if (!rotating && event.button !== 1 && targetFeatureType && plannerCanEditFeature(state, targetFeatureType)) return;
     refs.parcelSvg.focus({preventScroll: true});
     const viewport = parcelViewportBounds(state);
     panState = {
@@ -3899,6 +4076,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
     const dy = event.clientY - panState.startClientY;
     if (!panState.moved && Math.hypot(dx, dy) < 4) return;
     panState.moved = true;
+    refs.parcelSvg.dataset.panMoved="true";
     suppressNextParcelClick = true;
     event.preventDefault();
     if (panState.rotating) {
@@ -3918,7 +4096,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
 
   const finishPan = (event) => {
     if (!panState || event.pointerId !== panState.pointerId) return;
-    refs.parcelSvg.releasePointerCapture?.(event.pointerId);
+    if (refs.parcelSvg.hasPointerCapture?.(event.pointerId)) refs.parcelSvg.releasePointerCapture(event.pointerId);
     const didMove = panState.moved;
     panState = null;
     if (didMove) {
@@ -3929,6 +4107,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
 
   svg.on("pointerup", finishPan);
   svg.on("pointercancel", finishPan);
+  svg.on("lostpointercapture", finishPan);
   svg.on("contextmenu", (event) => event.preventDefault());
 
   svg.on("click", (event) => {
@@ -3991,6 +4170,20 @@ function renderControls(refs, state) {
   refs.root.dataset.viewPresentation = state.viewPresentation;
   refs.root.dataset.viewMode = state.viewMode;
   refs.root.dataset.activeTool = state.activeTool;
+  for(const hint of refs.root.querySelectorAll('.view-gesture-hint'))hint.textContent=state.walkCamera?'Walk · drag to look · W/S step · A/D turn · Camera for touch controls · Escape exits':'Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate';
+  for(const controls of refs.root.querySelectorAll('[data-role="walk-controls"]'))controls.hidden=!state.walkCamera;
+  if(state.walkCamera)refs.root.querySelector('[data-role="camera-angle"]').value='walk';
+  for(const slider of refs.root.querySelectorAll('[data-camera]')){
+    slider.disabled=Boolean(state.walkCamera)&&slider.dataset.camera==='pitch';
+    if(slider!==document.activeElement)slider.value=String(slider.dataset.camera==='bearing'?normalizeViewBearing(planningBearing(state)):planningPitch(state));
+    slider.setAttribute('aria-valuetext',slider.value+' degrees');
+  }
+  for(const capture of refs.root.querySelectorAll('[data-view-nav="capture"]'))capture.disabled=!['3d','split'].includes(state.viewPresentation);
+  const cameraAngle = refs.root.querySelector('[data-role="camera-angle"]');
+  cameraAngle.value = state.walkCamera ? "walk" : String(planningPitch(state) < 25 ? 0 : planningPitch(state) > 67 ? 75 : 60);
+  for (const button of refs.viewNavigationButtons) {
+    if (button.dataset.viewNav === "pan") button.setAttribute("aria-pressed", String(state.activeTool === "select"));
+  }
   const activeGarden = activeParcelWorkspace(state);
   const activeReference = gardenReferenceById(state.activeParcelId);
   refs.gardenSubtitle.textContent = `${activeGarden?.name || state.property?.name || "Garden"} · ${isPublicDemo(activeGarden) ? "public demo · edits stay in this browser" : "my garden · save an account copy to keep it online"}`;
@@ -4016,7 +4209,13 @@ function renderControls(refs, state) {
     button.setAttribute("aria-pressed", active ? "true" : "false");
   }
   refs.activeBedName.textContent = state.beds.length ? bed.name : "No planning beds";
-  const editLayer = plannerEditLayerForTool(state.activeTool);
+  const session = explicitEditSessions.get(state);
+  if (session && (session.tool !== state.activeTool || session.gardenId !== state.activeParcelId)) explicitEditSessions.delete(state);
+  const editLayer = explicitEditSessions.get(state)?.layer || null;
+  const lockButton = refs.root.querySelector('[data-action="toggle-edit-lock"]');
+  lockButton.textContent = editLayer ? "Done editing" : "Edit layer";
+  lockButton.disabled = !plannerEditLayerForTool(state.activeTool);
+  lockButton.setAttribute("aria-pressed", String(Boolean(editLayer)));
   refs.editModeStatus.dataset.editLayer = editLayer || "locked";
   refs.editModeIcon.textContent = editLayer ? "✎" : "⌕";
   refs.editModeLabel.textContent = editLayer ? `Editing ${plannerEditLayerLabel(editLayer)}` : "Inspect only";
@@ -4127,10 +4326,10 @@ function renderControls(refs, state) {
   refs.actions.addStructure.disabled = !siteEditable;
   refs.actions.addVegetation.disabled = !vegetationEditable;
   refs.root.querySelector('[data-action="mark-tree"]').disabled = !vegetationEditable;
-  const markingTree = state.drawMode === "tree-point";
+  const markingTree = ["tree-point", "planting-point"].includes(state.drawMode);
   refs.root.querySelector('[data-action="cancel-tree"]').hidden = !markingTree;
   refs.root.querySelector('[data-role="tree-placement-status"]').hidden = !markingTree;
-  if (markingTree) refs.editModeLabel.textContent = "Click map to mark a tree · Escape cancels";
+  if (markingTree) refs.editModeLabel.textContent = "Click map to place planting · Escape cancels";
   refs.actions.addSelected.disabled = !plantingsEditable;
   refs.actions.fillBed.disabled = !plantingsEditable;
   refs.actions.fillBed.textContent = placementsForBed(state, bed.id).length ? "Replace bed planting…" : "Fill bed";
@@ -4433,8 +4632,10 @@ function renderStructureList(refs, state, renderAll) {
     refs.structureList.innerHTML = `<div class="empty-state">No structures on the map</div>`;
     return;
   }
+  const search=refs.root.querySelector('[data-role="structure-search"]').value.toLowerCase().trim();
   for (const structure of state.structures) {
     const definition = siteFeatureDefinition(structure);
+    if(search&&!`${structure.name} ${definition.label}`.toLowerCase().includes(search))continue;
     const swatchColor = definition.legend.fill || definition.legend.stroke || "#8a6b4c";
     const button = document.createElement("button");
     button.className = "structure-option";
@@ -4452,7 +4653,10 @@ function renderStructureList(refs, state, renderAll) {
       selectGardenFeature(state, "structure", structure.id);
       renderAll();
     });
-    refs.structureList.append(button);
+    const row=document.createElement('div');row.className='feature-list-row';
+    const locate=document.createElement('button');locate.type='button';locate.textContent='Locate';locate.setAttribute('aria-label',`Locate ${structure.name}`);
+    locate.addEventListener('click',()=>{selectGardenFeature(state,"structure",structure.id);state.walkCamera=null;state.viewMode='garden';state.viewPresentation='map';fitParcelViewport(state,selectedFeatureBounds(state),.5);if(window.matchMedia('(max-width:920px)').matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();});
+    row.append(button,locate);refs.structureList.append(row);
   }
 }
 
@@ -4463,7 +4667,9 @@ function renderVegetationList(refs, state, renderAll) {
     refs.vegetationList.innerHTML = `<div class="empty-state">No vegetation overlays</div>`;
     return;
   }
+  const search=refs.root.querySelector('[data-role="vegetation-search"]').value.toLowerCase().trim();
   for (const vegetation of state.vegetation) {
+    if(search&&!`${vegetation.name} ${vegetation.kind}`.toLowerCase().includes(search))continue;
     const plant = plantById(state, vegetation.plantId);
     const crown = vegetationCanopyEllipse(vegetation);
     const crownSummary = vegetation.kind === "tree"
@@ -4485,7 +4691,10 @@ function renderVegetationList(refs, state, renderAll) {
       selectGardenFeature(state, "vegetation", vegetation.id);
       renderAll();
     });
-    refs.vegetationList.append(button);
+    const row=document.createElement('div');row.className='feature-list-row';
+    const locate=document.createElement('button');locate.type='button';locate.textContent='Locate';locate.setAttribute('aria-label',`Locate ${vegetation.name}`);
+    locate.addEventListener('click',()=>{selectGardenFeature(state,"vegetation",vegetation.id);state.walkCamera=null;state.viewMode='garden';state.viewPresentation='map';fitParcelViewport(state,selectedFeatureBounds(state),.5);if(window.matchMedia('(max-width:920px)').matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();});
+    row.append(button,locate);refs.vegetationList.append(row);
   }
 }
 
@@ -4772,18 +4981,20 @@ function renderSiteGeometryDraft(world, state) {
   const feature = draft.features.find((item) => item.id === draft.featureId);
   const handles = layer.selectAll("[data-site-vertex]").data(localSiteGeometryVertices(feature.localGeometry))
     .enter().append("g").attr("data-site-vertex", (_, i) => i).attr("tabindex", 0)
-    .attr("role", "button").attr("aria-label", (_, i) => `Vertex ${i + 1}; arrow keys move one foot, Shift moves one inch`)
+    .attr("role", "button").attr("aria-label", (_, i) => `Anchor ${i + 1}; arrows move, Insert adds, Delete removes`)
     .style("cursor", "move")
-    .on("click", (event) => event.stopPropagation())
+    .on("click", (event,vertex) => {event.stopPropagation();draft.selectedVertex=vertex.path;layer.selectAll('[data-site-vertex] circle').attr('fill',v=>JSON.stringify(v.path)===JSON.stringify(vertex.path)?'#ae6616':'#092c32');})
+    .on("focus", (event,vertex) => {draft.selectedVertex=vertex.path;})
     .on("keydown", (event, vertex) => {
+      if(['Delete','Backspace','Insert'].includes(event.key)){event.preventDefault();event.stopPropagation();draft.selectedVertex=vertex.path;world.node().closest('.garden-planner-app')?.querySelector(`[data-action="${event.key==='Insert'?'insert':'remove'}-site-anchor"]`)?.click();return;}
       const delta = {ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1]}[event.key];
       if (!delta) return;
       event.preventDefault(); event.stopPropagation();
       move(vertex, vertex.coordinate.map((v, i) => v + delta[i] * (event.shiftKey ? 1 : 12)));
     })
-    .call(d3.drag().on("start", (event) => event.sourceEvent.stopPropagation())
+    .call(d3.drag().on("start", (event,vertex) => {event.sourceEvent.stopPropagation();draft.selectedVertex=vertex.path;})
       .on("drag", (event, vertex) => move(vertex, d3.pointer(event.sourceEvent, world.node()))));
-  handles.append("circle").attr("r", radius).attr("fill", "#092c32").attr("stroke", "#00d9ee")
+  handles.append("circle").attr("r", radius).attr("fill", v=>JSON.stringify(v.path)===JSON.stringify(draft.selectedVertex)?"#ae6616":"#092c32").attr("stroke", "#00d9ee")
     .attr("stroke-width", 2).attr("vector-effect", "non-scaling-stroke");
   handles.append("text").text((_, i) => i + 1).attr("text-anchor", "middle").attr("dy", ".35em")
     .attr("font-size", radius).attr("fill", "white").attr("pointer-events", "none");
@@ -5383,7 +5594,7 @@ function normalizeParcelViewport(state, viewport) {
 }
 
 function clampParcelViewport(viewport, bounds) {
-  return clampViewportToExtent(viewport, bounds, {minimumSpan: MIN_GARDEN_VIEW_SPAN_INCHES});
+  return clampViewportToExtent(viewport, bounds, {minimumSpan: MIN_GARDEN_VIEW_SPAN_INCHES, panPaddingRatio: 0.5});
 }
 
 function zoomParcelViewport(state, factor, anchor = null) {
@@ -6437,6 +6648,7 @@ function bindInspectorEditGuard(container, state, featureType, renderAll) {
   }
   container.querySelector('[data-action="edit-selected-layer"]')?.addEventListener("click", () => {
     state.activeTool = plannerEditToolForFeature(state, featureType);
+    beginExplicitEditing(state);
     if (state.activeTool !== "beds") {
       state.drawMode = null;
       state.draftBedPoints = [];
@@ -6513,6 +6725,7 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
           `).join("")}
         </div>
       </details>
+      ${gardenResearch(state.activeParcelId).length ? `<details class="advanced-disclosure"><summary>Planting research &amp; sources</summary><label><input type="checkbox" data-action="illustrative-planting" ${state.illustrativePlanting !== false ? "checked" : ""}> Illustrative 3D planting</label><p>Plant masses are imagined within mapped borders and woodland; they are not measured specimens.</p><p>Area-level records; exact positions and present-day survival remain unverified.</p>${gardenResearch(state.activeParcelId).map(record => `<details><summary>${escapeHtml(record.area)} · ${escapeHtml(record.status)}</summary><p>${escapeHtml(record.summary)}</p>${record.plants.length ? `<p>${record.plants.map(escapeHtml).join(" · ")}</p>` : ""}<p><a href="${escapeHtml(record.source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(record.source.title)}</a> · ${escapeHtml(record.source.publishedDate || "publication date unknown")}; reviewed ${escapeHtml(record.source.reviewedDate)}</p></details>`).join("")}<p><a href="https://veggie.farm/content/reference/public-garden-research">Research coverage and capture workflow ↗</a></p></details>` : ""}
       <details class="advanced-disclosure">
         <summary>Context and source details</summary>
         <label><span>Context buffer ft</span><input data-parcel-field="parcelBufferFeet" type="number" min="30" max="600" step="10" value="${round((state.parcelBufferInches || 1800) / 12)}"></label>
@@ -6560,6 +6773,8 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
     renderAll();
   });
 
+  refs.parcelEditor.querySelector('[data-action="illustrative-planting"]')?.addEventListener("change", event => {state.illustrativePlanting = event.target.checked; renderAll();});
+
   refs.parcelEditor.querySelectorAll("[data-parcel-result]").forEach((button) => {
     button.addEventListener("click", () => {
       const result = state.parcelSearchResults?.[Number(button.dataset.parcelResult)];
@@ -6598,6 +6813,7 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
           <span>Name</span>
           <input data-bed-field="name" type="text" value="${escapeHtml(bed.name)}">
         </label>
+        <button type="button" data-action="plan-inspected-bed">Plan this bed →</button>
         <label>
           <span>Zone</span>
           <input data-bed-field="zone" type="text" value="${escapeHtml(bed.zone || "Garden")}">
@@ -6633,6 +6849,8 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
     `;
 
     bindInspectorEditGuard(refs.selectedBed, state, "bed", renderAll);
+  const planBedButton=refs.selectedBed.querySelector('[data-action="plan-inspected-bed"]');
+  if(planBedButton) planBedButton.onclick=()=>{explicitEditSessions.delete(state);state.viewMode="bed";state.activeTool="plants";state.viewPresentation=state.viewPresentation==="map"?"2d":state.viewPresentation;state.walkCamera=null;state.toolDrawerOpen=true;state.inspectorOpen=false;state.bedCameras[bed.id]=normalizeBedCamera(bed);renderAll();};
 
     refs.selectedBed.querySelectorAll("[data-bed-field]").forEach((input) => {
       input.addEventListener("change", () => {
@@ -6679,8 +6897,9 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         </dl>
         ${structureLocalGeometry(structure) ? `<div data-role="site-geometry-editor">
           <p>Refine path and area vertices against the aerial image. Changes are an interpretation, not a survey.</p>
-          ${activeSiteGeometryDraft(state) ? `<p role="status">Preview only. Drag a numbered vertex or focus it and use arrow keys (1 ft; Shift: 1 in). Connected path endpoints move together.</p>
+          ${activeSiteGeometryDraft(state) ? `<p role="status">Preview only. Drag anchors to fit imagery. Select an anchor to add after it or remove it. Arrow keys move 1 ft; Shift moves 1 in. Connected junctions move together.</p>
           <p data-role="site-geometry-error" role="alert"></p>
+          <div class="drawer-action-row"><button type="button" data-action="insert-site-anchor">Add anchor after selected</button><button type="button" data-action="remove-site-anchor">Remove selected anchor</button></div>
           <button type="button" data-action="apply-site-geometry">Apply geometry</button>
           <button type="button" data-action="cancel-site-geometry">Cancel geometry edit</button>` : `<button type="button" data-action="edit-site-geometry">Edit map vertices</button>`}
         </div>` : ""}
@@ -6709,12 +6928,20 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
       refs.referenceMapInspector?.cancelPick();
       siteGeometryDrafts.set(state, {
         parcelId: state.activeParcelId, featureId: structure.id,
-        features: structuredCloneCompat(state.structures)
+        features: structuredCloneCompat(state.structures), selectedVertex: localSiteGeometryVertices(structure.localGeometry)[0]?.path
       });
       state.drawMode = null;
       state.viewPresentation = "map";
       renderAll();
       refs.parcelSvg.querySelector('[data-site-vertex]')?.focus();
+    });
+    for(const action of ['insert','remove'])refs.selectedStructure.querySelector(`[data-action="${action}-site-anchor"]`)?.addEventListener('click',()=>{
+      const draft=activeSiteGeometryDraft(state);if(!draft)return;
+      const result=changeSiteGeometryVertex(draft.features,draft.featureId,draft.selectedVertex||[],action);
+      if(result.error){refs.selectedStructure.querySelector('[data-role="site-geometry-error"]').textContent=result.error;return;}
+      draft.features=result.features;draft.selectedVertex=result.path;renderAll();
+      const index=localSiteGeometryVertices(draft.features.find(f=>f.id===draft.featureId).localGeometry).findIndex(v=>JSON.stringify(v.path)===JSON.stringify(draft.selectedVertex));
+      refs.parcelSvg.querySelector(`[data-site-vertex="${index}"]`)?.focus();
     });
     refs.selectedStructure.querySelector('[data-action="cancel-site-geometry"]')?.addEventListener("click", () => {
       siteGeometryDrafts.delete(state);
@@ -6744,6 +6971,7 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
           method: "User-adjusted map vertices; not independently surveyed"
         };
         original.localGeometry = structuredCloneCompat(feature.localGeometry);
+        if(Array.isArray(feature.topologyNodeIds))original.topologyNodeIds=[...feature.topologyNodeIds];
         const bounds = boundsFromPoints(featureEnvelopePoints(original), 0);
         Object.assign(original, {x: bounds.x + bounds.width / 2, y: bounds.y + bounds.height / 2,
           width: Math.max(12, bounds.width), height: Math.max(12, bounds.height), rotation: 0,
@@ -7416,6 +7644,14 @@ function updateVegetationField(vegetation, input) {
   if (field === "kind" && input.value === "tree") syncTreePointGeometry(vegetation);
 }
 
+function moveWalkCamera(state, action) {
+  const walk=state.walkCamera;if(!walk)return;
+  if(action==='left'||action==='right'){setPlanningOrientation(state,planningBearing(state)+(action==='left'?-15:15),planningPitch(state));return;}
+  const angle=planningBearing(state)*Math.PI/180,step=action==='back'?-48:48,bounds=parcelViewBounds(state);
+  walk.x=clamp(walk.x+Math.sin(angle)*step,bounds.x,bounds.x+bounds.width);
+  walk.y=clamp(walk.y-Math.cos(angle)*step,bounds.y,bounds.y+bounds.height);
+}
+
 function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   const target = new THREE.Vector3(0, 0.25, 0);
   const orbit = {
@@ -7426,9 +7662,21 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
     gesture: null
   };
 
+  canvas.tabIndex=0;canvas.setAttribute('aria-label','Garden 3D view. In Walk mode, W/S or up/down steps, A/D or left/right turns. Drag to look. Escape returns overhead.');
+  canvas.addEventListener('keydown',event=>{
+    if(!state.walkCamera||event.altKey||event.ctrlKey||event.metaKey)return;
+    const action={w:'forward',s:'back',a:'left',d:'right',ArrowUp:'forward',ArrowDown:'back',ArrowLeft:'left',ArrowRight:'right'}[event.key];
+    if(event.key==='Escape'){state.walkCamera=null;setPlanningOrientation(state,planningBearing(state),60);event.preventDefault();onViewChange();}
+    else if(action){event.preventDefault();event.stopImmediatePropagation();moveWalkCamera(state,action);onViewChange();}
+  });
   const update = () => {
+    if(state.walkCamera){
+      const walk=state.walkCamera,unit=threeViewUnit(state),angle=planningBearing(state)*Math.PI/180,look=(walk.look||0)*Math.PI/180;
+      camera.position.set(walk.x*unit,66*unit,walk.y*unit);
+      camera.lookAt(camera.position.x+Math.sin(angle)*Math.cos(look),camera.position.y+Math.sin(look),camera.position.z-Math.cos(angle)*Math.cos(look));return;
+    }
     orbit.phi = clamp(orbit.phi, 0.08, 1.4);
-    orbit.radius = clamp(orbit.radius, 0.08, 1200);
+    orbit.radius = clamp(orbit.radius, 0.08, 100000);
     const sinPhi = Math.sin(orbit.phi);
     camera.position.set(
       target.x + orbit.radius * sinPhi * Math.sin(orbit.theta),
@@ -7441,6 +7689,7 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   canvas.addEventListener("pointerdown", (event) => {
     const rotating = event.ctrlKey || event.button === 2;
     if (!rotating && event.button !== 0 && event.button !== 1) return;
+    canvas.focus({preventScroll:true});
     orbit.dragging = true;
     orbit.gesture = {
       pointerId: event.pointerId,
@@ -7448,6 +7697,7 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
       startX: event.clientX,
       startY: event.clientY,
       startBearing: normalizeViewBearing(planningBearing(state)),
+      startLook: state.walkCamera?.look || 0,
       startPitch: normalizeViewPitch(planningPitch(state)),
       startViewport: {...planViewBounds(state)}
     };
@@ -7459,7 +7709,10 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
     if (!orbit.dragging || !orbit.gesture || event.pointerId !== orbit.gesture.pointerId) return;
     const dx = event.clientX - orbit.gesture.startX;
     const dy = event.clientY - orbit.gesture.startY;
-    if (orbit.gesture.rotating) {
+    if(state.walkCamera){
+      setPlanningOrientation(state,orbit.gesture.startBearing+dx*.25,planningPitch(state));
+      state.walkCamera.look=clamp(orbit.gesture.startLook-dy*.2,-60,60);
+    } else if (orbit.gesture.rotating) {
       setPlanningOrientation(state,orbit.gesture.startBearing+dx*0.35,orbit.gesture.startPitch-dy*0.25);
     } else {
       panPlanningViewport(
@@ -7485,7 +7738,8 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   canvas.addEventListener("pointercancel", stopDrag);
   canvas.addEventListener("wheel", (event) => {
     event.preventDefault();
-    zoomPlanningViewport(state, event.deltaY < 0 ? 0.82 : 1.22);
+    if(state.walkCamera)moveWalkCamera(state,event.deltaY<0?'forward':'back');
+    else zoomPlanningViewport(state, event.deltaY < 0 ? 0.82 : 1.22);
     onViewChange();
   }, {passive: false});
   canvas.addEventListener("dblclick", (event) => {
@@ -7613,7 +7867,7 @@ function setupThreeFeatureInteractions(three, options = {}) {
   let drag = null;
 
   canvas.addEventListener("pointerdown", (event) => {
-    if (event.button !== 0 || event.ctrlKey) return;
+    if (event.button !== 0 || event.ctrlKey || three.state.walkCamera || three.state.activeTool === "select") return;
     const hit = threeRaycastFeature(three, event);
     if (!hit) return;
     const feature = threeFeatureEntity(three.state, hit.ref);
@@ -7745,6 +7999,8 @@ function createThreeScene(host, state, onViewChange = () => {}, options = {}) {
     return null;
   }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.domElement.className = "three-canvas";
@@ -7754,7 +8010,7 @@ function createThreeScene(host, state, onViewChange = () => {}, options = {}) {
   controls.target.set(0, 0.25, 0);
   controls.update();
 
-  const hemi = new THREE.HemisphereLight("#f6fff5", "#64715f", 1.6);
+  const hemi = new THREE.HemisphereLight("#f6fff5", "#64715f", 1.1);
   scene.add(hemi);
 
   const sun = new THREE.DirectionalLight("#fff4d6", 2.4);
@@ -7787,6 +8043,7 @@ function createThreeScene(host, state, onViewChange = () => {}, options = {}) {
   animate();
 
   const three = {
+    sun,
     scene,
     camera,
     renderer,
@@ -7817,7 +8074,10 @@ function syncThreeScene(three, state) {
 
   const unit = threeViewUnit(state);
   const bed = activeBed(state);
-  const viewBounds = state.viewMode === "garden" ? parcelViewportBounds(state) : planViewBounds(state);
+  // Walking needs nearby objects even after leaving the original aerial frame.
+  const viewBounds = state.walkCamera && state.viewMode === "garden"
+    ? {x:state.walkCamera.x-1440,y:state.walkCamera.y-1440,width:2880,height:2880}
+    : state.viewMode === "garden" ? parcelViewportBounds(state) : planViewBounds(state);
   three.detailProfile = gardenViewProfileForElement(
     viewBounds,
     three.renderer.domElement,
@@ -7862,6 +8122,7 @@ function threeViewUnit(state) {
 
 function syncThreeCamera(three, state) {
   if (!three?.camera || !three?.controls) return;
+  if(state.viewMode!=="garden")state.walkCamera=null;
   const unit = threeViewUnit(state);
   const bounds = state.viewMode === "garden" ? parcelViewportBounds(state) : planViewBounds(state);
   const centerX = state.viewMode === "garden" ? bounds.x + bounds.width / 2 : bounds.x + bounds.width / 2 - activeBed(state).width / 2;
@@ -7874,15 +8135,26 @@ function syncThreeCamera(three, state) {
   const pitch = normalizeViewPitch(planningPitch(state));
 
   three.controls.target.set(centerX * unit, 0.12, centerY * unit);
-  three.controls.orbit.theta = THREE.MathUtils.degToRad(bearing);
+  // SVG rotates the ground by -bearing; the orbit must use the opposite sign.
+  three.controls.orbit.theta = THREE.MathUtils.degToRad(-bearing);
   three.controls.orbit.phi = THREE.MathUtils.degToRad(Math.max(5, pitch));
-  three.controls.orbit.radius = clamp(radius * 1.08, 0.08, 1200);
-  three.camera.far = Math.max(1000, three.controls.orbit.radius * 5);
+  three.controls.orbit.radius = clamp(radius * 1.08, 0.08, 100000);
+  three.camera.near = state.walkCamera ? unit : Math.max(0.01, three.controls.orbit.radius / 2000);
+  three.camera.far = Math.max(100, three.controls.orbit.radius * 8);
   three.camera.updateProjectionMatrix();
   three.controls.update();
+  if (three.sun) {
+    const center=three.controls.target,distance=Math.max(10,Math.max(bounds.width,bounds.height)*unit);
+    three.sun.target.position.copy(center);three.sun.position.set(center.x-distance*.5,distance,center.z+distance*.4);
+    const shadow=three.sun.shadow;shadow.mapSize.set(1024,1024);
+    Object.assign(shadow.camera,{left:-distance,right:distance,top:distance,bottom:-distance,near:.1,far:distance*5});
+    shadow.camera.updateProjectionMatrix();shadow.bias=-.0001;shadow.normalBias=.03;
+  }
 
   const canvas = three.renderer?.domElement;
   if (canvas) {
+    canvas.dataset.cameraMode = state.walkCamera ? 'walk' : 'orbit';
+    canvas.dataset.walkPosition = state.walkCamera ? `${round(state.walkCamera.x)},${round(state.walkCamera.y)}` : '';
     canvas.dataset.viewCenter = `${round(centerX)},${round(centerY)}`;
     canvas.dataset.viewZoom = String(parcelZoomLevel(state));
     canvas.dataset.viewBearing = String(round(bearing));
@@ -7890,47 +8162,61 @@ function syncThreeCamera(three, state) {
   }
 }
 
+
+function addIllustrativePlanting3d(group, state, unit, viewport) {
+  if (state.illustrativePlanting === false || !gardenResearch(state.activeParcelId).length) return;
+  const obstacles = [...(state.beds || []), ...(state.structures || []).filter(s => /^(path|road|driveway|parking|house|building|greenhouse|water|pond)$/.test(s.type))];
+  const samples = illustrativePlanting([...(state.vegetation || []), ...(state.structures || [])], obstacles, viewport);
+  if (!samples.length) return;
+  const crown = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 8, 6), new THREE.MeshStandardMaterial({color: "#739152", roughness: 1}), samples.length);
+  const trees=samples.filter(p=>p.form === "tree");
+  const trunks=trees.length ? new THREE.InstancedMesh(new THREE.CylinderGeometry(1,1,1,6),new THREE.MeshStandardMaterial({color:"#695542",roughness:1}),trees.length) : null;
+  const transform=new THREE.Object3D();
+  samples.forEach((p,i)=>{transform.position.set(p.x*unit,p.height*.7*unit,p.y*unit);transform.scale.set(p.radius*unit,p.height*.3*unit,p.radius*unit);transform.updateMatrix();crown.setMatrixAt(i,transform.matrix);crown.setColorAt(i,new THREE.Color(p.form === "tree" ? (i%3 ? "#648b46" : "#3e7051") : (i%4 ? "#789656" : "#928095")));});
+  trees.forEach((p,i)=>{transform.position.set(p.x*unit,p.height*.3*unit,p.y*unit);transform.scale.set(5*unit,p.height*.6*unit,5*unit);transform.updateMatrix();trunks.setMatrixAt(i,transform.matrix);});
+  for(const mesh of [crown,trunks].filter(Boolean)){mesh.castShadow=true;mesh.receiveShadow=true;mesh.raycast=()=>{};mesh.userData.geometryRole="illustrative-reconstruction";group.add(mesh);}
+}
+
 function addVegetationCover3d(group, state, unit, profile = null, viewport = parcelViewportBounds(state)) {
+  addIllustrativePlanting3d(group, state, unit, viewport);
   const vegetationItems = detailVisibleFeatures(state.vegetation || [], viewport, profile, state.selectedVegetationId);
   for (const vegetation of vegetationItems) {
+    if (state.illustrativePlanting !== false && gardenResearch(state.activeParcelId).length && /^(forest|woodland|canopy)$/.test(vegetation.kind) && vegetation.localGeometry?.type === "Polygon") continue;
     const canopy = vegetationCanopyEllipse(vegetation);
     const width = canopy.rx * 2 * unit;
     const height = canopy.ry * 2 * unit;
     const color = vegetation.canopyClass === "evergreen" ? "#2f6650" : vegetation.canopyClass === "deciduous" ? "#6f8a4c" : "#55775a";
     const selected = vegetation.id === state.selectedVegetationId;
+    // Crown width comes from mapped geometry; unknown vertical dimensions are
+    // illustrative only and never written back as measured tree heights.
+    const rise = (Number(vegetation.heightEstimateFeet) > 0 ? Number(vegetation.heightEstimateFeet) : vegetation.kind === "shrub" ? 4 : 20) * 12 * unit;
+    const crownHeight = rise * 0.65;
     const cover = new THREE.Mesh(
-      new THREE.CylinderGeometry(Math.max(width, 0.1) / 2, Math.max(width, 0.1) / 2, vegetation.kind === "forest" ? 0.09 : 0.16, 28),
-      new THREE.MeshStandardMaterial({
-        color,
-        emissive: selected ? "#7fae8a" : "#000000",
-        emissiveIntensity: selected ? 0.42 : 0,
-        transparent: true,
-        opacity: selected ? 0.58 : vegetation.kind === "forest" ? 0.22 : 0.36,
-        roughness: 0.9
-      })
+      vegetation.canopyClass === "evergreen" ? new THREE.ConeGeometry(1, 2, 16) : new THREE.SphereGeometry(1, 16, 10),
+      new THREE.MeshStandardMaterial({color, roughness: 1,
+        emissive: selected ? "#527d45" : "#000000", emissiveIntensity: selected ? .25 : 0})
     );
-    cover.scale.z = height / Math.max(width, 0.1);
-    cover.position.set(vegetation.x * unit, vegetation.kind === "forest" ? 0.06 : 0.1, vegetation.y * unit);
-    cover.rotation.y = -(vegetation.rotation || 0) * Math.PI / 180;
+    cover.scale.set(Math.max(width,.1)/2, crownHeight/2, Math.max(height,.1)/2);
+    cover.position.set(vegetation.x*unit, rise-crownHeight/2, vegetation.y*unit);
+    cover.rotation.y = -(vegetation.rotation || 0)*Math.PI/180;
+    cover.castShadow = true;cover.receiveShadow = true;
     cover.userData.geometryRole = vegetation.kind === "tree" ? "derived-crown" : "mapped-cover";
-    tagThreeFeature(cover, "vegetation", vegetation.id);
-    group.add(cover);
-
+    cover.userData.heightBasis = Number(vegetation.heightEstimateFeet)>0 ? "entered-estimate" : "illustrative";
+    tagThreeFeature(cover,"vegetation",vegetation.id);group.add(cover);
     if (vegetation.kind === "tree") {
-      const markerHeight = clamp((Number(vegetation.heightEstimateFeet) || 10) * 12 * unit * 0.18, 0.12, 2.8);
+      const trunkHeight = rise-crownHeight*.5;
       const trunk = new THREE.Mesh(
-        new THREE.CylinderGeometry(Math.max(0.025, unit * 3), Math.max(0.035, unit * 4), markerHeight, 10),
-        new THREE.MeshStandardMaterial({color: "#65513a", roughness: 1})
+        new THREE.CylinderGeometry(Math.max(unit*2,width*.025),Math.max(unit*3,width*.035),trunkHeight,10),
+        new THREE.MeshStandardMaterial({color:"#65513a",roughness:1})
       );
-      trunk.position.set(vegetation.x * unit, markerHeight / 2, vegetation.y * unit);
-      trunk.userData.geometryRole = "canonical-tree-center";
-      tagThreeFeature(trunk, "vegetation", vegetation.id);
-      group.add(trunk);
+      trunk.position.set(vegetation.x*unit,trunkHeight/2,vegetation.y*unit);
+      trunk.castShadow=true;trunk.userData.geometryRole="canonical-tree-center";
+      tagThreeFeature(trunk,"vegetation",vegetation.id);group.add(trunk);
     }
   }
 }
 
-function addMappedPolygonSurface3d(group, structure, unit, materialOptions, elevation = 0.035) {
+function addMappedPolygonSurface3d(group, structure, unit, materialOptions, elevation = 0.035, rise = 0) {
   const geometry = localGeometryInStructureFrame(structure);
   if (geometry?.type !== "Polygon" || !Array.isArray(geometry.coordinates?.[0])) return false;
   const outer = geometry.coordinates[0].filter((point) => Array.isArray(point) && point.length >= 2);
@@ -7958,10 +8244,11 @@ function addMappedPolygonSurface3d(group, structure, unit, materialOptions, elev
   frame.position.set(structure.x * unit, elevation, structure.y * unit);
   frame.rotation.y = -(structure.rotation || 0) * Math.PI / 180;
   const surface = new THREE.Mesh(
-    new THREE.ShapeGeometry(shape, 2),
+    rise > 0 ? new THREE.ExtrudeGeometry(shape, {depth: rise, bevelEnabled: false, steps: 1}).translate(0, 0, -rise) : new THREE.ShapeGeometry(shape, 2),
     new THREE.MeshStandardMaterial({side: THREE.DoubleSide, roughness: 0.9, ...materialOptions})
   );
   surface.rotation.x = Math.PI / 2;
+  surface.castShadow = rise > 0;surface.receiveShadow = true;
   tagThreeFeature(surface, "structure", structure.id);
   frame.add(surface);
   group.add(frame);
@@ -8079,6 +8366,13 @@ function addGardenStructures3d(group, state, unit, profile = null, viewport = pa
     )) {
       // Explicit line geometry is preferable to a large rectangular envelope,
       // especially for the Forest Walk and other long estate circulation.
+    } else if (definition.category === "buildings") {
+      const rise = (Number(structure.heightEstimateFeet)>0 ? Number(structure.heightEstimateFeet) : 12)*12*unit;
+      const material = {color:structure.type==="greenhouse"?"#91aaa0":"#9b8874",...selectionMaterial};
+      if (addMappedPolygonSurface3d(group,structure,unit,material,.035,rise)) continue;
+      const building = new THREE.Mesh(new THREE.BoxGeometry(width,rise,height),new THREE.MeshStandardMaterial({...material,roughness:.85}));
+      building.position.set(x,rise/2,z);building.rotation.y=-(structure.rotation||0)*Math.PI/180;
+      building.castShadow=true;building.receiveShadow=true;tagThreeFeature(building,"structure",structure.id);group.add(building);
     } else if (structure.type === "greenhouse") {
       const base = new THREE.Mesh(
         new THREE.BoxGeometry(width, 0.05, height),
@@ -8842,6 +9136,14 @@ function addStructure(state) {
   state.structures.push(structure);
   state.selectedStructureId = structure.id;
   state.selectedPlacementId = null;
+}
+
+function addPlannedPlanting(state,form,point){
+  const presets={tree:['Deciduous tree','tree','deciduous',240,240,20],evergreen:['Evergreen tree','tree','evergreen',180,180,20],shrub:['Shrub','shrub','shrub',72,72,4],hedge:['Hedge mass','shrub','shrub',144,36,6],canopy:['Canopy area','canopy','mixed',360,240,20]};
+  const [name,kind,canopyClass,width,height,rise]=presets[form]||presets.tree;
+  const item={id:uniqueVegetationId(state),name,kind,canopyClass,x:point.x,y:point.y,width,height,heightEstimateFeet:rise,confidence:'low',plantId:null,source:'User-planned structural planting',notes:'Illustrative form and dimensions, not a measured observation. Choose species and adjust sizes in the inspector.'};
+  if(kind==='tree')Object.assign(item,{geometryRepresentation:'point',localGeometry:{type:'Point',coordinates:[point.x,point.y]},crownWidthFeet:width/12,crownDepthFeet:height/12});
+  const planted=normalizeVegetation([item])[0];state.vegetation.push(planted);state.selectedVegetationId=planted.id;state.selectedStructureId=null;state.selectedPlacementId=null;
 }
 
 function addVegetation(state, observedPoint = null) {
@@ -12553,6 +12855,81 @@ function injectStyles() {
       }
     }
 
+    @media (max-width: 920px) {
+      .garden-tool-rail {grid-template-columns: repeat(7, minmax(0, 1fr));}
+      .garden-tool-rail [data-tool="select"] {display: grid;}
+      .garden-sidebar, .garden-inspector {max-height: min(48svh, 480px);}
+      .drawer-heading {min-height: 44px; padding: 4px 8px;}
+      .drawer-heading button {min-width: 44px; min-height: 44px;}
+      .view-navigation {
+        position: relative; inset: auto; flex: 0 0 auto;
+        display: flex; flex-wrap: wrap; width: auto; margin: 0;
+        border-radius: 0; box-shadow: none; z-index: 7;
+      }
+      .view-navigation button {width: 44px; min-width: 44px; height: 44px; min-height: 44px; border: 0; font-size: .85rem;}
+      .view-navigation small {position: static; min-width: 0; align-self: center; border: 0; font-size: .6rem;}
+      .view-gesture-hint {display: none;}
+      .view-heading {flex-wrap: wrap; gap: 4px; height: auto; min-height: 32px;}
+      .view-heading > span {min-width: 0; overflow-wrap: anywhere;}
+      .view-heading > span:nth-child(2) {display: none;}
+      .map-settings-panel {max-width: calc(100vw - 32px); max-height: 45svh; overflow: auto;}
+      .map-legend summary {min-height: 44px; box-sizing: border-box; display: flex; align-items: center;}
+    }
+    .view-navigation button[aria-pressed="true"] {background: var(--panel-selected); color: var(--green);}
+
+    .garden-planner-app > .planner-quick-start:first-child {
+      padding: 6px 10px; margin: 0 0 6px; gap: 8px; flex-wrap: wrap;
+    }
+    .garden-planner-app > .planner-quick-start:first-child p {font-size: .8rem; margin: 0;}
+    .garden-planner-app > .planner-quick-start:first-child button {min-height: 44px;}
+    .studio-preview-options > summary {padding: 6px 12px; cursor: pointer; font-size: .8rem;}
+    .garden-planner-app .planning-scope {padding: 4px 8px !important; gap: 4px !important;}
+    .garden-planner-app .planning-scope button {min-height: 36px; padding: 4px 8px;}
+    .garden-planner-app .planner-storage-notice {font-size: .8rem;}
+    @media (max-width: 920px) {
+      .garden-planner-app > .planner-quick-start:first-child > div {flex: 1; min-width: 0;}
+      .garden-planner-app > .planner-quick-start:first-child strong {font-size: .9rem;}
+      .garden-planner-app > .planner-quick-start:first-child p {display: none;}
+      .garden-planner-app .garden-topbar {display: none;}
+      .garden-planner-app .planning-scope {display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr));}
+      .garden-planner-app .planning-scope button {min-width: 0; min-height: 44px; white-space: normal; font-size: .75rem;}
+      .studio-preview-options > summary {min-height: 44px; box-sizing: border-box; display: flex; align-items: center;}
+      .studio-preview-options > summary::before {content: "▸"; margin-right: 6px;}
+      .studio-preview-options[open] > summary::before {content: "▾";}
+    }
+
+    [data-role="camera-angle"] {min-height: 36px; padding: 4px 8px; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 4px;}
+    @media (max-width: 920px) {[data-role="camera-angle"] {min-height:44px;}}
+    .view-navigation {display:flex;align-items:center;width:auto;gap:2px;padding:3px;border-radius:8px;}
+    .view-navigation > button {width:36px;min-width:36px;height:36px;min-height:36px;border-radius:5px !important;font-size:.9rem !important;font-weight:600;}
+    .view-navigation > button[data-view-nav="pan"] {width:auto;min-width:52px;padding:0 10px;font-size:.78rem !important;}
+    .view-navigation > .camera-panel {margin:0;padding:0;border:0;background:none;}
+    .view-navigation > .camera-panel > summary {display:flex;align-items:center;gap:7px;list-style:none;height:36px;min-height:36px;margin:0;padding:0 10px;border-left:1px solid var(--line);font:600 .78rem/1 system-ui;color:var(--text);}
+    .view-navigation > .camera-panel > summary::-webkit-details-marker {display:none;}
+    .view-navigation > .camera-panel > summary::after {content:"⌄";font-size:1rem;}
+    .view-navigation > .camera-panel[open] > summary::after {content:"⌃";}
+    @media(max-width:920px){.view-navigation > button,.view-navigation > .camera-panel > summary{height:44px;min-height:44px;}.view-navigation > button{min-width:44px;}}
+
+    .view-navigation > button {border:0;}
+    .camera-panel > summary {padding:8px; cursor:pointer; font-size:.8rem; min-height:32px; box-sizing:border-box;}
+    .camera-panel-body {position:absolute;right:0;top:calc(100% + 4px);width:min(260px,calc(100vw - 40px));max-height:55svh;overflow:auto;padding:10px;box-sizing:border-box;border:1px solid var(--line-strong);border-radius:6px;background:var(--panel);box-shadow:0 6px 18px var(--shadow-soft);display:grid;gap:6px;}
+    .view-navigation .camera-panel-body button {width:100%;height:auto;min-height:36px;font-size:.8rem;padding:5px;}
+    .view-navigation .camera-panel-body small {position:static;min-width:0;border:0;white-space:normal;}
+    .camera-panel-body label {display:grid;gap:4px;font-size:.8rem;}
+    .camera-panel-body input {width:100%;min-height:32px;}
+    .camera-panel-body p {font-size:.72rem;line-height:1.4;margin:0;}
+    .structure-list,.vegetation-list {display:block !important;}
+    .feature-list-row {display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px;border-bottom:1px solid var(--line);}
+    .feature-list-row .structure-option,.feature-list-row .vegetation-option {height:auto;min-height:44px;max-height:none;margin:0;padding:6px;border:0;border-radius:0;box-shadow:none;overflow:visible;}
+    .feature-list-row .bed-option-main {min-width:0;}
+    .feature-list-row .bed-option-main strong {font-size:.82rem;line-height:1.3;white-space:normal;overflow-wrap:anywhere;}
+    .feature-list-row .bed-option-main>span {font-size:.7rem;line-height:1.2;white-space:normal;}
+    .feature-list-row>button:last-child {min-height:44px;padding:4px;font-size:.72rem;}
+    .walk-buttons:not([hidden]) {display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+    .planting-palette {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:10px;}
+    .planting-palette button {min-height:54px;white-space:normal;font-size:.85rem;}
+    .planting-palette button span {display:block;font-size:1.4rem;}
+    @media (max-width:920px){.camera-panel>summary{min-height:44px;display:flex;align-items:center;}.view-navigation .camera-panel-body button,.camera-panel-body input{min-height:44px;}}
     @media (max-width: 560px) {
       .garden-subtitle,
       .active-bed-command,

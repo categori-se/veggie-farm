@@ -177,12 +177,11 @@ export function clampViewportToExtent(viewport = {}, extent = {}, options = {}) 
   const extentY = finiteNumber(extent.y);
   const requestedX = finiteNumber(viewport.x, extentX);
   const requestedY = finiteNumber(viewport.y, extentY);
-  const x = width >= extentWidth
-    ? extentX
-    : clamp(requestedX, extentX, extentX + extentWidth - width);
-  const y = height >= extentHeight
-    ? extentY
-    : clamp(requestedY, extentY, extentY + extentHeight - height);
+  // Optional navigation margin lets a fitted parcel move under the pointer,
+  // while retaining at least half a viewport of overlap with the garden extent.
+  const margin = clamp(finiteNumber(options.panPaddingRatio), 0, 0.5);
+  const x = clamp(requestedX, extentX - width * margin, extentX + extentWidth - width + width * margin);
+  const y = clamp(requestedY, extentY - height * margin, extentY + extentHeight - height + height * margin);
   return {x, y, width, height};
 }
 

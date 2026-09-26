@@ -225,3 +225,31 @@ export function localSiteGeometryError(geometry) {
   }
   return null;
 }
+
+/** Add/remove a draft anchor without losing polygon closure or path-node identity. */
+export function changeSiteGeometryVertex(features, featureId, path, action) {
+  const source=features.find(f=>f.id===featureId),geometry=source?.localGeometry;
+  if(!['LineString','Polygon'].includes(geometry?.type))return {features,error:'Choose a path or area anchor.'};
+  const ring=geometry.type==='Polygon'?geometry.coordinates[path[0]]:geometry.coordinates;
+  const index=geometry.type==='Polygon'?path[1]:path[0],closed=geometry.type==='Polygon';
+  const count=ring?.length-(closed?1:0);
+  if(!Number.isInteger(index)||index<0||index>=count)return {features,error:'Choose an anchor first.'};
+  if(action==='remove'&&count<=(closed?3:2))return {features,error:closed?'Keep at least three area anchors.':'Keep at least two path anchors.'};
+  if(action==='remove'&&source.topologyNodeIds?.[index]&&geometry.type==='LineString'){
+    const node=source.topologyNodeIds[index];
+    if(features.some(f=>f.id!==featureId&&f.topologyNodeIds?.includes(node)))return {features,error:'This anchor joins another path. Move it to adjust the junction; removal would disconnect it.'};
+  }
+  if(!['insert','remove'].includes(action))return {features,error:'Unknown anchor action.'};
+  if(action==='insert'&&count>=1000)return {features,error:'This feature has reached the 1,000-anchor editing limit.'};
+  const updated=clone(source),points=closed?updated.localGeometry.coordinates[path[0]]:updated.localGeometry.coordinates;
+  if(action==='remove'){
+    points.splice(index,1);if(!closed&&Array.isArray(updated.topologyNodeIds))updated.topologyNodeIds.splice(index,1);
+  }else{
+    const a=points[index],b=points[index+1]||points[index-1];
+    // End-of-line insertion extends the last segment; other inserts bisect it.
+    const next=index===count-1&&!closed?[a[0]+(a[0]-b[0])/2,a[1]+(a[1]-b[1])/2]:[(a[0]+b[0])/2,(a[1]+b[1])/2];
+    points.splice(index+1,0,next);if(!closed&&Array.isArray(updated.topologyNodeIds))updated.topologyNodeIds.splice(index+1,0,null);
+  }
+  if(closed)points[points.length-1]=[...points[0]];
+  return {features:features.map(f=>f.id===featureId?updated:f),path:closed?[path[0],Math.min(index+(action==='insert'?1:0),points.length-2)]:[Math.min(index+(action==='insert'?1:0),points.length-1)],error:null};
+}

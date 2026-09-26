@@ -39,6 +39,17 @@ const studioModelAssets = Object.fromEntries(Object.entries(optionalMedia).filte
 ```
 
 ```js
+display(gardenPlanner({
+  publicCollection: publishedDemoCollection,
+  modelAssets: studioModelAssets,
+  modelCatalog: publicModelItems.features,
+  referenceAssets: gardenReferenceAssets,
+  referenceOverlayAssets: gardenReferenceOverlayAssets,
+  sourceEvidenceByGardenId: gardenSourceEvidenceByGardenId
+}));
+```
+
+```js
 const studioHome = document.createElement("div");
 studioHome.className = "studio-transfer-note";
 if (location.hostname === "studio.veggie.farm") {
@@ -74,7 +85,9 @@ display(studioHome);
   </div>
   <details class="studio-study-details" id="public-garden-examples">
     <summary>Public examples &amp; sources</summary>
+    <p><a href="https://veggie.farm/content/reference/public-garden-research">Planting research and capture workflow ↗</a></p>
     <div>
+      <p>Self-hosting? Images, model files and deployment-specific data on this site are separately managed hosting inputs, not included with the public source. Supply and manage your own information and follow each asset’s license. The community build includes its own documented examples. <a href="https://github.com/categori-se/veggie-farm/blob/main/examples/aws/DEPLOYMENT.md">Deployment guide</a>.</p>
       <p><a href="#garden-examples">Choose a demo garden and open its plan ↓</a></p>
       <p>Explore four Massachusetts gardens: Berkshire Botanical Garden, The Mount, Naumkeag and Ashintully. Compare the arrangement of beds, paths and larger garden spaces. Drawn boundaries are interpretations of maps and imagery, not surveyed measurements; planting inventories remain incomplete.</p>
       <p>Public-garden studies are starting points for exploration, not surveyed plans or complete planting inventories. Open a garden’s information card to see its sources and uncertainties. Your edits stay in this browser unless you export a backup or explicitly save an account copy.</p>
@@ -88,16 +101,7 @@ display(studioHome);
   </details>
 </section>
 
-```js
-display(gardenPlanner({
-  publicCollection: publishedDemoCollection,
-  modelAssets: studioModelAssets,
-  modelCatalog: publicModelItems.features,
-  referenceAssets: gardenReferenceAssets,
-  referenceOverlayAssets: gardenReferenceOverlayAssets,
-  sourceEvidenceByGardenId: gardenSourceEvidenceByGardenId
-}));
-```
+
 
 <section id="garden-examples" class="studio-shortlist" aria-labelledby="studio-shortlist-title">
   <div>

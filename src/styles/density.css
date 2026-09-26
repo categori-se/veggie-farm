@@ -1,0 +1,41 @@
+/* Compact reading and workspaces: reduce framing, retain readable text and touch targets. */
+#observablehq-main > h1 {font-size:clamp(1.65rem,3vw,2.4rem);line-height:1.15;margin-block:.6rem .7rem}
+#observablehq-main > h2 {margin-top:1.6rem}
+#observablehq-main > p {margin-block:.5rem}
+#observablehq-footer {margin-top:2rem;padding-block:1rem}
+:is(.home-hero,.section-hero,.tools-hero,.today-hero,.studio-context-bar) {gap:12px;padding-block:10px;margin-block:0 12px}
+:is(.home-hero,.section-hero,.tools-hero,.today-hero) h1 {font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.15;margin-block:0 8px}
+:is(.content-card-grid,.related-pages,.section-grid,.pillar-grid,.tool-grid,.start-grid,.library-results,.garden-record-grid,.studio-shortlist-grid,.season-task-grid) {gap:0 16px;margin-block:8px 16px;align-items:start}
+:is(.content-card,.related-pages > a,.section-card,.pillar-card,.tool-card,.start-card,.library-card,.garden-record-card,.studio-shortlist-card,.season-task-grid > *) {min-height:0;height:auto;padding:10px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;transform:none}
+:is(.content-card,.related-pages > a,.section-card,.pillar-card,.tool-card,.start-card,.library-card,.garden-record-card,.studio-shortlist-card):hover {box-shadow:none;transform:none}
+:is(.content-card,.section-card,.pillar-card,.tool-card,.start-card,.library-card,.garden-record-card,.studio-shortlist-card) :is(h2,h3,p) {margin-block:4px;line-height:1.4}
+:is(.content-card,.section-card,.pillar-card,.tool-card,.start-card,.studio-shortlist-card) :is(h2,h3) {font-size:1.05rem}
+:is(.content-card,.section-card,.tool-card,.start-card) > span {margin-bottom:3px}
+#observablehq-main :is(.decision-workbench,.garden-library,.garden-dashboard,.weather-comparison) {box-sizing:border-box;max-width:none;width:100%;padding:10px 0;margin-block:10px 16px;border:0;border-radius:0;background:transparent}
+:is(.decision-workbench,.garden-library,.garden-dashboard) > :is(h2,p) {margin-block:4px 8px}
+:is(.library-controls,.decision-controls) {gap:8px;margin-block:8px}
+#observablehq-main .garden-actions {margin-block:6px;padding-block:6px}
+.garden-actions p:empty,.decision-workbench > [role=status]:empty {display:none}
+.garden-action-bar {gap:6px}
+#observablehq-main .garden-action-form {margin-block:8px;gap:8px}
+.garden-record-grid {grid-template-columns:minmax(0,1fr)}
+/* Seasonal tasks become full-width rows; the guide and actions share one line. */
+.decision-workbench > .garden-record-grid > .garden-record-card {display:grid;grid-template-columns:minmax(0,1fr) auto auto auto;gap:3px 8px;padding-block:10px}
+.decision-workbench > .garden-record-grid > .garden-record-card > :is(h3,p) {grid-column:1 / -1;max-width:none;margin:0;line-height:1.4}
+.decision-workbench > .garden-record-grid > .garden-record-card > a {align-self:center}
+.decision-workbench > .garden-record-grid > .garden-record-card > .garden-actions {margin:0;padding:0;border:0}
+.decision-workbench > .garden-record-grid > .garden-record-card > .garden-actions:has(form,a) {grid-column:1 / -1}
+:is(.decision-workbench,.garden-library,.garden-dashboard) button {min-height:36px;padding:5px 10px}
+.plant-data-table :is(th,td) {padding:7px 9px}
+.plant-filter-rail,.plant-filter-options > div {gap:8px}
+.crop-quick-facts {gap:4px 10px;margin-block:8px}
+.studio-shortlist-grid {grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.studio-transfer-note {margin-block:8px}
+@media(max-width:780px){
+ :is(.content-card-grid,.related-pages,.section-grid,.pillar-grid,.tool-grid,.start-grid,.season-task-grid) {grid-template-columns:minmax(0,1fr)}
+ .decision-workbench > .garden-record-grid > .garden-record-card {display:flex;flex-wrap:wrap;gap:4px 6px}
+ .decision-workbench > .garden-record-grid > .garden-record-card > :is(h3,p,a) {flex-basis:100%}
+ .decision-workbench > .garden-record-grid > .garden-record-card > .garden-actions:has(form,a) {flex-basis:100%}
+ :is(.decision-workbench,.garden-library,.garden-dashboard) button {min-height:44px}
+ .garden-action-bar {flex-wrap:wrap}
+}

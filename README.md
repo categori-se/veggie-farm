@@ -64,3 +64,13 @@ Source repository: [categori-se/veggie-farm](https://github.com/categori-se/vegg
 [Build evidence pack](docs/evidence/README.md): console method, dated development records, fresh AWS/browser observations, CI proof and submission-ready text. Screenshots are hosted separately.
 
 Develop with your own agent and account: [Connect Codex to AWS](docs/architecture/codex-aws.md).
+
+## Your deployment, your information
+
+The images, 3D model files and deployment-specific datasets used by veggie.farm are separately managed private hosting inputs, not bundled with this repository or granted under its source-code license. A public link does not itself grant permission to copy or reuse them. Bundled community examples and individually licensed open data retain their stated terms. Self-hosters supply, license, secure and maintain their own media, data and account services; the core works with its documented community fixtures and procedural shapes.
+
+For guided setup after creating your own static stack, run `npm run setup:deploy`. It asks for your stack outputs and creates an external private configuration directory and next-step guide. It makes no AWS calls, creates no cloud resources and never overwrites an existing directory. Start with the [AWS deployment guide](examples/aws/DEPLOYMENT.md).
+
+See [reviewed 3D source candidates and structural-plant priorities](docs/architecture/3d-model-sources.md). No third-party models were added by this review.
+
+[Garden GIS layers and shared 2D/3D records](docs/architecture/garden-layer-model.md) · [Studio navigation and walking](docs/architecture/studio-navigation.md).

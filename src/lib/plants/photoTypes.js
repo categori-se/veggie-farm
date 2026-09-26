@@ -1,6 +1,8 @@
 // Explicit crop-group crosswalk, not a species/cultivar identity merge. Alternative
 // crops (e.g. Malabar spinach, cowpea, ornamental carrot) must remain unassessed.
 const groups={
+ Artichoke:['artichokes',/^Cynara (scolymus|cardunculus)/i],Asparagus:['asparagus',/^Asparagus officinalis/i],
+ Broccoli:['broccoli',/^Brassica oleracea/i],Eggplant:['eggplants',/^Solanum melongena/i],
  Arugula:['arugula',/^Eruca /i],Beet:['beets',/^Beta vulgaris/i],
  'Bok Choy':['bok-choy',/^Brassica rapa/i],Carrot:['carrots',/^Daucus carota/i],Collard:['collards',/^Brassica oleracea/i],
  Cucumber:['cucumbers',/^Cucumis sativus/i],Kale:['kale',/^Brassica (oleracea|napus)/i],

@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {writeSetup} from '../scripts/setup-deployment.mjs';
+const config={accountId:'123456789012',region:'us-east-1',bucket:'community-example-bucket',distributionId:'E123EXAMPLE12',originId:'community-site'};
+test('offline wizard writes only a new external destination and refuses source/symlink/overwrite paths',()=>{
+ const temp=fs.mkdtempSync(path.join(os.tmpdir(),'community-setup-')),source=path.join(temp,'source');fs.mkdirSync(source);
+ try{const target=path.join(temp,'operator');writeSetup(target,config,source);assert.deepEqual(JSON.parse(fs.readFileSync(path.join(target,'deploy-config.json'))),config);assert.throws(()=>writeSetup(target,config,source));assert.throws(()=>writeSetup(path.join(source,'private'),config,source));fs.symlinkSync(source,path.join(temp,'link'));assert.throws(()=>writeSetup(path.join(temp,'link','private'),config,source));assert.throws(()=>writeSetup(path.join(temp,'invalid'),{...config,accountId:'secret'},source));assert.ok(!fs.existsSync(path.join(temp,'invalid')));assert.equal(fs.statSync(path.join(target,'deploy-config.json')).mode&0o777,0o600);}finally{fs.rmSync(temp,{recursive:true,force:true});}
+});

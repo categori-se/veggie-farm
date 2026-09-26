@@ -46,7 +46,9 @@ Keep outputs in an external private deployment directory. The bucket blocks publ
 
 The release tool changes CloudFront OriginPath directly, so it creates intentional CloudFormation drift. Before later stack updates, set the `ActiveReleasePrefix` parameter to the currently serving prefix recorded in the latest receipt; review the change set. Reapplying `releases/unpublished` or a stale prefix could take the site back to an empty/old release.
 
-Create an external `deploy-config.json` (not inside either repository):
+For guided configuration, run `npm run setup:deploy` in an interactive terminal after creating your stack. Supply its outputs, your account ID and region, and a **new directory outside the repository**. The wizard validates the destination and writes private local settings plus `NEXT-STEPS.md`; it does not provision resources, fetch the owner's data or deploy.
+
+Alternatively, create an external `deploy-config.json` (not inside either repository):
 
 ```json
 {"accountId":"123456789012","bucket":"your-generated-site-bucket","distributionId":"E123EXAMPLE12","originId":"community-site","region":"us-east-1"}

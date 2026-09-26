@@ -157,3 +157,12 @@ test("scale bars choose a compact nice distance and human-readable unit", () => 
   assert.equal(formatGroundDistance(120), "10 ft");
   assert.equal(formatGroundDistance(63360), "1 mi");
 });
+
+
+test("navigation margin allows panning at full extent without losing the garden", () => {
+  const extent = {x: 10, y: 20, width: 100, height: 80};
+  const options = {panPaddingRatio: 0.5};
+  assert.deepEqual(clampViewportToExtent({...extent, x: 30, y: 40}, extent, options), {x: 30, y: 40, width: 100, height: 80});
+  assert.deepEqual(clampViewportToExtent({...extent, x: 10000, y: -10000}, extent, options), {x: 60, y: -20, width: 100, height: 80});
+  assert.deepEqual(clampViewportToExtent({...extent, x: 30, y: 40}, extent), extent);
+});
