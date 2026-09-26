@@ -1867,6 +1867,7 @@ function preserveEditedFeatureLocations(workspace, reference, canonicalProperty,
 }
 
 function preserveReferenceRegistration(property, savedProperty) {
+  if(savedProperty?.demoPlantingsRevision === 1) property={...property,demoPlantingsRevision:1};
   // Landmark targets are geographic, so they survive a refreshed local origin.
   return savedProperty?.referenceRegistration
     ? {...property, referenceRegistration: structuredCloneCompat(savedProperty.referenceRegistration)}

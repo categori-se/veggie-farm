@@ -1167,8 +1167,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 555566,
-      "sha256": "bab3dafca1caff07c554bfdac5c6b4fbde8b321d2942bef4e5e7bedb8a52187b",
+      "bytes": 555663,
+      "sha256": "edd33e9c22f98b518679f85874abef6202cbb867d8da4288c97f70379d68fc74",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2055,8 +2055,8 @@
     },
     {
       "path": "src/data/gardening-library.json",
-      "bytes": 200397,
-      "sha256": "f9c2f92403c884aa46dfbc4ccfdef58f4a8437168b28c6085ac274b9607fdd88",
+      "bytes": 203321,
+      "sha256": "b9c3a0921fa40ff2b9016db7f8ad40cc77168ca7d74ed4871c9b643ee381c765",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
