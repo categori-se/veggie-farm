@@ -590,14 +590,20 @@ const DEFAULT_PLANTS = [...CORE_PLANTS, ...FLOWER_CATALOG];
 
 function proposedBedPlantings(beds, existing = [], plants = DEFAULT_PLANTS) {
   const occupied = new Set(existing.map(p => p.bedId));
-  const palette = ["lettuce", "kale", "carrot", "basil", "tomato", "nasturtium"].map(id => plants.find(p => p.id === id)).filter(Boolean);
-  const blooms = plants.filter(p => /\b(aster|coneflower|bee balm|goldenrod)\b/i.test(p.name));
-  return beds.filter(b => !occupied.has(b.id)).flatMap((bed, index) => {
-    const flowering = /flower|border|terrace|spring greens/i.test(bed.name);
-    const choices = flowering && blooms.length ? blooms : palette;
-    const plant = choices[index % choices.length];
-    if (!plant) return [];
-    return bedFillPositions(normalizeBed(bed), plant).slice(0, 24).map((point, j) => ({id:`${bed.id}-proposal-${j}`,bedId:bed.id,plantId:plant.id,...point,health:"planned",rotation:0,notes:"Illustrative planting inspired by public garden themes; species and placement are proposed, not verified specimens."}));
+  const year = new Date().getFullYear();
+  return beds.filter(b => !occupied.has(b.id)).flatMap((raw, index) => {
+    const bed=normalizeBed(raw), context=`${bed.id} ${bed.name} ${bed.zone}`;
+    const flowering=/flower|border|terrace|ashintully|naumkeag/i.test(context) && !/kitchen|edible|vegetable|greens/i.test(context);
+    const patterns=flowering ? [/phlox|bee balm/i,/aster|coneflower/i,/dianthus|marigold|nasturtium/i] :
+      /herb/i.test(context) ? [/basil/i,/thyme/i,/nasturtium/i] : index%3===0 ? [/lettuce/i,/carrot/i,/kale/i] : index%3===1 ? [/tomato/i,/basil/i,/nasturtium/i] : [/kale/i,/carrot/i,/lettuce/i];
+    const choices=patterns.map(re=>plants.find(p=>re.test(p.name)||re.test(p.id))).filter(Boolean);
+    if(!choices.length)return [];
+    const spacingPlant={spacing:Math.max(...choices.map(p=>p.spacing)),matureDiameter:Math.max(...choices.map(p=>p.matureDiameter))};
+    let points=bedFillPositions(bed,spacingPlant);
+    // Narrow beds can still accept a smaller member of the same palette.
+    if(!points.length){choices.sort((a,b)=>a.spacing-b.spacing);points=bedFillPositions(bed,choices[0]);choices.splice(1);}
+    const window=flowering?['04-15','10-31']:index%3===0?['04-15','06-15']:index%3===1?['05-25','09-30']:['08-01','11-01'];
+    return points.slice(0,48).filter(point=>isInsideBed(point.x,point.y,bed)).map((point,j)=>({id:`${bed.id}-proposal-${j}`,bedId:bed.id,plantId:choices[j%choices.length].id,...point,health:"planned",rotation:0,planted:`${year}-${window[0]}`,plannedUntil:`${year}-${window[1]}`,notes:"Proposed seasonal design inspired by public garden descriptions and imagery; species, dates and positions are estimates, not an institutional inventory. Dates describe this display scenario, not perennial lifespan."}));
   });
 }
 
@@ -2279,6 +2285,13 @@ function normalizeParcelWorkspace(workspace = {}) {
   const beds = normalizeBeds(hasWorkspaceBeds ? workspace.beds : DEFAULT_BEDS, workspace.bed, {
     includeDefaults: !hasWorkspaceBeds
   });
+  // One-time enrichment of public demo workspaces only. Existing plantings,
+  // user gardens and subsequent deliberate removals remain untouched.
+  let placements=Array.isArray(workspace.placements)?workspace.placements:[];
+  if(gardenReferenceById(workspace.id) && property.demoPlantingsRevision !== 1){
+    placements=[...placements,...proposedBedPlantings(beds,placements)];
+    property.demoPlantingsRevision=1;
+  }
   const activeBedId = beds.some((bed) => bed.id === workspace.activeBedId)
     ? workspace.activeBedId
     : beds[0]?.id || DEFAULT_ACTIVE_BED_ID;
@@ -2293,9 +2306,7 @@ function normalizeParcelWorkspace(workspace = {}) {
     beds,
     structures: normalizeStructures(Array.isArray(workspace.structures) ? workspace.structures : []),
     vegetation: normalizeVegetation(Array.isArray(workspace.vegetation) ? workspace.vegetation : []),
-    placements: Array.isArray(workspace.placements)
-      ? workspace.placements.map((placement) => normalizePlacement(placement, beds))
-      : [],
+    placements: placements.map((placement) => normalizePlacement(placement, beds)),
     selectedVegetationId: workspace.selectedVegetationId || null,
     selectedStructureId: workspace.selectedStructureId || null,
     selectedPlacementId: workspace.selectedPlacementId || null,
@@ -7904,11 +7915,20 @@ function threeRaycastFeature(three, event) {
     -((event.clientY - rect.top) / rect.height) * 2 + 1
   );
   three.raycaster.setFromCamera(three.pointer, three.camera);
-  for (const intersection of three.raycaster.intersectObjects(three.group.children, true)) {
-    const ref = threeFeatureRef(intersection.object);
-    if (ref) return {ref, intersection};
+  const hits = three.raycaster.intersectObjects(three.group.children, true)
+    .map(intersection => ({ref: threeFeatureRef(intersection.object), intersection})).filter(hit => hit.ref);
+  const first = hits[0];
+  // Flat garden-area overlays can sit just above the beds they describe. Let
+  // beds remain reachable through these contextual surfaces, not solid buildings.
+  const contextSurface = hit => hit.ref.type === "structure" &&
+    /^(garden-section|planted-border|border|lawn|path|groundcover)$/.test(threeFeatureEntity(three.state, hit.ref)?.type || "");
+  if (three.state.viewMode === "garden" && first && contextSurface(first)) {
+    for (const hit of hits) {
+      if (hit.ref.type === "bed" || hit.ref.type === "placement") return hit;
+      if (!contextSurface(hit)) break;
+    }
   }
-  return null;
+  return first || null;
 }
 
 function threeGroundPoint(three, event) {
@@ -8295,16 +8315,19 @@ function syncThreeSolar(three,state,unit){
   canvas.dataset.solarMode=!enabled?'illustrative':direction?'calculated':'unavailable';
   canvas.dataset.solarShadowPolygons='0';
   if(!enabled){
-    const bounds=state.viewMode==="garden"?parcelViewportBounds(state):planViewBounds(state);
-    const center=three.controls.target,span=Math.max(bounds.width,bounds.height)*unit;
+    // Keep decorative lighting anchored to the scene, never the moving camera.
+    const bounds=state.viewMode==="garden"?parcelViewBounds(state):planViewBounds(state);
+    const center=new THREE.Vector3(state.viewMode==="bed"?0:(bounds.x+bounds.width/2)*unit,0,state.viewMode==="bed"?0:(bounds.y+bounds.height/2)*unit),span=Math.max(bounds.width,bounds.height)*unit;
     const distance=Math.max(10,span);
     three.sun.intensity=2.4;
     three.sun.target.position.copy(center);
-    three.sun.position.set(center.x-distance*.5, distance, center.z+distance*.4);
+    const lightOffset=new THREE.Vector3(-.5,1,.4).applyAxisAngle(new THREE.Vector3(0,1,0),state.viewMode==="bed"?(activeBed(state).rotation||0)*Math.PI/180:0);
+    three.sun.position.copy(center).addScaledVector(lightOffset,distance);
+    canvas.dataset.solarDirection=lightOffset.clone().normalize().toArray().map(v=>v.toFixed(5)).join(',');
     const shadow=three.sun.shadow;shadow.mapSize.set(1024,1024);
     Object.assign(shadow.camera,{left:-distance,right:distance,top:distance,bottom:-distance,near:.1,far:distance*5});
     shadow.camera.updateProjectionMatrix();shadow.bias=-0.0001;shadow.normalBias=.03;
-    delete canvas.dataset.solarDirection;return;
+    return;
   }
   if(!direction){three.sun.intensity=0;delete canvas.dataset.solarDirection;return;}
   const bounds=state.viewMode==="garden"?parcelViewportBounds(state):planViewBounds(state);
