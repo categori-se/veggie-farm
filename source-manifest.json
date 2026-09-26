@@ -290,6 +290,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/bed-seasons.md",
+      "bytes": 1456,
+      "sha256": "e923be347b8ea0dc503034dfa352e9a279f27f44fed447ffde311b19b814c81c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/build-evidence.json",
       "bytes": 2140,
       "sha256": "229ac5e003e8a336e9cbb0ed83c920ca46106bfbad6c26eba97a2418727d3542",
@@ -618,6 +624,12 @@
       "bytes": 2455,
       "sha256": "c2a6647bc6f3f4afc40f72615082a84bdcfdb56bbe5006456da9c89ca9c3c837",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "docs/product/journey-review.md",
+      "bytes": 2993,
+      "sha256": "a13ba07c9d38c35034dedca4d11fd090e2a7b8b314415733dfc88ddcab1ae03a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "docs/spatial-interchange.md",
@@ -1101,8 +1113,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 543398,
-      "sha256": "e742f0dd1905be68557c81e2d965c473e3a1b1d54414b576771b8b05da89afd2",
+      "bytes": 550751,
+      "sha256": "c2d93b4aaad743a79d296833d0a054f2a263e7b54808f421e981e02c8e96aa68",
       "basis": "community source policy; rights status in release review"
     },
     {

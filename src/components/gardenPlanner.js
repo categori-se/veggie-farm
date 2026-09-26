@@ -764,7 +764,7 @@ export function gardenPlanner(options = {}) {
           </section>
 
           <section class="planner-section tool-panel" data-tool-panel="plants">
-            <button type="button" data-action="plant-gallery">3D plant library</button>
+            <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button>
             <div class="section-heading"><span>Plant library</span><span class="section-count" data-role="plant-count"></span></div>
             <input class="search-input" data-role="plant-search" type="search" aria-label="Filter plants" placeholder="Filter plants">
             <p class="library-help">Choose a plant and Add selected, or drag it into the bed. Existing plants stay locked until you choose Edit plants.</p>
@@ -934,7 +934,7 @@ export function gardenPlanner(options = {}) {
             <button type="button" data-scope="attributes">Site features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
-            <button type="button" data-action="plant-gallery">3D plant library</button>
+            <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button>
           </nav>
           <section class="planner-view parcel-map-view">
             <div class="view-heading parcel-heading">
@@ -1341,6 +1341,7 @@ export function gardenPlanner(options = {}) {
   setupParcelInteractions(refs, state, () => renderAll(), renderSharedViews);
   setupKeyboardShortcuts(refs, state, () => renderAll());
 
+  root.querySelectorAll('[data-action="bed-seasons"]').forEach(button=>button.addEventListener('click',()=>openBedSeasons(root,state,renderAll)));
   root.querySelectorAll('[data-action="plant-gallery"]').forEach(button=>button.addEventListener('click',()=>openPlantGallery(root,state,()=>three,renderAll)));
 
   root.addEventListener("veggie-farm:select-garden", (event) => {
@@ -8774,11 +8775,50 @@ function fitProceduralPlantHeight(group, plant, unit) {
   group.userData.heightInches=height/unit;
 }
 
+function openBedSeasons(root,state,renderAll) {
+  const dialog=document.createElement('dialog');dialog.setAttribute('aria-label','Bed seasons');
+  dialog.style.cssText='width:min(960px,94vw);max-height:90svh;overflow:auto;background:var(--theme-background,#18231b);color:var(--theme-foreground,#eef2e8);padding:18px;border:1px solid #71846d';
+  dialog.innerHTML=`<form method="dialog" style="float:right"><button aria-label="Close bed seasons">Close</button></form><h2>Bed seasons</h2><p>Save a design, record what you noticed, and compare the same bed across months or years.</p><label>Bed <select data-bed></select></label><form data-record><label>Month <input data-month type="month" required value="${todayIso().slice(0,7)}"></label><label>Observation or next step <textarea data-note maxlength="2000" rows="2" placeholder="What changed? What would you try next season?"></textarea></label><button>Save current bed snapshot</button></form><p data-status role="status">Snapshots preserve plans, not evidence that plants were grown. Notes are your own observations. Stored in this browser; export a backup for long-term records. Up to 48 saved versions are retained.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><label>Earlier snapshot <select data-before></select></label><label>Later snapshot <select data-after></select></label></div><div data-comparison style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px"></div><div data-difference></div><button type="button" data-plan>Continue planning this bed</button> <button type="button" data-export>Export garden backup</button>`;
+  root.append(dialog);dialog.showModal();
+  const beds=dialog.querySelector('[data-bed]'),before=dialog.querySelector('[data-before]'),after=dialog.querySelector('[data-after]');
+  beds.replaceChildren(...state.beds.map(b=>new Option(b.name,b.id)));beds.value=state.activeBedId;
+  const eligible=()=>state.layouts.filter(l=>l.gardenId===state.activeParcelId&&l.bedSnapshot?.bedId===beds.value).sort((a,b)=>a.bedSnapshot.month.localeCompare(b.bedSnapshot.month)||String(a.savedAt).localeCompare(String(b.savedAt)));
+  function draw(){
+    const versions=eligible(),a=versions.find(l=>l.id===before.value),b=versions.find(l=>l.id===after.value),host=dialog.querySelector('[data-comparison]');host.replaceChildren();
+    for(const [label,version] of [['Earlier',a],['Later',b]]){
+      const section=document.createElement('section');host.append(section);
+      if(!version){section.textContent='Save a snapshot to begin. Your current plan stays unchanged while comparing.';continue;}
+      const bed=version.beds?.find(x=>x.id===beds.value),plants=(version.placements||[]).filter(p=>p.bedId===beds.value);
+      const heading=document.createElement('h3');heading.textContent=`${label} · ${version.bedSnapshot.month} · ${plants.length} plantings`;section.append(heading);
+      if(bed){
+        const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox',`0 0 ${bed.width} ${bed.height}`);svg.style.cssText='width:100%;height:240px;background:#6b5436';svg.setAttribute('role','img');svg.setAttribute('aria-label',`${bed.name}, ${version.bedSnapshot.month} saved planting positions`);
+        for(const p of plants.slice(0,3000)){const plant=plantById(state,p.plantId),circle=document.createElementNS(ns,'circle');circle.setAttribute('cx',p.x);circle.setAttribute('cy',p.y);circle.setAttribute('r',Math.max(1,(Number(plant?.matureDiameter)||6)/2));circle.setAttribute('fill',plant?.leafColor||'#77a46d');circle.setAttribute('stroke','#eef2e8');circle.setAttribute('stroke-width','.4');const title=document.createElementNS(ns,'title');title.textContent=plant?.name||p.plantId;circle.append(title);svg.append(circle);}section.append(svg);
+        const dimensions=document.createElement('p');dimensions.textContent=`${bed.width} × ${bed.height} in · mature footprints`;section.append(dimensions);
+      }
+      const note=document.createElement('p');note.textContent=version.bedSnapshot.note||'No observation recorded.';section.append(note);
+    }
+    const diff=dialog.querySelector('[data-difference]');diff.replaceChildren();if(!a||!b)return;
+    const counts=v=>{const m=new Map();for(const p of v.placements||[])if(p.bedId===beds.value)m.set(p.plantId,(m.get(p.plantId)||0)+1);return m;},ac=counts(a),bc=counts(b);
+    const table=document.createElement('table');table.style.width='100%';table.innerHTML='<caption>Plant selection changes · follow a plant name to learn more</caption><thead><tr><th>Plant</th><th>Earlier</th><th>Later</th><th>Change</th></tr></thead>';const body=document.createElement('tbody');table.append(body);
+    for(const id of new Set([...ac.keys(),...bc.keys()])){const plant=plantById(state,id),row=document.createElement('tr'),name=document.createElement('td'),link=document.createElement('a');link.textContent=plant?.name||id;link.href=plantLearningUrl(plant?.name||id);link.target='_blank';link.rel='noopener';name.append(link);row.append(name);for(const n of [ac.get(id)||0,bc.get(id)||0,(bc.get(id)||0)-(ac.get(id)||0)]){const td=document.createElement('td');td.textContent=String(n);row.append(td);}body.append(row);}diff.append(table);
+  }
+  function refresh(){const versions=eligible();for(const select of [before,after])select.replaceChildren(...versions.map(v=>new Option(`${v.bedSnapshot.month} · ${new Date(v.savedAt).toLocaleString()}`,v.id)));if(versions.length){before.value=versions[Math.max(0,versions.length-2)].id;after.value=versions.at(-1).id;}draw();}
+  beds.onchange=refresh;before.onchange=draw;after.onchange=draw;
+  dialog.querySelector('[data-record]').onsubmit=event=>{event.preventDefault();const month=dialog.querySelector('[data-month]').value;if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(month))return;const bed=state.beds.find(b=>b.id===beds.value);if(!bed)return;saveNamedLayout(state,`${month} · ${bed.name} · ${crypto.randomUUID()}`);state.layouts[0].bedSnapshot={bedId:bed.id,month,plantCount:placementsForBed(state,bed.id).length,note:dialog.querySelector('[data-note]').value.trim().slice(0,2000)};renderAll();refresh();dialog.querySelector('[data-note]').value='';dialog.querySelector('[data-status]').textContent=`Saved ${month} for ${bed.name}. Compare below. Export a backup; only the latest 48 saved versions are retained.`;};
+  dialog.querySelector('[data-plan]').onclick=()=>{openPlantingWorkspace(state,beds.value);dialog.close();renderAll();};
+  dialog.querySelector('[data-export]').onclick=()=>{const button=root.querySelector('[data-action="export"]');if(button)button.click();};
+  dialog.addEventListener('close',()=>dialog.remove(),{once:true});refresh();
+}
+function plantLearningUrl(name) {
+  const base=globalThis.location?.hostname==='studio.veggie.farm'?'https://veggie.farm':'';
+  return `${base}/content/reference/plant-database?search=${encodeURIComponent(name)}`;
+}
+
 function openPlantGallery(root,state,getThree,renderAll) {
   const dialog=document.createElement('dialog');
   dialog.setAttribute('aria-label','3D plant library');
   dialog.style.cssText='width:min(680px,92vw);max-height:90svh;overflow:auto;padding:16px;background:#18231b;color:#eef2e8;border:1px solid #70866d';
-  dialog.innerHTML=`<form method="dialog" style="float:right"><button aria-label="Close plant library">Close</button></form><h2>3D plant library</h2><label>Find a plant <input type="search" data-search placeholder="Name or variety"></label><label>Plant <select data-plant style="width:100%"></select></label><div data-preview style="height:300px;max-height:42svh"></div><p data-dimensions></p><label>Illustrative size <input data-size type="range" min="5" max="100" value="100"> <output>100%</output></label><p>6 ft human reference. Mature dimensions use catalog records where available. Smaller sizes are illustrative stages, not a growth forecast.</p><button type="button" data-use>Use in selected bed</button><p data-message></p>`;
+  dialog.innerHTML=`<form method="dialog" style="float:right"><button aria-label="Close plant library">Close</button></form><h2>3D plant library</h2><label>Find a plant <input type="search" data-search placeholder="Name or variety"></label><label>Plant <select data-plant style="width:100%"></select></label><div data-preview style="height:300px;max-height:42svh"></div><p data-dimensions></p><a data-learn target="_blank" rel="noopener">Learn about this plant ↗</a><label>Illustrative size <input data-size type="range" min="5" max="100" value="100"> <output>100%</output></label><p>6 ft human reference. Mature dimensions use catalog records where available. Smaller sizes are illustrative stages, not a growth forecast.</p><button type="button" data-use>Use in selected bed</button><p data-message></p>`;
   root.append(dialog);dialog.showModal();
   const select=dialog.querySelector('[data-plant]'),preview=dialog.querySelector('[data-preview]'),slider=dialog.querySelector('[data-size]');
   let renderer;
@@ -8798,6 +8838,7 @@ function openPlantGallery(root,state,getThree,renderAll) {
     const head=new THREE.Mesh(new THREE.SphereGeometry(.5,12,8),human.material.clone());head.position.set(human.position.x,5.5,0);objects.add(head);
     const extent=Math.max(6,height*scale,width*scale+4);camera.position.set(extent*.85,extent*.65,extent*1.8);camera.lookAt(0,Math.max(3,height*scale/2),0);
     dialog.querySelector('[data-dimensions]').textContent=`${plant.name}: mature height ${Number(plant.height)?`${plant.height} in`:'unknown (18 in preview)'}, spread ${Number(plant.matureDiameter)?`${plant.matureDiameter} in`:'estimated from spacing'}. ${Math.round(scale*100)}% displayed. Representative plant form.`;
+    dialog.querySelector('[data-learn]').href=plantLearningUrl(plant.name);
     dialog.querySelector('output').value=`${Math.round(scale*100)}%`;
     if(renderer){const w=preview.clientWidth,h=preview.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.render(scene,camera);}
   };
