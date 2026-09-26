@@ -1,6 +1,7 @@
 import {siteHeader, sharedPersistenceCopy} from "./scripts/lib/site-shell.mjs";
 
 export default {
+  dynamicPaths: ["/robots.txt"],
   title: "veggie.farm",
   head: ({path}) => path.replace(/\.html$/, "") === "/demo" ? `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">` : "",
   root: "src",
