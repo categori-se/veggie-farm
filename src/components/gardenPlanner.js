@@ -1,3 +1,5 @@
+import {gardenHome} from "./garden-home.js";
+import {recordPlantingObservation} from "../lib/garden/plantingJournal.js";
 import {plannedSize} from "../lib/garden/plannedSize.js";
 import {plannerSizeScenario} from "./planner-size-scenario.js";
 import {solarSceneDirection,solarScenePolygons,bedShadowPolygons} from "../lib/spatial/solarScene.js";
@@ -764,7 +766,7 @@ export function gardenPlanner(options = {}) {
           </section>
 
           <section class="planner-section tool-panel" data-tool-panel="plants">
-            <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button>
+            <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button><button type="button" data-action="garden-home">My garden · Log</button>
             <div class="section-heading"><span>Plant library</span><span class="section-count" data-role="plant-count"></span></div>
             <input class="search-input" data-role="plant-search" type="search" aria-label="Filter plants" placeholder="Filter plants">
             <p class="library-help">Choose a plant and Add selected, or drag it into the bed. Existing plants stay locked until you choose Edit plants.</p>
@@ -934,7 +936,7 @@ export function gardenPlanner(options = {}) {
             <button type="button" data-scope="attributes">Site features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
-            <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button>
+            <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button><button type="button" data-action="garden-home">My garden · Log</button>
           </nav>
           <section class="planner-view parcel-map-view">
             <div class="view-heading parcel-heading">
@@ -1341,6 +1343,11 @@ export function gardenPlanner(options = {}) {
   setupParcelInteractions(refs, state, () => renderAll(), renderSharedViews);
   setupKeyboardShortcuts(refs, state, () => renderAll());
 
+  root.querySelectorAll('[data-action="garden-home"]').forEach(button=>button.addEventListener('click',()=>{
+    const dialog=gardenHome({getWorkspace:()=>({id:state.activeParcelId,name:activeParcelWorkspace(state)?.name,property:state.property,beds:state.beds,placements:state.placements}),getPlants:()=>state.plants,selectedPlantingId:state.selectedPlacementId,
+      onLog:(id,input)=>{const index=state.placements.findIndex(p=>p.id===id);if(index<0)throw Error('This planting is no longer in the garden.');const previous=state.placements[index];state.placements[index]=recordPlantingObservation(previous,input);if(!saveState(state)){state.placements[index]=previous;syncActiveParcelWorkspace(state);throw Error('Could not save. Keep this form open and copy your observation.');}renderAll();},
+      onPlan:id=>{openPlantingWorkspace(state,id);renderAll();},onBackup:()=>refs.actions.export.click()});root.append(dialog);dialog.showModal();
+  }));
   root.querySelectorAll('[data-action="bed-seasons"]').forEach(button=>button.addEventListener('click',()=>openBedSeasons(root,state,renderAll)));
   root.querySelectorAll('[data-action="plant-gallery"]').forEach(button=>button.addEventListener('click',()=>openPlantGallery(root,state,()=>three,renderAll)));
 

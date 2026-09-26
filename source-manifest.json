@@ -362,6 +362,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/planting-journal.md",
+      "bytes": 2099,
+      "sha256": "6fcb7bc86b78d2c66a4e97fa5e1cfe66251d8c3faec30f470529b4f8cbed09b8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/public-release.md",
       "bytes": 2946,
       "sha256": "92fdbfd9715e2ae1a216d8c63585a19c65884dfed69d86168341b1f1780edfda",
@@ -624,6 +630,12 @@
       "bytes": 2455,
       "sha256": "c2a6647bc6f3f4afc40f72615082a84bdcfdb56bbe5006456da9c89ca9c3c837",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "docs/product/garden-journey-goal.md",
+      "bytes": 3958,
+      "sha256": "76c32d26ab5e2c22feef7533d2cb9d06cc98f9405d5f5c983fb2fe1928fcc855",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "docs/product/journey-review.md",
@@ -1100,6 +1112,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/components/garden-home.js",
+      "bytes": 7641,
+      "sha256": "431c70921c773ecdbceaff3bcc1a40d9f8b9aa0b4855266dea5f8cefe3250a04",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/garden-library.js",
       "bytes": 3251,
       "sha256": "543971d0a3125beb1ee268cbb6ed22fe1a6c8abc37a44b9f91d303429b4410fe",
@@ -1113,8 +1131,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 551317,
-      "sha256": "a6c0195d5684aa4cec73ca3cc7fab4655133993ab129a9979eb4c348af6eca0a",
+      "bytes": 552535,
+      "sha256": "a250425a9c351a940095160a9374d424427e1d6d0d37ce07b687823938a350d0",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2702,6 +2720,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/plantingJournal.js",
+      "bytes": 4132,
+      "sha256": "759d764a165846b836f68cf33ff55afcde03f5875da9e665ac017908b533b0bf",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/plantingSchedule.js",
       "bytes": 1750,
       "sha256": "f1a9fc104349b810c0e9f3f5913b341e6f9ff5c71d5b6a5d60e2fa589d6aa7a4",
@@ -3473,6 +3497,12 @@
       "path": "tests/plantTypes.test.mjs",
       "bytes": 1781,
       "sha256": "184621f93165f693b72ae86877572eef3c78990e187755cf515724917585daae",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "tests/plantingJournal.test.mjs",
+      "bytes": 3498,
+      "sha256": "72d240d6bf324f5f7764d33f4a112c6da4c33e1a253df04cf09c27d29f053abb",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
