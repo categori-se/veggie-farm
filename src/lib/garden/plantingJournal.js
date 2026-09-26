@@ -1,6 +1,6 @@
 // Observations belong to a stable planting ID within its existing garden workspace.
 // Planned dates remain independent: logging an event never rewrites the plan.
-export const JOURNAL_TYPES = Object.freeze({seeded:'Sowed seeds',germinated:'Germinated',transplanted:'Transplanted',flowered:'Flowered',fruit_set:'Fruit set',harvested:'Harvested',watering:'Watered',pest_seen:'Pest seen',disease_seen:'Possible disease',frost_damage:'Frost damage',bolted:'Bolted',ended:'Finished planting',note:'Note'});
+export const JOURNAL_TYPES = Object.freeze({seeded:'Sowed seeds',germinated:'Germinated',transplanted:'Transplanted',flowered:'Flowered',fruit_set:'Fruit set',harvested:'Harvested',watering:'Watered',rain:'Rain',soil_test:'Soil test',heat_damage:'Heat damage',pest_seen:'Pest seen',disease_seen:'Possible disease',frost_damage:'Frost damage',bolted:'Bolted',ended:'Finished planting',note:'Note'});
 const validDate=value=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value+'T12:00:00Z'))&&new Date(value+'T12:00:00Z').toISOString().slice(0,10)===value;
 export function recordPlantingObservation(planting,input,{id=()=>crypto.randomUUID(),now=()=>new Date().toISOString()}={}) {
  if(!planting?.id)throw Error('Choose a planting first.');

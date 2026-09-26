@@ -356,6 +356,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/notebook-garden-associations.md",
+      "bytes": 2149,
+      "sha256": "cd6100a4f7a03bd62cef87db44310c593e6abc43732dc7faa7af8b6dde427142",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/open-core-boundary.md",
       "bytes": 6102,
       "sha256": "2a7b0747a25c63fdeb0557f0c4c26c334d26bb29815a4e11530198f52003549d",
@@ -1017,8 +1023,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 4612,
-      "sha256": "563c467830dea3ec21282ac74e8d964871a959061f5335b1175c8c2715657524",
+      "bytes": 4816,
+      "sha256": "0cd2f755fca0a6bd6635ac835670b90c7d02ec0b217cba7cd79a640e274b24aa",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1125,8 +1131,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 7780,
-      "sha256": "452dbc588f5d4f23f77161fa644eece9297d8da0c5cd51e1d31a6d6bc6d02217",
+      "bytes": 8811,
+      "sha256": "caf19261a0b45151f12b0a3e5e65532478f1e818391df8784192e7454fbdc199",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1176,6 +1182,12 @@
       "bytes": 3570,
       "sha256": "494ec50a1d3bab89b39c3d8b7b4800c73ed54b34f60c5ed0897b2e9b66b0fc2f",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/notebook-garden-links.js",
+      "bytes": 5042,
+      "sha256": "dab02fe96739c7ed4454ad1ae0d75eddc0af6f2cdc2d6f560a2a5c20613aa1b9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/notebook-local.js",
@@ -2673,8 +2685,8 @@
     },
     {
       "path": "src/lib/garden/accountGardenJournal.js",
-      "bytes": 3083,
-      "sha256": "1e96c8ade92f3cd473b276b452dbf0355c41e51a95f5a4271765f0ad1737beb2",
+      "bytes": 4792,
+      "sha256": "08597e87c4c313b0bd4c2b11e151432b20149077627b7956e15cc65709bcdc05",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2708,6 +2720,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/notebookLink.js",
+      "bytes": 3645,
+      "sha256": "1df439ef7361bb458884e32c1f7c5e45e9f3d4feed312d96653612140fa54a2b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/plannedOccupancy.js",
       "bytes": 905,
       "sha256": "24a24e2616d0e707ed67d6daeff1f2277d9b3c9a416d852c049146bf462d90c2",
@@ -2739,8 +2757,8 @@
     },
     {
       "path": "src/lib/garden/plantingJournal.js",
-      "bytes": 4132,
-      "sha256": "759d764a165846b836f68cf33ff55afcde03f5875da9e665ac017908b533b0bf",
+      "bytes": 4192,
+      "sha256": "5a1631b085fafd2a7da74493ebd4a529a5cc122bc07518b36dd1ff2488d33992",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3189,8 +3207,8 @@
     },
     {
       "path": "tests/accountGardenJournal.test.mjs",
-      "bytes": 2716,
-      "sha256": "ac5cc52246afc12027373279c0f64372c399f07164152327f7ba961f52c112be",
+      "bytes": 3216,
+      "sha256": "5706f47f3793ce717dd0b2fc0a00b75e6fea19a4045604b4e7fb68272a62f239",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3444,6 +3462,12 @@
       "bytes": 1809,
       "sha256": "54805876807a9e62741da066870aea6dc23813da586ba87e29301c5dcbaf67df",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/notebookLink.test.mjs",
+      "bytes": 2401,
+      "sha256": "c6f02295fdb9de232926b1a18d9132a0151f04d72ea5d96291ceb74803c04fca",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/notebookStorageBoundary.test.mjs",
