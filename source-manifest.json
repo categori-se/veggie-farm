@@ -380,6 +380,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/walkthrough-and-plant-scale.md",
+      "bytes": 2722,
+      "sha256": "ec63c306e22ae5542a1d4c330ed1c59de4f9d55c7e4a424677428b27bc11778d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/evidence/README.md",
       "bytes": 5337,
       "sha256": "be8ab76b0d35008c279ddd7a2c77cd08950838e93eb622ad0c33879cdf3c486f",
@@ -1095,8 +1101,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 534364,
-      "sha256": "6b34f1cc81acabd6dee1c53f5a440fb29f7fbdfcf7269c18ee19d439fdd7b6cc",
+      "bytes": 543398,
+      "sha256": "e742f0dd1905be68557c81e2d965c473e3a1b1d54414b576771b8b05da89afd2",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1146,6 +1152,12 @@
       "bytes": 3776,
       "sha256": "465de940695d6ed8b9df56a13164f7d8c5def3ee6388868a3a15f78efcf76c80",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/planner-size-scenario.js",
+      "bytes": 2470,
+      "sha256": "fcf1d7665580cad8ae001701689a925a885a865615a5cebf534db501939a1de6",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/planner-sun-preview.js",
@@ -2654,6 +2666,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/plannedSize.js",
+      "bytes": 1022,
+      "sha256": "cfc394598a77db6b54ee69b729ef1da5d4509f662074141e1273be846a38d30b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/plannerBackup.js",
       "bytes": 2683,
       "sha256": "715422bc72a3da976dbd6d2c2612d4b00bf11c6e16182758503a719bd37ae8e4",
@@ -2673,8 +2691,8 @@
     },
     {
       "path": "src/lib/garden/plantingSchedule.js",
-      "bytes": 1718,
-      "sha256": "d8e65c245867b3b2dfc02a19eaab6f69905288b99634558098795ac3db655820",
+      "bytes": 1750,
+      "sha256": "f1a9fc104349b810c0e9f3f5913b341e6f9ff5c71d5b6a5d60e2fa589d6aa7a4",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3171,8 +3189,8 @@
     },
     {
       "path": "tests/cameraOrientation.test.mjs",
-      "bytes": 2976,
-      "sha256": "6e9a497efa21d04ab299018f32fd1d11e5f73ca9cf2fc6888103e9972d1e0066",
+      "bytes": 3018,
+      "sha256": "cabd92c75cd0070a3bcaba1bf22b440cf4f9f56be8d9568fea760b9ec4b8ba4c",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3392,6 +3410,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "tests/plannedSize.test.mjs",
+      "bytes": 1690,
+      "sha256": "13c502677898edf674f0cb745acba410dde852850ee34e770d4e589ebbf5b890",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "tests/plannerBackup.test.js",
       "bytes": 1862,
       "sha256": "ccf418ed2b2e0fa164b7bd9a69ba4c6cf4c99b9764b5f070b413760c74e20015",
@@ -3411,8 +3435,8 @@
     },
     {
       "path": "tests/plannerWorkspaces.test.mjs",
-      "bytes": 2964,
-      "sha256": "f2e1e2c219676546d76a7a94c05d4c87811a4bf001eae4346b76660ca76a7a37",
+      "bytes": 3019,
+      "sha256": "32510df39ef5620597d33d4a3404bab1c43792b71fc99437cc6e7c9a96991d01",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3426,6 +3450,12 @@
       "bytes": 1154,
       "sha256": "c75287c24b2d40314101dd1521149f5a8a749bfe2bfc3021f617871984b17102",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/plantPhysicalScale.test.mjs",
+      "bytes": 2147,
+      "sha256": "78abc50204199190b2fba4f6ace8bd3333ff075cde9ef69aee409c6fe9bb926a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/plantTypes.test.mjs",

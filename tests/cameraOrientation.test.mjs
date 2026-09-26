@@ -27,6 +27,6 @@ const walkBody=source.slice(source.indexOf('function moveWalkCamera('),source.in
 const move=new Function('planningBearing','planningPitch','setPlanningOrientation','parcelViewBounds','clamp',walkBody+';return moveWalkCamera;')(s=>s.bearing,s=>s.pitch,(s,b,p)=>{s.bearing=b;s.pitch=p;},s=>s.bounds,(v,a,b)=>Math.max(a,Math.min(b,v)));
 test('walking steps respect heading and extent without changing garden geometry',()=>{
  const state={walkCamera:{x:50,y:50,look:0},bounds:{x:0,y:0,width:100,height:100},bearing:0,pitch:60,beds:[{x:10,y:20}]};
- move(state,'forward');assert.deepEqual(state.walkCamera,{x:50,y:2,look:0});move(state,'forward');assert.equal(state.walkCamera.y,0);
- for(let i=0;i<6;i++)move(state,'right');assert.equal(state.bearing,90);move(state,'forward');assert.equal(state.walkCamera.x,98);move(state,'forward');assert.equal(state.walkCamera.x,100);assert.deepEqual(state.beds,[{x:10,y:20}]);
+ move(state,'forward');assert.deepEqual(state.walkCamera,{x:50,y:38,look:0});for(let i=0;i<4;i++)move(state,'forward');assert.equal(state.walkCamera.y,0);
+ for(let i=0;i<18;i++)move(state,'right');assert.equal(state.bearing,90);move(state,'forward');assert.equal(state.walkCamera.x,62);for(let i=0;i<4;i++)move(state,'forward');assert.equal(state.walkCamera.x,100);assert.deepEqual(state.beds,[{x:10,y:20}]);
 });
