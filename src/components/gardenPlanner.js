@@ -1,3 +1,5 @@
+import {plannedSize} from "../lib/garden/plannedSize.js";
+import {plannerSizeScenario} from "./planner-size-scenario.js";
 import {solarSceneDirection,solarScenePolygons,bedShadowPolygons} from "../lib/spatial/solarScene.js";
 import {plannerSunPreview} from "./planner-sun-preview.js";
 import {illustrativePlanting} from "../lib/spatial/illustrativePlanting.js";
@@ -762,6 +764,7 @@ export function gardenPlanner(options = {}) {
           </section>
 
           <section class="planner-section tool-panel" data-tool-panel="plants">
+            <button type="button" data-action="plant-gallery">3D plant library</button>
             <div class="section-heading"><span>Plant library</span><span class="section-count" data-role="plant-count"></span></div>
             <input class="search-input" data-role="plant-search" type="search" aria-label="Filter plants" placeholder="Filter plants">
             <p class="library-help">Choose a plant and Add selected, or drag it into the bed. Existing plants stay locked until you choose Edit plants.</p>
@@ -931,6 +934,7 @@ export function gardenPlanner(options = {}) {
             <button type="button" data-scope="attributes">Site features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
+            <button type="button" data-action="plant-gallery">3D plant library</button>
           </nav>
           <section class="planner-view parcel-map-view">
             <div class="view-heading parcel-heading">
@@ -1174,10 +1178,7 @@ export function gardenPlanner(options = {}) {
     },
     onPlan: id => {
       selectGardenFeature(state,"bed",id);
-      state.walkCamera = null;
-      state.viewMode = "bed";
-      if (state.viewPresentation === "map") state.viewPresentation = "2d";
-      state.activeTool = "beds";state.inspectorOpen = false;state.toolDrawerOpen = false;
+      openPlantingWorkspace(state,id);
       renderAll();
     }
   });
@@ -1339,6 +1340,8 @@ export function gardenPlanner(options = {}) {
   });
   setupParcelInteractions(refs, state, () => renderAll(), renderSharedViews);
   setupKeyboardShortcuts(refs, state, () => renderAll());
+
+  root.querySelectorAll('[data-action="plant-gallery"]').forEach(button=>button.addEventListener('click',()=>openPlantGallery(root,state,()=>three,renderAll)));
 
   root.addEventListener("veggie-farm:select-garden", (event) => {
     exploringDemos = true;
@@ -2737,9 +2740,11 @@ function openInspector(state, mode, tab = "edit") {
 }
 
 // Workspaces change the view, never the edit authorization or garden records.
+const walkingReturns = new WeakMap();
 function openPlantingWorkspace(state, bedId = state.activeBedId) {
   const bed = state.beds.find(item => item.id === bedId);
   if (!bed) return false;
+  if (state.walkCamera) walkingReturns.set(state,{gardenId:state.activeParcelId,walk:{...state.walkCamera},bearing:planningBearing(state)});
   explicitEditSessions.delete(state);
   state.activeBedId = bed.id;
   state.viewMode = "bed";
@@ -3385,8 +3390,8 @@ function setupControls(refs, state, renderAll, renderSharedViews = renderAll) {
 
   refs.root.querySelector('[data-role="camera-angle"]').addEventListener("change", event => {
     if(event.target.value==='walk'){
-      state.viewMode='garden';state.viewPresentation='3d';state.activeTool='select';state.toolDrawerOpen=false;state.inspectorOpen=false;
-      const bounds=parcelViewportBounds(state);state.walkCamera={x:bounds.x+bounds.width/2,y:bounds.y+bounds.height/2,look:0};
+      refs.root.querySelector('button[data-workspace="walk"]').click();
+      return;
     }else{state.walkCamera=null;setPlanningOrientation(state, planningBearing(state), Number(event.target.value));}
     renderAll();
   });
@@ -3453,8 +3458,10 @@ function setupControls(refs, state, renderAll, renderSharedViews = renderAll) {
     if (button.dataset.workspace === "walk") {
       const bounds = parcelViewportBounds(state);
       state.viewPresentation = "3d";
-      state.walkCamera = {x: fromBed && bed ? bed.x : bounds.x + bounds.width / 2,
-        y: fromBed && bed ? bed.y + bed.height / 2 + 48 : bounds.y + bounds.height / 2, look: 0};
+      const previous=walkingReturns.get(state);
+      if(fromBed && previous?.gardenId===state.activeParcelId){state.walkCamera={...previous.walk};setPlanningOrientation(state,previous.bearing,60);}
+      else if(bed){const angle=(bed.rotation||0)*Math.PI/180,distance=bed.height/2+72;state.walkCamera={x:bed.x-Math.sin(angle)*distance,y:bed.y+Math.cos(angle)*distance,look:-12};setPlanningOrientation(state,bed.rotation||0,60);}
+      else state.walkCamera={x:bounds.x+bounds.width/2,y:bounds.y+bounds.height/2,look:0};
     } else {
       state.walkCamera = null;
       if (state.viewPresentation === "3d") setPlanningOrientation(state, planningBearing(state), 60);
@@ -4203,6 +4210,8 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
 }
 
 function renderControls(refs, state) {
+  const walkButton=refs.root.querySelector('button[data-workspace="walk"]');
+  if(walkButton)walkButton.textContent=state.viewMode==="bed" && walkingReturns.get(state)?.gardenId===state.activeParcelId ? "Back to walk" : "Walk through";
   refs.root.dataset.workspace = state.walkCamera ? "walk" : state.viewMode === "bed" ? "plant" : "explore";
   refs.root.querySelectorAll("[data-workspace]").forEach(button => button.setAttribute("aria-pressed",
     String(button.dataset.workspace === (state.walkCamera ? "walk" : state.viewMode === "garden" ? "explore" : "plant"))));
@@ -4570,7 +4579,7 @@ function renderPlantList(refs, state, renderAll) {
       <span class="plant-swatch" style="--plant-color:${plant.leafColor || plant.color}"></span>
       <span class="plant-option-main">
         <strong>${escapeHtml(plant.name)}</strong>
-        <span>${escapeHtml(plant.group)} | ${plant.spacing} in spacing | ${plant.waterStyle}</span>
+        <span>${escapeHtml(plant.group)} · ${plant.height || "?"} in mature height · ${plant.matureDiameter || "?"} in spread · 3D preview</span>
       </span>
     `;
     button.addEventListener("click", () => {
@@ -4963,7 +4972,7 @@ function render2dPlan(refs, state, renderAll) {
     .attr("fill", (d) => plantById(state, d.plantId)?.leafColor || "#58895d");
 
   plants.each(function(d) {
-    render2dLeaves(d3.select(this), plantById(state, d.plantId), d, false);
+    renderSizedPlant2d(d3.select(this), state, d);
   });
 
   plants.append("circle")
@@ -5507,7 +5516,7 @@ function renderPropertyBeds2d(svg, state, renderAll, bedOptions = {}) {
         .attr("fill", (d) => plantById(state, d.plantId)?.leafColor || "#58895d");
 
       plantNodes.each(function(d) {
-        render2dLeaves(d3.select(this), plantById(state, d.plantId), d, false);
+        renderSizedPlant2d(d3.select(this), state, d);
       });
 
       plantNodes.append("circle").attr("class", "root-dot").attr("r", 1.4);
@@ -5521,6 +5530,7 @@ function renderPropertyBeds2d(svg, state, renderAll, bedOptions = {}) {
       event.stopPropagation();
       svg.node()?.focus({preventScroll: true});
       selectGardenFeature(state, "placement", d.id);
+      if(state.viewMode==="garden" && !options.plantsEditable)openPlantingWorkspace(state,d.bedId);
       renderAll();
     });
 
@@ -6476,6 +6486,16 @@ function projectLocalToLonLat(x, y, property = PROPERTY_CONTEXT) {
   return localPointToLonLat([x, y], property);
 }
 
+function renderSizedPlant2d(group, state, placement) {
+  const plant=plantById(state,placement.plantId),size=plannedSize(placement,state.previewDate);
+  group.attr('data-size-scale',size.scale);
+  if(size.scale<1)group.append('path').attr('class','mature-size-outline').attr('d',plantFootprintPath(plant,placement)).attr('fill','none').attr('stroke','currentColor').attr('stroke-dasharray','3 3').attr('stroke-width',.5).attr('opacity',.5).style('pointer-events','none');
+  const symbol=group.append('g').attr('class','planned-size-symbol').attr('transform',`scale(${size.scale})`);
+  symbol.append('path').attr('class','plant-canopy-halo').attr('d',plantFootprintPath(plant,placement)).attr('fill',plant?.leafColor||'#58895d');
+  render2dLeaves(symbol,plant,placement,false);
+  if(placement.sizeScenario)group.append('title').text(`Planned size: ${Math.round(size.scale*100)}% of mature dimensions. Geometric scenario, not observed growth.`);
+}
+
 function render2dLeaves(group, plant, placement, ghost) {
   if (!plant) return;
   const leaves = leafInstances(plant, placement);
@@ -7195,6 +7215,7 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
   } else if (!placement) {
     refs.selectedPlacement.innerHTML = `<div class="empty-state">No placement selected</div>`;
   } else {
+    refs.selectedPlacement.querySelector('.placement-editor').append(plannerSizeScenario({placement,canEdit:()=>plannerCanEditFeature(state,'placement'),onChange:()=>renderAll({preserveEditor:'placement'})}));
     const currentPlant = plantById(state, placement.plantId);
     const status = placementStatus(placement, state);
     refs.selectedPlacement.innerHTML = `
@@ -7715,10 +7736,10 @@ function updateVegetationField(vegetation, input) {
   if (field === "kind" && input.value === "tree") syncTreePointGeometry(vegetation);
 }
 
-function moveWalkCamera(state, action) {
+function moveWalkCamera(state, action, inches = 12) {
   const walk=state.walkCamera;if(!walk)return;
-  if(action==='left'||action==='right'){setPlanningOrientation(state,planningBearing(state)+(action==='left'?-15:15),planningPitch(state));return;}
-  const angle=planningBearing(state)*Math.PI/180,step=action==='back'?-48:48,bounds=parcelViewBounds(state);
+  if(action==='left'||action==='right'){setPlanningOrientation(state,planningBearing(state)+(action==='left'?-5:5),planningPitch(state));return;}
+  const angle=planningBearing(state)*Math.PI/180,step=(action==='back'?-1:1)*clamp(Number(inches)||0,0,24),bounds=parcelViewBounds(state);
   walk.x=clamp(walk.x+Math.sin(angle)*step,bounds.x,bounds.x+bounds.width);
   walk.y=clamp(walk.y-Math.cos(angle)*step,bounds.y,bounds.y+bounds.height);
 }
@@ -7734,11 +7755,12 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   };
 
   canvas.tabIndex=0;canvas.setAttribute('aria-label','Garden 3D view. In Walk mode, W/S or up/down steps, A/D or left/right turns. Drag to look. Escape returns overhead.');
+  let lastKeyStep=0,lastWheel=performance.now();
   canvas.addEventListener('keydown',event=>{
     if(!state.walkCamera||event.altKey||event.ctrlKey||event.metaKey)return;
     const action={w:'forward',s:'back',a:'left',d:'right',ArrowUp:'forward',ArrowDown:'back',ArrowLeft:'left',ArrowRight:'right'}[event.key];
     if(event.key==='Escape'){state.walkCamera=null;setPlanningOrientation(state,planningBearing(state),60);event.preventDefault();onViewChange();}
-    else if(action){event.preventDefault();event.stopImmediatePropagation();moveWalkCamera(state,action);onViewChange();}
+    else if(action){event.preventDefault();event.stopImmediatePropagation();const now=performance.now();if(event.repeat&&now-lastKeyStep<120)return;lastKeyStep=now;moveWalkCamera(state,action,event.repeat?6:12);onViewChange();}
   });
   const pose = new THREE.Object3D();
   let initialized = false, lastTime = performance.now();
@@ -7795,8 +7817,8 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
     const dx = event.clientX - orbit.gesture.startX;
     const dy = event.clientY - orbit.gesture.startY;
     if(state.walkCamera){
-      setPlanningOrientation(state,orbit.gesture.startBearing+dx*.25,planningPitch(state));
-      state.walkCamera.look=clamp(orbit.gesture.startLook-dy*.2,-60,60);
+      setPlanningOrientation(state,orbit.gesture.startBearing+dx*.10,planningPitch(state));
+      state.walkCamera.look=clamp(orbit.gesture.startLook-dy*.08,-60,60);
     } else if (orbit.gesture.rotating) {
       setPlanningOrientation(state,orbit.gesture.startBearing+dx*0.35,orbit.gesture.startPitch-dy*0.25);
     } else {
@@ -7823,8 +7845,11 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   canvas.addEventListener("pointercancel", stopDrag);
   canvas.addEventListener("wheel", (event) => {
     event.preventDefault();
-    if(state.walkCamera)moveWalkCamera(state,event.deltaY<0?'forward':'back');
-    else zoomPlanningViewport(state, event.deltaY < 0 ? 0.82 : 1.22);
+    const now=performance.now(),elapsed=Math.min(100,Math.max(0,now-lastWheel));lastWheel=now;
+    const delta=event.deltaY*(event.deltaMode===1?16:event.deltaMode===2?canvas.clientHeight:1);
+    if(!delta)return;
+    if(state.walkCamera)moveWalkCamera(state,delta<0?'forward':'back',Math.min(Math.abs(delta)*.03,36*elapsed/1000));
+    else zoomPlanningViewport(state, Math.exp(clamp(delta,-100,100)*.001));
     onViewChange();
   }, {passive: false});
   canvas.addEventListener("dblclick", (event) => {
@@ -7968,8 +7993,10 @@ function setupThreeFeatureInteractions(three, options = {}) {
     bedClick = null;
     if (event.button !== 0 || event.ctrlKey || three.state.viewMode !== "garden" || plannerCanEditFeature(three.state, "bed")) return;
     const hit = threeRaycastFeature(three, event);
-    if (hit?.ref.type === "bed") bedClick = {id:hit.ref.id, x:event.clientX, y:event.clientY, pointer:event.pointerId};
+    const id=hit?.ref.type==="bed"?hit.ref.id:hit?.ref.type==="placement"?three.state.placements.find(p=>p.id===hit.ref.id)?.bedId:null;
+    if(id)bedClick={id,x:event.clientX,y:event.clientY,pointer:event.pointerId};
   });
+  canvas.addEventListener("pointermove",event=>{if(bedClick && Math.hypot(event.clientX-bedClick.x,event.clientY-bedClick.y)>5)bedClick=null;});
   canvas.addEventListener("pointerup", event => {
     const click = bedClick; bedClick = null;
     if (!click || click.pointer !== event.pointerId || Math.hypot(event.clientX-click.x,event.clientY-click.y)>5) return;
@@ -8213,6 +8240,7 @@ function syncThreeScene(three, state) {
     three.renderer.domElement,
     gardenInformationContext(state, viewBounds)
   );
+  if(state.walkCamera)three.detailProfile={...three.detailProfile,id:"garden",threePlantMode:"model",plantMode:"botanical",showBedGrid:false};
   three.renderer.domElement.dataset.detailLevel = three.detailProfile.id;
   three.renderer.domElement.dataset.plantRenderMode = three.detailProfile.threePlantMode;
   three.viewMode = state.viewMode;
@@ -8472,13 +8500,16 @@ function addGardenStructures3d(group, state, unit, profile = null, viewport = pa
       tagThreeFeature(marker, "structure", structure.id);
       group.add(marker);
       if (isSpecimenTree) {
-        const crownRadius = clamp(Math.max(width, height) * 0.2, 0.16, 1.5);
+        const treeHeight=(Number(structure.heightEstimateFeet)>0?Number(structure.heightEstimateFeet):20)*12*unit;
+        const crownRadius=Math.max(width,height,120*unit)/2;
+        marker.geometry.dispose();marker.geometry=new THREE.CylinderGeometry(treeHeight*.018,treeHeight*.025,treeHeight*.55,8);marker.position.y=treeHeight*.275;
+
         const crown = new THREE.Mesh(
           new THREE.SphereGeometry(crownRadius, 16, 10),
           new THREE.MeshStandardMaterial({color: definition.legend.fill || "#47704b", roughness: 0.9, ...selectionMaterial})
         );
-        crown.scale.y = 0.72;
-        crown.position.set(x, 0.42 + crownRadius * 0.42, z);
+        crown.scale.y = treeHeight*.32/crownRadius;
+        crown.position.set(x,treeHeight*.68,z);
         tagThreeFeature(crown, "structure", structure.id);
         group.add(crown);
       }
@@ -8720,12 +8751,64 @@ function addBed3d(three, state, bed, placements, unit, active, centered) {
       placement.id === state.selectedPlacementId,
       false,
       three,
-      detailProfile.threePlantMode
+      state.walkCamera && Math.hypot(placementParcelPosition(state,placement).x-state.walkCamera.x,placementParcelPosition(state,placement).y-state.walkCamera.y)>600 ? "point" : detailProfile.threePlantMode,
+      plannedSize(placement,state.previewDate).scale
     );
   }
 }
 
-function addPlant3d(group, plant, placement, x, z, unit, selected = false, ghost = false, three = null, renderMode = "model") {
+function fitProceduralPlantHeight(group, plant, unit) {
+  group.updateWorldMatrix(true,true);
+  const inverse=group.matrixWorld.clone().invert(),bounds=new THREE.Box3();
+  group.traverse(object=>{
+    if(!object.isMesh || !object.geometry)return;
+    object.geometry.computeBoundingBox();
+    bounds.union(object.geometry.boundingBox.clone().applyMatrix4(new THREE.Matrix4().multiplyMatrices(inverse,object.matrixWorld)));
+  });
+  if(bounds.isEmpty())return;
+  const size=bounds.getSize(new THREE.Vector3());
+  const height=Math.max(1,Number(plant.height)||18)*unit;
+  const width=Math.max(1,Number(plant.matureDiameter)||Number(plant.spacing)||18)*unit;
+  group.scale.multiply(new THREE.Vector3(width/Math.max(size.x,size.z,.001),height/Math.max(size.y,.001),width/Math.max(size.x,size.z,.001)));
+  group.position.y-=bounds.min.y*group.scale.y;
+  group.userData.heightInches=height/unit;
+}
+
+function openPlantGallery(root,state,getThree,renderAll) {
+  const dialog=document.createElement('dialog');
+  dialog.setAttribute('aria-label','3D plant library');
+  dialog.style.cssText='width:min(680px,92vw);max-height:90svh;overflow:auto;padding:16px;background:#18231b;color:#eef2e8;border:1px solid #70866d';
+  dialog.innerHTML=`<form method="dialog" style="float:right"><button aria-label="Close plant library">Close</button></form><h2>3D plant library</h2><label>Find a plant <input type="search" data-search placeholder="Name or variety"></label><label>Plant <select data-plant style="width:100%"></select></label><div data-preview style="height:300px;max-height:42svh"></div><p data-dimensions></p><label>Illustrative size <input data-size type="range" min="5" max="100" value="100"> <output>100%</output></label><p>6 ft human reference. Mature dimensions use catalog records where available. Smaller sizes are illustrative stages, not a growth forecast.</p><button type="button" data-use>Use in selected bed</button><p data-message></p>`;
+  root.append(dialog);dialog.showModal();
+  const select=dialog.querySelector('[data-plant]'),preview=dialog.querySelector('[data-preview]'),slider=dialog.querySelector('[data-size]');
+  let renderer;
+  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});}catch{preview.textContent='3D preview unavailable in this browser.';}
+  const scene=new THREE.Scene();scene.background=new THREE.Color('#27372c');
+  scene.add(new THREE.HemisphereLight(0xffffff,0x536345,2));const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(5,10,6);scene.add(light);
+  const camera=new THREE.PerspectiveCamera(40,1,.01,2000);let objects=new THREE.Group();scene.add(objects);
+  if(renderer){renderer.setPixelRatio(Math.min(devicePixelRatio,2));preview.append(renderer.domElement);renderer.domElement.style.width='100%';renderer.domElement.style.height='100%';}
+  const draw=()=>{
+    const plant=state.plants.find(p=>p.id===select.value);if(!plant)return;
+    disposeGroup(objects);scene.remove(objects);objects=new THREE.Group();scene.add(objects);
+    const unit=1/12,scale=Number(slider.value)/100;
+    const plantRoot=new THREE.Group();objects.add(plantRoot);
+    addPlant3d(plantRoot,plant,{rotation:0},0,0,unit,false,false,getThree());plantRoot.scale.setScalar(scale);
+    const height=(Number(plant.height)||18)/12,width=(Number(plant.matureDiameter)||Number(plant.spacing)||18)/12;
+    const human=new THREE.Mesh(new THREE.CylinderGeometry(.6,.6,5,12),new THREE.MeshStandardMaterial({color:'#e0bb83'}));human.position.set(width*scale/2+2,2.5,0);objects.add(human);
+    const head=new THREE.Mesh(new THREE.SphereGeometry(.5,12,8),human.material.clone());head.position.set(human.position.x,5.5,0);objects.add(head);
+    const extent=Math.max(6,height*scale,width*scale+4);camera.position.set(extent*.85,extent*.65,extent*1.8);camera.lookAt(0,Math.max(3,height*scale/2),0);
+    dialog.querySelector('[data-dimensions]').textContent=`${plant.name}: mature height ${Number(plant.height)?`${plant.height} in`:'unknown (18 in preview)'}, spread ${Number(plant.matureDiameter)?`${plant.matureDiameter} in`:'estimated from spacing'}. ${Math.round(scale*100)}% displayed. Representative plant form.`;
+    dialog.querySelector('output').value=`${Math.round(scale*100)}%`;
+    if(renderer){const w=preview.clientWidth,h=preview.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.render(scene,camera);}
+  };
+  const filter=()=>{const q=dialog.querySelector('[data-search]').value.toLowerCase(),old=select.value||state.selectedPlantId;select.replaceChildren(...state.plants.filter(p=>p.name.toLowerCase().includes(q)).map(p=>new Option(p.name,p.id)));if([...select.options].some(o=>o.value===old))select.value=old;draw();};
+  dialog.querySelector('[data-search]').addEventListener('input',filter);select.addEventListener('change',draw);slider.addEventListener('input',draw);
+  dialog.querySelector('[data-use]').addEventListener('click',()=>{if(!openPlantingWorkspace(state)){dialog.querySelector('[data-message]').textContent='Select or create a bed first.';return;}state.selectedPlantId=select.value;dialog.close();renderAll();});
+  const resize=new ResizeObserver(draw);resize.observe(preview);
+  dialog.addEventListener('close',()=>{resize.disconnect();disposeGroup(objects);renderer?.dispose();dialog.remove();},{once:true});filter();
+}
+
+function addPlant3d(group, plant, placement, x, z, unit, selected = false, ghost = false, three = null, renderMode = "model", sizeScale = 1) {
   const visual = plant.visual || normalizePlant(plant).visual;
   const stemHeight = stemHeightForPlant(plant, unit);
   const plantGroup = new THREE.Group();
@@ -8759,6 +8842,7 @@ function addPlant3d(group, plant, placement, x, z, unit, selected = false, ghost
     return;
   }
 
+  if(!ghost)plantGroup.scale.setScalar(sizeScale);
   const model = ghost ? null : gardenModelForPlant(three, plant);
   if (model) {
     plantGroup.rotation.y = Number(placement.rotation) || 0;
@@ -8823,6 +8907,7 @@ function addPlant3d(group, plant, placement, x, z, unit, selected = false, ghost
     plantGroup.add(flower);
   }
 
+  fitProceduralPlantHeight(plantGroup,plant,unit);
   if (selected || ghost) {
     const highlight = circleLineLoop((plant.spacing || plant.matureDiameter) * unit / 2, selected ? "#f1c65a" : "#7fae8a");
     highlight.position.y = selected ? 0.13 : 0.095;
@@ -8873,12 +8958,12 @@ function addGardenModel3d(group, model, plant, unit) {
   const instance = cloneGardenModel(model.template);
   const sourceBounds = new THREE.Box3().setFromObject(instance);
   const sourceSize = sourceBounds.getSize(new THREE.Vector3());
-  const targetHeight = clamp((plant.height || 18) * unit * 0.48, 0.14, 3.4);
-  const targetWidth = clamp((plant.matureDiameter || plant.spacing || 18) * unit * 0.72, 0.12, 3.8);
+  const targetHeight = (Number(plant.height)>0?Number(plant.height):18) * unit;
+  const targetWidth = (Number(plant.matureDiameter)>0?Number(plant.matureDiameter):Number(plant.spacing)>0?Number(plant.spacing):18) * unit;
   const sourceHeight = Math.max(0.0001, sourceSize.y);
   const sourceWidth = Math.max(0.0001, sourceSize.x, sourceSize.z);
-  const scale = Math.min(targetHeight / sourceHeight, targetWidth / sourceWidth);
-  instance.scale.setScalar(scale);
+  instance.scale.multiply(new THREE.Vector3(targetWidth/sourceWidth,targetHeight/sourceHeight,targetWidth/sourceWidth));
+  group.userData.heightInches=targetHeight/unit;group.userData.widthInches=targetWidth/unit;
 
   const scaledBounds = new THREE.Box3().setFromObject(instance);
   const center = scaledBounds.getCenter(new THREE.Vector3());

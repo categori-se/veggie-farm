@@ -4,7 +4,7 @@ import fs from 'node:fs';
 const source=fs.readFileSync(new URL('../src/components/gardenPlanner.js',import.meta.url),'utf8');
 const sessions=new WeakMap();
 const body=source.slice(source.indexOf('function openPlantingWorkspace('),source.indexOf('\nfunction selectGardenFeature('));
-const open=new Function('explicitEditSessions','normalizeBedCamera','syncSelectedPlacementToActiveBed',body+';return openPlantingWorkspace;')(sessions,()=>({viewport:{x:0,y:0,width:48,height:96}}),()=>{});
+const open=new Function('walkingReturns','planningBearing','explicitEditSessions','normalizeBedCamera','syncSelectedPlacementToActiveBed',body+';return openPlantingWorkspace;')(new WeakMap(),()=>0,sessions,()=>({viewport:{x:0,y:0,width:48,height:96}}),()=>{});
 test('opening a bed preserves records and saved camera, revokes editing, and opens only the library',()=>{
  const state={activeBedId:'b',beds:[{id:'b',width:48,height:96}],placements:[{bedId:'b',plantId:'tomato',x:12,y:12}],bedCameras:{b:{bearing:30}},viewPresentation:'split',viewMode:'garden',activeTool:'beds',walkCamera:{x:20,y:30},inspectorOpen:true};
  const records=JSON.stringify([state.beds,state.placements]),camera=state.bedCameras.b;sessions.set(state,{layer:'beds'});

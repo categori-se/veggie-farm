@@ -9,7 +9,7 @@ export function plantingSchedule(placements, year) {
   const end = Date.parse(`${String(year + 1).padStart(4, '0')}-01-01T00:00:00Z`);
   const groups = new Map();
   for (const placement of placements || []) {
-    const key = JSON.stringify([placement.bedId ?? null, placement.plantId ?? null, placement.planted || '', placement.plannedUntil || '']);
+    const key = JSON.stringify([placement.bedId ?? null, placement.plantId ?? null, placement.planted || '', placement.plannedUntil || '', placement.sizeScenario ?? null]);
     if (groups.has(key)) { groups.get(key).count++; continue; }
     const bounds = plannedOccupancy(placement, first);
     const row = {bedId: placement.bedId, plantId: placement.plantId, count: 1,
