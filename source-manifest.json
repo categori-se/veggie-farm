@@ -399,8 +399,8 @@
     },
     {
       "path": "docs/architecture/seasonal-sunlight.md",
-      "bytes": 3794,
-      "sha256": "1a047cd434f91bf9aaa27b4a081924d9ddbd786cb8fa5601b9ef962a621657f5",
+      "bytes": 5015,
+      "sha256": "c59c2822d5c978a4596419745b45042fc6278bbfc71c75cebbce5022a69a5a2a",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1161,8 +1161,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 552535,
-      "sha256": "a250425a9c351a940095160a9374d424427e1d6d0d37ce07b687823938a350d0",
+      "bytes": 552546,
+      "sha256": "3d98753e68dec6e085880e3c62b60832efc629c2f040cb69bbe3ff4efaac1bfb",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1227,8 +1227,8 @@
     },
     {
       "path": "src/components/planner-sun-preview.js",
-      "bytes": 10733,
-      "sha256": "7a38fc8ed3053f9289a9ad96497d768e44f0f5296fba9561ceb470dd0bb3a97f",
+      "bytes": 14228,
+      "sha256": "8ed5539c15e502442e4f956d8c7cf6a1819edef627ae7739193e6a31798c0cde",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3033,8 +3033,8 @@
     },
     {
       "path": "src/lib/spatial/solarExposure.js",
-      "bytes": 4282,
-      "sha256": "1bef130408d24d8540a8341da968435e30c48d9a1c4aad3c85d2752cf3d93375",
+      "bytes": 4845,
+      "sha256": "6454c2a728071cb53629ef1e53d32b4695051cd477280367095dea7f21aaa943",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3645,8 +3645,8 @@
     },
     {
       "path": "tests/regionalSources.test.mjs",
-      "bytes": 2141,
-      "sha256": "6e3448ae76174dc6d9cf2418e7d3d1969be7fcd6008f6bf1f12d00dacd65f52a",
+      "bytes": 2003,
+      "sha256": "1fd5452f7ef9f6a85e71658b611ed0d0baeb20313f3d18f8484b7551de72f3d8",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3717,8 +3717,8 @@
     },
     {
       "path": "tests/solarExposure.test.mjs",
-      "bytes": 3608,
-      "sha256": "3a4b5fc1e2a8bac1d48436dd4ffb7bf99ecd92d52d7675409e35052cb47c797a",
+      "bytes": 3968,
+      "sha256": "5a9782413b8107ebf47f80a0cca984670b9dea5e1116a4ba1b0825753d01c19e",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

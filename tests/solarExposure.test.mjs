@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {estimateBedDaylight,bedLightSamplePoints} from '../src/lib/spatial/solarExposure.js';
+import {estimateBedDaylight,bedLightSamplePoints,seasonalLightDates} from '../src/lib/spatial/solarExposure.js';
 const bed={id:'bed',name:'Kitchen',x:0,y:0,width:48,height:96,rotation:0};
 const state={beds:[bed],vegetation:[],structures:[]};
 test('seasonal unblocked daylight is longer in summer; unknown obstructions are never counted as shade',()=>{
@@ -31,3 +31,5 @@ test('site shade transforms into the rotated bed frame and clips at its edges',(
  for(const ring of polygons)for(const [x,y]of ring){assert.ok(x>=-24-1e-9&&x<=24+1e-9);assert.ok(y>=-48-1e-9&&y<=48+1e-9);}
  assert.deepEqual(bedShadowPolygons(preview,{...bed,x:1000,y:1000}),[]);
 });
+
+test('monthly comparison dates preserve the day and clamp leap February',()=>{const days=seasonalLightDates('2028-01-31');assert.equal(days.length,12);assert.equal(days[1],'2028-02-29');assert.equal(days[3],'2028-04-30');assert.equal(seasonalLightDates('2027-01-31')[1],'2027-02-28');assert.throws(()=>seasonalLightDates('2027-02-30'));});

@@ -22,3 +22,12 @@ The owner supplied notebook archives for inspection. They remain private referen
 - [Deckgl, Mapbox and 3D tiles — Tom van Tilburg](https://observablehq.com/@tomvantilburg/deckgl-mapbox-and-3d-tiles): terrain and model-coordinate integration considerations. No Mapbox/DeckGL dependency or paid service was added.
 
 The next accuracy improvements are explicit deciduous/evergreen canopy observations, crown-base heights and terrain-aware horizons. A seasonal comparison must not silently convert generic display trees into field-verified shade evidence.
+
+
+## Visible controls and monthly bed comparison
+
+Sun & shade is a dedicated strip above the planning canvases, outside the collapsed planting-date preview. Enable it to expose an exact date, month slider, Eastern-time slider, optional illustrative heights and light comparison actions. The same direction and obstruction-shadow estimate drives Map, 2D and 3D.
+
+Compare months for selected bed samples the selected calendar day across all twelve months (clamped for February and other short months). Each row gives estimated mean unblocked and shaded hours across the bed's sample points; View opens that date in the scene so the time slider can explore it. These are representative-day calculations, not monthly averages. Computation yields between months and cancels stale work when the garden, selected bed or model inputs change, or the dialog closes. Results never change saved heights, plantings or measured sun hours.
+
+Missing heights remain omitted unless illustrative heights are explicitly enabled. Flat terrain, opaque vegetation, excluded low-angle sunlight and no inferred seasonal leaf loss remain model limitations. This release does not use the newly discovered LiDAR data or establish measured sunlight.

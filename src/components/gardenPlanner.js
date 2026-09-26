@@ -929,7 +929,7 @@ export function gardenPlanner(options = {}) {
             </details>
           </section>
 
-          <details class="studio-preview-options"><summary>Date &amp; sunlight previews</summary><div data-role="time-preview-host"></div></details>
+          <details class="studio-preview-options"><summary>Planting date preview</summary><div data-role="time-preview-host"></div></details>
           <nav class="planning-scope" aria-label="Planning scope" style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 12px">
             <button type="button" data-workspace="explore">Explore garden</button>
             <button type="button" data-workspace="walk">Walk through</button>
@@ -1116,7 +1116,7 @@ export function gardenPlanner(options = {}) {
   const timePreview=plannerTimePreview({getBedName:id=>state.beds.find(b=>b.id===id)?.name || (id ? "Unknown bed" : "Outside a named bed"),getPlantName:id=>plantById(state,id)?.name || "Unidentified plant",getPlacements:()=>state.placements,getDate:()=>state.previewDate,onChange:date=>{state.previewDate=date;if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
   root.querySelector('[data-role="time-preview-host"]').append(timePreview.root);
   const sunPreview=plannerSunPreview({getState:()=>state,onChange:()=>{if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
-  root.querySelector('[data-role="time-preview-host"]').append(sunPreview.root);
+  root.querySelector('.studio-preview-options').insertAdjacentElement('afterend',sunPreview.root);
 
   let soilBoundaries=[],soilGardenId=state.activeParcelId;
   const soilPanel=mappedSoil({getLocation:()=>gardenSpatialReference(state.property).origin.coordinates,onBoundary:rows=>{soilBoundaries=rows;queueMicrotask(()=>renderSoilOverlay());},invalidation:options.invalidation});
