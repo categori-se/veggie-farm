@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {matchesPlant,missingFilteredTraits,sortPlants} from '../src/lib/plants/explorer.js';
+import {matchesPlant,missingFilteredTraits,sortPlants,groupPlantListings} from '../src/lib/plants/explorer.js';
 import {planPlanting,loadRecords} from '../src/lib/garden/gardenRecords.js';
 const known={id:'a',name:'Carrot Nantes',common:'Carrot',category:'vegetable',light:'full sun',maturityMin:40,maturityMax:70,spacingMax:3,directSow:true,transplant:false,frost:true};
 const unknown={id:'b',name:'Carrot Unrecorded',category:'vegetable',light:null,maturityMax:null,spacingMax:null,directSow:null,transplant:null,frost:null};
@@ -27,4 +27,12 @@ test('garden-photo ordering retains staged images and name sorting remains avail
  assert.deepEqual(sortPlants(rows,'garden').map(p=>p.id),['garden','harvest','white']);
  assert.deepEqual(sortPlants(rows,'name').map(p=>p.id),['white','harvest','garden']);
  assert.equal(rows.length,3);
+});
+
+test('combination listings consolidate planning identity while retaining source records',()=>{
+ const make=(n,extra={})=>({id:`v${n}`,name:`Combination Peach 'Example' (${n} Varieties)`,category:'fruit',scientific:'Prunus persica',source:`https://example.org/peach-${n}`,hardiness:`variant ${n}`,...extra});
+ const rows=[make(4),make(5)],before=JSON.stringify(rows),group=groupPlantListings(rows)[0];
+ assert.equal(groupPlantListings(rows).length,1);assert.equal(group.name,"Combination Peach 'Example'");assert.equal(group.common,group.name);assert.deepEqual(group.sourceListings.map(p=>p.id),['v4','v5']);assert.equal(group.hardiness,null);assert.equal(JSON.stringify(rows),before);
+ for(const extra of [{scientific:'Prunus domestica'},{source:'https://another.example/peach'},{name:"Combination Peach 'Different' (5 Varieties)"}])assert.equal(groupPlantListings([rows[0],make(5,extra)]).length,2);
+ assert.equal(groupPlantListings([make(4,{name:'Apple Red'}),make(5,{name:'Apple Red'})]).length,2);
 });

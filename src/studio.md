@@ -85,6 +85,7 @@ display(studioHome);
   </div>
   <details class="studio-study-details" id="public-garden-examples">
     <summary>Public examples &amp; sources</summary>
+    <p><a href="https://veggie.farm/content/reference/public-garden-research">Planting research and capture workflow ↗</a></p>
     <div>
       <p>Self-hosting? Images, model files and deployment-specific data on this site are separately managed hosting inputs, not included with the public source. Supply and manage your own information and follow each asset’s license. The community build includes its own documented examples. <a href="https://github.com/categori-se/veggie-farm/blob/main/examples/aws/DEPLOYMENT.md">Deployment guide</a>.</p>
       <p><a href="#garden-examples">Choose a demo garden and open its plan ↓</a></p>
