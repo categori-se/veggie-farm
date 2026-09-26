@@ -1,3 +1,4 @@
+import {appendPlantTypeGallery} from './plant-type-gallery.js';
 import {plantReports} from './plant-report-files.js';
 import {catalogImages} from './catalog-images.js';
 import {gardenActions} from './garden-actions.js';
@@ -11,11 +12,12 @@ export async function plantReport(id){
  const p=await file.json();document.title=`${p.name} · veggie.farm`;
  root.append(el('h1',p.name));if(p.scientific)root.append(el('p',p.scientific,'library-botanical'));
  const header=el('div',null,'plant-report-header'),gallery=el('section',null,'plant-report-gallery');gallery.setAttribute('aria-label','Plant photographs');
- const imageIds=(p.imageIds||[p.id]).filter(key=>catalogImages.has(key));
+ const imageIds=[...new Set(p.imageIds||[p.id])].filter(key=>catalogImages.has(key)).slice(0,5);
  if(imageIds.length){
   const image=el('img');image.className='plant-report-photo';image.src=catalogImages.get(imageIds[0]).href;image.alt=`${p.name}, catalog photograph`;image.width=960;image.height=960;gallery.append(image);
   if(imageIds.length>1){const choices=el('div',null,'plant-report-thumbnails');imageIds.forEach((key,i)=>{const button=el('button');button.type='button';button.setAttribute('aria-label',`Show photograph ${i+1} of ${p.name}`);button.setAttribute('aria-pressed',String(i===0));const thumb=el('img');thumb.src=catalogImages.get(key).href;thumb.alt='';thumb.loading='lazy';thumb.width=100;thumb.height=100;button.append(thumb);button.onclick=()=>{image.src=catalogImages.get(key).href;image.alt=`${p.name}, catalog photograph ${i+1}`;for(const b of choices.children)b.setAttribute('aria-pressed',String(b===button));};choices.append(button);});gallery.append(choices);}
  }
+ appendPlantTypeGallery(gallery,p,5-imageIds.length);
  const summary=el('section');if(p.description)summary.append(el('p',p.description));
  const facts=[['Life cycle',p.lifeCycle],['Hardiness',p.hardiness],['Mature size',p.matureSize],['Sun',p.sunHours||p.light],['Spacing',p.spacing],['Germination',p.germination],['Ideal temperature',p.temperature],['Seed depth',p.depth],['Frost hardy',p.frost===true?'Yes':p.frost===false?'No':null],['Maturity',p.maturity],['Pollination',p.pollination],['Ripening',p.ripening],['Bloom',p.bloom],['Years to bear',p.yearsToBear]].filter(([,v])=>v!=null&&v!=='');
  const dl=el('dl',null,'crop-quick-facts');for(const [label,value] of facts)dl.append(el('dt',label),el('dd',value));summary.append(dl);
