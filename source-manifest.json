@@ -350,6 +350,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/studio-navigation.md",
+      "bytes": 2504,
+      "sha256": "bacaf04955896a471e5b7ddb031680df5e5ab1359871080a0edb6064ce9f97d6",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/evidence/README.md",
       "bytes": 5337,
       "sha256": "be8ab76b0d35008c279ddd7a2c77cd08950838e93eb622ad0c33879cdf3c486f",
@@ -788,6 +794,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "scripts/check-studio-navigation.mjs",
+      "bytes": 3960,
+      "sha256": "bc85e7b2df52bdf8800401308d9e87715203dcc415558c7098e5f551dc57d03a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "scripts/check-tree-inspector.mjs",
       "bytes": 4879,
       "sha256": "53d73488e75c8c53ab9681d09479ac1bf42ab22cdac671fbb502fe67d2904faf",
@@ -1041,8 +1053,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 488616,
-      "sha256": "3f53a99b77eca5e9457e7d5e9c742f98380274692d5a4e2d343538dc20c04fdc",
+      "bytes": 491448,
+      "sha256": "6d670897fc5f4490d4b4e9f2cd3f8a3c02d7c18452f214df226df5d72a4abf17",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2877,8 +2889,8 @@
     },
     {
       "path": "src/style.css",
-      "bytes": 3754,
-      "sha256": "620f92e1210ac07803204dff1e8fe90ab2eb7ec8637381d9459fc77644f351fe",
+      "bytes": 3791,
+      "sha256": "7d04aa79d349e4aa335f013ef12212779da6626eb414638030a18895c4d65302",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2904,6 +2916,12 @@
       "bytes": 1597,
       "sha256": "c048f9911f32261e0783bf8f8f93b906490857ba5c25d8b2e4ffd4d3a47eb56b",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/styles/density.css",
+      "bytes": 4105,
+      "sha256": "7ce455ae3c3384e02c9a9493eb6615edbbe19e2283d93a8b611524f1172148cf",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/styles/diagrams.css",

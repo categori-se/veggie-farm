@@ -13,6 +13,7 @@
 @import url("./styles/tools.css");
 @import url("./styles/diagrams.css");
 @import url("./styles/application.css");
+@import url("./styles/density.css");
 
 /* Shared garden actions keep a task beside the guide that prompted it. */
 .garden-actions {margin:1rem 0; padding:.8rem 0; border-top:1px solid var(--line)}

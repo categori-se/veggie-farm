@@ -660,6 +660,7 @@ export function gardenPlanner(options = {}) {
   for (const event of ['pointerdown','keydown','input']) root.addEventListener(event,() => {interacted = true;},{capture:true});
   const viewNavigationMarkup = `
     <div class="view-navigation" aria-label="Shared view navigation" title="Drag to pan · wheel to zoom · Ctrl-drag or right-drag to rotate and change pitch">
+      <button data-view-nav="pan" type="button" aria-label="Pan mode — move the view without editing" title="Pan mode: drag anywhere without moving garden elements">Pan</button>
       <button data-view-nav="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
       <button data-view-nav="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
       <button data-view-nav="reset-bearing" type="button" aria-label="Reset map bearing to north" title="Reset bearing to north"><span data-role="view-compass" aria-hidden="true">↑</span></button>
@@ -668,7 +669,7 @@ export function gardenPlanner(options = {}) {
       <button data-view-nav="fit-selection" type="button" aria-label="Fit selected bed or plant" title="Fit selection">⌖</button>
       <small data-role="view-navigation-status"></small>
     </div>
-    <div class="view-gesture-hint">Drag pan · wheel zoom · Ctrl/right-drag rotate + pitch</div>
+    <div class="view-gesture-hint">Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate</div>
   `;
   root.innerHTML = `
     <section class="planner-quick-start" aria-label="Start a garden plan">
@@ -685,7 +686,7 @@ export function gardenPlanner(options = {}) {
 
       <div class="garden-layout" data-role="garden-layout">
         <nav class="garden-tool-rail" aria-label="Planner tools">
-          <button data-tool="select" type="button" aria-label="Close tools and return to the canvas" title="Canvas"><span aria-hidden="true">↖</span><small>Canvas</small></button>
+          <button data-tool="select" type="button" aria-label="Pan mode — close editing tools" title="Pan without editing"><span aria-hidden="true">↔</span><small>Pan</small></button>
           <button data-tool="parcel" type="button" aria-label="Open garden and parcel tools" title="Garden and parcel"><span aria-hidden="true">◇</span><small>Garden</small></button>
           <button data-tool="beds" type="button" aria-label="Open garden bed tools" title="Beds"><span aria-hidden="true">▦</span><small>Beds</small></button>
           <button data-tool="plants" type="button" aria-label="Open plant library" title="Plants"><span aria-hidden="true">♧</span><small>Plants</small></button>
@@ -3427,6 +3428,15 @@ function setupActions(refs, state, renderAll) {
   for (const button of refs.viewNavigationButtons) {
     button.addEventListener("click", () => {
       const action = button.dataset.viewNav;
+      if (action === "pan") {
+        state.activeTool = "select";
+        state.toolDrawerOpen = false;
+        state.inspectorOpen = false;
+        state.drawMode = null;
+        state.draftBedPoints = [];
+        renderAll();
+        return;
+      }
       if (state.viewMode === "bed" && !button.closest(".parcel-map-view")) {
         if (action === "zoom-in") zoomPlanningViewport(state,0.78);
         if (action === "zoom-out") zoomPlanningViewport(state,1.28);
@@ -3746,6 +3756,13 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
   const svg = d3.select(refs.planSvg);
   let navigationState = null;
   let suppressNextPlanClick = false;
+  refs.planSvg.addEventListener("click", event => {
+    if (!suppressNextPlanClick) return;
+    suppressNextPlanClick = false;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }, true);
+
 
   svg.on("wheel", (event) => {
     refs.planSvg.focus({preventScroll: true});
@@ -3756,10 +3773,12 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
   }, {passive: false});
 
   svg.on("pointerdown", (event) => {
+    if (navigationState) return;
+    suppressNextPlanClick = false;
     const rotating = event.ctrlKey || event.button === 2;
     if (!rotating && event.button !== 0 && event.button !== 1) return;
     const targetFeatureType = svgFeatureTypeFromTarget(event.target);
-    if (!rotating && targetFeatureType && plannerCanEditFeature(state, targetFeatureType)) return;
+    if (!rotating && event.button !== 1 && targetFeatureType && plannerCanEditFeature(state, targetFeatureType)) return;
     refs.planSvg.focus({preventScroll: true});
     navigationState = {
       pointerId: event.pointerId,
@@ -3799,7 +3818,7 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
 
   const finishNavigation = (event) => {
     if (!navigationState || event.pointerId !== navigationState.pointerId) return;
-    refs.planSvg.releasePointerCapture?.(event.pointerId);
+    if (refs.planSvg.hasPointerCapture?.(event.pointerId)) refs.planSvg.releasePointerCapture(event.pointerId);
     const didMove = navigationState.moved;
     navigationState = null;
     if (didMove) {
@@ -3809,6 +3828,7 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
   };
   svg.on("pointerup", finishNavigation);
   svg.on("pointercancel", finishNavigation);
+  svg.on("lostpointercapture", finishNavigation);
   svg.on("contextmenu", (event) => event.preventDefault());
 
   // Capture placement before feature-selection handlers; an existing crown or
@@ -3863,6 +3883,13 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
   const svg = d3.select(refs.parcelSvg);
   let panState = null;
   let suppressNextParcelClick = false;
+  refs.parcelSvg.addEventListener("click", event => {
+    if (!suppressNextParcelClick) return;
+    suppressNextParcelClick = false;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }, true);
+
 
   svg.on("wheel", (event) => {
     refs.parcelSvg.focus({preventScroll: true});
@@ -3873,10 +3900,12 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
   }, {passive: false});
 
   svg.on("pointerdown", (event) => {
+    if (panState) return;
+    suppressNextParcelClick = false;
     const rotating = event.ctrlKey || event.button === 2;
     if (!rotating && event.button !== 0 && event.button !== 1) return;
     const targetFeatureType = svgFeatureTypeFromTarget(event.target);
-    if (!rotating && targetFeatureType && plannerCanEditFeature(state, targetFeatureType)) return;
+    if (!rotating && event.button !== 1 && targetFeatureType && plannerCanEditFeature(state, targetFeatureType)) return;
     refs.parcelSvg.focus({preventScroll: true});
     const viewport = parcelViewportBounds(state);
     panState = {
@@ -3918,7 +3947,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
 
   const finishPan = (event) => {
     if (!panState || event.pointerId !== panState.pointerId) return;
-    refs.parcelSvg.releasePointerCapture?.(event.pointerId);
+    if (refs.parcelSvg.hasPointerCapture?.(event.pointerId)) refs.parcelSvg.releasePointerCapture(event.pointerId);
     const didMove = panState.moved;
     panState = null;
     if (didMove) {
@@ -3929,6 +3958,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
 
   svg.on("pointerup", finishPan);
   svg.on("pointercancel", finishPan);
+  svg.on("lostpointercapture", finishPan);
   svg.on("contextmenu", (event) => event.preventDefault());
 
   svg.on("click", (event) => {
@@ -3991,6 +4021,9 @@ function renderControls(refs, state) {
   refs.root.dataset.viewPresentation = state.viewPresentation;
   refs.root.dataset.viewMode = state.viewMode;
   refs.root.dataset.activeTool = state.activeTool;
+  for (const button of refs.viewNavigationButtons) {
+    if (button.dataset.viewNav === "pan") button.setAttribute("aria-pressed", String(state.activeTool === "select"));
+  }
   const activeGarden = activeParcelWorkspace(state);
   const activeReference = gardenReferenceById(state.activeParcelId);
   refs.gardenSubtitle.textContent = `${activeGarden?.name || state.property?.name || "Garden"} · ${isPublicDemo(activeGarden) ? "public demo · edits stay in this browser" : "my garden · save an account copy to keep it online"}`;
@@ -7613,7 +7646,7 @@ function setupThreeFeatureInteractions(three, options = {}) {
   let drag = null;
 
   canvas.addEventListener("pointerdown", (event) => {
-    if (event.button !== 0 || event.ctrlKey) return;
+    if (event.button !== 0 || event.ctrlKey || three.state.activeTool === "select") return;
     const hit = threeRaycastFeature(three, event);
     if (!hit) return;
     const feature = threeFeatureEntity(three.state, hit.ref);
@@ -12552,6 +12585,28 @@ function injectStyles() {
         overflow-x: auto;
       }
     }
+
+    @media (max-width: 920px) {
+      .garden-tool-rail {grid-template-columns: repeat(7, minmax(0, 1fr));}
+      .garden-tool-rail [data-tool="select"] {display: grid;}
+      .garden-sidebar, .garden-inspector {max-height: min(48svh, 480px);}
+      .drawer-heading {min-height: 44px; padding: 4px 8px;}
+      .drawer-heading button {min-width: 44px; min-height: 44px;}
+      .view-navigation {
+        position: relative; inset: auto; flex: 0 0 auto;
+        display: flex; flex-wrap: wrap; width: auto; margin: 0;
+        border-radius: 0; box-shadow: none; z-index: 7;
+      }
+      .view-navigation button {width: 44px; min-width: 44px; height: 44px; min-height: 44px; border: 0; font-size: .85rem;}
+      .view-navigation small {position: static; min-width: 0; align-self: center; border: 0; font-size: .6rem;}
+      .view-gesture-hint {display: none;}
+      .view-heading {flex-wrap: wrap; gap: 4px; height: auto; min-height: 32px;}
+      .view-heading > span {min-width: 0; overflow-wrap: anywhere;}
+      .view-heading > span:nth-child(2) {display: none;}
+      .map-settings-panel {max-width: calc(100vw - 32px); max-height: 45svh; overflow: auto;}
+      .map-legend summary {min-height: 44px; box-sizing: border-box; display: flex; align-items: center;}
+    }
+    .view-navigation button[aria-pressed="true"] {background: var(--panel-selected); color: var(--green);}
 
     @media (max-width: 560px) {
       .garden-subtitle,
