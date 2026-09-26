@@ -2991,8 +2991,8 @@
     },
     {
       "path": "src/styles/application.css",
-      "bytes": 29998,
-      "sha256": "12861bf1bb3c25935aa36c8a005f9d3326c26aa7be1b43c64c666a630d1f7abf",
+      "bytes": 30573,
+      "sha256": "f84841f343b8a281277c736fa4691e677b6dc1a8161321dac387972fb2dee403",
       "basis": "community source policy; rights status in release review"
     },
     {
