@@ -1185,8 +1185,8 @@
     },
     {
       "path": "src/components/notebook-garden-links.js",
-      "bytes": 5042,
-      "sha256": "dab02fe96739c7ed4454ad1ae0d75eddc0af6f2cdc2d6f560a2a5c20613aa1b9",
+      "bytes": 5079,
+      "sha256": "5ecbe5daf3ebdaeb547d9493e1d21b719bf051d07873b3ff9f4ec5c3728aa3e2",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
