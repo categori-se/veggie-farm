@@ -7958,7 +7958,10 @@ function syncThreeScene(three, state) {
 
   const unit = threeViewUnit(state);
   const bed = activeBed(state);
-  const viewBounds = state.viewMode === "garden" ? parcelViewportBounds(state) : planViewBounds(state);
+  // Walking needs nearby objects even after leaving the original aerial frame.
+  const viewBounds = state.walkCamera && state.viewMode === "garden"
+    ? {x:state.walkCamera.x-1440,y:state.walkCamera.y-1440,width:2880,height:2880}
+    : state.viewMode === "garden" ? parcelViewportBounds(state) : planViewBounds(state);
   three.detailProfile = gardenViewProfileForElement(
     viewBounds,
     three.renderer.domElement,

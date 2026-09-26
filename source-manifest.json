@@ -285,8 +285,8 @@
     },
     {
       "path": "docs/architecture/3d-model-sources.md",
-      "bytes": 4522,
-      "sha256": "c53ab04525970f394583e2275449a5ff0e87d6a6ff58e6d3c2bb8fbeebfd3070",
+      "bytes": 4585,
+      "sha256": "859107dd1e33a335d2773fad9eea1fef45721ba01848ea086a52fd78c7446664",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1065,8 +1065,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 506965,
-      "sha256": "1b19c7eb0b2e391ea706f9b299ff61b22caa15a95e6972aa5e20eaf91fa4e7ea",
+      "bytes": 507182,
+      "sha256": "79709535555c8545d752ecef947c4139101fc5fde3b10e7842f4b3cb8c1d0eab",
       "basis": "community source policy; rights status in release review"
     },
     {
