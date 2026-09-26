@@ -21,7 +21,7 @@ export function plannerSunPreview({getState,onChange}){
  .planner-sun-preview dialog form{display:flex;justify-content:flex-end;margin:0}
  .planner-sun-preview dialog p{font-size:.82rem;line-height:1.4;margin:.7rem 0}
  .planner-sun-preview dialog th{position:sticky;top:0;background:var(--theme-background,#f6f7f3)}
- @media(max-width:600px){.planner-sun-preview [data-sun-controls]>label{width:100%}.planner-sun-preview input[type=range]{max-width:190px}.planner-sun-preview [data-sun-controls]{gap:.3rem}.planner-sun-preview [data-season-label]{font-size:.75rem}}
+ @media(max-width:600px){.studio-preview-options[open] [data-role="time-preview-host"]{max-height:clamp(180px,28svh,280px);overflow-y:auto;overscroll-behavior:contain}.planner-sun-preview [data-sun-controls]>label{width:100%}.planner-sun-preview input[type=range]{max-width:190px}.planner-sun-preview [data-sun-controls]{gap:.3rem}.planner-sun-preview [data-season-label]{font-size:.75rem}}
  `;root.append(style);
  let estimateKey=null;
  const signature=()=>{const state=getState();return JSON.stringify([date.value,assumed.checked,state.property,state.beds,state.vegetation,state.structures]);};

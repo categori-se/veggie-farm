@@ -1149,8 +1149,8 @@
     },
     {
       "path": "src/components/planner-sun-preview.js",
-      "bytes": 10591,
-      "sha256": "0c82972c0461d1ac6c4287eddf8d5eeb41f3b0bffc2b24b6615284d2598ed8f4",
+      "bytes": 10733,
+      "sha256": "7a38fc8ed3053f9289a9ad96497d768e44f0f5296fba9561ceb470dd0bb3a97f",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
