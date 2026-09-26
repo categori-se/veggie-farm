@@ -639,7 +639,7 @@ export function gardenPlanner(options = {}) {
   let hadSavedState = false;
   try { hadSavedState = Boolean((options.storage || localStorage).getItem(STORAGE_KEY)); } catch { /* Fresh, nonpersistent canvas. */ }
   const state = loadState(options.storage);
-  if (!hadSavedState && !options.initialState) {
+  if (!options.initialState) {
     state.activeTool = "select";
     state.inspectorOpen = false;
     state.toolDrawerOpen = false;
@@ -12623,7 +12623,12 @@ function injectStyles() {
     .garden-planner-app .planning-scope button {min-height: 36px; padding: 4px 8px;}
     .garden-planner-app .planner-storage-notice {font-size: .8rem;}
     @media (max-width: 920px) {
-      .garden-planner-app .planning-scope button {min-height: 44px;}
+      .garden-planner-app > .planner-quick-start:first-child > div {flex: 1; min-width: 0;}
+      .garden-planner-app > .planner-quick-start:first-child strong {font-size: .9rem;}
+      .garden-planner-app > .planner-quick-start:first-child p {display: none;}
+      .garden-planner-app .garden-topbar {display: none;}
+      .garden-planner-app .planning-scope {display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr));}
+      .garden-planner-app .planning-scope button {min-width: 0; min-height: 44px; white-space: normal; font-size: .75rem;}
       .studio-preview-options > summary {min-height: 44px; box-sizing: border-box; display: flex; align-items: center;}
       .studio-preview-options > summary::before {content: "▸"; margin-right: 6px;}
       .studio-preview-options[open] > summary::before {content: "▾";}

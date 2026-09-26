@@ -1053,8 +1053,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 492659,
-      "sha256": "635ced703872a52119d830b1fcf7a87ddb9c3d9c170b62a01a40561dd55ac36b",
+      "bytes": 493133,
+      "sha256": "7476c66ce787226cd119aac4de32922126b8d016877bb8d4f6e9a3f75636feb5",
       "basis": "community source policy; rights status in release review"
     },
     {
