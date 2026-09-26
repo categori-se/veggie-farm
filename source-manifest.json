@@ -320,6 +320,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/demo-garden-lidar.md",
+      "bytes": 2710,
+      "sha256": "74665b96130f14f6339d806389ce2d466312c6b4bc600c63876dc33c99f5802e",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/demo-sandbox.md",
       "bytes": 2056,
       "sha256": "a42353d75be357a33665676a798d92bc00ff70f23a8d66e5165c2cb7578d204c",
@@ -384,6 +390,12 @@
       "bytes": 2946,
       "sha256": "92fdbfd9715e2ae1a216d8c63585a19c65884dfed69d86168341b1f1780edfda",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
+    },
+    {
+      "path": "docs/architecture/regional-garden-data.md",
+      "bytes": 3027,
+      "sha256": "15690e190ecf4b0f629d269fed840d10fc0410cf13caf64924f98b2c7bb19f07",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "docs/architecture/seasonal-sunlight.md",
@@ -1173,8 +1185,8 @@
     },
     {
       "path": "src/components/mapped-soil.js",
-      "bytes": 4523,
-      "sha256": "754cee3ce25106827fb48c18f57311fd9b5bee063044c50fa57cc14e56c28d68",
+      "bytes": 5068,
+      "sha256": "63ea69adc191ab5e1d910a702af0e694d17d0fa255a752a7b96bfa704f77f0ec",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1284,6 +1296,12 @@
       "bytes": 11569,
       "sha256": "2eb0e85bda358409fd66e0497b1984026e01c4293838b2228b6df416c7fe39fa",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/regional-garden-data.js",
+      "bytes": 3730,
+      "sha256": "4c9f2cd5baba414ea3b9b8458aeb06f82a888a5f27a79b1ba28a57da234bd6ad",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/related-pages.js",
@@ -2661,8 +2679,8 @@
     },
     {
       "path": "src/lib/environment/mappedSoil.js",
-      "bytes": 3462,
-      "sha256": "a859b000e9e357bf8991cfe8bbf1e42bacd052ab7f3e4818834c7cfd1abebe82",
+      "bytes": 3645,
+      "sha256": "0c050c221cd716a2288111e46df8b08b428b1bb0aa3184052a7ee54a600b322b",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3002,6 +3020,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/spatial/regionalSources.js",
+      "bytes": 4888,
+      "sha256": "6434713733344b94015615cd7a53da8c62dbb8485bf84d8f6e2142d60069373a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/spatial/siteGeometryEditor.js",
       "bytes": 12189,
       "sha256": "e919395ae14ef0f0affa3307c92848c3c21bbb4d0c811b80f7292fdeff138d15",
@@ -3069,8 +3093,8 @@
     },
     {
       "path": "src/studio.md",
-      "bytes": 12871,
-      "sha256": "cb6b985ee8335266b8bc137eac661c6c1476c716252830b80759eae2f35156bb",
+      "bytes": 12965,
+      "sha256": "f83dc7d734271e6c6d226f222790cd28aa2ee46f2c00a330fc04edce9cbb327e",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3153,8 +3177,8 @@
     },
     {
       "path": "src/tools.md",
-      "bytes": 7978,
-      "sha256": "7a9c034d8ff37cb81871a808db31bb653adda7a3f3e8ca85c0e0aea5f71ea877",
+      "bytes": 8149,
+      "sha256": "12f5d5dc053205edbc36e6edb20ea72117f443f34247c88d72e6361aeaf1d8a8",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3168,6 +3192,12 @@
       "bytes": 10579,
       "sha256": "e3ed188b2731d439a430ef3a1fb8bc761352e6ceb43d3153abb23b8cdb3af766",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/tools/regional-garden-data.md",
+      "bytes": 2344,
+      "sha256": "9372fcdf2b150e8b3d9125bee2adad082e39c581e180f4429aa101a6969a441c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/tools/season-weather.md",
@@ -3612,6 +3642,12 @@
       "bytes": 2366,
       "sha256": "c0bc576e114055d44349c8c56e57ff378e0fdf10138c4b968035105393049094",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/regionalSources.test.mjs",
+      "bytes": 2141,
+      "sha256": "6e3448ae76174dc6d9cf2418e7d3d1969be7fcd6008f6bf1f12d00dacd65f52a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/rotationRisk.test.js",
