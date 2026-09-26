@@ -32,3 +32,5 @@ The original console screenshot shows CREATE_COMPLETE on September 22. The new A
 The [capture script](../../scripts/check-hosted-evidence.mjs) uses disposable browser contexts, a request ceiling, same-origin GET requests and synthetic browser-local data. It blocks server writes and external services. Run it with a separately installed Playwright module and Chromium, supplying `PLAYWRIGHT_MODULE`, `CHROMIUM_PATH` and an absolute `EVIDENCE_OUTPUT_DIR` outside the checkout. Keep screenshots outside Git. A later run creates new evidence; it does not change the dates or results recorded here.
 
 To inspect source verification, open the linked GitHub run or clone its exact commit, install the locked dependencies, and run `npm run verify:community`. The approved source-only distribution documents two build-tool notice gaps; it does not redistribute those tools. This pack makes no claim of AWS organizer acceptance, human usability feedback or measured gardening outcomes.
+
+[Judging access and direct AWS hosting URL](judging-access.md) records the September 26 anonymous access checks and crawler policy.

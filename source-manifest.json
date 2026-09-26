@@ -345,8 +345,8 @@
     },
     {
       "path": "docs/evidence/README.md",
-      "bytes": 5204,
-      "sha256": "9a4b109537a46dcc974450ecd219da7d700ebfd9f2c560ad62e03c5ee539c31d",
+      "bytes": 5337,
+      "sha256": "be8ab76b0d35008c279ddd7a2c77cd08950838e93eb622ad0c33879cdf3c486f",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -392,9 +392,15 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/evidence/judging-access.md",
+      "bytes": 2427,
+      "sha256": "32ef37af5bc74175192b599c21132ccec9c33b299c5afc73e0f33838f6f937da",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/evidence/manifest.json",
-      "bytes": 2406,
-      "sha256": "de268ff066dd1209442bfe36543d0f3e246ef0a790b5c0a73ed86ea52ce0caf2",
+      "bytes": 2572,
+      "sha256": "3e65823428e067b8bb6b9ce42583be758a7e282dbf8f3a3ea7267ed4343fa6d1",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -633,8 +639,8 @@
     },
     {
       "path": "observablehq.config.js",
-      "bytes": 7856,
-      "sha256": "a892703d4d18b8dbd7cfb6ef5e1ccf339f3a7f03564465e7e80bae8a6eba3d1f",
+      "bytes": 7889,
+      "sha256": "42f71c501298b0890e9cc10ddaa652af13d0956403925feeab5952fb246b9888",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2832,6 +2838,12 @@
       "bytes": 185,
       "sha256": "3a3fe6d1d6bbe550039ea1a074c373c044351b6d7389f01b23abf0f889a0bfdf",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/robots.txt",
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/seasons/autumn.md",

@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "docs/evidence/README.md",
-      "bytes": 5204,
-      "sha256": "9a4b109537a46dcc974450ecd219da7d700ebfd9f2c560ad62e03c5ee539c31d"
+      "bytes": 5337,
+      "sha256": "be8ab76b0d35008c279ddd7a2c77cd08950838e93eb622ad0c33879cdf3c486f"
     },
     {
       "path": "docs/evidence/architecture.md",
@@ -40,6 +40,11 @@
       "path": "docs/evidence/hosted-browser.json",
       "bytes": 1256,
       "sha256": "93984fb4177c36744ce35a0bc83e3eed31220fcab986cc854209125624438b69"
+    },
+    {
+      "path": "docs/evidence/judging-access.md",
+      "bytes": 2427,
+      "sha256": "32ef37af5bc74175192b599c21132ccec9c33b299c5afc73e0f33838f6f937da"
     },
     {
       "path": "docs/evidence/submission.md",
