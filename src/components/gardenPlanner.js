@@ -3491,6 +3491,8 @@ function setupActions(refs, state, renderAll) {
           const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='garden-view.png';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent='3D image downloaded.';
         },'image/png');}catch{status.textContent='Image capture unavailable in this browser.';}return;
       }
+      if(state.walkCamera && ['zoom-in','zoom-out'].includes(action)){moveWalkCamera(state,action==='zoom-in'?'forward':'back');renderAll();return;}
+      if(action==='pan'||action.startsWith('fit'))state.walkCamera=null;
       if (action === "pan") {
         state.activeTool = "select";
         state.toolDrawerOpen = false;
@@ -8001,6 +8003,7 @@ function threeViewUnit(state) {
 
 function syncThreeCamera(three, state) {
   if (!three?.camera || !three?.controls) return;
+  if(state.viewMode!=="garden")state.walkCamera=null;
   const unit = threeViewUnit(state);
   const bounds = state.viewMode === "garden" ? parcelViewportBounds(state) : planViewBounds(state);
   const centerX = state.viewMode === "garden" ? bounds.x + bounds.width / 2 : bounds.x + bounds.width / 2 - activeBed(state).width / 2;
