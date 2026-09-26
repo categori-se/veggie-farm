@@ -639,6 +639,11 @@ export function gardenPlanner(options = {}) {
   let hadSavedState = false;
   try { hadSavedState = Boolean((options.storage || localStorage).getItem(STORAGE_KEY)); } catch { /* Fresh, nonpersistent canvas. */ }
   const state = loadState(options.storage);
+  if (!hadSavedState && !options.initialState) {
+    state.activeTool = "select";
+    state.inspectorOpen = false;
+    state.toolDrawerOpen = false;
+  }
   if(options.initialState){Object.assign(state,parsePlannerBackup(JSON.stringify(options.initialState)));normalizeStateShape(state);}
   if(options.storage)plannerStorageOverrides.set(state,options.storage);
   let exploringDemos = !PLANNER_OWNER;
@@ -673,7 +678,7 @@ export function gardenPlanner(options = {}) {
   `;
   root.innerHTML = `
     <section class="planner-quick-start" aria-label="Start a garden plan">
-      <div><strong>Try a garden of your own</strong><p>Start with an editable 4 × 8 ft bed. No address or account needed. Existing gardens stay in your collection.</p></div>
+      <div><strong>Garden Planning Studio</strong><p>Try an editable 4 × 8 ft bed. No account needed.</p></div>
       <button data-role="start-practice-garden" type="button">Start a practice garden</button>
     </section>
     <div class="garden-shell">
@@ -869,18 +874,12 @@ export function gardenPlanner(options = {}) {
             </details>
           </section>
 
-          <div data-role="time-preview-host"></div>
+          <details class="studio-preview-options"><summary>Date &amp; sunlight previews</summary><div data-role="time-preview-host"></div></details>
           <nav class="planning-scope" aria-label="Planning scope" style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 12px">
             <button type="button" data-scope="attributes">Site map & features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
           </nav>
-          <p data-role="planning-scope-help" style="margin:0;padding:0 12px 8px"></p>
-          <p data-role="imagery-status" role="status" hidden></p>
-          <div class="planner-storage-notice">
-            <p data-role="storage-status" role="status" aria-live="polite"></p>
-            <button data-role="storage-backup" type="button" hidden>Download unsaved planner JSON</button>
-          </div>
           <section class="planner-view parcel-map-view">
             <div class="view-heading parcel-heading">
               <span>Garden canvas</span>
@@ -963,6 +962,12 @@ export function gardenPlanner(options = {}) {
               ${viewNavigationMarkup}
               <div class="three-host" data-role="three-host"></div>
             </section>
+          </div>
+          <p data-role="planning-scope-help" style="margin:0;padding:0 12px 8px"></p>
+          <p data-role="imagery-status" role="status" hidden></p>
+          <div class="planner-storage-notice">
+            <p data-role="storage-status" role="status" aria-live="polite"></p>
+            <button data-role="storage-backup" type="button" hidden>Download unsaved planner JSON</button>
           </div>
           <footer class="garden-statusbar" data-role="metrics" aria-label="Garden plan status"></footer>
           <details class="garden-information-card" data-role="garden-information-card">
@@ -1159,7 +1164,7 @@ export function gardenPlanner(options = {}) {
       catch (error) { Object.assign(state, previous); renderAll(); throw error; }
     }
   });
-  root.querySelector(".planner-quick-start").after(accountPanel);
+  root.append(accountPanel);
   const copySharedGarden = garden => {
     const selected = selectedSharedGarden(garden);
     // Sharing opens an explicit new personal/browser copy. Never overwrite a
@@ -12607,6 +12612,22 @@ function injectStyles() {
       .map-legend summary {min-height: 44px; box-sizing: border-box; display: flex; align-items: center;}
     }
     .view-navigation button[aria-pressed="true"] {background: var(--panel-selected); color: var(--green);}
+
+    .garden-planner-app > .planner-quick-start:first-child {
+      padding: 6px 10px; margin: 0 0 6px; gap: 8px; flex-wrap: wrap;
+    }
+    .garden-planner-app > .planner-quick-start:first-child p {font-size: .8rem; margin: 0;}
+    .garden-planner-app > .planner-quick-start:first-child button {min-height: 44px;}
+    .studio-preview-options > summary {padding: 6px 12px; cursor: pointer; font-size: .8rem;}
+    .garden-planner-app .planning-scope {padding: 4px 8px !important; gap: 4px !important;}
+    .garden-planner-app .planning-scope button {min-height: 36px; padding: 4px 8px;}
+    .garden-planner-app .planner-storage-notice {font-size: .8rem;}
+    @media (max-width: 920px) {
+      .garden-planner-app .planning-scope button {min-height: 44px;}
+      .studio-preview-options > summary {min-height: 44px; box-sizing: border-box; display: flex; align-items: center;}
+      .studio-preview-options > summary::before {content: "▸"; margin-right: 6px;}
+      .studio-preview-options[open] > summary::before {content: "▾";}
+    }
 
     @media (max-width: 560px) {
       .garden-subtitle,

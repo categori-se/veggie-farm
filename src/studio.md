@@ -39,6 +39,17 @@ const studioModelAssets = Object.fromEntries(Object.entries(optionalMedia).filte
 ```
 
 ```js
+display(gardenPlanner({
+  publicCollection: publishedDemoCollection,
+  modelAssets: studioModelAssets,
+  modelCatalog: publicModelItems.features,
+  referenceAssets: gardenReferenceAssets,
+  referenceOverlayAssets: gardenReferenceOverlayAssets,
+  sourceEvidenceByGardenId: gardenSourceEvidenceByGardenId
+}));
+```
+
+```js
 const studioHome = document.createElement("div");
 studioHome.className = "studio-transfer-note";
 if (location.hostname === "studio.veggie.farm") {
@@ -88,16 +99,7 @@ display(studioHome);
   </details>
 </section>
 
-```js
-display(gardenPlanner({
-  publicCollection: publishedDemoCollection,
-  modelAssets: studioModelAssets,
-  modelCatalog: publicModelItems.features,
-  referenceAssets: gardenReferenceAssets,
-  referenceOverlayAssets: gardenReferenceOverlayAssets,
-  sourceEvidenceByGardenId: gardenSourceEvidenceByGardenId
-}));
-```
+
 
 <section id="garden-examples" class="studio-shortlist" aria-labelledby="studio-shortlist-title">
   <div>
