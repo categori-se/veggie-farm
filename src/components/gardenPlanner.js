@@ -707,13 +707,15 @@ export function gardenPlanner(options = {}) {
         <button data-view-nav="fit-selection" type="button">Fit selection</button>
         <button data-view-nav="capture" type="button">Save 3D image</button>
         <small data-role="capture-status" role="status"></small>
-        <div class="walk-buttons" data-role="walk-controls" hidden>
-          <button data-view-nav="walk-forward" type="button">Step forward</button><button data-view-nav="walk-back" type="button">Step back</button>
-          <button data-view-nav="walk-left" type="button">Turn left</button><button data-view-nav="walk-right" type="button">Turn right</button>
-        </div>
         <p>Drag to pan. Ctrl/right-drag rotates and tilts. On touch, use these sliders and +/−. Walk uses a flat surface at 5½ ft eye height; no obstacle collision. Image captures are illustrative, not measured sunlight.</p>
         <button data-view-nav="close-camera" type="button">Close camera controls</button>
       </div></details>
+    </div>
+    <div class="walk-buttons" data-role="walk-controls" role="group" aria-label="Walk around the garden" hidden>
+      <button data-view-nav="walk-left" type="button" aria-label="Turn left" title="Turn left (A or left arrow)">↶</button>
+      <button data-view-nav="walk-forward" type="button" title="Step forward (W or up arrow)">↑ Forward</button>
+      <button data-view-nav="walk-back" type="button" title="Step backward (S or down arrow)">↓ Back</button>
+      <button data-view-nav="walk-right" type="button" aria-label="Turn right" title="Turn right (D or right arrow)">↷</button>
     </div>
     <div class="view-gesture-hint">Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate</div>
   `;
@@ -4250,7 +4252,7 @@ function renderControls(refs, state) {
   refs.root.dataset.viewPresentation = state.viewPresentation;
   refs.root.dataset.viewMode = state.viewMode;
   refs.root.dataset.activeTool = state.activeTool;
-  for(const hint of refs.root.querySelectorAll('.view-gesture-hint'))hint.textContent=state.walkCamera?'Walk · drag to look · W/S step · A/D turn · Camera for touch controls · Escape exits':'Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate';
+  for(const hint of refs.root.querySelectorAll('.view-gesture-hint'))hint.textContent=state.walkCamera?'Walk · drag to look · W/S step · A/D turn · Use arrows to walk · Escape exits':'Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate';
   for(const controls of refs.root.querySelectorAll('[data-role="walk-controls"]'))controls.hidden=!state.walkCamera;
   if(state.walkCamera)refs.root.querySelector('[data-role="camera-angle"]').value='walk';
   for(const slider of refs.root.querySelectorAll('[data-camera]')){
@@ -13226,7 +13228,9 @@ function injectStyles() {
     .feature-list-row .bed-option-main strong {font-size:.82rem;line-height:1.3;white-space:normal;overflow-wrap:anywhere;}
     .feature-list-row .bed-option-main>span {font-size:.7rem;line-height:1.2;white-space:normal;}
     .feature-list-row>button:last-child {min-height:44px;padding:4px;font-size:.72rem;}
-    .walk-buttons:not([hidden]) {display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+    .walk-buttons:not([hidden]) {position:absolute;z-index:7;left:50%;bottom:44px;transform:translateX(-50%);display:flex;gap:4px;padding:4px;max-width:calc(100% - 16px);box-sizing:border-box;border:1px solid var(--line-strong);border-radius:8px;background:var(--panel);box-shadow:0 3px 12px var(--shadow-soft);}
+    .walk-buttons button {min-width:44px;min-height:44px;padding:6px 9px;font:600 .8rem/1.2 system-ui;white-space:nowrap;touch-action:manipulation;}
+    @media(max-width:920px){.walk-buttons:not([hidden]){bottom:12px;}.walk-buttons button{padding:6px;}}
     .planting-palette {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:10px;}
     .planting-palette button {min-height:54px;white-space:normal;font-size:.85rem;}
     .planting-palette button span {display:block;font-size:1.4rem;}
