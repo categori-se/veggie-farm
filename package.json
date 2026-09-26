@@ -20,7 +20,8 @@
     "check:public-git": "node scripts/check-public-git.mjs",
     "hooks:install": "node scripts/install-community-hooks.mjs",
     "verify:community": "npm run check:public && npm run check:public-git && npm test && npm run test:notices && npm run validate:data && npm run validate:plants && npm run validate:source-notices && npm run build",
-    "validate:source-notices": "npm run check:dependency-notices && node scripts/build-dependency-notices.mjs --check --require-complete && node scripts/check-source-notice-scope.mjs"
+    "validate:source-notices": "npm run check:dependency-notices && node scripts/build-dependency-notices.mjs --check --require-complete && node scripts/check-source-notice-scope.mjs",
+    "setup:deploy": "node scripts/setup-deployment.mjs"
   },
   "dependencies": {
     "d3": "^7.9.0",

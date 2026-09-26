@@ -956,7 +956,8 @@ export function gardenPlanner(options = {}) {
             </section>
             <section class="planner-view three-d-view">
               <div class="view-heading">
-                <span>3D canopy preview</span>
+                <span>3D garden · illustrative heights</span>
+                <select data-role="camera-angle" aria-label="3D viewing angle"><option value="60">Oblique</option><option value="0">Overhead</option><option value="75">Low angle</option></select>
                 <span data-role="three-status">WebGL</span>
               </div>
               ${viewNavigationMarkup}
@@ -3251,10 +3252,17 @@ function setupControls(refs, state, renderAll) {
   for (const button of refs.presentationButtons) {
     button.addEventListener("click", () => {
       state.viewPresentation = normalizeViewPresentation(button.dataset.presentation);
+      if (["3d", "split"].includes(state.viewPresentation) && planningPitch(state) < 55) {
+        setPlanningOrientation(state, planningBearing(state) || 30, 60);
+      }
       renderAll();
     });
   }
 
+  refs.root.querySelector('[data-role="camera-angle"]').addEventListener("change", event => {
+    setPlanningOrientation(state, planningBearing(state), Number(event.target.value));
+    renderAll();
+  });
   const inspectorId = `inspector-${crypto.randomUUID()}`;
   for (const panel of refs.inspectorPanels) {
     panel.id = `${inspectorId}-${panel.dataset.inspectorPanel}`;
@@ -4026,6 +4034,8 @@ function renderControls(refs, state) {
   refs.root.dataset.viewPresentation = state.viewPresentation;
   refs.root.dataset.viewMode = state.viewMode;
   refs.root.dataset.activeTool = state.activeTool;
+  const cameraAngle = refs.root.querySelector('[data-role="camera-angle"]');
+  cameraAngle.value = String(planningPitch(state) < 25 ? 0 : planningPitch(state) > 67 ? 75 : 60);
   for (const button of refs.viewNavigationButtons) {
     if (button.dataset.viewNav === "pan") button.setAttribute("aria-pressed", String(state.activeTool === "select"));
   }
@@ -7466,7 +7476,7 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
 
   const update = () => {
     orbit.phi = clamp(orbit.phi, 0.08, 1.4);
-    orbit.radius = clamp(orbit.radius, 0.08, 1200);
+    orbit.radius = clamp(orbit.radius, 0.08, 100000);
     const sinPhi = Math.sin(orbit.phi);
     camera.position.set(
       target.x + orbit.radius * sinPhi * Math.sin(orbit.theta),
@@ -7783,6 +7793,8 @@ function createThreeScene(host, state, onViewChange = () => {}, options = {}) {
     return null;
   }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.domElement.className = "three-canvas";
@@ -7792,7 +7804,7 @@ function createThreeScene(host, state, onViewChange = () => {}, options = {}) {
   controls.target.set(0, 0.25, 0);
   controls.update();
 
-  const hemi = new THREE.HemisphereLight("#f6fff5", "#64715f", 1.6);
+  const hemi = new THREE.HemisphereLight("#f6fff5", "#64715f", 1.1);
   scene.add(hemi);
 
   const sun = new THREE.DirectionalLight("#fff4d6", 2.4);
@@ -7825,6 +7837,7 @@ function createThreeScene(host, state, onViewChange = () => {}, options = {}) {
   animate();
 
   const three = {
+    sun,
     scene,
     camera,
     renderer,
@@ -7914,10 +7927,18 @@ function syncThreeCamera(three, state) {
   three.controls.target.set(centerX * unit, 0.12, centerY * unit);
   three.controls.orbit.theta = THREE.MathUtils.degToRad(bearing);
   three.controls.orbit.phi = THREE.MathUtils.degToRad(Math.max(5, pitch));
-  three.controls.orbit.radius = clamp(radius * 1.08, 0.08, 1200);
-  three.camera.far = Math.max(1000, three.controls.orbit.radius * 5);
+  three.controls.orbit.radius = clamp(radius * 1.08, 0.08, 100000);
+  three.camera.near = Math.max(0.01, three.controls.orbit.radius / 2000);
+  three.camera.far = Math.max(100, three.controls.orbit.radius * 8);
   three.camera.updateProjectionMatrix();
   three.controls.update();
+  if (three.sun) {
+    const center=three.controls.target,distance=Math.max(10,Math.max(bounds.width,bounds.height)*unit);
+    three.sun.target.position.copy(center);three.sun.position.set(center.x-distance*.5,distance,center.z+distance*.4);
+    const shadow=three.sun.shadow;shadow.mapSize.set(1024,1024);
+    Object.assign(shadow.camera,{left:-distance,right:distance,top:distance,bottom:-distance,near:.1,far:distance*5});
+    shadow.camera.updateProjectionMatrix();shadow.bias=-.0001;shadow.normalBias=.03;
+  }
 
   const canvas = three.renderer?.domElement;
   if (canvas) {
@@ -7936,39 +7957,36 @@ function addVegetationCover3d(group, state, unit, profile = null, viewport = par
     const height = canopy.ry * 2 * unit;
     const color = vegetation.canopyClass === "evergreen" ? "#2f6650" : vegetation.canopyClass === "deciduous" ? "#6f8a4c" : "#55775a";
     const selected = vegetation.id === state.selectedVegetationId;
+    // Crown width comes from mapped geometry; unknown vertical dimensions are
+    // illustrative only and never written back as measured tree heights.
+    const rise = (Number(vegetation.heightEstimateFeet) > 0 ? Number(vegetation.heightEstimateFeet) : vegetation.kind === "shrub" ? 4 : 20) * 12 * unit;
+    const crownHeight = rise * 0.65;
     const cover = new THREE.Mesh(
-      new THREE.CylinderGeometry(Math.max(width, 0.1) / 2, Math.max(width, 0.1) / 2, vegetation.kind === "forest" ? 0.09 : 0.16, 28),
-      new THREE.MeshStandardMaterial({
-        color,
-        emissive: selected ? "#7fae8a" : "#000000",
-        emissiveIntensity: selected ? 0.42 : 0,
-        transparent: true,
-        opacity: selected ? 0.58 : vegetation.kind === "forest" ? 0.22 : 0.36,
-        roughness: 0.9
-      })
+      vegetation.canopyClass === "evergreen" ? new THREE.ConeGeometry(1, 2, 16) : new THREE.SphereGeometry(1, 16, 10),
+      new THREE.MeshStandardMaterial({color, roughness: 1,
+        emissive: selected ? "#527d45" : "#000000", emissiveIntensity: selected ? .25 : 0})
     );
-    cover.scale.z = height / Math.max(width, 0.1);
-    cover.position.set(vegetation.x * unit, vegetation.kind === "forest" ? 0.06 : 0.1, vegetation.y * unit);
-    cover.rotation.y = -(vegetation.rotation || 0) * Math.PI / 180;
+    cover.scale.set(Math.max(width,.1)/2, crownHeight/2, Math.max(height,.1)/2);
+    cover.position.set(vegetation.x*unit, rise-crownHeight/2, vegetation.y*unit);
+    cover.rotation.y = -(vegetation.rotation || 0)*Math.PI/180;
+    cover.castShadow = true;cover.receiveShadow = true;
     cover.userData.geometryRole = vegetation.kind === "tree" ? "derived-crown" : "mapped-cover";
-    tagThreeFeature(cover, "vegetation", vegetation.id);
-    group.add(cover);
-
+    cover.userData.heightBasis = Number(vegetation.heightEstimateFeet)>0 ? "entered-estimate" : "illustrative";
+    tagThreeFeature(cover,"vegetation",vegetation.id);group.add(cover);
     if (vegetation.kind === "tree") {
-      const markerHeight = clamp((Number(vegetation.heightEstimateFeet) || 10) * 12 * unit * 0.18, 0.12, 2.8);
+      const trunkHeight = rise-crownHeight*.5;
       const trunk = new THREE.Mesh(
-        new THREE.CylinderGeometry(Math.max(0.025, unit * 3), Math.max(0.035, unit * 4), markerHeight, 10),
-        new THREE.MeshStandardMaterial({color: "#65513a", roughness: 1})
+        new THREE.CylinderGeometry(Math.max(unit*2,width*.025),Math.max(unit*3,width*.035),trunkHeight,10),
+        new THREE.MeshStandardMaterial({color:"#65513a",roughness:1})
       );
-      trunk.position.set(vegetation.x * unit, markerHeight / 2, vegetation.y * unit);
-      trunk.userData.geometryRole = "canonical-tree-center";
-      tagThreeFeature(trunk, "vegetation", vegetation.id);
-      group.add(trunk);
+      trunk.position.set(vegetation.x*unit,trunkHeight/2,vegetation.y*unit);
+      trunk.castShadow=true;trunk.userData.geometryRole="canonical-tree-center";
+      tagThreeFeature(trunk,"vegetation",vegetation.id);group.add(trunk);
     }
   }
 }
 
-function addMappedPolygonSurface3d(group, structure, unit, materialOptions, elevation = 0.035) {
+function addMappedPolygonSurface3d(group, structure, unit, materialOptions, elevation = 0.035, rise = 0) {
   const geometry = localGeometryInStructureFrame(structure);
   if (geometry?.type !== "Polygon" || !Array.isArray(geometry.coordinates?.[0])) return false;
   const outer = geometry.coordinates[0].filter((point) => Array.isArray(point) && point.length >= 2);
@@ -7996,10 +8014,11 @@ function addMappedPolygonSurface3d(group, structure, unit, materialOptions, elev
   frame.position.set(structure.x * unit, elevation, structure.y * unit);
   frame.rotation.y = -(structure.rotation || 0) * Math.PI / 180;
   const surface = new THREE.Mesh(
-    new THREE.ShapeGeometry(shape, 2),
+    rise > 0 ? new THREE.ExtrudeGeometry(shape, {depth: rise, bevelEnabled: false, steps: 1}).translate(0, 0, -rise) : new THREE.ShapeGeometry(shape, 2),
     new THREE.MeshStandardMaterial({side: THREE.DoubleSide, roughness: 0.9, ...materialOptions})
   );
   surface.rotation.x = Math.PI / 2;
+  surface.castShadow = rise > 0;surface.receiveShadow = true;
   tagThreeFeature(surface, "structure", structure.id);
   frame.add(surface);
   group.add(frame);
@@ -8117,6 +8136,13 @@ function addGardenStructures3d(group, state, unit, profile = null, viewport = pa
     )) {
       // Explicit line geometry is preferable to a large rectangular envelope,
       // especially for the Forest Walk and other long estate circulation.
+    } else if (definition.category === "buildings") {
+      const rise = (Number(structure.heightEstimateFeet)>0 ? Number(structure.heightEstimateFeet) : 12)*12*unit;
+      const material = {color:structure.type==="greenhouse"?"#91aaa0":"#9b8874",...selectionMaterial};
+      if (addMappedPolygonSurface3d(group,structure,unit,material,.035,rise)) continue;
+      const building = new THREE.Mesh(new THREE.BoxGeometry(width,rise,height),new THREE.MeshStandardMaterial({...material,roughness:.85}));
+      building.position.set(x,rise/2,z);building.rotation.y=-(structure.rotation||0)*Math.PI/180;
+      building.castShadow=true;building.receiveShadow=true;tagThreeFeature(building,"structure",structure.id);group.add(building);
     } else if (structure.type === "greenhouse") {
       const base = new THREE.Mesh(
         new THREE.BoxGeometry(width, 0.05, height),
@@ -12634,6 +12660,8 @@ function injectStyles() {
       .studio-preview-options[open] > summary::before {content: "▾";}
     }
 
+    [data-role="camera-angle"] {min-height: 36px; padding: 4px 8px; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 4px;}
+    @media (max-width: 920px) {[data-role="camera-angle"] {min-height:44px;}}
     @media (max-width: 560px) {
       .garden-subtitle,
       .active-bed-command,

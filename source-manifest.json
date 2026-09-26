@@ -81,8 +81,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5633,
-      "sha256": "0c139d07c597f4c410a0e63bbe612c71da03f302619cf9342a5894c8e0629fa8",
+      "bytes": 6716,
+      "sha256": "62e4804134b59cc212d6246eb681f12d495c9be297e86d040ed1c2ea2a636a13",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -282,6 +282,12 @@
       "bytes": 5109,
       "sha256": "1da6e71271463f25f120c978290fa6c04bfc29c5333564bd909485c943c00951",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "docs/architecture/3d-model-sources.md",
+      "bytes": 4522,
+      "sha256": "c53ab04525970f394583e2275449a5ff0e87d6a6ff58e6d3c2bb8fbeebfd3070",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "docs/architecture/build-evidence.json",
@@ -615,8 +621,8 @@
     },
     {
       "path": "examples/aws/DEPLOYMENT.md",
-      "bytes": 10238,
-      "sha256": "03e2c239adbc5f70b17b190d55fe70328605a6307cb9d5d69abe3c29c792d874",
+      "bytes": 10617,
+      "sha256": "15454b8de6bf13068f721343cc0efd02116250617c3b83e612224712f92f10f7",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
@@ -663,8 +669,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 2300,
-      "sha256": "4ba7e703ebb99a68ae1d65ae7c8edf862b672ffb92946637640b1d6510d76b7f",
+      "bytes": 2357,
+      "sha256": "c604af4c45224eb25147bbd03b7a220d941dbd65673036247775d9d5e2830432",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -896,6 +902,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "scripts/setup-deployment.mjs",
+      "bytes": 3984,
+      "sha256": "9e4a3c96ac533f6d59757218988bc3397576517bff5ba4e2621e228185f9c305",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "scripts/validate-horticultural-evidence.mjs",
       "bytes": 1892,
       "sha256": "be3ea1a7e6e9183d99de88de27f360cb78f60456564cdb896888fe429e5b0ab7",
@@ -1053,8 +1065,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 493133,
-      "sha256": "7476c66ce787226cd119aac4de32922126b8d016877bb8d4f6e9a3f75636feb5",
+      "bytes": 496043,
+      "sha256": "ff526b773e4d80d05f139abb1497347c515c6b05d22ab14cf696d420affb7523",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2883,8 +2895,8 @@
     },
     {
       "path": "src/studio.md",
-      "bytes": 12333,
-      "sha256": "26954b89df281a118f98c9e59688b4cf27c5aabde7b3aa25ae7721a130581c12",
+      "bytes": 12742,
+      "sha256": "c3c61a6cc90d96cc1617d2271153582d12fa3088f31e377155ac871c9972434d",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3390,6 +3402,12 @@
       "bytes": 1264,
       "sha256": "cc2ee6a94a400f6dd0d140795a40c7f909d32119b751182b2dc1a78a2fc3a348",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/setupDeployment.test.mjs",
+      "bytes": 1303,
+      "sha256": "e9b93eff924eb6404ba65cf06d7158cbe4b0437161369141a86c570b355f9c76",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/siteFeatureCatalog.test.js",
