@@ -285,8 +285,8 @@
     },
     {
       "path": "docs/architecture/3d-model-sources.md",
-      "bytes": 4585,
-      "sha256": "859107dd1e33a335d2773fad9eea1fef45721ba01848ea086a52fd78c7446664",
+      "bytes": 5473,
+      "sha256": "4b5b3b157217068b01cab9d308de8c0f8389ad988d8b47b4eb6239454b2c2341",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -327,8 +327,8 @@
     },
     {
       "path": "docs/architecture/garden-experience.md",
-      "bytes": 2345,
-      "sha256": "fc73222bda7512c215f0aa7d6978633be0afb20332aef47219e2ae526762128c",
+      "bytes": 4248,
+      "sha256": "e43f650bc5708b3ce55bdf178ffd38aa75e4ad73a75cdade55a4c2fbd5a7d128",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1089,8 +1089,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 524663,
-      "sha256": "ba5732eccb84fa5a68667b675b36366444a5630eadeaf62201edf5da59e9c1e6",
+      "bytes": 531396,
+      "sha256": "1a2b9ab75e448bbb82c4df24cbadd44b80bb48c29c4e955c12323b525844e356",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3378,6 +3378,12 @@
       "bytes": 1603,
       "sha256": "c6b3f14a79fbba7fb2b9262e1e45509c0885aa5a71e030892412a54591242ffa",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/plannerWorkspaces.test.mjs",
+      "bytes": 2964,
+      "sha256": "f2e1e2c219676546d76a7a94c05d4c87811a4bf001eae4346b76660ca76a7a37",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/plant-explorer.test.mjs",

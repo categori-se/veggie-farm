@@ -28,3 +28,10 @@ Retain creator, model URL, exact license/version, modifications and asset hash. 
 Use the existing optional model/media catalog rather than putting a vendor SDK into the core. Convert only authorized files to glTF 2.0 binary, validate scale and ground origin, verify texture/alpha support against Studio's loader, and test one model on a mobile scene before adding a pack. Sparse accessors, compression extensions, skins and animation need explicit compatibility review; “GLB” alone does not establish compatibility. Retain a procedural fallback and a small set of reusable variants. A generic mesh is illustrative, not a measurement of plant maturity or sunlight.
 
 Current 3D uses entered tree/building height estimates where available, otherwise illustrative vertical sizes (4 ft shrubs; 20 ft other vegetation; 12 ft buildings). It does not write these defaults into the garden record. Mapped footprints and crown widths remain the spatial basis. Oblique, overhead and low-angle camera presets provide different viewpoints; an eye-level walking preview is also available (see the navigation guide). These are illustrative views, not a photorealistic landscape renderer.
+
+
+## Additional candidates reviewed for the workspace journey
+
+[Kenney Nature Kit](https://kenney.nl/assets/nature-kit) lists 330 CC0 assets; [Quaternius Simple Nature](https://quaternius.com/packs/simplenature.html) is another CC0 candidate. These are stylized nature libraries, not verified species collections. Neither pack is newly imported by this workspace change. The existing operator-supplied crop models and core procedural foliage remain in use.
+
+The next model pass should use recognizable structural profiles (layered conifer, spreading evergreen, rounded fruit tree, hedge) with entered dimensions and explicit illustrative labels. Do not identify a generic asset as Douglas fir, hemlock or orange solely because its silhouette resembles one. Keep model downloads, textures and any acquisition tooling in private hosting; publish only adapters and original procedural code.

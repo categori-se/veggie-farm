@@ -762,6 +762,7 @@ export function gardenPlanner(options = {}) {
           <section class="planner-section tool-panel" data-tool-panel="plants">
             <div class="section-heading"><span>Plant library</span><span class="section-count" data-role="plant-count"></span></div>
             <input class="search-input" data-role="plant-search" type="search" aria-label="Filter plants" placeholder="Filter plants">
+            <p class="library-help">Choose a plant and Add selected, or drag it into the bed. Existing plants stay locked until you choose Edit plants.</p>
             <div class="plant-list" data-role="plant-list"></div>
             <div class="drawer-action-row">
               <button class="primary-action" data-action="add-selected" type="button">Add to selected bed</button>
@@ -923,7 +924,9 @@ export function gardenPlanner(options = {}) {
 
           <details class="studio-preview-options"><summary>Date &amp; sunlight previews</summary><div data-role="time-preview-host"></div></details>
           <nav class="planning-scope" aria-label="Planning scope" style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 12px">
-            <button type="button" data-scope="attributes">Site map & features</button>
+            <button type="button" data-workspace="explore">Explore garden</button>
+            <button type="button" data-workspace="walk">Walk through</button>
+            <button type="button" data-scope="attributes">Site features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
           </nav>
@@ -1315,6 +1318,18 @@ export function gardenPlanner(options = {}) {
   setupSearch(refs, state, () => renderPlantList(refs, state, renderAll));
   setupFlowerLibrary(refs, state, () => renderAll());
   setupSvgInteractions(refs, state, () => renderAll(), renderSharedViews);
+  refs.planSvg.addEventListener("dragover", event => {
+    if (state.viewMode === "bed" && event.dataTransfer.types.includes("application/x-veggie-plant")) event.preventDefault();
+  });
+  refs.planSvg.addEventListener("drop", event => {
+    if (state.viewMode !== "bed") return;
+    const id = event.dataTransfer.getData("application/x-veggie-plant");
+    if (!state.plants.some(plant => plant.id === id)) return;
+    event.preventDefault();
+    const [x,y] = pointerInSharedWorld(event, refs.planSvg);
+    if (!isInsideBed(x,y,activeBed(state))) return;
+    addPlacement(state,id,x,y); renderAll();
+  });
   setupParcelInteractions(refs, state, () => renderAll(), renderSharedViews);
   setupKeyboardShortcuts(refs, state, () => renderAll());
 
@@ -2713,6 +2728,24 @@ function openInspector(state, mode, tab = "edit") {
   state.inspectorOpen = true;
 }
 
+// Workspaces change the view, never the edit authorization or garden records.
+function openPlantingWorkspace(state, bedId = state.activeBedId) {
+  const bed = state.beds.find(item => item.id === bedId);
+  if (!bed) return false;
+  explicitEditSessions.delete(state);
+  state.activeBedId = bed.id;
+  state.viewMode = "bed";
+  state.viewPresentation = state.viewPresentation === "map" ? "2d" : state.viewPresentation;
+  state.walkCamera = null;
+  state.activeTool = "plants";
+  state.drawMode = null;
+  state.toolDrawerOpen = true;
+  state.inspectorOpen = false;
+  state.bedCameras[bed.id] ||= normalizeBedCamera(bed);
+  syncSelectedPlacementToActiveBed(state);
+  return true;
+}
+
 function selectGardenFeature(state, type, id) {
   if (type === "bed") {
     state.activeBedId = id;
@@ -3384,6 +3417,7 @@ function setupControls(refs, state, renderAll, renderSharedViews = renderAll) {
   });
 
   const changeScope = scope => {
+    explicitEditSessions.delete(state);
     refs.referenceMapInspector?.cancelPick();
     siteGeometryDrafts.delete(state);
     state.drawMode = null;
@@ -3399,8 +3433,27 @@ function setupControls(refs, state, renderAll, renderSharedViews = renderAll) {
       state.toolDrawerOpen = scope === "bed";
       if (scope === "bed" && state.viewPresentation === "map") state.viewPresentation = "2d";
     }
+    if (scope === "bed") openPlantingWorkspace(state);
     renderAll();
   };
+  refs.root.querySelectorAll("[data-workspace]").forEach(button => button.addEventListener("click", () => {
+    explicitEditSessions.delete(state);
+    const bed = activeBed(state);
+    const fromBed = state.viewMode === "bed";
+    state.viewMode = "garden"; state.activeTool = "select";
+    state.drawMode = null; state.toolDrawerOpen = false; state.inspectorOpen = false;
+    if (button.dataset.workspace === "walk") {
+      const bounds = parcelViewportBounds(state);
+      state.viewPresentation = "3d";
+      state.walkCamera = {x: fromBed && bed ? bed.x : bounds.x + bounds.width / 2,
+        y: fromBed && bed ? bed.y + bed.height / 2 + 48 : bounds.y + bounds.height / 2, look: 0};
+    } else {
+      state.walkCamera = null;
+      if (state.viewPresentation === "3d") setPlanningOrientation(state, planningBearing(state), 60);
+    }
+    renderAll();
+    if (state.walkCamera) refs.threeHost.querySelector("canvas")?.focus({preventScroll:true});
+  }));
   refs.root.querySelectorAll("[data-scope]").forEach(button => {
     button.addEventListener("click", () => changeScope(button.dataset.scope));
   });
@@ -3567,9 +3620,8 @@ function setupActions(refs, state, renderAll) {
   }
 
   refs.actions.addSelected.addEventListener("click", () => {
-    if (!plannerCanEditFeature(state, "placement")) return;
+    if (state.viewMode !== "bed" && !plannerCanEditFeature(state, "placement")) return;
     addPlacementAtBestOpenPoint(state);
-    openInspector(state, "placement");
     renderAll();
   });
 
@@ -4143,6 +4195,9 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
 }
 
 function renderControls(refs, state) {
+  refs.root.dataset.workspace = state.walkCamera ? "walk" : state.viewMode === "bed" ? "plant" : "explore";
+  refs.root.querySelectorAll("[data-workspace]").forEach(button => button.setAttribute("aria-pressed",
+    String(button.dataset.workspace === (state.walkCamera ? "walk" : state.viewMode === "garden" ? "explore" : "plant"))));
   const scope = ["parcel", "structures", "vegetation"].includes(state.activeTool) ? "attributes" : state.viewMode;
   refs.root.querySelector('[data-role="planning-scope-help"]').textContent = scope === "attributes"
     ? "Edit site points, paths, areas and established trees. These are separate from planting beds."
@@ -4330,7 +4385,7 @@ function renderControls(refs, state) {
   refs.root.querySelector('[data-action="cancel-tree"]').hidden = !markingTree;
   refs.root.querySelector('[data-role="tree-placement-status"]').hidden = !markingTree;
   if (markingTree) refs.editModeLabel.textContent = "Click map to place planting · Escape cancels";
-  refs.actions.addSelected.disabled = !plantingsEditable;
+  refs.actions.addSelected.disabled = state.viewMode !== "bed" && !plantingsEditable;
   refs.actions.fillBed.disabled = !plantingsEditable;
   refs.actions.fillBed.textContent = placementsForBed(state, bed.id).length ? "Replace bed planting…" : "Fill bed";
   refs.root.querySelector('[data-role="fill-bed-status"]').hidden = true;
@@ -4495,6 +4550,13 @@ function renderPlantList(refs, state, renderAll) {
     button.className = "plant-option";
     button.type = "button";
     button.dataset.plantId = plant.id;
+    button.draggable = state.viewMode === "bed";
+    button.title = "Choose a plant, then Add selected; or drag into the bed";
+    button.addEventListener("dragstart", event => {
+      if (state.viewMode !== "bed") {event.preventDefault(); return;}
+      event.dataTransfer.setData("application/x-veggie-plant", plant.id);
+      event.dataTransfer.effectAllowed = "copy";
+    });
     button.setAttribute("aria-pressed", plant.id === state.selectedPlantId ? "true" : "false");
     button.innerHTML = `
       <span class="plant-swatch" style="--plant-color:${plant.leafColor || plant.color}"></span>
@@ -4505,7 +4567,7 @@ function renderPlantList(refs, state, renderAll) {
     `;
     button.addEventListener("click", () => {
       state.selectedPlantId = plant.id;
-      openInspector(state, "plant");
+      if (state.viewMode !== "bed") openInspector(state, "plant");
       renderAll();
     });
     refs.plantList.append(button);
@@ -5339,6 +5401,7 @@ function renderPropertyBeds2d(svg, state, renderAll, bedOptions = {}) {
     if (state.drawMode === "bed-polygon") return;
     event.stopPropagation();
     selectGardenFeature(state, "bed", bed.id);
+    if (!options.editable && !options.plantsEditable) openPlantingWorkspace(state, bed.id);
     renderAll();
   });
 
@@ -6850,7 +6913,7 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
 
     bindInspectorEditGuard(refs.selectedBed, state, "bed", renderAll);
   const planBedButton=refs.selectedBed.querySelector('[data-action="plan-inspected-bed"]');
-  if(planBedButton) planBedButton.onclick=()=>{explicitEditSessions.delete(state);state.viewMode="bed";state.activeTool="plants";state.viewPresentation=state.viewPresentation==="map"?"2d":state.viewPresentation;state.walkCamera=null;state.toolDrawerOpen=true;state.inspectorOpen=false;state.bedCameras[bed.id]=normalizeBedCamera(bed);renderAll();};
+  if(planBedButton) planBedButton.onclick=()=>{openPlantingWorkspace(state, bed.id);renderAll();};
 
     refs.selectedBed.querySelectorAll("[data-bed-field]").forEach((input) => {
       input.addEventListener("change", () => {
@@ -7669,11 +7732,24 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
     if(event.key==='Escape'){state.walkCamera=null;setPlanningOrientation(state,planningBearing(state),60);event.preventDefault();onViewChange();}
     else if(action){event.preventDefault();event.stopImmediatePropagation();moveWalkCamera(state,action);onViewChange();}
   });
+  const pose = new THREE.Object3D();
+  let initialized = false, lastTime = performance.now();
   const update = () => {
+    const previousPosition = camera.position.clone(), previousRotation = camera.quaternion.clone();
+    const now = performance.now(), alpha = 1 - Math.exp(-Math.min(64, now-lastTime) / 115);
+    lastTime = now;
+    const settle = () => {
+      if (initialized && !window.matchMedia("(prefers-reduced-motion: reduce)").matches && !orbit.dragging) {
+        pose.position.copy(camera.position); pose.quaternion.copy(camera.quaternion);
+        camera.position.copy(previousPosition).lerp(pose.position, alpha);
+        camera.quaternion.copy(previousRotation).slerp(pose.quaternion, alpha);
+      }
+      initialized = true;
+    };
     if(state.walkCamera){
       const walk=state.walkCamera,unit=threeViewUnit(state),angle=planningBearing(state)*Math.PI/180,look=(walk.look||0)*Math.PI/180;
       camera.position.set(walk.x*unit,66*unit,walk.y*unit);
-      camera.lookAt(camera.position.x+Math.sin(angle)*Math.cos(look),camera.position.y+Math.sin(look),camera.position.z-Math.cos(angle)*Math.cos(look));return;
+      camera.lookAt(camera.position.x+Math.sin(angle)*Math.cos(look),camera.position.y+Math.sin(look),camera.position.z-Math.cos(angle)*Math.cos(look));settle();return;
     }
     orbit.phi = clamp(orbit.phi, 0.08, 1.4);
     orbit.radius = clamp(orbit.radius, 0.08, 100000);
@@ -7684,6 +7760,7 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
       target.z + orbit.radius * sinPhi * Math.cos(orbit.theta)
     );
     camera.lookAt(target);
+    settle();
   };
 
   canvas.addEventListener("pointerdown", (event) => {
@@ -7749,7 +7826,7 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   });
   canvas.addEventListener("contextmenu", (event) => event.preventDefault());
 
-  return {target, orbit, update, cancel: stopDrag};
+  return {target, orbit, update, snap: () => {initialized = false;}, cancel: stopDrag};
 }
 
 function tagThreeFeature(object, type, id) {
@@ -7865,6 +7942,34 @@ function setupThreeFeatureInteractions(three, options = {}) {
   const onStateChange = options.onStateChange || (() => {});
   const hoverCard = options.hoverCard;
   let drag = null;
+  canvas.addEventListener("dragover", event => {
+    if (three.state.viewMode === "bed" && event.dataTransfer.types.includes("application/x-veggie-plant")) event.preventDefault();
+  });
+  canvas.addEventListener("drop", event => {
+    const state = three.state, id = event.dataTransfer.getData("application/x-veggie-plant");
+    if (state.viewMode !== "bed" || !state.plants.some(plant => plant.id === id)) return;
+    event.preventDefault();
+    const point = threeGroundPoint(three,event), bed = activeBed(state), unit = threeViewUnit(state);
+    if (!point || !bed) return;
+    const x = point.x / unit + bed.width / 2, y = point.z / unit + bed.height / 2;
+    if (!isInsideBed(x,y,bed)) return;
+    addPlacement(state,id,x,y); onStateChange();
+  });
+  let bedClick = null;
+  canvas.addEventListener("pointerdown", event => {
+    bedClick = null;
+    if (event.button !== 0 || event.ctrlKey || three.state.viewMode !== "garden" || plannerCanEditFeature(three.state, "bed")) return;
+    const hit = threeRaycastFeature(three, event);
+    if (hit?.ref.type === "bed") bedClick = {id:hit.ref.id, x:event.clientX, y:event.clientY, pointer:event.pointerId};
+  });
+  canvas.addEventListener("pointerup", event => {
+    const click = bedClick; bedClick = null;
+    if (!click || click.pointer !== event.pointerId || Math.hypot(event.clientX-click.x,event.clientY-click.y)>5) return;
+    openPlantingWorkspace(three.state, click.id);
+    hideFeatureHover(hoverCard);
+    onStateChange();
+  });
+  canvas.addEventListener("pointercancel", () => {bedClick = null;});
 
   canvas.addEventListener("pointerdown", (event) => {
     if (event.button !== 0 || event.ctrlKey || three.state.walkCamera || three.state.activeTool === "select") return;
@@ -8068,6 +8173,23 @@ function createThreeScene(host, state, onViewChange = () => {}, options = {}) {
 }
 
 function syncThreeScene(three, state) {
+  const nextBed = activeBed(state);
+  const previousFrame = three.coordinateFrame;
+  const nextFrame = {mode:state.viewMode, bed:nextBed ? {...nextBed} : null, parcel:state.activeParcelId};
+  if (previousFrame && previousFrame.parcel === nextFrame.parcel && previousFrame.mode !== nextFrame.mode) {
+    const bed = nextFrame.mode === "bed" ? nextFrame.bed : previousFrame.bed;
+    if (bed) {
+      const toBed = nextFrame.mode === "bed", scale = toBed ? .055/.022 : .022/.055;
+      const angle = (bed.rotation || 0) * Math.PI / 180 * (toBed ? 1 : -1);
+      const offset = new THREE.Vector3(bed.x*.022,0,bed.y*.022);
+      if (toBed) three.camera.position.sub(offset);
+      three.camera.position.applyAxisAngle(new THREE.Vector3(0,1,0),angle).multiplyScalar(scale);
+      three.camera.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),angle));
+      if (!toBed) three.camera.position.add(offset);
+    }
+  }
+  if (!previousFrame || previousFrame.parcel !== nextFrame.parcel) three.controls.snap();
+  three.coordinateFrame = nextFrame;
   three.state = state;
   disposeGroup(three.group);
   three.group.clear();
@@ -8140,7 +8262,7 @@ function syncThreeCamera(three, state) {
   three.controls.orbit.phi = THREE.MathUtils.degToRad(Math.max(5, pitch));
   three.controls.orbit.radius = clamp(radius * 1.08, 0.08, 100000);
   three.camera.near = state.walkCamera ? unit : Math.max(0.01, three.controls.orbit.radius / 2000);
-  three.camera.far = Math.max(100, three.controls.orbit.radius * 8);
+  three.camera.far = Math.max(100, three.controls.orbit.radius * 8, three.camera.position.distanceTo(three.controls.target) * 2);
   three.camera.updateProjectionMatrix();
   three.controls.update();
   if (three.sun) {
