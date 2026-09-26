@@ -25,3 +25,5 @@ Provider-specific extraction remains outside the core. Extensions can supply nor
 Set `VEGGIE_FARM_DATA_DIR` to an existing absolute path outside the source directory. Run `node scripts/import-private-garden.mjs backup.json project-name` to validate and store a new project backup. Existing files are never replaced. The browser loads the chosen file through Studio's import control; it cannot automatically read that directory. No directory is mounted into the static web server. The import command stores files with owner-only permissions where supported.
 
 See the [worked extension walkthrough](extension-walkthrough.md), [Studio integration](studio-integration.md), and [two-repository workflow](community-workflow.md) for concrete examples and operator steps.
+
+See the [garden GIS layer model](garden-layer-model.md) for spatial identity, coordinates, thematic groups and renderer boundaries.

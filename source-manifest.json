@@ -81,8 +81,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6716,
-      "sha256": "62e4804134b59cc212d6246eb681f12d495c9be297e86d040ed1c2ea2a636a13",
+      "bytes": 6879,
+      "sha256": "a0a45a2343902a9d2cab32dfbeff36b451cad441f402dece2907aa0223faebfe",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -315,8 +315,8 @@
     },
     {
       "path": "docs/architecture/extension-contracts.md",
-      "bytes": 3021,
-      "sha256": "00df3f1960e2f84d46fd70cea781f8b52f1d21c8051b74cbe06834dac86e42a5",
+      "bytes": 3154,
+      "sha256": "ef155b0fbb252cd043209c95c7d2df75bcd5ef61005e29e599906d7f2189c619",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
@@ -324,6 +324,12 @@
       "bytes": 4947,
       "sha256": "3cbefc93587fb0b09578bd7e21bc09f585743cc5a35dc9199e5993dcae032dbe",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
+    },
+    {
+      "path": "docs/architecture/garden-layer-model.md",
+      "bytes": 5011,
+      "sha256": "18d0020adfa9230f0311a40e07dcdb079de08c24c9af3a2408398ee7019626db",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "docs/architecture/media.md",
