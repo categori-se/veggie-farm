@@ -357,8 +357,8 @@
     },
     {
       "path": "docs/architecture/studio-navigation.md",
-      "bytes": 2504,
-      "sha256": "bacaf04955896a471e5b7ddb031680df5e5ab1359871080a0edb6064ce9f97d6",
+      "bytes": 4234,
+      "sha256": "ee1fe25421b146f1763b476d27046af0a0a5a893320b5b0742866319f8fb4a4d",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -885,8 +885,8 @@
     },
     {
       "path": "scripts/lib/site-shell.mjs",
-      "bytes": 5031,
-      "sha256": "6c46314d4488be05a4426ce4cb9827c8aca16c406c40a0cca4e08532d260c6b7",
+      "bytes": 5084,
+      "sha256": "b7d1c6896cbb83139d3cd19495fd9775b802f6bcb2f05de214bedecbfcfd90de",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1065,8 +1065,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 496043,
-      "sha256": "ff526b773e4d80d05f139abb1497347c515c6b05d22ab14cf696d420affb7523",
+      "bytes": 506689,
+      "sha256": "fad9f69039beb079c9e330c2e99e663c7577ef254f33517534ec57a8a8ad504a",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1131,8 +1131,8 @@
     },
     {
       "path": "src/components/plant-explorer.js",
-      "bytes": 13301,
-      "sha256": "3d00a98b033da11663eef2f9cf8496f1e5ccb2c70fad0a6005daebde50a6d51a",
+      "bytes": 13400,
+      "sha256": "f4cf76ccc9e41d572cfb7d6111c1cc02119a8a35b04bea94dd4b973563cab948",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1155,8 +1155,8 @@
     },
     {
       "path": "src/components/plant-type-gallery.js",
-      "bytes": 2117,
-      "sha256": "560e77dfa996cca6ab8720b28e6c4d23ebfd4efb91a9771bfa8a3e06aca9a47f",
+      "bytes": 3117,
+      "sha256": "d4e924f0b01d529436457a99a4909c12329fea32b445743ca4ea96261ab5f213",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2667,8 +2667,8 @@
     },
     {
       "path": "src/lib/plants/photoTypes.js",
-      "bytes": 1622,
-      "sha256": "5ae1dddd1a0789667563d9dbd91e187657e3e415ff6cbec1006f6ff68528a210",
+      "bytes": 1824,
+      "sha256": "9f33dc1accd3608b31bdb5bb8f66cbea3c15f3443a225472174b8a92c66da246",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2949,8 +2949,8 @@
     },
     {
       "path": "src/styles/navigation.css",
-      "bytes": 2681,
-      "sha256": "14a49ac1a36e2137065dc4c99487d0b1e75d40c501e490ad77babb5059bad2b3",
+      "bytes": 3102,
+      "sha256": "260d7f7bd206d6e8bac252cc6247dc1f9650f5546a4e0466e68ee9efcf612ae4",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3084,6 +3084,12 @@
       "bytes": 3530,
       "sha256": "7f6f85710413592b4ab542ab28290697227285d85a930ec579ee621b64e681cc",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/cameraOrientation.test.mjs",
+      "bytes": 2976,
+      "sha256": "6e9a497efa21d04ab299018f32fd1d11e5f73ca9cf2fc6888103e9972d1e0066",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/catalog-editorial.test.mjs",

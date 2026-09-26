@@ -6,8 +6,8 @@ to zoom, the north arrow to reset bearing, and the fit buttons to recover the
 parcel, mapped features or selection. On desktop, Ctrl-drag or right-drag changes
 bearing and pitch; middle-drag pans even while an editing tool is selected.
 
-The same camera controls serve the map, 2D and 3D views. These are orbit/plan
-cameras, not a first-person walking simulation. Garden geometry is separate
+The same camera controls serve the map, 2D and 3D views. Aerial views use orbit/plan
+cameras; the eye-level walking preview is described below. Garden geometry is separate
 from camera position. Cameras reset to the parcel on reload; bed camera state
 is scoped to the bed.
 
@@ -43,3 +43,30 @@ set `PLAYWRIGHT_MODULE` and `CHROMIUM_PATH` if these are outside the repository.
 A future walkthrough camera should retain these explicit editing boundaries,
 provide an obvious way back to an overhead view, and keep height/perspective
 changes separate from tree, bed and path geometry.
+
+## Structural planting palette and camera
+
+Open **Canopy**, choose Deciduous tree, Evergreen tree, Shrub, Hedge mass or
+Canopy area, then click the map. The inspector edits that parcel-space object;
+Escape cancels placement. Default sizes and heights are illustrative estimates,
+not species identification or measured observations. Hedge masses are area
+placeholders; they do not trace a hedge line. This compact select-and-place
+workflow draws interaction inspiration from [Sweet Home 3D](https://www.sweethome3d.com/SweetHome3DJSOnline.jsp), without importing its code or model catalog.
+
+**Camera** starts collapsed. Open it for heading, tilt, north/overhead reset,
+fit controls and **Save 3D image** (PNG). The 2D plan and aerial 3D camera share
+heading and garden coordinates; the perspective projection changes depth, not
+handedness. A projection regression test covers seven compass headings.
+
+Choose **Walk at eye level** in the 3D angle selector to land at the current
+view center. Drag to look; with the canvas focused, W/S or up/down steps four
+feet, A/D or left/right turns. Touch users can open Camera for step/turn buttons.
+Choose Oblique/Overhead/Low angle to return to orbit; Escape on the canvas also
+exits walking. This is a flat-surface 5½-foot eye-height preview, bounded by the
+parcel view extent, without obstacle collision or terrain following. It does
+not alter garden records. Walking is for garden context; entering a bed view
+or another garden exits it.
+
+The Studio brand and **← veggie.farm** return to the gardening resource. The
+resource header features **Studio** on desktop and directly in mobile navigation.
+Self-hosted community builds use local paths for both destinations.

@@ -668,11 +668,23 @@ export function gardenPlanner(options = {}) {
       <button data-view-nav="pan" type="button" aria-label="Pan mode — move the view without editing" title="Pan mode: drag anywhere without moving garden elements">Pan</button>
       <button data-view-nav="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
       <button data-view-nav="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
-      <button data-view-nav="reset-bearing" type="button" aria-label="Reset map bearing to north" title="Reset bearing to north"><span data-role="view-compass" aria-hidden="true">↑</span></button>
-      <button data-view-nav="fit-parcel" type="button" aria-label="Fit the full estate or parcel" title="Fit estate / parcel">◇</button>
-      <button data-view-nav="fit-plan" type="button" aria-label="Fit mapped garden features" title="Fit mapped plan">▦</button>
-      <button data-view-nav="fit-selection" type="button" aria-label="Fit selected bed or plant" title="Fit selection">⌖</button>
-      <small data-role="view-navigation-status"></small>
+      <details class="camera-panel"><summary>Camera</summary><div class="camera-panel-body">
+        <button data-view-nav="north-up" type="button" aria-label="Reset north and overhead"><span data-role="view-compass" aria-hidden="true">↑</span> North / overhead</button>
+        <label>Heading <input data-camera="bearing" type="range" min="-180" max="180" step="1" aria-label="Camera heading in degrees"></label>
+        <label>Tilt <input data-camera="pitch" type="range" min="0" max="75" step="1" aria-label="Camera tilt in degrees"></label>
+        <small data-role="view-navigation-status"></small>
+        <button data-view-nav="fit-parcel" type="button">Fit garden</button>
+        <button data-view-nav="fit-plan" type="button">Fit features</button>
+        <button data-view-nav="fit-selection" type="button">Fit selection</button>
+        <button data-view-nav="capture" type="button">Save 3D image</button>
+        <small data-role="capture-status" role="status"></small>
+        <div class="walk-buttons" data-role="walk-controls" hidden>
+          <button data-view-nav="walk-forward" type="button">Step forward</button><button data-view-nav="walk-back" type="button">Step back</button>
+          <button data-view-nav="walk-left" type="button">Turn left</button><button data-view-nav="walk-right" type="button">Turn right</button>
+        </div>
+        <p>Drag to pan. Ctrl/right-drag rotates and tilts. On touch, use these sliders and +/−. Walk uses a flat surface at 5½ ft eye height; no obstacle collision. Image captures are illustrative, not measured sunlight.</p>
+        <button data-view-nav="close-camera" type="button">Close camera controls</button>
+      </div></details>
     </div>
     <div class="view-gesture-hint">Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate</div>
   `;
@@ -806,6 +818,14 @@ export function gardenPlanner(options = {}) {
 
           <section class="planner-section tool-panel" data-tool-panel="vegetation">
             <div class="section-heading"><span>Site trees & vegetation</span><span class="section-count" data-role="vegetation-count"></span></div>
+            <div class="planting-palette" aria-label="Structural planting palette">
+              <button type="button" data-planting="tree"><span aria-hidden="true">♣</span>Deciduous tree</button>
+              <button type="button" data-planting="evergreen"><span aria-hidden="true">▲</span>Evergreen tree</button>
+              <button type="button" data-planting="shrub"><span aria-hidden="true">●</span>Shrub</button>
+              <button type="button" data-planting="hedge"><span aria-hidden="true">▰</span>Hedge mass</button>
+              <button type="button" data-planting="canopy"><span aria-hidden="true">♣♣</span>Canopy area</button>
+            </div>
+            <p>Choose a form, then click the map to place it. Sizes are editable planning estimates; species is unspecified. Hedge masses are area placeholders, not traced hedge lines.</p>
             <div class="vegetation-list" data-role="vegetation-list"></div>
             <button data-action="add-vegetation" type="button">+ Plan a tree</button>
             <button data-action="mark-tree" type="button">Mark existing tree on map</button>
@@ -957,7 +977,7 @@ export function gardenPlanner(options = {}) {
             <section class="planner-view three-d-view">
               <div class="view-heading">
                 <span>3D garden · illustrative heights</span>
-                <select data-role="camera-angle" aria-label="3D viewing angle"><option value="60">Oblique</option><option value="0">Overhead</option><option value="75">Low angle</option></select>
+                <select data-role="camera-angle" aria-label="3D viewing angle"><option value="60">Oblique</option><option value="0">Overhead</option><option value="75">Low angle</option><option value="walk">Walk at eye level</option></select>
                 <span data-role="three-status">WebGL</span>
               </div>
               ${viewNavigationMarkup}
@@ -1117,6 +1137,7 @@ export function gardenPlanner(options = {}) {
     },
     onPlan: id => {
       selectGardenFeature(state,"bed",id);
+      state.walkCamera = null;
       state.viewMode = "bed";
       if (state.viewPresentation === "map") state.viewPresentation = "2d";
       state.activeTool = "beds";state.inspectorOpen = false;state.toolDrawerOpen = false;
@@ -1150,7 +1171,7 @@ export function gardenPlanner(options = {}) {
       event.preventDefault(); event.stopImmediatePropagation(); renderAll();
     }
   }, true);
-  setupControls(refs, state, () => renderAll());
+  setupControls(refs, state, () => renderAll(), renderSharedViews);
   setupActions(refs, state, () => renderAll());
   const accountPanel = plannerAccount({
     ...(options.accountAdapter || {}),
@@ -2507,6 +2528,7 @@ function syncActiveParcelWorkspace(state) {
 
 function applyParcelWorkspace(state, workspace) {
   const normalized = normalizeParcelWorkspace(workspace);
+  state.walkCamera = null;
   state.activeParcelId = normalized.id;
   state.property = structuredCloneCompat(normalized.property);
   state.activeBedId = normalized.activeBedId;
@@ -3210,7 +3232,18 @@ function closePlannerPanel(refs, state, renderAll, panel) {
   (tool || refs.toolButtons[0]).focus({preventScroll: true});
 }
 
-function setupControls(refs, state, renderAll) {
+function setupControls(refs, state, renderAll, renderSharedViews = renderAll) {
+  for (const slider of refs.root.querySelectorAll('[data-camera]')) {
+    slider.addEventListener('input', () => {
+      setPlanningOrientation(state, slider.dataset.camera === 'bearing' ? Number(slider.value) : planningBearing(state), slider.dataset.camera === 'pitch' ? Number(slider.value) : planningPitch(state));
+      renderSharedViews();
+    });
+    slider.addEventListener('change', renderAll);
+  }
+  refs.root.addEventListener('keydown', event => {
+    const panel=event.target.closest?.('.camera-panel[open]');
+    if(event.key==='Escape' && panel){event.preventDefault();event.stopImmediatePropagation();panel.open=false;panel.querySelector('summary').focus();}
+  },true);
   // Inspection is view-only: fading overlays neither changes geometry nor
   // reloads imagery. Fully hidden features must not intercept map clicks.
   refs.featureOpacity.addEventListener("input", () => {
@@ -3249,8 +3282,12 @@ function setupControls(refs, state, renderAll) {
     });
   }
 
+  for(const button of refs.root.querySelectorAll('[data-planting]'))button.addEventListener('click',()=>{
+    state.pendingPlantingKind=button.dataset.planting;state.drawMode='planting-point';state.viewMode='garden';state.viewPresentation='map';state.toolDrawerOpen=false;state.inspectorOpen=false;renderAll();refs.parcelSvg.focus({preventScroll:true});
+  });
   for (const button of refs.presentationButtons) {
     button.addEventListener("click", () => {
+      state.walkCamera = null;
       state.viewPresentation = normalizeViewPresentation(button.dataset.presentation);
       if (["3d", "split"].includes(state.viewPresentation) && planningPitch(state) < 55) {
         setPlanningOrientation(state, planningBearing(state) || 30, 60);
@@ -3260,7 +3297,10 @@ function setupControls(refs, state, renderAll) {
   }
 
   refs.root.querySelector('[data-role="camera-angle"]').addEventListener("change", event => {
-    setPlanningOrientation(state, planningBearing(state), Number(event.target.value));
+    if(event.target.value==='walk'){
+      state.viewMode='garden';state.viewPresentation='3d';state.activeTool='select';state.toolDrawerOpen=false;state.inspectorOpen=false;
+      const bounds=parcelViewportBounds(state);state.walkCamera={x:bounds.x+bounds.width/2,y:bounds.y+bounds.height/2,look:0};
+    }else{state.walkCamera=null;setPlanningOrientation(state, planningBearing(state), Number(event.target.value));}
     renderAll();
   });
   const inspectorId = `inspector-${crypto.randomUUID()}`;
@@ -3441,6 +3481,16 @@ function setupActions(refs, state, renderAll) {
   for (const button of refs.viewNavigationButtons) {
     button.addEventListener("click", () => {
       const action = button.dataset.viewNav;
+      if(action==='close-camera'){const panel=button.closest('details');panel.open=false;panel.querySelector('summary').focus();return;}
+      if(action==='north-up'){state.walkCamera=null;setPlanningOrientation(state,0,0);renderAll();return;}
+      if(action.startsWith('walk-')){moveWalkCamera(state,action.slice(5));renderAll();return;}
+      if(action==='capture'){
+        const canvas=refs.root.querySelector('.three-canvas'),status=button.closest('details').querySelector('[data-role="capture-status"]');
+        try{if(!canvas)throw Error('3D is unavailable');canvas.toBlob(blob=>{
+          if(!blob){status.textContent='Image capture unavailable.';return;}
+          const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='garden-view.png';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent='3D image downloaded.';
+        },'image/png');}catch{status.textContent='Image capture unavailable in this browser.';}return;
+      }
       if (action === "pan") {
         state.activeTool = "select";
         state.toolDrawerOpen = false;
@@ -3847,11 +3897,12 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
   // Capture placement before feature-selection handlers; an existing crown or
   // mapped polygon must not steal the click intended for a new observation.
   refs.parcelSvg.addEventListener("click", event => {
-    if (state.drawMode !== "tree-point") return;
+    if (!["tree-point","planting-point"].includes(state.drawMode) || refs.parcelSvg.dataset.panMoved === "true") return;
     event.preventDefault();
     event.stopImmediatePropagation();
     const [x, y] = pointerInSharedWorld(event, refs.parcelSvg);
-    addVegetation(state, {x, y});
+    if(state.drawMode==='planting-point')addPlannedPlanting(state,state.pendingPlantingKind,{x,y});
+    else addVegetation(state, {x, y});
     state.drawMode = null;
     openInspector(state, "vegetation");
     renderAll();
@@ -3915,6 +3966,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
   svg.on("pointerdown", (event) => {
     if (panState) return;
     suppressNextParcelClick = false;
+    refs.parcelSvg.dataset.panMoved="false";
     const rotating = event.ctrlKey || event.button === 2;
     if (!rotating && event.button !== 0 && event.button !== 1) return;
     const targetFeatureType = svgFeatureTypeFromTarget(event.target);
@@ -3941,6 +3993,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
     const dy = event.clientY - panState.startClientY;
     if (!panState.moved && Math.hypot(dx, dy) < 4) return;
     panState.moved = true;
+    refs.parcelSvg.dataset.panMoved="true";
     suppressNextParcelClick = true;
     event.preventDefault();
     if (panState.rotating) {
@@ -4034,8 +4087,17 @@ function renderControls(refs, state) {
   refs.root.dataset.viewPresentation = state.viewPresentation;
   refs.root.dataset.viewMode = state.viewMode;
   refs.root.dataset.activeTool = state.activeTool;
+  for(const hint of refs.root.querySelectorAll('.view-gesture-hint'))hint.textContent=state.walkCamera?'Walk · drag to look · W/S step · A/D turn · Camera for touch controls · Escape exits':'Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate';
+  for(const controls of refs.root.querySelectorAll('[data-role="walk-controls"]'))controls.hidden=!state.walkCamera;
+  if(state.walkCamera)refs.root.querySelector('[data-role="camera-angle"]').value='walk';
+  for(const slider of refs.root.querySelectorAll('[data-camera]')){
+    slider.disabled=Boolean(state.walkCamera)&&slider.dataset.camera==='pitch';
+    if(slider!==document.activeElement)slider.value=String(slider.dataset.camera==='bearing'?normalizeViewBearing(planningBearing(state)):planningPitch(state));
+    slider.setAttribute('aria-valuetext',slider.value+' degrees');
+  }
+  for(const capture of refs.root.querySelectorAll('[data-view-nav="capture"]'))capture.disabled=!['3d','split'].includes(state.viewPresentation);
   const cameraAngle = refs.root.querySelector('[data-role="camera-angle"]');
-  cameraAngle.value = String(planningPitch(state) < 25 ? 0 : planningPitch(state) > 67 ? 75 : 60);
+  cameraAngle.value = state.walkCamera ? "walk" : String(planningPitch(state) < 25 ? 0 : planningPitch(state) > 67 ? 75 : 60);
   for (const button of refs.viewNavigationButtons) {
     if (button.dataset.viewNav === "pan") button.setAttribute("aria-pressed", String(state.activeTool === "select"));
   }
@@ -4175,10 +4237,10 @@ function renderControls(refs, state) {
   refs.actions.addStructure.disabled = !siteEditable;
   refs.actions.addVegetation.disabled = !vegetationEditable;
   refs.root.querySelector('[data-action="mark-tree"]').disabled = !vegetationEditable;
-  const markingTree = state.drawMode === "tree-point";
+  const markingTree = ["tree-point", "planting-point"].includes(state.drawMode);
   refs.root.querySelector('[data-action="cancel-tree"]').hidden = !markingTree;
   refs.root.querySelector('[data-role="tree-placement-status"]').hidden = !markingTree;
-  if (markingTree) refs.editModeLabel.textContent = "Click map to mark a tree · Escape cancels";
+  if (markingTree) refs.editModeLabel.textContent = "Click map to place planting · Escape cancels";
   refs.actions.addSelected.disabled = !plantingsEditable;
   refs.actions.fillBed.disabled = !plantingsEditable;
   refs.actions.fillBed.textContent = placementsForBed(state, bed.id).length ? "Replace bed planting…" : "Fill bed";
@@ -7464,6 +7526,14 @@ function updateVegetationField(vegetation, input) {
   if (field === "kind" && input.value === "tree") syncTreePointGeometry(vegetation);
 }
 
+function moveWalkCamera(state, action) {
+  const walk=state.walkCamera;if(!walk)return;
+  if(action==='left'||action==='right'){setPlanningOrientation(state,planningBearing(state)+(action==='left'?-15:15),planningPitch(state));return;}
+  const angle=planningBearing(state)*Math.PI/180,step=action==='back'?-48:48,bounds=parcelViewBounds(state);
+  walk.x=clamp(walk.x+Math.sin(angle)*step,bounds.x,bounds.x+bounds.width);
+  walk.y=clamp(walk.y-Math.cos(angle)*step,bounds.y,bounds.y+bounds.height);
+}
+
 function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   const target = new THREE.Vector3(0, 0.25, 0);
   const orbit = {
@@ -7474,7 +7544,19 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
     gesture: null
   };
 
+  canvas.tabIndex=0;canvas.setAttribute('aria-label','Garden 3D view. In Walk mode, W/S or up/down steps, A/D or left/right turns. Drag to look. Escape returns overhead.');
+  canvas.addEventListener('keydown',event=>{
+    if(!state.walkCamera||event.altKey||event.ctrlKey||event.metaKey)return;
+    const action={w:'forward',s:'back',a:'left',d:'right',ArrowUp:'forward',ArrowDown:'back',ArrowLeft:'left',ArrowRight:'right'}[event.key];
+    if(event.key==='Escape'){state.walkCamera=null;setPlanningOrientation(state,planningBearing(state),60);event.preventDefault();onViewChange();}
+    else if(action){event.preventDefault();event.stopImmediatePropagation();moveWalkCamera(state,action);onViewChange();}
+  });
   const update = () => {
+    if(state.walkCamera){
+      const walk=state.walkCamera,unit=threeViewUnit(state),angle=planningBearing(state)*Math.PI/180,look=(walk.look||0)*Math.PI/180;
+      camera.position.set(walk.x*unit,66*unit,walk.y*unit);
+      camera.lookAt(camera.position.x+Math.sin(angle)*Math.cos(look),camera.position.y+Math.sin(look),camera.position.z-Math.cos(angle)*Math.cos(look));return;
+    }
     orbit.phi = clamp(orbit.phi, 0.08, 1.4);
     orbit.radius = clamp(orbit.radius, 0.08, 100000);
     const sinPhi = Math.sin(orbit.phi);
@@ -7489,6 +7571,7 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   canvas.addEventListener("pointerdown", (event) => {
     const rotating = event.ctrlKey || event.button === 2;
     if (!rotating && event.button !== 0 && event.button !== 1) return;
+    canvas.focus({preventScroll:true});
     orbit.dragging = true;
     orbit.gesture = {
       pointerId: event.pointerId,
@@ -7496,6 +7579,7 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
       startX: event.clientX,
       startY: event.clientY,
       startBearing: normalizeViewBearing(planningBearing(state)),
+      startLook: state.walkCamera?.look || 0,
       startPitch: normalizeViewPitch(planningPitch(state)),
       startViewport: {...planViewBounds(state)}
     };
@@ -7507,7 +7591,10 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
     if (!orbit.dragging || !orbit.gesture || event.pointerId !== orbit.gesture.pointerId) return;
     const dx = event.clientX - orbit.gesture.startX;
     const dy = event.clientY - orbit.gesture.startY;
-    if (orbit.gesture.rotating) {
+    if(state.walkCamera){
+      setPlanningOrientation(state,orbit.gesture.startBearing+dx*.25,planningPitch(state));
+      state.walkCamera.look=clamp(orbit.gesture.startLook-dy*.2,-60,60);
+    } else if (orbit.gesture.rotating) {
       setPlanningOrientation(state,orbit.gesture.startBearing+dx*0.35,orbit.gesture.startPitch-dy*0.25);
     } else {
       panPlanningViewport(
@@ -7533,7 +7620,8 @@ function createOrbitCamera(camera, canvas, state, onViewChange = () => {}) {
   canvas.addEventListener("pointercancel", stopDrag);
   canvas.addEventListener("wheel", (event) => {
     event.preventDefault();
-    zoomPlanningViewport(state, event.deltaY < 0 ? 0.82 : 1.22);
+    if(state.walkCamera)moveWalkCamera(state,event.deltaY<0?'forward':'back');
+    else zoomPlanningViewport(state, event.deltaY < 0 ? 0.82 : 1.22);
     onViewChange();
   }, {passive: false});
   canvas.addEventListener("dblclick", (event) => {
@@ -7661,7 +7749,7 @@ function setupThreeFeatureInteractions(three, options = {}) {
   let drag = null;
 
   canvas.addEventListener("pointerdown", (event) => {
-    if (event.button !== 0 || event.ctrlKey || three.state.activeTool === "select") return;
+    if (event.button !== 0 || event.ctrlKey || three.state.walkCamera || three.state.activeTool === "select") return;
     const hit = threeRaycastFeature(three, event);
     if (!hit) return;
     const feature = threeFeatureEntity(three.state, hit.ref);
@@ -7925,10 +8013,11 @@ function syncThreeCamera(three, state) {
   const pitch = normalizeViewPitch(planningPitch(state));
 
   three.controls.target.set(centerX * unit, 0.12, centerY * unit);
-  three.controls.orbit.theta = THREE.MathUtils.degToRad(bearing);
+  // SVG rotates the ground by -bearing; the orbit must use the opposite sign.
+  three.controls.orbit.theta = THREE.MathUtils.degToRad(-bearing);
   three.controls.orbit.phi = THREE.MathUtils.degToRad(Math.max(5, pitch));
   three.controls.orbit.radius = clamp(radius * 1.08, 0.08, 100000);
-  three.camera.near = Math.max(0.01, three.controls.orbit.radius / 2000);
+  three.camera.near = state.walkCamera ? unit : Math.max(0.01, three.controls.orbit.radius / 2000);
   three.camera.far = Math.max(100, three.controls.orbit.radius * 8);
   three.camera.updateProjectionMatrix();
   three.controls.update();
@@ -7942,6 +8031,8 @@ function syncThreeCamera(three, state) {
 
   const canvas = three.renderer?.domElement;
   if (canvas) {
+    canvas.dataset.cameraMode = state.walkCamera ? 'walk' : 'orbit';
+    canvas.dataset.walkPosition = state.walkCamera ? `${round(state.walkCamera.x)},${round(state.walkCamera.y)}` : '';
     canvas.dataset.viewCenter = `${round(centerX)},${round(centerY)}`;
     canvas.dataset.viewZoom = String(parcelZoomLevel(state));
     canvas.dataset.viewBearing = String(round(bearing));
@@ -8906,6 +8997,14 @@ function addStructure(state) {
   state.structures.push(structure);
   state.selectedStructureId = structure.id;
   state.selectedPlacementId = null;
+}
+
+function addPlannedPlanting(state,form,point){
+  const presets={tree:['Deciduous tree','tree','deciduous',240,240,20],evergreen:['Evergreen tree','tree','evergreen',180,180,20],shrub:['Shrub','shrub','shrub',72,72,4],hedge:['Hedge mass','shrub','shrub',144,36,6],canopy:['Canopy area','canopy','mixed',360,240,20]};
+  const [name,kind,canopyClass,width,height,rise]=presets[form]||presets.tree;
+  const item={id:uniqueVegetationId(state),name,kind,canopyClass,x:point.x,y:point.y,width,height,heightEstimateFeet:rise,confidence:'low',plantId:null,source:'User-planned structural planting',notes:'Illustrative form and dimensions, not a measured observation. Choose species and adjust sizes in the inspector.'};
+  if(kind==='tree')Object.assign(item,{geometryRepresentation:'point',localGeometry:{type:'Point',coordinates:[point.x,point.y]},crownWidthFeet:width/12,crownDepthFeet:height/12});
+  const planted=normalizeVegetation([item])[0];state.vegetation.push(planted);state.selectedVegetationId=planted.id;state.selectedStructureId=null;state.selectedPlacementId=null;
 }
 
 function addVegetation(state, observedPoint = null) {
@@ -12662,6 +12761,20 @@ function injectStyles() {
 
     [data-role="camera-angle"] {min-height: 36px; padding: 4px 8px; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 4px;}
     @media (max-width: 920px) {[data-role="camera-angle"] {min-height:44px;}}
+    .view-navigation {display:flex; width:auto; gap:2px;}
+    .view-navigation > button {border:0;}
+    .camera-panel > summary {padding:8px; cursor:pointer; font-size:.8rem; min-height:32px; box-sizing:border-box;}
+    .camera-panel-body {position:absolute;right:0;top:calc(100% + 4px);width:min(260px,calc(100vw - 40px));max-height:55svh;overflow:auto;padding:10px;box-sizing:border-box;border:1px solid var(--line-strong);border-radius:6px;background:var(--panel);box-shadow:0 6px 18px var(--shadow-soft);display:grid;gap:6px;}
+    .view-navigation .camera-panel-body button {width:100%;height:auto;min-height:36px;font-size:.8rem;padding:5px;}
+    .view-navigation .camera-panel-body small {position:static;min-width:0;border:0;white-space:normal;}
+    .camera-panel-body label {display:grid;gap:4px;font-size:.8rem;}
+    .camera-panel-body input {width:100%;min-height:32px;}
+    .camera-panel-body p {font-size:.72rem;line-height:1.4;margin:0;}
+    .walk-buttons:not([hidden]) {display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+    .planting-palette {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:10px;}
+    .planting-palette button {min-height:54px;white-space:normal;font-size:.85rem;}
+    .planting-palette button span {display:block;font-size:1.4rem;}
+    @media (max-width:920px){.camera-panel>summary{min-height:44px;display:flex;align-items:center;}.view-navigation .camera-panel-body button,.camera-panel-body input{min-height:44px;}}
     @media (max-width: 560px) {
       .garden-subtitle,
       .active-bed-command,

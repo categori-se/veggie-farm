@@ -22,3 +22,7 @@
 @media(max-width:480px){.vf-mobile-navigation>a:nth-child(2){display:none}.vf-mobile-navigation{gap:10px}.vf-brand small{display:none}}
 
 @media(max-width:360px){.vf-mobile-navigation>a{display:none}}
+
+/* Keep the planner discoverable, including narrow mobile navigation. */
+.vf-nav a.vf-studio-link {border:1px solid var(--green);border-radius:6px;background:var(--panel);color:var(--green);font-weight:750;padding:0 10px;min-height:36px;}
+@media(max-width:780px){.vf-nav a.vf-studio-link{display:flex;min-height:44px;padding-inline:7px;}.vf-mobile-navigation{gap:6px;}.vf-mobile-navigation>a:first-child{display:none;}}
