@@ -57,8 +57,8 @@
     },
     {
       "path": "ACKNOWLEDGMENTS.md",
-      "bytes": 1271,
-      "sha256": "6930ddab2ff9f0a83ebeb1a9e87118af0c36b77550b4ce38349c896b96e67a21",
+      "bytes": 1541,
+      "sha256": "8904f9b93d4f76d92d32eee7ecd90c385271407821e9093c686d19718ac21503",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
     },
     {
@@ -360,6 +360,12 @@
       "bytes": 2946,
       "sha256": "92fdbfd9715e2ae1a216d8c63585a19c65884dfed69d86168341b1f1780edfda",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
+    },
+    {
+      "path": "docs/architecture/seasonal-sunlight.md",
+      "bytes": 3722,
+      "sha256": "0900753ccd9035b4a0ed9adaf5d03817a992eb95658d846d1fc4174f8723ceae",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "docs/architecture/studio-integration.md",
@@ -1089,8 +1095,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 531396,
-      "sha256": "1a2b9ab75e448bbb82c4df24cbadd44b80bb48c29c4e955c12323b525844e356",
+      "bytes": 534364,
+      "sha256": "6b34f1cc81acabd6dee1c53f5a440fb29f7fbdfcf7269c18ee19d439fdd7b6cc",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1140,6 +1146,12 @@
       "bytes": 3776,
       "sha256": "465de940695d6ed8b9df56a13164f7d8c5def3ee6388868a3a15f78efcf76c80",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/planner-sun-preview.js",
+      "bytes": 9068,
+      "sha256": "84fe2881f65eb4a4b38bcedcf0de99620192ef3699b0505052b82ea88774a070",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/planner-time-preview.js",
@@ -2906,6 +2918,24 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/spatial/solarExposure.js",
+      "bytes": 4282,
+      "sha256": "1bef130408d24d8540a8341da968435e30c48d9a1c4aad3c85d2752cf3d93375",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/lib/spatial/solarPreview.js",
+      "bytes": 3901,
+      "sha256": "77b14d221656e1d236bb72e7932de7beb08466fa2c80e096327e69fbb8b1fb52",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/lib/spatial/solarScene.js",
+      "bytes": 2043,
+      "sha256": "c744eee3ec3812d689225996bd4665753cbff42c649fdfe02275f6e7e3b814a5",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/spatial/spatialInterchange.js",
       "bytes": 28820,
       "sha256": "c5fedb4d9326696e0f5399210e09d32d3746cd92d28b78511dfeb489d9af8860",
@@ -2919,8 +2949,8 @@
     },
     {
       "path": "src/lib/spatial/treeObservation.js",
-      "bytes": 4251,
-      "sha256": "11d8566790bba9e49a077db138ee79a60e6e031028c7826312b41cb3dea1b872",
+      "bytes": 5948,
+      "sha256": "90e49e049761d1013c753c6f5b94eddca5aaa6c95490af369fa3ec4a5b96fae8",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3528,6 +3558,24 @@
       "bytes": 1604,
       "sha256": "243f6d66b4bc879ed21092c2492fccb60d04fba26e70e8e7f7f34845bfc67e64",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/solarExposure.test.mjs",
+      "bytes": 3608,
+      "sha256": "3a4b5fc1e2a8bac1d48436dd4ffb7bf99ecd92d52d7675409e35052cb47c797a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "tests/solarPreview.test.mjs",
+      "bytes": 2466,
+      "sha256": "6c13638c369c47b830963726c0e95221374a86c1dd208688f30fa5f74711d951",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "tests/solarScene.test.js",
+      "bytes": 1523,
+      "sha256": "311532bcf8f9d7e8558049a342461c1b01a72d30f263da63b274d9c456513036",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/sourceNoticeScope.test.mjs",

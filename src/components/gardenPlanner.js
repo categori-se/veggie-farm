@@ -1,3 +1,5 @@
+import {solarSceneDirection,solarScenePolygons,bedShadowPolygons} from "../lib/spatial/solarScene.js";
+import {plannerSunPreview} from "./planner-sun-preview.js";
 import {illustrativePlanting} from "../lib/spatial/illustrativePlanting.js";
 import {gardenResearch} from "../data/gardenResearch.js";
 import {visiblePlannedPlacements} from "../lib/garden/plannedOccupancy.js";
@@ -1107,6 +1109,9 @@ export function gardenPlanner(options = {}) {
   let previewGardenId=state.activeParcelId;
   const timePreview=plannerTimePreview({getBedName:id=>state.beds.find(b=>b.id===id)?.name || (id ? "Unknown bed" : "Outside a named bed"),getPlantName:id=>plantById(state,id)?.name || "Unidentified plant",getPlacements:()=>state.placements,getDate:()=>state.previewDate,onChange:date=>{state.previewDate=date;if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
   root.querySelector('[data-role="time-preview-host"]').append(timePreview.root);
+  const sunPreview=plannerSunPreview({getState:()=>state,onChange:()=>{if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
+  root.querySelector('[data-role="time-preview-host"]').append(sunPreview.root);
+
   let soilBoundaries=[],soilGardenId=state.activeParcelId;
   const soilPanel=mappedSoil({getLocation:()=>gardenSpatialReference(state.property).origin.coordinates,onBoundary:rows=>{soilBoundaries=rows;queueMicrotask(()=>renderSoilOverlay());},invalidation:options.invalidation});
   root.querySelector('[data-role="mapped-soil-host"]').append(soilPanel);
@@ -1138,6 +1143,8 @@ export function gardenPlanner(options = {}) {
     renderParcelMap(refs, state, renderAll);
     renderSoilOverlay();
     render2dPlan(refs, state, renderAll);
+    sunPreview.draw(refs.parcelSvg);
+    sunPreview.draw(refs.planSvg,state.viewMode === "bed" ? activeBed(state) : null);
     renderInspector(refs, state, renderAll, {preserveEditor});
     if (three) syncThreeScene(three, state);
     syncSelectedToolCard(refs, state);
@@ -1345,6 +1352,7 @@ export function gardenPlanner(options = {}) {
     three = createThreeScene(refs.threeHost, state, renderSharedViews, {
       ...options,
       onStateChange: renderAll,
+      getSolarPreview: sunPreview.sync,
       hoverCard: refs.featureHoverCard
     });
     renderAll();
@@ -8148,7 +8156,7 @@ function createThreeScene(host, state, onViewChange = () => {}, options = {}) {
   animate();
 
   const three = {
-    sun,
+    sun, hemi, getSolarPreview: options.getSolarPreview,
     scene,
     camera,
     renderer,
@@ -8236,6 +8244,47 @@ function syncThreeScene(three, state) {
   }
   syncThreeCamera(three, state);
   updateThreeModelStatus(three);
+  syncThreeSolar(three,state,unit);
+}
+
+function syncThreeSolar(three,state,unit){
+  const preview=three.getSolarPreview?.(),canvas=three.renderer.domElement;
+  const direction=solarSceneDirection(preview,state.viewMode==="bed"?(activeBed(state).rotation||0):0);
+  const enabled=Boolean(preview);
+  // Decorative models use generic heights. Their shadow maps must not be
+  // mistaken for entered-height estimates while the solar preview is enabled.
+  three.renderer.shadowMap.enabled=!enabled;three.sun.castShadow=!enabled;
+  canvas.dataset.solarMode=!enabled?'illustrative':direction?'calculated':'unavailable';
+  canvas.dataset.solarShadowPolygons='0';
+  if(!enabled){
+    const bounds=state.viewMode==="garden"?parcelViewportBounds(state):planViewBounds(state);
+    const center=three.controls.target,span=Math.max(bounds.width,bounds.height)*unit;
+    const distance=Math.max(10,span);
+    three.sun.intensity=2.4;
+    three.sun.target.position.copy(center);
+    three.sun.position.set(center.x-distance*.5, distance, center.z+distance*.4);
+    const shadow=three.sun.shadow;shadow.mapSize.set(1024,1024);
+    Object.assign(shadow.camera,{left:-distance,right:distance,top:distance,bottom:-distance,near:.1,far:distance*5});
+    shadow.camera.updateProjectionMatrix();shadow.bias=-0.0001;shadow.normalBias=.03;
+    delete canvas.dataset.solarDirection;return;
+  }
+  if(!direction){three.sun.intensity=0;delete canvas.dataset.solarDirection;return;}
+  const bounds=state.viewMode==="garden"?parcelViewportBounds(state):planViewBounds(state);
+  const x=state.viewMode==="bed"?0:(bounds.x+bounds.width/2)*unit,z=state.viewMode==="bed"?0:(bounds.y+bounds.height/2)*unit;
+  const distance=Math.max(10,Math.max(bounds.width,bounds.height)*unit);
+  three.sun.target.position.set(x,0,z);three.sun.position.set(x+direction.x*distance,direction.y*distance,z+direction.z*distance);
+  three.sun.intensity=direction.y>0?2.4:0;
+  canvas.dataset.solarDirection=[direction.x,direction.y,direction.z].map(v=>v.toFixed(5)).join(',');
+  const polygons=state.viewMode==="bed"?bedShadowPolygons(preview,activeBed(state)):solarScenePolygons(preview);
+  for(const points of polygons){
+    const shape=new THREE.Shape();shape.moveTo(points[0][0]*unit,-points[0][1]*unit);
+    for(const [px,py]of points.slice(1))shape.lineTo(px*unit,-py*unit);shape.closePath();
+    const mesh=new THREE.Mesh(new THREE.ShapeGeometry(shape),new THREE.MeshBasicMaterial({color:'#875be8',transparent:true,opacity:.32,side:THREE.DoubleSide,depthWrite:false}));
+    mesh.rotation.x=-Math.PI/2;mesh.position.y=state.viewMode==="bed"?.14:.022;mesh.renderOrder=10;mesh.name='solar-ground-shadow';
+    // Visual context only: never intercept object selection or dragging.
+    mesh.raycast=()=>{};three.group.add(mesh);
+  }
+  canvas.dataset.solarShadowPolygons=String(polygons.length);
 }
 
 function threeViewUnit(state) {
@@ -8265,13 +8314,7 @@ function syncThreeCamera(three, state) {
   three.camera.far = Math.max(100, three.controls.orbit.radius * 8, three.camera.position.distanceTo(three.controls.target) * 2);
   three.camera.updateProjectionMatrix();
   three.controls.update();
-  if (three.sun) {
-    const center=three.controls.target,distance=Math.max(10,Math.max(bounds.width,bounds.height)*unit);
-    three.sun.target.position.copy(center);three.sun.position.set(center.x-distance*.5,distance,center.z+distance*.4);
-    const shadow=three.sun.shadow;shadow.mapSize.set(1024,1024);
-    Object.assign(shadow.camera,{left:-distance,right:distance,top:distance,bottom:-distance,near:.1,far:distance*5});
-    shadow.camera.updateProjectionMatrix();shadow.bias=-.0001;shadow.normalBias=.03;
-  }
+
 
   const canvas = three.renderer?.domElement;
   if (canvas) {
