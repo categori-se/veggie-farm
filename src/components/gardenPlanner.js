@@ -1,3 +1,4 @@
+import {gardenPlantChoices} from "../lib/garden/gardenPlantChoices.js";
 import {duplicatePlanting} from "../lib/garden/duplicatePlanting.js";
 import {plantVisualSpec} from "../lib/plants/plantVisualSpec.js";
 import {renderPlantVisual2d} from "../lib/plants/plantVisual2d.js";
@@ -785,6 +786,8 @@ export function gardenPlanner(options = {}) {
             <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button><button type="button" data-action="garden-home">My garden · Log</button>
             <div class="section-heading"><span>Plant library</span><span class="section-count" data-role="plant-count"></span></div>
             <input class="search-input" data-role="plant-search" type="search" aria-label="Filter plants" placeholder="Filter plants">
+            <label>Show <select data-role="plant-library-scope" aria-label="Plant library scope"><option value="chosen">Plants in this garden</option><option value="all">All plants</option></select></label>
+            <p data-role="plant-choice-help" class="library-help"></p>
             <p class="library-help">Choose a plant and Add selected, or drag it into the bed. Existing plants stay locked until you choose Edit plants.</p>
             <div class="plant-list" data-role="plant-list"></div>
             <div class="drawer-action-row">
@@ -3961,6 +3964,7 @@ function setupPlantForm(refs, state, renderAll) {
 }
 
 function setupSearch(refs, state, renderPlantListOnly) {
+  refs.root.querySelector('[data-role="plant-library-scope"]').addEventListener("change", () => renderPlantListOnly());
   refs.plantSearch.addEventListener("input", () => renderPlantListOnly(refs, state, () => {}));
 }
 
@@ -4627,14 +4631,20 @@ function renderCartographicLegends(refs, state) {
 
 function renderPlantList(refs, state, renderAll) {
   const query = refs.plantSearch.value.trim().toLowerCase();
-  const plants = state.plants.filter((plant) => {
-    const haystack = `${plant.name} ${plant.group} ${plant.waterStyle} ${plant.soil}`.toLowerCase();
-    return haystack.includes(query);
-  });
+  const choices = gardenPlantChoices(state, query);
+  const scope = refs.root.querySelector('[data-role="plant-library-scope"]');
+  const plants = scope.value === "chosen" && choices.hasChoices ? choices.preferred : choices.all;
+  refs.root.querySelector('[data-role="plant-choice-help"]').textContent = choices.hasChoices
+    ? "Saved tray choices and plants already in this garden come first. Choose All plants to explore more."
+    : "Choose your first plants below, or bring a choice from Find Plants. Your garden’s choices will appear here.";
+
 
   refs.plantCount.textContent = `${plants.length}`;
   refs.plantList.innerHTML = "";
 
+  if (!plants.length) {
+    const empty=document.createElement("p");empty.textContent="No matching choices. Try All plants or change your search.";refs.plantList.append(empty);
+  }
   for (const plant of plants) {
     const button = document.createElement("button");
     button.className = "plant-option";
@@ -8961,7 +8971,7 @@ function openPlantGallery(root,state,getThree,renderAll) {
     dialog.querySelector('output').value=`${Math.round(scale*100)}%`;
     if(renderer){const w=preview.clientWidth,h=preview.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.render(scene,camera);}
   };
-  const filter=()=>{const q=dialog.querySelector('[data-search]').value.toLowerCase(),old=select.value||state.selectedPlantId;select.replaceChildren(...state.plants.filter(p=>p.name.toLowerCase().includes(q)).map(p=>new Option(p.name,p.id)));if([...select.options].some(o=>o.value===old))select.value=old;draw();};
+  const filter=()=>{const q=dialog.querySelector('[data-search]').value.toLowerCase(),old=select.value||state.selectedPlantId;select.replaceChildren(...gardenPlantChoices(state,q).all.map(p=>new Option(p.name,p.id)));if([...select.options].some(o=>o.value===old))select.value=old;draw();};
   dialog.querySelector('[data-search]').addEventListener('input',filter);select.addEventListener('change',draw);slider.addEventListener('input',draw);
   dialog.querySelector('[data-use]').addEventListener('click',()=>{if(!openPlantingWorkspace(state)){dialog.querySelector('[data-message]').textContent='Select or create a bed first.';return;}state.selectedPlantId=select.value;dialog.close();renderAll();});
   const resize=new ResizeObserver(draw);resize.observe(preview);

@@ -680,6 +680,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "docs/product/decision-led-gardening.md",
+      "bytes": 1971,
+      "sha256": "5bcd8978ed025720a5a5c1365b00dde395df33ee3f5df0600d1d0d4f964a058a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/product/garden-journey-goal.md",
       "bytes": 4565,
       "sha256": "e725436e729fa8f4ce6d7cd82e5cc429c3932a4b725ac57f9dd00b78e39927e1",
@@ -1197,8 +1203,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 563614,
-      "sha256": "3410b174d48b53557da77d700616242f0bbb5189e377f39ab6550b6b8a96b6b7",
+      "bytes": 564597,
+      "sha256": "bbc6a807e97bffc3bfae3b1d5b7b092c1bbeeca5b84546b28b3207e5d7810423",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2774,6 +2780,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "src/lib/garden/gardenPlantChoices.js",
+      "bytes": 790,
+      "sha256": "c1163d82aab4cb747d812df1d090d58b386f83c40f2abc428f2e02361721f3d0",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/gardenRecords.js",
       "bytes": 4409,
       "sha256": "b31556ab432f6b297bab118af14ebb085527d0ba44a1178d699e6a37b2ff1349",
@@ -3492,6 +3504,12 @@
       "bytes": 1462,
       "sha256": "84c8f141c7318f67fc045b9f7eca67fc2f08cd6455d7c7743ebf831f070a6430",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/gardenPlantChoices.test.mjs",
+      "bytes": 930,
+      "sha256": "c68ec2dd5d564305ad0c088d965bc395844f845f3225218918c668b413e0c53d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/gardenRecords.test.js",
