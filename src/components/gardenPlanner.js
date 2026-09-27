@@ -8328,8 +8328,13 @@ function syncThreeScene(three, state) {
   }
 
   addPropertyGround3d(three.group, state, unit, {showBoundary: state.mapSettings.showParcel});
-  if (state.mapSettings.showVegetation) addVegetationCover3d(three.group, state, unit, three.detailProfile, viewBounds);
-  if (state.mapSettings.showStructures) addGardenStructures3d(three.group, state, unit, three.detailProfile, viewBounds);
+  // Shadow casters belong to the parcel, not the camera viewport. Keep the
+  // bounded illustrative planting sample and structural context stable while
+  // panning/zooming; Three.js still culls them separately for each render pass.
+  const shadowBounds = parcelViewBounds(state);
+  const contextProfile = {...three.detailProfile, id: "garden"};
+  if (state.mapSettings.showVegetation) addVegetationCover3d(three.group, state, unit, contextProfile, shadowBounds);
+  if (state.mapSettings.showStructures) addGardenStructures3d(three.group, state, unit, contextProfile, shadowBounds);
   const renderedBeds = detailVisibleFeatures(mapVisibleBeds(state), viewBounds, three.detailProfile, bed.id);
   for (const item of renderedBeds) {
     addBed3d(
@@ -8360,7 +8365,7 @@ function syncThreeSolar(three,state,unit){
   canvas.dataset.solarShadowPolygons='0';
   if(!enabled){
     // Keep decorative lighting anchored to the scene, never the moving camera.
-    const bounds=state.viewMode==="garden"?parcelViewBounds(state):planViewBounds(state);
+    const bounds=state.viewMode==="garden"?parcelViewBounds(state):activeBed(state);
     const center=new THREE.Vector3(state.viewMode==="bed"?0:(bounds.x+bounds.width/2)*unit,0,state.viewMode==="bed"?0:(bounds.y+bounds.height/2)*unit),span=Math.max(bounds.width,bounds.height)*unit;
     const distance=Math.max(10,span);
     three.sun.intensity=2.4;
