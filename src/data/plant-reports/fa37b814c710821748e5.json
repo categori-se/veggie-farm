@@ -1,0 +1,231 @@
+{
+  "id": "plant:openfarm:leek",
+  "name": "Leek",
+  "commonName": "Leek",
+  "cultivar": null,
+  "scientificName": "Allium porrum",
+  "family": null,
+  "primaryUse": "open-reference",
+  "description": "The leek is a vegetable, a cultivar of Allium ampeloprasum, the broadleaf wild leek. The edible part of the plant is a bundle of leaf sheaths that is sometimes erroneously called a stem or stalk. Historically, many scientific names were used for leeks, but they are now all treated as cultivars of A. ampeloprasum. The name 'leek' developed from the Anglo-Saxon word \"leac\". Two closely related vegetables, elephant garlic and kurrat, are also cultivars of A. ampeloprasum, although different in their uses as food. The onion and garlic are also related, being other species of the genus Allium. Leeks have thick blue-green foliage. The bundle of white leaf sheaths has a mild onion taste and can be blanched, steamed, braised, or grilled and used in soups, stews, omelet fillings, and more. The leaves can be used to make stock. Plant their leeks in autumn, and they should fatten up in time for winter picking. Plant them early to ensure they have enough time to grow before winter. Leeks take up to six months to mature after transplanting. Newer cultivars have quicker maturity – three to four months. Maturity is often affected by temperature, available nutrients and water. Leeks need a soil that is rich in organic matter. Dig in compost or manure two weeks before planting. Add fertiliser every few weeks Leeks like aged manure, especially chicken manure, and worm castings, another excellent source of nutrients. Plant seedlings in full sun, with moist but well-drained deep soil. Raised beds are ideal. Water young plants frequently. The white part of the leek is edible; the green is not. You can blanch the stems to increase the proportion of stem that’s edible and to sweeten the taste. Do this to fully grown leeks. Tie a paper collar around each stem and gently hill the earth up around the stem. Be careful not to get soil between the paper collar and stem as the leek may rot. As the plants grow, add another collar above the first one and hill up more soil. Be aware that slugs and snails can hide in the paper collars Harvest the leeks when stems are around 2.5cm in diameter. Dig carefully around the leek and lift with a garden fork. Do not pull, as the leek is likely to break.",
+  "sun": "full sun",
+  "sunlightReference": {
+    "labels": [
+      "full sun"
+    ],
+    "minimumDirectSunHours": null
+  },
+  "sowingMethod": "Direct seed or transplant seedlings",
+  "rowSpacingCm": 15,
+  "morphology": {
+    "archetype": null,
+    "growthHabit": [],
+    "heightCm": {
+      "reported": 60,
+      "min": null,
+      "max": null
+    },
+    "spreadCm": {
+      "reported": 30,
+      "min": null,
+      "max": null
+    },
+    "canopy": null,
+    "stem": null,
+    "leaf": null,
+    "flower": null,
+    "fruit": null
+  },
+  "spacingInches": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "germinationDays": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "daysToMaturity": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "renderStages": [],
+  "sourceUrl": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+  "sourceIds": [
+    "source:openfarm-recovery"
+  ],
+  "sourceRecordId": "leek",
+  "referenceDatasetId": "openfarm-recovered-340",
+  "reviewStatus": "recovered community data; horticultural verification pending",
+  "confidence": null,
+  "rights": {
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "OpenFarm contributors; recovered by thefullnacho / OpenFarm Crops, Rescued",
+    "changes": [
+      "Stable source-specific identities; no automatic crop/cultivar joins.",
+      "Placeholder values become null; invalid or nonpositive dimensions are not promoted.",
+      "Plant spacing is not inferred from row spacing or spread.",
+      "No live API is needed during build."
+    ]
+  },
+  "citations": [
+    {
+      "id": "source:openfarm-recovery",
+      "publisher": "OpenFarm contributors",
+      "title": "Leek — archived crop record",
+      "url": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek"
+    },
+    {
+      "id": "source:openfarm-recovery-project",
+      "publisher": "thefullnacho / OpenFarm Crops, Rescued",
+      "title": "Recovery dataset and provenance",
+      "url": "https://github.com/thefullnacho/openfarm-crops-rescue/tree/754cfd75da007c17a628eca812632f326dc7cf10"
+    }
+  ],
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "binomialName",
+      "sourceUrl": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250218",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "description": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "description",
+      "sourceUrl": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250218",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sun",
+      "sourceUrl": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250218",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sowingMethod": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sowingMethod",
+      "sourceUrl": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250218",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "rowSpacingCm": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "rowSpacingCm",
+      "sourceUrl": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250218",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.heightCm.reported": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "heightCm",
+      "sourceUrl": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250218",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.spreadCm.reported": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "spreadCm",
+      "sourceUrl": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250218",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "family": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "cultivar": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "spacingInches": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "morphology.archetype": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    }
+  },
+  "common": "Leek",
+  "scientific": "Allium porrum",
+  "category": "open-reference",
+  "source": "https://web.archive.org/web/20250218032221/https://openfarm.cc/en/crops/leek",
+  "light": "full sun",
+  "spacing": null,
+  "spacingMin": null,
+  "spacingMax": null,
+  "maturity": null,
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": "Height 60 cm; spread 30 cm (historical reported values, not a validated range)",
+  "germination": null,
+  "directSow": null,
+  "transplant": null,
+  "frost": null,
+  "imageIds": [],
+  "careNotes": [],
+  "additionalFacts": [
+    {
+      "trait": "Sowing method",
+      "text": "Sowing method: Direct seed or transplant seedlings"
+    },
+    {
+      "trait": "Row spacing",
+      "text": "Row spacing: 15 cm; not plant spacing"
+    }
+  ],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

@@ -1,0 +1,572 @@
+{
+  "id": "plant:community:arborvitae",
+  "name": "Arborvitae / Northern White-Cedar",
+  "common": "Arborvitae / Northern White-Cedar",
+  "scientific": "Thuja occidentalis",
+  "cultivar": null,
+  "family": "Cupressaceae",
+  "category": "ornamental",
+  "lifeCycle": "needled evergreen woody tree/shrub",
+  "description": "General planning reference; check the chosen cultivar and local conditions.",
+  "light": "full sun / partial shade",
+  "sunHours": "At least 4 hours (supplied planning reference)",
+  "spacing": "cultivar-specific: dwarf forms to 10–15 ft-wide species plants",
+  "spacingMin": 36,
+  "spacingMax": 180,
+  "maturity": null,
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": "Height 72–720 in; spread 36–180 in. Planning range, not a guaranteed mature measurement; verify cultivar-specific dimensions before installation.",
+  "hardiness": "USDA zones 3–7 (general reference)",
+  "pollination": null,
+  "frost": null,
+  "directSow": null,
+  "transplant": null,
+  "source": "https://plants.ces.ncsu.edu/plants/thuja-occidentalis/",
+  "sourceIds": [
+    "ncsu-arborvitae"
+  ],
+  "citations": [
+    {
+      "id": "ncsu-arborvitae",
+      "publisher": "NC State Extension",
+      "title": "Thuja occidentalis",
+      "url": "https://plants.ces.ncsu.edu/plants/thuja-occidentalis/",
+      "supports": [
+        "taxonomy",
+        "dimensions",
+        "hardiness",
+        "light",
+        "soil",
+        "evergreen form"
+      ]
+    }
+  ],
+  "rights": {
+    "license": "GPL-3.0-only",
+    "attribution": "veggie.farm project owner — Common 100 compilation",
+    "scope": "Original contribution only; linked third-party pages retain their terms."
+  },
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "scientificName",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "family": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "family",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "lifecycle": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "lifecycle",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.texture": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "soil.texture",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.drainage": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "soil.drainage",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMin": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "soil.phMin",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMax": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "soil.phMax",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.fertility": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "soil.fertility",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.need": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "water.need",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.targetInchesPerWeek": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "water.targetInchesPerWeek",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "frostTolerance": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "frostTolerance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "usdaHardinessZones": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "usdaHardinessZones",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "spacingInches.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "spacingInches.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "spacingInches.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "matureSizeInches.height.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "matureSizeInches.height.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.text": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "matureSizeInches.height.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "matureSizeInches.spread.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "matureSizeInches.spread.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.text": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "matureSizeInches.spread.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.planningNote": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "matureSizeInches.planningNote",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "timeToHarvest",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.transplant": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "planting.transplant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.visualArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.perennialInfrastructure": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.perennialInfrastructure",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderGuidance": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.renderGuidance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.canonicalArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.canonicalArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualVariant": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.visualVariant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.archetypeVersion": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.archetypeVersion",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderSource": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.renderSource",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.useRealWorldDimensions": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.rendererHints.useRealWorldDimensions",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.showMatureFootprintIn2D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.rendererHints.showMatureFootprintIn2D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowProcedural3D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.rendererHints.allowProcedural3D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowOptionalModelOverride": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.rendererHints.allowOptionalModelOverride",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.fallbackArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "studio.rendererHints.fallbackArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "sunlightReference.labels": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sunlightReference.minimumDirectSunHours": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "sun.minimumDirectSunHours",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:arborvitae",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-arborvitae"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    }
+  },
+  "reviewStatus": "user-supplied-reference; horticultural verification pending",
+  "referenceDatasetId": "veggie-farm-common-100-unified",
+  "rank": 99,
+  "priority": "Expansion",
+  "imageIds": [],
+  "additionalFacts": [
+    {
+      "trait": "Soil",
+      "text": "Soil: loam, clay; well-drained to moist; moderate"
+    },
+    {
+      "trait": "Soil pH",
+      "text": "Soil pH: 6–8"
+    },
+    {
+      "trait": "Water",
+      "text": "Water: moderate"
+    },
+    {
+      "trait": "Frost",
+      "text": "Frost: very cold hardy; exposed winter sites can burn foliage"
+    },
+    {
+      "trait": "Harvest",
+      "text": "Harvest: Prune lightly for hedge form; avoid cutting deeply into old leafless wood."
+    },
+    {
+      "trait": "Support",
+      "text": "Support: none"
+    },
+    {
+      "trait": "Transplanting",
+      "text": "Transplanting: Plant nursery stock in spring or fall; water deeply during establishment."
+    }
+  ],
+  "careNotes": [
+    "Temperate United States; planning emphasis on New England. Cultivar and local-climate variation applies."
+  ],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

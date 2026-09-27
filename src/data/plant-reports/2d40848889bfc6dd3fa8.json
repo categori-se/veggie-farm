@@ -1,0 +1,231 @@
+{
+  "id": "plant:openfarm:celeriac",
+  "name": "Celeriac",
+  "commonName": "Celeriac",
+  "cultivar": null,
+  "scientificName": "Apium graveolens var. rapaceum",
+  "family": null,
+  "primaryUse": "open-reference",
+  "description": "Celeriac is a large root that develops at soil level and looks like a textured turnip. It is topped with curly leaves. Celeriac root has a flavor similar to celery (they are in the same family) and is delicious in soups, stews, and casseroles. Because it is a root vegetable, it can be stored for months.",
+  "sun": "full sun",
+  "sunlightReference": {
+    "labels": [
+      "full sun"
+    ],
+    "minimumDirectSunHours": null
+  },
+  "sowingMethod": "Seed indoors, then transplant outside into soil",
+  "rowSpacingCm": 20,
+  "morphology": {
+    "archetype": null,
+    "growthHabit": [],
+    "heightCm": {
+      "reported": 50,
+      "min": null,
+      "max": null
+    },
+    "spreadCm": {
+      "reported": 60,
+      "min": null,
+      "max": null
+    },
+    "canopy": null,
+    "stem": null,
+    "leaf": null,
+    "flower": null,
+    "fruit": null
+  },
+  "spacingInches": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "germinationDays": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "daysToMaturity": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "renderStages": [],
+  "sourceUrl": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+  "sourceIds": [
+    "source:openfarm-recovery"
+  ],
+  "sourceRecordId": "celeriac",
+  "referenceDatasetId": "openfarm-recovered-340",
+  "reviewStatus": "recovered community data; horticultural verification pending",
+  "confidence": null,
+  "rights": {
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "OpenFarm contributors; recovered by thefullnacho / OpenFarm Crops, Rescued",
+    "changes": [
+      "Stable source-specific identities; no automatic crop/cultivar joins.",
+      "Placeholder values become null; invalid or nonpositive dimensions are not promoted.",
+      "Plant spacing is not inferred from row spacing or spread.",
+      "No live API is needed during build."
+    ]
+  },
+  "citations": [
+    {
+      "id": "source:openfarm-recovery",
+      "publisher": "OpenFarm contributors",
+      "title": "Celeriac — archived crop record",
+      "url": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac"
+    },
+    {
+      "id": "source:openfarm-recovery-project",
+      "publisher": "thefullnacho / OpenFarm Crops, Rescued",
+      "title": "Recovery dataset and provenance",
+      "url": "https://github.com/thefullnacho/openfarm-crops-rescue/tree/754cfd75da007c17a628eca812632f326dc7cf10"
+    }
+  ],
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "binomialName",
+      "sourceUrl": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20240519",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "description": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "description",
+      "sourceUrl": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20240519",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sun",
+      "sourceUrl": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20240519",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sowingMethod": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sowingMethod",
+      "sourceUrl": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20240519",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "rowSpacingCm": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "rowSpacingCm",
+      "sourceUrl": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20240519",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.heightCm.reported": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "heightCm",
+      "sourceUrl": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20240519",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.spreadCm.reported": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "spreadCm",
+      "sourceUrl": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20240519",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "family": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "cultivar": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "spacingInches": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "morphology.archetype": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    }
+  },
+  "common": "Celeriac",
+  "scientific": "Apium graveolens var. rapaceum",
+  "category": "open-reference",
+  "source": "https://web.archive.org/web/20240519143719/https://openfarm.cc/en/crops/celeriac",
+  "light": "full sun",
+  "spacing": null,
+  "spacingMin": null,
+  "spacingMax": null,
+  "maturity": null,
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": "Height 50 cm; spread 60 cm (historical reported values, not a validated range)",
+  "germination": null,
+  "directSow": null,
+  "transplant": null,
+  "frost": null,
+  "imageIds": [],
+  "careNotes": [],
+  "additionalFacts": [
+    {
+      "trait": "Sowing method",
+      "text": "Sowing method: Seed indoors, then transplant outside into soil"
+    },
+    {
+      "trait": "Row spacing",
+      "text": "Row spacing: 20 cm; not plant spacing"
+    }
+  ],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

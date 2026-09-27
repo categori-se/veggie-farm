@@ -1,7 +1,140 @@
 [
   {
+    "plantId": "plant:openfarm:acorn-squash",
+    "name": "Acorn Squash",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:adjuma-pepper",
+    "name": "Adjuma pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:african-marigold",
+    "name": "African Marigold",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:agria-potato",
+    "name": "agria potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:alfalfa",
+    "name": "Alfalfa",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:allspice",
+    "name": "Allspice",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:almond",
+    "name": "Almond",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:amaranth",
+    "name": "Amaranth",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:amberique-bean",
+    "name": "amberique-bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:amelanchier",
+    "name": "Amelanchier",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:anaheim-pepper",
+    "name": "Anaheim Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:anise",
+    "name": "Anise",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:anise-hyssop",
+    "name": "anise hyssop",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:apple",
+    "name": "Apple",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:apple-mint",
+    "name": "Apple Mint",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
     "plantId": "plant:community:apples",
     "name": "Apples",
+    "plantSpacingText": "Dwarf systems may space ~4–10 ft; semi-dwarf/standard trees need much more",
+    "plantSpacingInchesMin": 48,
+    "plantSpacingInchesMax": 300
+  },
+  {
+    "plantId": "plant:openfarm:apricot",
+    "name": "Apricot",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:arborvitae",
+    "name": "Arborvitae / Northern White-Cedar",
+    "plantSpacingText": "cultivar-specific: dwarf forms to 10–15 ft-wide species plants",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 180
+  },
+  {
+    "plantId": "plant:openfarm:arran-banner-potato",
+    "name": "arran banner potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:artichoke",
+    "name": "Artichoke",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -10,12 +143,75 @@
     "plantId": "plant:community:arugula",
     "name": "Arugula",
     "plantSpacingText": "2-4 in for baby leaf; 6 in for mature plants",
+    "plantSpacingInchesMin": 2,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:arugula",
+    "name": "Arugula",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:asparagus",
+    "name": "Asparagus",
+    "plantSpacingText": "crowns commonly about 12 in apart; rows much wider",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:asparagus",
+    "name": "Asparagus",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:baby-bear-pumpkin",
+    "name": "baby bear pumpkin",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:banana",
+    "name": "Banana",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:banana-pepper",
+    "name": "Banana Pepper",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:basil",
     "name": "Basil",
+    "plantSpacingText": "typically 8–18 in depending on cultivar",
+    "plantSpacingInchesMin": 8,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:basil",
+    "name": "Basil",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:bay-laurel",
+    "name": "Bay Laurel",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:beach-pea",
+    "name": "beach pea",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -24,6 +220,13 @@
     "plantId": "plant:community:beans",
     "name": "Beans",
     "plantSpacingText": "Bush beans 4-6 in; pole beans 6-8 in with support",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 8
+  },
+  {
+    "plantId": "plant:openfarm:beet",
+    "name": "Beet",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
@@ -31,12 +234,82 @@
     "plantId": "plant:community:beets",
     "name": "Beets",
     "plantSpacingText": "3-4 in between plants; 12-18 in between rows",
+    "plantSpacingInchesMin": 3,
+    "plantSpacingInchesMax": 4
+  },
+  {
+    "plantId": "plant:openfarm:belgium-endive",
+    "name": "Belgium Endive",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:bell-pepper",
+    "name": "Bell Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:bhut-jolokia-chilli-pepper",
+    "name": "bhut jolokia chilli pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:bitter-orange",
+    "name": "bitter orange",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:black-beauty-eggplant",
+    "name": "Black Beauty Eggplant",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:black-cherry",
+    "name": "Black Cherry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:black-currant",
+    "name": "Black Currant",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:black-currants",
     "name": "Black Currants",
+    "plantSpacingText": "3–4 ft between plants",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 48
+  },
+  {
+    "plantId": "plant:openfarm:black-olive-chilli",
+    "name": "black olive chilli",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:black-walnut",
+    "name": "Black Walnut",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:black-eyed-pea",
+    "name": "Black-Eyed Pea",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -44,6 +317,20 @@
   {
     "plantId": "plant:community:flower-black-eyed-susan",
     "name": "Black-eyed Susan",
+    "plantSpacingText": "12–18 in",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:community:blackberries",
+    "name": "Blackberries",
+    "plantSpacingText": "36–60 in between plants; rows usually much wider",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 60
+  },
+  {
+    "plantId": "plant:openfarm:blackberry",
+    "name": "Blackberry",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -51,6 +338,13 @@
   {
     "plantId": "plant:community:flower-blazing-star",
     "name": "Blazing Star",
+    "plantSpacingText": "12–18 in",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:blood-orange",
+    "name": "blood orange",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -58,6 +352,13 @@
   {
     "plantId": "plant:community:flower-blue-flag-iris",
     "name": "Blue Flag Iris",
+    "plantSpacingText": "18–24 in",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:blue-lake-bean",
+    "name": "Blue Lake Bean",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -65,6 +366,13 @@
   {
     "plantId": "plant:community:blueberries",
     "name": "Blueberries",
+    "plantSpacingText": "about 3 ft for compact northern types; larger cultivars require more",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 60
+  },
+  {
+    "plantId": "plant:openfarm:blueberry",
+    "name": "Blueberry",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -73,12 +381,166 @@
     "plantId": "plant:community:bok-choy",
     "name": "Bok Choy",
     "plantSpacingText": "6-12 in depending on full-size or baby harvest",
+    "plantSpacingInchesMin": 6,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:bok-choy",
+    "name": "Bok Choy",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:bonnie-bell-sweet-pepper-sfg",
+    "name": "Bonnie Bell Sweet Pepper SFG",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:bonnie-little-bing-compact-cherry-tomato",
+    "name": "Bonnie Little Bing Compact Cherry Tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:bonnie-little-sicily-slicing-tomato-sfg",
+    "name": "Bonnie Little Sicily Slicing Tomato SFG",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:borage",
+    "name": "Borage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:boxwood",
+    "name": "Boxwood",
+    "plantSpacingText": "spacing depends strongly on cultivar and hedge intent",
+    "plantSpacingInchesMin": 24,
+    "plantSpacingInchesMax": 72
+  },
+  {
+    "plantId": "plant:openfarm:brandywine-tomato",
+    "name": "brandywine tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:broccoli",
+    "name": "Broccoli",
+    "plantSpacingText": "12–18 in between plants",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:broccoli",
+    "name": "Broccoli",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:broccoli-rabe",
+    "name": "Broccoli Rabe / Rapini",
+    "plantSpacingText": "4–8 in for individual plants; denser sowing for baby greens",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 8
+  },
+  {
+    "plantId": "plant:community:brussels-sprouts",
+    "name": "Brussels Sprouts",
+    "plantSpacingText": "about 18 in between plants; wider spacing can improve airflow",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:buckwheat",
+    "name": "Buckwheat",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:burpee-bush-tomato-big-boy",
+    "name": "Burpee Bush Tomato Big Boy",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:burpee-cosmos-bright-light",
+    "name": "Burpee Cosmos Bright Light",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:flower-butterfly-weed",
     "name": "Butterfly Weed",
+    "plantSpacingText": "18–24 in",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:butternut-squash",
+    "name": "Butternut Squash",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:cabbage",
+    "name": "Cabbage",
+    "plantSpacingText": "15–18 in for typical heads",
+    "plantSpacingInchesMin": 15,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:cabbage",
+    "name": "Cabbage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cannabis",
+    "name": "Cannabis",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cantaloupe",
+    "name": "Cantaloupe",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:cantaloupe-muskmelon",
+    "name": "Cantaloupe / Muskmelon",
+    "plantSpacingText": "3–5 ft between plants for field-grown vines",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 60
+  },
+  {
+    "plantId": "plant:openfarm:cape-gooseberry",
+    "name": "Cape Gooseberry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:capsicum",
+    "name": "Capsicum",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -86,6 +548,20 @@
   {
     "plantId": "plant:community:flower-cardinal-flower",
     "name": "Cardinal Flower",
+    "plantSpacingText": "12–18 in",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:cardoon",
+    "name": "Cardoon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:carrot",
+    "name": "Carrot",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -94,12 +570,215 @@
     "plantId": "plant:community:carrots",
     "name": "Carrots",
     "plantSpacingText": "1-3 in after thinning; 12-18 in between rows",
+    "plantSpacingInchesMin": 2,
+    "plantSpacingInchesMax": 4
+  },
+  {
+    "plantId": "plant:openfarm:cassava",
+    "name": "Cassava",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:cauliflower",
+    "name": "Cauliflower",
+    "plantSpacingText": "12–18 in between plants",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:cauliflower",
+    "name": "Cauliflower",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cayenne-pepper",
+    "name": "Cayenne Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:celeriac",
+    "name": "Celeriac",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:celery",
+    "name": "Celery",
+    "plantSpacingText": "about 6–12 in depending on cultivar and desired stalk size",
+    "plantSpacingInchesMin": 6,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:celery",
+    "name": "Celery",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:celtuce",
+    "name": "Celtuce",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:chamomile",
+    "name": "Chamomile (German)",
+    "plantSpacingText": "6–12 in between plants",
+    "plantSpacingInchesMin": 6,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:chatham-hollomby-potato",
+    "name": "Chatham Hollomby potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chatham-island-potato",
+    "name": "Chatham Island potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chayote",
+    "name": "Chayote",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cheongyang-chili-pepper",
+    "name": "Cheongyang Chili Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cherry",
+    "name": "Cherry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cherry-tomato",
+    "name": "Cherry Tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cherry-tomatoes",
+    "name": "Cherry Tomatoes",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chervil",
+    "name": "Chervil",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chestnut",
+    "name": "Chestnut",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chickpea",
+    "name": "Chickpea",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chicory",
+    "name": "Chicory",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chili-pepper",
+    "name": "Chili Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chinese-cabbage",
+    "name": "Chinese cabbage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:chives",
+    "name": "Chives",
+    "plantSpacingText": "6–12 in between clumps",
+    "plantSpacingInchesMin": 6,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:chives",
+    "name": "Chives",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:chocolate-mint",
+    "name": "Chocolate Mint",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:choy-sum",
+    "name": "Choy Sum",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:cilantro",
     "name": "Cilantro",
+    "plantSpacingText": "4–8 in for leaf harvest; can be denser for baby foliage",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 8
+  },
+  {
+    "plantId": "plant:openfarm:clover",
+    "name": "Clover",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:coffee",
+    "name": "Coffee",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:collard-greens",
+    "name": "Collard Greens",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -108,6 +787,20 @@
     "plantId": "plant:community:collards",
     "name": "Collards",
     "plantSpacingText": "12-18 in for regular harvest; wider for full plants",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:common-hop",
+    "name": "common hop",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:coriander",
+    "name": "Coriander",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
@@ -115,6 +808,27 @@
     "plantId": "plant:community:corn",
     "name": "Corn",
     "plantSpacingText": "8-12 in in blocks; 24-36 in between rows",
+    "plantSpacingInchesMin": 8,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:corn",
+    "name": "Corn",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cowpea",
+    "name": "Cowpea",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cucumber-straight-eight",
+    "name": "Cucumber, Straight Eight",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
@@ -122,12 +836,243 @@
     "plantId": "plant:community:cucumbers",
     "name": "Cucumbers",
     "plantSpacingText": "12-18 in on trellis; more for sprawling plants",
+    "plantSpacingInchesMin": 8,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:culantro",
+    "name": "Culantro",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:cumin",
+    "name": "Cumin",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:daffodil",
+    "name": "Daffodil",
+    "plantSpacingText": "typically 4–6 in apart for naturalized groups",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:daikon",
+    "name": "Daikon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:dandelion",
+    "name": "Dandelion",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:datil-pepper",
+    "name": "Datil Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:daylily",
+    "name": "Daylily",
+    "plantSpacingText": "12–24 in, cultivar dependent",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:dekopon",
+    "name": "Dekopon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:delicata-squash",
+    "name": "Delicata Squash",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:dill",
     "name": "Dill",
+    "plantSpacingText": "thin to 10–12 in",
+    "plantSpacingInchesMin": 10,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:dill",
+    "name": "Dill",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:dragon-fruit",
+    "name": "Dragon Fruit",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:durian",
+    "name": "Durian",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:eggplant",
+    "name": "Eggplant",
+    "plantSpacingText": "18–24 in between plants",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:eggplant",
+    "name": "Eggplant",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:eggplant-black-beauty",
+    "name": "Eggplant, Black Beauty",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:elderberry",
+    "name": "Elderberry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:elephant-garlic",
+    "name": "Elephant Garlic",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:endive",
+    "name": "Endive",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:english-walnut",
+    "name": "English Walnut",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:fatalii-pepper",
+    "name": "Fatalii Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:fava-bean",
+    "name": "Fava Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:feijoa",
+    "name": "Feijoa",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:fennel",
+    "name": "Fennel",
+    "plantSpacingText": "12–18 in for bulb fennel; herb fennel may be wider",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:fennel",
+    "name": "Fennel",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:fenugreek",
+    "name": "Fenugreek",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:ferry-morse-lavender-munstead",
+    "name": "Ferry Morse Lavender Munstead",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:ferry-morse-contender-bush-bean",
+    "name": "Ferry-Morse Contender Bush Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:feverfew",
+    "name": "feverfew",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:fiddlehead",
+    "name": "Fiddlehead",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:fig",
+    "name": "Fig",
+    "plantSpacingText": "allow roughly 8–15 ft for in-ground plants; containers can be much smaller",
+    "plantSpacingInchesMin": 96,
+    "plantSpacingInchesMax": 180
+  },
+  {
+    "plantId": "plant:openfarm:french-breakfast-radish",
+    "name": "French Breakfast Radish",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:fuji-apple",
+    "name": "Fuji Apple",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:galangal",
+    "name": "Galangal",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -135,20 +1080,160 @@
   {
     "plantId": "plant:community:flower-peony",
     "name": "Garden Peony",
-    "plantSpacingText": "Not listed",
-    "plantSpacingInchesMin": null,
-    "plantSpacingInchesMax": null
+    "plantSpacingText": "about 30–36 in",
+    "plantSpacingInchesMin": 30,
+    "plantSpacingInchesMax": 36
   },
   {
     "plantId": "plant:community:garlic",
     "name": "Garlic",
     "plantSpacingText": "4-6 in between cloves; 8-12 in between rows",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:garlic",
+    "name": "Garlic",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:garlic-chives",
+    "name": "Garlic Chives",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:pelargonium",
+    "name": "Geranium / Pelargonium",
+    "plantSpacingText": "8–12 in for common zonal types; larger cultivars need more",
+    "plantSpacingInchesMin": 8,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:german-chamomile",
+    "name": "German Chamomile",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:ginger",
+    "name": "Ginger",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:goji-berry",
+    "name": "Goji Berry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:golden-beet",
+    "name": "Golden Beet",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:golden-delicious-apple",
+    "name": "Golden Delicious Apple",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:gooseberries",
     "name": "Gooseberries",
+    "plantSpacingText": "3–4 ft between plants",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 48
+  },
+  {
+    "plantId": "plant:openfarm:gooseberry",
+    "name": "Gooseberry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:goumi-berry",
+    "name": "Goumi Berry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:granny-smith-apple",
+    "name": "Granny Smith Apple",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:grapefruit",
+    "name": "Grapefruit",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:grapes",
+    "name": "Grapes",
+    "plantSpacingText": "commonly 6–8 ft between backyard vines; system and vigor vary",
+    "plantSpacingInchesMin": 72,
+    "plantSpacingInchesMax": 96
+  },
+  {
+    "plantId": "plant:openfarm:grapes",
+    "name": "Grapes",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:green-bartlett-pear",
+    "name": "Green Bartlett Pear",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:green-bean",
+    "name": "Green Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:green-onion",
+    "name": "Green Onion",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:green-serrano-pepper",
+    "name": "Green Serrano Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:green-tabasco-pepper",
+    "name": "Green Tabasco Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:green-zebra-tomato",
+    "name": "Green Zebra Tomato",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -156,6 +1241,195 @@
   {
     "plantId": "plant:community:ground-cherries",
     "name": "Ground Cherries",
+    "plantSpacingText": "2–3 ft between plants",
+    "plantSpacingInchesMin": 24,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:groundnut",
+    "name": "groundnut",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:guava",
+    "name": "Guava",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:habanero-pepper",
+    "name": "Habanero Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:hairy-vetch",
+    "name": "hairy vetch",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:hardy-kiwifruit",
+    "name": "Hardy Kiwifruit",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:hazelnut",
+    "name": "Hazelnut",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:heirloom-tomato",
+    "name": "Heirloom Tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:heirloom-tomatoes",
+    "name": "Heirloom Tomatoes",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:hemp",
+    "name": "Hemp",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:hibiscus",
+    "name": "Hibiscus",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:honeydew-melon",
+    "name": "Honeydew melon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:honeysuckle",
+    "name": "Honeysuckle",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:hops",
+    "name": "Hops",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:horseradish",
+    "name": "horseradish",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:hosta",
+    "name": "Hosta",
+    "plantSpacingText": "cultivar range is enormous; 12–36 in is a useful common planning span",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:huakaroro-taewa-potato",
+    "name": "Huakaroro taewa potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:human-being",
+    "name": "Human Being",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:hydrangea",
+    "name": "Hydrangea (Bigleaf)",
+    "plantSpacingText": "3–6 ft typical species spread",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 72
+  },
+  {
+    "plantId": "plant:openfarm:ice-cream-bean",
+    "name": "Ice Cream Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:ice-plant",
+    "name": "Ice Plant",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:icicle-radish",
+    "name": "Icicle Radish",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:impatiens",
+    "name": "Impatiens",
+    "plantSpacingText": "8–12 in for common bedding cultivars",
+    "plantSpacingInchesMin": 8,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:community:bearded-iris",
+    "name": "Iris — Common Bearded",
+    "plantSpacingText": "12–24 in depending on cultivar",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:jalapeno-pepper",
+    "name": "Jalapeño Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:japanese-maple",
+    "name": "Japanese Maple",
+    "plantSpacingText": "10–25 ft spread for the species; dwarf cultivars can be far smaller",
+    "plantSpacingInchesMin": 120,
+    "plantSpacingInchesMax": 300
+  },
+  {
+    "plantId": "plant:openfarm:jerusalem-artichoke",
+    "name": "Jerusalem Artichoke",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:kai-lan",
+    "name": "kai-lan",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -164,6 +1438,104 @@
     "plantId": "plant:community:kale",
     "name": "Kale",
     "plantSpacingText": "12-18 in between plants",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:kale",
+    "name": "Kale",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:kalette",
+    "name": "kalette",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:kamokamo",
+    "name": "Kamokamo",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:kawakawa",
+    "name": "kawakawa",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:kiwifruit",
+    "name": "Kiwifruit",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:kohlrabi",
+    "name": "Kohlrabi",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:komatsuna",
+    "name": "komatsuna",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:lacinato-kale",
+    "name": "Lacinato Kale",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:lambs-lettuce",
+    "name": "Lamb's Lettuce",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:lavender",
+    "name": "Lavender",
+    "plantSpacingText": "24–36 in depending on cultivar",
+    "plantSpacingInchesMin": 24,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:leek",
+    "name": "Leek",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:leeks",
+    "name": "Leeks",
+    "plantSpacingText": "4–6 in between plants for mature shanks",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:lemon-balm",
+    "name": "Lemon Balm",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:lemongrass",
+    "name": "Lemongrass",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
@@ -171,12 +1543,166 @@
     "plantId": "plant:community:lettuce",
     "name": "Lettuce",
     "plantSpacingText": "6-12 in depending on harvest stage",
+    "plantSpacingInchesMin": 6,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:lettuce",
+    "name": "Lettuce",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:lettuce-drunken-woman",
+    "name": "Lettuce Drunken Woman",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:licorice",
+    "name": "Licorice",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:looseleaf-lettuce",
+    "name": "Looseleaf Lettuce",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:loquat",
+    "name": "Loquat",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:lovage",
+    "name": "Lovage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:lowbush-blueberry",
+    "name": "lowbush blueberry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:luffa",
+    "name": "Luffa",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:lupine",
+    "name": "Lupine",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:mandarin",
+    "name": "Mandarin",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:marigold",
+    "name": "Marigold",
+    "plantSpacingText": "6–18 in depending on French/African cultivar size",
+    "plantSpacingInchesMin": 6,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:community:marjoram",
+    "name": "Marjoram",
+    "plantSpacingText": "8–12 in between plants",
+    "plantSpacingInchesMin": 8,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:marjoram",
+    "name": "Marjoram",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:matariki-taewa-potato",
+    "name": "Matariki Taewa Potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:medusa-pepper",
+    "name": "Medusa Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:melon",
+    "name": "Melon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:mexican-tarragon",
+    "name": "Mexican Tarragon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:midgen-berry",
+    "name": "Midgen Berry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:milkweed",
+    "name": "Milkweed",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:miners-lettuce",
+    "name": "Miner's Lettuce",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:mint",
     "name": "Mint",
+    "plantSpacingText": "12–24 in initially; containment often recommended",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:mint",
+    "name": "Mint",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:mitsuba",
+    "name": "mitsuba",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -185,6 +1711,111 @@
     "plantId": "plant:community:mizuna",
     "name": "Mizuna",
     "plantSpacingText": "4-8 in for cut greens; wider for full plants",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:mizuna",
+    "name": "Mizuna",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:moemoe-taewa-potato",
+    "name": "moemoe taewa potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:morning-glory",
+    "name": "Morning Glory",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:mortgage-lifter-tomato",
+    "name": "Mortgage Lifter tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:mulberry",
+    "name": "Mulberry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:myoga-ginger",
+    "name": "Myoga Ginger",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:nadine-potato",
+    "name": "nadine potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:napa-cabbage",
+    "name": "Napa Cabbage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:nectarine",
+    "name": "Nectarine",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:oak",
+    "name": "Oak",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:oat",
+    "name": "Oat",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:okra",
+    "name": "Okra",
+    "plantSpacingText": "12–24 in between plants",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:okra",
+    "name": "Okra",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:olive",
+    "name": "Olive",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:onion",
+    "name": "Onion",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
@@ -192,12 +1823,103 @@
     "plantId": "plant:community:onions",
     "name": "Onions",
     "plantSpacingText": "4-6 in for bulbs; closer for scallions",
+    "plantSpacingInchesMin": 3,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:orange",
+    "name": "Orange",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:oregano",
+    "name": "Oregano",
+    "plantSpacingText": "12–24 in between plants",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:papaya",
+    "name": "Papaya",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:parsley",
     "name": "Parsley",
+    "plantSpacingText": "6–12 in depending on leaf type and harvest style",
+    "plantSpacingInchesMin": 6,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:parsley",
+    "name": "Parsley",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:parsnip",
+    "name": "Parsnip",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:passion-fruit",
+    "name": "Passion Fruit",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pattypan-squash",
+    "name": "Pattypan Squash",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pawhero-potato",
+    "name": "Pawhero potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pawpaw",
+    "name": "Pawpaw",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pea",
+    "name": "Pea",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:peaches",
+    "name": "Peaches",
+    "plantSpacingText": "traditional planting often about 14 × 22 ft; dwarfing/training changes this greatly",
+    "plantSpacingInchesMin": 168,
+    "plantSpacingInchesMax": 264
+  },
+  {
+    "plantId": "plant:openfarm:peanut",
+    "name": "Peanut",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pear",
+    "name": "Pear",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -205,14 +1927,28 @@
   {
     "plantId": "plant:community:pears",
     "name": "Pears",
-    "plantSpacingText": "Not listed",
-    "plantSpacingInchesMin": null,
-    "plantSpacingInchesMax": null
+    "plantSpacingText": "typically 10–20 ft depending rootstock/training",
+    "plantSpacingInchesMin": 120,
+    "plantSpacingInchesMax": 240
   },
   {
     "plantId": "plant:community:peas",
     "name": "Peas",
     "plantSpacingText": "2-3 in with support for taller varieties",
+    "plantSpacingInchesMin": 2,
+    "plantSpacingInchesMax": 3
+  },
+  {
+    "plantId": "plant:openfarm:peas",
+    "name": "Peas",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:peperoncini",
+    "name": "Peperoncini",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
@@ -220,12 +1956,103 @@
     "plantId": "plant:community:peppers",
     "name": "Peppers",
     "plantSpacingText": "18-24 in between plants; 24-36 in between rows",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:persimmon",
+    "name": "Persimmon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:peter-pepper",
+    "name": "Peter Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:petunia",
+    "name": "Petunia",
+    "plantSpacingText": "1–3 ft depending on hybrid group and trailing habit",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:pineapple",
+    "name": "Pineapple",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pineapple-sage",
+    "name": "Pineapple Sage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pineapple-tomato",
+    "name": "Pineapple Tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pineberry",
+    "name": "Pineberry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:pistachio",
+    "name": "Pistachio",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:plantain",
+    "name": "Plantain",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:plum",
+    "name": "Plum",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:plums",
     "name": "Plums",
+    "plantSpacingText": "traditional home-orchard spacing about 14 × 22 ft",
+    "plantSpacingInchesMin": 168,
+    "plantSpacingInchesMax": 264
+  },
+  {
+    "plantId": "plant:openfarm:pomegranate",
+    "name": "Pomegranate",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:portobello",
+    "name": "Portobello",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:potato",
+    "name": "Potato",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -234,6 +2061,97 @@
     "plantId": "plant:community:potatoes",
     "name": "Potatoes",
     "plantSpacingText": "10-12 in between seed pieces; 30-36 in between rows",
+    "plantSpacingInchesMin": 10,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:community:pumpkin",
+    "name": "Pumpkin",
+    "plantSpacingText": "vining pumpkins commonly 2–5 ft between plants; compact types can be closer",
+    "plantSpacingInchesMin": 24,
+    "plantSpacingInchesMax": 60
+  },
+  {
+    "plantId": "plant:openfarm:pumpkin",
+    "name": "Pumpkin",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:purple-amaranth",
+    "name": "purple amaranth",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:purple-carrot",
+    "name": "Purple Carrot",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:purple-cauliflower",
+    "name": "Purple Cauliflower",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:purple-coneflower",
+    "name": "Purple Coneflower / Echinacea",
+    "plantSpacingText": "18–24 in between plants",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:purple-daikon",
+    "name": "purple daikon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:purple-pod-bean",
+    "name": "Purple Pod Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:purslane",
+    "name": "Purslane",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:quince",
+    "name": "Quince",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:quinoa",
+    "name": "Quinoa",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:radicchio",
+    "name": "Radicchio",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:radish",
+    "name": "Radish",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
@@ -241,12 +2159,40 @@
     "plantId": "plant:community:radishes",
     "name": "Radishes",
     "plantSpacingText": "1-2 in for small radishes; more for daikon",
+    "plantSpacingInchesMin": 1,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:rainbow-chard",
+    "name": "Rainbow Chard",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:rainier-cherry",
+    "name": "Rainier Cherry",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:rapini",
+    "name": "Rapini",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:raspberries",
     "name": "Raspberries",
+    "plantSpacingText": "often 2–3 ft between red raspberry plants; systems vary",
+    "plantSpacingInchesMin": 24,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:red-cabbage",
+    "name": "Red Cabbage",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -254,6 +2200,104 @@
   {
     "plantId": "plant:community:flower-red-columbine",
     "name": "Red Columbine",
+    "plantSpacingText": "12–18 in",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:red-currant",
+    "name": "Red Currant",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:red-danjou-pear",
+    "name": "Red D'Anjou Pear",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:red-kuri-squash",
+    "name": "Red Kuri Squash",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:red-onion",
+    "name": "Red Onion",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:red-pointed-cabbage",
+    "name": "Red Pointed Cabbage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:red-russian-kale",
+    "name": "Red Russian Kale",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:rhubarb",
+    "name": "Rhubarb",
+    "plantSpacingText": "allow roughly a 3 × 3 ft area per plant",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:rhubarb",
+    "name": "Rhubarb",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:rice-bean",
+    "name": "Rice Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:romaine-lettuce",
+    "name": "Romaine Lettuce",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:romanesco",
+    "name": "Romanesco",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:rose",
+    "name": "Rose",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:garden-rose",
+    "name": "Rose — Garden / Hybrid",
+    "plantSpacingText": "2–6 ft common shrub-rose spacing; climbers and miniatures differ",
+    "plantSpacingInchesMin": 24,
+    "plantSpacingInchesMax": 72
+  },
+  {
+    "plantId": "plant:openfarm:rose-geranium",
+    "name": "Rose Geranium",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -261,6 +2305,34 @@
   {
     "plantId": "plant:community:rosemary",
     "name": "Rosemary",
+    "plantSpacingText": "18–36 in depending on cultivar and pruning",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:rosemary",
+    "name": "Rosemary",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:runner-bean",
+    "name": "Runner Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:safflower",
+    "name": "Safflower",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:saffron",
+    "name": "Saffron",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -268,6 +2340,90 @@
   {
     "plantId": "plant:community:sage",
     "name": "Sage",
+    "plantSpacingText": "18–24 in between plants",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:sage",
+    "name": "Sage",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:salad-burnet",
+    "name": "Salad Burnet",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:salsify",
+    "name": "Salsify",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:scallions",
+    "name": "Scallions / Green Onions",
+    "plantSpacingText": "about 1 in apart for bunching scallions",
+    "plantSpacingInchesMin": 1,
+    "plantSpacingInchesMax": 2
+  },
+  {
+    "plantId": "plant:openfarm:scotch-bonnet-peppers",
+    "name": "Scotch Bonnet Peppers",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:scots-potato",
+    "name": "Scots potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:sea-kale",
+    "name": "Sea Kale",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:serrano-pepper",
+    "name": "Serrano Pepper",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:sesame",
+    "name": "Sesame",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:shallot",
+    "name": "Shallot",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:shiitake-mushroom",
+    "name": "shiitake mushroom",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:shishito-pepper",
+    "name": "Shishito Pepper",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -275,6 +2431,34 @@
   {
     "plantId": "plant:community:flower-smooth-aster",
     "name": "Smooth Aster",
+    "plantSpacingText": "18–24 in",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:snap-pea",
+    "name": "Snap Pea",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:snow-man-carrot",
+    "name": "Snow Man Carrot",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:snow-pea",
+    "name": "Snow Pea",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:sorrel",
+    "name": "Sorrel",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -282,6 +2466,20 @@
   {
     "plantId": "plant:community:sour-cherries",
     "name": "Sour Cherries",
+    "plantSpacingText": "traditional red tart cherry spacing about 20 × 25 ft; dwarf rootstocks can be closer",
+    "plantSpacingInchesMin": 180,
+    "plantSpacingInchesMax": 300
+  },
+  {
+    "plantId": "plant:openfarm:soybean",
+    "name": "Soybean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:spaghetti-squash",
+    "name": "Spaghetti Squash",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -290,26 +2488,257 @@
     "plantId": "plant:community:spinach",
     "name": "Spinach",
     "plantSpacingText": "4-6 in for mature plants; closer for baby leaf",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:spinach",
+    "name": "Spinach",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:spring-onion",
+    "name": "Spring Onion",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:squash",
+    "name": "Squash",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:st-johns-wort",
+    "name": "St. John's Wort",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:star-fruit",
+    "name": "Star Fruit",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:stevia",
+    "name": "Stevia",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:straggly-gooseberry",
+    "name": "straggly gooseberry",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:strawberries",
     "name": "Strawberries",
+    "plantSpacingText": "12–18 in basic spacing; 18–24 in common matted-row systems",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:strawberry",
+    "name": "Strawberry",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
+    "plantId": "plant:openfarm:strawberry-guava",
+    "name": "Strawberry Guava",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:striped-cavern-tomato",
+    "name": "Striped Cavern Tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:sudachi",
+    "name": "Sudachi",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:sugar-maple",
+    "name": "sugar maple",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:summer-savory",
+    "name": "Summer Savory",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:sunflower",
+    "name": "Sunflower",
+    "plantSpacingText": "12–24 in for many garden cultivars; dwarf and giant types differ",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:sunflower",
+    "name": "Sunflower",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:sunray-tomato",
+    "name": "Sunray Tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:suttons-supreme-potato",
+    "name": "Suttons Supreme potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:sweet-basil",
+    "name": "Sweet Basil",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:sweet-cherries",
+    "name": "Sweet Cherries",
+    "plantSpacingText": "spacing is strongly rootstock-dependent; standard orchards can use ~25 × 30 ft",
+    "plantSpacingInchesMin": 120,
+    "plantSpacingInchesMax": 300
+  },
+  {
+    "plantId": "plant:openfarm:sweet-potato",
+    "name": "Sweet Potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:sweet-potatoes",
+    "name": "Sweet Potatoes",
+    "plantSpacingText": "12–18 in between slips",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
     "plantId": "plant:community:swiss-chard",
     "name": "Swiss Chard",
     "plantSpacingText": "8-12 in between plants",
+    "plantSpacingInchesMin": 8,
+    "plantSpacingInchesMax": 12
+  },
+  {
+    "plantId": "plant:openfarm:swiss-chard-3",
+    "name": "Swiss Chard",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:tangerine",
+    "name": "Tangerine",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:tarragon",
+    "name": "tarragon",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:tarragon",
+    "name": "Tarragon",
+    "plantSpacingText": "18–24 in between plants",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:tatsoi",
+    "name": "Tatsoi",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:tea",
+    "name": "Tea",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:thai-basil",
+    "name": "Thai Basil",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:thyme",
     "name": "Thyme",
+    "plantSpacingText": "12–18 in between plants",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:thyme",
+    "name": "Thyme",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:tiny-tim-tomato",
+    "name": "Tiny Tim Tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:tomatillo",
+    "name": "Tomatillo",
+    "plantSpacingText": "allow up to about 3 ft because plants become bushy",
+    "plantSpacingInchesMin": 24,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:tomatillo",
+    "name": "Tomatillo",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:tomato",
+    "name": "Tomato",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -318,6 +2747,34 @@
     "plantId": "plant:community:tomatoes",
     "name": "Tomatoes",
     "plantSpacingText": "18-24 in between plants; 30-36 in between rows",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:trifoliate-orange",
+    "name": "trifoliate orange",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:tulip",
+    "name": "Tulip",
+    "plantSpacingText": "commonly 4–6 in apart in display plantings",
+    "plantSpacingInchesMin": 4,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:turmeric",
+    "name": "turmeric",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:turnip",
+    "name": "Turnip",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
@@ -325,12 +2782,159 @@
     "plantId": "plant:community:turnips",
     "name": "Turnips",
     "plantSpacingText": "2-4 in for small roots; wider for large varieties",
+    "plantSpacingInchesMin": 2,
+    "plantSpacingInchesMax": 6
+  },
+  {
+    "plantId": "plant:openfarm:uf-micro-tom-tomato",
+    "name": "UF Micro Tom Tomato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:urad-bean",
+    "name": "Urad Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:urenika-taewa-potato",
+    "name": "Urenika Taewa Potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:van-zerden-garlic",
+    "name": "Van Zerden Garlic",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
     "plantId": "plant:community:flower-virginia-rose",
     "name": "Virginia Rose",
+    "plantSpacingText": "3–5 ft typical massing",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 60
+  },
+  {
+    "plantId": "plant:openfarm:wai-iti-taewa-potato",
+    "name": "Wai-iti taewa potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:waikato-potato",
+    "name": "Waikato Potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:waiporoporo-taewa-potato",
+    "name": "Waiporoporo Taewa Potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:walnut",
+    "name": "Walnut",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:water-caltrop",
+    "name": "Water Caltrop",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:water-chestnut",
+    "name": "Water Chestnut",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:water-spinach",
+    "name": "water spinach",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:watercress",
+    "name": "Watercress",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:watermelon",
+    "name": "Watermelon",
+    "plantSpacingText": "3–6 ft between plants for field-grown vines",
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 72
+  },
+  {
+    "plantId": "plant:openfarm:watermelon-radish",
+    "name": "Watermelon Radish",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:wattle",
+    "name": "Wattle",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:wax-bean",
+    "name": "Wax Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:whataroa-taewa-potato",
+    "name": "Whataroa Taewa Potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:whero-whero-potato",
+    "name": "Whero Whero potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:white-carrot",
+    "name": "White Carrot",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:white-currant",
+    "name": "White Currant",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:white-onion",
+    "name": "White Onion",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -338,20 +2942,27 @@
   {
     "plantId": "plant:community:flower-bee-balm",
     "name": "Wild Bergamot",
-    "plantSpacingText": "Not listed",
-    "plantSpacingInchesMin": null,
-    "plantSpacingInchesMax": null
+    "plantSpacingText": "18–24 in",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
   },
   {
     "plantId": "plant:community:flower-wild-blue-phlox",
     "name": "Wild Blue Phlox",
-    "plantSpacingText": "Not listed",
-    "plantSpacingInchesMin": null,
-    "plantSpacingInchesMax": null
+    "plantSpacingText": "12–18 in",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
   },
   {
     "plantId": "plant:community:flower-wild-geranium",
     "name": "Wild Geranium",
+    "plantSpacingText": "12–18 in",
+    "plantSpacingInchesMin": 12,
+    "plantSpacingInchesMax": 18
+  },
+  {
+    "plantId": "plant:openfarm:wine-cap-mushroom",
+    "name": "Wine Cap Mushroom",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
@@ -360,20 +2971,111 @@
     "plantId": "plant:community:winter-squash",
     "name": "Winter Squash",
     "plantSpacingText": "36-72 in depending on vine length",
-    "plantSpacingInchesMin": null,
-    "plantSpacingInchesMax": null
+    "plantSpacingInchesMin": 36,
+    "plantSpacingInchesMax": 72
   },
   {
     "plantId": "plant:community:flower-goldenrod",
     "name": "Wrinkle-leaved Goldenrod",
+    "plantSpacingText": "18–24 in",
+    "plantSpacingInchesMin": 18,
+    "plantSpacingInchesMax": 24
+  },
+  {
+    "plantId": "plant:openfarm:yam",
+    "name": "Yam",
     "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   },
   {
+    "plantId": "plant:openfarm:yardlong-bean",
+    "name": "Yardlong Bean",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:yellow-cauliflower",
+    "name": "Yellow Cauliflower",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:yellow-fir-potato",
+    "name": "Yellow Fir potato",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:yellow-onion",
+    "name": "Yellow Onion",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:yellow-strawberry-guava",
+    "name": "Yellow Strawberry Guava",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:carrots",
+    "name": "You Can Grow Anything",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:curly-dock",
+    "name": "You Can Grow Anything",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:lemon",
+    "name": "You Can Grow Anything",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:mapacho",
+    "name": "You Can Grow Anything",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:openfarm:phacelia",
+    "name": "You Can Grow Anything",
+    "plantSpacingText": "Not listed",
+    "plantSpacingInchesMin": null,
+    "plantSpacingInchesMax": null
+  },
+  {
+    "plantId": "plant:community:zinnia",
+    "name": "Zinnia",
+    "plantSpacingText": "6–18 in depending on cultivar",
+    "plantSpacingInchesMin": 6,
+    "plantSpacingInchesMax": 18
+  },
+  {
     "plantId": "plant:community:zucchini",
     "name": "Zucchini",
     "plantSpacingText": "24-36 in between plants",
+    "plantSpacingInchesMin": 24,
+    "plantSpacingInchesMax": 36
+  },
+  {
+    "plantId": "plant:openfarm:zucchini",
+    "name": "Zucchini",
+    "plantSpacingText": "Not listed",
     "plantSpacingInchesMin": null,
     "plantSpacingInchesMax": null
   }

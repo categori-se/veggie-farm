@@ -10,7 +10,7 @@
     "build:data": "node scripts/build-community-data.mjs",
     "test": "node --test tests/*.test.js tests/*.test.mjs",
     "validate:plants": "node scripts/validate-plants.js",
-    "validate:data": "node scripts/validate-sources.js && node scripts/validate-spacing.js && node scripts/check-citations.js && node scripts/validate-horticultural-evidence.mjs && node scripts/align-garden-gis.mjs --check && node scripts/render-garden-reference-previews.mjs --check",
+    "validate:data": "node scripts/validate-sources.js && node scripts/validate-spacing.js && node scripts/check-citations.js && node scripts/validate-horticultural-evidence.mjs && node scripts/align-garden-gis.mjs --check && node scripts/render-garden-reference-previews.mjs --check && node scripts/build-common-plants.mjs --check && node scripts/build-open-plants.mjs --check",
     "check:public": "node scripts/check-public-boundary.mjs",
     "check:browser-dependencies": "node scripts/check-browser-dependencies.mjs",
     "build:dependency-notices": "node scripts/build-dependency-notices.mjs && node scripts/build-dependency-notices.mjs --build-tools && node scripts/build-browser-notice-map.mjs",
@@ -21,7 +21,11 @@
     "hooks:install": "node scripts/install-community-hooks.mjs",
     "verify:community": "npm run check:public && npm run check:public-git && npm test && npm run test:notices && npm run validate:data && npm run validate:plants && npm run validate:source-notices && npm run build",
     "validate:source-notices": "npm run check:dependency-notices && node scripts/build-dependency-notices.mjs --check --require-complete && node scripts/check-source-notice-scope.mjs",
-    "setup:deploy": "node scripts/setup-deployment.mjs"
+    "setup:deploy": "node scripts/setup-deployment.mjs",
+    "build:common-plants": "node scripts/build-common-plants.mjs",
+    "validate:common-plants": "node scripts/build-common-plants.mjs --check",
+    "build:open-plants": "node scripts/build-open-plants.mjs",
+    "validate:open-plants": "node scripts/build-open-plants.mjs --check"
   },
   "dependencies": {
     "d3": "^7.9.0",

@@ -1,3 +1,5 @@
+import {COMMON_PLANTS} from "../data/commonPlantCatalog.js";
+import {mergeStudioReferences} from "../lib/plants/commonInventory.js";
 import {plantVisualSpec} from "../lib/plants/plantVisualSpec.js";
 import {renderPlantVisual2d} from "../lib/plants/plantVisual2d.js";
 import {addPlantVisual3d} from "../lib/plants/plantVisual3d.js";
@@ -593,7 +595,7 @@ const CORE_PLANTS = [
   }
 ];
 
-const DEFAULT_PLANTS = [...CORE_PLANTS, ...FLOWER_CATALOG];
+const DEFAULT_PLANTS = mergeStudioReferences([...CORE_PLANTS, ...FLOWER_CATALOG], COMMON_PLANTS);
 
 function proposedBedPlantings(beds, existing = [], plants = DEFAULT_PLANTS) {
   const occupied = new Set(existing.map(p => p.bedId));
@@ -7247,8 +7249,10 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         <span class="plant-dot" style="--plant-color:${plant.leafColor || plant.color}"></span>
         <span><strong>${escapeHtml(plant.name)}</strong>${plant.scientificName ? `<em>${escapeHtml(plant.scientificName)}</em>` : ""}</span>
       </div>
+      ${plant.dimensionBasis ? `<p>${escapeHtml(plant.dimensionBasis)}</p>` : ""}
+      ${plant.catalogPlantId ? `<a href="/plants/plant?id=${encodeURIComponent(plant.catalogPlantId)}" target="_blank" rel="noopener noreferrer">Plant report and sources ↗</a>` : ""}
       <dl>
-        <div><dt>Spacing</dt><dd>${plant.spacing} in roots | ${plant.matureDiameter} in canopy</dd></div>
+        <div><dt>Spacing</dt><dd>${plant.spacing} in plant spacing | ${plant.matureDiameter} in canopy</dd></div>
         <div><dt>Height</dt><dd>${plant.height} in mature</dd></div>
         <div><dt>Sun</dt><dd>${escapeHtml(plant.sun)}</dd></div>
         <div><dt>Soil</dt><dd>${escapeHtml(plant.soil)}</dd></div>
@@ -7285,7 +7289,6 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
   } else if (!placement) {
     refs.selectedPlacement.innerHTML = `<div class="empty-state">No placement selected</div>`;
   } else {
-    refs.selectedPlacement.querySelector('.placement-editor').append(plannerSizeScenario({placement,canEdit:()=>plannerCanEditFeature(state,'placement'),onChange:()=>renderAll({preserveEditor:'placement'})}));
     const currentPlant = plantById(state, placement.plantId);
     const status = placementStatus(placement, state);
     refs.selectedPlacement.innerHTML = `
@@ -7322,6 +7325,8 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         </details>
       </div>
     `;
+
+    refs.selectedPlacement.querySelector('.placement-editor').append(plannerSizeScenario({placement,canEdit:()=>plannerCanEditFeature(state,'placement'),onChange:()=>renderAll({preserveEditor:'placement'})}));
 
     bindInspectorEditGuard(refs.selectedPlacement, state, "placement", renderAll);
 
@@ -13257,6 +13262,8 @@ function injectStyles() {
       .garden-tool-rail {grid-template-columns: repeat(7, minmax(0, 1fr));}
       .garden-tool-rail [data-tool="select"] {display: grid;}
       .garden-sidebar, .garden-inspector {max-height: min(48svh, 480px);}
+      .tool-panel > *, .inspector-panel > * {flex-shrink:0;}
+      .tool-panel :is(.bed-list,.plant-list,.flower-list,.structure-list,.vegetation-list) {max-height:none;overflow:visible;flex-shrink:0;}
       .drawer-heading {min-height: 44px; padding: 4px 8px;}
       .drawer-heading button {min-width: 44px; min-height: 44px;}
       .view-navigation {

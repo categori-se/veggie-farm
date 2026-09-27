@@ -1,0 +1,231 @@
+{
+  "id": "plant:openfarm:cowpea",
+  "name": "Cowpea",
+  "commonName": "Cowpea",
+  "cultivar": null,
+  "scientificName": "Vigna unguiculata",
+  "family": null,
+  "primaryUse": "open-reference",
+  "description": "Cowpeas are an annual herbaceous legume in the genus Vigna. They have a high tolerance for sandy, infertile, acidic soil and low rainfall, making them an important crop for poor farmers in Africa and other semi-arid regions. Cowpeas need 90-100 frost-free days and their optimum growth temperature is 30°C. They are grown for human consumption, cattle feed, and as a cover crop. There are four subspecies of cowpea, three of which are cultivated. Common cultivars include black-eyed pea, southern pea, yardlong bean, catjang, and crowder pea. Cowpeas can be erect, semi-erect, or climbing. Their seeds are high in protein, and their leaves and immature seed pods can also be consumed. The whole plant is used as forage for animals. They make a great cover crop or intercrop because their root nodules fix atmospheric nitrogen. They can produce as much as 315lb./acre of nitrogen. If growing as a cover crop, till under when the plants are flowering and before they go to seed.",
+  "sun": "full sun",
+  "sunlightReference": {
+    "labels": [
+      "full sun"
+    ],
+    "minimumDirectSunHours": null
+  },
+  "sowingMethod": "Direct seed outdoors, thin to 10cm",
+  "rowSpacingCm": 5,
+  "morphology": {
+    "archetype": null,
+    "growthHabit": [],
+    "heightCm": {
+      "reported": 90,
+      "min": null,
+      "max": null
+    },
+    "spreadCm": {
+      "reported": null,
+      "min": null,
+      "max": null
+    },
+    "canopy": null,
+    "stem": null,
+    "leaf": null,
+    "flower": null,
+    "fruit": null
+  },
+  "spacingInches": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "germinationDays": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "daysToMaturity": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "renderStages": [],
+  "sourceUrl": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+  "sourceIds": [
+    "source:openfarm-recovery"
+  ],
+  "sourceRecordId": "cowpea",
+  "referenceDatasetId": "openfarm-recovered-340",
+  "reviewStatus": "recovered community data; horticultural verification pending",
+  "confidence": null,
+  "rights": {
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "OpenFarm contributors; recovered by thefullnacho / OpenFarm Crops, Rescued",
+    "changes": [
+      "Stable source-specific identities; no automatic crop/cultivar joins.",
+      "Placeholder values become null; invalid or nonpositive dimensions are not promoted.",
+      "Plant spacing is not inferred from row spacing or spread.",
+      "No live API is needed during build."
+    ]
+  },
+  "citations": [
+    {
+      "id": "source:openfarm-recovery",
+      "publisher": "OpenFarm contributors",
+      "title": "Cowpea — archived crop record",
+      "url": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea"
+    },
+    {
+      "id": "source:openfarm-recovery-project",
+      "publisher": "thefullnacho / OpenFarm Crops, Rescued",
+      "title": "Recovery dataset and provenance",
+      "url": "https://github.com/thefullnacho/openfarm-crops-rescue/tree/754cfd75da007c17a628eca812632f326dc7cf10"
+    }
+  ],
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "binomialName",
+      "sourceUrl": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250318",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "description": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "description",
+      "sourceUrl": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250318",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sun",
+      "sourceUrl": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250318",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sowingMethod": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sowingMethod",
+      "sourceUrl": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250318",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "rowSpacingCm": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "rowSpacingCm",
+      "sourceUrl": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250318",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.heightCm.reported": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "heightCm",
+      "sourceUrl": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250318",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.spreadCm.reported": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "spreadCm",
+      "sourceUrl": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250318",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "family": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "cultivar": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "spacingInches": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "morphology.archetype": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    }
+  },
+  "common": "Cowpea",
+  "scientific": "Vigna unguiculata",
+  "category": "open-reference",
+  "source": "https://web.archive.org/web/20250318011719/https://openfarm.cc/en/crops/cowpea",
+  "light": "full sun",
+  "spacing": null,
+  "spacingMin": null,
+  "spacingMax": null,
+  "maturity": null,
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": "Height 90 cm (historical reported values, not a validated range)",
+  "germination": null,
+  "directSow": null,
+  "transplant": null,
+  "frost": null,
+  "imageIds": [],
+  "careNotes": [],
+  "additionalFacts": [
+    {
+      "trait": "Sowing method",
+      "text": "Sowing method: Direct seed outdoors, thin to 10cm"
+    },
+    {
+      "trait": "Row spacing",
+      "text": "Row spacing: 5 cm; not plant spacing"
+    }
+  ],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

@@ -1,0 +1,220 @@
+{
+  "id": "plant:openfarm:scots-potato",
+  "name": "Scots potato",
+  "commonName": "Scots potato",
+  "cultivar": null,
+  "scientificName": null,
+  "family": null,
+  "primaryUse": "open-reference",
+  "description": "An old cultivar sent to Koanga Institute by a Scotsman who says it came Aotearoa New Zealand with his family from the homeland. It is pink-skinned and white-fleshed. An old cultivar sent to us by a Scotsman who says it came to this land with is family from the homeland. They are round with shallow eyes, pink-skinned, white-fleshed and has a delicious flavour and texture, tasty and mealy when boiled....... also This potato comes from Henry Harrington’s early life around Akaroa, as a descendant of the de Malmanche French settlers. It is a large rock-like potato with few but deep eyes and a light purple/ pink blush under the skin. It is a fluffy potato, so it is best boiled, or mashed, and has a good flavour.",
+  "sun": null,
+  "sunlightReference": {
+    "labels": [],
+    "minimumDirectSunHours": null
+  },
+  "sowingMethod": null,
+  "rowSpacingCm": null,
+  "morphology": {
+    "archetype": null,
+    "growthHabit": [],
+    "heightCm": {
+      "reported": null,
+      "min": null,
+      "max": null
+    },
+    "spreadCm": {
+      "reported": null,
+      "min": null,
+      "max": null
+    },
+    "canopy": null,
+    "stem": null,
+    "leaf": null,
+    "flower": null,
+    "fruit": null
+  },
+  "spacingInches": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "germinationDays": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "daysToMaturity": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "renderStages": [],
+  "sourceUrl": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+  "sourceIds": [
+    "source:openfarm-recovery"
+  ],
+  "sourceRecordId": "scots-potato",
+  "referenceDatasetId": "openfarm-recovered-340",
+  "reviewStatus": "recovered community data; horticultural verification pending",
+  "confidence": null,
+  "rights": {
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "OpenFarm contributors; recovered by thefullnacho / OpenFarm Crops, Rescued",
+    "changes": [
+      "Stable source-specific identities; no automatic crop/cultivar joins.",
+      "Placeholder values become null; invalid or nonpositive dimensions are not promoted.",
+      "Plant spacing is not inferred from row spacing or spread.",
+      "No live API is needed during build."
+    ]
+  },
+  "citations": [
+    {
+      "id": "source:openfarm-recovery",
+      "publisher": "OpenFarm contributors",
+      "title": "Scots potato — archived crop record",
+      "url": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato"
+    },
+    {
+      "id": "source:openfarm-recovery-project",
+      "publisher": "thefullnacho / OpenFarm Crops, Rescued",
+      "title": "Recovery dataset and provenance",
+      "url": "https://github.com/thefullnacho/openfarm-crops-rescue/tree/754cfd75da007c17a628eca812632f326dc7cf10"
+    }
+  ],
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "binomialName",
+      "sourceUrl": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20200922",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "description": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "description",
+      "sourceUrl": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20200922",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sun": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sun",
+      "sourceUrl": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20200922",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sowingMethod": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sowingMethod",
+      "sourceUrl": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20200922",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "rowSpacingCm": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "rowSpacingCm",
+      "sourceUrl": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20200922",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.heightCm.reported": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "heightCm",
+      "sourceUrl": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20200922",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.spreadCm.reported": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "spreadCm",
+      "sourceUrl": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20200922",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "family": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "cultivar": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "spacingInches": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "morphology.archetype": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    }
+  },
+  "common": "Scots potato",
+  "scientific": null,
+  "category": "open-reference",
+  "source": "https://web.archive.org/web/20200922044143/https://openfarm.cc/en/crops/scots-potato",
+  "light": null,
+  "spacing": null,
+  "spacingMin": null,
+  "spacingMax": null,
+  "maturity": null,
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": null,
+  "germination": null,
+  "directSow": null,
+  "transplant": null,
+  "frost": null,
+  "imageIds": [],
+  "careNotes": [],
+  "additionalFacts": [],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

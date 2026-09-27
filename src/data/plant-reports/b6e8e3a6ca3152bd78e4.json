@@ -1,0 +1,678 @@
+{
+  "id": "plant:community:grapes",
+  "name": "Grapes",
+  "common": "Grapes",
+  "scientific": "Vitis spp.",
+  "cultivar": null,
+  "family": "Vitaceae",
+  "category": "fruit",
+  "lifeCycle": "woody perennial vine",
+  "description": "General planning reference; check the chosen cultivar and local conditions.",
+  "light": "full sun",
+  "sunHours": "At least 6 hours (supplied planning reference)",
+  "spacing": "commonly 6–8 ft between backyard vines; system and vigor vary",
+  "spacingMin": 72,
+  "spacingMax": 96,
+  "maturity": "Light crops may begin after establishment; full production takes longer.",
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": "Height 60–96 in; spread 72–120 in. Planning range, not a guaranteed mature measurement; verify cultivar-specific dimensions before installation.",
+  "hardiness": "USDA zones 4–9 (general reference)",
+  "pollination": "Most cultivated grapes are self-fruitful; some specialty types differ.",
+  "frost": null,
+  "directSow": null,
+  "transplant": null,
+  "source": "https://extension.psu.edu/backyard-grape-growing",
+  "sourceIds": [
+    "psu-grapes",
+    "psu-fruit-pollination"
+  ],
+  "citations": [
+    {
+      "id": "psu-grapes",
+      "publisher": "Penn State Extension",
+      "title": "Backyard Grape Growing",
+      "url": "https://extension.psu.edu/backyard-grape-growing",
+      "supports": [
+        "grape planting",
+        "trellising",
+        "pruning",
+        "site"
+      ]
+    },
+    {
+      "id": "psu-fruit-pollination",
+      "publisher": "Penn State Extension",
+      "title": "Pollination Requirements for Various Fruits and Nuts",
+      "url": "https://extension.psu.edu/pollination-requirements-for-various-fruits-and-nuts",
+      "supports": [
+        "blackberry pollination",
+        "grape pollination",
+        "peach pollination",
+        "sweet cherry pollination"
+      ]
+    }
+  ],
+  "rights": {
+    "license": "GPL-3.0-only",
+    "attribution": "veggie.farm project owner — Common 100 compilation",
+    "scope": "Original contribution only; linked third-party pages retain their terms."
+  },
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "scientificName",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "family": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "family",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "lifecycle": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "lifecycle",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.texture": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "soil.texture",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.drainage": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "soil.drainage",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMin": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "soil.phMin",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMax": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "soil.phMax",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.fertility": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "soil.fertility",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.need": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "water.need",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.targetInchesPerWeek": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "water.targetInchesPerWeek",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "frostTolerance": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "frostTolerance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "usdaHardinessZones": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "usdaHardinessZones",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "spacingInches.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "spacingInches.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "spacingInches.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "matureSizeInches.height.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "matureSizeInches.height.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.text": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "matureSizeInches.height.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "matureSizeInches.spread.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "matureSizeInches.spread.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.text": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "matureSizeInches.spread.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.planningNote": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "matureSizeInches.planningNote",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.yearsToFirstHarvest.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "timeToHarvest.yearsToFirstHarvest.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.yearsToFirstHarvest.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "timeToHarvest.yearsToFirstHarvest.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "timeToHarvest.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.startIndoorsWeeksBeforeLastFrost": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "planting.startIndoorsWeeksBeforeLastFrost",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.directSow": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "planting.directSow",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.transplant": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "planting.transplant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.visualArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.perennialInfrastructure": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.perennialInfrastructure",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderGuidance": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.renderGuidance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.canonicalArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.canonicalArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualVariant": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.visualVariant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.archetypeVersion": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.archetypeVersion",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderSource": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.renderSource",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.useRealWorldDimensions": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.rendererHints.useRealWorldDimensions",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.showMatureFootprintIn2D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.rendererHints.showMatureFootprintIn2D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowProcedural3D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.rendererHints.allowProcedural3D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowOptionalModelOverride": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.rendererHints.allowOptionalModelOverride",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.fallbackArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "studio.rendererHints.fallbackArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "sunlightReference.labels": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sunlightReference.minimumDirectSunHours": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "sun.minimumDirectSunHours",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:grapes",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "psu-grapes",
+        "psu-fruit-pollination"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    }
+  },
+  "reviewStatus": "user-supplied-reference; horticultural verification pending",
+  "referenceDatasetId": "veggie-farm-common-100-unified",
+  "rank": 80,
+  "priority": "Expansion",
+  "imageIds": [],
+  "additionalFacts": [
+    {
+      "trait": "Soil",
+      "text": "Soil: loam, sandy loam; excellent; moderate"
+    },
+    {
+      "trait": "Soil pH",
+      "text": "Soil pH: 5.5–6.5"
+    },
+    {
+      "trait": "Water",
+      "text": "Water: moderate"
+    },
+    {
+      "trait": "Frost",
+      "text": "Frost: hardiness varies greatly by species/cultivar"
+    },
+    {
+      "trait": "Harvest",
+      "text": "Harvest: Harvest clusters when flavor/sugar maturity is appropriate; color alone is not always sufficient."
+    },
+    {
+      "trait": "Support",
+      "text": "Support: Permanent trellis required for normal garden production."
+    },
+    {
+      "trait": "Direct sowing",
+      "text": "Direct sowing: Not used for named cultivars."
+    },
+    {
+      "trait": "Transplanting",
+      "text": "Transplanting: Plant dormant rooted cuttings or grafted vines in spring."
+    }
+  ],
+  "careNotes": [
+    "Temperate United States; planning emphasis on New England. Cultivar and local-climate variation applies."
+  ],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

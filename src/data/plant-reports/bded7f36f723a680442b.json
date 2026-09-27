@@ -1,0 +1,227 @@
+{
+  "id": "plant:openfarm:ice-cream-bean",
+  "name": "Ice Cream Bean",
+  "commonName": "Ice Cream Bean",
+  "cultivar": null,
+  "scientificName": "Inga edulis",
+  "family": null,
+  "primaryUse": "open-reference",
+  "description": "The Ice Cream Bean, Joaquiniquil, or Monkey Tamarind tree is a small, fast-growing, evergreen tree in the Legume family (Fabaceae). It is native to the hot, humid tropics of Central and South America. The tree produces large, 30cm pods that resemble those of tamarind. The pods do not open when ripe, and contain black seeds the size of lima beans surrounded by sweet, cottony pulp that tastes similar to vanilla ice cream. The tree is grown as a companion plant to shade cacao, coffee, tea, and vanilla crops because it has a broad, moderately dense canopy and fixes nitrogen. Beans and pulp are quickly perishable and harvested as needed when ripe. They are eaten fresh or used to flavor desserts and make the alcoholic beverage cachiri. In folk medicine, a decoction of the leaves and bark is used to relieve diarrhea, and root decoctions are used to treat dysentery. The Ice Cream Bean tree has white flowers and a contorted trunk with gray bark. It flowers and fruits year round and does best where annual daytime temperatures are between 23-30°C. Temperatures below -2°C will kill mature plants and new growth is damaged at 0°C. Mature trees are somewhat drought-tolerant. Seed germinates readily and self-sows when pods fall to the ground. The trees are threatening to become invasive in Australia.",
+  "sun": "full sun",
+  "sunlightReference": {
+    "labels": [
+      "full sun"
+    ],
+    "minimumDirectSunHours": null
+  },
+  "sowingMethod": "Transplant young tree or start from seed",
+  "rowSpacingCm": null,
+  "morphology": {
+    "archetype": null,
+    "growthHabit": [],
+    "heightCm": {
+      "reported": 2500,
+      "min": null,
+      "max": null
+    },
+    "spreadCm": {
+      "reported": null,
+      "min": null,
+      "max": null
+    },
+    "canopy": null,
+    "stem": null,
+    "leaf": null,
+    "flower": null,
+    "fruit": null
+  },
+  "spacingInches": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "germinationDays": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "daysToMaturity": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "renderStages": [],
+  "sourceUrl": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+  "sourceIds": [
+    "source:openfarm-recovery"
+  ],
+  "sourceRecordId": "ice-cream-bean",
+  "referenceDatasetId": "openfarm-recovered-340",
+  "reviewStatus": "recovered community data; horticultural verification pending",
+  "confidence": null,
+  "rights": {
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "OpenFarm contributors; recovered by thefullnacho / OpenFarm Crops, Rescued",
+    "changes": [
+      "Stable source-specific identities; no automatic crop/cultivar joins.",
+      "Placeholder values become null; invalid or nonpositive dimensions are not promoted.",
+      "Plant spacing is not inferred from row spacing or spread.",
+      "No live API is needed during build."
+    ]
+  },
+  "citations": [
+    {
+      "id": "source:openfarm-recovery",
+      "publisher": "OpenFarm contributors",
+      "title": "Ice Cream Bean — archived crop record",
+      "url": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean"
+    },
+    {
+      "id": "source:openfarm-recovery-project",
+      "publisher": "thefullnacho / OpenFarm Crops, Rescued",
+      "title": "Recovery dataset and provenance",
+      "url": "https://github.com/thefullnacho/openfarm-crops-rescue/tree/754cfd75da007c17a628eca812632f326dc7cf10"
+    }
+  ],
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "binomialName",
+      "sourceUrl": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250317",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "description": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "description",
+      "sourceUrl": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250317",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sun",
+      "sourceUrl": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250317",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sowingMethod": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sowingMethod",
+      "sourceUrl": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250317",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "rowSpacingCm": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "rowSpacingCm",
+      "sourceUrl": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250317",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.heightCm.reported": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "heightCm",
+      "sourceUrl": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250317",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.spreadCm.reported": {
+      "classification": "unknown",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "spreadCm",
+      "sourceUrl": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20250317",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "family": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "cultivar": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "spacingInches": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "morphology.archetype": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    }
+  },
+  "common": "Ice Cream Bean",
+  "scientific": "Inga edulis",
+  "category": "open-reference",
+  "source": "https://web.archive.org/web/20250317235341/https://openfarm.cc/en/crops/ice-cream-bean",
+  "light": "full sun",
+  "spacing": null,
+  "spacingMin": null,
+  "spacingMax": null,
+  "maturity": null,
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": "Height 2500 cm (historical reported values, not a validated range)",
+  "germination": null,
+  "directSow": null,
+  "transplant": null,
+  "frost": null,
+  "imageIds": [],
+  "careNotes": [],
+  "additionalFacts": [
+    {
+      "trait": "Sowing method",
+      "text": "Sowing method: Transplant young tree or start from seed"
+    }
+  ],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

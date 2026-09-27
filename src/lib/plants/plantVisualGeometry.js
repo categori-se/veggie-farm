@@ -7,8 +7,41 @@ export function plantVisualGeometry(spec, placementId='') {
  const branch=(x,y,z,color)=>branches.push({kind:'branch',start:[0,.04,0],end:[x,y,z],color});
  const stem=(x,z,h,r=.015)=>add('cylinder',x,h/2,z,r,h,r,spec.colors.stem);
  const leaf=(x,y,z,length,width,yaw)=>add('sphere',x,y,z,length,.025,width,spec.colors.foliage,yaw);
- if(spec.id==='layered-conifer'){
-  stem(0,0,1,.022);
+ if(spec.id==='broadleaf-tree'){
+  stem(0,0,.76,.075);
+  for(let i=0;i<9;i++){
+   const a=i*2.39996,r=i===0?0:.22,y=i===0?.79:.59+(i%3)*.075;
+   const x=Math.cos(a)*r,z=Math.sin(a)*r;
+   branches.push({kind:'branch',start:[0,.35,0],end:[x,y,z],color:spec.colors.stem,thickness:.028});
+   add('sphere',x,y,z,.5,.34,.45,spec.colors.foliage,a);
+  }
+ }else if(spec.id==='flowering-perennial'){
+  const form=spec.flowerForm,color=spec.colors.flower;
+  for(let i=0;i<3;i++){
+   const a=i*2.39996,x=Math.cos(a)*.18,z=Math.sin(a)*.18,h=.78+i*.07;
+   stem(x,z,h,.016);
+   for(let j=0;j<4;j++){const angle=a+j*2.4;leaf(x+Math.cos(angle)*.09,.18+j*.12,z+Math.sin(angle)*.09,form==='iris'?.4:.22,form==='iris'?.025:.09,angle);}
+   if(!color)continue; // Missing color stays unknown rather than inventing a bloom.
+   if(form==='spike'){
+    for(let j=0;j<9;j++){const angle=j*2.4;add('sphere',x+Math.cos(angle)*.045,h-.3+j*.037,z+Math.sin(angle)*.045,.09,.06,.07,color,angle);}
+   }else if(form==='cluster'||form==='spray'){
+    for(let j=0;j<9;j++){const angle=j*2.4,r=.035+Math.sqrt(j)*.045,yy=form==='spray'?h-j*.022:h+Math.sin(j)*.025;
+     branches.push({kind:'branch',start:[x,h-.2,z],end:[x+Math.cos(angle)*r,yy,z+Math.sin(angle)*r],color:spec.colors.stem});
+     add('sphere',x+Math.cos(angle)*r,yy,z+Math.sin(angle)*r,.065,.05,.065,color);
+    }
+   }else if(form==='bell'){
+    add('cone',x,h,z,.18,.15,.18,color);
+    add('sphere',x,h-.06,z,.12,.04,.12,spec.colors.center);
+   }else{
+    const count=form==='rayed'?12:form==='iris'?3:form==='layered'?18:5;
+    for(let j=0;j<count;j++){const angle=j*2*Math.PI/(form==='layered'?9:count),r=form==='layered'&&j>=9?.055:.1;
+     add('sphere',x+Math.cos(angle)*r,h+(form==='layered'&&j>=9?.035:0),z+Math.sin(angle)*r,form==='iris'?.22:.15,form==='layered'?.07:.025,form==='rayed'?.04:.09,color,angle);
+    }
+    add('sphere',x,h+.025,z,.075,.055,.075,spec.colors.center);
+   }
+  }
+ }else if(spec.id==='layered-conifer'){
+  stem(0,0,1,.05);
   for(let i=0;i<spec.layers;i++){
    const radius=.5*(1-i*.15),h=.2;
    add('cone',0,.28+i*.14,0,radius*2,h,radius*2,spec.colors.foliage);

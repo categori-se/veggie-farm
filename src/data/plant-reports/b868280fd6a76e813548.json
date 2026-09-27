@@ -1,0 +1,231 @@
+{
+  "id": "plant:openfarm:grapefruit",
+  "name": "Grapefruit",
+  "commonName": "Grapefruit",
+  "cultivar": null,
+  "scientificName": "Citrus × paradisi",
+  "family": null,
+  "primaryUse": "open-reference",
+  "description": "The Grapefruit is subtropical citrus tree that produces clusters of large, round, sour to semi-sweet fruit. It is a hybrid cross between the sweet orange and pomelo that originated in Barbados. It is frequently confused with the pomelo and was only botanically distinguished from it in the 1830s. The tree can grow up to 7 meters tall, and has a rounded canopy of ovate, glossy, dark green, evergreen leaves. Certain varieties can be prickly or thorny. Grapefruits have male and female flowers on a single tree and are self-pollinating. Fruit are 10-15cm in diameter with yellow to orange skin. The juicy flesh is segmented and can be white, pink, or red, with redder varieties being the sweetest. Because they are subtropical, grapefruits require relatively warm temperatures between 15.5 and 29°C. Fruit takes longer to mature and is more acidic in areas with cooler temperatures. Trees can survive temperatures as low as -3°C, but do not require a winter chilling period. Grapefruit are most commonly propagated by planting a grafted cultivar. Fruit set should be removed the first two years to channel the tree's energy into growth rather than fruit production. In the third year, leave fruits on the tree, thinning as necessary to improve harvest. Trees grown from seed are usually, but not always, true to their parent tree's characteristics, and will take up to 10 years to bear fruit. Fruits are ready for harvest once they have turned golden or yellow. They will become larger and sweeter the longer they remain on the tree. If the fruit appears lumpy, it is overripe and should not be eaten. Container planting is not ideal, but can be done with dwarf varieties. Plants should be moved outside during the summer for optimal growth.",
+  "sun": "full sun",
+  "sunlightReference": {
+    "labels": [
+      "full sun"
+    ],
+    "minimumDirectSunHours": null
+  },
+  "sowingMethod": "Transplant grafted sapling",
+  "rowSpacingCm": 600,
+  "morphology": {
+    "archetype": null,
+    "growthHabit": [],
+    "heightCm": {
+      "reported": 450,
+      "min": null,
+      "max": null
+    },
+    "spreadCm": {
+      "reported": 450,
+      "min": null,
+      "max": null
+    },
+    "canopy": null,
+    "stem": null,
+    "leaf": null,
+    "flower": null,
+    "fruit": null
+  },
+  "spacingInches": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "germinationDays": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "daysToMaturity": {
+    "min": null,
+    "max": null,
+    "text": null
+  },
+  "renderStages": [],
+  "sourceUrl": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+  "sourceIds": [
+    "source:openfarm-recovery"
+  ],
+  "sourceRecordId": "grapefruit",
+  "referenceDatasetId": "openfarm-recovered-340",
+  "reviewStatus": "recovered community data; horticultural verification pending",
+  "confidence": null,
+  "rights": {
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "OpenFarm contributors; recovered by thefullnacho / OpenFarm Crops, Rescued",
+    "changes": [
+      "Stable source-specific identities; no automatic crop/cultivar joins.",
+      "Placeholder values become null; invalid or nonpositive dimensions are not promoted.",
+      "Plant spacing is not inferred from row spacing or spread.",
+      "No live API is needed during build."
+    ]
+  },
+  "citations": [
+    {
+      "id": "source:openfarm-recovery",
+      "publisher": "OpenFarm contributors",
+      "title": "Grapefruit — archived crop record",
+      "url": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit"
+    },
+    {
+      "id": "source:openfarm-recovery-project",
+      "publisher": "thefullnacho / OpenFarm Crops, Rescued",
+      "title": "Recovery dataset and provenance",
+      "url": "https://github.com/thefullnacho/openfarm-crops-rescue/tree/754cfd75da007c17a628eca812632f326dc7cf10"
+    }
+  ],
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "binomialName",
+      "sourceUrl": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20211127",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "description": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "description",
+      "sourceUrl": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20211127",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sun",
+      "sourceUrl": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20211127",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "sowingMethod": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "sowingMethod",
+      "sourceUrl": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20211127",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "rowSpacingCm": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "rowSpacingCm",
+      "sourceUrl": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20211127",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.heightCm.reported": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "heightCm",
+      "sourceUrl": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20211127",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "morphology.spreadCm.reported": {
+      "classification": "direct_source",
+      "sourceId": "source:openfarm-recovery",
+      "sourceField": "spreadCm",
+      "sourceUrl": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+      "datasetId": "openfarm-recovered-340",
+      "retrievedOn": "2026-09-27",
+      "captured": "20211127",
+      "scope": "source-record; taxonomic scope unverified",
+      "reviewStatus": "recovered community data; horticultural verification pending",
+      "license": "CC0-1.0"
+    },
+    "family": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "cultivar": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "spacingInches": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    },
+    "morphology.archetype": {
+      "classification": "unknown",
+      "reason": "Not established by the imported fields; no automatic inference."
+    }
+  },
+  "common": "Grapefruit",
+  "scientific": "Citrus × paradisi",
+  "category": "open-reference",
+  "source": "https://web.archive.org/web/20211127093959/https://openfarm.cc/en/crops/grapefruit",
+  "light": "full sun",
+  "spacing": null,
+  "spacingMin": null,
+  "spacingMax": null,
+  "maturity": null,
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": "Height 450 cm; spread 450 cm (historical reported values, not a validated range)",
+  "germination": null,
+  "directSow": null,
+  "transplant": null,
+  "frost": null,
+  "imageIds": [],
+  "careNotes": [],
+  "additionalFacts": [
+    {
+      "trait": "Sowing method",
+      "text": "Sowing method: Transplant grafted sapling"
+    },
+    {
+      "trait": "Row spacing",
+      "text": "Row spacing: 600 cm; not plant spacing"
+    }
+  ],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

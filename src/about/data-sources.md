@@ -66,3 +66,7 @@ Air temperatures are in Fahrenheit. The displayed daily midpoint is `(TMAX + TMI
 Source references and weather observations are retained so the comparisons can be checked. Use the download in the weather tool to inspect its station values and method. Publisher rights remain with the sources.
 
 Gardening scenarios and illustrative stories are editorial teaching examples, not measured gardener outcomes. Actual observations belong in [Garden Notebook](/tools/my-garden). {{notebook-persistence-detail}}
+
+## Reusable plant collection
+
+[Download the attributed plant collection](/content/reference/open-plant-data): 100 project-contributed planning profiles and 340 recovered OpenFarm records, with source links, data terms and explicit unknowns. Field coverage is reported separately from horticultural verification.

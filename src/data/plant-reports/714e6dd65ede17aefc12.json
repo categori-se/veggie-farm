@@ -1,0 +1,575 @@
+{
+  "id": "plant:community:bearded-iris",
+  "name": "Iris — Common Bearded",
+  "common": "Iris — Common Bearded",
+  "scientific": "Iris × germanica",
+  "cultivar": null,
+  "family": "Iridaceae",
+  "category": "ornamental",
+  "lifeCycle": "rhizomatous herbaceous perennial",
+  "description": "General planning reference; check the chosen cultivar and local conditions.",
+  "light": "full sun",
+  "sunHours": "At least 6 hours (supplied planning reference)",
+  "spacing": "12–24 in depending on cultivar",
+  "spacingMin": 12,
+  "spacingMax": 24,
+  "maturity": null,
+  "maturityMin": null,
+  "maturityMax": null,
+  "matureSize": "Height 12–36 in; spread 12–24 in. Planning range, not a guaranteed mature measurement; verify cultivar-specific dimensions before installation.",
+  "hardiness": "USDA zones 3–9 (general reference)",
+  "pollination": null,
+  "frost": null,
+  "directSow": null,
+  "transplant": null,
+  "source": "https://plants.ces.ncsu.edu/plants/iris-x-germanica/common-name/bearded-iris/",
+  "sourceIds": [
+    "ncsu-iris"
+  ],
+  "citations": [
+    {
+      "id": "ncsu-iris",
+      "publisher": "NC State Extension",
+      "title": "Bearded Iris — Iris x germanica",
+      "url": "https://plants.ces.ncsu.edu/plants/iris-x-germanica/common-name/bearded-iris/",
+      "supports": [
+        "taxonomy",
+        "sun",
+        "soil",
+        "form",
+        "maintenance"
+      ]
+    }
+  ],
+  "rights": {
+    "license": "GPL-3.0-only",
+    "attribution": "veggie.farm project owner — Common 100 compilation",
+    "scope": "Original contribution only; linked third-party pages retain their terms."
+  },
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "scientificName",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "family": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "family",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "lifecycle": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "lifecycle",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.texture": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "soil.texture",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.drainage": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "soil.drainage",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMin": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "soil.phMin",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMax": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "soil.phMax",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.fertility": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "soil.fertility",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.need": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "water.need",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.targetInchesPerWeek": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "water.targetInchesPerWeek",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "frostTolerance": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "frostTolerance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "usdaHardinessZones": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "usdaHardinessZones",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "spacingInches.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "spacingInches.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "spacingInches.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "matureSizeInches.height.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "matureSizeInches.height.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.text": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "matureSizeInches.height.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "matureSizeInches.spread.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "matureSizeInches.spread.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.text": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "matureSizeInches.spread.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.planningNote": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "matureSizeInches.planningNote",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "timeToHarvest",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.transplant": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "planting.transplant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.visualArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.perennialInfrastructure": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.perennialInfrastructure",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderGuidance": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.renderGuidance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.canonicalArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.canonicalArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualVariant": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.visualVariant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.archetypeVersion": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.archetypeVersion",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderSource": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.renderSource",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.useRealWorldDimensions": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.rendererHints.useRealWorldDimensions",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.showMatureFootprintIn2D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.rendererHints.showMatureFootprintIn2D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowProcedural3D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.rendererHints.allowProcedural3D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowOptionalModelOverride": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.rendererHints.allowOptionalModelOverride",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.fallbackArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "studio.rendererHints.fallbackArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "sunlightReference.labels": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sunlightReference.minimumDirectSunHours": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "sun.minimumDirectSunHours",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:bearded-iris",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "ncsu-iris"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    }
+  },
+  "reviewStatus": "user-supplied-reference; horticultural verification pending",
+  "referenceDatasetId": "veggie-farm-common-100-unified",
+  "rank": 90,
+  "priority": "Expansion",
+  "imageIds": [],
+  "additionalFacts": [
+    {
+      "trait": "Soil",
+      "text": "Soil: loam, sandy loam; excellent; moderate"
+    },
+    {
+      "trait": "Soil pH",
+      "text": "Soil pH: 6–7.5"
+    },
+    {
+      "trait": "Water",
+      "text": "Water: low-moderate"
+    },
+    {
+      "trait": "Frost",
+      "text": "Frost: cold hardy while dormant"
+    },
+    {
+      "trait": "Harvest",
+      "text": "Harvest: Remove spent flower stalks and divide overcrowded clumps."
+    },
+    {
+      "trait": "Support",
+      "text": "Support: none"
+    },
+    {
+      "trait": "Transplanting",
+      "text": "Transplanting: Plant/divide rhizomes in mid- to late summer after flowering; keep rhizomes near the soil surface."
+    },
+    {
+      "trait": "Safety",
+      "text": "Safety: Rhizomes and foliage can cause gastrointestinal irritation if eaten."
+    }
+  ],
+  "careNotes": [
+    "Temperate United States; planning emphasis on New England. Cultivar and local-climate variation applies."
+  ],
+  "sourceAttributes": [],
+  "sourceDescription": []
+}

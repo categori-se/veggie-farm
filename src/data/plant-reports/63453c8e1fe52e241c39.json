@@ -7,17 +7,714 @@
   "source": "https://massnrc.org/ppd/",
   "sourceKind": "botanical-reference",
   "imageIds": [],
-  "light": null,
-  "spacing": null,
-  "spacingMin": null,
-  "spacingMax": null,
+  "light": "full sun",
+  "spacing": "18–24 in",
+  "spacingMin": 18,
+  "spacingMax": 24,
   "maturity": null,
   "maturityMax": null,
   "frost": null,
   "directSow": null,
   "transplant": null,
-  "careNotes": [],
-  "additionalFacts": [],
+  "careNotes": [
+    "Temperate United States with New England planning emphasis; local climate and cultivar selection take precedence."
+  ],
+  "additionalFacts": [
+    {
+      "trait": "Soil",
+      "text": "Soil: dry well-drained soil"
+    },
+    {
+      "trait": "Soil pH",
+      "text": "Soil pH: 5.5–7.5"
+    },
+    {
+      "trait": "Water",
+      "text": "Water: low-moderate"
+    },
+    {
+      "trait": "Frost",
+      "text": "Frost: cold hardy when dormant"
+    },
+    {
+      "trait": "Harvest",
+      "text": "Harvest: Leave some pods/standing stems for habitat if desired."
+    },
+    {
+      "trait": "Support",
+      "text": "Support: none"
+    },
+    {
+      "trait": "Direct sowing",
+      "text": "Direct sowing: Seed benefits from cold stratification."
+    },
+    {
+      "trait": "Transplanting",
+      "text": "Transplanting: Plant plugs young; deep taproot dislikes disturbance."
+    },
+    {
+      "trait": "Safety",
+      "text": "Safety: Milky sap/plant tissues are toxic if eaten; sap can irritate."
+    }
+  ],
+  "family": "Apocynaceae",
+  "lifeCycle": "herbaceous perennial",
+  "description": "General planning reference; check the chosen cultivar and local conditions.",
+  "sunHours": "At least 6 hours (supplied planning reference)",
+  "matureSize": "Height 18–36 in; spread 18–24 in. Generalized planning range; cultivar and management can materially change mature dimensions.",
+  "hardiness": "USDA zones 3–9 (general reference)",
+  "pollination": "Important nectar plant and monarch host.",
+  "sourceIds": [
+    "source:community-guides",
+    "mdar-pollinator",
+    "umass-pollinator-profiles",
+    "csnap-native-plants"
+  ],
+  "citations": [
+    {
+      "id": "source:community-guides",
+      "publisher": "veggie.farm",
+      "title": "Current project crop/fruit/herb guides",
+      "url": "https://veggie.farm/",
+      "role": [
+        "existing project identity",
+        "current crop timing text",
+        "current spacing text",
+        "current maturity text"
+      ]
+    },
+    {
+      "id": "mdar-pollinator",
+      "publisher": "Massachusetts Department of Agricultural Resources",
+      "title": "Native Pollinator Plant Database",
+      "url": "https://massnrc.org/ppd/",
+      "role": [
+        "native flower light",
+        "moisture",
+        "flower color",
+        "bloom period",
+        "growth form"
+      ]
+    },
+    {
+      "id": "umass-pollinator-profiles",
+      "publisher": "UMass Extension",
+      "title": "Native Pollinator Plant Profiles",
+      "url": "https://www.umass.edu/agriculture-food-environment/resources/pollinators/managing-landscapes-for-pollinators/native-pollinator-plant-profiles",
+      "role": [
+        "mature size",
+        "bloom duration",
+        "site conditions",
+        "pollinator value"
+      ]
+    },
+    {
+      "id": "csnap-native-plants",
+      "publisher": "UMass Spatial Ecology Lab / Northeast RISCC",
+      "title": "Climate-Smart Native Plants",
+      "url": "https://www.climatesmartnativeplants.org/",
+      "role": [
+        "regional native status",
+        "hardiness",
+        "growth requirements"
+      ]
+    }
+  ],
+  "rights": {
+    "license": "GPL-3.0-only",
+    "attribution": "veggie.farm project owner — Common 100 compilation",
+    "scope": "Original contribution only; linked third-party pages retain their terms."
+  },
+  "reviewStatus": "user-supplied-reference; horticultural verification pending",
+  "referenceDatasetId": "veggie-farm-common-100-unified",
+  "rank": 40,
+  "priority": "Medium",
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "scientificName",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "family": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "family",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "lifecycle": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "lifecycle",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "soil.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMin": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "soil.phMin",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMax": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "soil.phMax",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.drainage": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "soil.drainage",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.need": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "water.need",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.targetInchesPerWeek": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "water.targetInchesPerWeek",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "frostTolerance": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "frostTolerance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "usdaHardinessZones": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "usdaHardinessZones",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "spacingInches.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "spacingInches.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "spacingInches.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "matureSizeInches.height.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "matureSizeInches.height.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "matureSizeInches.height.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "matureSizeInches.spread.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "matureSizeInches.spread.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "matureSizeInches.spread.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.planningNote": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "matureSizeInches.planningNote",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "timeToHarvest",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.directSow": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "planting.directSow",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.transplant": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "planting.transplant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.canonicalArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.canonicalArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualVariant": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.visualVariant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.archetypeVersion": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.archetypeVersion",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderSource": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.renderSource",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.useRealWorldDimensions": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.rendererHints.useRealWorldDimensions",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.showMatureFootprintIn2D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.rendererHints.showMatureFootprintIn2D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowProcedural3D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.rendererHints.allowProcedural3D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowOptionalModelOverride": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.rendererHints.allowOptionalModelOverride",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.fallbackArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "studio.rendererHints.fallbackArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "sunlightReference.labels": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sunlightReference.minimumDirectSunHours": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "sun.minimumDirectSunHours",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:flower-butterfly-weed",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    }
+  },
+  "referenceEnrichment": {
+    "datasetId": "veggie-farm-common-100-unified",
+    "reviewStatus": "user-supplied-reference; horticultural verification pending",
+    "sourceIds": [
+      "source:community-guides",
+      "mdar-pollinator",
+      "umass-pollinator-profiles",
+      "csnap-native-plants"
+    ],
+    "filledFields": [
+      "family",
+      "lifeCycle",
+      "description",
+      "light",
+      "sunHours",
+      "spacing",
+      "spacingMin",
+      "spacingMax",
+      "matureSize",
+      "hardiness",
+      "pollination",
+      "sourceIds",
+      "citations",
+      "rights",
+      "reviewStatus",
+      "referenceDatasetId",
+      "rank",
+      "priority",
+      "additionalFacts",
+      "careNotes"
+    ]
+  },
   "sourceAttributes": [],
   "sourceDescription": []
 }

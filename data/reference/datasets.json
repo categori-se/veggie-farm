@@ -48,6 +48,30 @@
       "processing_script": "scripts/build-public-data-api.mjs",
       "public_sample": "data/spatial/gardens/",
       "scope": "Incomplete examples; not owner property"
+    },
+    {
+      "dataset": "common-100-planning-references",
+      "source": "Owner-supplied enriched common-plant compilation",
+      "source_url": null,
+      "license": "GPL-3.0-only original owner-authored compilation; cited upstream pages retain their own terms and are not redistributed.",
+      "version": "2026-09-27",
+      "checksum": "Per-input SHA-256 in data/reference/common-plants-import.json",
+      "download_method": "Owner-provided JSON; no network acquisition",
+      "processing_script": "scripts/build-common-plants.mjs",
+      "public_sample": "data/reference/common-plants.json",
+      "scope": "100 generic plants, generalized planning ranges, 67 citations and 22 illustrative archetypes; horticultural verification pending"
+    },
+    {
+      "dataset": "openfarm-recovered-340",
+      "source": "OpenFarm contributors; recovered by thefullnacho",
+      "source_url": "https://github.com/thefullnacho/openfarm-crops-rescue",
+      "license": "CC0-1.0",
+      "version": "754cfd75da007c17a628eca812632f326dc7cf10",
+      "checksum": "SHA-256 pinned in data/reference/openfarm/manifest.json",
+      "download_method": "Pinned public snapshot; normal builds offline",
+      "processing_script": "scripts/build-open-plants.mjs",
+      "public_sample": "data/reference/openfarm/crops.json",
+      "scope": "340 historical community records; archive provenance retained; horticultural verification pending; no media"
     }
   ]
 }

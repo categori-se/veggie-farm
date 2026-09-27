@@ -3,27 +3,639 @@
   "name": "Peppers",
   "common": "Peppers",
   "cultivar": null,
-  "scientific": null,
+  "scientific": "Capsicum annuum (common garden types; other Capsicum spp. also grown)",
   "category": "vegetable",
   "family": "Nightshade",
-  "description": null,
-  "careNotes": [],
-  "additionalFacts": [],
+  "description": "General planning reference; check the chosen cultivar and local conditions.",
+  "careNotes": [
+    "Temperate United States with New England planning emphasis; local climate and cultivar selection take precedence."
+  ],
+  "additionalFacts": [
+    {
+      "trait": "Soil",
+      "text": "Soil: fertile, well-drained loam"
+    },
+    {
+      "trait": "Soil pH",
+      "text": "Soil pH: 6–6.8"
+    },
+    {
+      "trait": "Water",
+      "text": "Water: consistent"
+    },
+    {
+      "trait": "Frost",
+      "text": "Frost: frost tender; chilling sensitive"
+    },
+    {
+      "trait": "Harvest",
+      "text": "Harvest: Harvest green or allow fruit to reach mature cultivar color and flavor."
+    },
+    {
+      "trait": "Support",
+      "text": "Support: Cages/stakes useful for heavy-fruited plants."
+    },
+    {
+      "trait": "Direct sowing",
+      "text": "Direct sowing: Not recommended in most temperate gardens."
+    },
+    {
+      "trait": "Transplanting",
+      "text": "Transplanting: After frost when nighttime lows are above about 50°F."
+    }
+  ],
   "source": "https://veggie.farm/content/vegetables/peppers",
   "sourceKind": "project-guide",
   "imageIds": [],
   "spacing": "18-24 in between plants; 24-36 in between rows",
-  "spacingMin": null,
-  "spacingMax": null,
+  "spacingMin": 18,
+  "spacingMax": 24,
   "maturity": "60-100",
   "maturityMin": null,
   "maturityMax": null,
-  "light": null,
+  "light": "full sun",
   "frost": null,
   "directSow": null,
   "transplant": null,
   "form": null,
   "reviewStatus": "project-guide; cultivar details unknown",
+  "lifeCycle": "tender perennial grown as annual",
+  "sunHours": "At least 6 hours (supplied planning reference)",
+  "matureSize": "Height 18–48 in; spread 18–30 in. Hot and sweet pepper cultivars range from compact to tall.",
+  "pollination": "Mostly self-pollinating; insect visitation can help.",
+  "sourceIds": [
+    "source:community-guides",
+    "umn-peppers"
+  ],
+  "citations": [
+    {
+      "id": "source:community-guides",
+      "publisher": "veggie.farm",
+      "title": "Current project crop/fruit/herb guides",
+      "url": "https://veggie.farm/",
+      "role": [
+        "existing project identity",
+        "current crop timing text",
+        "current spacing text",
+        "current maturity text"
+      ]
+    },
+    {
+      "id": "umn-peppers",
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing peppers",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-peppers",
+      "role": [
+        "spacing",
+        "temperature",
+        "transplant timing",
+        "rotation"
+      ]
+    }
+  ],
+  "rights": {
+    "license": "GPL-3.0-only",
+    "attribution": "veggie.farm project owner — Common 100 compilation",
+    "scope": "Original contribution only; linked third-party pages retain their terms."
+  },
+  "referenceDatasetId": "veggie-farm-common-100-unified",
+  "rank": 3,
+  "priority": "Essential",
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "scientificName",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "lifecycle": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "lifecycle",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "soil.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMin": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "soil.phMin",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMax": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "soil.phMax",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.drainage": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "soil.drainage",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.need": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "water.need",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.targetInchesPerWeek": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "water.targetInchesPerWeek",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "frostTolerance": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "frostTolerance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "usdaHardinessZones": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "usdaHardinessZones",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "spacingInches.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "spacingInches.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "spacingInches.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "matureSizeInches.height.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "matureSizeInches.height.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "matureSizeInches.height.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "matureSizeInches.spread.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "matureSizeInches.spread.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "matureSizeInches.spread.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.planningNote": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "matureSizeInches.planningNote",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "timeToHarvest.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "timeToHarvest.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "timeToHarvest.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.startIndoorsWeeksBeforeLastFrost": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "planting.startIndoorsWeeksBeforeLastFrost",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.directSow": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "planting.directSow",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.transplant": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "planting.transplant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.canonicalArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.canonicalArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualVariant": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.visualVariant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.archetypeVersion": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.archetypeVersion",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderSource": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.renderSource",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.useRealWorldDimensions": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.rendererHints.useRealWorldDimensions",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.showMatureFootprintIn2D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.rendererHints.showMatureFootprintIn2D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowProcedural3D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.rendererHints.allowProcedural3D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowOptionalModelOverride": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.rendererHints.allowOptionalModelOverride",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.fallbackArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "studio.rendererHints.fallbackArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "sunlightReference.labels": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sunlightReference.minimumDirectSunHours": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "sun.minimumDirectSunHours",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peppers",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    }
+  },
+  "referenceEnrichment": {
+    "datasetId": "veggie-farm-common-100-unified",
+    "reviewStatus": "user-supplied-reference; horticultural verification pending",
+    "sourceIds": [
+      "source:community-guides",
+      "umn-peppers"
+    ],
+    "filledFields": [
+      "scientific",
+      "lifeCycle",
+      "description",
+      "light",
+      "sunHours",
+      "spacingMin",
+      "spacingMax",
+      "matureSize",
+      "pollination",
+      "sourceIds",
+      "citations",
+      "rights",
+      "referenceDatasetId",
+      "rank",
+      "priority",
+      "additionalFacts",
+      "careNotes"
+    ]
+  },
   "sourceAttributes": [],
   "sourceDescription": []
 }

@@ -3,27 +3,690 @@
   "name": "Peas",
   "common": "Peas",
   "cultivar": null,
-  "scientific": null,
+  "scientific": "Pisum sativum",
   "category": "vegetable",
   "family": "Legume",
-  "description": null,
-  "careNotes": [],
-  "additionalFacts": [],
+  "description": "General planning reference; check the chosen cultivar and local conditions.",
+  "careNotes": [
+    "Temperate United States with New England planning emphasis; local climate and cultivar selection take precedence."
+  ],
+  "additionalFacts": [
+    {
+      "trait": "Soil",
+      "text": "Soil: well-drained soil; sandy through clay"
+    },
+    {
+      "trait": "Soil pH",
+      "text": "Soil pH: 6–7.5"
+    },
+    {
+      "trait": "Water",
+      "text": "Water: moderate"
+    },
+    {
+      "trait": "Frost",
+      "text": "Frost: frost tolerant"
+    },
+    {
+      "trait": "Harvest",
+      "text": "Harvest: Pick pods promptly at full edible size before peas become starchy."
+    },
+    {
+      "trait": "Support",
+      "text": "Support: Trellis for tall cultivars; dwarf types may self-support."
+    },
+    {
+      "trait": "Direct sowing",
+      "text": "Direct sowing: Early spring as soon as soil can be worked."
+    },
+    {
+      "trait": "Transplanting",
+      "text": "Transplanting: Usually unnecessary."
+    }
+  ],
   "source": "https://veggie.farm/content/vegetables/peas",
   "sourceKind": "project-guide",
   "imageIds": [],
   "spacing": "2-3 in with support for taller varieties",
-  "spacingMin": null,
-  "spacingMax": null,
+  "spacingMin": 2,
+  "spacingMax": 3,
   "maturity": "55-75",
   "maturityMin": null,
   "maturityMax": null,
-  "light": null,
+  "light": "full sun",
   "frost": null,
   "directSow": null,
   "transplant": null,
   "form": null,
   "reviewStatus": "project-guide; cultivar details unknown",
+  "lifeCycle": "annual",
+  "sunHours": "At least 6 hours (supplied planning reference)",
+  "matureSize": "Height 24–72 in; spread 6–18 in. Tall vines may reach about 5 ft; bush types commonly 2–3 ft.",
+  "pollination": "Primarily self-pollinating.",
+  "sourceIds": [
+    "source:community-guides",
+    "umn-peas",
+    "umn-climate-resilience"
+  ],
+  "citations": [
+    {
+      "id": "source:community-guides",
+      "publisher": "veggie.farm",
+      "title": "Current project crop/fruit/herb guides",
+      "url": "https://veggie.farm/",
+      "role": [
+        "existing project identity",
+        "current crop timing text",
+        "current spacing text",
+        "current maturity text"
+      ]
+    },
+    {
+      "id": "umn-peas",
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing peas in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-peas",
+      "role": [
+        "soil",
+        "vine height",
+        "support",
+        "harvest"
+      ]
+    },
+    {
+      "id": "umn-climate-resilience",
+      "publisher": "University of Minnesota Extension",
+      "title": "Climate resilience resources for vegetable growers in Minnesota",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/climate-resilience-resources-for-vegetable-growers-in-minnesota",
+      "role": [
+        "days to maturity",
+        "cold hardiness",
+        "succession intervals"
+      ]
+    }
+  ],
+  "rights": {
+    "license": "GPL-3.0-only",
+    "attribution": "veggie.farm project owner — Common 100 compilation",
+    "scope": "Original contribution only; linked third-party pages retain their terms."
+  },
+  "referenceDatasetId": "veggie-farm-common-100-unified",
+  "rank": 9,
+  "priority": "Essential",
+  "fieldEvidence": {
+    "scientificName": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "scientificName",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "lifecycle": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "lifecycle",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "soil.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMin": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "soil.phMin",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.phMax": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "soil.phMax",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "soil.drainage": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "soil.drainage",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.need": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "water.need",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "water.targetInchesPerWeek": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "water.targetInchesPerWeek",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "frostTolerance": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "frostTolerance",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "usdaHardinessZones": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "usdaHardinessZones",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "spacingInches.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "spacingInches.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "spacingInches.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "spacingInches.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "matureSizeInches.height.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "matureSizeInches.height.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.height.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "matureSizeInches.height.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "matureSizeInches.spread.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "matureSizeInches.spread.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.spread.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "matureSizeInches.spread.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "matureSizeInches.planningNote": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "matureSizeInches.planningNote",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.min": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "timeToHarvest.min",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.max": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "timeToHarvest.max",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "timeToHarvest.text": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "timeToHarvest.text",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.startIndoorsWeeksBeforeLastFrost": {
+      "classification": "unknown",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "planting.startIndoorsWeeksBeforeLastFrost",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.directSow": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "planting.directSow",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "planting.transplant": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "planting.transplant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.canonicalArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.canonicalArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.visualVariant": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.visualVariant",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.archetypeVersion": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.archetypeVersion",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.renderSource": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.renderSource",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.useRealWorldDimensions": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.rendererHints.useRealWorldDimensions",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.showMatureFootprintIn2D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.rendererHints.showMatureFootprintIn2D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowProcedural3D": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.rendererHints.allowProcedural3D",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.allowOptionalModelOverride": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.rendererHints.allowOptionalModelOverride",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "studio.rendererHints.fallbackArchetype": {
+      "classification": "visual_inference",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "studio.rendererHints.fallbackArchetype",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "germinationDays": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "daysToMaturity": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "renderStages": {
+      "classification": "unknown",
+      "reason": "Not established with a usable timing basis or stage model."
+    },
+    "sunlightReference.labels": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sunlightReference.minimumDirectSunHours": {
+      "classification": "direct_source",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "sun.minimumDirectSunHours",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    },
+    "sun": {
+      "classification": "derived",
+      "sourceId": "source:common-100-contribution",
+      "sourceRecordId": "plant:community:peas",
+      "sourceField": "sun.labels",
+      "scope": "general crop planning reference",
+      "reviewStatus": "contributor-authored; horticultural verification pending",
+      "candidateSourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "citationVerification": "record-level references; field support not independently checked"
+    }
+  },
+  "referenceEnrichment": {
+    "datasetId": "veggie-farm-common-100-unified",
+    "reviewStatus": "user-supplied-reference; horticultural verification pending",
+    "sourceIds": [
+      "source:community-guides",
+      "umn-peas",
+      "umn-climate-resilience"
+    ],
+    "filledFields": [
+      "scientific",
+      "lifeCycle",
+      "description",
+      "light",
+      "sunHours",
+      "spacingMin",
+      "spacingMax",
+      "matureSize",
+      "pollination",
+      "sourceIds",
+      "citations",
+      "rights",
+      "referenceDatasetId",
+      "rank",
+      "priority",
+      "additionalFacts",
+      "careNotes"
+    ]
+  },
   "sourceAttributes": [],
   "sourceDescription": []
 }
