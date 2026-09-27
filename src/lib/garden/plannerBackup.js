@@ -1,3 +1,5 @@
+// Reuse lesson: portable records let people keep and revisit their work.
+// Structural validation below does not verify the truth of garden observations.
 export const MAX_PLANNER_BACKUP_BYTES = 20 * 1024 * 1024;
 export const PLANNER_BACKUP_FORMAT = 'veggie.farm/planner';
 

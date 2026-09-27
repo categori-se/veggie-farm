@@ -6,6 +6,12 @@ title: How veggie.farm was built
 
 veggie.farm brings plant information, seasonal guidance and an editable garden plan together for Massachusetts gardeners. The contribution is the integration: shared data, practical configuration and recoverable planning workflows built on existing open-source software. Codex assisted development; it is not an in-product gardening adviser.
 
+## A rapid experiment with shared building blocks
+
+I took this on as a large, enthusiastic vibe-coding project over roughly a couple of weeks, prompted by the AWS Zero to Shipped hackathon. The challenge made it feel like a fun time to try: bring together public and online datasets, open-source web tools and AI assistance, and see how much of a useful gardening application I could build. The project continues to evolve from that first burst of work.
+
+The aim is educational as well as practical: show how public information, open-source utilities and AI-supported development can become a useful application. The gardening resource serves everyday gardeners; Studio adds a way to work with their plans. The source and development evidence let other builders inspect the approach, while the [personal story](/about/) explains its connection to gardening and social development work. Rapid assembly still requires source review, testing and credit to the people whose work makes it possible.
+
 ## Try the application
 
 Start with [gardening questions and tools](/tools), then [open Studio](/studio), start a sample garden, edit a bed or plant, save, reload, and export a backup. Local plans belong to this browser and device; keep an export before clearing browser storage. Parcel context and plant spacing are estimates, not surveyed boundaries or promises of yield.

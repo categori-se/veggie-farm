@@ -1,3 +1,7 @@
+# Runnable learning example
+
+Start with [Build something you care about](../docs/building/README.md) and `node examples/building/walkthrough.mjs` for an offline tour of attributed evidence, shared plant geometry and portable garden records.
+
 # Optional deployment configuration
 
 No account configuration is needed for the community build. Keep real configuration outside source control. A custom Cognito domain must explicitly bind hostname, region and user pool in the same-origin configuration:

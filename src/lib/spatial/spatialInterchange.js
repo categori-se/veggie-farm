@@ -7,6 +7,8 @@ import {
   isGeometryAllowedForCategory
 } from "./gardenFeatureVocabulary.js";
 
+// Reuse lesson: a shared spatial format connects tools, not levels of certainty.
+// Imported garden features still need source and field review for a new use.
 export const SPATIAL_INTERCHANGE_VERSION = "1.0.0";
 export const SPATIAL_INTERCHANGE_CRS = CRS84_URI;
 

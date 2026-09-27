@@ -1,3 +1,4 @@
+import {catalogIdentity} from './catalogIdentity.js';
 // Explicit crop-group crosswalk, not a species/cultivar identity merge. Alternative
 // crops (e.g. Malabar spinach, cowpea, ornamental carrot) must remain unassessed.
 const groups={
@@ -12,5 +13,5 @@ const groups={
  'Swiss Chard':['swiss-chard',/^Beta vulgaris/i],Tomato:['tomatoes',/^Solanum (lycopersicum|pimpinellifolium)/i],
  Turnip:['turnips',/^Brassica rapa/i],'Winter Squash':['winter-squash',/^Cucurbita (maxima|moschata|pepo)/i]
 };
-const excluded = new Set(['plant:rareseeds:carrot-dara-flowering','plant:rareseeds:spinach-new-zealand','plant:rareseeds:spinach-red-malabar','plant:rareseeds:spinach-strawberry','plant:rareseeds:onion-ishikura-bunching']);
-export function photoCropType(plant){if(excluded.has(plant.id))return null;const group=groups[plant.common];const describedTaxon=plant.description?.match(/^\(([A-Z][a-z]+ [a-z]+)\b/)?.[1];const scientific=plant.scientific||describedTaxon;return plant.category==='vegetable'&&group&&(!scientific||group[1].test(scientific))?group[0]:null;}
+const excluded = new Set(['plant:catalog:1d3caf5a5dfd6444','plant:catalog:5d3cb9098d2c6b7f','plant:catalog:4fb99adaf480a985','plant:catalog:7a899714829dcbfe','plant:catalog:2f95ea7040d47203']);
+export function photoCropType(plant){if(excluded.has(catalogIdentity(plant.id)))return null;const group=groups[plant.common];const describedTaxon=plant.description?.match(/^\(([A-Z][a-z]+ [a-z]+)\b/)?.[1];const scientific=plant.scientific||describedTaxon;return plant.category==='vegetable'&&group&&(!scientific||group[1].test(scientific))?group[0]:null;}
