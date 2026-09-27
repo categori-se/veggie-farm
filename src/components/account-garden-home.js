@@ -6,9 +6,9 @@ import {notebookOwner} from '../lib/account/notebookStorage.js';
 import {accountGardenJournal} from '../lib/garden/accountGardenJournal.js';
 import {gardenHome} from './garden-home.js';
 import {NOTEBOOK_STORAGE} from '../data/runtime-capabilities.js';
-export function accountGardenHome({client=createPlannerCloudClient(),owner=notebookOwner,invalidation,local=NOTEBOOK_STORAGE==='local',showToday=false,resume=true,onGardenChange=()=>{}}={}) {
+export function accountGardenHome({client=createPlannerCloudClient(),owner=notebookOwner,invalidation,local=NOTEBOOK_STORAGE==='local',showToday=false,resume=true,compact=false,onGardenChange=()=>{}}={}) {
  const root=document.createElement('section');root.className='decision-workbench';root.setAttribute('aria-label','Saved garden home');
- root.innerHTML='<h2>My saved gardens</h2><p>Open the same account garden you saved in Plan. Its beds, plantings and observations stay together.</p><button type="button" data-refresh>Load saved gardens</button><label>Account save <select data-save><option value="">Choose an account save</option></select></label><label>Garden <select data-garden disabled></select></label><button type="button" data-open disabled>Open garden home</button><p data-status role="status"></p><p>Older notebook entries remain below. They are not automatically assigned to a garden.</p>';
+ root.innerHTML='<h2>My saved gardens</h2><p>Open the same account garden you saved in Plan. Its beds, plantings and observations stay together.</p><button type="button" data-refresh>Load saved gardens</button><label>Account save <select data-save><option value="">Choose an account save</option></select></label><label>Garden <select data-garden disabled></select></label><button type="button" data-open disabled>Open garden home</button><p data-status role="status"></p><p data-legacy-notes>Older notebook entries remain below. They are not automatically assigned to a garden.</p>';
  const select=root.querySelector('[data-save]'),gardens=root.querySelector('[data-garden]'),open=root.querySelector('[data-open]'),status=root.querySelector('[data-status]'),refresh=root.querySelector('[data-refresh]');
  const overview=document.createElement('section');overview.setAttribute('aria-label','Your garden today');const links=document.createElement('section');root.append(overview,links);const remembered=gardenSelection({owner});let selectedPlantingId=null;
  const forget=document.createElement('button');forget.type='button';forget.textContent='Forget garden selection';forget.onclick=()=>{remembered.clear();reset();status.textContent='Garden selection forgotten on this browser. Saved garden data was not deleted.';};root.append(forget);
@@ -38,6 +38,11 @@ export function accountGardenHome({client=createPlannerCloudClient(),owner=noteb
    if(!rows.some(g=>g.id===chosen.gardenId)){status.textContent='Your previous garden is no longer in this save. Choose another garden.';return;}
    gardens.value=chosen.gardenId;gardens.onchange();
   }catch{if(!disposed&&request===version&&owner()===current){session.clear();status.textContent='Could not reopen your selected garden. Load saved gardens to retry.';}}
+ }
+ if(compact){
+  root.querySelector('h2').textContent='Continue with your garden';root.children[1].remove();root.querySelector('[data-legacy-notes]').remove();
+  const management=document.createElement('details'),label=document.createElement('summary');label.textContent='Choose or change garden';management.append(label,refresh,select.closest('label'),gardens.closest('label'),forget,links);
+  open.textContent='Open garden & history';root.append(overview,open,status,management);
  }
  if(resume&&!local)restoreSelection();
  if(local){root.replaceChildren();const link=document.createElement('a');link.href='/studio';link.textContent='Open your garden plan and history';root.append(link);}

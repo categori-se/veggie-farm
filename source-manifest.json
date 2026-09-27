@@ -440,6 +440,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/returning-homepage.md",
+      "bytes": 1360,
+      "sha256": "89ced30ee32cfec91a56d7687f266d16c4ba295ff70579f0bf4416d31dd5e89d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/saved-garden-conditions.md",
       "bytes": 1849,
       "sha256": "1e85d895f5ea10252a941eb151712d31c971ae0b8fecff306c2a02751932bc28",
@@ -735,8 +741,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 6127,
-      "sha256": "642314ebb08301f269fe96cc4392d91ca1f8bd8b3e5cac0821d89b8b3d283090",
+      "bytes": 6320,
+      "sha256": "bc1bcb1b624eba7afa6354ff04f1591e8d4936844c8bf6df7f608c7402bdd2ab",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1125,8 +1131,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 8438,
-      "sha256": "7354f8c13bb9bb2f33560468e8eb91e91e8f0087347274a9ed2bb00beb018cab",
+      "bytes": 8954,
+      "sha256": "8db9e24199f1cdd025469839a8cd2e867d088347081ee7f4b420f970b4c0393f",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1278,6 +1284,12 @@
       "bytes": 4292,
       "sha256": "8d263858eca6490ad832a172d669e47ba71ebf03f1f895ce93a1c40f70414237",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/home-garden.js",
+      "bytes": 613,
+      "sha256": "8976feef07855d04ba0debfa06b5e4c6f9eda9e70fc2a7d5ab293581a6bc81d0",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/knowledge-graph.js",
@@ -2727,8 +2739,8 @@
     },
     {
       "path": "src/index.md",
-      "bytes": 2800,
-      "sha256": "f6946de7c1aecf69bf97ff5ffb7cc8ec514aa08c4d59fb64748eebb892b583f9",
+      "bytes": 2904,
+      "sha256": "ce489c8a9f2dea8c4db27d6d3dfb805f91700771e777a46e3cc183546816a3db",
       "basis": "community source policy; rights status in release review"
     },
     {
