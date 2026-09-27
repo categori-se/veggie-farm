@@ -26,3 +26,35 @@ test('proposed beds have varied seasonal crops and preserve occupied beds',()=>{
  const beds=Array.from({length:4},(_,i)=>({id:'bed'+i,name:'Vegetable bed',width:48,height:96})),old=[{id:'custom',bedId:'bed0',plantId:'tomato'}],before=JSON.stringify(old);
  const result=fill(beds,old);assert.equal(JSON.stringify(old),before);assert.ok(result.length>30);assert.ok(result.every(p=>p.bedId!=='bed0'&&p.planted<p.plannedUntil&&p.notes.includes('estimates')));assert.equal(new Set(result.map(p=>p.bedId)).size,3);assert.ok(new Set(result.map(p=>p.plantId)).size>=4);assert.deepEqual(fill(beds,[...old,...result]),[]);
 });
+
+test('bed shadow camera coverage stays fixed across pan and zoom',()=>{
+ const bed={width:48,height:96,rotation:30};
+ let viewport={width:48,height:96};
+ const sync=new Function('THREE','solarSceneDirection','parcelViewBounds','planViewBounds','activeBed',extract('syncThreeSolar','threeViewUnit')+';return syncThreeSolar;')(THREE,()=>null,()=>null,()=>viewport,()=>bed);
+ const light=new THREE.DirectionalLight(),three={renderer:{domElement:{dataset:{}},shadowMap:{}},sun:light};
+ sync(three,{viewMode:'bed'},.055);
+ const position=light.position.clone(),projection=light.shadow.camera.projectionMatrix.clone();
+ viewport={x:900,y:500,width:800,height:1600};
+ sync(three,{viewMode:'bed'},.055);
+ assert.deepEqual(light.position,position);
+ assert.deepEqual(light.shadow.camera.projectionMatrix,projection);
+});
+test('parcel scene keeps shadow casters outside the visible camera bounds',()=>{
+ const parcel={x:0,y:0,width:9000,height:9000},viewport={x:400,y:300,width:100,height:100};
+ const calls=[];
+ const dependencies={
+  activeBed:()=>({id:'bed'}),disposeGroup:()=>{},threeViewUnit:()=>.022,
+  parcelViewportBounds:()=>viewport,planViewBounds:()=>viewport,parcelViewBounds:()=>parcel,
+  gardenViewProfileForElement:()=>({id:'plant'}),gardenInformationContext:()=>({}),
+  addPropertyGround3d:()=>{},addVegetationCover3d:(_g,_s,_u,p,b)=>calls.push({kind:'trees',p,b}),
+  addGardenStructures3d:(_g,_s,_u,p,b)=>calls.push({kind:'buildings',p,b}),
+  detailVisibleFeatures:()=>[],mapVisibleBeds:()=>[],syncThreeCamera:()=>{},updateThreeModelStatus:()=>{},syncThreeSolar:()=>{}
+ };
+ const sync=new Function(...Object.keys(dependencies),extract('syncThreeScene','syncThreeSolar')+';return syncThreeScene;')(...Object.values(dependencies));
+ const three={controls:{snap(){}},group:{clear(){}},renderer:{domElement:{dataset:{}}}};
+ const state={viewMode:'garden',mapSettings:{showVegetation:true,showStructures:true}};
+ sync(three,state);
+ state.walkCamera={x:2000,y:3000};sync(three,state);
+ assert.equal(calls.length,4);
+ for(const call of calls){assert.equal(call.b,parcel);assert.equal(call.p.id,'garden');}
+});
