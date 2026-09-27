@@ -1131,8 +1131,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 8954,
-      "sha256": "8db9e24199f1cdd025469839a8cd2e867d088347081ee7f4b420f970b4c0393f",
+      "bytes": 8973,
+      "sha256": "566eedeef454bae5d45e00f519d34d369d84461db390dce9650c96fc345127c5",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
