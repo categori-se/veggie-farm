@@ -1,0 +1,11 @@
+import {prepareObservationPhoto} from '../lib/garden/observationPhoto.js';
+export function observationPhotoPicker({onChange=()=>{}}={}){
+ const root=document.createElement('fieldset');root.style.cssText='grid-column:1/-1;min-width:0;border:1px solid #71846d;padding:12px';const legend=document.createElement('legend');legend.textContent='Photo (optional)';root.append(legend);
+ const note=document.createElement('p');note.textContent='A small photo copy stays with this observation and its garden backup. Keep your original separately.';root.append(note);
+ const preview=document.createElement('img');preview.alt='Photo ready to attach';preview.hidden=true;preview.style.cssText='max-width:100%;max-height:220px;object-fit:contain';
+ const status=document.createElement('p');status.setAttribute('role','status');let value=null,busy=false,generation=0;
+ const notify=()=>onChange({value,busy});
+ const remove=document.createElement('button');remove.type='button';remove.textContent='Remove photo';remove.hidden=true;remove.onclick=()=>{generation++;busy=false;value=null;preview.removeAttribute('src');preview.hidden=true;remove.hidden=true;for(const input of root.querySelectorAll('input'))input.value='';status.textContent='Photo removed from this draft.';notify();};
+ for(const camera of [false,true]){const label=document.createElement('label');label.textContent=camera?'Take photo':'Choose photo';label.style.cssText='display:block;margin:8px 0';const input=document.createElement('input');input.type='file';input.accept='image/jpeg,image/png,image/webp';if(camera)input.setAttribute('capture','environment');input.style.cssText='display:block;max-width:100%;min-height:44px';label.append(input);root.append(label);input.onchange=async()=>{const file=input.files?.[0];if(!file)return;const request=++generation;busy=true;status.textContent='Preparing photo…';notify();try{const photo=await prepareObservationPhoto(file);if(request!==generation)return;value=photo;preview.src=photo.dataUrl;preview.hidden=false;remove.hidden=false;status.textContent='Photo ready. Save the observation to keep it.';}catch(error){if(request===generation)status.textContent=error.message;}finally{if(request===generation){busy=false;notify();}}};}
+ root.append(preview,remove,status);return root;
+}

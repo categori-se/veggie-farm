@@ -1,3 +1,4 @@
+import {observationPhoto} from './observationPhoto.js';
 // Observations belong to a stable planting ID within its existing garden workspace.
 // Planned dates remain independent: logging an event never rewrites the plan.
 export const JOURNAL_TYPES = Object.freeze({seeded:'Sowed seeds',germinated:'Germinated',transplanted:'Transplanted',flowered:'Flowered',fruit_set:'Fruit set',harvested:'Harvested',watering:'Watered',rain:'Rain',soil_test:'Soil test',heat_damage:'Heat damage',pest_seen:'Pest seen',disease_seen:'Possible disease',frost_damage:'Frost damage',bolted:'Bolted',ended:'Finished planting',note:'Note'});
@@ -6,10 +7,12 @@ export function recordPlantingObservation(planting,input,{id=()=>crypto.randomUU
  if(!planting?.id)throw Error('Choose a planting first.');
  if(!Object.hasOwn(JOURNAL_TYPES,input.type)||!validDate(input.date))throw Error('Choose an event and a valid date.');
  const notes=String(input.notes||'').trim();if(notes.length>2000)throw Error('Keep notes within 2,000 characters.');
- if(input.type==='note'&&!notes)throw Error('Write a short observation.');
+ const photo=observationPhoto(input.photo);
+ if(input.type==='note'&&!notes&&!photo)throw Error('Write a short observation or attach a photo.');
  const events=Array.isArray(planting.observations)?planting.observations:[];
  if(events.length>=1000)throw Error('This planting has 1,000 observations. Export its history before starting a new planting.');
  const event={id:id(),plantingId:planting.id,plantId:planting.plantId||null,date:input.date,type:input.type,notes,recordedAt:now(),source:'gardener_observation'};
+ if(photo)event.photo=photo;
  if(input.type==='harvested'){
   const supplied=input.quantity!==''&&input.quantity!=null;
   if(supplied){const quantity=Number(input.quantity);if(!Number.isFinite(quantity)||quantity<=0||quantity>1000000||!['count','g','oz','lb','kg'].includes(input.unit))throw Error('Enter a positive harvest quantity and its unit.');if(input.unit==='count'&&!Number.isInteger(quantity))throw Error('A count must be a whole number.');event.quantity=quantity;event.unit=input.unit;}

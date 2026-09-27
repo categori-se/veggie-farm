@@ -398,6 +398,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/photo-observations.md",
+      "bytes": 1594,
+      "sha256": "66cf3e5c53e4bb535c8c32c6a9bd817dc9cc1ec4c1e3ed0a4b3e3636a80ea2ca",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/plant-discovery-handoff.md",
       "bytes": 1993,
       "sha256": "16bd17eb4b5b783b96896fc94d143f612b98bd59bc0310d8d8780174d99f3333",
@@ -1251,8 +1257,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 11775,
-      "sha256": "a27d2793b3d6a53a7457c800773090c5a6293adb59bd2e50937f19beeff78dea",
+      "bytes": 12650,
+      "sha256": "bb67859f420b797640a8b176fd831a3daf292f85ab2ab3af23674d05331ff004",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1332,6 +1338,12 @@
       "bytes": 5625,
       "sha256": "9a0c7e361dbd588cc88d18a67118aa6ee43976bd9a96ab692a392dc5dd7328c2",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/observation-photo-picker.js",
+      "bytes": 2285,
+      "sha256": "d8d1e08a4f203cc0c204b7861b0135621b246128feb99640b1b11e83ae3e0d24",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/planner-next-season.js",
@@ -2936,6 +2948,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "src/lib/garden/observationPhoto.js",
+      "bytes": 2055,
+      "sha256": "a0d600e4197d53a6db659310ef5d1deea7ba8c322d7a7bfd8dfbfe06bd48beb8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/plannedHarvest.js",
       "bytes": 2218,
       "sha256": "2a07e901fdc2ca7cc5b3e8f0fe7b740ffe973da2b4667891045004e648546875",
@@ -2979,8 +2997,8 @@
     },
     {
       "path": "src/lib/garden/plantingJournal.js",
-      "bytes": 4192,
-      "sha256": "5a1631b085fafd2a7da74493ebd4a529a5cc122bc07518b36dd1ff2488d33992",
+      "bytes": 4347,
+      "sha256": "fb2d6e4155e1cacd5ac0965eabf15ffa517aae27d6d5d4eb53d9d8327bb20f26",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3822,6 +3840,12 @@
       "bytes": 3526,
       "sha256": "784cfad383fc549fa40b1dcea152a67ba3d440fe048adb6cf6f63f7973192712",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/observationPhoto.test.mjs",
+      "bytes": 1987,
+      "sha256": "d1559118d7ec579f9c1dc38f422d5ef12aa5841eaf5995e2c2f12d67b33c44ba",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/parcelGeometry.test.js",
