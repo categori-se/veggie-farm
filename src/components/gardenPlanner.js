@@ -1,3 +1,9 @@
+import {firstPlanGuide} from "./first-plan-guide.js";
+import {firstPlanDimensions, firstPlanPositions} from "../lib/garden/firstPlan.js";
+import {planningTray} from "./planning-tray.js";
+import {addPlanningTrayEntry} from "../lib/garden/plantIntent.js";
+import {gardenHome} from "./garden-home.js";
+import {recordPlantingObservation} from "../lib/garden/plantingJournal.js";
 import {plannedSize} from "../lib/garden/plannedSize.js";
 import {plannerSizeScenario} from "./planner-size-scenario.js";
 import {solarSceneDirection,solarScenePolygons,bedShadowPolygons} from "../lib/spatial/solarScene.js";
@@ -588,14 +594,20 @@ const DEFAULT_PLANTS = [...CORE_PLANTS, ...FLOWER_CATALOG];
 
 function proposedBedPlantings(beds, existing = [], plants = DEFAULT_PLANTS) {
   const occupied = new Set(existing.map(p => p.bedId));
-  const palette = ["lettuce", "kale", "carrot", "basil", "tomato", "nasturtium"].map(id => plants.find(p => p.id === id)).filter(Boolean);
-  const blooms = plants.filter(p => /\b(aster|coneflower|bee balm|goldenrod)\b/i.test(p.name));
-  return beds.filter(b => !occupied.has(b.id)).flatMap((bed, index) => {
-    const flowering = /flower|border|terrace|spring greens/i.test(bed.name);
-    const choices = flowering && blooms.length ? blooms : palette;
-    const plant = choices[index % choices.length];
-    if (!plant) return [];
-    return bedFillPositions(normalizeBed(bed), plant).slice(0, 24).map((point, j) => ({id:`${bed.id}-proposal-${j}`,bedId:bed.id,plantId:plant.id,...point,health:"planned",rotation:0,notes:"Illustrative planting inspired by public garden themes; species and placement are proposed, not verified specimens."}));
+  const year = new Date().getFullYear();
+  return beds.filter(b => !occupied.has(b.id)).flatMap((raw, index) => {
+    const bed=normalizeBed(raw), context=`${bed.id} ${bed.name} ${bed.zone}`;
+    const flowering=/flower|border|terrace|ashintully|naumkeag/i.test(context) && !/kitchen|edible|vegetable|greens/i.test(context);
+    const patterns=flowering ? [/phlox|bee balm/i,/aster|coneflower/i,/dianthus|marigold|nasturtium/i] :
+      /herb/i.test(context) ? [/basil/i,/thyme/i,/nasturtium/i] : index%3===0 ? [/lettuce/i,/carrot/i,/kale/i] : index%3===1 ? [/tomato/i,/basil/i,/nasturtium/i] : [/kale/i,/carrot/i,/lettuce/i];
+    const choices=patterns.map(re=>plants.find(p=>re.test(p.name)||re.test(p.id))).filter(Boolean);
+    if(!choices.length)return [];
+    const spacingPlant={spacing:Math.max(...choices.map(p=>p.spacing)),matureDiameter:Math.max(...choices.map(p=>p.matureDiameter))};
+    let points=bedFillPositions(bed,spacingPlant);
+    // Narrow beds can still accept a smaller member of the same palette.
+    if(!points.length){choices.sort((a,b)=>a.spacing-b.spacing);points=bedFillPositions(bed,choices[0]);choices.splice(1);}
+    const window=flowering?['04-15','10-31']:index%3===0?['04-15','06-15']:index%3===1?['05-25','09-30']:['08-01','11-01'];
+    return points.slice(0,48).filter(point=>isInsideBed(point.x,point.y,bed)).map((point,j)=>({id:`${bed.id}-proposal-${j}`,bedId:bed.id,plantId:choices[j%choices.length].id,...point,health:"planned",rotation:0,planted:`${year}-${window[0]}`,plannedUntil:`${year}-${window[1]}`,notes:"Proposed seasonal design inspired by public garden descriptions and imagery; species, dates and positions are estimates, not an institutional inventory. Dates describe this display scenario, not perennial lifespan."}));
   });
 }
 
@@ -705,20 +717,22 @@ export function gardenPlanner(options = {}) {
         <button data-view-nav="fit-selection" type="button">Fit selection</button>
         <button data-view-nav="capture" type="button">Save 3D image</button>
         <small data-role="capture-status" role="status"></small>
-        <div class="walk-buttons" data-role="walk-controls" hidden>
-          <button data-view-nav="walk-forward" type="button">Step forward</button><button data-view-nav="walk-back" type="button">Step back</button>
-          <button data-view-nav="walk-left" type="button">Turn left</button><button data-view-nav="walk-right" type="button">Turn right</button>
-        </div>
         <p>Drag to pan. Ctrl/right-drag rotates and tilts. On touch, use these sliders and +/−. Walk uses a flat surface at 5½ ft eye height; no obstacle collision. Image captures are illustrative, not measured sunlight.</p>
         <button data-view-nav="close-camera" type="button">Close camera controls</button>
       </div></details>
+    </div>
+    <div class="walk-buttons" data-role="walk-controls" role="group" aria-label="Walk around the garden" hidden>
+      <button data-view-nav="walk-left" type="button" aria-label="Turn left" title="Turn left (A or left arrow)">↶</button>
+      <button data-view-nav="walk-forward" type="button" title="Step forward (W or up arrow)">↑ Forward</button>
+      <button data-view-nav="walk-back" type="button" title="Step backward (S or down arrow)">↓ Back</button>
+      <button data-view-nav="walk-right" type="button" aria-label="Turn right" title="Turn right (D or right arrow)">↷</button>
     </div>
     <div class="view-gesture-hint">Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate</div>
   `;
   root.innerHTML = `
     <section class="planner-quick-start" aria-label="Start a garden plan">
       <div><strong>Garden Planning Studio</strong><p>Try an editable 4 × 8 ft bed. No account needed.</p></div>
-      <button data-role="start-practice-garden" type="button">Start a practice garden</button>
+      <button data-role="start-practice-garden" type="button">Start with a 4 × 8 bed</button>
     </section>
     <div class="garden-shell">
       <header class="garden-topbar">
@@ -764,7 +778,7 @@ export function gardenPlanner(options = {}) {
           </section>
 
           <section class="planner-section tool-panel" data-tool-panel="plants">
-            <button type="button" data-action="plant-gallery">3D plant library</button>
+            <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button><button type="button" data-action="garden-home">My garden · Log</button>
             <div class="section-heading"><span>Plant library</span><span class="section-count" data-role="plant-count"></span></div>
             <input class="search-input" data-role="plant-search" type="search" aria-label="Filter plants" placeholder="Filter plants">
             <p class="library-help">Choose a plant and Add selected, or drag it into the bed. Existing plants stay locked until you choose Edit plants.</p>
@@ -927,14 +941,14 @@ export function gardenPlanner(options = {}) {
             </details>
           </section>
 
-          <details class="studio-preview-options"><summary>Date &amp; sunlight previews</summary><div data-role="time-preview-host"></div></details>
+          <details class="studio-preview-options"><summary>Planting date preview</summary><div data-role="time-preview-host"></div></details>
           <nav class="planning-scope" aria-label="Planning scope" style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 12px">
             <button type="button" data-workspace="explore">Explore garden</button>
             <button type="button" data-workspace="walk">Walk through</button>
             <button type="button" data-scope="attributes">Site features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
-            <button type="button" data-action="plant-gallery">3D plant library</button>
+            <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button><button type="button" data-action="garden-home">My garden · Log</button>
           </nav>
           <section class="planner-view parcel-map-view">
             <div class="view-heading parcel-heading">
@@ -1086,6 +1100,8 @@ export function gardenPlanner(options = {}) {
     storageStatus.dataset.saved = String(saved);
     storageBackup.hidden = saved;
   };
+  let firstGuide = null;
+  let tray = null;
   let three = null;
   let sharedViewFrame = null;
   let sharedViewSettleTimer = null;
@@ -1114,7 +1130,7 @@ export function gardenPlanner(options = {}) {
   const timePreview=plannerTimePreview({getBedName:id=>state.beds.find(b=>b.id===id)?.name || (id ? "Unknown bed" : "Outside a named bed"),getPlantName:id=>plantById(state,id)?.name || "Unidentified plant",getPlacements:()=>state.placements,getDate:()=>state.previewDate,onChange:date=>{state.previewDate=date;if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
   root.querySelector('[data-role="time-preview-host"]').append(timePreview.root);
   const sunPreview=plannerSunPreview({getState:()=>state,onChange:()=>{if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
-  root.querySelector('[data-role="time-preview-host"]').append(sunPreview.root);
+  root.querySelector('.studio-preview-options').insertAdjacentElement('afterend',sunPreview.root);
 
   let soilBoundaries=[],soilGardenId=state.activeParcelId;
   const soilPanel=mappedSoil({getLocation:()=>gardenSpatialReference(state.property).origin.coordinates,onBoundary:rows=>{soilBoundaries=rows;queueMicrotask(()=>renderSoilOverlay());},invalidation:options.invalidation});
@@ -1152,6 +1168,8 @@ export function gardenPlanner(options = {}) {
     renderInspector(refs, state, renderAll, {preserveEditor});
     if (three) syncThreeScene(three, state);
     syncSelectedToolCard(refs, state);
+    firstGuide?.update();
+    tray?.update();
     persistAndReport();
   };
 
@@ -1277,17 +1295,7 @@ export function gardenPlanner(options = {}) {
     root.querySelector('.planner-quick-start p').textContent = 'Begin with a 4 × 8 ft bed, then add your own spaces and plants. Save an account copy to keep it online.';
     root.querySelector('[data-role="start-practice-garden"]').textContent = 'Create my first garden';
   }
-  root.querySelector('[data-role="start-practice-garden"]').addEventListener("click", () => {
-    exploringDemos = false;
-    createBlankGardenWorkspace(state, PLANNER_OWNER ? "My garden" : "Practice garden");
-    state.viewPresentation = "2d";
-    state.viewMode = "bed";
-    state.activeTool = "beds";
-    state.toolDrawerOpen = true;
-    openInspector(state, "bed");
-    renderAll();
-    refs.selectedBed.querySelector('[data-bed-field="name"]')?.focus();
-  });
+  root.querySelector('[data-role="start-practice-garden"]').addEventListener("click", () => firstGuide.start());
   const backupInput = root.querySelector('[data-role="backup-input"]');
   const backupStatus = root.querySelector('[data-role="backup-status"]');
   const restoreButton = root.querySelector('[data-role="restore-backup"]');
@@ -1341,6 +1349,12 @@ export function gardenPlanner(options = {}) {
   setupParcelInteractions(refs, state, () => renderAll(), renderSharedViews);
   setupKeyboardShortcuts(refs, state, () => renderAll());
 
+  root.querySelectorAll('[data-action="garden-home"]').forEach(button=>button.addEventListener('click',()=>{
+    const dialog=gardenHome({getWorkspace:()=>({id:state.activeParcelId,name:activeParcelWorkspace(state)?.name,property:state.property,beds:state.beds,placements:state.placements}),getPlants:()=>state.plants,selectedPlantingId:state.selectedPlacementId,
+      onLog:(id,input)=>{const index=state.placements.findIndex(p=>p.id===id);if(index<0)throw Error('This planting is no longer in the garden.');const previous=state.placements[index];state.placements[index]=recordPlantingObservation(previous,input);if(!saveState(state)){state.placements[index]=previous;syncActiveParcelWorkspace(state);throw Error('Could not save. Keep this form open and copy your observation.');}renderAll();},
+      onPlan:id=>{openPlantingWorkspace(state,id);renderAll();},onBackup:()=>refs.actions.export.click()});root.append(dialog);dialog.showModal();
+  }));
+  root.querySelectorAll('[data-action="bed-seasons"]').forEach(button=>button.addEventListener('click',()=>openBedSeasons(root,state,renderAll)));
   root.querySelectorAll('[data-action="plant-gallery"]').forEach(button=>button.addEventListener('click',()=>openPlantGallery(root,state,()=>three,renderAll)));
 
   root.addEventListener("veggie-farm:select-garden", (event) => {
@@ -1350,6 +1364,51 @@ export function gardenPlanner(options = {}) {
     switchActiveParcelWorkspace(state, gardenId);
     renderAll();
   });
+
+  const changeTray = (mutate, failureMessage="Could not save the planning tray. Your previous plan is unchanged; free browser storage and try again.") => {
+    syncActiveParcelWorkspace(state);
+    const before=structuredCloneCompat(state);
+    try {mutate();renderAll();if(storageStatus.dataset.saved!=="true")throw Error(failureMessage);}
+    catch(error){Object.assign(state,before);renderAll();throw error;}
+  };
+  tray=planningTray({getState:()=>state,invalidation:options.invalidation,
+    commit:selection=>changeTray(()=>{
+      selection.plant.planningYear=selection.year;
+      const entry=addPlanningTrayEntry(state,selection);
+      // Do not sync the old active property over the updated destination.
+      applyParcelWorkspace(state,state.parcels.find(g=>g.id===selection.gardenId));
+      state.selectedPlantId=entry.plantId;
+    }),
+    createGarden:()=>changeTray(()=>{exploringDemos=false;createBlankGardenWorkspace(state,"My garden");}),
+    openBed:item=>{if(!openPlantingWorkspace(state,item.bedId))throw Error("This bed no longer exists.");state.selectedPlantId=item.plantId;renderAll();},
+    remove:id=>changeTray(()=>{state.property.planningTray=(state.property.planningTray||[]).filter(e=>e.id!==id);})
+  });
+  const guideChange=fn=>changeTray(fn,"Could not save your first plan. Your previous garden is unchanged; free browser storage and try again.");
+  firstGuide=firstPlanGuide({getState:()=>state,invalidation:options.invalidation,
+    create:values=>guideChange(()=>{
+      const dimensions=firstPlanDimensions(values.width,values.depth),name=values.name.trim();
+      if(!name)throw Error("Name your garden.");
+      exploringDemos=false;createBlankGardenWorkspace(state,name.slice(0,100));
+      Object.assign(activeBed(state),dimensions);
+      state.property.firstPlan={step:2,bedId:state.activeBedId};
+      openPlantingWorkspace(state);state.viewPresentation="2d";state.toolDrawerOpen=false;
+    }),
+    arrange:(ids,date)=>guideChange(()=>{
+      const guide=state.property.firstPlan,bed=state.beds.find(b=>b.id===guide?.bedId);
+      if(!bed||guide.step!==2)throw Error("Return to your setup bed first.");
+      const plants=ids.map(id=>plantById(state,id)).filter(Boolean),positions=firstPlanPositions(bed,plants);
+      if(state.placements.some(p=>p.bedId===bed.id))throw Error("This bed already has plantings. Continue arranging it in the editor.");
+      for(const point of positions)state.placements.push({id:uniquePlacementId(state),bedId:bed.id,...point,planted:date||"",health:"planned",rotation:0,notes:"First-plan starting arrangement; review spacing and growing conditions."});
+      guide.step=3;openPlantingWorkspace(state,bed.id);state.toolDrawerOpen=false;state.inspectorOpen=false;
+    }),
+    edit:()=>{openPlantingWorkspace(state,state.property.firstPlan.bedId);beginExplicitEditing(state);state.toolDrawerOpen=false;state.inspectorOpen=false;renderAll();},
+    review:()=>guideChange(()=>{explicitEditSessions.delete(state);state.property.firstPlan.step=4;}),
+    save:name=>guideChange(()=>{if(!name.trim())throw Error("Name this plan.");state.property.firstPlan.complete=true;explicitEditSessions.delete(state);saveNamedLayout(state,name.trim().slice(0,120));}),
+    download:()=>refs.actions.export.click()
+  });
+  root.querySelector('.planner-quick-start').after(firstGuide.root);root.append(firstGuide.dialog);
+  refs.plantList.before(tray.root);
+  root.append(tray.dialog);
 
   requestAnimationFrame(() => {
     three = createThreeScene(refs.threeHost, state, renderSharedViews, {
@@ -1851,6 +1910,7 @@ function preserveEditedFeatureLocations(workspace, reference, canonicalProperty,
 }
 
 function preserveReferenceRegistration(property, savedProperty) {
+  if(savedProperty?.demoPlantingsRevision === 1) property={...property,demoPlantingsRevision:1};
   // Landmark targets are geographic, so they survive a refreshed local origin.
   return savedProperty?.referenceRegistration
     ? {...property, referenceRegistration: structuredCloneCompat(savedProperty.referenceRegistration)}
@@ -2269,6 +2329,13 @@ function normalizeParcelWorkspace(workspace = {}) {
   const beds = normalizeBeds(hasWorkspaceBeds ? workspace.beds : DEFAULT_BEDS, workspace.bed, {
     includeDefaults: !hasWorkspaceBeds
   });
+  // One-time enrichment of public demo workspaces only. Existing plantings,
+  // user gardens and subsequent deliberate removals remain untouched.
+  let placements=Array.isArray(workspace.placements)?workspace.placements:[];
+  if(gardenReferenceById(workspace.id) && property.demoPlantingsRevision !== 1){
+    placements=[...placements,...proposedBedPlantings(beds,placements)];
+    property.demoPlantingsRevision=1;
+  }
   const activeBedId = beds.some((bed) => bed.id === workspace.activeBedId)
     ? workspace.activeBedId
     : beds[0]?.id || DEFAULT_ACTIVE_BED_ID;
@@ -2283,9 +2350,7 @@ function normalizeParcelWorkspace(workspace = {}) {
     beds,
     structures: normalizeStructures(Array.isArray(workspace.structures) ? workspace.structures : []),
     vegetation: normalizeVegetation(Array.isArray(workspace.vegetation) ? workspace.vegetation : []),
-    placements: Array.isArray(workspace.placements)
-      ? workspace.placements.map((placement) => normalizePlacement(placement, beds))
-      : [],
+    placements: placements.map((placement) => normalizePlacement(placement, beds)),
     selectedVegetationId: workspace.selectedVegetationId || null,
     selectedStructureId: workspace.selectedStructureId || null,
     selectedPlacementId: workspace.selectedPlacementId || null,
@@ -4242,7 +4307,7 @@ function renderControls(refs, state) {
   refs.root.dataset.viewPresentation = state.viewPresentation;
   refs.root.dataset.viewMode = state.viewMode;
   refs.root.dataset.activeTool = state.activeTool;
-  for(const hint of refs.root.querySelectorAll('.view-gesture-hint'))hint.textContent=state.walkCamera?'Walk · drag to look · W/S step · A/D turn · Camera for touch controls · Escape exits':'Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate';
+  for(const hint of refs.root.querySelectorAll('.view-gesture-hint'))hint.textContent=state.walkCamera?'Walk · drag to look · W/S step · A/D turn · Use arrows to walk · Escape exits':'Pan mode: drag anywhere · wheel zoom · Ctrl/right-drag rotate';
   for(const controls of refs.root.querySelectorAll('[data-role="walk-controls"]'))controls.hidden=!state.walkCamera;
   if(state.walkCamera)refs.root.querySelector('[data-role="camera-angle"]').value='walk';
   for(const slider of refs.root.querySelectorAll('[data-camera]')){
@@ -7894,11 +7959,20 @@ function threeRaycastFeature(three, event) {
     -((event.clientY - rect.top) / rect.height) * 2 + 1
   );
   three.raycaster.setFromCamera(three.pointer, three.camera);
-  for (const intersection of three.raycaster.intersectObjects(three.group.children, true)) {
-    const ref = threeFeatureRef(intersection.object);
-    if (ref) return {ref, intersection};
+  const hits = three.raycaster.intersectObjects(three.group.children, true)
+    .map(intersection => ({ref: threeFeatureRef(intersection.object), intersection})).filter(hit => hit.ref);
+  const first = hits[0];
+  // Flat garden-area overlays can sit just above the beds they describe. Let
+  // beds remain reachable through these contextual surfaces, not solid buildings.
+  const contextSurface = hit => hit.ref.type === "structure" &&
+    /^(garden-section|planted-border|border|lawn|path|groundcover)$/.test(threeFeatureEntity(three.state, hit.ref)?.type || "");
+  if (three.state.viewMode === "garden" && first && contextSurface(first)) {
+    for (const hit of hits) {
+      if (hit.ref.type === "bed" || hit.ref.type === "placement") return hit;
+      if (!contextSurface(hit)) break;
+    }
   }
-  return null;
+  return first || null;
 }
 
 function threeGroundPoint(three, event) {
@@ -8285,16 +8359,19 @@ function syncThreeSolar(three,state,unit){
   canvas.dataset.solarMode=!enabled?'illustrative':direction?'calculated':'unavailable';
   canvas.dataset.solarShadowPolygons='0';
   if(!enabled){
-    const bounds=state.viewMode==="garden"?parcelViewportBounds(state):planViewBounds(state);
-    const center=three.controls.target,span=Math.max(bounds.width,bounds.height)*unit;
+    // Keep decorative lighting anchored to the scene, never the moving camera.
+    const bounds=state.viewMode==="garden"?parcelViewBounds(state):planViewBounds(state);
+    const center=new THREE.Vector3(state.viewMode==="bed"?0:(bounds.x+bounds.width/2)*unit,0,state.viewMode==="bed"?0:(bounds.y+bounds.height/2)*unit),span=Math.max(bounds.width,bounds.height)*unit;
     const distance=Math.max(10,span);
     three.sun.intensity=2.4;
     three.sun.target.position.copy(center);
-    three.sun.position.set(center.x-distance*.5, distance, center.z+distance*.4);
+    const lightOffset=new THREE.Vector3(-.5,1,.4).applyAxisAngle(new THREE.Vector3(0,1,0),state.viewMode==="bed"?(activeBed(state).rotation||0)*Math.PI/180:0);
+    three.sun.position.copy(center).addScaledVector(lightOffset,distance);
+    canvas.dataset.solarDirection=lightOffset.clone().normalize().toArray().map(v=>v.toFixed(5)).join(',');
     const shadow=three.sun.shadow;shadow.mapSize.set(1024,1024);
     Object.assign(shadow.camera,{left:-distance,right:distance,top:distance,bottom:-distance,near:.1,far:distance*5});
     shadow.camera.updateProjectionMatrix();shadow.bias=-0.0001;shadow.normalBias=.03;
-    delete canvas.dataset.solarDirection;return;
+    return;
   }
   if(!direction){three.sun.intensity=0;delete canvas.dataset.solarDirection;return;}
   const bounds=state.viewMode==="garden"?parcelViewportBounds(state):planViewBounds(state);
@@ -8774,11 +8851,53 @@ function fitProceduralPlantHeight(group, plant, unit) {
   group.userData.heightInches=height/unit;
 }
 
+function openBedSeasons(root,state,renderAll) {
+  const dialog=document.createElement('dialog');dialog.setAttribute('aria-label','Bed seasons');
+  dialog.style.cssText='width:min(960px,94vw);max-height:90svh;overflow:auto;background:var(--theme-background,#18231b);color:var(--theme-foreground,#eef2e8);padding:18px;border:1px solid #71846d';
+  dialog.innerHTML=`<form method="dialog" style="float:right"><button aria-label="Close bed seasons">Close</button></form><h2>Bed seasons</h2><p>Save a design, record what you noticed, and compare the same bed across months or years.</p><label>Bed <select data-bed></select></label><form data-record><label>Month <input data-month type="month" required value="${todayIso().slice(0,7)}"></label><label>Observation or next step <textarea data-note maxlength="2000" rows="2" placeholder="What changed? What would you try next season?"></textarea></label><button>Save current bed snapshot</button></form><p data-status role="status">Snapshots preserve plans, not evidence that plants were grown. Notes are your own observations. Stored in this browser; export a backup for long-term records. Up to 48 saved versions are retained.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><label>Earlier snapshot <select data-before></select></label><label>Later snapshot <select data-after></select></label></div><div data-comparison style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px"></div><div data-difference></div><button type="button" data-plan>Continue planning this bed</button> <button type="button" data-export>Export garden backup</button>`;
+  root.append(dialog);dialog.showModal();
+  dialog.querySelector('[data-record]').style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px;align-items:end;margin:12px 0';
+  for(const label of dialog.querySelectorAll('label'))label.style.cssText='display:flex;flex-direction:column;gap:4px;max-width:100%;min-width:0';
+  for(const input of dialog.querySelectorAll('input,select,textarea'))input.style.cssText='box-sizing:border-box;max-width:100%;min-width:0;padding:8px;border:1px solid #71846d;border-radius:5px;background:inherit;color:inherit;font:inherit';
+  const beds=dialog.querySelector('[data-bed]'),before=dialog.querySelector('[data-before]'),after=dialog.querySelector('[data-after]');
+  beds.replaceChildren(...state.beds.map(b=>new Option(b.name,b.id)));beds.value=state.activeBedId;
+  const eligible=()=>state.layouts.filter(l=>l.gardenId===state.activeParcelId&&l.bedSnapshot?.bedId===beds.value).sort((a,b)=>a.bedSnapshot.month.localeCompare(b.bedSnapshot.month)||String(a.savedAt).localeCompare(String(b.savedAt)));
+  function draw(){
+    const versions=eligible(),a=versions.find(l=>l.id===before.value),b=versions.find(l=>l.id===after.value),host=dialog.querySelector('[data-comparison]');host.replaceChildren();
+    for(const [label,version] of [['Earlier',a],['Later',b]]){
+      const section=document.createElement('section');host.append(section);
+      if(!version){section.textContent='Save a snapshot to begin. Your current plan stays unchanged while comparing.';continue;}
+      const bed=version.beds?.find(x=>x.id===beds.value),plants=(version.placements||[]).filter(p=>p.bedId===beds.value);
+      const heading=document.createElement('h3');heading.textContent=`${label} · ${version.bedSnapshot.month} · ${plants.length} plantings`;section.append(heading);
+      if(bed){
+        const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox',`0 0 ${bed.width} ${bed.height}`);svg.style.cssText='width:100%;height:240px;background:#6b5436';svg.setAttribute('role','img');svg.setAttribute('aria-label',`${bed.name}, ${version.bedSnapshot.month} saved planting positions`);
+        for(const p of plants.slice(0,3000)){const plant=plantById(state,p.plantId),circle=document.createElementNS(ns,'circle');circle.setAttribute('cx',p.x);circle.setAttribute('cy',p.y);circle.setAttribute('r',Math.max(1,(Number(plant?.matureDiameter)||6)/2));circle.setAttribute('fill',plant?.leafColor||'#77a46d');circle.setAttribute('stroke','#eef2e8');circle.setAttribute('stroke-width','.4');const title=document.createElementNS(ns,'title');title.textContent=plant?.name||p.plantId;circle.append(title);svg.append(circle);}section.append(svg);
+        const dimensions=document.createElement('p');dimensions.textContent=`${bed.width} × ${bed.height} in · mature footprints`;section.append(dimensions);
+      }
+      const note=document.createElement('p');note.textContent=version.bedSnapshot.note||'No observation recorded.';section.append(note);
+    }
+    const diff=dialog.querySelector('[data-difference]');diff.replaceChildren();if(!a||!b)return;
+    const counts=v=>{const m=new Map();for(const p of v.placements||[])if(p.bedId===beds.value)m.set(p.plantId,(m.get(p.plantId)||0)+1);return m;},ac=counts(a),bc=counts(b);
+    const table=document.createElement('table');table.style.width='100%';table.innerHTML='<caption>Plant selection changes · follow a plant name to learn more</caption><thead><tr><th>Plant</th><th>Earlier</th><th>Later</th><th>Change</th></tr></thead>';const body=document.createElement('tbody');table.append(body);
+    for(const id of new Set([...ac.keys(),...bc.keys()])){const plant=plantById(state,id),row=document.createElement('tr'),name=document.createElement('td'),link=document.createElement('a');link.textContent=plant?.name||id;link.href=plantLearningUrl(plant?.name||id);link.target='_blank';link.rel='noopener';name.append(link);row.append(name);for(const n of [ac.get(id)||0,bc.get(id)||0,(bc.get(id)||0)-(ac.get(id)||0)]){const td=document.createElement('td');td.textContent=String(n);row.append(td);}body.append(row);}diff.append(table);
+  }
+  function refresh(){const versions=eligible();for(const select of [before,after])select.replaceChildren(...versions.map(v=>new Option(`${v.bedSnapshot.month} · ${new Date(v.savedAt).toLocaleString()}`,v.id)));if(versions.length){before.value=versions[Math.max(0,versions.length-2)].id;after.value=versions.at(-1).id;}draw();}
+  beds.onchange=refresh;before.onchange=draw;after.onchange=draw;
+  dialog.querySelector('[data-record]').onsubmit=event=>{event.preventDefault();const month=dialog.querySelector('[data-month]').value;if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(month))return;const bed=state.beds.find(b=>b.id===beds.value);if(!bed)return;saveNamedLayout(state,`${month} · ${bed.name} · ${crypto.randomUUID()}`);state.layouts[0].bedSnapshot={bedId:bed.id,month,plantCount:placementsForBed(state,bed.id).length,note:dialog.querySelector('[data-note]').value.trim().slice(0,2000)};renderAll();refresh();dialog.querySelector('[data-note]').value='';dialog.querySelector('[data-status]').textContent=`Saved ${month} for ${bed.name}. Compare below. Export a backup; only the latest 48 saved versions are retained.`;};
+  dialog.querySelector('[data-plan]').onclick=()=>{openPlantingWorkspace(state,beds.value);dialog.close();renderAll();};
+  dialog.querySelector('[data-export]').onclick=()=>{const button=root.querySelector('[data-action="export"]');if(button)button.click();};
+  dialog.addEventListener('close',()=>dialog.remove(),{once:true});refresh();
+}
+function plantLearningUrl(name) {
+  const base=globalThis.location?.hostname==='studio.veggie.farm'?'https://veggie.farm':'';
+  return `${base}/content/reference/plant-database?search=${encodeURIComponent(name)}`;
+}
+
 function openPlantGallery(root,state,getThree,renderAll) {
   const dialog=document.createElement('dialog');
   dialog.setAttribute('aria-label','3D plant library');
   dialog.style.cssText='width:min(680px,92vw);max-height:90svh;overflow:auto;padding:16px;background:#18231b;color:#eef2e8;border:1px solid #70866d';
-  dialog.innerHTML=`<form method="dialog" style="float:right"><button aria-label="Close plant library">Close</button></form><h2>3D plant library</h2><label>Find a plant <input type="search" data-search placeholder="Name or variety"></label><label>Plant <select data-plant style="width:100%"></select></label><div data-preview style="height:300px;max-height:42svh"></div><p data-dimensions></p><label>Illustrative size <input data-size type="range" min="5" max="100" value="100"> <output>100%</output></label><p>6 ft human reference. Mature dimensions use catalog records where available. Smaller sizes are illustrative stages, not a growth forecast.</p><button type="button" data-use>Use in selected bed</button><p data-message></p>`;
+  dialog.innerHTML=`<form method="dialog" style="float:right"><button aria-label="Close plant library">Close</button></form><h2>3D plant library</h2><label>Find a plant <input type="search" data-search placeholder="Name or variety"></label><label>Plant <select data-plant style="width:100%"></select></label><div data-preview style="height:300px;max-height:42svh"></div><p data-dimensions></p><a data-learn target="_blank" rel="noopener">Learn about this plant ↗</a><label>Illustrative size <input data-size type="range" min="5" max="100" value="100"> <output>100%</output></label><p>6 ft human reference. Mature dimensions use catalog records where available. Smaller sizes are illustrative stages, not a growth forecast.</p><button type="button" data-use>Use in selected bed</button><p data-message></p>`;
   root.append(dialog);dialog.showModal();
   const select=dialog.querySelector('[data-plant]'),preview=dialog.querySelector('[data-preview]'),slider=dialog.querySelector('[data-size]');
   let renderer;
@@ -8798,6 +8917,7 @@ function openPlantGallery(root,state,getThree,renderAll) {
     const head=new THREE.Mesh(new THREE.SphereGeometry(.5,12,8),human.material.clone());head.position.set(human.position.x,5.5,0);objects.add(head);
     const extent=Math.max(6,height*scale,width*scale+4);camera.position.set(extent*.85,extent*.65,extent*1.8);camera.lookAt(0,Math.max(3,height*scale/2),0);
     dialog.querySelector('[data-dimensions]').textContent=`${plant.name}: mature height ${Number(plant.height)?`${plant.height} in`:'unknown (18 in preview)'}, spread ${Number(plant.matureDiameter)?`${plant.matureDiameter} in`:'estimated from spacing'}. ${Math.round(scale*100)}% displayed. Representative plant form.`;
+    dialog.querySelector('[data-learn]').href=plantLearningUrl(plant.name);
     dialog.querySelector('output').value=`${Math.round(scale*100)}%`;
     if(renderer){const w=preview.clientWidth,h=preview.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.render(scene,camera);}
   };
@@ -9286,7 +9406,8 @@ function fillBedWithSelectedPlant(state, positions) {
     plantId: plant.id,
     x,
     y,
-    planted: todayIso(),
+    planted: plant.catalogIdentity ? "" : todayIso(),
+    ...(plant.catalogIdentity ? {planYear:plant.planningYear} : {}),
     health: "starting",
     notes: "",
     rotation: ((x + y) % 17) * 0.08
@@ -9330,9 +9451,10 @@ function addPlacement(state, plantId, x, y) {
     id: uniquePlacementId(state),
     bedId: bed.id,
     plantId,
+    ...(plantById(state,plantId)?.catalogIdentity ? {planYear:plantById(state,plantId).planningYear} : {}),
     x: clamp(x, 0, bed.width),
     y: clamp(y, 0, bed.height),
-    planted: todayIso(),
+    planted: plantById(state,plantId)?.catalogIdentity ? "" : todayIso(),
     health: "starting",
     notes: "",
     rotation: Math.random() * Math.PI
@@ -13175,7 +13297,9 @@ function injectStyles() {
     .feature-list-row .bed-option-main strong {font-size:.82rem;line-height:1.3;white-space:normal;overflow-wrap:anywhere;}
     .feature-list-row .bed-option-main>span {font-size:.7rem;line-height:1.2;white-space:normal;}
     .feature-list-row>button:last-child {min-height:44px;padding:4px;font-size:.72rem;}
-    .walk-buttons:not([hidden]) {display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+    .walk-buttons:not([hidden]) {position:absolute;z-index:7;left:50%;bottom:44px;transform:translateX(-50%);display:flex;gap:4px;padding:4px;max-width:calc(100% - 16px);box-sizing:border-box;border:1px solid var(--line-strong);border-radius:8px;background:var(--panel);box-shadow:0 3px 12px var(--shadow-soft);}
+    .walk-buttons button {min-width:44px;min-height:44px;padding:6px 9px;font:600 .8rem/1.2 system-ui;white-space:nowrap;touch-action:manipulation;}
+    @media(max-width:920px){.walk-buttons:not([hidden]){bottom:12px;}.walk-buttons button{padding:6px;}}
     .planting-palette {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:10px;}
     .planting-palette button {min-height:54px;white-space:normal;font-size:.85rem;}
     .planting-palette button span {display:block;font-size:1.4rem;}

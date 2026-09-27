@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {plantIntent,plantPlanUrl,readPlantIntent,plannedCatalogPlant,addPlanningTrayEntry} from '../src/lib/garden/plantIntent.js';
+import {accountGardenPayload} from '../src/lib/garden/accountGardens.js';
+const record={id:'plant:catalog:cherokee-purple',name:'Tomato — Cherokee Purple',common:'Tomato',cultivar:'Cherokee Purple',scientific:'Solanum lycopersicum',source:'https://example.org/tomato',spacingMax:30};
+test('public catalog handoff retains cultivar identity and excludes private/untrusted fields',()=>{const url=new URL(plantPlanUrl({...record,privateGarden:'secret',password:'no'}));assert.equal(url.search,'');assert.deepEqual(readPlantIntent(url.hash),plantIntent(record));assert.ok(!url.href.includes('secret'));assert.equal(plantIntent({...record,source:'javascript:alert(1)'}).source,'');assert.equal(readPlantIntent('#my-gardens'),null);assert.throws(()=>readPlantIntent('#plant='+'a'.repeat(10000)));});
+test('tray isolates destination, preserves choices and survives account projection',()=>{
+ const garden=id=>({id,name:id,property:{id},beds:[{id:id+'-bed'}],structures:[],vegetation:[],placements:[]});const state={activeParcelId:'one',parcels:[garden('one'),garden('two')],plants:[],layouts:[]};
+ const plant=plannedCatalogPlant(record,{spacing:30,diameter:28,height:60},'chosen');const before=JSON.stringify(state.parcels[0]);const entry=addPlanningTrayEntry(state,{gardenId:'two',bedId:'two-bed',year:2027,plant},()=> 'choice');assert.equal(JSON.stringify(state.parcels[0]),before);assert.equal(state.parcels[1].placements.length,0);assert.equal(state.plants[0].catalogIdentity.cultivar,'Cherokee Purple');assert.equal(addPlanningTrayEntry(state,{gardenId:'two',bedId:'two-bed',year:2027,plant},()=> 'duplicate'),entry);assert.equal(state.plants.length,1);
+ const account=accountGardenPayload(state);assert.equal(account.parcels[1].property.planningTray[0].year,2027);assert.equal(account.plants[0].catalogIdentity.id,record.id);
+ assert.throws(()=>addPlanningTrayEntry(state,{gardenId:'one',bedId:'two-bed',year:2027,plant}));assert.throws(()=>plannedCatalogPlant(record,{spacing:0,diameter:28,height:60},'bad'));
+});

@@ -62,3 +62,10 @@ export function sunlightScenario(state,useIllustrativeHeights=false) {
  return {...state,vegetation:(state.vegetation||[]).map(f=>estimate(f,f.kind==='shrub'?4:20)),
   structures:(state.structures||[]).map(f=>estimate(f,/^(house|building|greenhouse|shed)$/.test(f.type)?12:/^(hedge|fence|wall)$/.test(f.type)?6:0)),assumedHeights};
 }
+
+// Same calendar day across months, clamped for short months; not monthly averages.
+export function seasonalLightDates(date){
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(date||'')||!Number.isFinite(Date.parse(date+'T12:00:00Z'))||new Date(date+'T12:00:00Z').toISOString().slice(0,10)!==date)throw Error('Choose a valid date.');
+ const year=Number(date.slice(0,4)),day=Number(date.slice(8,10));
+ return Array.from({length:12},(_,index)=>`${year}-${String(index+1).padStart(2,'0')}-${String(Math.min(day,new Date(Date.UTC(year,index+1,0)).getUTCDate())).padStart(2,'0')}`);
+}

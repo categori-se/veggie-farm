@@ -290,6 +290,18 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/account-garden-home.md",
+      "bytes": 1904,
+      "sha256": "95989c93849c4f424c3c0f656cc9be825cfeec0eb58d6875437c25ec44ef54b6",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/architecture/bed-seasons.md",
+      "bytes": 1456,
+      "sha256": "e923be347b8ea0dc503034dfa352e9a279f27f44fed447ffde311b19b814c81c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/build-evidence.json",
       "bytes": 2140,
       "sha256": "229ac5e003e8a336e9cbb0ed83c920ca46106bfbad6c26eba97a2418727d3542",
@@ -306,6 +318,12 @@
       "bytes": 6278,
       "sha256": "0c75fd3eea232d15e9ae4f1c7587662b9abb5624d3ede3b838419ee18787c8be",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
+    },
+    {
+      "path": "docs/architecture/demo-garden-lidar.md",
+      "bytes": 2710,
+      "sha256": "74665b96130f14f6339d806389ce2d466312c6b4bc600c63876dc33c99f5802e",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "docs/architecture/demo-sandbox.md",
@@ -326,6 +344,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/first-garden-plan.md",
+      "bytes": 1475,
+      "sha256": "a0422071b81a1121a9458abb4183a37981bf2f5f0ffbf9209346c91c3584085b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/garden-experience.md",
       "bytes": 4248,
       "sha256": "e43f650bc5708b3ce55bdf178ffd38aa75e4ad73a75cdade55a4c2fbd5a7d128",
@@ -344,15 +368,39 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/notebook-garden-associations.md",
+      "bytes": 2149,
+      "sha256": "cd6100a4f7a03bd62cef87db44310c593e6abc43732dc7faa7af8b6dde427142",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/open-core-boundary.md",
       "bytes": 6102,
       "sha256": "2a7b0747a25c63fdeb0557f0c4c26c334d26bb29815a4e11530198f52003549d",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/plant-discovery-handoff.md",
+      "bytes": 1993,
+      "sha256": "16bd17eb4b5b783b96896fc94d143f612b98bd59bc0310d8d8780174d99f3333",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/plant-photographs.md",
       "bytes": 2238,
       "sha256": "e5870d5973cc3a2ff2f1a6c5e29be5d4c2e016bbe27fae4f4c28bcf704fb7d41",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/architecture/planting-journal.md",
+      "bytes": 2099,
+      "sha256": "6fcb7bc86b78d2c66a4e97fa5e1cfe66251d8c3faec30f470529b4f8cbed09b8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/architecture/public-garden-scenarios.md",
+      "bytes": 2371,
+      "sha256": "2d97b0ac8cf69062d99822350b18ba33f227a9ea61dfe30176d204265d246f22",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -362,9 +410,15 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/regional-garden-data.md",
+      "bytes": 3027,
+      "sha256": "15690e190ecf4b0f629d269fed840d10fc0410cf13caf64924f98b2c7bb19f07",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/seasonal-sunlight.md",
-      "bytes": 3794,
-      "sha256": "1a047cd434f91bf9aaa27b4a081924d9ddbd786cb8fa5601b9ef962a621657f5",
+      "bytes": 5015,
+      "sha256": "c59c2822d5c978a4596419745b45042fc6278bbfc71c75cebbce5022a69a5a2a",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -618,6 +672,18 @@
       "bytes": 2455,
       "sha256": "c2a6647bc6f3f4afc40f72615082a84bdcfdb56bbe5006456da9c89ca9c3c837",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "docs/product/garden-journey-goal.md",
+      "bytes": 4565,
+      "sha256": "e725436e729fa8f4ce6d7cd82e5cc429c3932a4b725ac57f9dd00b78e39927e1",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/product/journey-review.md",
+      "bytes": 2993,
+      "sha256": "a13ba07c9d38c35034dedca4d11fd090e2a7b8b314415733dfc88ddcab1ae03a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "docs/spatial-interchange.md",
@@ -986,6 +1052,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "src/components/account-garden-home.js",
+      "bytes": 4816,
+      "sha256": "0cd2f755fca0a6bd6635ac835670b90c7d02ec0b217cba7cd79a640e274b24aa",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/account-menu.js",
       "bytes": 2305,
       "sha256": "7d4b6a0c8b318c463d5c1bf0f8c91d5a072ee46c54fa157593d2c5f00f6f464e",
@@ -1064,6 +1136,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/components/first-plan-guide.js",
+      "bytes": 4771,
+      "sha256": "132e7c00f0c7c63048d693e6a7dc0b898cd72b8484a624461078b7bc049a976a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/forecast-panel.js",
       "bytes": 5327,
       "sha256": "b4f478189a1636df0f0be79851a0d100232c160786d1527e7760ab5fe0bce2f1",
@@ -1088,6 +1166,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/components/garden-home.js",
+      "bytes": 8811,
+      "sha256": "caf19261a0b45151f12b0a3e5e65532478f1e818391df8784192e7454fbdc199",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/garden-library.js",
       "bytes": 3251,
       "sha256": "543971d0a3125beb1ee268cbb6ed22fe1a6c8abc37a44b9f91d303429b4410fe",
@@ -1101,8 +1185,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 543398,
-      "sha256": "e742f0dd1905be68557c81e2d965c473e3a1b1d54414b576771b8b05da89afd2",
+      "bytes": 559350,
+      "sha256": "aaeca872ed3d214a80b598ccdefb2c6c0593ee1a00c83dedff20fa54eac1847a",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1125,8 +1209,8 @@
     },
     {
       "path": "src/components/mapped-soil.js",
-      "bytes": 4523,
-      "sha256": "754cee3ce25106827fb48c18f57311fd9b5bee063044c50fa57cc14e56c28d68",
+      "bytes": 5068,
+      "sha256": "63ea69adc191ab5e1d910a702af0e694d17d0fa255a752a7b96bfa704f77f0ec",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1134,6 +1218,12 @@
       "bytes": 3570,
       "sha256": "494ec50a1d3bab89b39c3d8b7b4800c73ed54b34f60c5ed0897b2e9b66b0fc2f",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/notebook-garden-links.js",
+      "bytes": 5079,
+      "sha256": "5ecbe5daf3ebdaeb547d9493e1d21b719bf051d07873b3ff9f4ec5c3728aa3e2",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/notebook-local.js",
@@ -1161,8 +1251,8 @@
     },
     {
       "path": "src/components/planner-sun-preview.js",
-      "bytes": 10733,
-      "sha256": "7a38fc8ed3053f9289a9ad96497d768e44f0f5296fba9561ceb470dd0bb3a97f",
+      "bytes": 14228,
+      "sha256": "8ed5539c15e502442e4f956d8c7cf6a1819edef627ae7739193e6a31798c0cde",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1178,9 +1268,15 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/components/planning-tray.js",
+      "bytes": 5078,
+      "sha256": "9ae72df8ae6a09ab0aeabacd5c92fdee487424bebf4664c7569f83c4a3649968",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/plant-explorer.js",
-      "bytes": 14606,
-      "sha256": "592f9ff298635e3b9f02c305dc89aa7d7dd401eeb09cf8e261126347d0f02b30",
+      "bytes": 14971,
+      "sha256": "80c00240c7f88c83fd0c117a2c341b70906ed6ff4c679a1e0990529ecabaadd6",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1230,6 +1326,12 @@
       "bytes": 11569,
       "sha256": "2eb0e85bda358409fd66e0497b1984026e01c4293838b2228b6df416c7fe39fa",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/regional-garden-data.js",
+      "bytes": 3730,
+      "sha256": "4c9f2cd5baba414ea3b9b8458aeb06f82a888a5f27a79b1ba28a57da234bd6ad",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/related-pages.js",
@@ -2607,8 +2709,8 @@
     },
     {
       "path": "src/lib/environment/mappedSoil.js",
-      "bytes": 3462,
-      "sha256": "a859b000e9e357bf8991cfe8bbf1e42bacd052ab7f3e4818834c7cfd1abebe82",
+      "bytes": 3645,
+      "sha256": "0c050c221cd716a2288111e46df8b08b428b1bb0aa3184052a7ee54a600b322b",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2630,6 +2732,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/accountGardenJournal.js",
+      "bytes": 4792,
+      "sha256": "08597e87c4c313b0bd4c2b11e151432b20149077627b7956e15cc65709bcdc05",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/accountGardens.js",
       "bytes": 3741,
       "sha256": "7533cc3caf83569274b643a3d4e22e60c0728703c80581891c1cf5d9ded766e8",
@@ -2640,6 +2748,12 @@
       "bytes": 787,
       "sha256": "7c993d63461599d4ff404f47f8f2b7cc1636a48ee4288a61ef314f172eb5b302",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/lib/garden/firstPlan.js",
+      "bytes": 1234,
+      "sha256": "b6e76c5f0b83977e4c86528093d86f64cfb352d5c1be9a4ba527ee25dcea3520",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/lib/garden/gardenRecords.js",
@@ -2658,6 +2772,12 @@
       "bytes": 3514,
       "sha256": "5e8a4549aa7c5a4568f3314e4105dd17cccdb74be55604c81df97a80749696de",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/lib/garden/notebookLink.js",
+      "bytes": 3645,
+      "sha256": "1df439ef7361bb458884e32c1f7c5e45e9f3d4feed312d96653612140fa54a2b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/lib/garden/plannedOccupancy.js",
@@ -2684,10 +2804,22 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/plantIntent.js",
+      "bytes": 3110,
+      "sha256": "a4f4e060bbf03e5fb8bfec6c085a3e6c9b8c1ff2dbd8189e3921c08ec23a164c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/plantModel.js",
       "bytes": 541,
       "sha256": "6cc95b9c39e59c790a302625e5a21a7aac6d94f2a68ace9032f886590f1c978b",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/lib/garden/plantingJournal.js",
+      "bytes": 4192,
+      "sha256": "5a1631b085fafd2a7da74493ebd4a529a5cc122bc07518b36dd1ff2488d33992",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/lib/garden/plantingSchedule.js",
@@ -2930,6 +3062,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/spatial/regionalSources.js",
+      "bytes": 4888,
+      "sha256": "6434713733344b94015615cd7a53da8c62dbb8485bf84d8f6e2142d60069373a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/spatial/siteGeometryEditor.js",
       "bytes": 12189,
       "sha256": "e919395ae14ef0f0affa3307c92848c3c21bbb4d0c811b80f7292fdeff138d15",
@@ -2937,8 +3075,8 @@
     },
     {
       "path": "src/lib/spatial/solarExposure.js",
-      "bytes": 4282,
-      "sha256": "1bef130408d24d8540a8341da968435e30c48d9a1c4aad3c85d2752cf3d93375",
+      "bytes": 4845,
+      "sha256": "6454c2a728071cb53629ef1e53d32b4695051cd477280367095dea7f21aaa943",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2997,8 +3135,8 @@
     },
     {
       "path": "src/studio.md",
-      "bytes": 12871,
-      "sha256": "cb6b985ee8335266b8bc137eac661c6c1476c716252830b80759eae2f35156bb",
+      "bytes": 12965,
+      "sha256": "f83dc7d734271e6c6d226f222790cd28aa2ee46f2c00a330fc04edce9cbb327e",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3081,8 +3219,8 @@
     },
     {
       "path": "src/tools.md",
-      "bytes": 7978,
-      "sha256": "7a9c034d8ff37cb81871a808db31bb653adda7a3f3e8ca85c0e0aea5f71ea877",
+      "bytes": 8149,
+      "sha256": "12f5d5dc053205edbc36e6edb20ea72117f443f34247c88d72e6361aeaf1d8a8",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3093,9 +3231,15 @@
     },
     {
       "path": "src/tools/my-garden.md",
-      "bytes": 10452,
-      "sha256": "934723dae35e04490894fdf79f52709e1a979649a40e0e0b535dea6e8a0c7c7e",
+      "bytes": 10579,
+      "sha256": "e3ed188b2731d439a430ef3a1fb8bc761352e6ceb43d3153abb23b8cdb3af766",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/tools/regional-garden-data.md",
+      "bytes": 2344,
+      "sha256": "9372fcdf2b150e8b3d9125bee2adad082e39c581e180f4429aa101a6969a441c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/tools/season-weather.md",
@@ -3132,6 +3276,12 @@
       "bytes": 9673,
       "sha256": "7bae0de7192e88147d950de40ad41bab38b7df814896d9400a8e5665f4554ca7",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/accountGardenJournal.test.mjs",
+      "bytes": 3216,
+      "sha256": "5706f47f3793ce717dd0b2fc0a00b75e6fea19a4045604b4e7fb68272a62f239",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/accountGardens.test.js",
@@ -3230,6 +3380,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "tests/firstPlan.test.mjs",
+      "bytes": 1402,
+      "sha256": "502f5a62a6ef8c613f25ee7d64ca69f5a4a34bc29c4cb9cd8a5b18ebfa612423",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "tests/flowerCatalog.test.js",
       "bytes": 2274,
       "sha256": "35d2e32d53ec5da9f90ae6f6c4ae8a297f0241a966498d6b23a133e6c130b901",
@@ -3252,6 +3408,12 @@
       "bytes": 2606,
       "sha256": "194a471238318aafa17509d8f226c0ac372e09fbba483df71278f7460e133866",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/gardenExperience.test.mjs",
+      "bytes": 3219,
+      "sha256": "5417e2f430eb5efe0676dcc1329dc5c0b2213f4e5d5a4e96cd08cc2d545a989b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/gardenFeatureCollections.test.js",
@@ -3386,6 +3548,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "tests/notebookLink.test.mjs",
+      "bytes": 2401,
+      "sha256": "c6f02295fdb9de232926b1a18d9132a0151f04d72ea5d96291ceb74803c04fca",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "tests/notebookStorageBoundary.test.mjs",
       "bytes": 3622,
       "sha256": "547725ded481c5cf3180571da4a4a2887dfa77bda63a7bba5329abd52e42397a",
@@ -3446,6 +3614,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "tests/plantIntent.test.mjs",
+      "bytes": 2218,
+      "sha256": "c57c6a7b79372cf1f19d43fd110dc4493291e3ef85692d7ea20f8c36342b4091",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "tests/plantModel.test.js",
       "bytes": 1154,
       "sha256": "c75287c24b2d40314101dd1521149f5a8a749bfe2bfc3021f617871984b17102",
@@ -3461,6 +3635,12 @@
       "path": "tests/plantTypes.test.mjs",
       "bytes": 1781,
       "sha256": "184621f93165f693b72ae86877572eef3c78990e187755cf515724917585daae",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "tests/plantingJournal.test.mjs",
+      "bytes": 3498,
+      "sha256": "72d240d6bf324f5f7764d33f4a112c6da4c33e1a253df04cf09c27d29f053abb",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3522,6 +3702,12 @@
       "bytes": 2366,
       "sha256": "c0bc576e114055d44349c8c56e57ff378e0fdf10138c4b968035105393049094",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/regionalSources.test.mjs",
+      "bytes": 2003,
+      "sha256": "1fd5452f7ef9f6a85e71658b611ed0d0baeb20313f3d18f8484b7551de72f3d8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/rotationRisk.test.js",
@@ -3591,8 +3777,8 @@
     },
     {
       "path": "tests/solarExposure.test.mjs",
-      "bytes": 3608,
-      "sha256": "3a4b5fc1e2a8bac1d48436dd4ffb7bf99ecd92d52d7675409e35052cb47c797a",
+      "bytes": 3968,
+      "sha256": "5a9782413b8107ebf47f80a0cca984670b9dea5e1116a4ba1b0825753d01c19e",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

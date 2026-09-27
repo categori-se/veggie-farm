@@ -178,3 +178,6 @@ invalidation.then(() => {
   </div>
   <p><a href="https://veggie.farm/content/vegetables/">Read the crop guides</a> · <a href="https://veggie.farm/tools/garden-decisions">Work through a gardening question</a> · <a href="https://veggie.farm/about/data-sources">Sources and map limitations</a></p>
 </section>
+
+
+[Find parcel, imagery, LiDAR and soil sources for your state](/tools/regional-garden-data).

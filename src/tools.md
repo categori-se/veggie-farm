@@ -21,6 +21,7 @@ toc: false
 <section class="tools-section" id="start-with-your-question">
   <div class="section-heading"><p class="kicker">Choose your next step</p><h2>What are you working out?</h2></div>
   <nav class="decision-route-grid" aria-label="Find a tool by gardening question">
+    <a href="/tools/regional-garden-data"><strong>Find map data for my state</strong><span>State GIS catalogs, LiDAR discovery and mapped soil for nine states.</span></a>
     <a href="/tools/today"><strong>Can I plant now?</strong><span>Compare frost timing, soil temperature and a current forecast.</span></a>
     <a href="/tools/garden-decisions#sun"><strong>What fits my sun or shade?</strong><span>Start with the light you measure; then compare plants.</span></a>
     <a href="/tools/garden-decisions#disease"><strong>Why is this plant struggling?</strong><span>Inspect symptoms and conditions before selecting a response.</span></a>

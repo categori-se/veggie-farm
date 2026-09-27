@@ -48,6 +48,11 @@ display(notebookAccount({invalidation}));
 ```
 
 ```js
+import {accountGardenHome} from "../components/account-garden-home.js";
+display(accountGardenHome({invalidation}));
+```
+
+```js
 import {notebookTimeline} from "../components/notebook-timeline.js";
 notebookSession;
 display(notebookTimeline({invalidation}));
