@@ -7,3 +7,5 @@ Journal and Learn are distinct entry routes using the same selected account gard
 A user without an account selection chooses a saved garden first. Browser-local-only/community deployments continue to offer the planner entry; unsaved cross-origin state is not automatically transferred. Selecting a garden still uses existing owner-scoped IDs and authenticated save loading. These navigation changes do not establish real authenticated cross-device continuity.
 
 Navigation rendering and desktop/phone browser acceptance cover shared destinations, menu access, focused views and preserved log drafts. Resources remain available without an account.
+
+The global Plan link carries the current owner's remembered saved-garden IDs, including a selection changed on the current page. Signed-out/expired owners and cleared selections return to the original destination. It does not send garden contents, make an API request, or bypass Plan's restore confirmation. In the active Plan workspace and browser-local deployments the original link remains unchanged.

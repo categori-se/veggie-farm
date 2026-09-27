@@ -381,8 +381,8 @@
     },
     {
       "path": "docs/architecture/journey-navigation.md",
-      "bytes": 1350,
-      "sha256": "ca4b97c5e25cde3e18de442ef72f56aee701a17e9ef8014962be151632f15b43",
+      "bytes": 1755,
+      "sha256": "9bb7506ee7714cfe18fb51b311dc58a4c2f89aa77d2cdeeacfa3440ee6d4c4ed",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1167,8 +1167,8 @@
     },
     {
       "path": "src/components/account-menu.js",
-      "bytes": 2305,
-      "sha256": "7d4b6a0c8b318c463d5c1bf0f8c91d5a072ee46c54fa157593d2c5f00f6f464e",
+      "bytes": 2428,
+      "sha256": "917782cf4b9583c03dba8a3d4aa75899e83604cda16061f2f324adfde6d8b07e",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1328,6 +1328,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "src/components/journey-links.js",
+      "bytes": 1410,
+      "sha256": "ba073804ad1194dfed34aa40fcbc647dc7ef47a791242d48b0e411a3054659f5",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/knowledge-graph.js",
       "bytes": 4648,
       "sha256": "e0dcd31d5a67de0b6a39e62f1484eac85a95baf7903182f672adce2e0d99d914",
@@ -1341,8 +1347,8 @@
     },
     {
       "path": "src/components/notebook-account.js",
-      "bytes": 3570,
-      "sha256": "494ec50a1d3bab89b39c3d8b7b4800c73ed54b34f60c5ed0897b2e9b66b0fc2f",
+      "bytes": 3654,
+      "sha256": "819d17afcd9cfc1468e51d4c7c19e66ea62a8f63fdb111bec8a2dcf245b7eb04",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3525,8 +3531,8 @@
     },
     {
       "path": "src/tools/my-garden.md",
-      "bytes": 10583,
-      "sha256": "5566086131ca9db38e462db660acafac76c1de652e164726ad0e7e02d213886c",
+      "bytes": 11116,
+      "sha256": "24ec5b25c0d65ee16e3ccd541a1f64c0fe170fd8118d7b09b5fd5e7bd4301c79",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3846,6 +3852,12 @@
       "bytes": 1926,
       "sha256": "58aef0d014ffa7008f0fcec4c0e4ffc5ecfdf1003ad10b6d65478a812a24ffb5",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/journeyLinks.test.mjs",
+      "bytes": 2255,
+      "sha256": "e4d2fec959c1949af2bdd5158d32d9251658e7624c8c695287a8172deee709fe",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/journeyNavigation.test.mjs",
