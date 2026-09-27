@@ -13373,6 +13373,8 @@ function injectStyles() {
       .garden-tool-rail {grid-template-columns: repeat(7, minmax(0, 1fr));}
       .garden-tool-rail [data-tool="select"] {display: grid;}
       .garden-sidebar, .garden-inspector {max-height: min(48svh, 480px);}
+      .tool-panel > *, .inspector-panel > * {flex-shrink:0;}
+      .tool-panel :is(.bed-list,.plant-list,.flower-list,.structure-list,.vegetation-list) {max-height:none;overflow:visible;flex-shrink:0;}
       .drawer-heading {min-height: 44px; padding: 4px 8px;}
       .drawer-heading button {min-width: 44px; min-height: 44px;}
       .view-navigation {
