@@ -23,6 +23,6 @@ The full goal remains: Understand my garden → Decide what to grow → Plan whe
 | 17. Transparent condition-match indicators | Not complete; no invented confidence values. |
 | 18. Intentional desktop planning / mobile doing | Responsive checks exist, but mobile-first Today/Quick Log/photo/account journey incomplete. |
 | 19. One application across site and Studio | Navigation links exist; unified header, garden selection and scoped synchronized state incomplete. |
-| 20. Annual learning → next year's plan | Snapshot comparison and some review tools exist; real outcome patterns and next-season workflow incomplete. |
+| 20. Annual learning → next year's plan | My Garden compares recorded harvests and recurring issues by exact plant/bed across adjacent years, exposes source observations and links to next-year planning; see [season learning](../architecture/season-learning.md). Soil trends, saved lessons, condition-adjusted comparisons and authenticated cross-device acceptance remain incomplete. |
 
 Completion requires end-to-end evidence across fresh visitor, returning local user, signed-in desktop/mobile user, account switching, offline/storage failure, export/reimport, and multi-year plans and observations. No fabricated plants, user feedback, yield, suitability, survey certainty, or historical observations. Keep plan and actual separate. Preserve private media and source-only publication boundaries.

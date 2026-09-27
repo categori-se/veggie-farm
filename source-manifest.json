@@ -434,6 +434,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/season-learning.md",
+      "bytes": 2003,
+      "sha256": "d1f2ce238af8fcebf92bf96424fcefb16c7e01d157b858869e7b6c84cc48937c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/season-preview-navigation.md",
       "bytes": 2106,
       "sha256": "989979f74d16af20bd6cbf13f9439fc6f94a8b6560a8f928272cd51c04b343ae",
@@ -717,8 +723,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 5590,
-      "sha256": "f37d7a90bb8b307fb1c57dd8faebc7cbd06ff3cbf673fc123be2a2fa8a698473",
+      "bytes": 5822,
+      "sha256": "a9b951d77b595c28d41e26335f6cef7000f913c323eaf94796e6a175be4110e1",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1221,8 +1227,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 11480,
-      "sha256": "7239d4bb51bbb1947031d5e0a93450198854f5df75f925353022b7c5ef243689",
+      "bytes": 11775,
+      "sha256": "a27d2793b3d6a53a7457c800773090c5a6293adb59bd2e50937f19beeff78dea",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1230,6 +1236,12 @@
       "bytes": 3251,
       "sha256": "543971d0a3125beb1ee268cbb6ed22fe1a6c8abc37a44b9f91d303429b4410fe",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/garden-season-learning.js",
+      "bytes": 3622,
+      "sha256": "872e696d672d3728027835381c38a64be0eed182ef4920d8887f07bab4b5d105",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/garden-season-review.js",
@@ -2942,6 +2954,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/seasonLearning.js",
+      "bytes": 3077,
+      "sha256": "7ea9e76f7a1d75a64ee4ea8b7ff2761fa15bc73890c27d07bb8e61621a00e3c2",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/sharedGarden.js",
       "bytes": 3511,
       "sha256": "3388a214011b21dde34cfab6cd29bfa32ed12e4b2c5640f77578bd950ca5872c",
@@ -3912,6 +3930,12 @@
       "bytes": 703,
       "sha256": "609c044749a900b2a3fae437f1af9726c75505a3ae639dbeb65f0b6d4462f707",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/seasonLearning.test.mjs",
+      "bytes": 2749,
+      "sha256": "c682d8741107e2206a43f6f24053f2eba2905138dd8cf083ff81e986df1febf9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/seasonWeather.test.mjs",
