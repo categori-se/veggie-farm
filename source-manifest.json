@@ -15,8 +15,8 @@
     },
     {
       "path": ".githooks/pre-push",
-      "bytes": 43,
-      "sha256": "0bd56a9c005d1280dea6cdbe3e445785d8872f5dff6e4cc70ad4c57a03392218",
+      "bytes": 207,
+      "sha256": "207a0e031a2f54dc9b83cec7154d896e7270475e11bffea1a834c722887004f6",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
