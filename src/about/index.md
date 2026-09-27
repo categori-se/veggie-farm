@@ -1,35 +1,42 @@
 ---
-title: "Why veggie.farm?"
-description: "From recurring gardening questions to information, experiments and a garden plan you can change and keep."
+title: "Why I'm building veggie.farm"
+description: "A personal story about gardening, a place I love, and connecting shared knowledge to the work of caring for it."
 ---
 
-# From a question to a garden you understand
+# Why I'm building veggie.farm
 
-I started veggie.farm because I kept searching for answers to the same questions: What should I plant, and when? What tolerates shade? How much room and water does it need? What works where I live?
+I bought the veggie.farm domain a long time ago. I do this: I have an idea, find a domain, and hold on to it. At one point I had bought maybe a dozen of them—little places on the internet for things I hoped I would eventually make. This was one of those ideas that stayed with me, because I love gardening.
 
-I also wanted to learn from one season to the next: what changed, what worked, and how I could improve my soil and harvest. Even finding an affordable soil test could mean another round of searching.
+I spend much of my working day at a computer. One of the things that gives me the most joy is getting up, walking outside, and putting my hands in the soil. It reminds me that I am connected to the Earth. There is something magnificent about that: being in touch with nature, being part of the world, paying attention to something alive. That is gardening to me.
 
-Useful information was everywhere—in Extension resources, research, public datasets and gardening websites. Bringing it together for my own garden took work. My experience collecting data and building mapping tools gave me a starting point; living in Massachusetts gave the project a useful geographic focus.
+You care for the soil. You plant seeds. You come back every day and notice what has changed. You nurture the environment around you, and sometimes it rewards you with a beautiful plant or an abundance of things to eat. There is work in it, and uncertainty, but there is also this extraordinary feeling of participating in something.
 
-## Read, try, observe, improve
+The place where I garden matters deeply to me. We have lived here for about ten years. I got married here. It is a place I love, even when things happening elsewhere in life make it hard to be here. One thing I can keep hoping for, and working toward, is to make this property more bountiful and more beautiful year after year—and to watch it evolve.
 
-veggie.farm began as a collection of gardening information and data experiments. Garden Planning Studio developed from that foundation into an interactive application for arranging beds and plants, exploring 2D and 3D layouts, and keeping a plan as ideas change.
+I put a lot into that. I dig the holes. I move the soil. I buy the rocks. I spend the effort and the sweat. And even after all of that, some of it still feels like a gamble. A plant struggles. Something grows where I did not expect it to. A season goes differently from the one before. I want to get better at understanding why, and at deciding what to try next.
 
-The guides help you understand a choice. The tools help you compare conditions. Studio gives the plan a shape. Your own observations tell you what happened next.
+That is where veggie.farm comes in.
 
-<div class="decision-route-grid">
-  <a href="/tools"><strong>Start with a question</strong><span>Find a tool for planting, light, plant problems, pruning or harvest.</span></a>
-  <a href="https://studio.veggie.farm/"><strong>Try the Studio</strong><span>Start a practice garden with a 4 × 8 ft bed, without an account or home address.</span></a>
-  <a href="/content/"><strong>Explore the guides</strong><span>Learn about vegetables, fruit, herbs, soil and the changing season.</span></a>
-  <a href="/tools/my-garden#field-notes"><strong>Keep what you learn</strong><span>Make a dated observation in your private account notebook and keep an export.</span></a>
-</div>
+There is already so much information out there. People have spent their lives learning about plants, soils, weather, water, and the places we live. Researchers, gardeners, Extension programs, public agencies, and open-source communities have collected and shared knowledge that I could never produce on my own. Several states make useful information about land, climate, terrain, and soils available to the public. Massachusetts gave me a place to begin.
 
-## Keep the source and the uncertainty
+My starting point is to take what is available, organize what I can, and make the connections easier to see. What does the shape of the land tell us? How might the sun move across a garden through the year? What changes when a tree grows taller? What do we know about the soil, and what would we need to test? Which plants might do well together, and how much room should we leave them? How can what happened last year help us make a better decision this year?
 
-A parcel map does not measure the soil in a bed. A plant model does not establish how much sunlight reaches its leaves. A calendar estimate is an invitation to inspect the crop.
+I want that information to lead somewhere practical. Read something useful, ask a question, look at the conditions, choose a plant, and try a plan. Then go outside. Pay attention. Record what happened. Come back next season with a little more understanding.
 
-The application keeps reference data separate from your editable plan, retains citations and source records, and labels incomplete public-garden studies. {{studio-persistence}} {{notebook-persistence}} [See how the data is used](/about/data-sources).
+The gardening resource and Studio belong to that same journey. One helps me think through a question; the other lets me give an idea a shape, walk through a garden, and imagine how it could change. The separate Studio address is a convenience. What I am trying to build is one connected place to learn, plan, observe, and improve.
 
-The aim is practical: somewhere to turn gardening information into a plan you can see, change and learn from. The next useful evidence comes from gardeners trying a real task and showing where the application helps—or gets in the way.
+My hopes for the garden are both practical and personal. I want productive plants and good harvests. I want to keep things healthy, avoid pesticides and synthetic fertilizers where I can, and work toward a natural balance. I want a place that is beautiful to look at and enjoyable to spend time in. I want things to eat. And, of course, I want to figure out how to keep the deer from eating everything first—or the bears from getting all the raspberries.
 
-[How veggie.farm was built and what has been verified](/about/build-evidence).
+We are the curators of these places during our time here. I want to take that seriously without losing the joy in it.
+
+veggie.farm is my best effort to show what might be possible with the tools and information I have at my disposal. It is still being built. The direction matters to me as much as any individual feature: connect useful information to real decisions, and help a garden become something we understand more deeply over time.
+
+It is an amazing moment to try. The internet, technology, and open source let us calculate, interpret, visualize, and share things at a scale that once would have been hard to imagine. Behind that possibility is the work of people everywhere—an accumulation of human knowledge far larger than any one of us.
+
+I get to take a small part of that shared effort, bring it back to this place I love, and see what I can grow with it.
+
+---
+
+[See what you can do today](https://veggie.farm/tools/today) · [Find plants](https://veggie.farm/content/reference/plant-database) · [Open Studio](https://studio.veggie.farm/) · [Explore the guides](https://veggie.farm/content/)
+
+[Data sources and their limits](https://veggie.farm/about/data-sources) · [How the application was built and verified](https://veggie.farm/about/build-evidence) · [Open-source code and acknowledgments](https://github.com/categori-se/veggie-farm)
