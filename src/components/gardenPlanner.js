@@ -1,3 +1,5 @@
+import {firstPlanGuide} from "./first-plan-guide.js";
+import {firstPlanDimensions, firstPlanPositions} from "../lib/garden/firstPlan.js";
 import {planningTray} from "./planning-tray.js";
 import {addPlanningTrayEntry} from "../lib/garden/plantIntent.js";
 import {gardenHome} from "./garden-home.js";
@@ -730,7 +732,7 @@ export function gardenPlanner(options = {}) {
   root.innerHTML = `
     <section class="planner-quick-start" aria-label="Start a garden plan">
       <div><strong>Garden Planning Studio</strong><p>Try an editable 4 × 8 ft bed. No account needed.</p></div>
-      <button data-role="start-practice-garden" type="button">Start a practice garden</button>
+      <button data-role="start-practice-garden" type="button">Start with a 4 × 8 bed</button>
     </section>
     <div class="garden-shell">
       <header class="garden-topbar">
@@ -1098,6 +1100,7 @@ export function gardenPlanner(options = {}) {
     storageStatus.dataset.saved = String(saved);
     storageBackup.hidden = saved;
   };
+  let firstGuide = null;
   let tray = null;
   let three = null;
   let sharedViewFrame = null;
@@ -1165,6 +1168,7 @@ export function gardenPlanner(options = {}) {
     renderInspector(refs, state, renderAll, {preserveEditor});
     if (three) syncThreeScene(three, state);
     syncSelectedToolCard(refs, state);
+    firstGuide?.update();
     tray?.update();
     persistAndReport();
   };
@@ -1291,17 +1295,7 @@ export function gardenPlanner(options = {}) {
     root.querySelector('.planner-quick-start p').textContent = 'Begin with a 4 × 8 ft bed, then add your own spaces and plants. Save an account copy to keep it online.';
     root.querySelector('[data-role="start-practice-garden"]').textContent = 'Create my first garden';
   }
-  root.querySelector('[data-role="start-practice-garden"]').addEventListener("click", () => {
-    exploringDemos = false;
-    createBlankGardenWorkspace(state, PLANNER_OWNER ? "My garden" : "Practice garden");
-    state.viewPresentation = "2d";
-    state.viewMode = "bed";
-    state.activeTool = "beds";
-    state.toolDrawerOpen = true;
-    openInspector(state, "bed");
-    renderAll();
-    refs.selectedBed.querySelector('[data-bed-field="name"]')?.focus();
-  });
+  root.querySelector('[data-role="start-practice-garden"]').addEventListener("click", () => firstGuide.start());
   const backupInput = root.querySelector('[data-role="backup-input"]');
   const backupStatus = root.querySelector('[data-role="backup-status"]');
   const restoreButton = root.querySelector('[data-role="restore-backup"]');
@@ -1371,10 +1365,10 @@ export function gardenPlanner(options = {}) {
     renderAll();
   });
 
-  const changeTray = mutate => {
+  const changeTray = (mutate, failureMessage="Could not save the planning tray. Your previous plan is unchanged; free browser storage and try again.") => {
     syncActiveParcelWorkspace(state);
     const before=structuredCloneCompat(state);
-    try {mutate();renderAll();if(storageStatus.dataset.saved!=="true")throw Error("Could not save the planning tray. Your previous plan is unchanged; free browser storage and try again.");}
+    try {mutate();renderAll();if(storageStatus.dataset.saved!=="true")throw Error(failureMessage);}
     catch(error){Object.assign(state,before);renderAll();throw error;}
   };
   tray=planningTray({getState:()=>state,invalidation:options.invalidation,
@@ -1389,6 +1383,30 @@ export function gardenPlanner(options = {}) {
     openBed:item=>{if(!openPlantingWorkspace(state,item.bedId))throw Error("This bed no longer exists.");state.selectedPlantId=item.plantId;renderAll();},
     remove:id=>changeTray(()=>{state.property.planningTray=(state.property.planningTray||[]).filter(e=>e.id!==id);})
   });
+  const guideChange=fn=>changeTray(fn,"Could not save your first plan. Your previous garden is unchanged; free browser storage and try again.");
+  firstGuide=firstPlanGuide({getState:()=>state,invalidation:options.invalidation,
+    create:values=>guideChange(()=>{
+      const dimensions=firstPlanDimensions(values.width,values.depth),name=values.name.trim();
+      if(!name)throw Error("Name your garden.");
+      exploringDemos=false;createBlankGardenWorkspace(state,name.slice(0,100));
+      Object.assign(activeBed(state),dimensions);
+      state.property.firstPlan={step:2,bedId:state.activeBedId};
+      openPlantingWorkspace(state);state.viewPresentation="2d";state.toolDrawerOpen=false;
+    }),
+    arrange:(ids,date)=>guideChange(()=>{
+      const guide=state.property.firstPlan,bed=state.beds.find(b=>b.id===guide?.bedId);
+      if(!bed||guide.step!==2)throw Error("Return to your setup bed first.");
+      const plants=ids.map(id=>plantById(state,id)).filter(Boolean),positions=firstPlanPositions(bed,plants);
+      if(state.placements.some(p=>p.bedId===bed.id))throw Error("This bed already has plantings. Continue arranging it in the editor.");
+      for(const point of positions)state.placements.push({id:uniquePlacementId(state),bedId:bed.id,...point,planted:date||"",health:"planned",rotation:0,notes:"First-plan starting arrangement; review spacing and growing conditions."});
+      guide.step=3;openPlantingWorkspace(state,bed.id);state.toolDrawerOpen=false;state.inspectorOpen=false;
+    }),
+    edit:()=>{openPlantingWorkspace(state,state.property.firstPlan.bedId);beginExplicitEditing(state);state.toolDrawerOpen=false;state.inspectorOpen=false;renderAll();},
+    review:()=>guideChange(()=>{explicitEditSessions.delete(state);state.property.firstPlan.step=4;}),
+    save:name=>guideChange(()=>{if(!name.trim())throw Error("Name this plan.");state.property.firstPlan.complete=true;explicitEditSessions.delete(state);saveNamedLayout(state,name.trim().slice(0,120));}),
+    download:()=>refs.actions.export.click()
+  });
+  root.querySelector('.planner-quick-start').after(firstGuide.root);root.append(firstGuide.dialog);
   refs.plantList.before(tray.root);
   root.append(tray.dialog);
 

@@ -344,6 +344,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/first-garden-plan.md",
+      "bytes": 1475,
+      "sha256": "a0422071b81a1121a9458abb4183a37981bf2f5f0ffbf9209346c91c3584085b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/garden-experience.md",
       "bytes": 4248,
       "sha256": "e43f650bc5708b3ce55bdf178ffd38aa75e4ad73a75cdade55a4c2fbd5a7d128",
@@ -669,8 +675,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 4405,
-      "sha256": "17677292b85a6f3f82872e4b414fc698d02e303995cfbdccdfdfbbf74f414a5d",
+      "bytes": 4565,
+      "sha256": "e725436e729fa8f4ce6d7cd82e5cc429c3932a4b725ac57f9dd00b78e39927e1",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1130,6 +1136,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/components/first-plan-guide.js",
+      "bytes": 4771,
+      "sha256": "132e7c00f0c7c63048d693e6a7dc0b898cd72b8484a624461078b7bc049a976a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/forecast-panel.js",
       "bytes": 5327,
       "sha256": "b4f478189a1636df0f0be79851a0d100232c160786d1527e7760ab5fe0bce2f1",
@@ -1173,8 +1185,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 557340,
-      "sha256": "5a1990ecd805deaf1e272009845b38a5b82cdf95b4ea7b2a0c3e00221bf553b5",
+      "bytes": 559350,
+      "sha256": "aaeca872ed3d214a80b598ccdefb2c6c0593ee1a00c83dedff20fa54eac1847a",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2738,6 +2750,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/firstPlan.js",
+      "bytes": 1234,
+      "sha256": "b6e76c5f0b83977e4c86528093d86f64cfb352d5c1be9a4ba527ee25dcea3520",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/gardenRecords.js",
       "bytes": 4409,
       "sha256": "b31556ab432f6b297bab118af14ebb085527d0ba44a1178d699e6a37b2ff1349",
@@ -3360,6 +3378,12 @@
       "bytes": 1880,
       "sha256": "2a3d0330f72470d32358fdec792001fae9d52bd479b8dce7546d9cd4bb623ce0",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/firstPlan.test.mjs",
+      "bytes": 1402,
+      "sha256": "502f5a62a6ef8c613f25ee7d64ca69f5a4a34bc29c4cb9cd8a5b18ebfa612423",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/flowerCatalog.test.js",
