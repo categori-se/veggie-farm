@@ -392,6 +392,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/light-guidance.md",
+      "bytes": 1646,
+      "sha256": "1d93b9c95c982ecf1c8142f1f50ab2f9f699b6afb9e0147e35bec48f4e8e8cca",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/media.md",
       "bytes": 1730,
       "sha256": "26ae2975b72bee044e69d230dbf691c8292d80ea8d6397111f643fc3b7e634c7",
@@ -1245,8 +1251,8 @@
     },
     {
       "path": "src/components/decision-matrix.js",
-      "bytes": 4503,
-      "sha256": "8fe69f2bf3d538e993eea466b933f4e34d55f27c40cef9944fa0632941251ccb",
+      "bytes": 4693,
+      "sha256": "076b35e551ace0e1d74f01edf165b65827f1b497b7a305bcff0c49fc0bed9ff5",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3219,9 +3225,15 @@
     },
     {
       "path": "src/lib/recommendations/gardenToday.js",
-      "bytes": 17606,
-      "sha256": "a291ebfc1f5c876cca1be134f1bcacd0f199d503e9a89ab338bcbe1c13c59712",
+      "bytes": 18178,
+      "sha256": "3519edb464d9cb0ac250c8e66bbdb90b10b37deeb41dbb82ea920447100bd32c",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/lib/recommendations/lightGuidance.js",
+      "bytes": 920,
+      "sha256": "a25d2a434f0d33ae150ae30cfec911ff52de4f6973423cb385c5f7ee4ca39881",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/lib/recommendations/plantingWindow.js",
@@ -3567,8 +3579,8 @@
     },
     {
       "path": "src/tools/today.md",
-      "bytes": 15336,
-      "sha256": "80ea1ea247605a44f032dc0b89db245767f8a9fc2eef99e4c18ac8339cd7a168",
+      "bytes": 15395,
+      "sha256": "46084cb1f4899f6b38148459a3dd98eaa30e4de8ffe528c2840c713fd9c15c5a",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3826,7 +3838,7 @@
     {
       "path": "tests/gardenToday.test.js",
       "bytes": 5944,
-      "sha256": "58c59b8a94fdf00e311972b7f0e7a9e20607716c742c20e9f8f98375851b1768",
+      "sha256": "d7ff2c2087ba6b69837252b5bf806771f6ad452cd97f78ac916522839464053c",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3894,6 +3906,12 @@
       "bytes": 5985,
       "sha256": "24ae6bf7c71ce5f174f3ba4a8d5fa4116c753905704e55d1e56096ca606ac180",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/lightGuidance.test.mjs",
+      "bytes": 1922,
+      "sha256": "a2a948adefbbdaa66f5c1362a17eca76933eb85d3b1dcc08c186181cb86a2083",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/localGardenStore.test.js",

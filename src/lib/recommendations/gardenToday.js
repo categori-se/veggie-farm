@@ -1,7 +1,8 @@
+import {lightGuidance} from './lightGuidance.js';
 import {evidenceByCrop, summarizeCropEvidence} from "../evidence/horticulturalEvidence.js";
 
 const DAY_MS = 24 * 60 * 60 * 1000;
-const RULE_VERSION = "garden-today/1.2.0";
+const RULE_VERSION = "garden-today/1.3.0";
 
 function toDate(value) {
   const date = value instanceof Date ? new Date(value) : new Date(`${value}T12:00:00`);
@@ -54,6 +55,7 @@ function compareInputs(crop, rule, context, fields) {
   const soilLabel=soil==null?'Not entered':rule.soilTempMinF!=null&&soil<rule.soilTempMinF?'Below starting estimate':rule.heatRiskAboveF!=null&&soil>rule.heatRiskAboveF&&!isWarmSeason(crop)?'Above heat caution':rule.soilTempMinF==null?'No threshold':'Within modeled range';
   const forecastChanged=fields.reasonCodes.some(code=>code.startsWith('NWS_'));
   return {
+    light:lightGuidance(context.sunHours),
     timing:{label:isGarlic(crop)?'Fall garlic rule':after<0?`${-after} d before spring frost`:`${after} d after spring frost`,detail:crop.frostTolerance},
     soil:{label:soilLabel,detail:`${soil==null?'Unknown':`${soil}°F entered`}${rule.soilTempMinF==null?'':` · starts near ${rule.soilTempMinF}°F`}${rule.heatRiskAboveF==null?'':` · heat caution ${rule.heatRiskAboveF}°F`}`},
     runway:{label:isGarlic(crop)?'Overwintering crop':runway<0?'Past assumed frost':maturity.min==null?'Maturity unknown':runway<maturity.min+buffer?'Short runway':'Runway fits estimate',detail:`${runway>=0?`${runway} d to fall frost`:`${-runway} d past fall frost`}${isGarlic(crop)||maturity.min==null?'':` · ${maturity.min} d earliest + ${buffer} d buffer`}`},
@@ -92,7 +94,11 @@ function result(crop, rule, context, fields) {
   const withSoil = context.soilTemperatureF == null && rule.soilTempMinF != null && fields.status === "recommended"
     ? {...fields,status:"caution",score:Math.min(fields.score,64),reasonCodes:["SOIL_NOT_RECORDED",...fields.reasonCodes],explanation:["Timing may fit, but no soil temperature is entered. Measure the seedbed before using this result."],risk:"Soil temperature has not been checked."}
     : fields;
-  const adjustedFields = applyForecastRisk(crop, context, withSoil);
+  const light=lightGuidance(context.sunHours);
+  const withLight=Object.hasOwn(context,'sunHours')&&light.state!=='match'
+    ? {...withSoil,status:withSoil.status==='recommended'?'caution':withSoil.status,score:Math.min(withSoil.score,light.state==='unknown'?64:60),reasonCodes:[...withSoil.reasonCodes,light.state==='unknown'?'LIGHT_NOT_RECORDED':'LIGHT_BELOW_GENERAL_GUIDANCE'],explanation:[...withSoil.explanation,light.detail]}
+    : withSoil;
+  const adjustedFields = applyForecastRisk(crop, context, withLight);
   const maturity = parseMaturity(crop.daysToMaturity);
   const harvestWindow = maturity.min == null ? null : {
     earliest: addDays(context.date, maturity.min),
@@ -116,6 +122,7 @@ function result(crop, rule, context, fields) {
       lastFrostDate: context.lastFrostDate,
       firstFrostDate: context.firstFrostDate,
       soilTemperatureF: context.soilTemperatureF,
+      sunHours: light.hours,
       riskPreference: context.riskPreference,
       forecast: context.forecast ? {
         provider: context.forecast.provider,

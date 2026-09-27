@@ -94,7 +94,7 @@ html`<div class="today-input-note">
   <strong>${appliedConditions.source === "selected-garden" ? `Selected garden: ${appliedConditions.name}` : appliedConditions.source === "notebook" ? `Notebook: ${appliedConditions.name}` : "Starter assumptions:"}</strong>
   ${appliedConditions.source === "starter" ? "May 10 and October 15 are editable examples, not a location lookup." : "Frost dates come from the saved profile. Missing dates remain blank; enter both before comparing crops."}
   ${conditionBed ? `Bed: ${appliedConditions.bedName || "unavailable"}. Soil readings come only from this bed; frost dates remain garden-wide.` : "Soil readings use the garden profile."}
-  ${appliedConditions.sunHours === null ? "Direct sun: not recorded." : `Recorded direct sun: ${appliedConditions.sunHours} hours. Light is context only; the timing comparison below does not yet assess light suitability.`}
+  ${appliedConditions.sunHours === null ? "Direct sun: not recorded." : `Recorded direct sun: ${appliedConditions.sunHours} hours. The comparison uses a general vegetable-site light benchmark; open Why? for its limits.`}
   Saved soil temperature is enabled only when measured today and used for that same date. Older, undated or future readings stay excluded.
   <a href="/tools/my-garden">Review garden conditions →</a>
 </div>`
@@ -174,7 +174,7 @@ liveForecast ? html`<section class="live-forecast" data-state="ready">
 ```
 
 ```js
-const context = {date, lastFrostDate, firstFrostDate, soilTemperatureF, riskPreference, forecast: liveForecast};
+const context = {date, lastFrostDate, firstFrostDate, soilTemperatureF, sunHours: appliedConditions.sunHours, riskPreference, forecast: liveForecast};
 const inputDatesValid = validGuidanceDates(date, lastFrostDate, firstFrostDate);
 const results = inputDatesValid ? recommendGardenToday(crops, rules, context, evidenceDataset) : [];
 const summary = inputDatesValid ? summarizeGardenContext(context) : {frostRunway: null};
@@ -221,7 +221,7 @@ html`<section class="today-context" aria-label="Garden context summary">
   <article>
     <span>Plant now</span>
     <strong>${inputDatesValid ? `${ready.length} crops` : "Not evaluated"}</strong>
-    <p>fit your entered timing and temperature</p>
+    <p>fit the checked timing, temperature and general light guidance</p>
   </article>
   <article>
     <span>Watch closely</span>
