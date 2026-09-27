@@ -21,7 +21,7 @@ export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=loca
  const views=el('nav');views.setAttribute('aria-label','Garden workspace');views.style.cssText='display:flex;flex-wrap:wrap;gap:6px;margin:12px 0';const viewButtons=[];for(const [id,label] of [['overview','My Garden'],['journal','Journal'],['learn','Learn']]){const button=action(label,()=>{activeView=id;updateView();});viewButtons.push([id,button]);views.append(button);}dialog.insertBefore(views,intro);
  const plants=()=>new Map(getPlants().map(p=>[p.id,p]));
  function updateView(){
-  for(const [id,button] of viewButtons)button.setAttribute('aria-pressed',String(activeView===id));
+  for(const [id,button] of viewButtons){button.setAttribute('aria-pressed',String(activeView===id));button.style.boxShadow=activeView===id?'inset 0 0 0 2px currentColor':'';}
   for(const node of [attention,plans,contextDetails])node.hidden=activeView!=='overview';
   for(const node of [log,history])node.hidden=activeView==='learn';
   for(const node of [learning,soilHistory,reflection])node.hidden=activeView==='journal';

@@ -1275,8 +1275,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 14298,
-      "sha256": "8f6a28be790fa42728623a89cbbbba5a7ec686cf7572fc19c4bd5a85b573306c",
+      "bytes": 14373,
+      "sha256": "4b8764ea829e4a200909a90498de0a82f3a28bd9711e8ffe53be0f0c500440e4",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
