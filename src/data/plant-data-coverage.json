@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "records": 440,
+  "fields": {
+    "scientificName": {
+      "present": 405,
+      "unknown": 35
+    },
+    "family": {
+      "present": 100,
+      "unknown": 340
+    },
+    "sun": {
+      "present": 381,
+      "unknown": 59
+    },
+    "structuredSun": {
+      "present": 381,
+      "unknown": 59
+    },
+    "plantSpacing": {
+      "present": 100,
+      "unknown": 340
+    },
+    "germination": {
+      "present": 0,
+      "unknown": 440
+    },
+    "maturity": {
+      "present": 0,
+      "unknown": 440
+    },
+    "morphology": {
+      "present": 367,
+      "unknown": 73
+    },
+    "fieldEvidence": {
+      "present": 440,
+      "unknown": 0
+    }
+  },
+  "datasets": {
+    "openfarm-recovered-340": {
+      "records": 340,
+      "fields": {
+        "scientificName": {
+          "present": 305,
+          "unknown": 35
+        },
+        "family": {
+          "present": 0,
+          "unknown": 340
+        },
+        "sun": {
+          "present": 281,
+          "unknown": 59
+        },
+        "structuredSun": {
+          "present": 281,
+          "unknown": 59
+        },
+        "plantSpacing": {
+          "present": 0,
+          "unknown": 340
+        },
+        "germination": {
+          "present": 0,
+          "unknown": 340
+        },
+        "maturity": {
+          "present": 0,
+          "unknown": 340
+        },
+        "morphology": {
+          "present": 267,
+          "unknown": 73
+        },
+        "fieldEvidence": {
+          "present": 340,
+          "unknown": 0
+        }
+      }
+    },
+    "veggie-farm-common-100-unified": {
+      "records": 100,
+      "fields": {
+        "scientificName": {
+          "present": 100,
+          "unknown": 0
+        },
+        "family": {
+          "present": 100,
+          "unknown": 0
+        },
+        "sun": {
+          "present": 100,
+          "unknown": 0
+        },
+        "structuredSun": {
+          "present": 100,
+          "unknown": 0
+        },
+        "plantSpacing": {
+          "present": 100,
+          "unknown": 0
+        },
+        "germination": {
+          "present": 0,
+          "unknown": 100
+        },
+        "maturity": {
+          "present": 0,
+          "unknown": 100
+        },
+        "morphology": {
+          "present": 100,
+          "unknown": 0
+        },
+        "fieldEvidence": {
+          "present": 100,
+          "unknown": 0
+        }
+      }
+    }
+  },
+  "note": "Coverage measures available fields, not accuracy or independent verification. Separate source records are not unique species. Timing text without a numeric basis remains unknown."
+}

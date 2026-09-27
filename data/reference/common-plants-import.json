@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "veggie-farm-common-100-unified",
+  "inputs": [
+    {
+      "file": "veggie-farm-common-100-validation.json",
+      "bytes": 251,
+      "sha256": "6c7e0482b6f960206ee9f7ac585b251a606cfa755cfdc698008cc9acda362d97"
+    },
+    {
+      "file": "veggie-farm-existing-54-enriched.json",
+      "bytes": 162805,
+      "sha256": "4cc3e8ff9c3b2caa5ce7cfa612b0d06751c05a8cbd112de5e4a05287f0b020ab"
+    },
+    {
+      "file": "veggie-farm-common-100-unified.json",
+      "bytes": 327189,
+      "sha256": "e62d49d6cc5dc511fafacd3398cf80fc3adf41657a0865047df6f201d199ab07"
+    },
+    {
+      "file": "veggie-farm-plant-additions-46-v2.json",
+      "bytes": 164377,
+      "sha256": "4ac26dbd42e5f17b9882639ee20f0bdf22081b2b56ca54cad758f2d2bb26a0d4"
+    },
+    {
+      "file": "plant-visual-mappings-100.json",
+      "bytes": 72792,
+      "sha256": "51644e4755de09bd8b1e7c680f869f04fabb4f5e04e58b3447f3a96ec7d547eb"
+    },
+    {
+      "file": "plant-visual-archetypes.json",
+      "bytes": 20091,
+      "sha256": "6de7702ac7c2ca0d4fdbe91e8957c0d99fa1919328d591bec6e7b538de722997"
+    },
+    {
+      "file": "veggie-farm-visualization-bundle-100.json",
+      "bytes": 239218,
+      "sha256": "c0474db794a90b180a5dd6040d8c87b5bf653893a3a589c6ae4d7dabdc46aaa9"
+    },
+    {
+      "file": "veggie-farm-plant-additions-46.json",
+      "bytes": 144101,
+      "sha256": "ec32443f293776487bf1bae802e09260bae8af355279b57fa4675d3941e8813b"
+    }
+  ],
+  "checks": {
+    "uniquePlants": 100,
+    "existingEnriched": 54,
+    "additions": 46,
+    "visualMappings": 100,
+    "visualArchetypes": 22,
+    "sourceRecords": 67,
+    "bundleMatchesStandalone": true,
+    "unifiedMatchesEnrichedAndV2ExceptAddedRanking": true
+  },
+  "resolution": "Unified catalog is canonical; standalone enrichment, v2 additions and visualization bundle cross-checked. Earlier additions and supplied validation retained by hash, not concatenated. Instruction-like integration metadata was not executed.",
+  "reviewStatus": "structurally-validated; horticultural assertions not independently verified",
+  "visualVariantConflicts": [
+    {
+      "plantId": "plant:community:arugula",
+      "mappingVariant": "loose-leafy-green",
+      "unifiedVariant": "loose-peppery-leaf",
+      "resolution": "Use unified plant-specific variant; preserve supplied mapping label."
+    },
+    {
+      "plantId": "plant:community:beans",
+      "mappingVariant": "split-bush-or-pole; choose habit at cultivar/placement level",
+      "unifiedVariant": "split-bush-or-pole",
+      "resolution": "Use unified plant-specific variant; preserve supplied mapping label."
+    }
+  ],
+  "fieldCorrections": [
+    {
+      "plantId": "plant:community:tomatoes",
+      "field": "spacingInches.max",
+      "supplied": 36,
+      "integrated": 24,
+      "basis": "The supplied text explicitly separates 18\u201324 in plants from 30\u201336 in rows. Original range retained in suppliedSpacingInches."
+    }
+  ]
+}

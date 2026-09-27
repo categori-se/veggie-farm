@@ -97,3 +97,7 @@ For guided setup after creating your own static stack, run `npm run setup:deploy
 See [reviewed 3D source candidates and structural-plant priorities](docs/architecture/3d-model-sources.md). No third-party models were added by this review.
 
 [Garden GIS layers and shared 2D/3D records](docs/architecture/garden-layer-model.md) · [Studio navigation and walking](docs/architecture/studio-navigation.md).
+
+## Reusable plant data
+
+The public collection includes 100 contributed planning profiles and 340 recovered OpenFarm records with CC0 attribution, archived sources and field evidence. These are 440 source records, not unique species. See [data structure and coverage](docs/architecture/reusable-plant-data.md) and [data credits and terms](docs/licenses/data/README.md). Normal builds regenerate the collection from pinned local inputs.

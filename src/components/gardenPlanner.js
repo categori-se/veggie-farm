@@ -1,3 +1,5 @@
+import {COMMON_PLANTS} from "../data/commonPlantCatalog.js";
+import {mergeStudioReferences} from "../lib/plants/commonInventory.js";
 import {saveBedConditions} from '../lib/garden/bedConditions.js';
 import {saveSeasonReflection} from '../lib/garden/seasonReflection.js';
 import {seasonPreviewDate} from "../lib/garden/nextSeason.js";
@@ -602,7 +604,7 @@ const CORE_PLANTS = [
   }
 ];
 
-const DEFAULT_PLANTS = [...CORE_PLANTS, ...FLOWER_CATALOG];
+const DEFAULT_PLANTS = mergeStudioReferences([...CORE_PLANTS, ...FLOWER_CATALOG], COMMON_PLANTS);
 
 function proposedBedPlantings(beds, existing = [], plants = DEFAULT_PLANTS) {
   const occupied = new Set(existing.map(p => p.bedId));
@@ -7321,8 +7323,10 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         <span class="plant-dot" style="--plant-color:${plant.leafColor || plant.color}"></span>
         <span><strong>${escapeHtml(plant.name)}</strong>${plant.scientificName ? `<em>${escapeHtml(plant.scientificName)}</em>` : ""}</span>
       </div>
+      ${plant.dimensionBasis ? `<p>${escapeHtml(plant.dimensionBasis)}</p>` : ""}
+      ${plant.catalogPlantId ? `<a href="/plants/plant?id=${encodeURIComponent(plant.catalogPlantId)}" target="_blank" rel="noopener noreferrer">Plant report and sources ↗</a>` : ""}
       <dl>
-        <div><dt>Spacing</dt><dd>${plant.spacing} in roots | ${plant.matureDiameter} in canopy</dd></div>
+        <div><dt>Spacing</dt><dd>${plant.spacing} in plant spacing | ${plant.matureDiameter} in canopy</dd></div>
         <div><dt>Height</dt><dd>${plant.height} in mature</dd></div>
         <div><dt>Sun</dt><dd>${escapeHtml(plant.sun)}</dd></div>
         <div><dt>Soil</dt><dd>${escapeHtml(plant.soil)}</dd></div>

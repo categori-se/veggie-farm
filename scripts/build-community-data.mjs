@@ -1,7 +1,8 @@
-// Intake rationale: docs/building/data-intake.md. This public build transforms
-// bundled reviewed records; it is not an acquisition or harvesting pipeline.
+import {readOpenPlants} from './lib/open-plant-input.mjs';
+import {openPlantExplorer} from '../src/lib/plants/openPlantData.js';
 // Build the independent community catalog without provider archives or credentials.
 import fs from 'node:fs/promises';
+import {validateCommonDataset, mergeCommonRecords, referenceExplorer, referencePlant} from '../src/lib/plants/commonInventory.js';
 import {createHash} from 'node:crypto';
 import {FLOWER_CATALOG} from '../src/data/flowerCatalog.js';
 import {persistenceCopy} from '../src/lib/account/persistenceModel.js';
@@ -14,7 +15,7 @@ await fs.copyFile('data/demo/community-garden.json','src/data/community-garden.j
 // Keep source-level citations, not the harvested cultivar-by-cultivar inventory.
 await write('src/data/source-citations.json',(await read('src/data/source-citations.json')).filter(row=>row.type==='source'));
 const groups = await Promise.all(['vegetables','fruits','herbs'].map(async (file,i)=>(await read(`src/data/${file}.json`)).map(p=>({...p,category:['vegetable','fruit','herb'][i]}))));
-const plants=groups.flat().map(p=>({
+let plants=groups.flat().map(p=>({
  id:`plant:community:${p.slug}`,name:p.name,common:p.name,cultivar:null,scientific:null,
  category:p.category,family:p.family??null,description:null,careNotes:[],additionalFacts:[],
  source:`https://veggie.farm${p.path}`,sourceKind:'project-guide',imageIds:[],
@@ -23,11 +24,16 @@ const plants=groups.flat().map(p=>({
  form:p.type==='Tree fruit'?'tree':null,reviewStatus:'project-guide; cultivar details unknown'
 }));
 for(const f of FLOWER_CATALOG) plants.push({id:`plant:community:${f.id}`,name:f.name,common:f.name,scientific:f.scientificName??null,category:'flower-or-ornamental',source:'https://massnrc.org/ppd/',sourceKind:'botanical-reference',imageIds:[],light:null,spacing:null,spacingMin:null,spacingMax:null,maturity:null,maturityMax:null,frost:null,directSow:null,transplant:null,careNotes:[],additionalFacts:[]});
+const commonDataset=await read('data/reference/common-plants.json');
+validateCommonDataset(commonDataset);
+plants=mergeCommonRecords(plants,commonDataset.plants.map(p=>referenceExplorer(p,commonDataset.sources)));
+const {plants:openPlants}=await readOpenPlants();
+plants.push(...openPlants.map(openPlantExplorer));
 plants.sort((a,b)=>a.name.localeCompare(b.name));
 if(new Set(plants.map(p=>p.id)).size!==plants.length)throw Error('Duplicate community plant id');
 await write('src/data/plant-explorer.json',plants);
-await write('src/data/plants.json',plants.map(p=>({id:p.id,name:p.name,commonName:p.common,scientificName:p.scientific,primaryUse:p.category,family:p.family,sourceUrl:p.source,sourceIds:['source:community-guides'],reviewStatus:'community-reference',confidence:null,sun:null,spacingInches:{min:null,max:null,text:p.spacing??null},germinationDays:{min:null,max:null,text:null},daysToMaturity:{min:null,max:null,text:p.maturity??null}})));
-await write('src/data/spacing.json',plants.map(p=>({plantId:p.id,name:p.name,plantSpacingText:p.spacing??'Not listed',plantSpacingInchesMin:null,plantSpacingInchesMax:null})));
+await write('src/data/plants.json',mergeCommonRecords(plants.filter(p=>!p.id.startsWith('plant:openfarm:')).map(p=>({id:p.id,name:p.name,commonName:p.common,scientificName:p.scientific,primaryUse:p.category,family:p.family,sourceUrl:p.source,sourceIds:['source:community-guides'],reviewStatus:p.referenceDatasetId?'user-supplied-reference; horticultural verification pending':'community-reference',confidence:null,sun:null,spacingInches:{min:null,max:null,text:p.spacing??null},germinationDays:{min:null,max:null,text:null},daysToMaturity:{min:null,max:null,text:p.maturity??null}})),commonDataset.plants.map(p=>referencePlant(p,commonDataset.sources))));
+await write('src/data/spacing.json',plants.map(p=>({plantId:p.id,name:p.name,plantSpacingText:p.spacing??'Not listed',plantSpacingInchesMin:p.spacingMin??null,plantSpacingInchesMax:p.spacingMax??null})));
 // Missing horticultural facts stay unknown rather than inherited from a vendor cultivar.
 for(const name of ['germination','planting-rules','soil-preferences'])await write(`src/data/${name}.json`,[]);
 await write('src/data/nursery-catalog.json',[]);
@@ -45,3 +51,7 @@ for(const file of (await walk('src/content')).sort()){
 }
 await write('src/data/gardening-library.json',guides);
 console.log(`Community data: ${plants.length} plants, ${guides.length} guides; no private catalog input.`);
+
+await import('./build-common-plants.mjs');
+
+await import('./build-open-plants.mjs');

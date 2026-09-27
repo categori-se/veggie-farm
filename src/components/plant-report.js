@@ -1,3 +1,4 @@
+import {plantDataNotice,plantDataEvidence} from './plant-data-evidence.js';
 import {catalogIdentity} from '../lib/plants/catalogIdentity.js';
 import {catalogProductLinks} from './catalog-product-links.js';
 import {appendPlantTypeGallery} from './plant-type-gallery.js';
@@ -11,7 +12,7 @@ export async function plantReport(id){
  const file=plantReports.get(catalogIdentity(id));
  if(!file){root.append(el('h1','Choose a plant'),el('p','Open a plant from Find Plants to see its photographs and growing report.'));return root;}
  const p=await file.json();document.title=`${p.name} · veggie.farm`;
- root.append(el('h1',p.name));if(p.scientific)root.append(el('p',p.scientific,'library-botanical'));
+ root.append(el('h1',p.name));if(plantDataNotice(p))root.append(el('p',plantDataNotice(p)));if(p.scientific)root.append(el('p',p.scientific,'library-botanical'));
  const header=el('div',null,'plant-report-header'),gallery=el('section',null,'plant-report-gallery');gallery.setAttribute('aria-label','Plant photographs');
  const imageIds=[...new Set(p.imageIds||[p.id])].filter(key=>catalogImages.has(key)).slice(0,5);
  if(imageIds.length){
@@ -27,6 +28,7 @@ export async function plantReport(id){
  if(p.additionalFacts?.length||p.sourceAttributes?.length){const section=el('section');section.append(el('h2','Growing details'));const list=el('ul');for(const fact of p.additionalFacts?.length?p.additionalFacts:p.sourceAttributes)list.append(el('li',fact.text||`${fact.label}: ${fact.value}`));section.append(list);root.append(section);}
  if(p.careNotes?.length){const section=el('details');section.append(el('summary','Growing and care notes'));for(const note of [...new Set(p.careNotes)])section.append(el('p',note));root.append(section);}
  if(p.sourceDescription?.length){const section=el('details');section.append(el('summary','More about this plant'));for(const paragraph of [...new Set(p.sourceDescription)])section.append(el('p',paragraph));root.append(section);}
+ if(p.citations?.length)root.append(plantDataEvidence(p));
  const evidence=el('details');evidence.append(el('summary','Record details'));const source=el('a','View reference');source.href=p.source;evidence.append(source,el('p',`Catalog facts collected ${p.collectedAt?.slice(0,10)||'date unavailable'}${p.detailCollectedAt&&p.detailCollectedAt!==p.collectedAt?`; additional details ${p.detailCollectedAt.slice(0,10)}`:''}.`));root.append(evidence);
  return root;
 }
