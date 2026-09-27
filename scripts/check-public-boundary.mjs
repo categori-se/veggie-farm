@@ -17,7 +17,7 @@ function scan(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){
  if(e.isDirectory()){scan(file);continue;}
  if(/\.(?:png|jpe?g|webp|gif|avif|svg|ico|glb|gltf|obj|fbx|woff2?|ttf|otf|mp[34]|webm|wav|pdf|zip|kmz)$/i.test(rel))failures.push(`${rel}: media/archive forbidden in source`);
  if(/(?:^|\/)(?:\.env(?:\..*)?|auth-config\.json|account-config\.json|media-config\.json)$/.test(rel)&&e.name!=='.env.example')failures.push(`${rel}: local configuration`);
- if(rel.startsWith('scripts/')&&/(?:^|\/)(?:harvest[^/]*|[^/]*rareseeds[^/]*)\.(?:py|mjs|js)$/.test(rel))failures.push(`${rel}: partner extraction tool`);
+ if(rel.startsWith('scripts/')&&/(?:^|\/)(?:harvest[^/]*|extract-catalog[^/]*)\.(?:py|mjs|js)$/.test(rel))failures.push(`${rel}: partner extraction tool`);
  const b=fs.readFileSync(file);files++;
  if(b.includes(0))failures.push(`${rel}: binary content is outside the source profile`);
  if(b.length>20_000_000)failures.push(`${rel}: file exceeds reviewed source size limit`);
