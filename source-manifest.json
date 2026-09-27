@@ -440,6 +440,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/saved-garden-conditions.md",
+      "bytes": 1849,
+      "sha256": "1e85d895f5ea10252a941eb151712d31c971ae0b8fecff306c2a02751932bc28",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/season-learning.md",
       "bytes": 2003,
       "sha256": "d1f2ce238af8fcebf92bf96424fcefb16c7e01d157b858869e7b6c84cc48937c",
@@ -729,8 +735,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 5940,
-      "sha256": "c817c70390a2794824af8abb903d8469854c71838a97f2df7c0d97dff8149795",
+      "bytes": 6127,
+      "sha256": "642314ebb08301f269fe96cc4392d91ca1f8bd8b3e5cac0821d89b8b3d283090",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1119,8 +1125,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 8317,
-      "sha256": "e1d29eb56422dd8a6090959d80bc630d8368a820b5ddf54b5c6b36124d475838",
+      "bytes": 8438,
+      "sha256": "7354f8c13bb9bb2f33560468e8eb91e91e8f0087347274a9ed2bb00beb018cab",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2960,6 +2966,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "src/lib/garden/savedGardenConditions.js",
+      "bytes": 1265,
+      "sha256": "4d209558c7ec02d89590053dac209e92c8d78809bdaa64524024b06beb66868b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/seasonContext.js",
       "bytes": 1538,
       "sha256": "1d91333a3e14b4cf8e1a60c98f2f7fbc18f143a19965e0e30c91c838ce6a4d3d",
@@ -3423,8 +3435,8 @@
     },
     {
       "path": "src/tools/today.md",
-      "bytes": 13430,
-      "sha256": "dff68ad8bdaa58b3e12be0967a6a46d2d4ca5c58eca808f491dabd4f2ba457fb",
+      "bytes": 14627,
+      "sha256": "e21c68b48e3bedcc784335a8e1456d95e5eab0ddc0d342d113b8c6cd0b877c40",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3942,6 +3954,12 @@
       "bytes": 1136,
       "sha256": "23b5b97cd0802b0f54af64bb48d3a1bf2066464393f3cefc9058490f806b2853",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/savedGardenConditions.test.mjs",
+      "bytes": 2180,
+      "sha256": "b969838824fff25ae564f1d3b4516fe55807cabdcbe0180535eb48f75d2f553c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/seasonContext.test.mjs",
