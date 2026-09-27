@@ -1,3 +1,4 @@
+import {plannerNextSeason} from "./planner-next-season.js";
 import {normalizeStudioMode, studioModeTransition} from "../lib/garden/studioMode.js";
 import {successionPlanting,plannedOccupanciesOverlap} from "../lib/garden/successionPlanting.js";
 import {plannerSuccession} from "./planner-succession.js";
@@ -1370,6 +1371,15 @@ export function gardenPlanner(options = {}) {
   root.querySelectorAll('[data-action="garden-home"]').forEach(button=>button.addEventListener('click',()=>{
     const dialog=gardenHome({getWorkspace:()=>({id:state.activeParcelId,name:activeParcelWorkspace(state)?.name,property:state.property,beds:state.beds,placements:state.placements}),getPlants:()=>state.plants,selectedPlantingId:state.selectedPlacementId,
       onLog:(id,input)=>{const index=state.placements.findIndex(p=>p.id===id);if(index<0)throw Error('This planting is no longer in the garden.');const previous=state.placements[index];state.placements[index]=recordPlantingObservation(previous,input);if(!saveState(state)){state.placements[index]=previous;syncActiveParcelWorkspace(state);throw Error('Could not save. Keep this form open and copy your observation.');}renderAll();},
+      onNextSeason:fromYear=>{
+        const nextDialog=plannerNextSeason({getWorkspace:()=>({property:state.property,beds:state.beds,placements:state.placements}),plants:state.plants,fromYear,onSave:(next,year)=>{
+          const before=structuredCloneCompat(state);
+          state.property=next.property;state.placements=next.placements;state.previewDate=next.placements.filter(p=>p.planYear===year).map(p=>p.planted).sort()[0]||`${year}-01-01`;
+          state.explicitEditSession=null;state.selectedPlacementId=null;
+          if(!saveState(state)){Object.assign(state,before);syncActiveParcelWorkspace(state);throw Error('Could not save next year. Your previous garden is unchanged; keep this form open and retry.');}
+          renderAll();
+        }});root.append(nextDialog);nextDialog.showModal();
+      },
       onPlan:id=>{openPlantingWorkspace(state,id);renderAll();},onBackup:()=>refs.actions.export.click()});root.append(dialog);dialog.showModal();
   }));
   root.querySelectorAll('[data-action="bed-seasons"]').forEach(button=>button.addEventListener('click',()=>openBedSeasons(root,state,renderAll)));

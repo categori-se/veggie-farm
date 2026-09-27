@@ -15,8 +15,8 @@ The full goal remains: Understand my garden → Decide what to grow → Plan whe
 | 9. Contextual Quick Log | In progress: planting-linked Studio logging and garden history. Main-site, mobile and selected-plant one-action entry paths still need completion. |
 | 10. Photo observations | Not implemented; private bounded photo storage, backup and account synchronization required. |
 | 11. Structured harvest quantity/unit/quality | Implemented and deployed for planting observations, with separate weight/count/unmeasured totals and local/backup checks. Account payload/session tests pass with mocked services; real authenticated cross-device acceptance remains outstanding. |
-| 12. First-class years and start next year from last year | Snapshot comparison exists; selective annual/perennial copying and season identity incomplete. |
-| 13. Persistent infrastructure versus seasonal plantings | Separate object arrays exist; user-facing year cloning and persistence rules incomplete. |
+| 12. First-class years and start next year from last year | Studio now reviews next-year choices, keeps continuing plant identities and creates selected annual copies with new identities and year records; see [next-season contract](../architecture/next-season.md). Dedicated season switching and authenticated cross-device acceptance remain incomplete. |
+| 13. Persistent infrastructure versus seasonal plantings | Next-year planning preserves beds/site structure/conditions in the same garden and distinguishes continuing plants from new annual copies. Broader lifecycle presentation remains incomplete. |
 | 14. Story-oriented Garden History | In progress in garden home; unified Notebook/action/soil/photo history still incomplete. |
 | 15. Plan → Actual | Independent planting-linked event dates and planned dates implemented locally. Expected maturity, harvest windows, complete comparison and shared Notebook identity remain incomplete. |
 | 16. Progressive evidence | Existing disclosure patterns; audit all decision paths before claiming completion. |

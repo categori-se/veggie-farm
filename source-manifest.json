@@ -374,6 +374,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/next-season.md",
+      "bytes": 2385,
+      "sha256": "d38991875c04c779bd44118db6c4723547cdd40b02e3edec1ac7498ae0a1a979",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/notebook-garden-associations.md",
       "bytes": 2149,
       "sha256": "cd6100a4f7a03bd62cef87db44310c593e6abc43732dc7faa7af8b6dde427142",
@@ -711,8 +717,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 5291,
-      "sha256": "beacf2d5d44161014ac215dade84893b43e7a5d4618c158285c0f018f8dd922c",
+      "bytes": 5590,
+      "sha256": "f37d7a90bb8b307fb1c57dd8faebc7cbd06ff3cbf673fc123be2a2fa8a698473",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1215,8 +1221,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 11086,
-      "sha256": "859981ab63c6906bca4542a8cb4d6e7d7a83cfbfc78eaa399d79028e55e19fd0",
+      "bytes": 11264,
+      "sha256": "3886b8bfd035e9dcdce9dffc711342f94aa49923527e24fe75bb26b037dfb06b",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1233,8 +1239,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 568418,
-      "sha256": "a907f80e8c3f7f514e335428de437edb2a70c545839bfeee7adba0f9ebac1abf",
+      "bytes": 569294,
+      "sha256": "6665b4680f04c4adb021444193ff1eb0ddcc67b1898863fde5615052e687f9b3",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1284,6 +1290,12 @@
       "bytes": 5625,
       "sha256": "9a0c7e361dbd588cc88d18a67118aa6ee43976bd9a96ab692a392dc5dd7328c2",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/planner-next-season.js",
+      "bytes": 4163,
+      "sha256": "9bfb769f65870627cd30222906a6a637ad200bb7266f667e54751574331210a1",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/planner-planting-schedule.js",
@@ -2846,6 +2858,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/nextSeason.js",
+      "bytes": 3678,
+      "sha256": "a2548d7174c58d2d745e0f51751fcd21d7c9cd0df464f6e7eeb4f901435334f9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/notebookEvents.js",
       "bytes": 3514,
       "sha256": "5e8a4549aa7c5a4568f3314e4105dd17cccdb74be55604c81df97a80749696de",
@@ -3684,6 +3702,12 @@
       "bytes": 1555,
       "sha256": "89209e8ec61201dee3d507f657ee98195043562a6f7327acf2359929abb08c0c",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/nextSeason.test.mjs",
+      "bytes": 3092,
+      "sha256": "24822052f1752b3554d1ea101222620d8543eda3a179ed0d165d1b3ef8374507",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/notebookEvents.test.mjs",
