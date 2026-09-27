@@ -1,3 +1,4 @@
+import {saveBedConditions} from '../lib/garden/bedConditions.js';
 import {saveSeasonReflection} from '../lib/garden/seasonReflection.js';
 import {seasonPreviewDate} from "../lib/garden/nextSeason.js";
 import {plannerNextSeason} from "./planner-next-season.js";
@@ -1374,6 +1375,7 @@ export function gardenPlanner(options = {}) {
   root.querySelectorAll('[data-action="garden-home"]').forEach(button=>button.addEventListener('click',()=>{
     const dialog=gardenHome({getWorkspace:()=>({id:state.activeParcelId,name:activeParcelWorkspace(state)?.name,property:state.property,beds:state.beds,placements:state.placements}),getPlants:()=>state.plants,selectedPlantingId:state.selectedPlacementId,initialYear:state.previewDate?Number(state.previewDate.slice(0,4)):undefined,onOpenSeason:openSeason,
       onLog:(id,input)=>{const index=state.placements.findIndex(p=>p.id===id);if(index<0)throw Error('This planting is no longer in the garden.');const previous=state.placements[index];state.placements[index]=recordPlantingObservation(previous,input);if(!saveState(state)){state.placements[index]=previous;syncActiveParcelWorkspace(state);throw Error('Could not save. Keep this form open and copy your observation.');}renderAll();},
+      onBedConditions:(id,input)=>{const before=state.property;state.property=saveBedConditions({property:state.property,beds:state.beds},id,input).property;if(!saveState(state)){state.property=before;syncActiveParcelWorkspace(state);throw Error('Could not save bed conditions. Your entries remain here.');}renderAll();},
       onReflection:(year,input)=>{const before=state.property;state.property=saveSeasonReflection(before,year,input);if(!saveState(state)){state.property=before;syncActiveParcelWorkspace(state);throw Error('Could not save your reflection. Keep this form open and retry.');}renderAll();},
       onNextSeason:fromYear=>{
         const nextDialog=plannerNextSeason({getWorkspace:()=>({property:state.property,beds:state.beds,placements:state.placements}),plants:state.plants,fromYear,onOpenYear:openSeason,onSave:(next,year)=>{

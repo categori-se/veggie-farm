@@ -54,10 +54,18 @@ display(accountGardenHome({invalidation, showToday: true, onGardenChange: worksp
 Choose a saved garden above to use its linked conditions. You can adjust the settings below for a planning scenario; these edits do not change your saved garden.
 
 ```js
+const conditionBeds = selectedGarden?.workspace?.beds || [];
+const conditionBed = view(Inputs.select(["", ...conditionBeds.map(b => b.id)], {
+  label: "Conditions for", value: "",
+  format: id => id ? conditionBeds.find(b => b.id === id)?.name || id : "Garden profile"
+}));
+```
+
+```js
 const now = new Date();
 const currentYear = now.getFullYear();
 const localDate = `${currentYear}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
-const appliedConditions = savedGardenConditions(selectedGarden, savedGarden, localDate);
+const appliedConditions = savedGardenConditions(selectedGarden, savedGarden, localDate, conditionBed);
 const date = view(Inputs.text({label: "Planting date", value: localDate, placeholder: "YYYY-MM-DD"}));
 const lastFrostDate = view(Inputs.text({label: "Typical last spring frost", value: appliedConditions.lastFrostDate || "", placeholder: "YYYY-MM-DD"}));
 const firstFrostDate = view(Inputs.text({label: "Typical first fall frost", value: appliedConditions.firstFrostDate || "", placeholder: "YYYY-MM-DD"}));
@@ -85,6 +93,8 @@ const soilTemperatureF = useSoilReading && (!appliedConditions.soilDate || date 
 html`<div class="today-input-note">
   <strong>${appliedConditions.source === "selected-garden" ? `Selected garden: ${appliedConditions.name}` : appliedConditions.source === "notebook" ? `Notebook: ${appliedConditions.name}` : "Starter assumptions:"}</strong>
   ${appliedConditions.source === "starter" ? "May 10 and October 15 are editable examples, not a location lookup." : "Frost dates come from the saved profile. Missing dates remain blank; enter both before comparing crops."}
+  ${conditionBed ? `Bed: ${appliedConditions.bedName || "unavailable"}. Soil readings come only from this bed; frost dates remain garden-wide.` : "Soil readings use the garden profile."}
+  ${appliedConditions.sunHours === null ? "Direct sun: not recorded." : `Recorded direct sun: ${appliedConditions.sunHours} hours. Light is context only; the timing comparison below does not yet assess light suitability.`}
   Saved soil temperature is enabled only when measured today and used for that same date. Older, undated or future readings stay excluded.
   <a href="/tools/my-garden">Review garden conditions →</a>
 </div>`

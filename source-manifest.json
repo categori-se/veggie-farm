@@ -296,6 +296,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/bed-conditions.md",
+      "bytes": 1346,
+      "sha256": "a7f284ed5a716f67f063fa3719908404c3194e28721e29b023c08b1182cf1147",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/bed-seasons.md",
       "bytes": 1456,
       "sha256": "e923be347b8ea0dc503034dfa352e9a279f27f44fed447ffde311b19b814c81c",
@@ -1161,8 +1167,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 10109,
-      "sha256": "1c7cc5319947be5e712d9e813ce8c5d04e70f8e7a17825f7f0c5958c2dc1dffa",
+      "bytes": 10216,
+      "sha256": "a560a51dae24e07558d1d1367e461458c683fd7d95273981c8e62d3374470e98",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1182,6 +1188,12 @@
       "bytes": 324,
       "sha256": "7bf4de6648862da307c317300e74aca14b4872df1daf53b0e7a6bcd7540145b6",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/bed-conditions.js",
+      "bytes": 2890,
+      "sha256": "03e101d876d98d68ed3741c51634ff440f8c630557e0a86a3323f81ffed1b760",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/bed-fit-comparison.js",
@@ -1275,8 +1287,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 14373,
-      "sha256": "4b8764ea829e4a200909a90498de0a82f3a28bd9711e8ffe53be0f0c500440e4",
+      "bytes": 14543,
+      "sha256": "fe56e001599bab1f63c636a70a3d307b0fc4928ec28e1517f0b0789d2baacbdb",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1305,8 +1317,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 569954,
-      "sha256": "0dcdbdc8b532ac48414dbcea14235d2863f3947f23ce6758125f154234e7d69e",
+      "bytes": 570342,
+      "sha256": "c0a9c70c51dfd42ebb2ced85c8e62b8f977affe46128eaa59838c31a7f57c586",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2919,8 +2931,8 @@
     },
     {
       "path": "src/lib/garden/accountGardenJournal.js",
-      "bytes": 5534,
-      "sha256": "85e7ce45d873fe1fdfcdabba2c75e9ec7d49584c30a4336d5aa9e8dada0568cd",
+      "bytes": 5702,
+      "sha256": "49c44f787777f2b4e8b89f717cad1f7b9606ab86df2a01be4989e07be91a27b7",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2928,6 +2940,12 @@
       "bytes": 3741,
       "sha256": "7533cc3caf83569274b643a3d4e22e60c0728703c80581891c1cf5d9ded766e8",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/lib/garden/bedConditions.js",
+      "bytes": 1325,
+      "sha256": "8667ec0ee776f1a13f00e92ae688724812647155f87071f1294293e553cf8108",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/lib/garden/bedFill.js",
@@ -3075,8 +3093,8 @@
     },
     {
       "path": "src/lib/garden/savedGardenConditions.js",
-      "bytes": 1265,
-      "sha256": "4d209558c7ec02d89590053dac209e92c8d78809bdaa64524024b06beb66868b",
+      "bytes": 1635,
+      "sha256": "d1d5541b22768d03cf35785166a2c417981c71c3600a764309f44d14d1eaebe5",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3549,8 +3567,8 @@
     },
     {
       "path": "src/tools/today.md",
-      "bytes": 14627,
-      "sha256": "e21c68b48e3bedcc784335a8e1456d95e5eab0ddc0d342d113b8c6cd0b877c40",
+      "bytes": 15336,
+      "sha256": "80ea1ea247605a44f032dc0b89db245767f8a9fc2eef99e4c18ac8339cd7a168",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3585,8 +3603,8 @@
     },
     {
       "path": "tests/accountGardenJournal.test.mjs",
-      "bytes": 3216,
-      "sha256": "5706f47f3793ce717dd0b2fc0a00b75e6fea19a4045604b4e7fb68272a62f239",
+      "bytes": 4046,
+      "sha256": "137088ed4933075877d098a4179b6b3bde86203bd8072a55d2ca45c6145d14b8",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3612,6 +3630,12 @@
       "bytes": 1924,
       "sha256": "6c92b1cb1b5e412ac1a401c59be9daef3e3d63be0a25cabf45a126241ffa6551",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/bedConditions.test.mjs",
+      "bytes": 2298,
+      "sha256": "75b18610c9e79e0eea9d9ca2e4d5b63fb88659589d4f49f4d62901b939adca56",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/bedFill.test.js",
