@@ -46,7 +46,7 @@ import {accountGardenHome} from "../components/account-garden-home.js";
 import {savedGardenConditions, validGuidanceDates} from "../lib/garden/savedGardenConditions.js";
 const selectedGardenState = Inputs.input(null);
 const selectedGarden = Generators.input(selectedGardenState);
-display(accountGardenHome({invalidation, showToday: true, onGardenChange: workspace => {selectedGardenState.value = workspace ? {workspace} : {cleared: true}; selectedGardenState.dispatchEvent(new Event("input"));}}));
+display(accountGardenHome({invalidation, showToday: true, onGardenChange: (workspace, selection) => {selectedGardenState.value = workspace ? {workspace, selection} : {cleared: true}; selectedGardenState.dispatchEvent(new Event("input"));}}));
 ```
 
 ## Explore planting conditions
@@ -190,7 +190,7 @@ Compare inputs and model limits across crops. Open “Why?” for the reasons th
 
 ```js
 import {decisionMatrix} from "../components/decision-matrix.js";
-if (inputDatesValid) display(decisionMatrix(results, rules, [...sourceById.values()]));
+if (inputDatesValid) display(decisionMatrix(results, rules, [...sourceById.values()], {destination: selectedGarden?.selection ? {...selectedGarden.selection, ...(conditionBed ? {bedId: conditionBed} : {})} : null}));
 else display(html`<p role="status">Enter a valid planting date and spring/fall frost dates, with spring before fall, to compare crops.</p>`);
 ```
 

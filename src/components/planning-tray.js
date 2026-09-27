@@ -1,13 +1,21 @@
+import {readGardenHandoff} from '../lib/garden/gardenHandoff.js';
 import {readPlantIntent,plannedCatalogPlant} from '../lib/garden/plantIntent.js';
 const el=(tag,text)=>{const e=document.createElement(tag);if(text!=null)e.textContent=text;return e;};
 export function planningTray({getState,commit,createGarden,openBed,remove,invalidation}){
  const root=el('div'),launch=el('button','Planning tray');launch.type='button';root.append(launch);
+ let waitingForGarden=!!readGardenHandoff(location.hash),cancelled=false;
  let pending=null,error='';try{pending=readPlantIntent(location.hash);}catch(e){error=e.message;}
  const dialog=el('dialog');dialog.className='planning-tray-dialog';dialog.style.cssText='width:min(600px,calc(100vw - 32px));max-height:85svh;overflow:auto;box-sizing:border-box';
- const label=(name,field)=>{const l=el('label',name);l.style.cssText='display:grid;gap:4px;margin:8px 0';l.append(field);return l;};
+ const label=(name,field)=>{field.setAttribute('aria-label',name);const l=el('label',name);l.style.cssText='display:grid;gap:4px;margin:8px 0';l.append(field);return l;};
  function draw(){
   dialog.replaceChildren();const close=el('button','Back to garden');close.type='button';close.onclick=()=>dialog.close();dialog.append(close,el('h2','Planning tray'));
   const status=el('p',error);status.setAttribute('role','status');dialog.append(status);
+  if(pending&&waitingForGarden){
+   dialog.append(el('h3',pending.name),el('p',cancelled?'Opening the saved garden was cancelled. Your crop choice is still here.':'Open the linked account garden before choosing where to plant. Sign in or retry in Account saves; your crop choice is retained.'));
+   const account=el('button','Return to account saves');account.type='button';account.onclick=()=>dialog.close();dialog.append(account);
+   if(cancelled){const other=el('button','Choose another garden');other.type='button';other.onclick=()=>{waitingForGarden=false;draw();};dialog.append(other);}
+   return;
+  }
   if(pending){
    dialog.append(el('h3',pending.name),el('p',[pending.cultivar,pending.scientific].filter(Boolean).join(' · ')),el('p','Choose a destination and review dimensions. This saves a choice; it does not plant it automatically.'));
    if(pending.source){const a=el('a','Plant source');a.href=pending.source;a.target='_blank';a.rel='noopener noreferrer';dialog.append(a);}
@@ -27,5 +35,5 @@ export function planningTray({getState,commit,createGarden,openBed,remove,invali
  }
  function open(){draw();dialog.showModal();}launch.onclick=open;
  function update(){launch.textContent=`Planning tray · ${(getState().property.planningTray||[]).length}`;}
- if(pending||error)requestAnimationFrame(()=>{if(root.isConnected)open();});invalidation?.then(()=>dialog.remove());return {root,dialog,update};
+ if((pending||error)&&!waitingForGarden)requestAnimationFrame(()=>{if(root.isConnected)open();});invalidation?.then(()=>dialog.remove());return {root,dialog,update,linkedGardenResult(result){waitingForGarden=result!=='opened';cancelled=result==='cancelled';if(pending){draw();if(!dialog.open)dialog.showModal();}}};
 }

@@ -1253,6 +1253,7 @@ export function gardenPlanner(options = {}) {
   setupActions(refs, state, () => renderAll());
   const accountPanel = plannerAccount({
     ...(options.accountAdapter || {}),
+    onLinkedGarden: result => tray?.linkedGardenResult(result),
     exportPlanner: () => accountGardenPayload(stateExportPayload(state)),
     restorePlanner: candidate => {
       candidate = mergeAccountGardens(stateExportPayload(state), candidate);

@@ -4,7 +4,7 @@ import {getAccessToken} from '../lib/account/auth.js';
 import {createPlannerCloudClient} from '../lib/account/plannerCloudClient.js';
 import {parsePlannerBackup} from '../lib/garden/plannerBackup.js';
 
-export function plannerAccount({exportPlanner,restorePlanner,client:providedClient,session:getSession=getAccessToken,demo=false,linkedGarden=readGardenHandoff(globalThis.location?.hash)}) {
+export function plannerAccount({exportPlanner,restorePlanner,client:providedClient,session:getSession=getAccessToken,demo=false,onLinkedGarden=()=>{},linkedGarden=readGardenHandoff(globalThis.location?.hash)}) {
   const root=document.createElement('details');
   root.className='planner-account';
   root.innerHTML=`<summary>Account saves</summary>
@@ -37,7 +37,7 @@ export function plannerAccount({exportPlanner,restorePlanner,client:providedClie
   const clear=()=>{today.hidden=true;today.removeAttribute('href');active=null;cursor=null;clearHistory();select.replaceChildren(new Option('Choose a saved copy',''));update.disabled=true;more.hidden=true;};
   const check=()=>{const next=getSession();if(next!==session){session=next;clear();status.textContent='Account session changed. Reload your account saves. Local work is unchanged.';}};
   root.addEventListener('focusin',check);
-  const messages={missing_linked_garden:'The linked garden is not in this account copy. Your local work is unchanged.',demo_expired:'Demo expired. Reset to begin a new sandbox.',demo_limit:'Demo operation or saved-copy limit reached. Reset to begin again.',demo_rate_limit:'Please wait a moment between demo operations.',invalid_account_layout:'A saved version has conflicting garden identities. Download a local backup and review that version before saving to your account.',no_personal_gardens:'Create your own garden first. Public demo edits stay in this browser.',sign_in_required:'Sign in first. Your local work is unchanged.',session_changed:'Account session changed. Reload your account saves.',revision_conflict:'This account copy has newer changes. Save a new copy to keep your edits, or reload it before updating.',save_too_large:'This planner exceeds the current 2 MiB cloud-save limit. Download a JSON backup; your local work is unchanged.'};
+  const messages={missing_linked_bed:'The linked bed is no longer in this garden. Your local work is unchanged.',missing_linked_garden:'The linked garden is not in this account copy. Your local work is unchanged.',demo_expired:'Demo expired. Reset to begin a new sandbox.',demo_limit:'Demo operation or saved-copy limit reached. Reset to begin again.',demo_rate_limit:'Please wait a moment between demo operations.',invalid_account_layout:'A saved version has conflicting garden identities. Download a local backup and review that version before saving to your account.',no_personal_gardens:'Create your own garden first. Public demo edits stay in this browser.',sign_in_required:'Sign in first. Your local work is unchanged.',session_changed:'Account session changed. Reload your account saves.',revision_conflict:'This account copy has newer changes. Save a new copy to keep your edits, or reload it before updating.',save_too_large:'This planner exceeds the current 2 MiB cloud-save limit. Download a JSON backup; your local work is unchanged.'};
   const run=async task=>{
     if(busy)return;check();busy=true;buttons.forEach(b=>b.disabled=true);select.disabled=true;history.disabled=true;
     try {await task();} catch(error){check();status.textContent=(demo&&error.code==='save_too_large'?'Demo storage limit reached (512 KiB including drafts and versions). Reset to start again.':messages[error.code]) || 'Account save service is unavailable. Your local work is unchanged; download a JSON backup before leaving.';}
@@ -104,10 +104,10 @@ export function plannerAccount({exportPlanner,restorePlanner,client:providedClie
     const started=getSession(),chosen=linkedGarden;
     const saved=await client.load(chosen.saveId);
     if(getSession()!==started)throw Object.assign(Error(),{code:'session_changed'});
-    const candidate=accountGardenForPlanning(saved.payload,chosen.gardenId),garden=candidate.parcels.find(g=>g.id===chosen.gardenId);
-    if(!window.confirm(`Open “${garden.name||garden.property?.name||'Garden'}” in Plan? This restores the account copy (${candidate.parcels.length} personal gardens) and replaces your local personal gardens. Local demo edits stay. Cancel to download a backup or save local edits first.`)){consumeLinked();status.textContent='Opening cancelled. Your local work is unchanged.';return;}
+    const candidate=accountGardenForPlanning(saved.payload,chosen.gardenId,chosen.bedId),garden=candidate.parcels.find(g=>g.id===chosen.gardenId);
+    if(!window.confirm(`Open “${garden.name||garden.property?.name||'Garden'}” in Plan? This restores the account copy (${candidate.parcels.length} personal gardens) and replaces your local personal gardens. Local demo edits stay. Cancel to download a backup or save local edits first.`)){consumeLinked();onLinkedGarden('cancelled');status.textContent='Opening cancelled. Your local work is unchanged.';return;}
     if(getSession()!==started)throw Object.assign(Error(),{code:'session_changed'});
-    restorePlanner(candidate);active=saved;handoff(saved,candidate);consumeLinked();status.textContent='Selected garden opened. Further account updates are explicit.';
+    restorePlanner(candidate);active=saved;handoff(saved,candidate);consumeLinked();onLinkedGarden('opened');status.textContent='Selected garden opened. Further account updates are explicit.';
   };
   if(linkedGarden&&!demo){
     root.open=true;const retry=document.createElement('button');retry.type='button';retry.textContent='Open linked garden';retry.onclick=()=>run(openLinked);root.append(retry);buttons.push(retry);

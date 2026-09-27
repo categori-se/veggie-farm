@@ -1,3 +1,4 @@
+import {gardenPlanHref} from './gardenHandoff.js';
 import {measurementDate} from './soilReading.js';
 // Plant selection and optional planned date only; no garden contents or account credentials in the fragment.
 const planningDate=value=>measurementDate(value)&&value>='1900-01-01'&&value<='2200-12-31'?value:null;
@@ -10,9 +11,11 @@ export function plantIntent(record){
 export function plantPlanUrl(record,origin='https://studio.veggie.farm/'){
  const url=new URL(origin);url.hash=new URLSearchParams({plant:JSON.stringify(plantIntent(record))}).toString();return url.href;
 }
-export function cropPlanUrl(crop,date,origin='https://studio.veggie.farm/'){
+export function cropPlanUrl(crop,date,origin='https://studio.veggie.farm/',destination=null){
  if(!crop||!/^[a-z0-9-]+$/.test(crop.slug)||!planningDate(date))throw Error('Choose a crop and a valid planning date.');
- return plantPlanUrl({id:`guide:${crop.slug}`,name:crop.name,common:crop.name,source:`https://veggie.farm/content/vegetables/${crop.slug}`,plannedDate:date},origin);
+ const url=new URL(plantPlanUrl({id:`guide:${crop.slug}`,name:crop.name,common:crop.name,source:`https://veggie.farm/content/vegetables/${crop.slug}`,plannedDate:date},origin));
+ if(destination){const linked=gardenPlanHref(destination);if(!linked)throw Error('Choose a saved garden before planning.');const params=new URLSearchParams(url.hash.slice(1));for(const [key,value]of new URLSearchParams(new URL(linked).hash.slice(1)))params.set(key,value);url.hash=params.toString();}
+ return url.href;
 }
 export function readPlantIntent(hash){
  if(typeof hash!=='string'||hash.length>9000)throw Error('The plant selection link is too large.');

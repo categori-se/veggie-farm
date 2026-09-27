@@ -537,8 +537,8 @@
     },
     {
       "path": "docs/architecture/today-plan.md",
-      "bytes": 1390,
-      "sha256": "6103ddd6c11f5f01bccf992f5bd3911509d0969dda349b36244b488841625c29",
+      "bytes": 2612,
+      "sha256": "91e11b5c0ee46356c4b94d6540461d2bfcc15e5ad6d7741be6fd290059fd72ac",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -789,8 +789,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 7949,
-      "sha256": "2ff9f6c9c4ec2786ca00f367ed9c3c7bc2dabfdca452e8e224f3deb48215900f",
+      "bytes": 8114,
+      "sha256": "afee83646966faeea6c6809b3b63421aeeee4ceccab1e068d0f2252c92d6e345",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1179,8 +1179,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 10216,
-      "sha256": "a560a51dae24e07558d1d1367e461458c683fd7d95273981c8e62d3374470e98",
+      "bytes": 10306,
+      "sha256": "cbf7247dc8a923a8affcd77efcf913670ef6a22ac83aa496f27b328776d64587",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1257,8 +1257,8 @@
     },
     {
       "path": "src/components/decision-matrix.js",
-      "bytes": 5084,
-      "sha256": "f813bc95273f0c2fe5af9c83387981e6f6561f5c3003e2c893a4693b8fb47841",
+      "bytes": 5113,
+      "sha256": "968c476eee957ef71c6a4ef660760118fb3d5cec16d25121b80a3f5524cfacba",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1329,8 +1329,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 570443,
-      "sha256": "c7f8c4dcc8471ac13992eb88956aafed6d2cfbefda662ce9bef101a1a449ecc1",
+      "bytes": 570507,
+      "sha256": "9ffa645d632276b24ca2a4d34da2a055c35ed7446a711cad9bcf80e18799fc06",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1443,14 +1443,14 @@
     },
     {
       "path": "src/components/plannerAccount.js",
-      "bytes": 12007,
-      "sha256": "f595350f47aa386f96817cc992b3cdb37ce06c01aaa32baf95f313099940c7bf",
+      "bytes": 12190,
+      "sha256": "42b264f9475f4007f26563c02c413a5a902424af9debc765a9d9a1de018db712",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/components/planning-tray.js",
-      "bytes": 5643,
-      "sha256": "b80cc343832276a17d90b5e1ec1a2007c24f4e33e13d7ae1e11c23744755efdf",
+      "bytes": 6600,
+      "sha256": "f90f5eba2145e9bf47928009c1cba98988d2efa5cb094b75219c887fcc216994",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2937,8 +2937,8 @@
     },
     {
       "path": "src/lib/garden/accountGardenForPlanning.js",
-      "bytes": 580,
-      "sha256": "bf11250832a04a030c42783c1556a4a615429180cd8900e0e55d1bdc3a0391f1",
+      "bytes": 830,
+      "sha256": "ae7372fcdcf23082e1df7494ed788d38185f8eb4ca883ec7a20afacfbb650052",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2985,8 +2985,8 @@
     },
     {
       "path": "src/lib/garden/gardenHandoff.js",
-      "bytes": 1159,
-      "sha256": "1207065dc8f6bd5912701539d960609302fd6f1d7e05716036acbd640e673655",
+      "bytes": 1478,
+      "sha256": "bc463f683aee53789374432d7824900e88b9c642b06a73e2da517dad0568b4a4",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3075,8 +3075,8 @@
     },
     {
       "path": "src/lib/garden/plantIntent.js",
-      "bytes": 4061,
-      "sha256": "2a07a7a07462b5f11548061d5dda3a501bb17be15d3f8bf4dab956b975e1d0fb",
+      "bytes": 4460,
+      "sha256": "aa745e99dec1d93d969f8a652ed62896dd5601fe27e7e1369dc12fa758d31090",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3585,8 +3585,8 @@
     },
     {
       "path": "src/tools/today.md",
-      "bytes": 15395,
-      "sha256": "46084cb1f4899f6b38148459a3dd98eaa30e4de8ffe528c2840c713fd9c15c5a",
+      "bytes": 15548,
+      "sha256": "78c5d3c7c5f044c10a01ae7d0cbacf561e67b07c509b15a20d0ff4f249b71687",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3615,8 +3615,8 @@
     },
     {
       "path": "tests/accountGardenForPlanning.test.mjs",
-      "bytes": 1556,
-      "sha256": "c517f35188f447e47c281282d99eac11e89f811e1a27a144c8758601fb4cb362",
+      "bytes": 2051,
+      "sha256": "42490e92910941029ffa88df0dd943156c84a794931a25c5934996350ff8e029",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3783,8 +3783,8 @@
     },
     {
       "path": "tests/gardenHandoff.test.mjs",
-      "bytes": 1334,
-      "sha256": "7de148725d89f9d230ae723467f384a93d38de390d49ca55e7d994258200cb59",
+      "bytes": 1863,
+      "sha256": "e1774141e8f71c2ea4c5bcdb84dda8e7cabb4e44f3e33aa7e59c9b78c6cccc11",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -4035,8 +4035,8 @@
     },
     {
       "path": "tests/plantIntent.test.mjs",
-      "bytes": 3681,
-      "sha256": "538c88938f27c211c26138e5da438297dffa52ea55c7bd4e00564c116ffc8f36",
+      "bytes": 4531,
+      "sha256": "791b1eee8944cbd1dfb41b78f923de1d86a295d1207345a9e977007315044129",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
