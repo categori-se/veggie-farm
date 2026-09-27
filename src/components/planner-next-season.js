@@ -1,8 +1,13 @@
 import {planNextSeason,seasonPlantings,shiftPlanYear} from '../lib/garden/nextSeason.js';
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;return n;};
-export function plannerNextSeason({getWorkspace,plants,fromYear,onSave}){
+export function plannerNextSeason({getWorkspace,plants,fromYear,onSave,onOpenYear}){
  const dialog=el('dialog');dialog.setAttribute('aria-label','Plan next year');dialog.className='planner-next-season';dialog.style.cssText='box-sizing:border-box;width:min(760px,94vw);max-height:90svh;overflow:auto;padding:20px;font:14px/1.5 system-ui';
  const close=el('button','Back to garden');close.type='button';close.onclick=()=>dialog.close();dialog.append(close,el('h2',`Start ${fromYear+1} from ${fromYear}`),el('p','Keep this garden’s beds, paths, structures and conditions. Choose which plantings continue growing and which to repeat as new plantings. Existing observations stay with their original plants.'));
+ if(getWorkspace().property?.seasonPlans?.some(p=>p.year===fromYear+1)){
+  dialog.append(el('p',`Your ${fromYear+1} plan already exists. Continue it without creating another set of plantings.`));
+  if(onOpenYear){const open=el('button',`Open ${fromYear+1} plan`);open.type='button';open.onclick=()=>{onOpenYear(fromYear+1);dialog.close();};dialog.append(open);}
+  dialog.addEventListener('close',()=>dialog.remove(),{once:true});return dialog;
+ }
  const form=el('form'),catalog=new Map(plants.map(p=>[p.id,p])),workspace=getWorkspace(),rows=[];
  for(const p of seasonPlantings(workspace,fromYear)){
   const fieldset=el('fieldset'),plant=catalog.get(p.plantId),bed=workspace.beds?.find(b=>b.id===p.bedId);fieldset.style.cssText='margin:14px 0;padding:12px;min-width:0';fieldset.append(el('legend',`${plant?.name||p.name||'Planting'} · ${bed?.name||'Outside bed'}`));

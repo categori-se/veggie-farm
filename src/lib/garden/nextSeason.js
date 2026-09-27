@@ -45,3 +45,8 @@ export function planNextSeason(workspace,{fromYear,toYear,choices},newId=()=>cry
  result.property={...result.property,seasonPlans:[...plans,{year:toYear,fromYear,plantingIds:added,continuingPlantingIds:retained}]};
  return result;
 }
+
+export function seasonPreviewDate(workspace,year){
+ if(!Number.isInteger(year)||year<1900||year>2200)throw Error('Choose a planning year from 1900 to 2200.');
+ return (workspace.placements||[]).map(p=>measurementDate(p.planted)).filter(date=>date&&Number(date.slice(0,4))===year).sort()[0]||`${year}-01-01`;
+}

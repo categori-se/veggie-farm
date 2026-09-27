@@ -375,8 +375,8 @@
     },
     {
       "path": "docs/architecture/next-season.md",
-      "bytes": 2385,
-      "sha256": "d38991875c04c779bd44118db6c4723547cdd40b02e3edec1ac7498ae0a1a979",
+      "bytes": 2628,
+      "sha256": "576834df0b064869bf946d17254fed198f9cde439294249c58b40799c244e56f",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1221,8 +1221,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 11264,
-      "sha256": "3886b8bfd035e9dcdce9dffc711342f94aa49923527e24fe75bb26b037dfb06b",
+      "bytes": 11481,
+      "sha256": "8d5ebcff1e2fd83ac726729980057494e9928a3783421dc6a4b5f55e1eb08067",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1239,8 +1239,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 569294,
-      "sha256": "6665b4680f04c4adb021444193ff1eb0ddcc67b1898863fde5615052e687f9b3",
+      "bytes": 569594,
+      "sha256": "9ddbde184c09065961f6cd71ba20bacfaa5813ce215695f147b241fbf883f8ec",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1293,8 +1293,8 @@
     },
     {
       "path": "src/components/planner-next-season.js",
-      "bytes": 4163,
-      "sha256": "9bfb769f65870627cd30222906a6a637ad200bb7266f667e54751574331210a1",
+      "bytes": 4621,
+      "sha256": "ab224625612ad7f78364f181eaf8674f0a645710f9b940633297b7226d99f1f8",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2859,8 +2859,8 @@
     },
     {
       "path": "src/lib/garden/nextSeason.js",
-      "bytes": 3678,
-      "sha256": "a2548d7174c58d2d745e0f51751fcd21d7c9cd0df464f6e7eeb4f901435334f9",
+      "bytes": 3989,
+      "sha256": "7c32e562742ad98fbabe54200b3004777465a938eeb4d4c7582edfd322ade163",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3705,8 +3705,8 @@
     },
     {
       "path": "tests/nextSeason.test.mjs",
-      "bytes": 3092,
-      "sha256": "24822052f1752b3554d1ea101222620d8543eda3a179ed0d165d1b3ef8374507",
+      "bytes": 3427,
+      "sha256": "f5ff1b509115a7dc20b46e5446427cd3b07d212e614cb720c32de0ceceb45928",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

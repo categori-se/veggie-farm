@@ -10,7 +10,7 @@ Each planting has three explicit choices:
 
 Only an explicit catalog perennial life cycle suggests Keep growing; other plantings start as Leave. All choices are reviewable. Date suggestions shift the previous dates by one year, clamping February 29 to February 28. They are not seasonal suitability recommendations. Existing spacing and date-preview tools remain the place to review the repeated layout.
 
-A `property.seasonPlans` record identifies the target year, source year, new planting IDs and continuing IDs. A second creation for the same year is refused. Source observations and original planting IDs remain intact. This is a new plan within the same garden, not a copied garden or an observed growing season.
+A `property.seasonPlans` record identifies the target year, source year, new planting IDs and continuing IDs. When the target year already exists, the review offers Open year plan instead of a duplicate form. My Garden also offers View season in plan; the calendar moves to the earliest dated planting in that year, or January 1 when none is dated. Opening My Garden reflects the active preview year. Source observations and original planting IDs remain intact. This is a new plan within the same garden, not a copied garden or an observed growing season.
 
 Studio saves the transition through its existing browser-local workspace save. Failure restores the previous state and leaves the review form open. Export/account backup uses the existing workspace payload. The account-loaded Notebook currently links users to Plan; authenticated cross-device next-year creation still needs acceptance.
 
