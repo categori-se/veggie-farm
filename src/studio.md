@@ -6,6 +6,7 @@ toc: false
 
 ```js
 import {gardenPlanner} from "./components/gardenPlanner.js";
+import {studioEntry} from "./components/studio-entry.js";
 ```
 
 ```js
@@ -39,14 +40,14 @@ const studioModelAssets = Object.fromEntries(Object.entries(optionalMedia).filte
 ```
 
 ```js
-display(gardenPlanner({
+display(studioEntry(() => gardenPlanner({
   publicCollection: publishedDemoCollection,
   modelAssets: studioModelAssets,
   modelCatalog: publicModelItems.features,
   referenceAssets: gardenReferenceAssets,
   referenceOverlayAssets: gardenReferenceOverlayAssets,
   sourceEvidenceByGardenId: gardenSourceEvidenceByGardenId
-}));
+}), {invalidation}));
 ```
 
 ```js
@@ -149,6 +150,7 @@ const syncGardenShortlist = (gardenId) => {
 
 const selectGardenFromShortlist = (event) => {
   const gardenId = event.currentTarget.dataset.gardenReference;
+  document.dispatchEvent(new Event("veggie-farm:open-planner"));
   const plannerRoot = document.querySelector(".garden-planner-app");
   plannerRoot?.dispatchEvent(new CustomEvent("veggie-farm:select-garden", {
     detail: {id: gardenId}

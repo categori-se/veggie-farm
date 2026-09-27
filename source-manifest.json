@@ -512,6 +512,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/studio-entry.md",
+      "bytes": 1250,
+      "sha256": "d26cab6244cb066564686dfa35f972cdd1ca41cef1cd54a28188291d1e831bdc",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/studio-integration.md",
       "bytes": 3593,
       "sha256": "bf910689ae8d5031cb22db9ab22bd46b3601be8c699e74dd2053a5bd25d4f82f",
@@ -789,8 +795,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 8269,
-      "sha256": "411aca919de3843b4d588726aaf25e7a0004dd1d048844f86ba3d9bb0fcd240c",
+      "bytes": 8412,
+      "sha256": "f7316546254becbbe970fa15a33c8fd32ffa3269e0abd36a0b74f6b9607a390b",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1566,6 +1572,12 @@
       "bytes": 7368,
       "sha256": "96653ad3090f848915c3d21ec98e670734387a23a743e3059e45da2c6f7e4013",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/studio-entry.js",
+      "bytes": 2950,
+      "sha256": "78bd1fe610dc3b2e9559ea4ffe64a0abc8aa26e05f52fd7d99bf98e81fae92e5",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/studioCollections.js",
@@ -3471,8 +3483,8 @@
     },
     {
       "path": "src/studio.md",
-      "bytes": 12857,
-      "sha256": "f25def9982ae82aa6c803996cbb03932266ee49c7cea8cf62f391aba1c63888d",
+      "bytes": 13015,
+      "sha256": "68226f30a1f6e4d0731fb72abf1d1b38c40ca773fa07fe61a0c4352e90b6125e",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -4260,6 +4272,12 @@
       "bytes": 9935,
       "sha256": "9ee0467de864c463199bb0e7cbda34bc09653dc706606c7c819cb643b84b78d4",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/studioEntry.test.mjs",
+      "bytes": 872,
+      "sha256": "43f2aad6d3a073188e23095aeb07baac8066ec163fb1e550161f4cd92e74cdf3",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/studioMode.test.mjs",
