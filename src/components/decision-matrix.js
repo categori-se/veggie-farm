@@ -1,3 +1,4 @@
+import {cropPlanUrl} from '../lib/garden/plantIntent.js';
 import {gardenActions} from './garden-actions.js';
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;return n;};
 const labels={recommended:'Timing fits',caution:'Check conditions',possible_with_protection:'Protection may help',too_early:'Wait',too_late:'Short season'};
@@ -20,7 +21,9 @@ export function decisionMatrix(results,rules,sources,{limit=results.length}={}) 
   const table=el('table');table.className='decision-table';const caption=el('caption','Compare planting timing and the evidence behind it');table.append(caption);
   const head=el('thead'),hr=el('tr');for(const title of ['Crop / result','Season / frost','Light','Soil','Runway','Forecast','Details']){const th=el('th',title);th.scope='col';hr.append(th);}head.append(hr);table.append(head);const body=el('tbody');table.append(body);
   for(const item of filtered.slice(0,showAll?Infinity:limit)){
-   const row=el('tr'),heading=el('th');heading.scope='row';const a=el('a',item.crop.name);a.href=item.crop.path;heading.append(a,el('small',labels[item.status]));row.append(heading);
+   const row=el('tr'),heading=el('th');heading.scope='row';const a=el('a',item.crop.name);a.href=item.crop.path;heading.append(a,el('small',labels[item.status]));
+   try{const plan=el('a','Plan this crop →');const origin=location.hostname==='veggie.farm'?'https://studio.veggie.farm/':new URL('/studio',location.href).href;plan.href=cropPlanUrl(item.crop,item.inputs.date,origin);plan.setAttribute('aria-label',`Plan ${item.crop.name} on ${item.inputs.date}`);heading.append(plan);}catch{}
+   row.append(heading);
    for(const key of ['timing','light','soil','runway','forecast']){const value=item.comparisons?.[key];const cell=el('td');cell.append(el('span',value?.label||'Not evaluated'));if(value?.detail)cell.append(el('small',value.detail));row.append(cell);}
    const reason=el('td');const details=el('details'),summary=el('summary','Why?');summary.setAttribute('aria-label',`Why ${item.crop.name}: ${labels[item.status]}`);details.append(summary);
    for(const text of new Set([...item.explanation,item.action,item.risk,item.evidenceNote].filter(Boolean)))details.append(el('p',text));

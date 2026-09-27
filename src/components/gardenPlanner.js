@@ -1414,7 +1414,7 @@ export function gardenPlanner(options = {}) {
       state.selectedPlantId=entry.plantId;
     }),
     createGarden:()=>changeTray(()=>{exploringDemos=false;createBlankGardenWorkspace(state,"My garden");}),
-    openBed:item=>{if(!openPlantingWorkspace(state,item.bedId))throw Error("This bed no longer exists.");state.selectedPlantId=item.plantId;renderAll();},
+    openBed:item=>{if(!openPlantingWorkspace(state,item.bedId))throw Error("This bed no longer exists.");state.selectedPlantId=item.plantId;state.previewDate=item.plannedDate||null;renderAll();},
     remove:id=>changeTray(()=>{state.property.planningTray=(state.property.planningTray||[]).filter(e=>e.id!==id);})
   });
   const guideChange=fn=>changeTray(fn,"Could not save your first plan. Your previous garden is unchanged; free browser storage and try again.");
@@ -7343,7 +7343,6 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
   } else if (!placement) {
     refs.selectedPlacement.innerHTML = `<div class="empty-state">No placement selected</div>`;
   } else {
-    refs.selectedPlacement.querySelector('.placement-editor').append(plannerSizeScenario({placement,canEdit:()=>plannerCanEditFeature(state,'placement'),onChange:()=>renderAll({preserveEditor:'placement'})}));
     const currentPlant = plantById(state, placement.plantId);
     const status = placementStatus(placement, state);
     refs.selectedPlacement.innerHTML = `
@@ -7385,6 +7384,8 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         </details>
       </div>
     `;
+
+    refs.selectedPlacement.querySelector('.placement-editor').append(plannerSizeScenario({placement,canEdit:()=>plannerCanEditFeature(state,'placement'),onChange:()=>renderAll({preserveEditor:'placement'})}));
 
     bindInspectorEditGuard(refs.selectedPlacement, state, "placement", renderAll);
 
@@ -9528,7 +9529,7 @@ function fillBedWithSelectedPlant(state, positions) {
     plantId: plant.id,
     x,
     y,
-    planted: plant.catalogIdentity ? "" : todayIso(),
+    planted: plant.catalogIdentity ? plant.planningDate||"" : todayIso(),
     ...(plant.catalogIdentity ? {planYear:plant.planningYear} : {}),
     health: "starting",
     notes: "",
@@ -9576,7 +9577,7 @@ function addPlacement(state, plantId, x, y) {
     ...(plantById(state,plantId)?.catalogIdentity ? {planYear:plantById(state,plantId).planningYear} : {}),
     x: clamp(x, 0, bed.width),
     y: clamp(y, 0, bed.height),
-    planted: plantById(state,plantId)?.catalogIdentity ? "" : todayIso(),
+    planted: plantById(state,plantId)?.catalogIdentity ? plantById(state,plantId).planningDate||"" : todayIso(),
     health: "starting",
     notes: "",
     rotation: Math.random() * Math.PI
