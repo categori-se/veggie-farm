@@ -476,6 +476,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/season-reflections.md",
+      "bytes": 1446,
+      "sha256": "60068db193ceab2cc582e4b89f2e7b7f1f07a264156a633bd8b2cb087d57d716",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/seasonal-sunlight.md",
       "bytes": 5015,
       "sha256": "c59c2822d5c978a4596419745b45042fc6278bbfc71c75cebbce5022a69a5a2a",
@@ -1143,8 +1149,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 9982,
-      "sha256": "d35fa9bbb5664942ad3816e5f378d662d148942e021f7a14b2fd6277ed4ffe51",
+      "bytes": 10011,
+      "sha256": "c9dc3a9355bdf179ee57858fdd5e989fd0bbfba3ec4bc465efd2f96975fed93c",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1257,8 +1263,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 12650,
-      "sha256": "bb67859f420b797640a8b176fd831a3daf292f85ab2ab3af23674d05331ff004",
+      "bytes": 12930,
+      "sha256": "783eefc084ff3adb9063b2fe2562981566a7ed5d05cee1ffd8557078fdad6513",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1281,8 +1287,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 569594,
-      "sha256": "9ddbde184c09065961f6cd71ba20bacfaa5813ce215695f147b241fbf883f8ec",
+      "bytes": 569954,
+      "sha256": "0dcdbdc8b532ac48414dbcea14235d2863f3947f23ce6758125f154234e7d69e",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1347,8 +1353,8 @@
     },
     {
       "path": "src/components/planner-next-season.js",
-      "bytes": 4621,
-      "sha256": "ab224625612ad7f78364f181eaf8674f0a645710f9b940633297b7226d99f1f8",
+      "bytes": 5040,
+      "sha256": "775102f867e50ea4ba6c9711cd1f93fde79bbf8973e9e9194a3099b6b44e1f69",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1464,6 +1470,12 @@
       "bytes": 2736,
       "sha256": "a2c563bdfae4e15fb432cc342dd3a655f98d0d4c12e7250c6a2269cf2eb32ba2",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/season-reflection.js",
+      "bytes": 2203,
+      "sha256": "a359acd816131d0650f830babbf0a8edf030dc38fcb439cc0d9b5f1ea3332c2f",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/season-summary.js",
@@ -2865,8 +2877,8 @@
     },
     {
       "path": "src/lib/garden/accountGardenJournal.js",
-      "bytes": 4792,
-      "sha256": "08597e87c4c313b0bd4c2b11e151432b20149077627b7956e15cc65709bcdc05",
+      "bytes": 4993,
+      "sha256": "163bb8022d780c7271f6bc312152da41eede202a7d6bb8d41f0c57b8d9b31d57",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3029,6 +3041,12 @@
       "path": "src/lib/garden/seasonLearning.js",
       "bytes": 3077,
       "sha256": "7ea9e76f7a1d75a64ee4ea8b7ff2761fa15bc73890c27d07bb8e61621a00e3c2",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/lib/garden/seasonReflection.js",
+      "bytes": 1397,
+      "sha256": "762b56f71d4bf00b4c96d94c98a448cb9197478d48edfd07e32bc7ec7f91ba0c",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -4037,6 +4055,12 @@
       "path": "tests/seasonLearning.test.mjs",
       "bytes": 2749,
       "sha256": "c682d8741107e2206a43f6f24053f2eba2905138dd8cf083ff81e986df1febf9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "tests/seasonReflection.test.mjs",
+      "bytes": 2138,
+      "sha256": "4cf106d8f5cef9e4ed51c944661dd3f6490bb67a4ef2765d40b5609b99d30cf1",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

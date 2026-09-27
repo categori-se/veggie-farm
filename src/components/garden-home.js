@@ -1,3 +1,4 @@
+import {seasonReflectionForm} from './season-reflection.js';
 import {observationPhotoPicker} from './observation-photo-picker.js';
 import {observationPhoto} from '../lib/garden/observationPhoto.js';
 import {gardenSeasonLearning} from './garden-season-learning.js';
@@ -6,14 +7,15 @@ import {gardenJourney,JOURNAL_TYPES} from '../lib/garden/plantingJournal.js';
 const el=(tag,text)=>{const node=document.createElement(tag);if(text!=null)node.textContent=text;return node;};
 const action=(label,fn)=>{const b=el('button',label);b.type='button';b.style.cssText='min-height:44px;padding:8px 12px;font:inherit';b.onclick=fn;return b;};
 const localDate=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
-export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=localDate(),onLog,onPlan,onBackup,onNextSeason,onOpenSeason,initialYear,planLabel="Open bed",savedMessage="Observation recorded in this garden draft. Use account save or export to keep a separate copy."}) {
+export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=localDate(),onLog,onPlan,onBackup,onReflection,onNextSeason,onOpenSeason,initialYear,planLabel="Open bed",savedMessage="Observation recorded in this garden draft. Use account save or export to keep a separate copy."}) {
  const dialog=el('dialog');dialog.setAttribute('aria-label','My garden');dialog.style.cssText='box-sizing:border-box;font:14px/1.5 system-ui,sans-serif;width:min(960px,94vw);max-height:90svh;overflow:auto;padding:16px;background:var(--theme-background,#18231b);color:var(--theme-foreground,#eef2e8);border:1px solid #71846d';
  const header=el('header');header.style.cssText='display:flex;justify-content:space-between;gap:12px;align-items:center;position:sticky;top:-16px;background:inherit;z-index:1';const title=el('h2');header.append(title,action('Close',()=>dialog.close()));dialog.append(header);
  const intro=el('p','Choose a planting to record what happened, or open a bed to continue planning.');dialog.append(intro);
  const controls=el('div');controls.style.cssText='display:flex;flex-wrap:wrap;gap:12px';const year=el('input');year.type='number';year.min='1900';year.max='9999';year.value=String(initialYear||today.slice(0,4));year.style.width='6em';const label=el('label','Season ');label.append(year);controls.append(label);const bedFilter=el('select');bedFilter.setAttribute('aria-label','Filter garden bed');controls.append(bedFilter,action('Export backup',onBackup));if(onOpenSeason)controls.append(action('View season in plan',()=>{const y=Number(year.value);if(Number.isInteger(y)&&y>=1900&&y<=2200){onOpenSeason(y);dialog.close();}}));if(onNextSeason)controls.append(action('Plan next year',()=>{const y=Number(year.value);if(Number.isInteger(y)&&y>=1900&&y<2200){onNextSeason(y);dialog.close();}}));dialog.append(controls);
  const conditions=el('p'),contextDetails=el('details');contextDetails.append(el('summary','Garden context & storage'),conditions,el('p','Logging does not change planned dates or unlock the map. Use the existing account-save controls or export a backup for safekeeping.'));dialog.append(contextDetails);
  const attention=el('section');attention.setAttribute('aria-label','Garden attention');
- const learning=el('div');const summary=el('p'),log=el('section'),plans=el('section'),history=el('section');dialog.append(summary,attention,log,learning,plans,history);
+ const reflectionDrafts=new Map(),reflection=el('div');
+ const learning=el('div');const summary=el('p'),log=el('section'),plans=el('section'),history=el('section');dialog.append(summary,attention,log,learning,reflection,plans,history);
  let choice=selectedPlantingId||'',historyLimit=30,attentionLimit=6,logType='';
  const plants=()=>new Map(getPlants().map(p=>[p.id,p]));
  function render(){
@@ -58,6 +60,7 @@ export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=loca
    form.onsubmit=async event=>{event.preventDefault();if(photoBusy)return;save.disabled=true;photoPicker.disabled=true;try{choice=planting.value;await onLog(choice,{type:type.value,date:date.value,notes:notes.value,quantity:quantity.value,unit:unit.value,quality:quality.value,photo});year.value=date.value.slice(0,4);logType='';render();const message=el('p',savedMessage);message.setAttribute('role','status');log.prepend(message);}catch(error){status.textContent=error.message;}finally{save.disabled=false;photoPicker.disabled=false;}};log.append(form,status);
   }
   learning.replaceChildren(gardenSeasonLearning({workspace,plants:getPlants(),year:season,today,bedId:bedFilter.value,onNextSeason:onNextSeason?y=>{onNextSeason(y);dialog.close();}:undefined}));
+  reflection.replaceChildren(seasonReflectionForm({property:workspace.property,year:season,onSave:onReflection,drafts:reflectionDrafts}));
   plans.replaceChildren(el('h3','Plan → actual'));
   const wrap=el('div');wrap.style.overflowX='auto';const table=el('table');table.style.width='100%';table.innerHTML='<thead><tr><th>Planting / bed</th><th>Planned entry</th><th>Actual sow / transplant</th><th>Harvest records this year</th><th>Plan</th></tr></thead>';const body=el('tbody');table.append(body);
   for(const {planting,bed,outcome:o} of rows.slice(0,100)){const tr=el('tr');tr.append(el('td',`${catalog.get(planting.plantId)?.name||planting.name} · ${bed?.name||'Outside bed'}`),el('td',o.plannedEntry||'Not set'),el('td',[o.actualSowing&&`Sown ${o.actualSowing}`,o.actualTransplant&&`Transplanted ${o.actualTransplant}`].filter(Boolean).join(' · ')||'Not recorded'));const harvest=[o.grams!==null?`${(o.grams/1000).toFixed(3)} kg`:null,o.count!==null?`${o.count} count`:null,o.unmeasuredHarvests?`${o.unmeasuredHarvests} without quantity`:null].filter(Boolean).join(' + ');tr.append(el('td',harvest||'Not recorded'));const cell=el('td');if(bed)cell.append(action(planLabel,()=>{onPlan(bed.id);dialog.close();}));tr.append(cell);body.append(tr);}wrap.append(table);plans.append(wrap);if(rows.length>100)plans.append(el('p','Showing the first 100 plantings. Select a bed to narrow the list.'));

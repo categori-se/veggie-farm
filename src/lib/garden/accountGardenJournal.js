@@ -1,3 +1,4 @@
+import {saveSeasonReflection} from './seasonReflection.js';
 import {linkNotebookObservation,unlinkNotebookObservation,linkNotebookProfile,unlinkNotebookProfile} from './notebookLink.js';
 import {accountGardenPayload,isPublicDemo} from './accountGardens.js';
 import {parsePlannerBackup} from './plannerBackup.js';
@@ -24,10 +25,11 @@ export function accountGardenJournal({client,owner}) {
   catch(error){if(error.code==='revision_conflict'){conflicted=true;throw Error('This save changed in another tab. Your observation was not saved. Copy the note, reload the account garden and retry.');}throw error;}
   finally{pending=false;}
  }
+ async function reflect(year,input){return change(source=>({...source,property:saveSeasonReflection(source.property,year,input)}));}
  async function log(plantingId,input){return change(source=>{const index=source.placements.findIndex(p=>p.id===plantingId);if(index<0)throw Error('Choose a planting in the selected garden.');source.placements[index]=recordPlantingObservation(source.placements[index],input);return source;});}
  async function link(plantingId,observationId){assertOwner();const observation=notebook?.observations.find(o=>o.id===observationId);if(!observation)throw Error('Load and choose a saved notebook observation first.');if(record.payload.parcels.some(g=>(g.placements||[]).some(p=>(p.observations||[]).some(e=>e.notebookOrigin?.id===observationId))))throw Error('This observation is already linked in this account save. Unlink the existing association before moving it.');return change(source=>linkNotebookObservation(source,plantingId,observation,notebook.revision));}
  async function unlink(plantingId,observationId){return change(source=>unlinkNotebookObservation(source,plantingId,observationId));}
  async function linkProfile(){assertOwner();return change(source=>linkNotebookProfile(source,notebook?.profile,notebook?.revision));}
  async function unlinkProfile(){return change(unlinkNotebookProfile);}
- return {load,select,workspace,plants,backup,log,readNotebook,link,unlink,linkProfile,unlinkProfile,clear};
+ return {load,select,workspace,plants,backup,log,reflect,readNotebook,link,unlink,linkProfile,unlinkProfile,clear};
 }
