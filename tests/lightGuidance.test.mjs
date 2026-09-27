@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import {lightGuidance} from '../src/lib/recommendations/lightGuidance.js';
+import {recommendGardenToday} from '../src/lib/recommendations/gardenToday.js';
+const crops=JSON.parse(fs.readFileSync(new URL('../src/data/vegetables.json',import.meta.url))),rules=JSON.parse(fs.readFileSync(new URL('../src/data/crop-decision-rules.json',import.meta.url)));
+const base={date:'2026-06-15',lastFrostDate:'2026-05-10',firstFrostDate:'2026-10-15',soilTemperatureF:78,riskPreference:'typical'};
+const tomato=c=>recommendGardenToday(crops,rules,c).find(r=>r.crop.slug==='tomatoes');
+test('zero light is a check, not missing; invalid and absent measurements stay unknown',()=>{for(const x of [null,undefined,'',NaN,Infinity,-1,25,'6'])assert.equal(lightGuidance(x).state,'unknown');assert.equal(lightGuidance(0).state,'check');assert.equal(lightGuidance(5.9).state,'check');assert.equal(lightGuidance(6).state,'match');});
+test('selected-bed light changes guidance without erasing earlier timing or forecast risks',()=>{assert.equal(tomato({...base,sunHours:7}).status,'recommended');for(const hours of [0,4,null]){const r=tomato({...base,sunHours:hours});assert.equal(r.status,'caution');assert.ok(r.reasonCodes.some(c=>c.startsWith('LIGHT_')));assert.match(r.comparisons.light.source,/extension.umd.edu/);}assert.equal(tomato({...base,date:'2026-03-01',sunHours:7}).status,'too_early');assert.equal(tomato({...base,sunHours:0,date:'2026-03-01'}).status,'too_early');});
+test('light assessment is an explicit context input and never changes saved records',()=>{const input={...base,sunHours:3};const before=structuredClone(input);const r=tomato(input);assert.deepEqual(input,before);assert.equal(r.inputs.sunHours,3);assert.equal(tomato(base).status,'recommended');assert.match(r.comparisons.light.detail,/not a crop-specific minimum/);});

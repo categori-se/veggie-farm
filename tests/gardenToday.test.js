@@ -120,7 +120,7 @@ test("a live NWS freeze forecast downgrades an otherwise suitable tender crop", 
   assert.ok(result.reasonCodes.includes("NWS_FREEZE_FORECAST"));
   assert.ok(result.sources.includes("source:nws-api"));
   assert.ok(result.evidenceIds.length > 0);
-  assert.equal(result.ruleVersion, "garden-today/1.2.0");
+  assert.equal(result.ruleVersion, "garden-today/1.3.0");
 });
 
 test("the late-August notebook connects planting, harvest, and observation", () => {

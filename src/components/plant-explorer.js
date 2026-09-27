@@ -13,6 +13,8 @@ const frost=p=>p.frost===true?'Hardy':p.frost===false?'Tender / not hardy':'Not 
 const method=p=>[p.directSow===true?'Direct sow':null,p.transplant===true?'Transplant':null].filter(Boolean).join(' · ')||'No recommended method recorded';
 export function plantExplorer(plants,{initialCategory='',invalidation}={}){
  plants=groupPlantListings(plants).map(classifyPlantTypes);
+ const requestedCategory=new URLSearchParams(globalThis.location?.search||'').get('category');
+ if(requestedCategory && plants.some(p=>p.category===requestedCategory))initialCategory=requestedCategory;
  const root=el('section',null,'garden-library plant-explorer'),filters=el('aside',null,'plant-filter-rail'),main=el('div',null,'plant-explorer-main');root.append(filters,main);
  let visibleLimit=60,view='table',lastQuery='',totalMatches=0;const selected=new Map(),inputs={};
  const filterOptions=el('details',null,'plant-filter-options'),filterBody=el('div');filterOptions.append(el('summary','Filters'),filterBody);const media=matchMedia('(min-width: 781px)');const adjustFilters=()=>{filterOptions.open=media.matches;};adjustFilters();media.addEventListener('change',adjustFilters);invalidation?.then(()=>media.removeEventListener('change',adjustFilters));

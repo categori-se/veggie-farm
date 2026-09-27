@@ -12,6 +12,8 @@ tags:
 
 # Using veggie.farm
 
+[Follow the visual user guide](https://veggie.farm/guide) for screenshots and a walkthrough from your first bed to seasonal plans and garden history.
+
 Begin with the question in your garden, rather than a tour of every tool. You can use the guides without an account and add records or a layout when those help your decision.
 
 ## Find the right starting point

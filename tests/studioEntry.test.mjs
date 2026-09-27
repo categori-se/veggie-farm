@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {hasStudioDraft} from '../src/components/studio-entry.js';
+test('welcome checks only the active owner workspace without writing',()=>{const read=[],storage={getItem:key=>{read.push(key);return key==='veggie.farm:account-planner:alice:v8'?'{}':null;}};assert.equal(hasStudioDraft('alice',storage),true);assert.equal(hasStudioDraft('bob',storage),false);assert.equal(hasStudioDraft(null,storage),false);assert.deepEqual(read,['veggie.farm:account-planner:alice:v8','veggie.farm:account-planner:bob:v8','veggie.farm:garden-studio:v8']);});
+test('legacy or unreadable drafts remain accessible without parsing or deleting them',()=>{assert.equal(hasStudioDraft(null,{getItem:()=> 'invalid legacy draft'}),true);assert.equal(hasStudioDraft(null,{getItem:()=>{throw Error('unavailable');}}),false);});

@@ -17,7 +17,7 @@ export default {
   footer: `<div class="vf-footer">
   <div>
     <strong>veggie.farm</strong>
-    <p>Growing food. Building knowledge. <a href="https://veggie.farm/about/">Our story</a></p>
+    <p>Growing food. Building knowledge. <a href="https://veggie.farm/about/">Our story</a> · <a href="https://veggie.farm/guide">User guide</a></p>
   </div>
   <span>Plan · Observe · Record · Improve</span>
 </div>`,
@@ -27,13 +27,16 @@ export default {
     {name: "Garden Today", path: "/tools/today"},
     {name: "Garden Planning Studio", path: "/studio"},
     {name: "Account sandbox", path: "/demo"},
-    {name: "Garden Notebook", path: "/tools/my-garden"},
+    {name: "My Garden", path: "/tools/my-garden"},
+    {name: "Garden journal", path: "/journal"},
+    {name: "Learn from your garden", path: "/learn"},
     {name: "Tools", path: "/tools"},
     {name: "Garden Decision Lab", path: "/tools/garden-decisions"},
     {name: "Season Weather", path: "/tools/season-weather"},
     {name: "What Grows in This Bed", path: "/tools/what-grows-in-this-bed"},
     {name: "Data Sources", path: "/about/data-sources"},
     {name: "Our story", path: "/about/"},
+    {name: "User guide", path: "/guide"},
     {name: "Welcome", path: "/content/"},
     {
       name: "Garden",

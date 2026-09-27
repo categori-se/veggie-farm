@@ -1,0 +1,11 @@
+const el=(tag,text)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;return n;};
+export function notebookSoilLinks({session,reports}){
+ const root=el('section');root.append(el('h3','Link soil reports to a bed'));const status=el('p');status.setAttribute('role','status');const form=el('form'),list=el('div');root.append(form,status,list);
+ const label=(name,input)=>{input.setAttribute('aria-label',name);const l=el('label',name);l.style.cssText='display:block;margin:8px 0';input.style.cssText='display:block;max-width:100%;min-height:44px';l.append(input);form.append(l);return input;};
+ const report=label('Saved soil report',el('select'));report.required=true;report.append(new Option('Choose a report',''),...reports.map(r=>new Option(`${r.date||'Undated'} · ${r.bed||'No area'} · ${r.laboratory||'No laboratory'} · pH ${r.ph??'unknown'}`,r.id)));
+ const bed=label('Destination garden bed',el('select'));bed.required=true;bed.append(new Option('Choose a bed',''),...session.workspace().beds.map(b=>new Option(b.name||b.id,b.id)));
+ const confirm=label('This soil sample represents the selected bed.',el('input'));confirm.type='checkbox';confirm.required=true;
+ const save=el('button','Link soil report');save.type='submit';form.append(save);
+ function render(){list.replaceChildren();for(const row of session.workspace().property?.soilReports||[]){const item=el('p',`${row.date} · ${session.workspace().beds.find(b=>b.id===row.bedId)?.name||'Former bed'} · ${row.laboratory||'No laboratory'}`),remove=el('button','Unlink soil report');remove.type='button';remove.onclick=async()=>{remove.disabled=true;try{await session.unlinkSoil(row.notebookOrigin.id);status.textContent='Soil link removed. Original Notebook report retained.';render();}catch(e){status.textContent=e.message;remove.disabled=false;}};item.append(' ',remove);list.append(item);}}
+ form.onsubmit=async e=>{e.preventDefault();save.disabled=true;try{await session.linkSoil(bed.value,report.value);status.textContent='Soil report linked. Open garden home to review its history.';confirm.checked=false;render();}catch(error){status.textContent=error.message;}finally{save.disabled=false;}};render();return root;
+}

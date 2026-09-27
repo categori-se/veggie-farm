@@ -6,6 +6,8 @@ A data-driven gardening resource and Garden Planning Studio for Massachusetts ga
 
 Both the resource site (`/`) and Studio (`/studio`) are open-source applications. Local gardens and notebook records require no account. They stay in your browser until you explicitly export them; keep backups before clearing browser data. Public-garden reconstructions are incomplete examples, not surveyed plans or verified planting inventories. Recommendations retain horticultural uncertainty.
 
+[Visual user guide](https://veggie.farm/guide) · [Guide source](src/guide.md)
+
 ## Learn how this was built
 
 I took this on as a large, enthusiastic vibe-coding project over roughly a couple of weeks, prompted by the AWS Zero to Shipped hackathon. The challenge made it feel like a fun time to try: bring together public and online datasets, open-source web tools and AI assistance, and see how much of a useful gardening application I could build. The project continues to evolve from that first burst of work.

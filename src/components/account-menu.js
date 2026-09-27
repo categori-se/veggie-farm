@@ -1,3 +1,4 @@
+import {mountJourneyLinks} from './journey-links.js';
 import {NOTEBOOK_STORAGE} from '../data/runtime-capabilities.js';
 import {browserSessionState} from '../lib/account/auth.js';
 import {createCognitoBrowserAuth} from '../lib/account/cognitoAuth.js';
@@ -6,6 +7,7 @@ import {currentProtectedReturnTo} from '../lib/account/authNavigation.js';
 // Session presence is a UI hint, not authorization. Every private API request
 // still goes through server-side JWT/ownership checks. No token or email is shown.
 export function mountAccountMenu({invalidation}={}) {
+ mountJourneyLinks({invalidation,local:NOTEBOOK_STORAGE==='local'});
  if(NOTEBOOK_STORAGE==='local'){document.querySelectorAll('[data-session-status]').forEach(n=>n.textContent='Saved in this browser');document.querySelectorAll('[data-account-action]').forEach(n=>n.hidden=true);return;}
 
  const links=[...document.querySelectorAll('[data-account-action]')];

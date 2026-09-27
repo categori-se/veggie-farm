@@ -202,7 +202,7 @@ const notebookRevision = Generators.observe(notify => {
 ```
 
 ```js
-observationSave ? html`<p class="save-status" data-saved=${observationSave.saved}>${observationSave.saved ? (localNotebook ? "Note saved in this browser." : "Note draft recorded. Check the account save status above.") : observationSave.error || "This browser did not allow the note to be saved."}</p>` : html``
+if (observationSave) display(html`<p class="save-status" data-saved=${observationSave.saved}>${observationSave.saved ? (localNotebook ? "Note saved in this browser." : "Note draft recorded. Check the account save status above.") : observationSave.error || "This browser did not allow the note to be saved."}</p>`);
 ```
 
 ```js
@@ -216,9 +216,13 @@ html`<section class="garden-data-footer">
   <div>
     <p class="kicker">Your data</p>
     <h2>Keep a copy outside the browser</h2>
-    <p>Your account holds the saved notebook; this browser may also hold an unsent draft. Keep an export before resolving a conflict or clearing browser data.</p>
+    <p>${localNotebook
+      ? (notebookSession.ready ? "Your notebook stays in this browser. Export a backup before clearing browser data or moving to another device." : "Browser storage is unavailable. Check the notebook controls above before continuing.")
+      : notebookSession.ready
+        ? "Export your loaded notebook and any browser draft. Check the account save status above before leaving."
+        : "Load your notebook using the account controls above before exporting. If you have an unsent draft, use Export browser draft there to keep a copy."}</p>
   </div>
-  <a class="button-secondary" href=${exportHref} download="veggie-farm-garden.json">Export garden data</a>
+  ${notebookSession.ready ? html`<a class="button-secondary" href=${exportHref} download="veggie-farm-garden.json">Export notebook backup</a>` : html`<a class="button-secondary" href="#notebook-account">Open notebook controls ↑</a>`}
 </section>`
 ```
 
