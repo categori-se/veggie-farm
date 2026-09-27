@@ -447,8 +447,8 @@
     },
     {
       "path": "docs/architecture/planting-journal.md",
-      "bytes": 2776,
-      "sha256": "17616c1aa32f42dbf00195daf5f84920f2ca9bf2e5f762cb03ed3c9b6e772f80",
+      "bytes": 3680,
+      "sha256": "c2e0437a15d41f6c5609b00b488efdb554b47f352f2666f8f423dca758d27f9a",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1305,8 +1305,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 15297,
-      "sha256": "7349e5dee425ca4c04d18187bfd259a62826e4a023eeaa18a7e905392f32932e",
+      "bytes": 16619,
+      "sha256": "ae9a7c5ee9277bcb105ac99a07bbf5ef652ae3681067e21d62d24c54383e30e4",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1407,8 +1407,8 @@
     },
     {
       "path": "src/components/observation-photo-picker.js",
-      "bytes": 2285,
-      "sha256": "d8d1e08a4f203cc0c204b7861b0135621b246128feb99640b1b11e83ae3e0d24",
+      "bytes": 2511,
+      "sha256": "d28f4f4469ed8af8ece6eab25e5b79c5c02a2355a18114ab2804a27308c8f1f2",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

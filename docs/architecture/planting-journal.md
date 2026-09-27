@@ -13,3 +13,9 @@ Observations reside on the existing placement records, travel with garden backup
 ## Common observation shortcuts
 
 The shared garden log offers explicit buttons for germination, transplanting, flowering, harvest, pests, watering, frost damage and notes. They select the existing event type without saving or recreating the form, so the selected planting/date and entered notes, harvest values and photo remain intact. Harvest focuses quantity; Note focuses the note field. The complete event selector remains available and keeps the buttons’ pressed state synchronized. Save remains explicit, with the existing account/local failure handling and independent planned dates. The same component serves My Garden, Journal, Today’s garden prompts and Studio.
+
+## Unsubmitted observation drafts
+
+Each open garden-log window keeps a separate in-memory draft per stable planting ID. Plant, bed, year and workspace changes retain event/date, notes, harvest fields and the prepared photo. New contexts do not inherit another planting’s unsaved values. Today’s suggested type fills an empty event choice; it does not replace a chosen type.
+
+Saving captures the target ID and inputs, disables that draft while pending, and clears only its draft on success. Failed saves retain the draft and error. Completing a save while another planting is being edited does not erase that other draft. Asynchronous photo completion updates the original draft rather than the currently selected plant. These drafts are scoped to the open window and are cleared on close; they are not persisted, uploaded, or shared across account sessions. Save before closing or leaving the page.
