@@ -1,5 +1,5 @@
 // Duplicate a plan, never its observed history. The original remains untouched.
-export function duplicatePlanting({source,bed,plants,placements,id}) {
+export function duplicatePlanting({source,bed,plants,placements,id,preferSourcePosition=false}) {
  if(!source||!bed||source.bedId!==bed.id||!id||placements.some(p=>p.id===id))throw Error('Select a planting in a bed to duplicate.');
  const lookup=new Map(plants.map(p=>[p.id,p]));
  const radius=p=>{const plant=lookup.get(p.plantId),spacing=Number(plant?.spacing),width=Number(plant?.matureDiameter);return Number.isFinite(spacing)&&spacing>0&&Number.isFinite(width)&&width>0?Math.max(spacing,width)/2:NaN;};
@@ -20,7 +20,7 @@ export function duplicatePlanting({source,bed,plants,placements,id}) {
   }
   return occupied.every(p=>Math.hypot(x-p.x,y-p.y)>=r+radius(p)-1e-8);
  };
- const candidates=[];
+ const candidates=preferSourcePosition?[{x:source.x,y:source.y}]:[];
  // Try neighbors first, then a bounded grid across the actual bed.
  for(let i=0;i<16;i++){const angle=i*Math.PI/8;candidates.push({x:source.x+2*r*Math.cos(angle),y:source.y+2*r*Math.sin(angle)});}
  const step=Math.max(1,r/2,Math.max(bed.width,bed.height)/120);

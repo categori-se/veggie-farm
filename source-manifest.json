@@ -423,8 +423,8 @@
     },
     {
       "path": "docs/architecture/season-preview-navigation.md",
-      "bytes": 1988,
-      "sha256": "88014eaece491a2c4614b44c3241598b5e2a59999fae74aca31de5da74dab348",
+      "bytes": 2106,
+      "sha256": "989979f74d16af20bd6cbf13f9439fc6f94a8b6560a8f928272cd51c04b343ae",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -443,6 +443,12 @@
       "path": "docs/architecture/studio-navigation.md",
       "bytes": 4234,
       "sha256": "ee1fe25421b146f1763b476d27046af0a0a5a893320b5b0742866319f8fb4a4d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/architecture/succession-planning.md",
+      "bytes": 1911,
+      "sha256": "3028a5dc64ec4509d9291bef9e71c7133f826151c3855d57e23f263f7cbcd473",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -693,8 +699,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 4739,
-      "sha256": "b927a992f478f64153965da5f383ac9d02ac67e8b44fc6044ce69d160c437386",
+      "bytes": 4871,
+      "sha256": "830864c2fa2cc860f98d135587c236cc12e79e0b4e44e246d7ced23e2a53553c",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1209,8 +1215,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 564686,
-      "sha256": "3983346e92abb9f605c66163d67b0e7d391b6a97d5d338871f0bc0fb631e6c13",
+      "bytes": 566316,
+      "sha256": "3dd9643378f028f18cbb070ac486ea08c184f80df60e45ad9c1b3dd6f52d9821",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1274,6 +1280,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "src/components/planner-succession.js",
+      "bytes": 2202,
+      "sha256": "9816b4536f6ce4fcab015ce3b915e1b49673f277117a30b1c1941afbd5ba788c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/planner-sun-preview.js",
       "bytes": 14228,
       "sha256": "8ed5539c15e502442e4f956d8c7cf6a1819edef627ae7739193e6a31798c0cde",
@@ -1281,8 +1293,8 @@
     },
     {
       "path": "src/components/planner-time-preview.js",
-      "bytes": 6116,
-      "sha256": "dde1eef49eba49b0939118b720d2837024084c03d22e380e20cf21c55a509f06",
+      "bytes": 6190,
+      "sha256": "b962c7cb00fe0ea32234cd9eb96855650de233f827d79daf0918be6a13aa4c42",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2775,8 +2787,8 @@
     },
     {
       "path": "src/lib/garden/duplicatePlanting.js",
-      "bytes": 2608,
-      "sha256": "3acb7ea526c00c55744fe82fdb1fa8acf3b6e5473dcee79082d3e1ce1f68371b",
+      "bytes": 2682,
+      "sha256": "57b23f8b605f188efcb280ef1a25ec342cb44653e6814c47c80c9fbd5f85d9a9",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2892,6 +2904,12 @@
       "bytes": 1908,
       "sha256": "15814e968752c4e44de37f59565329bd6150182513917b6da15aa603a4478a8b",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/lib/garden/successionPlanting.js",
+      "bytes": 2071,
+      "sha256": "0b837581521a39380608b9f0463f750931be93202bf83b0d6fefcdff1a3c7015",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/lib/media/runtimeMedia.js",
@@ -3900,6 +3918,12 @@
       "bytes": 9935,
       "sha256": "9ee0467de864c463199bb0e7cbda34bc09653dc706606c7c819cb643b84b78d4",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/successionPlanting.test.mjs",
+      "bytes": 2531,
+      "sha256": "4edd03e68849e9e0612466df81bd7af75ba85b7b757933214a4e8100c6cd24c6",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/treeObservation.test.js",

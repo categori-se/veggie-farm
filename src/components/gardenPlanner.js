@@ -1,3 +1,5 @@
+import {successionPlanting,plannedOccupanciesOverlap} from "../lib/garden/successionPlanting.js";
+import {plannerSuccession} from "./planner-succession.js";
 import {gardenPlantChoices} from "../lib/garden/gardenPlantChoices.js";
 import {duplicatePlanting} from "../lib/garden/duplicatePlanting.js";
 import {plantVisualSpec} from "../lib/plants/plantVisualSpec.js";
@@ -7311,6 +7313,7 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         <div class="status-pill ${status.ok ? "ok" : "warning"}">${status.ok ? "Spacing ok" : "Needs adjustment"}</div>
         <button type="button" data-action="duplicate-placement" ${!plannerCanEditFeature(state,"placement")||!placement.bedId?'disabled':''}>Duplicate planting</button>
         <p data-role="duplicate-status" role="status"></p>
+        <button type="button" data-action="next-crop" ${!plannerCanEditFeature(state,"placement")||!placement.bedId?'disabled':''}>Plan next crop here</button>
         <p class="plant-planning-dimensions">Mature planning size: ${Number(currentPlant?.matureDiameter)>0?`${round(currentPlant.matureDiameter)}″ wide`:"width unknown"} · ${Number(currentPlant?.height)>0?`${round(currentPlant.height)}″ high`:"height unknown"}. Spacing: ${Number(currentPlant?.spacing)>0?`${round(currentPlant.spacing)}″`:"unknown"}.</p>
         <label><span>Orientation °</span><input data-placement-field="rotation" type="number" min="0" max="360" step="any" value="${round(((Number(placement.rotation)||0)*180/Math.PI%360+360)%360)}"></label>
         <label>
@@ -7364,6 +7367,21 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         }
         refs.selectedPlacement.querySelector('[data-role="duplicate-status"]').textContent="Copy selected. Planned dates retained; observations and harvest history stay with the original. Spacing checks use the full plan.";
       }catch(error){refs.selectedPlacement.querySelector('[data-role="duplicate-status"]').textContent=error.message;}
+    });
+
+    refs.selectedPlacement.querySelector('[data-action="next-crop"]').addEventListener("click",()=>{
+      if(!plannerCanEditFeature(state,"placement"))return;
+      const dialog=plannerSuccession({source:placement,plants:gardenPlantChoices(state).all,onSave:values=>{
+        if(!plannerCanEditFeature(state,"placement"))throw Error("Enable plant editing first.");
+        const source=state.placements.find(p=>p.id===placement.id);
+        if(!source)throw Error("The original planting is no longer available.");
+        const next=successionPlanting({source,bed:bedForPlacement(state,source),plants:state.plants,placements:state.placements,id:uniquePlacementId(state),...values});
+        const before=structuredCloneCompat(state);
+        state.placements.push(next);state.selectedPlacementId=next.id;state.selectedPlantId=next.plantId;state.previewDate=next.planted;renderAll();
+        if(refs.root.querySelector('[data-role="storage-status"]').dataset.saved!=="true"){
+          Object.assign(state,before);renderAll();throw Error("Could not save the next crop. Your original plan is unchanged; free browser storage and try again.");
+        }
+      }});refs.root.append(dialog);dialog.showModal();
     });
 
     refs.selectedPlacement.querySelector('[data-action="delete-placement"]').addEventListener("click", () => {
@@ -9814,7 +9832,7 @@ function placementStatus(placement, state) {
   }
 
   for (const other of placementsForBed(state, bed.id)) {
-    if (other.id === placement.id) continue;
+    if (other.id === placement.id || !plannedOccupanciesOverlap(placement,other)) continue;
     const otherPlant = plantById(state, other.plantId);
     if (!otherPlant) continue;
     const required = (plant.spacing + otherPlant.spacing) * bed.crowding / 2;
@@ -9850,6 +9868,7 @@ function collectSpacingIssues(state) {
     if (!plantA) continue;
     for (let j = i + 1; j < placements.length; j += 1) {
       const b = placements[j];
+      if(!plannedOccupanciesOverlap(a,b))continue;
       const plantB = plantById(state, b.plantId);
       if (!plantB) continue;
       const required = (plantA.spacing + plantB.spacing) * bed.crowding / 2;
