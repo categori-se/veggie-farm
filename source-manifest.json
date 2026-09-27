@@ -380,6 +380,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/journey-navigation.md",
+      "bytes": 1350,
+      "sha256": "ca4b97c5e25cde3e18de442ef72f56aee701a17e9ef8014962be151632f15b43",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/media.md",
       "bytes": 1730,
       "sha256": "26ae2975b72bee044e69d230dbf691c8292d80ea8d6397111f643fc3b7e634c7",
@@ -849,8 +855,8 @@
     },
     {
       "path": "observablehq.config.js",
-      "bytes": 7985,
-      "sha256": "1ad97aaa6118b1efe1f51b8d0d888581139d079c3a175eb8f1de4d52b533e820",
+      "bytes": 8081,
+      "sha256": "6ae931c1e9ac7e851ef1307e505fa03096cf74310b0d37e29c9d1ea2c089793d",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1083,8 +1089,8 @@
     },
     {
       "path": "scripts/lib/site-shell.mjs",
-      "bytes": 5094,
-      "sha256": "bac9fd517f0b469f55cb34fd63f9c33a5800eec38c3481ff03dbbd399879c2a9",
+      "bytes": 4441,
+      "sha256": "08c8ec97098399a3e9abf33faa07973e8db7b29884a95f50cbe7ee0e7e006f4b",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1155,8 +1161,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 10011,
-      "sha256": "c9dc3a9355bdf179ee57858fdd5e989fd0bbfba3ec4bc465efd2f96975fed93c",
+      "bytes": 10109,
+      "sha256": "1c7cc5319947be5e712d9e813ce8c5d04e70f8e7a17825f7f0c5958c2dc1dffa",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1269,8 +1275,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 13127,
-      "sha256": "b3b6e87a4ef80eb424d95f6e94bb85efecc7047b6af4c09a24f8e2b2a0c0b296",
+      "bytes": 14298,
+      "sha256": "8f6a28be790fa42728623a89cbbbba5a7ec686cf7572fc19c4bd5a85b573306c",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2792,6 +2798,18 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/journal.md",
+      "bytes": 498,
+      "sha256": "a88db373d2282c53e35ea3067fbe0723ccb543c578bd50b37519f9e741d9bd07",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/learn.md",
+      "bytes": 534,
+      "sha256": "036607aeb3ad69b7679082612dcc764fd3e62e12437dd5d61e070c9cfadeedc0",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/account/auth.js",
       "bytes": 4978,
       "sha256": "1042c4a8793e5faeeb7e8885c22bc0c4208e84c4701782d267cc4a4ced4753ca",
@@ -3828,6 +3846,12 @@
       "bytes": 1926,
       "sha256": "58aef0d014ffa7008f0fcec4c0e4ffc5ecfdf1003ad10b6d65478a812a24ffb5",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/journeyNavigation.test.mjs",
+      "bytes": 1199,
+      "sha256": "e1823a2d3b7f8a8ccc24bbcd5dbbb80b7350a6a558c11627e2c8fcac72735e9a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/kmlToGeoJson.test.js",

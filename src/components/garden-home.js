@@ -8,7 +8,7 @@ import {gardenJourney,JOURNAL_TYPES} from '../lib/garden/plantingJournal.js';
 const el=(tag,text)=>{const node=document.createElement(tag);if(text!=null)node.textContent=text;return node;};
 const action=(label,fn)=>{const b=el('button',label);b.type='button';b.style.cssText='min-height:44px;padding:8px 12px;font:inherit';b.onclick=fn;return b;};
 const localDate=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
-export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=localDate(),onLog,onPlan,onBackup,onReflection,onNextSeason,onOpenSeason,initialYear,planLabel="Open bed",savedMessage="Observation recorded in this garden draft. Use account save or export to keep a separate copy."}) {
+export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=localDate(),onLog,onPlan,onBackup,onReflection,onNextSeason,onOpenSeason,initialYear,view='overview',planLabel="Open bed",savedMessage="Observation recorded in this garden draft. Use account save or export to keep a separate copy."}) {
  const dialog=el('dialog');dialog.setAttribute('aria-label','My garden');dialog.style.cssText='box-sizing:border-box;font:14px/1.5 system-ui,sans-serif;width:min(960px,94vw);max-height:90svh;overflow:auto;padding:16px;background:var(--theme-background,#18231b);color:var(--theme-foreground,#eef2e8);border:1px solid #71846d';
  const header=el('header');header.style.cssText='display:flex;justify-content:space-between;gap:12px;align-items:center;position:sticky;top:-16px;background:inherit;z-index:1';const title=el('h2');header.append(title,action('Close',()=>dialog.close()));dialog.append(header);
  const intro=el('p','Choose a planting to record what happened, or open a bed to continue planning.');dialog.append(intro);
@@ -17,10 +17,19 @@ export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=loca
  const attention=el('section');attention.setAttribute('aria-label','Garden attention');
  const reflectionDrafts=new Map(),reflection=el('div'),soilHistory=el('div');
  const learning=el('div');const summary=el('p'),log=el('section'),plans=el('section'),history=el('section');dialog.append(summary,attention,log,learning,soilHistory,reflection,plans,history);
- let choice=selectedPlantingId||'',historyLimit=30,attentionLimit=6,logType='';
+ let choice=selectedPlantingId||'',historyLimit=30,attentionLimit=6,logType='',activeView=['journal','learn'].includes(view)?view:'overview';
+ const views=el('nav');views.setAttribute('aria-label','Garden workspace');views.style.cssText='display:flex;flex-wrap:wrap;gap:6px;margin:12px 0';const viewButtons=[];for(const [id,label] of [['overview','My Garden'],['journal','Journal'],['learn','Learn']]){const button=action(label,()=>{activeView=id;updateView();});viewButtons.push([id,button]);views.append(button);}dialog.insertBefore(views,intro);
  const plants=()=>new Map(getPlants().map(p=>[p.id,p]));
+ function updateView(){
+  for(const [id,button] of viewButtons)button.setAttribute('aria-pressed',String(activeView===id));
+  for(const node of [attention,plans,contextDetails])node.hidden=activeView!=='overview';
+  for(const node of [log,history])node.hidden=activeView==='learn';
+  for(const node of [learning,soilHistory,reflection])node.hidden=activeView==='journal';
+  intro.textContent=activeView==='journal'?'Record what happened and revisit this garden’s history.':activeView==='learn'?'Review your recorded outcomes, soil reports and reflections before planning next year.':'Choose a planting to record what happened, or open a bed to continue planning.';
+ }
  function render(){
-  const workspace=getWorkspace(),catalog=plants(),season=Number(year.value);if(!Number.isInteger(season)||season<1900||season>9999)return;
+  const workspace=getWorkspace(),catalog=plants(),season=Number(year.value);
+  updateView();if(!Number.isInteger(season)||season<1900||season>9999)return;
   const context=workspace.property?.gardenContext;conditions.textContent=context?[`Notebook context: ${context.locationLabel||context.gardenName||'garden profile'}`,context.sunHours!=null?`${context.sunHours} sun hours`:null,context.climate?.lastFrostMonthDay?`last frost setting ${context.climate.lastFrostMonthDay}`:null,context.climate?.firstFrostMonthDay?`first frost setting ${context.climate.firstFrostMonthDay}`:null,context.soil?.texture,context.irrigation,'Profile settings, not newly measured conditions.'].filter(Boolean).join(' · '):'Garden conditions have not been associated yet.';
   const data=gardenJourney(workspace,season);title.textContent=workspace.name||workspace.property?.name||'My garden';
   const selectedBed=bedFilter.value;bedFilter.replaceChildren(new Option('All beds',''),...data.beds.map(b=>new Option(b.name,b.id)));if(data.beds.some(b=>b.id===selectedBed))bedFilter.value=selectedBed;
