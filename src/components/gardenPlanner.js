@@ -1390,6 +1390,7 @@ export function gardenPlanner(options = {}) {
     remove:id=>changeTray(()=>{state.property.planningTray=(state.property.planningTray||[]).filter(e=>e.id!==id);})
   });
   refs.plantList.before(tray.root);
+  root.append(tray.dialog);
 
   requestAnimationFrame(() => {
     three = createThreeScene(refs.threeHost, state, renderSharedViews, {

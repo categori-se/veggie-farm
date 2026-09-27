@@ -1173,8 +1173,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 557312,
-      "sha256": "22f2bb9e1142fa0a49512844731236a111244c7b48222de82ff7b5edcaefe8d6",
+      "bytes": 557340,
+      "sha256": "5a1990ecd805deaf1e272009845b38a5b82cdf95b4ea7b2a0c3e00221bf553b5",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1257,8 +1257,8 @@
     },
     {
       "path": "src/components/planning-tray.js",
-      "bytes": 5091,
-      "sha256": "69bbe32dfafcb1343aa64e55dd4ddd8eb5de4790b918eb4f332f53142268fae4",
+      "bytes": 5078,
+      "sha256": "9ae72df8ae6a09ab0aeabacd5c92fdee487424bebf4664c7569f83c4a3649968",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

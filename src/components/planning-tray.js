@@ -3,7 +3,7 @@ const el=(tag,text)=>{const e=document.createElement(tag);if(text!=null)e.textCo
 export function planningTray({getState,commit,createGarden,openBed,remove,invalidation}){
  const root=el('div'),launch=el('button','Planning tray');launch.type='button';root.append(launch);
  let pending=null,error='';try{pending=readPlantIntent(location.hash);}catch(e){error=e.message;}
- const dialog=el('dialog');dialog.className='planning-tray-dialog';dialog.style.cssText='width:min(600px,calc(100vw - 32px));max-height:85svh;overflow:auto;box-sizing:border-box';root.append(dialog);
+ const dialog=el('dialog');dialog.className='planning-tray-dialog';dialog.style.cssText='width:min(600px,calc(100vw - 32px));max-height:85svh;overflow:auto;box-sizing:border-box';
  const label=(name,field)=>{const l=el('label',name);l.style.cssText='display:grid;gap:4px;margin:8px 0';l.append(field);return l;};
  function draw(){
   dialog.replaceChildren();const close=el('button','Back to garden');close.type='button';close.onclick=()=>dialog.close();dialog.append(close,el('h2','Planning tray'));
@@ -26,5 +26,5 @@ export function planningTray({getState,commit,createGarden,openBed,remove,invali
  }
  function open(){draw();dialog.showModal();}launch.onclick=open;
  function update(){launch.textContent=`Planning tray · ${(getState().property.planningTray||[]).length}`;}
- if(pending||error)requestAnimationFrame(()=>{if(root.isConnected)open();});invalidation?.then(()=>dialog.remove());return {root,update};
+ if(pending||error)requestAnimationFrame(()=>{if(root.isConnected)open();});invalidation?.then(()=>dialog.remove());return {root,dialog,update};
 }
