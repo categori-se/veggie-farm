@@ -1,5 +1,7 @@
 # veggie.farm
 
+[Why I’m building veggie.farm — the personal story](src/about/index.md) · [Read it on the site](https://veggie.farm/about/)
+
 A data-driven gardening resource and Garden Planning Studio for Massachusetts gardeners. Explore crop guides and seasonal tools, keep a notebook, plan beds and plants in 2D/3D, and save or exchange your garden plans.
 
 Both the resource site (`/`) and Studio (`/studio`) are open-source applications. Local gardens and notebook records require no account. They stay in your browser until you explicitly export them; keep backups before clearing browser data. Public-garden reconstructions are incomplete examples, not surveyed plans or verified planting inventories. Recommendations retain horticultural uncertainty.
