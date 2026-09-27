@@ -1,3 +1,4 @@
+import {readGardenHandoff,withoutGardenHandoff} from '../lib/garden/gardenHandoff.js';
 import {gardenSelection} from '../lib/garden/gardenSelection.js';
 import {gardenAttention} from '../lib/garden/gardenAttention.js';
 import {notebookGardenLinks} from './notebook-garden-links.js';
@@ -6,15 +7,16 @@ import {notebookOwner} from '../lib/account/notebookStorage.js';
 import {accountGardenJournal} from '../lib/garden/accountGardenJournal.js';
 import {gardenHome} from './garden-home.js';
 import {NOTEBOOK_STORAGE} from '../data/runtime-capabilities.js';
-export function accountGardenHome({client=createPlannerCloudClient(),owner=notebookOwner,invalidation,local=NOTEBOOK_STORAGE==='local',showToday=false,resume=true,compact=false,onGardenChange=()=>{}}={}) {
+export function accountGardenHome({client=createPlannerCloudClient(),owner=notebookOwner,invalidation,local=NOTEBOOK_STORAGE==='local',showToday=false,resume=true,compact=false,handoff=readGardenHandoff(globalThis.location?.hash),onGardenChange=()=>{}}={}) {
  const root=document.createElement('section');root.className='decision-workbench';root.setAttribute('aria-label','Saved garden home');
  root.innerHTML='<h2>My saved gardens</h2><p>Open the same account garden you saved in Plan. Its beds, plantings and observations stay together.</p><button type="button" data-refresh>Load saved gardens</button><label>Account save <select data-save><option value="">Choose an account save</option></select></label><label>Garden <select data-garden disabled></select></label><button type="button" data-open disabled>Open garden home</button><p data-status role="status"></p><p data-legacy-notes>Older notebook entries remain below. They are not automatically assigned to a garden.</p>';
  const select=root.querySelector('[data-save]'),gardens=root.querySelector('[data-garden]'),open=root.querySelector('[data-open]'),status=root.querySelector('[data-status]'),refresh=root.querySelector('[data-refresh]');
  const overview=document.createElement('section');overview.setAttribute('aria-label','Your garden today');const links=document.createElement('section');root.append(overview,links);const remembered=gardenSelection({owner});let selectedPlantingId=null;
- const forget=document.createElement('button');forget.type='button';forget.textContent='Forget garden selection';forget.onclick=()=>{remembered.clear();reset();status.textContent='Garden selection forgotten on this browser. Saved garden data was not deleted.';};root.append(forget);
+ const consumeHandoff=()=>{if(handoff&&globalThis.location&&globalThis.history){const url=new URL(globalThis.location.href);url.hash=withoutGardenHandoff(url.hash);globalThis.history.replaceState(globalThis.history.state,'',url);}handoff=null;};
+ const forget=document.createElement('button');forget.type='button';forget.textContent='Forget garden selection';forget.onclick=()=>{consumeHandoff();remembered.clear();reset();status.textContent='Garden selection forgotten on this browser. Saved garden data was not deleted.';};root.append(forget);
  const session=accountGardenJournal({client,owner});let current=owner(),version=0,disposed=false,dialog=null;
  const reset=()=>{onGardenChange(null);overview.replaceChildren();selectedPlantingId=null;links.replaceChildren();version++;session.clear();select.replaceChildren(new Option('Choose an account save',''));gardens.replaceChildren();gardens.disabled=true;open.disabled=true;dialog?.close();dialog=null;};
- const check=()=>{if(owner()!==current){current=owner();reset();status.textContent='Account changed. Reload your saved gardens.';if(resume&&!local)restoreSelection();}};
+ const check=()=>{if(owner()!==current){if(current)handoff=null;current=owner();reset();status.textContent='Account changed. Reload your saved gardens.';if(resume&&!local)restoreSelection();}};
  refresh.onclick=async()=>{check();if(!current){status.textContent='Sign in to open your account gardens.';return;}reset();const request=version;refresh.disabled=true;status.textContent='Loading saved gardens…';try{let cursor=null,items=[];do{const result=await client.list(cursor);if(disposed||request!==version||owner()!==current)return;items.push(...result.plans);cursor=result.nextCursor;if(items.length>=200)break;}while(cursor);for(const item of items)select.append(new Option(`${item.updatedAt?.slice(0,10)||'Saved plan'} · ${item.id.slice(-8)}`,item.id));status.textContent=items.length?`Choose a save, then a garden.${cursor?' Showing the first 200 saves.':''}`:'No account gardens yet. Create a garden in Plan and save an account copy.';}catch{status.textContent='Could not load gardens. Retry when connected.';}finally{refresh.disabled=false;}};
  select.onchange=async()=>{onGardenChange(null);overview.replaceChildren();links.replaceChildren();gardens.replaceChildren();gardens.disabled=true;open.disabled=true;dialog?.close();if(!select.value)return;const request=++version;status.textContent='Opening account save…';try{const rows=await session.load(select.value);if(disposed||request!==version||owner()!==current)return;gardens.append(new Option('Choose a garden',''),...rows.map(g=>new Option(g.name,g.id)));gardens.disabled=false;status.textContent='Choose the garden to review or log.';}catch(error){status.textContent=error.message;}};
  gardens.onchange=()=>{onGardenChange(null);overview.replaceChildren();selectedPlantingId=null;try{session.select(gardens.value);onGardenChange(session.workspace());remembered.write({saveId:select.value,gardenId:gardens.value});renderOverview();links.replaceChildren(notebookGardenLinks({session}));open.disabled=false;status.textContent=compact?'':'Ready. Observations save to this account garden.';}catch(error){open.disabled=true;status.textContent=error.message;}};
@@ -31,12 +33,12 @@ export function accountGardenHome({client=createPlannerCloudClient(),owner=noteb
   if(tasks.length>3)overview.append(text('p',`${tasks.length-3} more prompts in your garden home.`));
  }
  async function restoreSelection(){
-  const chosen=remembered.read();if(!chosen||!current||local)return;
+  const chosen=handoff||remembered.read();if(!chosen||local)return;if(!current){status.textContent='Sign in to open this saved garden, then return to this page.';return;}
   const request=++version;status.textContent='Opening your selected garden…';
   try{const rows=await session.load(chosen.saveId);if(disposed||request!==version||owner()!==current)return;
    select.replaceChildren(new Option('Choose an account save',''),new Option('Previously selected account save',chosen.saveId));select.value=chosen.saveId;gardens.replaceChildren(new Option('Choose a garden',''),...rows.map(g=>new Option(g.name,g.id)));gardens.disabled=false;
    if(!rows.some(g=>g.id===chosen.gardenId)){status.textContent='Your previous garden is no longer in this save. Choose another garden.';return;}
-   gardens.value=chosen.gardenId;gardens.onchange();
+   gardens.value=chosen.gardenId;gardens.onchange();consumeHandoff();
   }catch{if(!disposed&&request===version&&owner()===current){session.clear();status.textContent='Could not reopen your selected garden. Load saved gardens to retry.';}}
  }
  if(compact){

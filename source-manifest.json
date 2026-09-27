@@ -362,6 +362,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/garden-handoff.md",
+      "bytes": 1546,
+      "sha256": "e7d1a85e4115e4ccd84355d95afae068b18f966ae0efc7dd733ebf93bac89b87",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/garden-layer-model.md",
       "bytes": 5011,
       "sha256": "18d0020adfa9230f0311a40e07dcdb079de08c24c9af3a2408398ee7019626db",
@@ -1131,8 +1137,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 8973,
-      "sha256": "566eedeef454bae5d45e00f519d34d369d84461db390dce9650c96fc345127c5",
+      "bytes": 9519,
+      "sha256": "cae99246973238ed0cb005eda6237109cd3102b6ed1cd8e5be8a0b5b2b654549",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1365,8 +1371,8 @@
     },
     {
       "path": "src/components/plannerAccount.js",
-      "bytes": 9185,
-      "sha256": "1578ab652433cdc66d25ce7bc74fe4d8a70f8fbf4d4782443c1641fa66f1574c",
+      "bytes": 9839,
+      "sha256": "cd7b0497f098b3dd9af98d0c4604d59ee862c9b80f16b73098fd8a521910e47b",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2876,6 +2882,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "src/lib/garden/gardenHandoff.js",
+      "bytes": 970,
+      "sha256": "debcd0a8cd43d4fdffd3dc75ff51bc74d76e8024938c5624a349be20bb15a85c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/gardenPlantChoices.js",
       "bytes": 790,
       "sha256": "c1163d82aab4cb747d812df1d090d58b386f83c40f2abc428f2e02361721f3d0",
@@ -3630,6 +3642,12 @@
       "bytes": 8322,
       "sha256": "4c82f693e7da8eb27e524321da7162388113087698545531bc4eaa2cb3a82c72",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/gardenHandoff.test.mjs",
+      "bytes": 1334,
+      "sha256": "7de148725d89f9d230ae723467f384a93d38de390d49ca55e7d994258200cb59",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/gardenPlannerCanonicalDefaults.test.js",

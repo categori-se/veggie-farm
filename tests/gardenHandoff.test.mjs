@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {gardenTodayHref,readGardenHandoff,withoutGardenHandoff} from '../src/lib/garden/gardenHandoff.js';
+const selection={saveId:'12345678-1234-1234-1234-123456789abc',gardenId:'bed garden & north/#'};
+test('cross-origin handoff carries only identifiers in the fragment',()=>{const url=new URL(gardenTodayHref({...selection,notes:'private',token:'secret'}));assert.equal(url.origin,'https://veggie.farm');assert.equal(url.pathname,'/tools/today');assert.equal(url.search,'');assert.deepEqual(readGardenHandoff(url.hash),selection);assert.ok(!url.href.includes('secret'));assert.ok(!url.href.includes('private'));});
+test('invalid or ambiguous handoffs do not become a selection',()=>{for(const value of [null,{}, {...selection,saveId:'https://evil.test'}, {...selection,gardenId:''},{...selection,gardenId:'x'.repeat(201)}])assert.equal(gardenTodayHref(value),null);assert.equal(readGardenHandoff('#my-gardens'),null);assert.equal(readGardenHandoff(new URL(gardenTodayHref(selection)).hash+'&garden=other'),null);});
+test('consuming a handoff retains unrelated fragment parameters',()=>{const hash=new URL(gardenTodayHref(selection)).hash;assert.equal(withoutGardenHandoff(hash),'');assert.equal(withoutGardenHandoff(hash+'&section=notes'),'#section=notes');});
