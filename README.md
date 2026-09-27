@@ -6,6 +6,19 @@ A data-driven gardening resource and Garden Planning Studio for Massachusetts ga
 
 Both the resource site (`/`) and Studio (`/studio`) are open-source applications. Local gardens and notebook records require no account. They stay in your browser until you explicitly export them; keep backups before clearing browser data. Public-garden reconstructions are incomplete examples, not surveyed plans or verified planting inventories. Recommendations retain horticultural uncertainty.
 
+## Learn how this was built
+
+I chose gardening because I wanted a clean, persistent place to visualize plantings and remember how my garden changes. I also wanted to show how an AI assistant, public knowledge and community software can help someone build an application around something they care about.
+
+[Build something you care about](docs/building/README.md) is a narrative tour of that process, with links to the actual code, attribution boundaries and a runnable offline example. [Data intake and attribution](docs/building/data-intake.md) explains how to retain source identity and meaning as records move into an application.
+
+```sh
+node examples/building/walkthrough.mjs
+node --test tests/builderWalkthrough.test.mjs
+```
+
+The example needs only Node. It reads bundled evidence, derives an illustrative plant specification and validates a portable synthetic garden. It makes no network calls or writes. This is a reproducible learning contribution; independent gardener and builder outcomes still need testing.
+
 ## Run locally
 
 Use Node 24.18.0 and npm 11.16.0 (see `.nvmrc` and the lockfile). Python 3 is needed for the optional notice regression suite (`npm run test:notices`):
@@ -45,7 +58,7 @@ The community catalog uses generic crop guides and botanical references. Partner
 
 Original code is [GPL-3.0-only](LICENSE); [NOTICE](NOTICE.md) describes separate content/asset terms and outstanding review. Monetization focuses on optional managed hosting, synchronization, team administration, premium integrations and processing. There is no artificial limit on local projects or portable backups.
 
-This is a locally prepared community release candidate. No public repository or publication approval is implied by its existence.
+This is the public community source distribution. Private garden data, media and operational records remain outside it.
 
 No media files are included in this repository. Photographs, illustrations, fonts and 3D model files belong on separately operated storage; see [optional media](docs/architecture/media.md). Core planning uses procedural shapes without them.
 

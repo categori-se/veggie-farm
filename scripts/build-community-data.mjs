@@ -1,3 +1,5 @@
+// Intake rationale: docs/building/data-intake.md. This public build transforms
+// bundled reviewed records; it is not an acquisition or harvesting pipeline.
 // Build the independent community catalog without provider archives or credentials.
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';

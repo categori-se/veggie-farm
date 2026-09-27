@@ -1,3 +1,5 @@
+// Builder walkthrough: docs/building/README.md. Dimensions are planning inputs;
+// this visual interpretation does not create horticultural source evidence.
 // Catalog associations are identity-based. Renderers never infer species from appearance.
 const CATALOG_ARCHETYPES = Object.freeze({tomato:'upright-fruiting',lettuce:'low-rosette',carrot:'fine-tuft',basil:'paired-herb',blueberry:'rounded-shrub','eastern-white-pine':'layered-conifer'});
 export const PLANT_ARCHETYPES = Object.freeze({
