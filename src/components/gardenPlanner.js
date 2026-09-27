@@ -745,7 +745,7 @@ export function gardenPlanner(options = {}) {
   `;
   root.innerHTML = `
     <section class="planner-quick-start" aria-label="Start a garden plan">
-      <div><strong>Garden Planning Studio</strong><p>Try an editable 4 × 8 ft bed. No account needed.</p></div>
+      <div><strong>Plan your garden</strong><p>Start with a bed. Add plants. See how much space they need. No account needed.</p></div>
       <button data-role="start-practice-garden" type="button">Start with a 4 × 8 bed</button>
     </section>
     <div class="garden-shell">

@@ -78,10 +78,9 @@ display(studioHome);
   <div class="studio-context-title">
     <p class="kicker">Garden layout tool · Massachusetts</p>
     <h1 id="studio-title">Garden Planning Studio</h1>
-    <p>Design your own collection of gardens, spaces and beds. Arrange plants in 2D or 3D, keep named versions, and save private account copies to return from another browser. Try the editable practice bed without an account.</p>
-    <p>For Massachusetts and New England home gardeners: turn growing guidance into a plan for your own space. The practice garden needs no account or home address.</p>
-    <p><a href="https://veggie.farm/tools">Gardening guidance</a> · <a href="https://veggie.farm/about/build-evidence">How it was built: AWS and Codex evidence</a> · <a href="https://github.com/categori-se/veggie-farm">Open-source code</a></p>
-    <details class="studio-first-visit"><summary>First visit? Try a plan in two minutes</summary><ol><li>Select <strong>Start a practice garden</strong> for an editable 4 × 8 ft bed.</li><li>Name or resize the bed. Open <strong>Plants</strong>, add a supported plant and inspect its spacing.</li><li>Compare 2D and 3D if available. Save, reload and download a JSON backup to keep outside this browser.</li></ol><p>Public-garden studies are incomplete references. The preview shows layout and plant representations; it does not simulate sunlight or predict yield. Account uploads are optional and explicit.</p></details>
+    <p>Start with one bed, arrange plants in 2D or 3D, and keep a plan you can return to through the season.</p>
+    <p><a href="/guide">Read the visual user guide</a> · <a href="#garden-examples">Explore example gardens</a></p>
+    <details class="studio-first-visit"><summary>How your first plan works</summary><ol><li>Select <strong>Start with a 4 × 8 bed</strong>, then name your garden and adjust the bed’s dimensions.</li><li>Choose plants and an optional planting date.</li><li>Review the starting arrangement and spacing in 2D or 3D.</li><li>Name your plan and download a backup. You can save a private account copy separately.</li></ol><p>Your working plan stays in this browser. Plant sizes and timing are planning estimates; check your growing conditions before planting.</p></details>
   </div>
   <details class="studio-study-details" id="public-garden-examples">
     <summary>Public examples &amp; sources</summary>
@@ -103,7 +102,7 @@ display(studioHome);
 
 
 
-<section id="garden-examples" class="studio-shortlist" aria-labelledby="studio-shortlist-title">
+<details id="garden-examples" class="studio-shortlist"><summary>Explore example gardens</summary>
   <div>
     <p class="kicker">Parcel-mapped garden library</p>
     <h2 id="studio-shortlist-title">Open a demo garden</h2><p>Select a garden to view its full layout above. All four are also in the canvas’s Garden menu. These studies have incomplete planting records and interpreted boundaries.</p>
@@ -130,9 +129,13 @@ display(studioHome);
       <p>The corrected campus east of Main Road includes the Music Barn, interpreted garden terraces, visible meadow paths and Marble Palace ruins. Woodland routes obscured by canopy are omitted.</p>
     </button>
   </div>
-</section>
+</details>
 
 ```js
+const examplesDisclosure = document.getElementById("garden-examples");
+const openExamplesFromHash = () => {if (location.hash === "#garden-examples" && examplesDisclosure) examplesDisclosure.open = true;};
+openExamplesFromHash();
+window.addEventListener("hashchange", openExamplesFromHash);
 const gardenShortlistCards = [...document.querySelectorAll("[data-garden-reference]")];
 
 const syncGardenShortlist = (gardenId) => {
@@ -163,6 +166,7 @@ document.addEventListener("veggie-farm:active-garden", syncGardenFromPlanner);
 const gardenShortlistSyncFrame = requestAnimationFrame(syncGardenAfterMount);
 
 invalidation.then(() => {
+  window.removeEventListener("hashchange", openExamplesFromHash);
   cancelAnimationFrame(gardenShortlistSyncFrame);
   for (const card of gardenShortlistCards) card.removeEventListener("click", selectGardenFromShortlist);
   document.removeEventListener("veggie-farm:active-garden", syncGardenFromPlanner);

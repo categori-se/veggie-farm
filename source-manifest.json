@@ -537,8 +537,8 @@
     },
     {
       "path": "docs/architecture/today-plan.md",
-      "bytes": 2612,
-      "sha256": "91e11b5c0ee46356c4b94d6540461d2bfcc15e5ad6d7741be6fd290059fd72ac",
+      "bytes": 2981,
+      "sha256": "6a7efd0129348edd49f99be4ca8acecf8f89a80029481d0a8ee09e2efe1afb8e",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -789,8 +789,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 8114,
-      "sha256": "afee83646966faeea6c6809b3b63421aeeee4ceccab1e068d0f2252c92d6e345",
+      "bytes": 8269,
+      "sha256": "411aca919de3843b4d588726aaf25e7a0004dd1d048844f86ba3d9bb0fcd240c",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1329,8 +1329,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 570507,
-      "sha256": "9ffa645d632276b24ca2a4d34da2a055c35ed7446a711cad9bcf80e18799fc06",
+      "bytes": 570530,
+      "sha256": "08f412673313872a5f2ebcf2a56c2091e6e09211fdff1ccb8e147ed42a7cbf9b",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3471,8 +3471,8 @@
     },
     {
       "path": "src/studio.md",
-      "bytes": 12965,
-      "sha256": "f83dc7d734271e6c6d226f222790cd28aa2ee46f2c00a330fc04edce9cbb327e",
+      "bytes": 12857,
+      "sha256": "f25def9982ae82aa6c803996cbb03932266ee49c7cea8cf62f391aba1c63888d",
       "basis": "community source policy; rights status in release review"
     },
     {
