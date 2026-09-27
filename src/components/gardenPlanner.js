@@ -1,3 +1,12 @@
+import {saveBedConditions} from '../lib/garden/bedConditions.js';
+import {saveSeasonReflection} from '../lib/garden/seasonReflection.js';
+import {seasonPreviewDate} from "../lib/garden/nextSeason.js";
+import {plannerNextSeason} from "./planner-next-season.js";
+import {normalizeStudioMode, studioModeTransition} from "../lib/garden/studioMode.js";
+import {successionPlanting,plannedOccupanciesOverlap} from "../lib/garden/successionPlanting.js";
+import {plannerSuccession} from "./planner-succession.js";
+import {gardenPlantChoices} from "../lib/garden/gardenPlantChoices.js";
+import {duplicatePlanting} from "../lib/garden/duplicatePlanting.js";
 import {plantVisualSpec} from "../lib/plants/plantVisualSpec.js";
 import {renderPlantVisual2d} from "../lib/plants/plantVisual2d.js";
 import {addPlantVisual3d} from "../lib/plants/plantVisual3d.js";
@@ -617,6 +626,7 @@ function proposedBedPlantings(beds, existing = [], plants = DEFAULT_PLANTS) {
 const DEFAULT_STATE = {
   viewMode: "garden",
   viewPresentation: "map",
+  studioMode: "simple",
   activeTool: "beds",
   toolDrawerOpen: false,
   inspectorOpen: false,
@@ -702,6 +712,7 @@ export function gardenPlanner(options = {}) {
   const root = document.createElement("div");
   root.className = "garden-planner-app";
   root.id = "garden-studio";
+  Object.assign(state, studioModeTransition(state, state.studioMode));
   state.previewDate = null;
   let interacted = false;
   for (const event of ['pointerdown','keydown','input']) root.addEventListener(event,() => {interacted = true;},{capture:true});
@@ -734,7 +745,7 @@ export function gardenPlanner(options = {}) {
   `;
   root.innerHTML = `
     <section class="planner-quick-start" aria-label="Start a garden plan">
-      <div><strong>Garden Planning Studio</strong><p>Try an editable 4 × 8 ft bed. No account needed.</p></div>
+      <div><strong>Plan your garden</strong><p>Start with a bed. Add plants. See how much space they need. No account needed.</p></div>
       <button data-role="start-practice-garden" type="button">Start with a 4 × 8 bed</button>
     </section>
     <div class="garden-shell">
@@ -748,12 +759,12 @@ export function gardenPlanner(options = {}) {
       <div class="garden-layout" data-role="garden-layout">
         <nav class="garden-tool-rail" aria-label="Planner tools">
           <button data-tool="select" type="button" aria-label="Pan mode — close editing tools" title="Pan without editing"><span aria-hidden="true">↔</span><small>Pan</small></button>
-          <button data-tool="parcel" type="button" aria-label="Open garden and parcel tools" title="Garden and parcel"><span aria-hidden="true">◇</span><small>Garden</small></button>
+          <button data-advanced-tool data-tool="parcel" type="button" aria-label="Open garden and parcel tools" title="Garden and parcel"><span aria-hidden="true">◇</span><small>Garden</small></button>
           <button data-tool="beds" type="button" aria-label="Open garden bed tools" title="Beds"><span aria-hidden="true">▦</span><small>Beds</small></button>
           <button data-tool="plants" type="button" aria-label="Open plant library" title="Plants"><span aria-hidden="true">♧</span><small>Plants</small></button>
           <button data-tool="flowers" type="button" aria-label="Open data-backed flower reference" title="Flowers"><span aria-hidden="true">✿</span><small>Flowers</small></button>
-          <button data-tool="structures" type="button" aria-label="Open buildings and infrastructure tools" title="Site features"><span aria-hidden="true">▤</span><small>Site</small></button>
-          <button data-tool="vegetation" type="button" aria-label="Open vegetation tools" title="Vegetation"><span aria-hidden="true">♣</span><small>Canopy</small></button>
+          <button data-advanced-tool data-tool="structures" type="button" aria-label="Open buildings and infrastructure tools" title="Site features"><span aria-hidden="true">▤</span><small>Site</small></button>
+          <button data-advanced-tool data-tool="vegetation" type="button" aria-label="Open vegetation tools" title="Vegetation"><span aria-hidden="true">♣</span><small>Canopy</small></button>
         </nav>
 
         <aside class="garden-sidebar" data-role="tool-drawer" aria-label="Planner tool drawer">
@@ -784,6 +795,8 @@ export function gardenPlanner(options = {}) {
             <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button><button type="button" data-action="garden-home">My garden · Log</button>
             <div class="section-heading"><span>Plant library</span><span class="section-count" data-role="plant-count"></span></div>
             <input class="search-input" data-role="plant-search" type="search" aria-label="Filter plants" placeholder="Filter plants">
+            <label>Show <select data-role="plant-library-scope" aria-label="Plant library scope"><option value="chosen">Plants in this garden</option><option value="all">All plants</option></select></label>
+            <p data-role="plant-choice-help" class="library-help"></p>
             <p class="library-help">Choose a plant and Add selected, or drag it into the bed. Existing plants stay locked until you choose Edit plants.</p>
             <div class="plant-list" data-role="plant-list"></div>
             <div class="drawer-action-row">
@@ -922,15 +935,15 @@ export function gardenPlanner(options = {}) {
                 </div>
                 <button data-action="reset-demo" type="button">Restore reference starter</button>
                 <div class="project-menu-divider" role="separator"></div>
-                <div class="project-menu-heading"><span>Spatial interchange</span><strong>Active garden</strong></div>
-                <div class="project-action-grid spatial-export-grid">
+                <div data-advanced-tool class="project-menu-heading"><span>Spatial interchange</span><strong>Active garden</strong></div>
+                <div data-advanced-tool class="project-action-grid spatial-export-grid">
                   <button data-action="export-geojson" type="button" title="RFC 7946 GeoJSON for QGIS">QGIS GeoJSON</button>
                   <button data-action="export-kml" type="button" title="Styled KML for Google Earth">Google Earth KML</button>
                 </div>
-                <button data-action="import-spatial" type="button">Review GeoJSON / KML…</button>
+                <button data-advanced-tool data-action="import-spatial" type="button">Review GeoJSON / KML…</button>
                 <input data-role="spatial-import-input" type="file" accept=".geojson,.json,.kml,application/geo+json,application/json,application/vnd.google-earth.kml+xml" hidden>
                 <div class="spatial-import-status" data-role="spatial-import-status" role="status" aria-live="polite" hidden></div>
-                <button data-action="clear-spatial-import" type="button" hidden>Clear review layer</button>
+                <button data-advanced-tool data-action="clear-spatial-import" type="button" hidden>Clear review layer</button>
                 <details class="project-menu-backup">
                   <summary>Backup and restore</summary>
                   <button data-action="export" type="button">Download full planner JSON</button>
@@ -944,11 +957,15 @@ export function gardenPlanner(options = {}) {
             </details>
           </section>
 
-          <details class="studio-preview-options"><summary>Planting date preview</summary><div data-role="time-preview-host"></div></details>
+          <div class="studio-mode-choice">
+            <label>Tools <select data-role="studio-mode" aria-label="Studio tools"><option value="simple">Simple</option><option value="advanced">Advanced</option></select></label>
+            <span data-role="studio-mode-help">Beds, plants and the seasonal calendar.</span>
+          </div>
+          <div class="studio-preview-options"></div>
           <nav class="planning-scope" aria-label="Planning scope" style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 12px">
             <button type="button" data-workspace="explore">Explore garden</button>
             <button type="button" data-workspace="walk">Walk through</button>
-            <button type="button" data-scope="attributes">Site features</button>
+            <button type="button" data-advanced-tool data-scope="attributes">Site features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
             <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button><button type="button" data-action="garden-home">My garden · Log</button>
@@ -957,7 +974,7 @@ export function gardenPlanner(options = {}) {
             <div class="view-heading parcel-heading">
               <span>Garden canvas</span>
               <span data-role="parcel-label"></span>
-              <details class="map-settings">
+              <details class="map-settings" data-advanced-tool>
                 <summary>
                   <span>Map settings</span>
                   <small data-role="map-settings-summary">4 layers</small>
@@ -1010,7 +1027,7 @@ export function gardenPlanner(options = {}) {
               <summary>Legend</summary>
               <div class="map-legend-grid" data-role="map-legend-items"></div>
             </details>
-            <div data-role="mapped-soil-host"></div>
+            <div data-role="mapped-soil-host" data-advanced-tool></div>
           </section>
 
           <div class="garden-views">
@@ -1037,6 +1054,7 @@ export function gardenPlanner(options = {}) {
               <div class="three-host" data-role="three-host"></div>
             </section>
           </div>
+          <div data-role="time-preview-host"></div>
           <p data-role="planning-scope-help" style="margin:0;padding:0 12px 8px"></p>
           <p data-role="imagery-status" role="status" hidden></p>
           <div class="planner-storage-notice">
@@ -1130,9 +1148,10 @@ export function gardenPlanner(options = {}) {
   };
 
   let previewGardenId=state.activeParcelId;
-  const timePreview=plannerTimePreview({getBedName:id=>state.beds.find(b=>b.id===id)?.name || (id ? "Unknown bed" : "Outside a named bed"),getPlantName:id=>plantById(state,id)?.name || "Unidentified plant",getPlacements:()=>state.placements,getDate:()=>state.previewDate,onChange:date=>{state.previewDate=date;if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
+  const timePreview=plannerTimePreview({getScopeName:()=>state.viewMode==="bed"?activeBed(state)?.name||"bed":"garden",getBedName:id=>state.beds.find(b=>b.id===id)?.name || (id ? "Unknown bed" : "Outside a named bed"),getPlantName:id=>plantById(state,id)?.name || "Unidentified plant",getPlacements:()=>state.viewMode==="bed"?activePlacements(state):state.placements,getDate:()=>state.previewDate,onChange:date=>{state.previewDate=date;if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
   root.querySelector('[data-role="time-preview-host"]').append(timePreview.root);
   const sunPreview=plannerSunPreview({getState:()=>state,onChange:()=>{if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
+  sunPreview.root.setAttribute('data-advanced-tool', '');
   root.querySelector('.studio-preview-options').insertAdjacentElement('afterend',sunPreview.root);
 
   let soilBoundaries=[],soilGardenId=state.activeParcelId;
@@ -1234,6 +1253,7 @@ export function gardenPlanner(options = {}) {
   setupActions(refs, state, () => renderAll());
   const accountPanel = plannerAccount({
     ...(options.accountAdapter || {}),
+    onLinkedGarden: (result, recovery) => tray?.linkedGardenResult(result, recovery),
     exportPlanner: () => accountGardenPayload(stateExportPayload(state)),
     restorePlanner: candidate => {
       candidate = mergeAccountGardens(stateExportPayload(state), candidate);
@@ -1352,9 +1372,21 @@ export function gardenPlanner(options = {}) {
   setupParcelInteractions(refs, state, () => renderAll(), renderSharedViews);
   setupKeyboardShortcuts(refs, state, () => renderAll());
 
+  const openSeason=year=>{state.previewDate=seasonPreviewDate({placements:state.placements},year);state.explicitEditSession=null;state.selectedPlacementId=null;renderAll();};
   root.querySelectorAll('[data-action="garden-home"]').forEach(button=>button.addEventListener('click',()=>{
-    const dialog=gardenHome({getWorkspace:()=>({id:state.activeParcelId,name:activeParcelWorkspace(state)?.name,property:state.property,beds:state.beds,placements:state.placements}),getPlants:()=>state.plants,selectedPlantingId:state.selectedPlacementId,
+    const dialog=gardenHome({getWorkspace:()=>({id:state.activeParcelId,name:activeParcelWorkspace(state)?.name,property:state.property,beds:state.beds,placements:state.placements}),getPlants:()=>state.plants,selectedPlantingId:state.selectedPlacementId,initialYear:state.previewDate?Number(state.previewDate.slice(0,4)):undefined,onOpenSeason:openSeason,
       onLog:(id,input)=>{const index=state.placements.findIndex(p=>p.id===id);if(index<0)throw Error('This planting is no longer in the garden.');const previous=state.placements[index];state.placements[index]=recordPlantingObservation(previous,input);if(!saveState(state)){state.placements[index]=previous;syncActiveParcelWorkspace(state);throw Error('Could not save. Keep this form open and copy your observation.');}renderAll();},
+      onBedConditions:(id,input)=>{const before=state.property;state.property=saveBedConditions({property:state.property,beds:state.beds},id,input).property;if(!saveState(state)){state.property=before;syncActiveParcelWorkspace(state);throw Error('Could not save bed conditions. Your entries remain here.');}renderAll();},
+      onReflection:(year,input)=>{const before=state.property;state.property=saveSeasonReflection(before,year,input);if(!saveState(state)){state.property=before;syncActiveParcelWorkspace(state);throw Error('Could not save your reflection. Keep this form open and retry.');}renderAll();},
+      onNextSeason:fromYear=>{
+        const nextDialog=plannerNextSeason({getWorkspace:()=>({property:state.property,beds:state.beds,placements:state.placements}),plants:state.plants,fromYear,onOpenYear:openSeason,onSave:(next,year)=>{
+          const before=structuredCloneCompat(state);
+          state.property=next.property;state.placements=next.placements;state.previewDate=seasonPreviewDate(next,year);
+          state.explicitEditSession=null;state.selectedPlacementId=null;
+          if(!saveState(state)){Object.assign(state,before);syncActiveParcelWorkspace(state);throw Error('Could not save next year. Your previous garden is unchanged; keep this form open and retry.');}
+          renderAll();
+        }});root.append(nextDialog);nextDialog.showModal();
+      },
       onPlan:id=>{openPlantingWorkspace(state,id);renderAll();},onBackup:()=>refs.actions.export.click()});root.append(dialog);dialog.showModal();
   }));
   root.querySelectorAll('[data-action="bed-seasons"]').forEach(button=>button.addEventListener('click',()=>openBedSeasons(root,state,renderAll)));
@@ -1383,7 +1415,22 @@ export function gardenPlanner(options = {}) {
       state.selectedPlantId=entry.plantId;
     }),
     createGarden:()=>changeTray(()=>{exploringDemos=false;createBlankGardenWorkspace(state,"My garden");}),
-    openBed:item=>{if(!openPlantingWorkspace(state,item.bedId))throw Error("This bed no longer exists.");state.selectedPlantId=item.plantId;renderAll();},
+    createBed:values=>{
+      let createdId;
+      changeTray(()=>{
+        const dimensions=firstPlanDimensions(values.width,values.depth),name=String(values.name||'').trim();
+        if(!name||name.length>100)throw Error("Enter a bed name of up to 100 characters.");
+        if(dimensions.width<24||dimensions.height<18)throw Error("Use a bed at least 2 feet wide and 1.5 feet deep.");
+        const garden=state.parcels.find(g=>g.id===values.gardenId);
+        if(!garden)throw Error("Choose an available garden first.");
+        switchActiveParcelWorkspace(state,garden.id);
+        const right=state.beds.reduce((edge,b)=>Math.max(edge,b.x+b.width/2),0);
+        const bed=normalizeBed({id:uniqueBedId(state),name,...dimensions,x:right+36+dimensions.width/2,y:dimensions.height/2,rotation:0,safeMargin:6,grid:12,crowding:1,showSpacing:true,notes:"Added from the planning tray; adjust its position in Plan."});
+        state.beds.push(bed);state.activeBedId=bed.id;state.selectedPlacementId=null;createdId=bed.id;
+      },"Could not save the new bed. Your previous garden is unchanged; free browser storage and try again.");
+      return createdId;
+    },
+    openBed:item=>{if(!openPlantingWorkspace(state,item.bedId))throw Error("This bed no longer exists.");state.selectedPlantId=item.plantId;state.previewDate=item.plannedDate||null;renderAll();},
     remove:id=>changeTray(()=>{state.property.planningTray=(state.property.planningTray||[]).filter(e=>e.id!==id);})
   });
   const guideChange=fn=>changeTray(fn,"Could not save your first plan. Your previous garden is unchanged; free browser storage and try again.");
@@ -2028,6 +2075,7 @@ function loadState(storageOverride) {
     const state = {
       viewMode: normalizeViewMode(dropsLegacyDemoFeatures ? base.viewMode : saved.viewMode || base.viewMode),
       viewPresentation: normalizeViewPresentation(saved.viewPresentation || base.viewPresentation),
+      studioMode: normalizeStudioMode(saved.studioMode),
       activeTool: normalizeActiveTool(saved.activeTool || base.activeTool),
       toolDrawerOpen: saved.toolDrawerOpen === true,
       inspectorOpen: saved.inspectorOpen === true,
@@ -2088,6 +2136,7 @@ function saveState(state) {
     const payload = {
       viewMode: state.viewMode,
       viewPresentation: state.viewPresentation,
+      studioMode: normalizeStudioMode(state.studioMode),
       activeTool: state.activeTool,
       toolDrawerOpen: state.toolDrawerOpen,
       inspectorOpen: state.inspectorOpen,
@@ -2136,6 +2185,7 @@ function stateExportPayload(state) {
     backupVersion: 1,
     viewMode: state.viewMode,
     viewPresentation: state.viewPresentation,
+    studioMode: normalizeStudioMode(state.studioMode),
     activeTool: state.activeTool,
     toolDrawerOpen: state.toolDrawerOpen,
     inspectorOpen: state.inspectorOpen,
@@ -2252,6 +2302,7 @@ function renderSpatialImportReview(refs, state) {
 }
 
 function normalizeStateShape(state) {
+  state.studioMode = normalizeStudioMode(state.studioMode);
   state.viewPresentation = normalizeViewPresentation(state.viewPresentation);
   state.activeTool = normalizeActiveTool(state.activeTool);
   state.toolDrawerOpen = state.toolDrawerOpen === true;
@@ -3385,6 +3436,11 @@ function closePlannerPanel(refs, state, renderAll, panel) {
 }
 
 function setupControls(refs, state, renderAll, renderSharedViews = renderAll) {
+  refs.root.querySelector('[data-role="studio-mode"]').addEventListener('change', event => {
+    explicitEditSessions.delete(state);
+    Object.assign(state, studioModeTransition(state, event.target.value));
+    renderAll();
+  });
   refs.root.querySelector('[data-role="structure-search"]').addEventListener('input',()=>renderStructureList(refs,state,renderAll));
   refs.root.querySelector('[data-role="vegetation-search"]').addEventListener('input',()=>renderVegetationList(refs,state,renderAll));
   for (const slider of refs.root.querySelectorAll('[data-camera]')) {
@@ -3960,6 +4016,7 @@ function setupPlantForm(refs, state, renderAll) {
 }
 
 function setupSearch(refs, state, renderPlantListOnly) {
+  refs.root.querySelector('[data-role="plant-library-scope"]').addEventListener("change", () => renderPlantListOnly());
   refs.plantSearch.addEventListener("input", () => renderPlantListOnly(refs, state, () => {}));
 }
 
@@ -4071,7 +4128,8 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
       startPitch: normalizeViewPitch(planningPitch(state)),
       moved: false
     };
-    refs.planSvg.setPointerCapture?.(event.pointerId);
+    // Capture only after a drag starts; early capture retargets a tap to the SVG
+    // and prevents the plant/bed beneath the pointer from being inspected.
     if (rotating) event.preventDefault();
   });
 
@@ -4080,6 +4138,7 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
     const dx = event.clientX - navigationState.startClientX;
     const dy = event.clientY - navigationState.startClientY;
     if (!navigationState.moved && Math.hypot(dx, dy) < 4) return;
+    if (!navigationState.moved) refs.planSvg.setPointerCapture?.(event.pointerId);
     navigationState.moved = true;
     suppressNextPlanClick = true;
     event.preventDefault();
@@ -4107,6 +4166,7 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
       renderAll();
     }
   };
+  svg.on("pointerleave", () => {if (navigationState && !navigationState.moved) navigationState=null;});
   svg.on("pointerup", finishNavigation);
   svg.on("pointercancel", finishNavigation);
   svg.on("lostpointercapture", finishNavigation);
@@ -4201,7 +4261,6 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
       rotating,
       moved: false
     };
-    refs.parcelSvg.setPointerCapture?.(event.pointerId);
     if (rotating) event.preventDefault();
   });
 
@@ -4210,6 +4269,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
     const dx = event.clientX - panState.startClientX;
     const dy = event.clientY - panState.startClientY;
     if (!panState.moved && Math.hypot(dx, dy) < 4) return;
+    if (!panState.moved) refs.parcelSvg.setPointerCapture?.(event.pointerId);
     panState.moved = true;
     refs.parcelSvg.dataset.panMoved="true";
     suppressNextParcelClick = true;
@@ -4240,6 +4300,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
     }
   };
 
+  svg.on("pointerleave", () => {if (panState && !panState.moved) panState=null;});
   svg.on("pointerup", finishPan);
   svg.on("pointercancel", finishPan);
   svg.on("lostpointercapture", finishPan);
@@ -4278,6 +4339,12 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
 }
 
 function renderControls(refs, state) {
+  const studioMode = normalizeStudioMode(state.studioMode);
+  refs.root.dataset.studioMode = studioMode;
+  refs.root.querySelector('[data-role="studio-mode"]').value = studioMode;
+  refs.root.querySelector('[data-role="studio-mode-help"]').textContent = studioMode === "simple"
+    ? "Beds, plants and calendar. Choose Advanced for maps, trees and sunlight analysis."
+    : "Mapping, site features, trees, sunlight analysis and GIS exchange.";
   const walkButton=refs.root.querySelector('button[data-workspace="walk"]');
   if(walkButton)walkButton.textContent=state.viewMode==="bed" && walkingReturns.get(state)?.gardenId===state.activeParcelId ? "Back to walk" : "Walk through";
   refs.root.dataset.workspace = state.walkCamera ? "walk" : state.viewMode === "bed" ? "plant" : "explore";
@@ -4622,14 +4689,20 @@ function renderCartographicLegends(refs, state) {
 
 function renderPlantList(refs, state, renderAll) {
   const query = refs.plantSearch.value.trim().toLowerCase();
-  const plants = state.plants.filter((plant) => {
-    const haystack = `${plant.name} ${plant.group} ${plant.waterStyle} ${plant.soil}`.toLowerCase();
-    return haystack.includes(query);
-  });
+  const choices = gardenPlantChoices(state, query);
+  const scope = refs.root.querySelector('[data-role="plant-library-scope"]');
+  const plants = scope.value === "chosen" && choices.hasChoices ? choices.preferred : choices.all;
+  refs.root.querySelector('[data-role="plant-choice-help"]').textContent = choices.hasChoices
+    ? "Saved tray choices and plants already in this garden come first. Choose All plants to explore more."
+    : "Choose your first plants below, or bring a choice from Find Plants. Your garden’s choices will appear here.";
+
 
   refs.plantCount.textContent = `${plants.length}`;
   refs.plantList.innerHTML = "";
 
+  if (!plants.length) {
+    const empty=document.createElement("p");empty.textContent="No matching choices. Try All plants or change your search.";refs.plantList.append(empty);
+  }
   for (const plant of plants) {
     const button = document.createElement("button");
     button.className = "plant-option";
@@ -5011,7 +5084,6 @@ function render2dPlan(refs, state, renderAll) {
       const offset = dragOffsets.get(d.id) || {x: 0, y: 0};
       d.x = clamp(x + offset.x, 0, bed.width);
       d.y = clamp(y + offset.y, 0, bed.height);
-      d.rotation = (d.rotation || 0) + event.dx * 0.002;
       state.selectedPlacementId = d.id;
       renderAll();
     })
@@ -5465,7 +5537,6 @@ function renderPropertyBeds2d(svg, state, renderAll, bedOptions = {}) {
       const offset = plantDragOffsets.get(placement.id) || {x: 0, y: 0};
       placement.x = clamp(local.x + offset.x, 0, bed.width);
       placement.y = clamp(local.y + offset.y, 0, bed.height);
-      placement.rotation = (placement.rotation || 0) + event.dx * 0.002;
       renderAll();
     })
     .on("end", (event, placement) => {
@@ -5912,7 +5983,9 @@ function sharedWorldLayer(svgNode) {
 }
 
 function pointerInSharedWorld(event, svgNode) {
-  return d3.pointer(event, sharedWorldLayer(svgNode));
+  // TouchEvent has no clientX/clientY; D3 expects an individual touch point.
+  const point = event?.changedTouches?.[0] || event?.touches?.[0] || event;
+  return d3.pointer(point, sharedWorldLayer(svgNode));
 }
 
 function panParcelViewportFromScreenDelta(state, startViewport, dx, dy, rect) {
@@ -6820,7 +6893,8 @@ function bindInspectorEditGuard(container, state, featureType, renderAll) {
 
 function syncEditorFields(container, kind, record) {
   for (const input of container.querySelectorAll(`[data-${kind}-field]`)) {
-    const value = record[input.dataset[`${kind}Field`]];
+    const field=input.dataset[`${kind}Field`];
+    const value = kind==="placement" && field==="rotation" ? round(((Number(record.rotation)||0)*180/Math.PI%360+360)%360) : record[field];
     if (input.type === "checkbox") input.checked = value !== false;
     else if (input.value !== String(value ?? "")) input.value = value ?? "";
   }
@@ -7285,13 +7359,17 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
   } else if (!placement) {
     refs.selectedPlacement.innerHTML = `<div class="empty-state">No placement selected</div>`;
   } else {
-    refs.selectedPlacement.querySelector('.placement-editor').append(plannerSizeScenario({placement,canEdit:()=>plannerCanEditFeature(state,'placement'),onChange:()=>renderAll({preserveEditor:'placement'})}));
     const currentPlant = plantById(state, placement.plantId);
     const status = placementStatus(placement, state);
     refs.selectedPlacement.innerHTML = `
       <div class="placement-editor">
         ${inspectorEditGuardMarkup(state, "placement")}
         <div class="status-pill ${status.ok ? "ok" : "warning"}">${status.ok ? "Spacing ok" : "Needs adjustment"}</div>
+        <button type="button" data-action="duplicate-placement" ${!plannerCanEditFeature(state,"placement")||!placement.bedId?'disabled':''}>Duplicate planting</button>
+        <p data-role="duplicate-status" role="status"></p>
+        <button type="button" data-action="next-crop" ${!plannerCanEditFeature(state,"placement")||!placement.bedId?'disabled':''}>Plan next crop here</button>
+        <p class="plant-planning-dimensions">Mature planning size: ${Number(currentPlant?.matureDiameter)>0?`${round(currentPlant.matureDiameter)}″ wide`:"width unknown"} · ${Number(currentPlant?.height)>0?`${round(currentPlant.height)}″ high`:"height unknown"}. Spacing: ${Number(currentPlant?.spacing)>0?`${round(currentPlant.spacing)}″`:"unknown"}.</p>
+        <label><span>Orientation °</span><input data-placement-field="rotation" type="number" min="0" max="360" step="any" value="${round(((Number(placement.rotation)||0)*180/Math.PI%360+360)%360)}"></label>
         <label>
           <span>Plant</span>
           <select data-placement-field="plantId">
@@ -7302,7 +7380,7 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         <label>
           <span>Health</span>
           <select data-placement-field="health">
-            ${["starting", "strong", "stressed", "sick", "harvested"].map((value) => `<option ${placement.health === value ? "selected" : ""}>${value}</option>`).join("")}
+            ${["planned", "starting", "strong", "stressed", "sick", "harvested"].map((value) => `<option ${placement.health === value ? "selected" : ""}>${value}</option>`).join("")}
           </select>
         </label>
         <label>
@@ -7323,6 +7401,8 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
       </div>
     `;
 
+    refs.selectedPlacement.querySelector('.placement-editor').append(plannerSizeScenario({placement,canEdit:()=>plannerCanEditFeature(state,'placement'),onChange:()=>renderAll({preserveEditor:'placement'})}));
+
     bindInspectorEditGuard(refs.selectedPlacement, state, "placement", renderAll);
 
     refs.selectedPlacement.querySelectorAll("[data-placement-field]").forEach((input) => {
@@ -7330,6 +7410,34 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         if (updatePlacementField(placement, input, state) === false) return;
         renderAll({preserveEditor: "placement"});
       });
+    });
+
+    refs.selectedPlacement.querySelector('[data-action="duplicate-placement"]').addEventListener("click", () => {
+      if(!plannerCanEditFeature(state,"placement"))return;
+      try{
+        const copy=duplicatePlanting({source:placement,bed:bedForPlacement(state,placement),plants:state.plants,placements:state.placements,id:uniquePlacementId(state)});
+        state.placements.push(copy);state.selectedPlacementId=copy.id;renderAll();
+        if(refs.root.querySelector('[data-role="storage-status"]').dataset.saved!=="true"){
+          state.placements=state.placements.filter(p=>p.id!==copy.id);state.selectedPlacementId=placement.id;renderAll();
+          throw Error("Could not save the copy. The original plan is unchanged; free browser storage and try again.");
+        }
+        refs.selectedPlacement.querySelector('[data-role="duplicate-status"]').textContent="Copy selected. Planned dates retained; observations and harvest history stay with the original. Spacing checks use the full plan.";
+      }catch(error){refs.selectedPlacement.querySelector('[data-role="duplicate-status"]').textContent=error.message;}
+    });
+
+    refs.selectedPlacement.querySelector('[data-action="next-crop"]').addEventListener("click",()=>{
+      if(!plannerCanEditFeature(state,"placement"))return;
+      const dialog=plannerSuccession({source:placement,plants:gardenPlantChoices(state).all,onSave:values=>{
+        if(!plannerCanEditFeature(state,"placement"))throw Error("Enable plant editing first.");
+        const source=state.placements.find(p=>p.id===placement.id);
+        if(!source)throw Error("The original planting is no longer available.");
+        const next=successionPlanting({source,bed:bedForPlacement(state,source),plants:state.plants,placements:state.placements,id:uniquePlacementId(state),...values});
+        const before=structuredCloneCompat(state);
+        state.placements.push(next);state.selectedPlacementId=next.id;state.selectedPlantId=next.plantId;state.previewDate=next.planted;renderAll();
+        if(refs.root.querySelector('[data-role="storage-status"]').dataset.saved!=="true"){
+          Object.assign(state,before);renderAll();throw Error("Could not save the next crop. Your original plan is unchanged; free browser storage and try again.");
+        }
+      }});refs.root.append(dialog);dialog.showModal();
     });
 
     refs.selectedPlacement.querySelector('[data-action="delete-placement"]').addEventListener("click", () => {
@@ -7366,6 +7474,13 @@ function updatePlacementField(placement, input, state) {
     const end=field === "plannedUntil" ? input.value : placement.plannedUntil;
     input.setCustomValidity(start && end && end < start ? "The planned last day must be on or after planting." : "");
     if (!input.reportValidity()) return false;
+  }
+  if (field === "rotation") {
+    const degrees=Number(input.value);
+    input.setCustomValidity(input.value.trim() && Number.isFinite(degrees) && degrees>=0 && degrees<=360 ? "" : "Enter an orientation from 0 to 360 degrees.");
+    if(!input.reportValidity())return false;
+    placement.rotation=(degrees%360)*Math.PI/180;
+    return;
   }
   if (field === "x" || field === "y") {
     const bed = bedForPlacement(state, placement);
@@ -8931,7 +9046,7 @@ function openPlantGallery(root,state,getThree,renderAll) {
     dialog.querySelector('output').value=`${Math.round(scale*100)}%`;
     if(renderer){const w=preview.clientWidth,h=preview.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.render(scene,camera);}
   };
-  const filter=()=>{const q=dialog.querySelector('[data-search]').value.toLowerCase(),old=select.value||state.selectedPlantId;select.replaceChildren(...state.plants.filter(p=>p.name.toLowerCase().includes(q)).map(p=>new Option(p.name,p.id)));if([...select.options].some(o=>o.value===old))select.value=old;draw();};
+  const filter=()=>{const q=dialog.querySelector('[data-search]').value.toLowerCase(),old=select.value||state.selectedPlantId;select.replaceChildren(...gardenPlantChoices(state,q).all.map(p=>new Option(p.name,p.id)));if([...select.options].some(o=>o.value===old))select.value=old;draw();};
   dialog.querySelector('[data-search]').addEventListener('input',filter);select.addEventListener('change',draw);slider.addEventListener('input',draw);
   dialog.querySelector('[data-use]').addEventListener('click',()=>{if(!openPlantingWorkspace(state)){dialog.querySelector('[data-message]').textContent='Select or create a bed first.';return;}state.selectedPlantId=select.value;dialog.close();renderAll();});
   const resize=new ResizeObserver(draw);resize.observe(preview);
@@ -8982,7 +9097,7 @@ function addPlant3d(group, plant, placement, x, z, unit, selected = false, ghost
   }
   const model = ghost ? null : gardenModelForPlant(three, plant);
   if (model) {
-    plantGroup.rotation.y = Number(placement.rotation) || 0;
+    plantGroup.rotation.y = -(Number(placement.rotation) || 0);
     addGardenModel3d(plantGroup, model, plant, unit);
     plantGroup.userData.modelId = model.id;
     plantGroup.userData.renderMode = "catalog-model";
@@ -9430,7 +9545,7 @@ function fillBedWithSelectedPlant(state, positions) {
     plantId: plant.id,
     x,
     y,
-    planted: plant.catalogIdentity ? "" : todayIso(),
+    planted: plant.catalogIdentity ? plant.planningDate||"" : todayIso(),
     ...(plant.catalogIdentity ? {planYear:plant.planningYear} : {}),
     health: "starting",
     notes: "",
@@ -9478,7 +9593,7 @@ function addPlacement(state, plantId, x, y) {
     ...(plantById(state,plantId)?.catalogIdentity ? {planYear:plantById(state,plantId).planningYear} : {}),
     x: clamp(x, 0, bed.width),
     y: clamp(y, 0, bed.height),
-    planted: plantById(state,plantId)?.catalogIdentity ? "" : todayIso(),
+    planted: plantById(state,plantId)?.catalogIdentity ? plantById(state,plantId).planningDate||"" : todayIso(),
     health: "starting",
     notes: "",
     rotation: Math.random() * Math.PI
@@ -9773,7 +9888,7 @@ function placementStatus(placement, state) {
   }
 
   for (const other of placementsForBed(state, bed.id)) {
-    if (other.id === placement.id) continue;
+    if (other.id === placement.id || !plannedOccupanciesOverlap(placement,other)) continue;
     const otherPlant = plantById(state, other.plantId);
     if (!otherPlant) continue;
     const required = (plant.spacing + otherPlant.spacing) * bed.crowding / 2;
@@ -9809,6 +9924,7 @@ function collectSpacingIssues(state) {
     if (!plantA) continue;
     for (let j = i + 1; j < placements.length; j += 1) {
       const b = placements[j];
+      if(!plannedOccupanciesOverlap(a,b))continue;
       const plantB = plantById(state, b.plantId);
       if (!plantB) continue;
       const required = (plantA.spacing + plantB.spacing) * bed.crowding / 2;
@@ -13257,6 +13373,8 @@ function injectStyles() {
       .garden-tool-rail {grid-template-columns: repeat(7, minmax(0, 1fr));}
       .garden-tool-rail [data-tool="select"] {display: grid;}
       .garden-sidebar, .garden-inspector {max-height: min(48svh, 480px);}
+      .tool-panel > *, .inspector-panel > * {flex-shrink:0;}
+      .tool-panel :is(.bed-list,.plant-list,.flower-list,.structure-list,.vegetation-list) {max-height:none;overflow:visible;flex-shrink:0;}
       .drawer-heading {min-height: 44px; padding: 4px 8px;}
       .drawer-heading button {min-width: 44px; min-height: 44px;}
       .view-navigation {
@@ -13280,6 +13398,13 @@ function injectStyles() {
     }
     .garden-planner-app > .planner-quick-start:first-child p {font-size: .8rem; margin: 0;}
     .garden-planner-app > .planner-quick-start:first-child button {min-height: 44px;}
+
+    .garden-planner-app[data-studio-mode="simple"] [data-advanced-tool] {display: none !important;}
+    .studio-mode-choice {display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; padding: 8px 12px;}
+    .studio-mode-choice label {display: flex; align-items: center; gap: 8px;}
+    .studio-mode-choice select {min-height: 44px;}
+    .studio-mode-choice > span {font-size: .8rem; color: var(--theme-foreground-muted);}
+
     .studio-preview-options > summary {padding: 6px 12px; cursor: pointer; font-size: .8rem;}
     .garden-planner-app .planning-scope {padding: 4px 8px !important; gap: 4px !important;}
     .garden-planner-app .planning-scope button {min-height: 36px; padding: 4px 8px;}

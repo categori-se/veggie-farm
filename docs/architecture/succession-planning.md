@@ -1,0 +1,9 @@
+# Plan a crop after another planting
+
+In the selected-plant inspector, **Plan next crop here** requires explicit plant editing. If the original lacks a planned last day, the dialog explains where to enter it. The gardener chooses a catalog plant and separate start/end dates. The proposed start is the next calendar day after the original's inclusive end, and remains editable. This is a planning convenience, not a season or suitability recommendation.
+
+The planner creates a new identity with `health: planned`, the selected plant, its own dates/year, and `afterPlantingId` pointing to the earlier planting. It never copies observations, notes, harvest estimates, actual status or size scenarios. The original record is unchanged. It tries the original position first, then nearby clear positions within the bed; conservative mature width/spacing, margins and polygon edges must fit. Missing dimensions or no clear space block creation. A failed local save restores the prior state and keeps the dialog values.
+
+Spatial conflicts compare inclusive planned occupancy intervals. A known end before another known start proves they do not overlap. Missing bounds remain open-ended; invalid/inverted dates cannot establish free space. Undated plantings still conflict. The inspector, 2D/3D spacing display and diagnostics share this interval predicate. Previewing a date filters the same records in both renderers. Altering an earlier end later can introduce a reported conflict; successor dates are not silently rescheduled.
+
+This is one planting at a time. It does not clone a season, recommend a crop rotation, model observed removal, infer biological growth, or certify environmental suitability. Duplication remains a separate action with full-plan conservative spacing. Cross-year identity, account-wide favorites, contextual recommendations and multi-plant succession remain part of the wider journey work.

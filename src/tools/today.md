@@ -31,7 +31,7 @@ const savedGarden = loadGardenProfile();
 <section class="today-hero">
   <div>
     <p class="kicker">A useful answer, with its assumptions</p>
-    <h1>What can I plant today?</h1>
+    <h1>What can I do in my garden today?</h1>
     <p class="deck">Compare 23 familiar crops against your season, regional Extension evidence, and an optional live forecast—then see exactly why each result changed.</p>
   </div>
   <div class="today-hero-note">
@@ -42,17 +42,37 @@ const savedGarden = loadGardenProfile();
 </section>
 
 ```js
+import {accountGardenHome} from "../components/account-garden-home.js";
+import {savedGardenConditions, validGuidanceDates} from "../lib/garden/savedGardenConditions.js";
+const selectedGardenState = Inputs.input(null);
+const selectedGarden = Generators.input(selectedGardenState);
+display(accountGardenHome({invalidation, showToday: true, onGardenChange: (workspace, selection) => {selectedGardenState.value = workspace ? {workspace, selection} : {cleared: true}; selectedGardenState.dispatchEvent(new Event("input"));}}));
+```
+
+## Explore planting conditions
+
+Choose a saved garden above to use its linked conditions. You can adjust the settings below for a planning scenario; these edits do not change your saved garden.
+
+```js
+const conditionBeds = selectedGarden?.workspace?.beds || [];
+const conditionBed = view(Inputs.select(["", ...conditionBeds.map(b => b.id)], {
+  label: "Conditions for", value: "",
+  format: id => id ? conditionBeds.find(b => b.id === id)?.name || id : "Garden profile"
+}));
+```
+
+```js
 const now = new Date();
 const currentYear = now.getFullYear();
 const localDate = `${currentYear}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
-const savedFrostDates = savedGarden ? profileDatesForYear(savedGarden, currentYear) : null;
+const appliedConditions = savedGardenConditions(selectedGarden, savedGarden, localDate, conditionBed);
 const date = view(Inputs.text({label: "Planting date", value: localDate, placeholder: "YYYY-MM-DD"}));
-const lastFrostDate = view(Inputs.text({label: "Typical last spring frost", value: savedFrostDates?.lastFrostDate ?? `${currentYear}-05-10`, placeholder: "YYYY-MM-DD"}));
-const firstFrostDate = view(Inputs.text({label: "Typical first fall frost", value: savedFrostDates?.firstFrostDate ?? `${currentYear}-10-15`, placeholder: "YYYY-MM-DD"}));
-const soilTemperatureFInput = Inputs.range([35, 90], {label: "Soil temperature °F", value: 61, step: 1});
+const lastFrostDate = view(Inputs.text({label: "Typical last spring frost", value: appliedConditions.lastFrostDate || "", placeholder: "YYYY-MM-DD"}));
+const firstFrostDate = view(Inputs.text({label: "Typical first fall frost", value: appliedConditions.firstFrostDate || "", placeholder: "YYYY-MM-DD"}));
+const soilTemperatureFInput = Inputs.range([35, 90], {label: "Soil temperature °F", value: appliedConditions.soilTemperatureF ?? 61, step: 1});
 soilTemperatureFInput.elements.range.setAttribute("aria-label", "Soil temperature °F");
 const soilReading = view(soilTemperatureFInput);
-const useSoilReading = view(Inputs.toggle({label: "Use an entered soil temperature", value: false}));
+const useSoilReading = view(Inputs.toggle({label: "Use an entered soil temperature", value: appliedConditions.soilTemperatureF !== null}));
 const riskLabels = {
   conservative: "Conservative — more buffer",
   typical: "Typical — balanced timing",
@@ -66,15 +86,17 @@ const riskPreference = view(Inputs.select(Object.keys(riskLabels), {
 ```
 
 ```js
-const soilTemperatureF = useSoilReading ? soilReading : null;
+const soilTemperatureF = useSoilReading && (!appliedConditions.soilDate || date === appliedConditions.soilDate) ? soilReading : null;
 ```
 
 ```js
 html`<div class="today-input-note">
-  <strong>${savedGarden ? `Using ${savedGarden.gardenName}:` : "Starter assumptions:"}</strong>
-  ${savedGarden ? "Frost dates come from your account-scoped notebook draft in this browser. Open Notebook to refresh it from your account." : "May 10 and October 15 are editable example frost dates, not a ZIP-code lookup."}
-  Use dates from a trusted local source or your own garden records. Measure soil temperature about 2–4 inches deep at a consistent morning time.
-  <a href="/tools/my-garden">${savedGarden ? "Edit Garden Notebook" : "Save a garden profile"} →</a>
+  <strong>${appliedConditions.source === "selected-garden" ? `Selected garden: ${appliedConditions.name}` : appliedConditions.source === "notebook" ? `Notebook: ${appliedConditions.name}` : "Starter assumptions:"}</strong>
+  ${appliedConditions.source === "starter" ? "May 10 and October 15 are editable examples, not a location lookup." : "Frost dates come from the saved profile. Missing dates remain blank; enter both before comparing crops."}
+  ${conditionBed ? `Bed: ${appliedConditions.bedName || "unavailable"}. Soil readings come only from this bed; frost dates remain garden-wide.` : "Soil readings use the garden profile."}
+  ${appliedConditions.sunHours === null ? "Direct sun: not recorded." : `Recorded direct sun: ${appliedConditions.sunHours} hours. The comparison uses a general vegetable-site light benchmark; open Why? for its limits.`}
+  Saved soil temperature is enabled only when measured today and used for that same date. Older, undated or future readings stay excluded.
+  <a href="/tools/my-garden">Review garden conditions →</a>
 </div>`
 ```
 
@@ -103,6 +125,8 @@ function browserPosition() {
   });
 }
 
+// Changing gardens resets this explicit request; it never fetches automatically.
+selectedGarden;
 const forecastRequest = view(Inputs.button("Use my location for an NWS forecast", {
   reduce: (clicks = 0) => clicks + 1
 }));
@@ -150,9 +174,10 @@ liveForecast ? html`<section class="live-forecast" data-state="ready">
 ```
 
 ```js
-const context = {date, lastFrostDate, firstFrostDate, soilTemperatureF, riskPreference, forecast: liveForecast};
-const results = recommendGardenToday(crops, rules, context, evidenceDataset);
-const summary = summarizeGardenContext(context);
+const context = {date, lastFrostDate, firstFrostDate, soilTemperatureF, sunHours: appliedConditions.sunHours, riskPreference, forecast: liveForecast};
+const inputDatesValid = validGuidanceDates(date, lastFrostDate, firstFrostDate);
+const results = inputDatesValid ? recommendGardenToday(crops, rules, context, evidenceDataset) : [];
+const summary = inputDatesValid ? summarizeGardenContext(context) : {frostRunway: null};
 const ready = results.filter((item) => item.status === "recommended");
 const watch = results.filter((item) => ["caution", "possible_with_protection"].includes(item.status));
 const wait = results.filter((item) => ["too_early", "too_late"].includes(item.status));
@@ -165,12 +190,13 @@ Compare inputs and model limits across crops. Open “Why?” for the reasons th
 
 ```js
 import {decisionMatrix} from "../components/decision-matrix.js";
-display(decisionMatrix(results, rules, [...sourceById.values()]));
+if (inputDatesValid) display(decisionMatrix(results, rules, [...sourceById.values()], {destination: selectedGarden?.selection ? {...selectedGarden.selection, ...(conditionBed ? {bedId: conditionBed} : {})} : null}));
+else display(html`<p role="status">Enter a valid planting date and spring/fall frost dates, with spring before fall, to compare crops.</p>`);
 ```
 
 ```js
 import {plantingScenarios} from "../components/planting-scenarios.js";
-display(plantingScenarios(crops, rules, context, evidenceDataset));
+if (inputDatesValid) display(plantingScenarios(crops, rules, context, evidenceDataset));
 ```
 
 ```js
@@ -184,8 +210,8 @@ const methodLabel = {direct_sow: "sow", transplant: "transplant", plant_sets: "s
 html`<section class="today-context" aria-label="Garden context summary">
   <article>
     <span>Season runway</span>
-    <strong>${formatRunway(summary.frostRunway)}</strong>
-    <p>${summary.frostRunway >= 0 ? `until the entered first frost (${formatDate(firstFrostDate)})` : `the entered first frost (${formatDate(firstFrostDate)})`}</p>
+    <strong>${inputDatesValid ? formatRunway(summary.frostRunway) : "Frost dates needed"}</strong>
+    <p>${!inputDatesValid ? "Enter both frost dates above." : summary.frostRunway >= 0 ? `until the entered first frost (${formatDate(firstFrostDate)})` : `the entered first frost (${formatDate(firstFrostDate)})`}</p>
   </article>
   <article>
     <span>Seedbed</span>
@@ -194,12 +220,12 @@ html`<section class="today-context" aria-label="Garden context summary">
   </article>
   <article>
     <span>Plant now</span>
-    <strong>${ready.length} crops</strong>
-    <p>fit your entered timing and temperature</p>
+    <strong>${inputDatesValid ? `${ready.length} crops` : "Not evaluated"}</strong>
+    <p>fit the checked timing, temperature and general light guidance</p>
   </article>
   <article>
     <span>Watch closely</span>
-    <strong>${watch.length} crops</strong>
+    <strong>${inputDatesValid ? `${watch.length} crops` : "Not evaluated"}</strong>
     <p>need better conditions or added protection</p>
   </article>
 </section>`

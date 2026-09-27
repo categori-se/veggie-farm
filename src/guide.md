@@ -1,0 +1,119 @@
+---
+title: "Your garden, from first plan to next season"
+description: "A visual user guide to choosing plants, planning a bed, exploring in 3D, setting dates, saving and recording your garden."
+---
+
+# Your garden, from first plan to next season
+
+Start with one bed and a few plants. Give them room, decide when they will occupy the bed, and keep a record of what happens. You can return to the same plan as the season unfolds.
+
+This guide shows real sections of veggie.farm, using a **sample kitchen garden**. The dates, arrangement and harvest record are examples for learning the interface, not growing recommendations. Screenshots show the desktop layout; on a phone, the tool rail sits at the bottom and panels open over the canvas.
+
+[Open Studio](https://studio.veggie.farm/) · [Find plants](https://veggie.farm/content/reference/plant-database) · [Garden Today](https://veggie.farm/tools/today)
+
+## Choose your starting point
+
+| What you want to do | Start here |
+| --- | --- |
+| Make your first plan | [Start with a bed](#start-with-a-bed) |
+| Choose and arrange plants | [Give each plant space](#give-each-plant-space) |
+| See the garden from another angle | [Explore in 3D](#explore-in-3d) |
+| Plan successive crops | [Plan through the season](#plan-through-the-season) |
+| Record a harvest or observation | [Keep the garden's history](#keep-the-gardens-history) |
+| Keep a copy or move to another device | [Save and back up](#save-and-back-up) |
+| Use imagery, trees or shade estimates | [Find the advanced tools](#find-the-advanced-tools) |
+
+## Start with a bed
+
+In Studio, choose **Start with a 4 × 8 bed**. Give the garden a name and adjust the width and depth to your available space. Choose **Create bed and choose plants** to continue. You can begin without a map or an account.
+
+<figure>
+  <img src="https://veggie.farm/media/user-guide/20260926/01-start-a-bed.png" alt="First-plan dialog with a garden name and width and depth in feet." loading="lazy" style="max-width:100%;height:auto;border-radius:8px" />
+  <figcaption>The first step asks only for a name and bed dimensions. This example uses an 8-foot-wide, 4-foot-deep bed.</figcaption>
+</figure>
+
+Choose a few crops you want to grow. The starter places one of each selected type as an arrangement to review. An optional planting date describes your plan; it does not record an actual sowing or transplanting event.
+
+<figure>
+  <img src="https://veggie.farm/media/user-guide/20260926/02-choose-plants.png" alt="Starter plant choices showing tomato, lettuce and basil selected, with their spacing and an optional planned date." loading="lazy" style="max-width:100%;height:auto;border-radius:8px" />
+  <figcaption>Start small. Read the spacing and check your growing conditions before deciding what belongs in the bed.</figcaption>
+</figure>
+
+For a wider choice, use **Find Plants** on the main site. Search for a crop or variety, compare its recorded facts, then use **Add to plan**. Studio's planning tray holds that choice while you decide where it belongs. In Studio's plant library, switch between **Plants in this garden** and **All plants** when you want to explore beyond your existing choices.
+
+## Give each plant space
+
+Select a plant to open its inspector. Inspecting is safe: moving a plant requires an explicit **Edit plants** action. Drag plants in the bed once editing is enabled, and review the spacing warnings. Return to **Pan** or lock editing before exploring again.
+
+The inspector is where you choose the plant, enter planned dates and adjust orientation. **Duplicate planting** makes a separate planned plant when there is room; it does not copy the original's observation history.
+
+<figure>
+  <img src="https://veggie.farm/media/user-guide/20260926/03-plant-inspector.png" alt="Selected plant inspector with an edit lock, planned dates, orientation and planting actions." loading="lazy" style="max-width:100%;height:auto;border-radius:8px" />
+  <figcaption>One planting has its own identity, dates and observations. A crop name alone is not the whole record.</figcaption>
+</figure>
+
+Use **2D** to read the layout from above and **3D** to understand height and volume. The spacing footprint helps you leave room for mature plants. A model is an illustration of recorded or estimated dimensions, not a promise of growth or yield.
+
+## Explore in 3D
+
+Choose **3D** above the canvas. Use **Pan**, **+ / −**, and **Camera** to change your view. The **3D plant library** is available beside the workspace controls when you want to inspect the available models.
+
+<figure>
+  <img src="https://veggie.farm/media/user-guide/20260926/04-bed-in-3d.png" alt="The sample bed in 3D with tomato, basil and lettuce models above a spacing grid." loading="lazy" style="max-width:100%;height:auto;border-radius:8px" />
+  <figcaption>The same planting plan viewed in three dimensions. These are illustrative plant forms.</figcaption>
+</figure>
+
+For a larger garden, choose **Explore garden**, then **Walk through**. Use the visible walking arrows to move; drag to look around. On a keyboard, W/S step forward and backward, A/D turn, and Escape leaves the walking view.
+
+Select a bed and use **Plan this bed →** in its inspector, or **Plan selected bed** above the canvas, to return to detailed planting. **Back to walk** returns to the walking context when you entered the bed from that view. Public example gardens are incomplete reconstructions with illustrative plantings; use them to explore the workflow.
+
+## Plan through the season
+
+The **Season in…** panel beneath the canvas combines a year, month buttons, an exact date and a day slider. Turning on **Date preview**, or selecting a month, shows the plants whose planned occupancy includes that date. The schedule underneath keeps the dates visible together.
+
+<figure>
+  <img src="https://veggie.farm/media/user-guide/20260926/05-plan-the-season.png" alt="Season panel showing June 2026, month buttons, a date slider and planting occupancy bars." loading="lazy" style="max-width:100%;height:auto;border-radius:8px" />
+  <figcaption>Move through time without rewriting the planting records. The date controls affect both the 2D and 3D views.</figcaption>
+</figure>
+
+To reuse a space, enter the first crop's **Planned last day in bed**, then choose **Plan next crop here** in its inspector. Select the next crop and a start date after that last day. Studio keeps both plantings as separate records and checks their overlapping dates when considering spacing.
+
+An undated planting remains visible. An empty end date stays open-ended. Date preview shows your planned occupancy; it does not automatically predict plant growth or harvest readiness. Record what actually happens separately.
+
+## Keep the garden's history
+
+Open **My garden · Log** in Studio. Choose the planting, what happened and the date. A short observation can be enough. For **Harvested**, you can also enter a quantity, unit and quality.
+
+<figure>
+  <img src="https://veggie.farm/media/user-guide/20260926/06-garden-history.png" alt="My garden panel with Quick log, a plan-versus-actual table and a sample tomato harvest observation." loading="lazy" style="max-width:100%;height:auto;border-radius:8px" />
+  <figcaption>This sample harvest belongs to a particular planting and bed. The season selector helps you return to its history.</figcaption>
+</figure>
+
+Logging an observation does not change the planned dates. That distinction lets you compare your intentions with what happened. Use the bed and season filters when the history becomes longer.
+
+The main site's [Garden Notebook](https://veggie.farm/tools/my-garden) also accepts broader field notes, soil information and garden context. For an observation about a particular Studio plant, starting from **My garden · Log** keeps that planting attached to the record. The two domains have separate browser storage; do not assume a local draft automatically follows you between them or between devices. Use the explicit account-save and load controls or a backup when moving a plan.
+
+## Save and back up
+
+Finish the starter with **Ready to save**, name the plan, and choose **Save named plan**. Later, use **Save** above the canvas to keep a named version. The project menu (**…**) contains saved versions and **Backup and restore**.
+
+<figure>
+  <img src="https://veggie.farm/media/user-guide/20260926/07-save-and-back-up.png" alt="First-plan confirmation stating that the plan is saved in this browser, with a Download garden backup button." loading="lazy" style="max-width:100%;height:auto;border-radius:8px" />
+  <figcaption>A browser save and a downloaded backup serve different purposes. Keep a separate copy of work you care about.</figcaption>
+</figure>
+
+Download the planner JSON before clearing browser data or changing devices. Use **Restore full planner JSON…** to bring a backup into Studio. Account saves are explicit: sign in, save the garden copy, and load the intended copy on the other device. Check the save status before leaving.
+
+## Find the advanced tools
+
+Leave **Tools** set to **Simple** for everyday bed planning. Choose **Advanced** for parcel imagery, site features, established trees, map layers, terrain, soil context and GIS exchange. Existing structures and trees remain in the scene in either mode. Switching modes closes the panels and ends active editing.
+
+For sunlight, choose Advanced and enable **Sun & shade**. Use its date and time controls to compare the scene and inspect the estimated light on beds. Results depend on the supplied location, obstruction shapes and heights. They are planning estimates, not measured sun hours. Compare them with observations in your own garden.
+
+## Come back with a question
+
+Use [Garden Today](https://veggie.farm/tools/today) to check timing against the conditions you have entered. Read a [growing guide](https://veggie.farm/content/), adjust the plan, go outside, and record what you notice. At the end of a season, review the history before deciding what to repeat or change.
+
+[Open your garden plan](https://studio.veggie.farm/) · [Open Garden Notebook](https://veggie.farm/tools/my-garden) · [Read the story behind veggie.farm](https://veggie.farm/about/)
+
+<small>Screenshots: veggie.farm, September 2026, synthetic browser-local example. Interface labels may evolve as the application improves.</small>

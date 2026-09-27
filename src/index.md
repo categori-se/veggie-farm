@@ -4,6 +4,11 @@ description: "Plant data, weather, soil and space to help you make better garden
 toc: false
 ---
 
+```js
+import {homeGarden} from "./components/home-garden.js";
+display(homeGarden({invalidation}));
+```
+
 <section class="home-proposition">
 <h1>Make better garden decisions.</h1>
 <p>Plant data, weather, soil, space and your observations—decide what to grow, where it fits, when to plant and what to do next.</p>
