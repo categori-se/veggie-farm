@@ -297,8 +297,8 @@
     },
     {
       "path": "docs/architecture/bed-conditions.md",
-      "bytes": 1346,
-      "sha256": "a7f284ed5a716f67f063fa3719908404c3194e28721e29b023c08b1182cf1147",
+      "bytes": 1389,
+      "sha256": "b4a9f0137e78cb1b76065d62b5d4d1e7ef5ffc9d6acfb29695c5b0736aa0c1e8",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -783,8 +783,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 6910,
-      "sha256": "6696f86865241e00fa64d7cd3219d92d78b988b4d0852d5ef804c0759e407ede",
+      "bytes": 7831,
+      "sha256": "02698159d8c6a0df8ae6782f8047e505882ec3138e20ac48e4ffb102ab4d6d4b",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

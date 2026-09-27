@@ -4,6 +4,6 @@ My Garden → Garden context & storage includes a bed-specific form for recorded
 
 Studio saves through its existing local save and rollback path. Account gardens use revision-checked updates. Failed saves retain form values; switching beds retains pending drafts while the dialog remains open. Closing the dialog discards unsaved drafts.
 
-Today’s Conditions for selector uses the chosen bed’s own temperature record, never another bed or the garden profile as a fallback. Garden-wide frost dates still apply. Only a same-day, dated reading within the existing control range enters guidance; stale/future/undated readings remain excluded. Direct sun is displayed as recorded context, not a new light suitability recommendation. Local scenario edits in Today do not overwrite saved records.
+Today’s Conditions for selector uses the chosen bed’s own temperature record, never another bed or the garden profile as a fallback. Garden-wide frost dates still apply. Only a same-day, dated reading within the existing control range enters guidance; stale/future/undated readings remain excluded. Direct sun is compared against a general vegetable-site benchmark in Today; see [light guidance](light-guidance.md) for its source and limits. Local scenario edits in Today do not overwrite saved records.
 
-Real account synchronization, seasonal light measurements and an integrated light/soil suitability assessment remain separate acceptance work.
+Real account synchronization, seasonal light measurements and crop-specific light/soil suitability remain separate acceptance work.
