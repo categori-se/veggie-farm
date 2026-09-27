@@ -15,6 +15,8 @@ export function evidenceByCrop(dataset) {
   return index;
 }
 
+// Reuse lesson: retrieve the attributed assertions before choosing an interpretation.
+// A crop match alone does not reconcile geography, cultivar or conflicting advice.
 export function getCropEvidence(dataset, cropSlug) {
   return asRecords(dataset).filter((record) => record.cropSlug === cropSlug);
 }

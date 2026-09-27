@@ -177,7 +177,7 @@
     "status": "candidate"
   },
   {
-    "officialUrl": "https://www.rareseeds.com",
+    "officialUrl": "/about/data-sources#catalog-records",
     "license": "Commercial catalog content. Use factual fields and source URLs only; do not republish catalog prose or copy images.",
     "reliabilityScore": 0.7,
     "recommendedUse": [
@@ -188,10 +188,10 @@
       "plant spacing",
       "frost hardiness"
     ],
-    "citationFormat": "Baker Creek Heirloom Seeds. Rare Seeds product pages. https://www.rareseeds.com.",
-    "id": "source:rareseeds",
-    "name": "Rare Seeds product pages",
-    "organization": "Baker Creek Heirloom Seeds",
+    "citationFormat": "Catalog reference. Catalog reference product pages. /about/data-sources#catalog-records",
+    "id": "source:catalog:60f8d14c907654c5",
+    "name": "Catalog reference product pages",
+    "organization": "Catalog reference",
     "kind": "seed-catalog-reference",
     "bestFor": [
       "cultivar growing facts",
@@ -208,7 +208,7 @@
     "downloadFormat": [
       "HTML"
     ],
-    "citationUrl": "https://www.rareseeds.com",
+    "citationUrl": "/about/data-sources#catalog-records",
     "localCacheStrategy": "Cache fact-only product records with retrieval time, source URL, parser version, and review status.",
     "status": "active"
   },

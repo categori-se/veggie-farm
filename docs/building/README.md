@@ -6,6 +6,10 @@ There is another contribution I hope this project makes. Public knowledge and co
 
 This repository is meant to make that process inspectable and repeatable. The assistant helped me implement, debug and check the work; it did not supply the underlying scientific evidence or make upstream work mine. The human work remains choosing the purpose, checking meanings, reviewing rights and testing whether the result actually helps.
 
+I took this on as a large, enthusiastic vibe-coding project over roughly a couple of weeks, prompted by the AWS Zero to Shipped hackathon. The challenge made it feel like a fun time to try: bring together public and online datasets, open-source web tools and AI assistance, and see how much of a useful gardening application I could build. The project continues to evolve from that first burst of work.
+
+The tool is for everyday gardeners first, working at the scale of a person, a bed and a season. Some of these ideas may also be useful to commercial gardeners. Supporting large-scale agriculture would take further adaptation and validation; that is not the current scope.
+
 ## Run one small, complete example
 
 From a checkout of this public repository, with the Node version in `.nvmrc`:
@@ -58,6 +62,18 @@ Ask the assistant to inspect existing modules before generating another parallel
 Then inspect the patch and run the relevant checks. A plausible explanation or a successful screenshot is not evidence that the data means what the assistant thinks it means. The [build evidence pack](../evidence/README.md) records actual agent and AWS use; these example prompts are teaching suggestions, not invented conversation logs.
 
 Use [the intake and attribution guide](data-intake.md) before adding a source. A new provider should not force changes to garden ownership or silently replace old observations. Build a small adapter, test unknowns and conflicting records, and only then connect it to a user-facing decision.
+
+## Beyond the garden
+
+This connects with my everyday work thinking about social development problems. One possible professional application is an inventory of plants and buildings on homes and parcels to support valuation work for a resettlement project. The transferable idea is to connect mapped features, attributed records and field observations so people can inspect and revisit them. Such an application would need its own field verification, consent and privacy practices, and professional valuation methods. veggie.farm does not perform those valuations; gardening is the approachable, human-scale setting in which I am exploring the method.
+
+The reusable pieces are modest: stable record identities, explicit units, mapped geometry, source links, observations kept separate from estimates, and portable exports. A new domain needs its own definitions and review. A garden bed is not a household asset register, and a plant dimension is not a monetary value. Start with a synthetic example and the people who understand the work before connecting real household information.
+
+## People and tools behind the example
+
+Observable Framework, D3 and Three.js make much of this web application possible. Extension researchers and public-data stewards supply knowledge that the code could not create. The [acknowledgments](../../ACKNOWLEDGMENTS.md) and [license records](../licenses/README.md) credit those foundations.
+
+The [design inspiration notes](../architecture/seasonal-sunlight.md#basis-and-inspiration) also credit shared examples by Dan Bridges, Christoph Pahmeyer, Claudio Esperança and Tom van Tilburg. Their work helped inform ways to explore daylight, map scale and viewpoints. Inspiration is distinct from a dependency or copied code; these credits do not imply involvement in or endorsement of veggie.farm.
 
 ## The impact we can offer and what we still need to learn
 

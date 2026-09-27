@@ -1,13 +1,14 @@
+import {catalogIdentity} from '../lib/plants/catalogIdentity.js';
+import {catalogProductLinks} from './catalog-product-links.js';
 import {appendPlantTypeGallery} from './plant-type-gallery.js';
 import {plantReports} from './plant-report-files.js';
 import {catalogImages} from './catalog-images.js';
 import {gardenActions} from './garden-actions.js';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n;};
-const partnerNames={'www.rareseeds.com':'RareSeeds','raintreenursery.com':'Raintree Nursery','www.treesofantiquity.com':'Trees of Antiquity'};
 export async function plantReport(id){
  const root=el('article',null,'plant-report');
  const back=el('a','← Find plants');back.href='/content/reference/plant-database';root.append(back);
- const file=plantReports.get(id);
+ const file=plantReports.get(catalogIdentity(id));
  if(!file){root.append(el('h1','Choose a plant'),el('p','Open a plant from Find Plants to see its photographs and growing report.'));return root;}
  const p=await file.json();document.title=`${p.name} · veggie.farm`;
  root.append(el('h1',p.name));if(p.scientific)root.append(el('p',p.scientific,'library-botanical'));
@@ -21,11 +22,11 @@ export async function plantReport(id){
  const summary=el('section');if(p.description)summary.append(el('p',p.description));
  const facts=[['Life cycle',p.lifeCycle],['Hardiness',p.hardiness],['Mature size',p.matureSize],['Sun',p.sunHours||p.light],['Spacing',p.spacing],['Germination',p.germination],['Ideal temperature',p.temperature],['Seed depth',p.depth],['Frost hardy',p.frost===true?'Yes':p.frost===false?'No':null],['Maturity',p.maturity],['Pollination',p.pollination],['Ripening',p.ripening],['Bloom',p.bloom],['Years to bear',p.yearsToBear]].filter(([,v])=>v!=null&&v!=='');
  const dl=el('dl',null,'crop-quick-facts');for(const [label,value] of facts)dl.append(el('dt',label),el('dd',value));summary.append(dl);
- const purchase=el('div',null,'catalog-purchase-links');for(const entry of p.purchaseLinks||[{url:p.source}]){try{const url=new URL(entry.url),name=partnerNames[url.hostname];if(url.protocol!=='https:'||!name)continue;const link=el('a',`Available for purchase on ${name} ↗`);link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';purchase.append(link);}catch{}}
+ const purchase=catalogProductLinks(p);summary.append(purchase);
  summary.append(gardenActions({crop:p.common||p.name,variety:p.cultivar||'',catalogPlantId:p.id,catalogSourceUrl:p.source}));header.append(gallery,summary);root.append(header);
  if(p.additionalFacts?.length||p.sourceAttributes?.length){const section=el('section');section.append(el('h2','Growing details'));const list=el('ul');for(const fact of p.additionalFacts?.length?p.additionalFacts:p.sourceAttributes)list.append(el('li',fact.text||`${fact.label}: ${fact.value}`));section.append(list);root.append(section);}
  if(p.careNotes?.length){const section=el('details');section.append(el('summary','Growing and care notes'));for(const note of [...new Set(p.careNotes)])section.append(el('p',note));root.append(section);}
  if(p.sourceDescription?.length){const section=el('details');section.append(el('summary','More about this plant'));for(const paragraph of [...new Set(p.sourceDescription)])section.append(el('p',paragraph));root.append(section);}
- const evidence=el('details');evidence.append(el('summary','Source & details'));const source=el('a','View the source listing');source.href=p.source;evidence.append(purchase,source,el('p',`Catalog facts collected ${p.collectedAt?.slice(0,10)||'date unavailable'}${p.detailCollectedAt&&p.detailCollectedAt!==p.collectedAt?`; additional details ${p.detailCollectedAt.slice(0,10)}`:''}.`));root.append(evidence);
+ const evidence=el('details');evidence.append(el('summary','Record details'));const source=el('a','View reference');source.href=p.source;evidence.append(source,el('p',`Catalog facts collected ${p.collectedAt?.slice(0,10)||'date unavailable'}${p.detailCollectedAt&&p.detailCollectedAt!==p.collectedAt?`; additional details ${p.detailCollectedAt.slice(0,10)}`:''}.`));root.append(evidence);
  return root;
 }

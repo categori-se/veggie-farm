@@ -55,12 +55,12 @@
     "status": "candidate"
   },
   {
-    "id": "source:rareseeds",
+    "id": "source:catalog:60f8d14c907654c5",
     "type": "source",
-    "name": "Rare Seeds product pages",
-    "url": "https://www.rareseeds.com",
+    "name": "Catalog reference product pages",
+    "url": "/about/data-sources#catalog-records",
     "license": "Commercial catalog content. Use factual fields and source URLs only; do not republish catalog prose or copy images.",
-    "citation": "Baker Creek Heirloom Seeds. Rare Seeds product pages. https://www.rareseeds.com.",
+    "citation": "Catalog reference. Catalog reference product pages. /about/data-sources#catalog-records",
     "lastReviewed": null,
     "reliabilityScore": 0.7,
     "status": "active"

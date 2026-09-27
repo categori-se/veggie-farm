@@ -8,6 +8,12 @@ toc: true
 
 veggie.farm is moving from a library of gardening information toward explainable garden decisions. That means every recommendation should show what came from a source, what was modeled, what the gardener entered, and what veggie.farm calculated.
 
+## A starting point for your own project
+
+Part of the purpose of veggie.farm is to make useful public knowledge easier to discover and connect. Cooperative Extension guidance, geographic data and weather records can become building blocks for an application around a place or question you care about. Open-source web tools and AI assistance help with the assembly; the source still supplies the evidence. Publicly accessible data has its own reuse terms, and availability alone does not make it open-licensed.
+
+Start with one question and a small, permitted dataset. Keep its source, date, units, geographic coverage and unknowns attached as you transform it. Connect it to an observation or a decision, then check the result. That is the learning opportunity here, whether the subject is a garden or another practical problem.
+
 ## Four evidence layers
 
 <div class="method-grid">
