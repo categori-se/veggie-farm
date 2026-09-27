@@ -948,7 +948,7 @@ export function gardenPlanner(options = {}) {
             </details>
           </section>
 
-          <details class="studio-preview-options"><summary>Planting date preview</summary><div data-role="time-preview-host"></div></details>
+          <div class="studio-preview-options"></div>
           <nav class="planning-scope" aria-label="Planning scope" style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 12px">
             <button type="button" data-workspace="explore">Explore garden</button>
             <button type="button" data-workspace="walk">Walk through</button>
@@ -1041,6 +1041,7 @@ export function gardenPlanner(options = {}) {
               <div class="three-host" data-role="three-host"></div>
             </section>
           </div>
+          <div data-role="time-preview-host"></div>
           <p data-role="planning-scope-help" style="margin:0;padding:0 12px 8px"></p>
           <p data-role="imagery-status" role="status" hidden></p>
           <div class="planner-storage-notice">
@@ -1134,7 +1135,7 @@ export function gardenPlanner(options = {}) {
   };
 
   let previewGardenId=state.activeParcelId;
-  const timePreview=plannerTimePreview({getBedName:id=>state.beds.find(b=>b.id===id)?.name || (id ? "Unknown bed" : "Outside a named bed"),getPlantName:id=>plantById(state,id)?.name || "Unidentified plant",getPlacements:()=>state.placements,getDate:()=>state.previewDate,onChange:date=>{state.previewDate=date;if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
+  const timePreview=plannerTimePreview({getScopeName:()=>state.viewMode==="bed"?activeBed(state)?.name||"bed":"garden",getBedName:id=>state.beds.find(b=>b.id===id)?.name || (id ? "Unknown bed" : "Outside a named bed"),getPlantName:id=>plantById(state,id)?.name || "Unidentified plant",getPlacements:()=>state.viewMode==="bed"?activePlacements(state):state.placements,getDate:()=>state.previewDate,onChange:date=>{state.previewDate=date;if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
   root.querySelector('[data-role="time-preview-host"]').append(timePreview.root);
   const sunPreview=plannerSunPreview({getState:()=>state,onChange:()=>{if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
   root.querySelector('.studio-preview-options').insertAdjacentElement('afterend',sunPreview.root);
