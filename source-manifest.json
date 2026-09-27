@@ -374,6 +374,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/garden-soil-history.md",
+      "bytes": 1715,
+      "sha256": "dcc38eaacdc6224455a3858b63efecbd282eeb42b09a6067783e6f7e2be9f9f4",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/media.md",
       "bytes": 1730,
       "sha256": "26ae2975b72bee044e69d230dbf691c8292d80ea8d6397111f643fc3b7e634c7",
@@ -1263,8 +1269,8 @@
     },
     {
       "path": "src/components/garden-home.js",
-      "bytes": 12930,
-      "sha256": "783eefc084ff3adb9063b2fe2562981566a7ed5d05cee1ffd8557078fdad6513",
+      "bytes": 13127,
+      "sha256": "b3b6e87a4ef80eb424d95f6e94bb85efecc7047b6af4c09a24f8e2b2a0c0b296",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1284,6 +1290,12 @@
       "bytes": 4366,
       "sha256": "93fe1d3ee29014dad264d86f4116cb292f069b34ae304a307d29df111ab344a0",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/garden-soil-history.js",
+      "bytes": 1581,
+      "sha256": "fa76f39842fa05e22449b00e076c4cc68a29da9a40eee4d0b32dba57cc993278",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/gardenPlanner.js",
@@ -1329,8 +1341,8 @@
     },
     {
       "path": "src/components/notebook-garden-links.js",
-      "bytes": 5079,
-      "sha256": "5ecbe5daf3ebdaeb547d9493e1d21b719bf051d07873b3ff9f4ec5c3728aa3e2",
+      "bytes": 5215,
+      "sha256": "db63fb96a2b4dea85387ef3d3ce5893b1acfc7560d7fb3edd06f0543bbd04090",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1338,6 +1350,12 @@
       "bytes": 1357,
       "sha256": "cf1f7993412301afc1ca9cde1ade3c054bf64090170185fa38def6fc6e261ee5",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/components/notebook-soil-links.js",
+      "bytes": 2207,
+      "sha256": "20ca501f14e17b0f029ea8f61f613386222d5446619297e25af487a17de172f8",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/components/notebook-timeline.js",
@@ -2877,8 +2895,8 @@
     },
     {
       "path": "src/lib/garden/accountGardenJournal.js",
-      "bytes": 4993,
-      "sha256": "163bb8022d780c7271f6bc312152da41eede202a7d6bb8d41f0c57b8d9b31d57",
+      "bytes": 5534,
+      "sha256": "85e7ce45d873fe1fdfcdabba2c75e9ec7d49584c30a4336d5aa9e8dada0568cd",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2933,6 +2951,12 @@
       "path": "src/lib/garden/gardenSelection.js",
       "bytes": 901,
       "sha256": "92544b3accba09504da786b7ee1d54c100c1b72a8a0fa1b43b753bd487d8390e",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/lib/garden/gardenSoilHistory.js",
+      "bytes": 2419,
+      "sha256": "c80d065eee7f3910ca559ab948f07bed51f92ef48bc83ed1969b973555c0410e",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -3737,6 +3761,12 @@
       "path": "tests/gardenSelection.test.mjs",
       "bytes": 1457,
       "sha256": "494645e9c82ec9dc17ab737570f00394ee933d6190bd8b53297eb6ddce2063a5",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "tests/gardenSoilHistory.test.mjs",
+      "bytes": 2379,
+      "sha256": "9b32ba3217925f4db13da7ebebdc85e2b9e6db65fe4e1476a75c32ff4fc4727c",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

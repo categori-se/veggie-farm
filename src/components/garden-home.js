@@ -1,3 +1,4 @@
+import {gardenSoilHistory} from './garden-soil-history.js';
 import {seasonReflectionForm} from './season-reflection.js';
 import {observationPhotoPicker} from './observation-photo-picker.js';
 import {observationPhoto} from '../lib/garden/observationPhoto.js';
@@ -14,8 +15,8 @@ export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=loca
  const controls=el('div');controls.style.cssText='display:flex;flex-wrap:wrap;gap:12px';const year=el('input');year.type='number';year.min='1900';year.max='9999';year.value=String(initialYear||today.slice(0,4));year.style.width='6em';const label=el('label','Season ');label.append(year);controls.append(label);const bedFilter=el('select');bedFilter.setAttribute('aria-label','Filter garden bed');controls.append(bedFilter,action('Export backup',onBackup));if(onOpenSeason)controls.append(action('View season in plan',()=>{const y=Number(year.value);if(Number.isInteger(y)&&y>=1900&&y<=2200){onOpenSeason(y);dialog.close();}}));if(onNextSeason)controls.append(action('Plan next year',()=>{const y=Number(year.value);if(Number.isInteger(y)&&y>=1900&&y<2200){onNextSeason(y);dialog.close();}}));dialog.append(controls);
  const conditions=el('p'),contextDetails=el('details');contextDetails.append(el('summary','Garden context & storage'),conditions,el('p','Logging does not change planned dates or unlock the map. Use the existing account-save controls or export a backup for safekeeping.'));dialog.append(contextDetails);
  const attention=el('section');attention.setAttribute('aria-label','Garden attention');
- const reflectionDrafts=new Map(),reflection=el('div');
- const learning=el('div');const summary=el('p'),log=el('section'),plans=el('section'),history=el('section');dialog.append(summary,attention,log,learning,reflection,plans,history);
+ const reflectionDrafts=new Map(),reflection=el('div'),soilHistory=el('div');
+ const learning=el('div');const summary=el('p'),log=el('section'),plans=el('section'),history=el('section');dialog.append(summary,attention,log,learning,soilHistory,reflection,plans,history);
  let choice=selectedPlantingId||'',historyLimit=30,attentionLimit=6,logType='';
  const plants=()=>new Map(getPlants().map(p=>[p.id,p]));
  function render(){
@@ -60,6 +61,7 @@ export function gardenHome({getWorkspace,getPlants,selectedPlantingId,today=loca
    form.onsubmit=async event=>{event.preventDefault();if(photoBusy)return;save.disabled=true;photoPicker.disabled=true;try{choice=planting.value;await onLog(choice,{type:type.value,date:date.value,notes:notes.value,quantity:quantity.value,unit:unit.value,quality:quality.value,photo});year.value=date.value.slice(0,4);logType='';render();const message=el('p',savedMessage);message.setAttribute('role','status');log.prepend(message);}catch(error){status.textContent=error.message;}finally{save.disabled=false;photoPicker.disabled=false;}};log.append(form,status);
   }
   learning.replaceChildren(gardenSeasonLearning({workspace,plants:getPlants(),year:season,today,bedId:bedFilter.value,onNextSeason:onNextSeason?y=>{onNextSeason(y);dialog.close();}:undefined}));
+  soilHistory.replaceChildren(gardenSoilHistory({workspace,year:season,today,bedId:bedFilter.value}));
   reflection.replaceChildren(seasonReflectionForm({property:workspace.property,year:season,onSave:onReflection,drafts:reflectionDrafts}));
   plans.replaceChildren(el('h3','Plan → actual'));
   const wrap=el('div');wrap.style.overflowX='auto';const table=el('table');table.style.width='100%';table.innerHTML='<thead><tr><th>Planting / bed</th><th>Planned entry</th><th>Actual sow / transplant</th><th>Harvest records this year</th><th>Plan</th></tr></thead>';const body=el('tbody');table.append(body);
