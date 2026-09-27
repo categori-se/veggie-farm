@@ -81,8 +81,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6879,
-      "sha256": "a0a45a2343902a9d2cab32dfbeff36b451cad441f402dece2907aa0223faebfe",
+      "bytes": 7009,
+      "sha256": "91845578c78cc8085fdff321c757eae9d76e124827af680f66de6df5ca5ba923",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1059,8 +1059,8 @@
     },
     {
       "path": "src/about/index.md",
-      "bytes": 2830,
-      "sha256": "b6759e0fc1e5e65cb47342958faaa4f7c74d21a96b9dc41380c1722ea66fe26c",
+      "bytes": 5199,
+      "sha256": "35b3935e9a95541a0407ee36c6999713ae6ca436362bd040cb86433a7ef91e68",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
