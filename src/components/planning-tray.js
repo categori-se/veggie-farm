@@ -1,7 +1,7 @@
 import {readGardenHandoff} from '../lib/garden/gardenHandoff.js';
 import {readPlantIntent,plannedCatalogPlant} from '../lib/garden/plantIntent.js';
 const el=(tag,text)=>{const e=document.createElement(tag);if(text!=null)e.textContent=text;return e;};
-export function planningTray({getState,commit,createGarden,openBed,remove,invalidation}){
+export function planningTray({getState,commit,createGarden,createBed,openBed,remove,invalidation}){
  const root=el('div'),launch=el('button','Planning tray');launch.type='button';root.append(launch);
  let waitingForGarden=!!readGardenHandoff(location.hash),cancelled=false,recovery=null,chooseDestination=false;
  let pending=null,error='';try{pending=readPlantIntent(location.hash);}catch(e){error=e.message;}
@@ -24,7 +24,14 @@ export function planningTray({getState,commit,createGarden,openBed,remove,invali
    const refreshBeds=()=>{bed.replaceChildren(new Option('Choose a bed',''));const g=getState().parcels.find(g=>g.id===garden.value);for(const b of g?.beds||[])bed.append(new Option(`${b.name} · ${Math.round(b.width*b.height/144)} sq ft total`,b.id));};garden.onchange=refreshBeds;refreshBeds();
    const create=el('button','Start a new 4 × 8 garden');create.type='button';create.onclick=()=>{try{createGarden();draw();}catch(e){status.textContent=e.message;}};
    const active=getState().parcels.find(g=>g.id===getState().activeParcelId);if(active&&!chooseDestination&&!/^berkshire-botanical|^the-mount|^naumkeag|^ashintully/.test(active.id)){garden.value=active.id;refreshBeds();bed.value=active.activeBedId||'';}
-   form.append(label('Garden',garden),label('Bed',bed),create,label('Planning year',year));
+   const newBed=el('details'),newFields=el('fieldset');newBed.append(el('summary','Create a bed in this garden'),newFields);newFields.disabled=!garden.value||!newBed.open;
+   const bedName=el('input'),bedWidth=el('input'),bedDepth=el('input');bedName.maxLength=100;bedName.placeholder='e.g. Kitchen bed';
+   for(const [input,value]of [[bedWidth,'4'],[bedDepth,'8']]){input.type='number';input.min=input===bedWidth?'2':'1.5';input.max='50';input.step='0.25';input.value=value;}
+   const addBed=el('button','Create and select bed');addBed.type='button';
+   newFields.append(label('New bed name',bedName),label('Bed width (feet)',bedWidth),label('Bed depth (feet)',bedDepth),el('p','The bed is added beside existing beds. Adjust its position in Plan.'),addBed);
+   const updateNewBed=()=>{newFields.disabled=!garden.value||!newBed.open;};garden.addEventListener('change',updateNewBed);newBed.addEventListener('toggle',updateNewBed);
+   addBed.onclick=()=>{try{if(!bedWidth.reportValidity()||!bedDepth.reportValidity())return;const id=createBed({gardenId:garden.value,name:bedName.value,width:bedWidth.value,depth:bedDepth.value});refreshBeds();bed.value=id;newBed.open=false;status.textContent='Bed created and selected. Review your plant dimensions, then add the crop to its tray.';}catch(e){status.textContent=e.message;}};
+   form.append(label('Garden',garden),label('Bed',bed),newBed,create,label('Planning year',year));
    const plannedDate=el('input');plannedDate.type='date';plannedDate.min='1900-01-01';plannedDate.max='2200-12-31';plannedDate.value=pending.plannedDate||'';plannedDate.onchange=()=>{if(plannedDate.value)year.value=plannedDate.value.slice(0,4);};form.append(label('Planned planting date (optional)',plannedDate));
    const dimensions={};for(const [key,name,value]of [['spacing','Plant spacing (inches)',pending.spacingMax],['diameter','Planned width (inches)',null],['height','Planned height (inches)',null]]){const input=el('input');input.type='number';input.min='1';input.max='1200';input.step='0.5';input.required=true;input.value=value==null?'':String(value);dimensions[key]=input;form.append(label(name,input));}
    form.append(el('p',pending.spacingMax?'Spacing starts at the catalog’s recorded upper bound. Confirm it for your plan. Width and height are your design estimates.':'Dimensions are not established here. Enter design estimates before placing this plant.'));

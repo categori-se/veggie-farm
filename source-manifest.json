@@ -429,8 +429,8 @@
     },
     {
       "path": "docs/architecture/plant-discovery-handoff.md",
-      "bytes": 1993,
-      "sha256": "16bd17eb4b5b783b96896fc94d143f612b98bd59bc0310d8d8780174d99f3333",
+      "bytes": 2876,
+      "sha256": "f48134b4c9cd9170609ead7a01f074765d77bd65109faa590b75ccc00c28be91",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1335,8 +1335,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 570552,
-      "sha256": "aaf19e75a8200ae1bad44ece6b97e4daaa51a43c1ecb8edfa80daa815778ed1a",
+      "bytes": 571712,
+      "sha256": "0ecdd15b6d8cc1e78a3fd39781b2dbe42e7eef13e91b8660aeea4fc57f401b3c",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1455,8 +1455,8 @@
     },
     {
       "path": "src/components/planning-tray.js",
-      "bytes": 6945,
-      "sha256": "ceb6471255f3a80efa24ee929479553eea9c3bcf0b5616e7c31b25cfeeb2c980",
+      "bytes": 8285,
+      "sha256": "bc48adff975ed7e31d6a24cb3926eb5edd60c09ffa2f3d77e5fffd8a24bf70c1",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

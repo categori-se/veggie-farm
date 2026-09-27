@@ -1415,6 +1415,21 @@ export function gardenPlanner(options = {}) {
       state.selectedPlantId=entry.plantId;
     }),
     createGarden:()=>changeTray(()=>{exploringDemos=false;createBlankGardenWorkspace(state,"My garden");}),
+    createBed:values=>{
+      let createdId;
+      changeTray(()=>{
+        const dimensions=firstPlanDimensions(values.width,values.depth),name=String(values.name||'').trim();
+        if(!name||name.length>100)throw Error("Enter a bed name of up to 100 characters.");
+        if(dimensions.width<24||dimensions.height<18)throw Error("Use a bed at least 2 feet wide and 1.5 feet deep.");
+        const garden=state.parcels.find(g=>g.id===values.gardenId);
+        if(!garden)throw Error("Choose an available garden first.");
+        switchActiveParcelWorkspace(state,garden.id);
+        const right=state.beds.reduce((edge,b)=>Math.max(edge,b.x+b.width/2),0);
+        const bed=normalizeBed({id:uniqueBedId(state),name,...dimensions,x:right+36+dimensions.width/2,y:dimensions.height/2,rotation:0,safeMargin:6,grid:12,crowding:1,showSpacing:true,notes:"Added from the planning tray; adjust its position in Plan."});
+        state.beds.push(bed);state.activeBedId=bed.id;state.selectedPlacementId=null;createdId=bed.id;
+      },"Could not save the new bed. Your previous garden is unchanged; free browser storage and try again.");
+      return createdId;
+    },
     openBed:item=>{if(!openPlantingWorkspace(state,item.bedId))throw Error("This bed no longer exists.");state.selectedPlantId=item.plantId;state.previewDate=item.plannedDate||null;renderAll();},
     remove:id=>changeTray(()=>{state.property.planningTray=(state.property.planningTray||[]).filter(e=>e.id!==id);})
   });
