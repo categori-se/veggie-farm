@@ -1,3 +1,6 @@
+import {plantVisualSpec} from "../lib/plants/plantVisualSpec.js";
+import {renderPlantVisual2d} from "../lib/plants/plantVisual2d.js";
+import {addPlantVisual3d} from "../lib/plants/plantVisual3d.js";
 import {firstPlanGuide} from "./first-plan-guide.js";
 import {firstPlanDimensions, firstPlanPositions} from "../lib/garden/firstPlan.js";
 import {planningTray} from "./planning-tray.js";
@@ -6563,6 +6566,8 @@ function renderSizedPlant2d(group, state, placement) {
 
 function render2dLeaves(group, plant, placement, ghost) {
   if (!plant) return;
+  const spec=plantVisualSpec(plant);
+  if(spec){renderPlantVisual2d(group,spec,placement,{ghost});return;}
   const leaves = leafInstances(plant, placement);
   const leafGroup = group.append("g").attr("class", "leaf-layer");
 
@@ -8967,7 +8972,14 @@ function addPlant3d(group, plant, placement, x, z, unit, selected = false, ghost
     return;
   }
 
-  if(!ghost)plantGroup.scale.setScalar(sizeScale);
+  if(!ghost) {
+    plantGroup.scale.setScalar(sizeScale);
+    plantGroup.userData.sizeScale=sizeScale;
+    if(sizeScale<1){
+      const mature=circleLineLoop(plant.matureDiameter*unit/2,'#9caf9d');
+      mature.position.set(x,.03,z);group.add(mature);
+    }
+  }
   const model = ghost ? null : gardenModelForPlant(three, plant);
   if (model) {
     plantGroup.rotation.y = Number(placement.rotation) || 0;
@@ -8982,6 +8994,13 @@ function addPlant3d(group, plant, placement, x, z, unit, selected = false, ghost
     return;
   }
 
+  const spec=plantVisualSpec(plant);
+  if(spec){
+    addPlantVisual3d(THREE,plantGroup,spec,placement,unit,{ghost});
+    plantGroup.userData.renderMode="procedural-archetype";
+    if(selected||ghost){const ring=circleLineLoop((plant.spacing||plant.matureDiameter)*unit/2,selected?"#f1c65a":"#7fae8a");ring.position.y=.03;plantGroup.add(ring);}
+    return;
+  }
   plantGroup.userData.renderMode = "procedural";
 
   const stem = new THREE.Mesh(
@@ -9930,6 +9949,8 @@ function spacingRadius(plant, bed) {
 
 function plantFootprintPath(plant, placement) {
   if (!plant) return "";
+  const spec=plantVisualSpec(plant);
+  if(spec){const r=spec.widthIn/2;return `M ${-r},0 A ${r},${r} 0 1 0 ${r},0 A ${r},${r} 0 1 0 ${-r},0 Z`;}
   const rx = Math.max(2, plant.matureDiameter / 2);
   const ry = Math.max(2, plant.matureDiameter * 0.42);
   const points = organicOutlinePoints(0, 0, rx, ry, plant.seed + placement.id.length, 48);

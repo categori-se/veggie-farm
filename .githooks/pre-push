@@ -1,3 +1,7 @@
 #!/bin/sh
 set -eu
+# Keep fixture repositories independent of Git variables inherited by hooks.
+for git_env_name in $(git rev-parse --local-env-vars); do
+  unset "$git_env_name"
+done
 npm run verify:community
