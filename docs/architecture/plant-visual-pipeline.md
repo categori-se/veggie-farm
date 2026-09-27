@@ -29,7 +29,7 @@ Browser integration checks must distinguish fixture-driven state setup from user
 
 ## Remaining before six-plant milestone acceptance
 
-- Finish plant inspection and movement/rotation/duplication journeys; introduce duplication and multi-selection where missing.
+- Add multi-selection and finish the six-plant acceptance journey. The inspector now shows mature planning dimensions and a separate orientation control; dragging preserves orientation. SVG taps select while locked, navigation captures only after a drag threshold, and touch coordinates resolve from the touch point. Single-plant duplication now creates a new planned record in a nearby clear location, preserves plan dates/size scenarios, and excludes observations, harvest history, notes and actual status. It requires explicit editing; a failed local save rolls back the copy. Full-plan spacing is conservative across dates, and the interface states that assumption.
 - Improve near-view silhouettes and review them at real garden scale. Validate spacing, ghost placement, capacity and conflicts interactively.
 - Add explicitly labeled illustrative growth stages and a prominent seasonal timeline; present stage assumptions and retain manual scenarios. Current April/July fixtures are authored size interpolation, not automatic growth stages.
 - Check placement and save/reload/export behavior with the six-plant fixture; test actual date controls, not only derived rendering.

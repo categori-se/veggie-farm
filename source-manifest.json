@@ -393,8 +393,8 @@
     },
     {
       "path": "docs/architecture/plant-visual-pipeline.md",
-      "bytes": 5094,
-      "sha256": "bf30ae0aed5fd204ab3cd596f2e54722fb317d2f096e05218ce0de1bde1bccb4",
+      "bytes": 5637,
+      "sha256": "65ff05e5a24f2e29128a3c0bb2becdf556b49ffae4a94482d3a0dabc5b2b52e7",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1197,8 +1197,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 560709,
-      "sha256": "9e128069bf1539bd5a8287c2376bed6f58edfe704454d57bbef1603d6faa25ef",
+      "bytes": 563614,
+      "sha256": "3410b174d48b53557da77d700616242f0bbb5189e377f39ab6550b6b8a96b6b7",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2762,6 +2762,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/duplicatePlanting.js",
+      "bytes": 2608,
+      "sha256": "3acb7ea526c00c55744fe82fdb1fa8acf3b6e5473dcee79082d3e1ce1f68371b",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/firstPlan.js",
       "bytes": 1234,
       "sha256": "b6e76c5f0b83977e4c86528093d86f64cfb352d5c1be9a4ba527ee25dcea3520",
@@ -3408,6 +3414,12 @@
       "bytes": 6234,
       "sha256": "cc1d9513d0f3adab59ca6a5c2caa0dc5fefc2583e786de3e896e6dadb7daeb2b",
       "basis": "Scoped licensing/acknowledgment update; generated candidate inventories use community profile"
+    },
+    {
+      "path": "tests/duplicatePlanting.test.mjs",
+      "bytes": 2252,
+      "sha256": "502fa4228d321b7ab1f723633bc9c41919eae871b61a76cf8f89701a19213af9",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/fetchPublicGisSnapshots.test.js",

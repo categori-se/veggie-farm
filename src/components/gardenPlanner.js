@@ -1,3 +1,4 @@
+import {duplicatePlanting} from "../lib/garden/duplicatePlanting.js";
 import {plantVisualSpec} from "../lib/plants/plantVisualSpec.js";
 import {renderPlantVisual2d} from "../lib/plants/plantVisual2d.js";
 import {addPlantVisual3d} from "../lib/plants/plantVisual3d.js";
@@ -4071,7 +4072,8 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
       startPitch: normalizeViewPitch(planningPitch(state)),
       moved: false
     };
-    refs.planSvg.setPointerCapture?.(event.pointerId);
+    // Capture only after a drag starts; early capture retargets a tap to the SVG
+    // and prevents the plant/bed beneath the pointer from being inspected.
     if (rotating) event.preventDefault();
   });
 
@@ -4080,6 +4082,7 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
     const dx = event.clientX - navigationState.startClientX;
     const dy = event.clientY - navigationState.startClientY;
     if (!navigationState.moved && Math.hypot(dx, dy) < 4) return;
+    if (!navigationState.moved) refs.planSvg.setPointerCapture?.(event.pointerId);
     navigationState.moved = true;
     suppressNextPlanClick = true;
     event.preventDefault();
@@ -4107,6 +4110,7 @@ function setupSvgInteractions(refs, state, renderAll, renderSharedViews = render
       renderAll();
     }
   };
+  svg.on("pointerleave", () => {if (navigationState && !navigationState.moved) navigationState=null;});
   svg.on("pointerup", finishNavigation);
   svg.on("pointercancel", finishNavigation);
   svg.on("lostpointercapture", finishNavigation);
@@ -4201,7 +4205,6 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
       rotating,
       moved: false
     };
-    refs.parcelSvg.setPointerCapture?.(event.pointerId);
     if (rotating) event.preventDefault();
   });
 
@@ -4210,6 +4213,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
     const dx = event.clientX - panState.startClientX;
     const dy = event.clientY - panState.startClientY;
     if (!panState.moved && Math.hypot(dx, dy) < 4) return;
+    if (!panState.moved) refs.parcelSvg.setPointerCapture?.(event.pointerId);
     panState.moved = true;
     refs.parcelSvg.dataset.panMoved="true";
     suppressNextParcelClick = true;
@@ -4240,6 +4244,7 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
     }
   };
 
+  svg.on("pointerleave", () => {if (panState && !panState.moved) panState=null;});
   svg.on("pointerup", finishPan);
   svg.on("pointercancel", finishPan);
   svg.on("lostpointercapture", finishPan);
@@ -5011,7 +5016,6 @@ function render2dPlan(refs, state, renderAll) {
       const offset = dragOffsets.get(d.id) || {x: 0, y: 0};
       d.x = clamp(x + offset.x, 0, bed.width);
       d.y = clamp(y + offset.y, 0, bed.height);
-      d.rotation = (d.rotation || 0) + event.dx * 0.002;
       state.selectedPlacementId = d.id;
       renderAll();
     })
@@ -5465,7 +5469,6 @@ function renderPropertyBeds2d(svg, state, renderAll, bedOptions = {}) {
       const offset = plantDragOffsets.get(placement.id) || {x: 0, y: 0};
       placement.x = clamp(local.x + offset.x, 0, bed.width);
       placement.y = clamp(local.y + offset.y, 0, bed.height);
-      placement.rotation = (placement.rotation || 0) + event.dx * 0.002;
       renderAll();
     })
     .on("end", (event, placement) => {
@@ -5912,7 +5915,9 @@ function sharedWorldLayer(svgNode) {
 }
 
 function pointerInSharedWorld(event, svgNode) {
-  return d3.pointer(event, sharedWorldLayer(svgNode));
+  // TouchEvent has no clientX/clientY; D3 expects an individual touch point.
+  const point = event?.changedTouches?.[0] || event?.touches?.[0] || event;
+  return d3.pointer(point, sharedWorldLayer(svgNode));
 }
 
 function panParcelViewportFromScreenDelta(state, startViewport, dx, dy, rect) {
@@ -6820,7 +6825,8 @@ function bindInspectorEditGuard(container, state, featureType, renderAll) {
 
 function syncEditorFields(container, kind, record) {
   for (const input of container.querySelectorAll(`[data-${kind}-field]`)) {
-    const value = record[input.dataset[`${kind}Field`]];
+    const field=input.dataset[`${kind}Field`];
+    const value = kind==="placement" && field==="rotation" ? round(((Number(record.rotation)||0)*180/Math.PI%360+360)%360) : record[field];
     if (input.type === "checkbox") input.checked = value !== false;
     else if (input.value !== String(value ?? "")) input.value = value ?? "";
   }
@@ -7292,6 +7298,10 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
       <div class="placement-editor">
         ${inspectorEditGuardMarkup(state, "placement")}
         <div class="status-pill ${status.ok ? "ok" : "warning"}">${status.ok ? "Spacing ok" : "Needs adjustment"}</div>
+        <button type="button" data-action="duplicate-placement" ${!plannerCanEditFeature(state,"placement")||!placement.bedId?'disabled':''}>Duplicate planting</button>
+        <p data-role="duplicate-status" role="status"></p>
+        <p class="plant-planning-dimensions">Mature planning size: ${Number(currentPlant?.matureDiameter)>0?`${round(currentPlant.matureDiameter)}″ wide`:"width unknown"} · ${Number(currentPlant?.height)>0?`${round(currentPlant.height)}″ high`:"height unknown"}. Spacing: ${Number(currentPlant?.spacing)>0?`${round(currentPlant.spacing)}″`:"unknown"}.</p>
+        <label><span>Orientation °</span><input data-placement-field="rotation" type="number" min="0" max="360" step="any" value="${round(((Number(placement.rotation)||0)*180/Math.PI%360+360)%360)}"></label>
         <label>
           <span>Plant</span>
           <select data-placement-field="plantId">
@@ -7302,7 +7312,7 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         <label>
           <span>Health</span>
           <select data-placement-field="health">
-            ${["starting", "strong", "stressed", "sick", "harvested"].map((value) => `<option ${placement.health === value ? "selected" : ""}>${value}</option>`).join("")}
+            ${["planned", "starting", "strong", "stressed", "sick", "harvested"].map((value) => `<option ${placement.health === value ? "selected" : ""}>${value}</option>`).join("")}
           </select>
         </label>
         <label>
@@ -7330,6 +7340,19 @@ function renderInspector(refs, state, renderAll, {preserveEditor = null} = {}) {
         if (updatePlacementField(placement, input, state) === false) return;
         renderAll({preserveEditor: "placement"});
       });
+    });
+
+    refs.selectedPlacement.querySelector('[data-action="duplicate-placement"]').addEventListener("click", () => {
+      if(!plannerCanEditFeature(state,"placement"))return;
+      try{
+        const copy=duplicatePlanting({source:placement,bed:bedForPlacement(state,placement),plants:state.plants,placements:state.placements,id:uniquePlacementId(state)});
+        state.placements.push(copy);state.selectedPlacementId=copy.id;renderAll();
+        if(refs.root.querySelector('[data-role="storage-status"]').dataset.saved!=="true"){
+          state.placements=state.placements.filter(p=>p.id!==copy.id);state.selectedPlacementId=placement.id;renderAll();
+          throw Error("Could not save the copy. The original plan is unchanged; free browser storage and try again.");
+        }
+        refs.selectedPlacement.querySelector('[data-role="duplicate-status"]').textContent="Copy selected. Planned dates retained; observations and harvest history stay with the original. Spacing checks use the full plan.";
+      }catch(error){refs.selectedPlacement.querySelector('[data-role="duplicate-status"]').textContent=error.message;}
     });
 
     refs.selectedPlacement.querySelector('[data-action="delete-placement"]').addEventListener("click", () => {
@@ -7366,6 +7389,13 @@ function updatePlacementField(placement, input, state) {
     const end=field === "plannedUntil" ? input.value : placement.plannedUntil;
     input.setCustomValidity(start && end && end < start ? "The planned last day must be on or after planting." : "");
     if (!input.reportValidity()) return false;
+  }
+  if (field === "rotation") {
+    const degrees=Number(input.value);
+    input.setCustomValidity(input.value.trim() && Number.isFinite(degrees) && degrees>=0 && degrees<=360 ? "" : "Enter an orientation from 0 to 360 degrees.");
+    if(!input.reportValidity())return false;
+    placement.rotation=(degrees%360)*Math.PI/180;
+    return;
   }
   if (field === "x" || field === "y") {
     const bed = bedForPlacement(state, placement);
@@ -8982,7 +9012,7 @@ function addPlant3d(group, plant, placement, x, z, unit, selected = false, ghost
   }
   const model = ghost ? null : gardenModelForPlant(three, plant);
   if (model) {
-    plantGroup.rotation.y = Number(placement.rotation) || 0;
+    plantGroup.rotation.y = -(Number(placement.rotation) || 0);
     addGardenModel3d(plantGroup, model, plant, unit);
     plantGroup.userData.modelId = model.id;
     plantGroup.userData.renderMode = "catalog-model";
