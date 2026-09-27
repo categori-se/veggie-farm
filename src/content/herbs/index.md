@@ -45,25 +45,16 @@ Harvest what you need, but consider letting some plants complete their cycle.
 </div>
 
 
-## Compare the light available
+## Choose herbs for your garden
 
-```js
-import {decisionWorkbench} from "../../components/garden-decisions.js";
-const decisionSources = await FileAttachment("../../data/decision-sources.json").json();
-display(decisionWorkbench("sun", {sources: decisionSources, crop: {slug: "index"}}));
-```
+Start with herbs you use in the kitchen. Use the comparison below to read their recorded season and care needs, then open a guide for more detail. Check the light, moisture and space in the place you want to plant.
 
-## Try it in your garden
-
-```js
-import {articleDecision} from "../../components/garden-decisions.js";
-display(articleDecision({"question": "Which herbs match your kitchen and your conditions?", "observe": "Compare light, moisture and containment needs; reserve a few flowers if insect habitat is part of your goal.", "topic": "companions", "cropName": ""}));
-```
+[Find herb varieties](https://veggie.farm/content/reference/plant-database?category=herb) · [Plan a bed in Studio](https://studio.veggie.farm/) · [Record an herb observation](https://veggie.farm/tools/my-garden?type=note)
 
 ```js
 import {cropCompare} from "../../components/crop-compare.js";
 const comparisonCrops = await FileAttachment("../../data/herbs.json").json();
-display(cropCompare(comparisonCrops));
+display(cropCompare(comparisonCrops, {title: "Compare two herbs", description: "Compare their recorded season, care and uses. Open a growing guide for the full context.", itemLabel: "Herb", showActions: false}));
 ```
 
 

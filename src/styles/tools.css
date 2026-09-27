@@ -1706,3 +1706,35 @@
 }
 .planner-account select { max-width: 100%; }
 .planner-account button { margin: 0.4rem 0.4rem 0.4rem 0; }
+
+/* Notebook fields: labels above controls, with room for touch and long names. */
+#observablehq-main:has(.my-garden-hero) .journal-controls + .observablehq--block > form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .4rem;
+  width: 100%;
+  max-width: none;
+}
+#observablehq-main:has(.my-garden-hero) .journal-controls + .observablehq--block > form > label {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+#observablehq-main:has(.my-garden-hero) .journal-controls + .observablehq--block > form > div,
+#observablehq-main:has(.my-garden-hero) .journal-controls + .observablehq--block > form > select {
+  width: 100%;
+  max-width: none;
+}
+#observablehq-main:has(.my-garden-hero) .journal-controls + .observablehq--block input,
+#observablehq-main:has(.my-garden-hero) .journal-controls + .observablehq--block select,
+#observablehq-main:has(.my-garden-hero) .journal-controls + .observablehq--block textarea {
+  min-height: 44px;
+  padding: .65rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}

@@ -81,8 +81,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7009,
-      "sha256": "91845578c78cc8085fdff321c757eae9d76e124827af680f66de6df5ca5ba923",
+      "bytes": 7089,
+      "sha256": "d870f017034a3c86d76ca2be0576b5ade5e39ea2345cdf1bd5dc7d3d63c9949c",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -447,8 +447,8 @@
     },
     {
       "path": "docs/architecture/studio-tool-modes.md",
-      "bytes": 1416,
-      "sha256": "9299d04aab5ec3c7591fea5c92eb24ba13533f1f61f49143810cd6b39f404440",
+      "bytes": 1485,
+      "sha256": "a94453a1e5db5eda6378caba77612fef436d12dc9942ca9a815fcdf5e4cbf3fa",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -705,8 +705,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 5137,
-      "sha256": "96cd42b6daded7a57bf259e7c720783e64a6a5aa2244c438ad5218a2b556e417",
+      "bytes": 5126,
+      "sha256": "e1f9ceb2ba9e2f900e3230f17ba59affad4e1ee8a2300e9454dd71e8502e198f",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -738,6 +738,12 @@
       "bytes": 4450,
       "sha256": "5956169814f8f6776bf28309ae61fcb2082c38d27c95cb55e886e091b00c498b",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "docs/user-guide/README.md",
+      "bytes": 1761,
+      "sha256": "e35199908b972434123475813e66f0e19f795ccc18e82a9ce2b10139d6da7ebc",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "examples/README.md",
@@ -783,8 +789,8 @@
     },
     {
       "path": "observablehq.config.js",
-      "bytes": 7889,
-      "sha256": "42f71c501298b0890e9cc10ddaa652af13d0956403925feeab5952fb246b9888",
+      "bytes": 7985,
+      "sha256": "1ad97aaa6118b1efe1f51b8d0d888581139d079c3a175eb8f1de4d52b533e820",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1017,8 +1023,8 @@
     },
     {
       "path": "scripts/lib/site-shell.mjs",
-      "bytes": 5084,
-      "sha256": "b7d1c6896cbb83139d3cd19495fd9775b802f6bcb2f05de214bedecbfcfd90de",
+      "bytes": 5094,
+      "sha256": "bac9fd517f0b469f55cb34fd63f9c33a5800eec38c3481ff03dbbd399879c2a9",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1131,8 +1137,8 @@
     },
     {
       "path": "src/components/crop-compare.js",
-      "bytes": 1570,
-      "sha256": "11b9db38f29e862b597a9c89fa38e1076fe71f789940664e63d287b2a6967955",
+      "bytes": 1681,
+      "sha256": "d473d21b2d010eff25254e9f3cd7cd17f15b5fa369b057848a606ef751e30bb2",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1317,8 +1323,8 @@
     },
     {
       "path": "src/components/plant-explorer.js",
-      "bytes": 14971,
-      "sha256": "80c00240c7f88c83fd0c117a2c341b70906ed6ff4c679a1e0990529ecabaadd6",
+      "bytes": 15173,
+      "sha256": "fe34e364db9df64b5e5f6506a15d3684f7695095cf56a4d41e3cf65367d6b261",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1563,8 +1569,8 @@
     },
     {
       "path": "src/content/herbs/index.md",
-      "bytes": 2723,
-      "sha256": "d619108e0579681b44c6b465b66f5b58635ef8eb38459fddfce22c7b675a5d06",
+      "bytes": 2717,
+      "sha256": "e65f4eea293ba13286cab1b1a745565329c901b634f556ae6623129a5a30ab24",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1665,8 +1671,8 @@
     },
     {
       "path": "src/content/reference/site-evaluation-roadmap.md",
-      "bytes": 2774,
-      "sha256": "7beedd0bfed84b408457ff12bd9b360b4dd546ddbdefc4717ceb58a574975e3e",
+      "bytes": 2925,
+      "sha256": "8db0bbc457922f5d52c505265f572890743a177fa6c4c3ceef56686ec8cae78e",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2121,8 +2127,8 @@
     },
     {
       "path": "src/data/gardening-library.json",
-      "bytes": 200397,
-      "sha256": "f9c2f92403c884aa46dfbc4ccfdef58f4a8437168b28c6085ac274b9607fdd88",
+      "bytes": 200786,
+      "sha256": "eeee7d65d358cb3207855c65d04b4ced70603a295211f14ca7e3591a628790e8",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2670,6 +2676,12 @@
       "bytes": 2190,
       "sha256": "e2ab022c4379270f02f98da769a2175924eb26b9b41a9c1975a5ba0b0215cb81",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/guide.md",
+      "bytes": 10352,
+      "sha256": "4cfd1df7c970684256b832296dc2dea512b2c32a3c1e5c534be098593299bd54",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/index.md",
@@ -3303,8 +3315,8 @@
     },
     {
       "path": "src/styles/tools.css",
-      "bytes": 34963,
-      "sha256": "bee93d6445f2930662d880f2d6353a45deaca52df40db3232423e50203c48cce",
+      "bytes": 36075,
+      "sha256": "88b7037efc1f34292c1dd862479fe0062d6020af588a5b54ef217518a55e337f",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3327,8 +3339,8 @@
     },
     {
       "path": "src/tools/my-garden.md",
-      "bytes": 10579,
-      "sha256": "e3ed188b2731d439a430ef3a1fb8bc761352e6ceb43d3153abb23b8cdb3af766",
+      "bytes": 10583,
+      "sha256": "5566086131ca9db38e462db660acafac76c1de652e164726ad0e7e02d213886c",
       "basis": "community source policy; rights status in release review"
     },
     {

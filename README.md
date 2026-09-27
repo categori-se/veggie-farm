@@ -6,6 +6,8 @@ A data-driven gardening resource and Garden Planning Studio for Massachusetts ga
 
 Both the resource site (`/`) and Studio (`/studio`) are open-source applications. Local gardens and notebook records require no account. They stay in your browser until you explicitly export them; keep backups before clearing browser data. Public-garden reconstructions are incomplete examples, not surveyed plans or verified planting inventories. Recommendations retain horticultural uncertainty.
 
+[Visual user guide](https://veggie.farm/guide) · [Guide source](src/guide.md)
+
 ## Run locally
 
 Use Node 24.18.0 and npm 11.16.0 (see `.nvmrc` and the lockfile). Python 3 is needed for the optional notice regression suite (`npm run test:notices`):

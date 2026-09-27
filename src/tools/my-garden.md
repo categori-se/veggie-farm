@@ -202,7 +202,7 @@ const notebookRevision = Generators.observe(notify => {
 ```
 
 ```js
-observationSave ? html`<p class="save-status" data-saved=${observationSave.saved}>${observationSave.saved ? (localNotebook ? "Note saved in this browser." : "Note draft recorded. Check the account save status above.") : observationSave.error || "This browser did not allow the note to be saved."}</p>` : html``
+if (observationSave) display(html`<p class="save-status" data-saved=${observationSave.saved}>${observationSave.saved ? (localNotebook ? "Note saved in this browser." : "Note draft recorded. Check the account save status above.") : observationSave.error || "This browser did not allow the note to be saved."}</p>`);
 ```
 
 ```js
