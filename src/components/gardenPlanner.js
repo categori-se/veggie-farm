@@ -1,3 +1,5 @@
+import {planningTray} from "./planning-tray.js";
+import {addPlanningTrayEntry} from "../lib/garden/plantIntent.js";
 import {gardenHome} from "./garden-home.js";
 import {recordPlantingObservation} from "../lib/garden/plantingJournal.js";
 import {plannedSize} from "../lib/garden/plannedSize.js";
@@ -1096,6 +1098,7 @@ export function gardenPlanner(options = {}) {
     storageStatus.dataset.saved = String(saved);
     storageBackup.hidden = saved;
   };
+  let tray = null;
   let three = null;
   let sharedViewFrame = null;
   let sharedViewSettleTimer = null;
@@ -1162,6 +1165,7 @@ export function gardenPlanner(options = {}) {
     renderInspector(refs, state, renderAll, {preserveEditor});
     if (three) syncThreeScene(three, state);
     syncSelectedToolCard(refs, state);
+    tray?.update();
     persistAndReport();
   };
 
@@ -1366,6 +1370,26 @@ export function gardenPlanner(options = {}) {
     switchActiveParcelWorkspace(state, gardenId);
     renderAll();
   });
+
+  const changeTray = mutate => {
+    syncActiveParcelWorkspace(state);
+    const before=structuredCloneCompat(state);
+    try {mutate();renderAll();if(storageStatus.dataset.saved!=="true")throw Error("Could not save the planning tray. Your previous plan is unchanged; free browser storage and try again.");}
+    catch(error){Object.assign(state,before);renderAll();throw error;}
+  };
+  tray=planningTray({getState:()=>state,invalidation:options.invalidation,
+    commit:selection=>changeTray(()=>{
+      selection.plant.planningYear=selection.year;
+      const entry=addPlanningTrayEntry(state,selection);
+      // Do not sync the old active property over the updated destination.
+      applyParcelWorkspace(state,state.parcels.find(g=>g.id===selection.gardenId));
+      state.selectedPlantId=entry.plantId;
+    }),
+    createGarden:()=>changeTray(()=>{exploringDemos=false;createBlankGardenWorkspace(state,"My garden");}),
+    openBed:item=>{if(!openPlantingWorkspace(state,item.bedId))throw Error("This bed no longer exists.");state.selectedPlantId=item.plantId;renderAll();},
+    remove:id=>changeTray(()=>{state.property.planningTray=(state.property.planningTray||[]).filter(e=>e.id!==id);})
+  });
+  refs.plantList.before(tray.root);
 
   requestAnimationFrame(() => {
     three = createThreeScene(refs.threeHost, state, renderSharedViews, {
@@ -9363,7 +9387,8 @@ function fillBedWithSelectedPlant(state, positions) {
     plantId: plant.id,
     x,
     y,
-    planted: todayIso(),
+    planted: plant.catalogIdentity ? "" : todayIso(),
+    ...(plant.catalogIdentity ? {planYear:plant.planningYear} : {}),
     health: "starting",
     notes: "",
     rotation: ((x + y) % 17) * 0.08
@@ -9407,9 +9432,10 @@ function addPlacement(state, plantId, x, y) {
     id: uniquePlacementId(state),
     bedId: bed.id,
     plantId,
+    ...(plantById(state,plantId)?.catalogIdentity ? {planYear:plantById(state,plantId).planningYear} : {}),
     x: clamp(x, 0, bed.width),
     y: clamp(y, 0, bed.height),
-    planted: todayIso(),
+    planted: plantById(state,plantId)?.catalogIdentity ? "" : todayIso(),
     health: "starting",
     notes: "",
     rotation: Math.random() * Math.PI

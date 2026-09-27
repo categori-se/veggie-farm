@@ -374,6 +374,12 @@
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {
+      "path": "docs/architecture/plant-discovery-handoff.md",
+      "bytes": 1993,
+      "sha256": "16bd17eb4b5b783b96896fc94d143f612b98bd59bc0310d8d8780174d99f3333",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/plant-photographs.md",
       "bytes": 2238,
       "sha256": "e5870d5973cc3a2ff2f1a6c5e29be5d4c2e016bbe27fae4f4c28bcf704fb7d41",
@@ -1167,8 +1173,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 555663,
-      "sha256": "edd33e9c22f98b518679f85874abef6202cbb867d8da4288c97f70379d68fc74",
+      "bytes": 557312,
+      "sha256": "22f2bb9e1142fa0a49512844731236a111244c7b48222de82ff7b5edcaefe8d6",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1250,9 +1256,15 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/components/planning-tray.js",
+      "bytes": 5091,
+      "sha256": "69bbe32dfafcb1343aa64e55dd4ddd8eb5de4790b918eb4f332f53142268fae4",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/components/plant-explorer.js",
-      "bytes": 14606,
-      "sha256": "592f9ff298635e3b9f02c305dc89aa7d7dd401eeb09cf8e261126347d0f02b30",
+      "bytes": 14971,
+      "sha256": "80c00240c7f88c83fd0c117a2c341b70906ed6ff4c679a1e0990529ecabaadd6",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2055,8 +2067,8 @@
     },
     {
       "path": "src/data/gardening-library.json",
-      "bytes": 203321,
-      "sha256": "b9c3a0921fa40ff2b9016db7f8ad40cc77168ca7d74ed4871c9b643ee381c765",
+      "bytes": 200397,
+      "sha256": "f9c2f92403c884aa46dfbc4ccfdef58f4a8437168b28c6085ac274b9607fdd88",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2772,6 +2784,12 @@
       "bytes": 458,
       "sha256": "3a75935bcbc7eb1f32b665e07b945c677c7a5b2576f7dc7325e7f3cd5f31b849",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "src/lib/garden/plantIntent.js",
+      "bytes": 3110,
+      "sha256": "a4f4e060bbf03e5fb8bfec6c085a3e6c9b8c1ff2dbd8189e3921c08ec23a164c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "src/lib/garden/plantModel.js",
@@ -3570,6 +3588,12 @@
       "bytes": 4232,
       "sha256": "7e01c3ef45aaa47a0a5a9c6dab39bb67f571ab22fcb5510f8c61a2016cdbaf2f",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/plantIntent.test.mjs",
+      "bytes": 2218,
+      "sha256": "c57c6a7b79372cf1f19d43fd110dc4493291e3ef85692d7ea20f8c36342b4091",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/plantModel.test.js",
