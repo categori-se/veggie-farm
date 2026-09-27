@@ -7,3 +7,9 @@ The link carries only save and garden IDs in its URL fragment, which is not sent
 The existing account API controls access; identifiers do not confer access. No garden data or credentials are embedded in the link. This adds no service, background request or synchronization job. The link deliberately opens the current saved copy, not an unsaved Studio draft. Reverse navigation into the exact Studio workspace and authenticated cross-device acceptance remain incomplete.
 
 Source browser acceptance uses synthetic account clients at desktop and phone widths. It covers save → link → exact garden → remembered selection, fragment consumption, missing gardens and signed-out requests. This is not proof of real account authentication across domains.
+
+## Return to Plan
+
+The saved garden card offers Open this garden in Plan even for an empty garden. The same destination is used inside garden history. Studio authenticates the requested copy and validates the garden before showing a restore confirmation. The confirmation names the garden and makes clear that this restores the full account copy and replaces local personal gardens; local demo edits remain. Cancelling does not call restore. A missing garden or changed account cannot restore. The requested workspace and its top-level fields are activated together, avoiding a mismatch with the save's previously active garden.
+
+Signed-out arrivals retain their fragment in the sign-in return destination. This is explicit account-copy restoration, not automatic synchronization or a merge of unsaved local edits. After cancellation or successful restore, the fragment is consumed. Real authenticated cross-device verification remains outstanding.

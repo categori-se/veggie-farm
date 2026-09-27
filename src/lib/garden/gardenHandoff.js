@@ -14,3 +14,7 @@ export function withoutGardenHandoff(hash='') {
   const params=new URLSearchParams(hash.replace(/^#/,''));params.delete('accountSave');params.delete('garden');
   return params.size?`#${params}`:'';
 }
+export function gardenPlanHref(value) {
+  if (!valid(value)) return null;
+  return `https://studio.veggie.farm/#${new URLSearchParams({accountSave:value.saveId,garden:value.gardenId})}`;
+}
