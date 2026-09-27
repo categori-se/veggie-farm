@@ -5,10 +5,10 @@ export function planningTray({getState,commit,createGarden,createBed,openBed,rem
  const root=el('div'),launch=el('button','Planning tray');launch.type='button';root.append(launch);
  let waitingForGarden=!!readGardenHandoff(location.hash),cancelled=false,recovery=null,chooseDestination=false;
  let pending=null,error='';try{pending=readPlantIntent(location.hash);}catch(e){error=e.message;}
- const dialog=el('dialog');dialog.className='planning-tray-dialog';dialog.style.cssText='width:min(600px,calc(100vw - 32px));max-height:85svh;overflow:auto;box-sizing:border-box';
+ const dialog=el('dialog');dialog.className='planning-tray-dialog';dialog.style.cssText='width:min(600px,calc(100vw - 32px));max-height:85svh;overflow:auto;box-sizing:border-box;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:inherit;padding:16px';
  const label=(name,field)=>{field.setAttribute('aria-label',name);const l=el('label',name);l.style.cssText='display:grid;gap:4px;margin:8px 0';l.append(field);return l;};
  function draw(){
-  dialog.replaceChildren();const close=el('button','Back to garden');close.type='button';close.onclick=()=>dialog.close();dialog.append(close,el('h2','Planning tray'));
+  dialog.replaceChildren(el('style','.planning-tray-dialog input,.planning-tray-dialog select{min-height:44px;width:100%;box-sizing:border-box;font:inherit}.planning-tray-dialog button{min-height:44px;font:inherit}.planning-tray-dialog summary{min-height:44px;box-sizing:border-box;padding:12px 0;cursor:pointer}.planning-tray-dialog fieldset{min-width:0;margin:0;padding:12px;border:1px solid var(--line);border-radius:8px}'));const close=el('button','Back to garden');close.type='button';close.onclick=()=>dialog.close();dialog.append(close,el('h2','Planning tray'));
   const status=el('p',error);status.setAttribute('role','status');dialog.append(status);
   if(pending&&waitingForGarden){
    dialog.append(el('h3',pending.name),el('p',recovery?`${recovery.reason} Your crop choice is still here. Retry in Account saves or choose another garden.`:cancelled?'Opening the saved garden was cancelled. Your crop choice is still here.':'Open the linked account garden before choosing where to plant. Sign in or retry in Account saves; your crop choice is retained.'));

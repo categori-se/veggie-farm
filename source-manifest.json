@@ -1455,8 +1455,8 @@
     },
     {
       "path": "src/components/planning-tray.js",
-      "bytes": 8285,
-      "sha256": "bc48adff975ed7e31d6a24cb3926eb5edd60c09ffa2f3d77e5fffd8a24bf70c1",
+      "bytes": 8785,
+      "sha256": "3eac9bcdd377736d2633be602dfa41352406699554562d39724c88d555f072de",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
