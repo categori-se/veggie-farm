@@ -434,6 +434,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/returning-garden-today.md",
+      "bytes": 2124,
+      "sha256": "365d4e59e7b48bf342f528099c4b4f341fc42672f4be1a9cb2d93c39b8d3e76d",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/season-learning.md",
       "bytes": 2003,
       "sha256": "d1f2ce238af8fcebf92bf96424fcefb16c7e01d157b858869e7b6c84cc48937c",
@@ -723,8 +729,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 5822,
-      "sha256": "a9b951d77b595c28d41e26335f6cef7000f913c323eaf94796e6a175be4110e1",
+      "bytes": 5940,
+      "sha256": "c817c70390a2794824af8abb903d8469854c71838a97f2df7c0d97dff8149795",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1113,8 +1119,8 @@
     },
     {
       "path": "src/components/account-garden-home.js",
-      "bytes": 4816,
-      "sha256": "0cd2f755fca0a6bd6635ac835670b90c7d02ec0b217cba7cd79a640e274b24aa",
+      "bytes": 8317,
+      "sha256": "e1d29eb56422dd8a6090959d80bc630d8368a820b5ddf54b5c6b36124d475838",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2864,6 +2870,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/gardenSelection.js",
+      "bytes": 901,
+      "sha256": "92544b3accba09504da786b7ee1d54c100c1b72a8a0fa1b43b753bd487d8390e",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/localGardenStore.js",
       "bytes": 6424,
       "sha256": "0c4873a849f18587ddcf5b47062fd0f7b312549c9742b2a52bd1269495551ec0",
@@ -3411,8 +3423,8 @@
     },
     {
       "path": "src/tools/today.md",
-      "bytes": 13126,
-      "sha256": "07512198be6ed0a0950efc3cbddadec0f698c5d89485952a4e51d2712c33bac9",
+      "bytes": 13430,
+      "sha256": "dff68ad8bdaa58b3e12be0967a6a46d2d4ca5c58eca808f491dabd4f2ba457fb",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -3630,6 +3642,12 @@
       "bytes": 1818,
       "sha256": "e007fec4a5af50016c9f12bc41fa488d3e6b1696d5b303706f365442d2770fbd",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/gardenSelection.test.mjs",
+      "bytes": 1457,
+      "sha256": "494645e9c82ec9dc17ab737570f00394ee933d6190bd8b53297eb6ddce2063a5",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/gardenSpatial.test.js",

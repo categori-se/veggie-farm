@@ -31,7 +31,7 @@ const savedGarden = loadGardenProfile();
 <section class="today-hero">
   <div>
     <p class="kicker">A useful answer, with its assumptions</p>
-    <h1>What can I plant today?</h1>
+    <h1>What can I do in my garden today?</h1>
     <p class="deck">Compare 23 familiar crops against your season, regional Extension evidence, and an optional live forecast—then see exactly why each result changed.</p>
   </div>
   <div class="today-hero-note">
@@ -40,6 +40,15 @@ const savedGarden = loadGardenProfile();
     <p>No exact coordinates are stored. Soil temperature remains your measurement; a live NWS forecast is optional.</p>
   </div>
 </section>
+
+```js
+import {accountGardenHome} from "../components/account-garden-home.js";
+display(accountGardenHome({invalidation, showToday: true}));
+```
+
+## Explore planting conditions
+
+These controls use your Notebook profile or the starter settings below. Review them for the garden you are planning.
 
 ```js
 const now = new Date();
