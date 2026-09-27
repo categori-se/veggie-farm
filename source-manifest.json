@@ -392,6 +392,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/plant-visual-pipeline.md",
+      "bytes": 5094,
+      "sha256": "bf30ae0aed5fd204ab3cd596f2e54722fb317d2f096e05218ce0de1bde1bccb4",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/planting-journal.md",
       "bytes": 2099,
       "sha256": "6fcb7bc86b78d2c66a4e97fa5e1cfe66251d8c3faec30f470529b4f8cbed09b8",
@@ -683,6 +689,12 @@
       "path": "docs/product/journey-review.md",
       "bytes": 2993,
       "sha256": "a13ba07c9d38c35034dedca4d11fd090e2a7b8b314415733dfc88ddcab1ae03a",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "docs/product/plant-planning-workspace.md",
+      "bytes": 20951,
+      "sha256": "5acf00c2acdba15755758fea0bc9756d46d79eb979c5d90d59143195d759dd00",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1185,8 +1197,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 559687,
-      "sha256": "209f024c6fc1cfa2b98e86fd99ea13cf01a5210177ed4ea96c092ac2dc23cff8",
+      "bytes": 560709,
+      "sha256": "9e128069bf1539bd5a8287c2376bed6f58edfe704454d57bbef1603d6faa25ef",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2876,6 +2888,30 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "src/lib/plants/plantVisual2d.js",
+      "bytes": 881,
+      "sha256": "23a94f51069bac71d1d405580142373ebbe500d00559353c75af79445339a0fa",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/lib/plants/plantVisual3d.js",
+      "bytes": 2014,
+      "sha256": "a7fed319ac2ea370d7e05845eba2d55e9f9c8e40ed793f044dca6eef714d348f",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/lib/plants/plantVisualGeometry.js",
+      "bytes": 3185,
+      "sha256": "0147a8d8546b89a886cc7beb0fb27447d634fe8d28812120f1ef6043b7872188",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "src/lib/plants/plantVisualSpec.js",
+      "bytes": 1639,
+      "sha256": "3f9a75b7f1c61a57cc6907778dcd78360a4ea28e1398bafb3d8f1f04b310a33c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/plants/trefleAssertions.js",
       "bytes": 5570,
       "sha256": "a999257cbe1fda7385cfd5176a647446ff8bee8f9baeb48e120ddc18c02c8793",
@@ -3635,6 +3671,12 @@
       "path": "tests/plantTypes.test.mjs",
       "bytes": 1781,
       "sha256": "184621f93165f693b72ae86877572eef3c78990e187755cf515724917585daae",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
+      "path": "tests/plantVisuals.test.mjs",
+      "bytes": 2957,
+      "sha256": "5b5f0469b6adbbc58fab015bd8ff60dfb71931fcc20d850e34a87ba9dca8c49b",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
