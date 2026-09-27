@@ -1059,8 +1059,8 @@
     },
     {
       "path": "src/about/index.md",
-      "bytes": 5199,
-      "sha256": "35b3935e9a95541a0407ee36c6999713ae6ca436362bd040cb86433a7ef91e68",
+      "bytes": 5294,
+      "sha256": "a0317781057ff542841d65f984f0b32822dd6e9aadeb38c8587e9a11f4c9a393",
       "basis": "Reviewed workflow/configuration documentation and guard implementation"
     },
     {

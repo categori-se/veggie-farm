@@ -37,6 +37,6 @@ I get to take a small part of that shared effort, bring it back to this place I 
 
 ---
 
-[See what you can do today](/tools/today) · [Find plants](/content/reference/plant-database) · [Open Studio](https://studio.veggie.farm/) · [Explore the guides](/content/)
+[See what you can do today](https://veggie.farm/tools/today) · [Find plants](https://veggie.farm/content/reference/plant-database) · [Open Studio](https://studio.veggie.farm/) · [Explore the guides](https://veggie.farm/content/)
 
-[Data sources and their limits](/about/data-sources) · [How the application was built and verified](/about/build-evidence) · [Open-source code and acknowledgments](https://github.com/categori-se/veggie-farm)
+[Data sources and their limits](https://veggie.farm/about/data-sources) · [How the application was built and verified](https://veggie.farm/about/build-evidence) · [Open-source code and acknowledgments](https://github.com/categori-se/veggie-farm)
