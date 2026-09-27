@@ -1,3 +1,4 @@
+import {normalizeStudioMode, studioModeTransition} from "../lib/garden/studioMode.js";
 import {successionPlanting,plannedOccupanciesOverlap} from "../lib/garden/successionPlanting.js";
 import {plannerSuccession} from "./planner-succession.js";
 import {gardenPlantChoices} from "../lib/garden/gardenPlantChoices.js";
@@ -621,6 +622,7 @@ function proposedBedPlantings(beds, existing = [], plants = DEFAULT_PLANTS) {
 const DEFAULT_STATE = {
   viewMode: "garden",
   viewPresentation: "map",
+  studioMode: "simple",
   activeTool: "beds",
   toolDrawerOpen: false,
   inspectorOpen: false,
@@ -706,6 +708,7 @@ export function gardenPlanner(options = {}) {
   const root = document.createElement("div");
   root.className = "garden-planner-app";
   root.id = "garden-studio";
+  Object.assign(state, studioModeTransition(state, state.studioMode));
   state.previewDate = null;
   let interacted = false;
   for (const event of ['pointerdown','keydown','input']) root.addEventListener(event,() => {interacted = true;},{capture:true});
@@ -752,12 +755,12 @@ export function gardenPlanner(options = {}) {
       <div class="garden-layout" data-role="garden-layout">
         <nav class="garden-tool-rail" aria-label="Planner tools">
           <button data-tool="select" type="button" aria-label="Pan mode — close editing tools" title="Pan without editing"><span aria-hidden="true">↔</span><small>Pan</small></button>
-          <button data-tool="parcel" type="button" aria-label="Open garden and parcel tools" title="Garden and parcel"><span aria-hidden="true">◇</span><small>Garden</small></button>
+          <button data-advanced-tool data-tool="parcel" type="button" aria-label="Open garden and parcel tools" title="Garden and parcel"><span aria-hidden="true">◇</span><small>Garden</small></button>
           <button data-tool="beds" type="button" aria-label="Open garden bed tools" title="Beds"><span aria-hidden="true">▦</span><small>Beds</small></button>
           <button data-tool="plants" type="button" aria-label="Open plant library" title="Plants"><span aria-hidden="true">♧</span><small>Plants</small></button>
           <button data-tool="flowers" type="button" aria-label="Open data-backed flower reference" title="Flowers"><span aria-hidden="true">✿</span><small>Flowers</small></button>
-          <button data-tool="structures" type="button" aria-label="Open buildings and infrastructure tools" title="Site features"><span aria-hidden="true">▤</span><small>Site</small></button>
-          <button data-tool="vegetation" type="button" aria-label="Open vegetation tools" title="Vegetation"><span aria-hidden="true">♣</span><small>Canopy</small></button>
+          <button data-advanced-tool data-tool="structures" type="button" aria-label="Open buildings and infrastructure tools" title="Site features"><span aria-hidden="true">▤</span><small>Site</small></button>
+          <button data-advanced-tool data-tool="vegetation" type="button" aria-label="Open vegetation tools" title="Vegetation"><span aria-hidden="true">♣</span><small>Canopy</small></button>
         </nav>
 
         <aside class="garden-sidebar" data-role="tool-drawer" aria-label="Planner tool drawer">
@@ -928,15 +931,15 @@ export function gardenPlanner(options = {}) {
                 </div>
                 <button data-action="reset-demo" type="button">Restore reference starter</button>
                 <div class="project-menu-divider" role="separator"></div>
-                <div class="project-menu-heading"><span>Spatial interchange</span><strong>Active garden</strong></div>
-                <div class="project-action-grid spatial-export-grid">
+                <div data-advanced-tool class="project-menu-heading"><span>Spatial interchange</span><strong>Active garden</strong></div>
+                <div data-advanced-tool class="project-action-grid spatial-export-grid">
                   <button data-action="export-geojson" type="button" title="RFC 7946 GeoJSON for QGIS">QGIS GeoJSON</button>
                   <button data-action="export-kml" type="button" title="Styled KML for Google Earth">Google Earth KML</button>
                 </div>
-                <button data-action="import-spatial" type="button">Review GeoJSON / KML…</button>
+                <button data-advanced-tool data-action="import-spatial" type="button">Review GeoJSON / KML…</button>
                 <input data-role="spatial-import-input" type="file" accept=".geojson,.json,.kml,application/geo+json,application/json,application/vnd.google-earth.kml+xml" hidden>
                 <div class="spatial-import-status" data-role="spatial-import-status" role="status" aria-live="polite" hidden></div>
-                <button data-action="clear-spatial-import" type="button" hidden>Clear review layer</button>
+                <button data-advanced-tool data-action="clear-spatial-import" type="button" hidden>Clear review layer</button>
                 <details class="project-menu-backup">
                   <summary>Backup and restore</summary>
                   <button data-action="export" type="button">Download full planner JSON</button>
@@ -950,11 +953,15 @@ export function gardenPlanner(options = {}) {
             </details>
           </section>
 
+          <div class="studio-mode-choice">
+            <label>Tools <select data-role="studio-mode" aria-label="Studio tools"><option value="simple">Simple</option><option value="advanced">Advanced</option></select></label>
+            <span data-role="studio-mode-help">Beds, plants and the seasonal calendar.</span>
+          </div>
           <div class="studio-preview-options"></div>
           <nav class="planning-scope" aria-label="Planning scope" style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 12px">
             <button type="button" data-workspace="explore">Explore garden</button>
             <button type="button" data-workspace="walk">Walk through</button>
-            <button type="button" data-scope="attributes">Site features</button>
+            <button type="button" data-advanced-tool data-scope="attributes">Site features</button>
             <button type="button" data-scope="garden">Garden & beds</button>
             <button type="button" data-scope="bed">Plan selected bed</button>
             <button type="button" data-action="plant-gallery">3D plant library</button><button type="button" data-action="bed-seasons">Seasons</button><button type="button" data-action="garden-home">My garden · Log</button>
@@ -963,7 +970,7 @@ export function gardenPlanner(options = {}) {
             <div class="view-heading parcel-heading">
               <span>Garden canvas</span>
               <span data-role="parcel-label"></span>
-              <details class="map-settings">
+              <details class="map-settings" data-advanced-tool>
                 <summary>
                   <span>Map settings</span>
                   <small data-role="map-settings-summary">4 layers</small>
@@ -1016,7 +1023,7 @@ export function gardenPlanner(options = {}) {
               <summary>Legend</summary>
               <div class="map-legend-grid" data-role="map-legend-items"></div>
             </details>
-            <div data-role="mapped-soil-host"></div>
+            <div data-role="mapped-soil-host" data-advanced-tool></div>
           </section>
 
           <div class="garden-views">
@@ -1140,6 +1147,7 @@ export function gardenPlanner(options = {}) {
   const timePreview=plannerTimePreview({getScopeName:()=>state.viewMode==="bed"?activeBed(state)?.name||"bed":"garden",getBedName:id=>state.beds.find(b=>b.id===id)?.name || (id ? "Unknown bed" : "Outside a named bed"),getPlantName:id=>plantById(state,id)?.name || "Unidentified plant",getPlacements:()=>state.viewMode==="bed"?activePlacements(state):state.placements,getDate:()=>state.previewDate,onChange:date=>{state.previewDate=date;if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
   root.querySelector('[data-role="time-preview-host"]').append(timePreview.root);
   const sunPreview=plannerSunPreview({getState:()=>state,onChange:()=>{if(matchMedia("(max-width: 920px)").matches){state.toolDrawerOpen=false;state.inspectorOpen=false;}renderAll();}});
+  sunPreview.root.setAttribute('data-advanced-tool', '');
   root.querySelector('.studio-preview-options').insertAdjacentElement('afterend',sunPreview.root);
 
   let soilBoundaries=[],soilGardenId=state.activeParcelId;
@@ -2035,6 +2043,7 @@ function loadState(storageOverride) {
     const state = {
       viewMode: normalizeViewMode(dropsLegacyDemoFeatures ? base.viewMode : saved.viewMode || base.viewMode),
       viewPresentation: normalizeViewPresentation(saved.viewPresentation || base.viewPresentation),
+      studioMode: normalizeStudioMode(saved.studioMode),
       activeTool: normalizeActiveTool(saved.activeTool || base.activeTool),
       toolDrawerOpen: saved.toolDrawerOpen === true,
       inspectorOpen: saved.inspectorOpen === true,
@@ -2095,6 +2104,7 @@ function saveState(state) {
     const payload = {
       viewMode: state.viewMode,
       viewPresentation: state.viewPresentation,
+      studioMode: normalizeStudioMode(state.studioMode),
       activeTool: state.activeTool,
       toolDrawerOpen: state.toolDrawerOpen,
       inspectorOpen: state.inspectorOpen,
@@ -2143,6 +2153,7 @@ function stateExportPayload(state) {
     backupVersion: 1,
     viewMode: state.viewMode,
     viewPresentation: state.viewPresentation,
+    studioMode: normalizeStudioMode(state.studioMode),
     activeTool: state.activeTool,
     toolDrawerOpen: state.toolDrawerOpen,
     inspectorOpen: state.inspectorOpen,
@@ -2259,6 +2270,7 @@ function renderSpatialImportReview(refs, state) {
 }
 
 function normalizeStateShape(state) {
+  state.studioMode = normalizeStudioMode(state.studioMode);
   state.viewPresentation = normalizeViewPresentation(state.viewPresentation);
   state.activeTool = normalizeActiveTool(state.activeTool);
   state.toolDrawerOpen = state.toolDrawerOpen === true;
@@ -3392,6 +3404,11 @@ function closePlannerPanel(refs, state, renderAll, panel) {
 }
 
 function setupControls(refs, state, renderAll, renderSharedViews = renderAll) {
+  refs.root.querySelector('[data-role="studio-mode"]').addEventListener('change', event => {
+    explicitEditSessions.delete(state);
+    Object.assign(state, studioModeTransition(state, event.target.value));
+    renderAll();
+  });
   refs.root.querySelector('[data-role="structure-search"]').addEventListener('input',()=>renderStructureList(refs,state,renderAll));
   refs.root.querySelector('[data-role="vegetation-search"]').addEventListener('input',()=>renderVegetationList(refs,state,renderAll));
   for (const slider of refs.root.querySelectorAll('[data-camera]')) {
@@ -4290,6 +4307,12 @@ function setupParcelInteractions(refs, state, renderAll, renderSharedViews = ren
 }
 
 function renderControls(refs, state) {
+  const studioMode = normalizeStudioMode(state.studioMode);
+  refs.root.dataset.studioMode = studioMode;
+  refs.root.querySelector('[data-role="studio-mode"]').value = studioMode;
+  refs.root.querySelector('[data-role="studio-mode-help"]').textContent = studioMode === "simple"
+    ? "Beds, plants and calendar. Choose Advanced for maps, trees and sunlight analysis."
+    : "Mapping, site features, trees, sunlight analysis and GIS exchange.";
   const walkButton=refs.root.querySelector('button[data-workspace="walk"]');
   if(walkButton)walkButton.textContent=state.viewMode==="bed" && walkingReturns.get(state)?.gardenId===state.activeParcelId ? "Back to walk" : "Walk through";
   refs.root.dataset.workspace = state.walkCamera ? "walk" : state.viewMode === "bed" ? "plant" : "explore";
@@ -13340,6 +13363,13 @@ function injectStyles() {
     }
     .garden-planner-app > .planner-quick-start:first-child p {font-size: .8rem; margin: 0;}
     .garden-planner-app > .planner-quick-start:first-child button {min-height: 44px;}
+
+    .garden-planner-app[data-studio-mode="simple"] [data-advanced-tool] {display: none !important;}
+    .studio-mode-choice {display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; padding: 8px 12px;}
+    .studio-mode-choice label {display: flex; align-items: center; gap: 8px;}
+    .studio-mode-choice select {min-height: 44px;}
+    .studio-mode-choice > span {font-size: .8rem; color: var(--theme-foreground-muted);}
+
     .studio-preview-options > summary {padding: 6px 12px; cursor: pointer; font-size: .8rem;}
     .garden-planner-app .planning-scope {padding: 4px 8px !important; gap: 4px !important;}
     .garden-planner-app .planning-scope button {min-height: 36px; padding: 4px 8px;}

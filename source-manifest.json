@@ -446,6 +446,12 @@
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
+      "path": "docs/architecture/studio-tool-modes.md",
+      "bytes": 1416,
+      "sha256": "9299d04aab5ec3c7591fea5c92eb24ba13533f1f61f49143810cd6b39f404440",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "docs/architecture/succession-planning.md",
       "bytes": 1911,
       "sha256": "3028a5dc64ec4509d9291bef9e71c7133f826151c3855d57e23f263f7cbcd473",
@@ -699,8 +705,8 @@
     },
     {
       "path": "docs/product/garden-journey-goal.md",
-      "bytes": 4871,
-      "sha256": "830864c2fa2cc860f98d135587c236cc12e79e0b4e44e246d7ced23e2a53553c",
+      "bytes": 5137,
+      "sha256": "96cd42b6daded7a57bf259e7c720783e64a6a5aa2244c438ad5218a2b556e417",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1215,8 +1221,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 566316,
-      "sha256": "3dd9643378f028f18cbb070ac486ea08c184f80df60e45ad9c1b3dd6f52d9821",
+      "bytes": 568418,
+      "sha256": "a907f80e8c3f7f514e335428de437edb2a70c545839bfeee7adba0f9ebac1abf",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -2906,6 +2912,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/studioMode.js",
+      "bytes": 592,
+      "sha256": "537e9e5109497d55a1ea99b51e6ddbb44dfe7dc19894fe7570b541d8d732f919",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/successionPlanting.js",
       "bytes": 2071,
       "sha256": "0b837581521a39380608b9f0463f750931be93202bf83b0d6fefcdff1a3c7015",
@@ -3918,6 +3930,12 @@
       "bytes": 9935,
       "sha256": "9ee0467de864c463199bb0e7cbda34bc09653dc706606c7c819cb643b84b78d4",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/studioMode.test.mjs",
+      "bytes": 1445,
+      "sha256": "20c246468fbc14886cd6b4c01cb66bcdd9f5f5d90fa01e10a2b8e5c655d9a244",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/successionPlanting.test.mjs",
