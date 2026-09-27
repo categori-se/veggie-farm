@@ -429,8 +429,8 @@
     },
     {
       "path": "docs/architecture/plant-discovery-handoff.md",
-      "bytes": 2876,
-      "sha256": "f48134b4c9cd9170609ead7a01f074765d77bd65109faa590b75ccc00c28be91",
+      "bytes": 3738,
+      "sha256": "701c24e7eaeb6d9333ff306bbe8aa6d118534056a4c6e5bd697e7b13e83f245a",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1455,8 +1455,8 @@
     },
     {
       "path": "src/components/planning-tray.js",
-      "bytes": 8785,
-      "sha256": "3eac9bcdd377736d2633be602dfa41352406699554562d39724c88d555f072de",
+      "bytes": 10661,
+      "sha256": "8fc5269b99b40115c9914c39446688e822aa66347b0f1628c8710965734104ef",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -2978,6 +2978,12 @@
       "basis": "community source policy; rights status in release review"
     },
     {
+      "path": "src/lib/garden/bedPlanningSummary.js",
+      "bytes": 1909,
+      "sha256": "763e09928e88fb6b443a5a3e959930152dec02b18d202396dfe8ee7717bafb47",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
+    },
+    {
       "path": "src/lib/garden/duplicatePlanting.js",
       "bytes": 2682,
       "sha256": "57b23f8b605f188efcb280ef1a25ec342cb44653e6814c47c80c9fbd5f85d9a9",
@@ -3684,6 +3690,12 @@
       "bytes": 2851,
       "sha256": "937bc534ff2cd5b2c8fd717b697508c6419467095f3a12ed2684af2413428d34",
       "basis": "community source policy; rights status in release review"
+    },
+    {
+      "path": "tests/bedPlanningSummary.test.mjs",
+      "bytes": 2099,
+      "sha256": "e097c459e678914ce75fe13fe2ee68a2e5b941b019d87ad69956b9a3e9cd5c3c",
+      "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
       "path": "tests/berkshireBotanicalDemoPlacements.test.js",
