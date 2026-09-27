@@ -13,3 +13,9 @@ Source browser acceptance uses synthetic account clients at desktop and phone wi
 The saved garden card offers Open this garden in Plan even for an empty garden. The same destination is used inside garden history. Studio authenticates the requested copy and validates the garden before showing a restore confirmation. The confirmation names the garden and makes clear that this restores the full account copy and replaces local personal gardens; local demo edits remain. Cancelling does not call restore. A missing garden or changed account cannot restore. The requested workspace and its top-level fields are activated together, avoiding a mismatch with the save's previously active garden.
 
 Signed-out arrivals retain their fragment in the sign-in return destination. This is explicit account-copy restoration, not automatic synchronization or a merge of unsaved local edits. After cancellation or successful restore, the fragment is consumed. Real authenticated cross-device verification remains outstanding.
+
+## Missing destination recovery
+
+If an account copy no longer contains the linked garden or bed, validation leaves the local workspace untouched. The planning tray retains the crop and planned date and offers either a return to Account saves to retry, or Choose another garden. Choosing another destination explicitly consumes only the garden handoff identifiers, preserves the crop fragment, and starts with empty garden and bed selectors. Cancelling a restore uses the same explicit destination selection. Nothing is planted by recovering the link; dimensions, destination and placement still require user actions. Successful retry selects the originally linked bed.
+
+Component and full-page browser checks cover desktop and phone widths with synthetic account data, including Today → missing bed → another local bed → explicit placement → reload. This is not verification of real authenticated synchronization.

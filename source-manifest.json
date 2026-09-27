@@ -369,8 +369,8 @@
     },
     {
       "path": "docs/architecture/garden-handoff.md",
-      "bytes": 2496,
-      "sha256": "2075db781382330f85bc0848af1bc248446b7ee226e9128fecdce5ad8cc7bc54",
+      "bytes": 3419,
+      "sha256": "3dfdf6ca7aed34eca5f66191c24f275d1be549b120baebb03ec6d77c5d81bb53",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {
@@ -1335,8 +1335,8 @@
     },
     {
       "path": "src/components/gardenPlanner.js",
-      "bytes": 570530,
-      "sha256": "08f412673313872a5f2ebcf2a56c2091e6e09211fdff1ccb8e147ed42a7cbf9b",
+      "bytes": 570552,
+      "sha256": "aaf19e75a8200ae1bad44ece6b97e4daaa51a43c1ecb8edfa80daa815778ed1a",
       "basis": "community source policy; rights status in release review"
     },
     {
@@ -1449,14 +1449,14 @@
     },
     {
       "path": "src/components/plannerAccount.js",
-      "bytes": 12190,
-      "sha256": "42b264f9475f4007f26563c02c413a5a902424af9debc765a9d9a1de018db712",
+      "bytes": 12416,
+      "sha256": "a4b84bd702a2fc4f0631b586459da9214c020aac58e0c2f717cbbf243dbc3d93",
       "basis": "community source policy; rights status in release review"
     },
     {
       "path": "src/components/planning-tray.js",
-      "bytes": 6600,
-      "sha256": "f90f5eba2145e9bf47928009c1cba98988d2efa5cb094b75219c887fcc216994",
+      "bytes": 6945,
+      "sha256": "ceb6471255f3a80efa24ee929479553eea9c3bcf0b5616e7c31b25cfeeb2c980",
       "basis": "Reviewed source-only evidence; media and credentials excluded"
     },
     {

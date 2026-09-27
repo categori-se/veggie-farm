@@ -104,7 +104,12 @@ export function plannerAccount({exportPlanner,restorePlanner,client:providedClie
     const started=getSession(),chosen=linkedGarden;
     const saved=await client.load(chosen.saveId);
     if(getSession()!==started)throw Object.assign(Error(),{code:'session_changed'});
-    const candidate=accountGardenForPlanning(saved.payload,chosen.gardenId,chosen.bedId),garden=candidate.parcels.find(g=>g.id===chosen.gardenId);
+    let candidate;
+    try{candidate=accountGardenForPlanning(saved.payload,chosen.gardenId,chosen.bedId);}catch(error){
+      if(['missing_linked_garden','missing_linked_bed'].includes(error.code))onLinkedGarden('unavailable',{reason:error.message,chooseAnother:consumeLinked});
+      throw error;
+    }
+    const garden=candidate.parcels.find(g=>g.id===chosen.gardenId);
     if(!window.confirm(`Open “${garden.name||garden.property?.name||'Garden'}” in Plan? This restores the account copy (${candidate.parcels.length} personal gardens) and replaces your local personal gardens. Local demo edits stay. Cancel to download a backup or save local edits first.`)){consumeLinked();onLinkedGarden('cancelled');status.textContent='Opening cancelled. Your local work is unchanged.';return;}
     if(getSession()!==started)throw Object.assign(Error(),{code:'session_changed'});
     restorePlanner(candidate);active=saved;handoff(saved,candidate);consumeLinked();onLinkedGarden('opened');status.textContent='Selected garden opened. Further account updates are explicit.';

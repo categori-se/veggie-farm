@@ -3,7 +3,7 @@ import {readPlantIntent,plannedCatalogPlant} from '../lib/garden/plantIntent.js'
 const el=(tag,text)=>{const e=document.createElement(tag);if(text!=null)e.textContent=text;return e;};
 export function planningTray({getState,commit,createGarden,openBed,remove,invalidation}){
  const root=el('div'),launch=el('button','Planning tray');launch.type='button';root.append(launch);
- let waitingForGarden=!!readGardenHandoff(location.hash),cancelled=false;
+ let waitingForGarden=!!readGardenHandoff(location.hash),cancelled=false,recovery=null,chooseDestination=false;
  let pending=null,error='';try{pending=readPlantIntent(location.hash);}catch(e){error=e.message;}
  const dialog=el('dialog');dialog.className='planning-tray-dialog';dialog.style.cssText='width:min(600px,calc(100vw - 32px));max-height:85svh;overflow:auto;box-sizing:border-box';
  const label=(name,field)=>{field.setAttribute('aria-label',name);const l=el('label',name);l.style.cssText='display:grid;gap:4px;margin:8px 0';l.append(field);return l;};
@@ -11,9 +11,9 @@ export function planningTray({getState,commit,createGarden,openBed,remove,invali
   dialog.replaceChildren();const close=el('button','Back to garden');close.type='button';close.onclick=()=>dialog.close();dialog.append(close,el('h2','Planning tray'));
   const status=el('p',error);status.setAttribute('role','status');dialog.append(status);
   if(pending&&waitingForGarden){
-   dialog.append(el('h3',pending.name),el('p',cancelled?'Opening the saved garden was cancelled. Your crop choice is still here.':'Open the linked account garden before choosing where to plant. Sign in or retry in Account saves; your crop choice is retained.'));
+   dialog.append(el('h3',pending.name),el('p',recovery?`${recovery.reason} Your crop choice is still here. Retry in Account saves or choose another garden.`:cancelled?'Opening the saved garden was cancelled. Your crop choice is still here.':'Open the linked account garden before choosing where to plant. Sign in or retry in Account saves; your crop choice is retained.'));
    const account=el('button','Return to account saves');account.type='button';account.onclick=()=>dialog.close();dialog.append(account);
-   if(cancelled){const other=el('button','Choose another garden');other.type='button';other.onclick=()=>{waitingForGarden=false;draw();};dialog.append(other);}
+   if(cancelled||recovery){const other=el('button','Choose another garden');other.type='button';other.onclick=()=>{recovery?.chooseAnother();recovery=null;waitingForGarden=false;chooseDestination=true;draw();};dialog.append(other);}
    return;
   }
   if(pending){
@@ -23,7 +23,7 @@ export function planningTray({getState,commit,createGarden,openBed,remove,invali
    garden.append(new Option('Choose a garden',''));for(const g of getState().parcels)garden.append(new Option(g.name,g.id));
    const refreshBeds=()=>{bed.replaceChildren(new Option('Choose a bed',''));const g=getState().parcels.find(g=>g.id===garden.value);for(const b of g?.beds||[])bed.append(new Option(`${b.name} · ${Math.round(b.width*b.height/144)} sq ft total`,b.id));};garden.onchange=refreshBeds;refreshBeds();
    const create=el('button','Start a new 4 × 8 garden');create.type='button';create.onclick=()=>{try{createGarden();draw();}catch(e){status.textContent=e.message;}};
-   const active=getState().parcels.find(g=>g.id===getState().activeParcelId);if(active&&!/^berkshire-botanical|^the-mount|^naumkeag|^ashintully/.test(active.id)){garden.value=active.id;refreshBeds();bed.value=active.activeBedId||'';}
+   const active=getState().parcels.find(g=>g.id===getState().activeParcelId);if(active&&!chooseDestination&&!/^berkshire-botanical|^the-mount|^naumkeag|^ashintully/.test(active.id)){garden.value=active.id;refreshBeds();bed.value=active.activeBedId||'';}
    form.append(label('Garden',garden),label('Bed',bed),create,label('Planning year',year));
    const plannedDate=el('input');plannedDate.type='date';plannedDate.min='1900-01-01';plannedDate.max='2200-12-31';plannedDate.value=pending.plannedDate||'';plannedDate.onchange=()=>{if(plannedDate.value)year.value=plannedDate.value.slice(0,4);};form.append(label('Planned planting date (optional)',plannedDate));
    const dimensions={};for(const [key,name,value]of [['spacing','Plant spacing (inches)',pending.spacingMax],['diameter','Planned width (inches)',null],['height','Planned height (inches)',null]]){const input=el('input');input.type='number';input.min='1';input.max='1200';input.step='0.5';input.required=true;input.value=value==null?'':String(value);dimensions[key]=input;form.append(label(name,input));}
@@ -35,5 +35,5 @@ export function planningTray({getState,commit,createGarden,openBed,remove,invali
  }
  function open(){draw();dialog.showModal();}launch.onclick=open;
  function update(){launch.textContent=`Planning tray · ${(getState().property.planningTray||[]).length}`;}
- if((pending||error)&&!waitingForGarden)requestAnimationFrame(()=>{if(root.isConnected)open();});invalidation?.then(()=>dialog.remove());return {root,dialog,update,linkedGardenResult(result){waitingForGarden=result!=='opened';cancelled=result==='cancelled';if(pending){draw();if(!dialog.open)dialog.showModal();}}};
+ if((pending||error)&&!waitingForGarden)requestAnimationFrame(()=>{if(root.isConnected)open();});invalidation?.then(()=>dialog.remove());return {root,dialog,update,linkedGardenResult(result,options=null){waitingForGarden=result!=='opened';cancelled=result==='cancelled';recovery=result==='unavailable'?options:null;if(result==='opened')chooseDestination=false;if(pending){draw();if(!dialog.open)dialog.showModal();}}};
 }
