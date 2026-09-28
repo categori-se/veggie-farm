@@ -56,6 +56,16 @@ node --test tests/builderWalkthrough.test.mjs
 
 The example needs only Node. It reads bundled evidence, derives an illustrative plant specification and validates a portable synthetic garden. It makes no network calls or writes. This is a reproducible learning contribution; independent gardener and builder outcomes still need testing.
 
+## AWS and coding-agent evidence
+
+See [the documented build and agent usage](https://github.com/categori-se/veggie-farm/blob/main/src/about/build-evidence.md), linked from the deployed site’s About section. The authentic redacted console screenshot is hosted separately from GitHub. See [dated hosted verification](https://github.com/categori-se/veggie-farm/blob/main/docs/architecture/build-evidence.json). Publication of the updated Builder project and event submission must be verified separately; this repository does not certify acceptance.
+
+Source repository: [categori-se/veggie-farm](https://github.com/categori-se/veggie-farm). This source release excludes installed dependencies, build artifacts, media and private comparison inputs. See the [source distribution notice policy](https://github.com/categori-se/veggie-farm/blob/main/docs/licenses/NOTICE-GAPS.md#distribution-scope).
+
+[Build evidence pack](https://github.com/categori-se/veggie-farm/blob/main/docs/evidence/README.md): console method, dated development records, fresh AWS/browser observations, CI proof and submission-ready text. Screenshots are hosted separately.
+
+Develop with your own agent and account: [Connect Codex to AWS](https://github.com/categori-se/veggie-farm/blob/main/docs/architecture/codex-aws.md).
+
 ## Run locally
 
 Use Node 24.18.0 and npm 11.16.0 (see `.nvmrc` and the lockfile). Python 3 is needed for the optional notice regression suite (`npm run test:notices`):
@@ -108,16 +118,6 @@ See [software acknowledgments and licenses](docs/licenses/README.md) for upstrea
 ## Maintain, extend and deploy
 
 [What the core offers and how to extend it](docs/architecture/extension-walkthrough.md) · [Studio paths/subdomains/components](docs/architecture/studio-integration.md) · [Protected two-repository workflow](docs/architecture/community-workflow.md) · [AWS deployment guide](examples/aws/DEPLOYMENT.md). Install local hooks with `npm run hooks:install`; run `npm run verify:community` before pushing. Source verification checks runtime/browser notices and the bounded source-only tooling policy. No remote or AWS action is part of a normal build.
-
-## AWS and coding-agent evidence
-
-See [the documented build and agent usage](src/about/build-evidence.md), linked from the deployed site’s About section. The authentic redacted console screenshot is hosted separately from GitHub. See [dated hosted verification](docs/architecture/build-evidence.json). Publication of the updated Builder project and event submission must be verified separately; this repository does not certify acceptance.
-
-Source repository: [categori-se/veggie-farm](https://github.com/categori-se/veggie-farm). This source release excludes installed dependencies, build artifacts, media and private comparison inputs. See the [source distribution notice policy](docs/licenses/NOTICE-GAPS.md#distribution-scope).
-
-[Build evidence pack](docs/evidence/README.md): console method, dated development records, fresh AWS/browser observations, CI proof and submission-ready text. Screenshots are hosted separately.
-
-Develop with your own agent and account: [Connect Codex to AWS](docs/architecture/codex-aws.md).
 
 ## Your deployment, your information
 
