@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-09-28",
+  "kind": "retrospective summary of retained deployment receipts and browser checks",
+  "agent": "Codex",
+  "connectionMethod": "Shell-launched Python boto3 AWS SDK; not a new AWS console or MCP session",
+  "previousConnectionEvidence": {
+    "console": "console-connection.json",
+    "officialAwsMcp": "aws-toolkit-connection.json"
+  },
+  "deployment": {
+    "status": "media-and-live-guide-published",
+    "mediaPublishedAt": "2026-09-28T07:49:38.317523+00:00",
+    "mediaObjects": 14,
+    "mediaBytes": 709962,
+    "finalHtmlObjects": 2,
+    "finalHtmlBytes": 40576,
+    "uniqueObjects": 16,
+    "s3PutOperations": 18,
+    "deletions": 0,
+    "cdnInvalidation": "Completed",
+    "mediaEvidence": "guide-themes.json",
+    "finalHtml": [
+      {
+        "url": "https://veggie.farm/guide",
+        "sha256": "a1d861f6851fa642aeb525c3ff2ee041933064d0dba940d39032d1f7ee764ded"
+      },
+      {
+        "url": "https://veggie.farm/guide.html",
+        "sha256": "a1d861f6851fa642aeb525c3ff2ee041933064d0dba940d39032d1f7ee764ded"
+      }
+    ]
+  },
+  "hostedAcceptance": {
+    "hosted": true,
+    "checks": [
+      {
+        "width": 1280,
+        "theme": "light",
+        "images": 7,
+        "decoded": true,
+        "themeSelected": true,
+        "noOverflow": true
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "images": 7,
+        "decoded": true,
+        "themeSelected": true,
+        "noOverflow": true
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "images": 7,
+        "decoded": true,
+        "themeSelected": true,
+        "noOverflow": true
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "images": 7,
+        "decoded": true,
+        "themeSelected": true,
+        "noOverflow": true
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  "sourceVerification": {
+    "scope": "prepared community source branch, local checks; no new GitHub CI run",
+    "applicationTests": 443,
+    "noticeTests": 7,
+    "communityGate": "passed",
+    "finalBuild": "passed",
+    "knownLimitations": [
+      "Five pre-existing unrelated build link warnings",
+      "Two documented tooling-only notice gaps"
+    ],
+    "sourcePublication": "Prepared locally; branch push and PR pending explicit authorization"
+  },
+  "retainedPrivateEvidence": [
+    {
+      "record": "publication-candidate.json",
+      "bytes": 5534,
+      "sha256": "4ce2008fe56b5dbb2daa8e07767662d4d1ce6fcd82aac57d2f1dcd3c6c1471f9"
+    },
+    {
+      "record": "media-receipt.json",
+      "bytes": 4293,
+      "sha256": "5ed4790d6636e51f179de162090631060e4a00dee8aece0a8aa8e922b2c001e6"
+    },
+    {
+      "record": "page-receipt.json",
+      "bytes": 523,
+      "sha256": "605a6374eed67923b48f49ff8c07f6fd3b2089384baee6d1974427bb4b64c284"
+    },
+    {
+      "record": "anchor-fix/page-receipt.json",
+      "bytes": 523,
+      "sha256": "617cf53ca479ee7baf67be0eafd88ce118821eec940038d5fa8ae7a61b66517e"
+    },
+    {
+      "record": "anchor-fix/hosted-page-hashes.json",
+      "bytes": 85,
+      "sha256": "a32193c739551d176af018793236a9c0b7e2638976f98f2a45d7232dd96728ab"
+    },
+    {
+      "record": "anchor-fix/hosted-page-acceptance.json",
+      "bytes": 685,
+      "sha256": "7ed9a8ae03cd333bfbd5abde8bd345fdac84553a57fa437b8699ca0722d09348"
+    },
+    {
+      "record": "publish-media.py",
+      "bytes": 2169,
+      "sha256": "af094696c462baebe1a521495d4fba6082f627485a9bbc58dc4b428919fa6675"
+    },
+    {
+      "record": "publish-page.py",
+      "bytes": 2065,
+      "sha256": "0ccc513ba308397a63ca28f0aaee2d36710ed2fe62d0069ea5464f3f3a7a6b27"
+    }
+  ],
+  "publicEvidence": [
+    {
+      "path": "console-connection.json",
+      "sha256": "210b3784c1d77ee97af9c1f166391ef5af93090d54912ed372deedd6c690d7cb"
+    },
+    {
+      "path": "aws-toolkit-connection.json",
+      "sha256": "ed9e8341ab0a070cae2093a445cee642087c96d9ab30f5e1f91573d68cb6cb33"
+    },
+    {
+      "path": "guide-themes.json",
+      "sha256": "c3c12c0156a48ce76473d810c2d9004f887afce010caf97dc193578c9552f66b"
+    }
+  ],
+  "limits": [
+    "Retained private records are not independently accessible; their hashes identify source bytes, not third-party verification.",
+    "This update does not establish a new console/MCP connection, gardener outcomes, Builder publication or competition acceptance.",
+    "No deployment was performed to write this documentation update."
+  ]
+}
