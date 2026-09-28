@@ -2,6 +2,10 @@
 
 This pack documents how veggie.farm and Garden Planning Studio were developed and verified. It combines a retained console observation with fresh AWS API and browser checks and independently accessible GitHub CI. Records and captions identify their dates and scope; screenshots are actual captures hosted separately from this media-free repository.
 
+## Continued deployment — September 28
+
+[Read the dated deployment update](deployment-update-2026-09-28.md) for agent-driven AWS SDK publication, conditional writes, completed CDN invalidation, hosted screenshot/page hash checks and four themed browser checks. The [structured record](deployment-update-2026-09-28.json) preserves source hashes and distinguishes this delivery work from the earlier console and MCP connections. The original manifest describes its historical snapshot, not later index edits or additions.
+
 ## Visible console proof
 
 ![Actual redacted AWS console capture from the Codex-controlled browser, September 22](https://veggie.farm/evidence/aws-console-connection.png)

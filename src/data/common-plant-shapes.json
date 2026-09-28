@@ -1,0 +1,2360 @@
+{
+  "schemaVersion": 1,
+  "title": "50 common-garden plant shapes",
+  "license": "GPL-3.0-only",
+  "source": "data/reference/common-plants.json",
+  "sourceSha256": "1052a8a9cc525637fd91372f39312a37877029262d80f37d88b02f5f2e01169d",
+  "selectionBasis": "First 50 in the owner-supplied common-garden priority list; not measured popularity.",
+  "representation": "Plant-specific dimensions and colors using shared schematic archetypes, not 50 independently modeled species. Planning ranges remain subject to horticultural review.",
+  "units": "inches",
+  "sources": {
+    "source:community-guides": {
+      "publisher": "veggie.farm",
+      "title": "Current project crop/fruit/herb guides",
+      "url": "https://veggie.farm/",
+      "role": [
+        "existing project identity",
+        "current crop timing text",
+        "current spacing text",
+        "current maturity text"
+      ]
+    },
+    "umn-climate-resilience": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Climate resilience resources for vegetable growers in Minnesota",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/climate-resilience-resources-for-vegetable-growers-in-minnesota",
+      "role": [
+        "days to maturity",
+        "cold hardiness",
+        "succession intervals"
+      ]
+    },
+    "umn-carrots": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing carrots and parsnips in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-carrots-and-parsnips",
+      "role": [
+        "direct sowing",
+        "spacing",
+        "root development"
+      ]
+    },
+    "umn-radishes": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing radishes in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-radishes",
+      "role": [
+        "spacing",
+        "water",
+        "harvest",
+        "pests",
+        "diseases"
+      ]
+    },
+    "umn-peas": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing peas in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-peas",
+      "role": [
+        "soil",
+        "vine height",
+        "support",
+        "harvest"
+      ]
+    },
+    "umn-onions": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing onions in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-onions",
+      "role": [
+        "spacing",
+        "direct sowing",
+        "transplant timing"
+      ]
+    },
+    "umn-cucumbers": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing cucumbers in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-cucumbers",
+      "role": [
+        "soil temperature",
+        "direct sowing",
+        "spacing",
+        "vine habit"
+      ]
+    },
+    "umn-peppers": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing peppers",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-peppers",
+      "role": [
+        "spacing",
+        "temperature",
+        "transplant timing",
+        "rotation"
+      ]
+    },
+    "umn-strawberries": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing strawberries in the home garden",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-strawberries-in-the-home-garden",
+      "role": [
+        "spacing",
+        "runner/stolon habit",
+        "pollination",
+        "water",
+        "site"
+      ]
+    },
+    "umn-blueberries": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing blueberries in the home garden",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-blueberries-in-the-home-garden",
+      "role": [
+        "acid soil",
+        "spacing",
+        "pollination",
+        "bearing age",
+        "mature size"
+      ]
+    },
+    "umn-herbs": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing herbs in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-herbs",
+      "supports": [
+        "herb families",
+        "light",
+        "soil",
+        "watering",
+        "seasonality"
+      ]
+    },
+    "umn-basil": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing basil in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/growing-basil",
+      "role": [
+        "growth size",
+        "direct sowing",
+        "cultivar variation"
+      ]
+    },
+    "umn-dill": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing dill in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-dill",
+      "role": [
+        "sun",
+        "spacing",
+        "direct sowing",
+        "height/support"
+      ]
+    },
+    "psu-ribes": {
+      "publisher": "Penn State Extension",
+      "title": "Home Fruit Plantings: Gooseberries and Currants",
+      "url": "https://extension.psu.edu/home-fruit-plantings-gooseberries-and-currants",
+      "role": [
+        "Ribes mature size",
+        "spacing",
+        "pollination",
+        "winter hardiness",
+        "harvest",
+        "disease context"
+      ]
+    },
+    "psu-stonefruit-spacing": {
+      "publisher": "Penn State Extension",
+      "title": "Home Orchards: Table 5.1. Stone Fruit Spacing and Probable Yield",
+      "url": "https://extension.psu.edu/home-orchards-table-5-1-stone-fruit-spacing-and-probable-yield",
+      "supports": [
+        "peach spacing",
+        "sweet cherry spacing"
+      ]
+    },
+    "mdar-pollinator": {
+      "publisher": "Massachusetts Department of Agricultural Resources",
+      "title": "Native Pollinator Plant Database",
+      "url": "https://massnrc.org/ppd/",
+      "role": [
+        "native flower light",
+        "moisture",
+        "flower color",
+        "bloom period",
+        "growth form"
+      ]
+    },
+    "umass-pollinator-profiles": {
+      "publisher": "UMass Extension",
+      "title": "Native Pollinator Plant Profiles",
+      "url": "https://www.umass.edu/agriculture-food-environment/resources/pollinators/managing-landscapes-for-pollinators/native-pollinator-plant-profiles",
+      "role": [
+        "mature size",
+        "bloom duration",
+        "site conditions",
+        "pollinator value"
+      ]
+    },
+    "csnap-native-plants": {
+      "publisher": "UMass Spatial Ecology Lab / Northeast RISCC",
+      "title": "Climate-Smart Native Plants",
+      "url": "https://www.climatesmartnativeplants.org/",
+      "role": [
+        "regional native status",
+        "hardiness",
+        "growth requirements"
+      ]
+    },
+    "usda-plants": {
+      "publisher": "USDA NRCS",
+      "title": "PLANTS Database",
+      "url": "https://plants.usda.gov/home",
+      "role": [
+        "taxonomy",
+        "distribution",
+        "growth requirements"
+      ]
+    },
+    "ncsu-smooth-aster": {
+      "publisher": "NC State Extension",
+      "title": "Symphyotrichum laeve",
+      "url": "https://plants.ces.ncsu.edu/plants/symphyotrichum-laeve/",
+      "role": [
+        "taxonomy",
+        "dimensions",
+        "sun",
+        "soil",
+        "pollinator value"
+      ]
+    },
+    "ncsu-goldenrod": {
+      "publisher": "NC State Extension",
+      "title": "Solidago rugosa",
+      "url": "https://plants.ces.ncsu.edu/plants/solidago-rugosa/",
+      "role": [
+        "taxonomy",
+        "dimensions",
+        "sun",
+        "soil moisture",
+        "hardiness",
+        "pollinator value"
+      ]
+    },
+    "ncsu-wild-geranium": {
+      "publisher": "NC State Extension",
+      "title": "Geranium maculatum",
+      "url": "https://plants.ces.ncsu.edu/plants/geranium-maculatum/",
+      "role": [
+        "taxonomy",
+        "height",
+        "shade",
+        "soil",
+        "native range"
+      ]
+    },
+    "ncsu-blue-flag": {
+      "publisher": "NC State Extension",
+      "title": "Iris versicolor",
+      "url": "https://plants.ces.ncsu.edu/plants/iris-versicolor/",
+      "role": [
+        "taxonomy",
+        "height",
+        "moisture",
+        "sun",
+        "toxicity"
+      ]
+    },
+    "ncsu-blazing-star": {
+      "publisher": "NC State Extension",
+      "title": "Liatris spicata",
+      "url": "https://plants.ces.ncsu.edu/plants/liatris-spicata/",
+      "role": [
+        "taxonomy",
+        "height",
+        "soil",
+        "sun",
+        "pollinator value"
+      ]
+    },
+    "ncsu-virginia-rose": {
+      "publisher": "NC State Extension",
+      "title": "Rosa virginiana",
+      "url": "https://plants.ces.ncsu.edu/plants/rosa-virginiana/",
+      "role": [
+        "taxonomy",
+        "height",
+        "sun",
+        "soil",
+        "shrub habit"
+      ]
+    },
+    "umn-vegetable-planting": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Planting the vegetable garden",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/planting-the-vegetable-garden",
+      "supports": [
+        "regional planting timing",
+        "indoor seed-start timing",
+        "crop seasonality"
+      ]
+    },
+    "umn-plant-families": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Promote healthy soil in your garden",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+      "supports": [
+        "crop families",
+        "rotation context"
+      ]
+    },
+    "umn-crop-planning": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Crop and field planning tools for vegetable farmers",
+      "url": "https://extension.umn.edu/vegetable-growing-guides-farmers/crop-and-field-planning-tools-vegetable-farmers",
+      "supports": [
+        "within-row spacing",
+        "planning density"
+      ]
+    },
+    "umn-vining": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Flower and fruit set in cucurbits / vining vegetable growing guide",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/commercial-fruit-production/vining-vegetable-growing-guide",
+      "supports": [
+        "pumpkin spacing",
+        "watermelon spacing",
+        "muskmelon spacing",
+        "pollination"
+      ]
+    },
+    "umn-broccoli": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing broccoli in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-broccoli",
+      "supports": [
+        "soil",
+        "water",
+        "timing",
+        "maturity",
+        "pests",
+        "diseases"
+      ]
+    },
+    "umn-cabbage": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing cabbage in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-cabbage",
+      "supports": [
+        "spacing",
+        "soil",
+        "water",
+        "timing",
+        "maturity",
+        "pests",
+        "diseases"
+      ]
+    },
+    "umn-brussels": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing Brussels sprouts in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-brussels-sprouts",
+      "supports": [
+        "spacing",
+        "soil",
+        "water",
+        "timing",
+        "cold tolerance"
+      ]
+    },
+    "umn-eggplant": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing eggplant in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-eggplant",
+      "supports": [
+        "spacing",
+        "soil",
+        "water",
+        "timing",
+        "support",
+        "pests",
+        "diseases"
+      ]
+    },
+    "umn-asparagus": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing asparagus in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-asparagus",
+      "supports": [
+        "perennial lifecycle",
+        "spacing",
+        "soil",
+        "watering",
+        "planting",
+        "harvest"
+      ]
+    },
+    "umn-rhubarb": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing rhubarb in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-rhubarb",
+      "supports": [
+        "perennial lifecycle",
+        "spacing",
+        "soil",
+        "watering",
+        "harvest",
+        "toxicity"
+      ]
+    },
+    "umn-scallions": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing scallions in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-scallions-in-home-gardens",
+      "supports": [
+        "sun",
+        "spacing",
+        "direct sowing",
+        "transplanting"
+      ]
+    },
+    "umn-tomatillo": {
+      "publisher": "University of Minnesota Extension",
+      "title": "Growing tomatillos and ground cherries in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-tomatillos-and-ground-cherries",
+      "supports": [
+        "spacing",
+        "seed starting",
+        "support",
+        "water",
+        "pollination",
+        "pests",
+        "diseases"
+      ]
+    },
+    "psu-brambles": {
+      "publisher": "Penn State Extension",
+      "title": "Brambles in the Home Fruit Planting",
+      "url": "https://extension.psu.edu/brambles-in-the-home-fruit-planting",
+      "supports": [
+        "blackberry growth habit",
+        "fruiting cycle",
+        "trellising",
+        "cold sensitivity"
+      ]
+    },
+    "psu-bramble-spacing": {
+      "publisher": "Penn State Extension",
+      "title": "Planting, Nutrition, Harvest-Postharvest Care of Brambles in Home Gardens",
+      "url": "https://extension.psu.edu/planting-nutrition-harvest-postharvest-care-of-brambles-in-home-gardens",
+      "supports": [
+        "blackberry spacing",
+        "planting"
+      ]
+    },
+    "psu-grapes": {
+      "publisher": "Penn State Extension",
+      "title": "Backyard Grape Growing",
+      "url": "https://extension.psu.edu/backyard-grape-growing",
+      "supports": [
+        "grape planting",
+        "trellising",
+        "pruning",
+        "site"
+      ]
+    },
+    "psu-stonefruit": {
+      "publisher": "Penn State Extension",
+      "title": "Planting and Growing Stone Fruit in Home Plantings",
+      "url": "https://extension.psu.edu/planting-and-growing-stone-fruit-in-home-plantings",
+      "supports": [
+        "peach and cherry planting",
+        "orchard establishment"
+      ]
+    },
+    "psu-cherries": {
+      "publisher": "Penn State Extension",
+      "title": "Cherries in the Garden and the Kitchen",
+      "url": "https://extension.psu.edu/cherries-in-the-garden-and-the-kitchen",
+      "supports": [
+        "sweet cherry botany",
+        "home landscape use"
+      ]
+    },
+    "psu-fruit-pollination": {
+      "publisher": "Penn State Extension",
+      "title": "Pollination Requirements for Various Fruits and Nuts",
+      "url": "https://extension.psu.edu/pollination-requirements-for-various-fruits-and-nuts",
+      "supports": [
+        "blackberry pollination",
+        "grape pollination",
+        "peach pollination",
+        "sweet cherry pollination"
+      ]
+    },
+    "psu-fig": {
+      "publisher": "Penn State Extension",
+      "title": "Figs in the Home Garden",
+      "url": "https://extension.psu.edu/figs-in-the-home-garden",
+      "supports": [
+        "fig species",
+        "sun",
+        "soil",
+        "container culture",
+        "northern hardiness"
+      ]
+    },
+    "ncsu-chives": {
+      "publisher": "NC State Extension",
+      "title": "Chives — Allium schoenoprasum",
+      "url": "https://plants.ces.ncsu.edu/plants/allium-schoenoprasum/common-name/chives/",
+      "supports": [
+        "taxonomy",
+        "lifecycle",
+        "sun",
+        "propagation",
+        "growth form"
+      ]
+    },
+    "ncsu-oregano": {
+      "publisher": "NC State Extension",
+      "title": "Origanum vulgare",
+      "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+      "supports": [
+        "taxonomy",
+        "lifecycle",
+        "dimensions",
+        "sun",
+        "soil",
+        "hardiness"
+      ]
+    },
+    "ncsu-lavender": {
+      "publisher": "NC State Extension",
+      "title": "Lavandula angustifolia",
+      "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+      "supports": [
+        "taxonomy",
+        "lifecycle",
+        "dimensions",
+        "sun",
+        "soil"
+      ]
+    },
+    "ncsu-marjoram": {
+      "publisher": "NC State Extension",
+      "title": "Marjoram — Origanum majorana",
+      "url": "https://plants.ces.ncsu.edu/plants/origanum-majorana/common-name/marjoram/",
+      "supports": [
+        "taxonomy",
+        "lifecycle",
+        "form",
+        "dimensions"
+      ]
+    },
+    "ncsu-tarragon": {
+      "publisher": "NC State Extension",
+      "title": "Artemisia dracunculus",
+      "url": "https://plants.ces.ncsu.edu/plants/artemisia-dracunculus/common-name/french-tarragon/",
+      "supports": [
+        "taxonomy",
+        "lifecycle",
+        "form",
+        "site",
+        "propagation"
+      ]
+    },
+    "ncsu-chamomile": {
+      "publisher": "NC State Extension",
+      "title": "Matricaria chamomilla",
+      "url": "https://plants.ces.ncsu.edu/plants/matricaria-chamomilla/",
+      "supports": [
+        "taxonomy",
+        "lifecycle",
+        "dimensions",
+        "sun",
+        "soil",
+        "propagation"
+      ]
+    },
+    "ncsu-hydrangea": {
+      "publisher": "NC State Extension",
+      "title": "Hydrangea macrophylla",
+      "url": "https://plants.ces.ncsu.edu/plants/hydrangea-macrophylla/",
+      "supports": [
+        "taxonomy",
+        "dimensions",
+        "light",
+        "soil",
+        "hardiness",
+        "form"
+      ]
+    },
+    "ncsu-roses": {
+      "publisher": "NC State Extension",
+      "title": "Roses — Rosa",
+      "url": "https://plants.ces.ncsu.edu/plants/rosa/common-name/roses/",
+      "supports": [
+        "rose form",
+        "sun",
+        "soil",
+        "dimensions",
+        "maintenance"
+      ]
+    },
+    "ncsu-hosta": {
+      "publisher": "NC State Extension",
+      "title": "Hosta",
+      "url": "https://plants.ces.ncsu.edu/plants/hosta/",
+      "supports": [
+        "taxonomy",
+        "dimensions",
+        "shade",
+        "soil",
+        "hardiness",
+        "form"
+      ]
+    },
+    "ncsu-daylily": {
+      "publisher": "NC State Extension",
+      "title": "Daylily — Hemerocallis",
+      "url": "https://plants.ces.ncsu.edu/plants/hemerocallis/common-name/daylily/",
+      "supports": [
+        "form",
+        "dimensions",
+        "sun",
+        "soil",
+        "perennial lifecycle"
+      ]
+    },
+    "ncsu-tulip": {
+      "publisher": "NC State Extension",
+      "title": "Tulip — Tulipa",
+      "url": "https://plants.ces.ncsu.edu/plants/tulipa/common-name/tulip/",
+      "supports": [
+        "form",
+        "height",
+        "sun",
+        "soil",
+        "planting depth"
+      ]
+    },
+    "ncsu-daffodil": {
+      "publisher": "NC State Extension",
+      "title": "Daffodils — Narcissus",
+      "url": "https://plants.ces.ncsu.edu/plants/narcissus/common-name/daffodils/",
+      "supports": [
+        "form",
+        "dimensions",
+        "sun",
+        "soil",
+        "fall planting"
+      ]
+    },
+    "ncsu-iris": {
+      "publisher": "NC State Extension",
+      "title": "Bearded Iris — Iris x germanica",
+      "url": "https://plants.ces.ncsu.edu/plants/iris-x-germanica/common-name/bearded-iris/",
+      "supports": [
+        "taxonomy",
+        "sun",
+        "soil",
+        "form",
+        "maintenance"
+      ]
+    },
+    "ncsu-echinacea": {
+      "publisher": "NC State Extension",
+      "title": "Eastern Purple Coneflower — Echinacea purpurea",
+      "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/common-name/eastern-purple-coneflower/",
+      "supports": [
+        "taxonomy",
+        "dimensions",
+        "sun",
+        "soil",
+        "pollinator value"
+      ]
+    },
+    "ncsu-sunflower": {
+      "publisher": "NC State Extension",
+      "title": "Helianthus annuus",
+      "url": "https://plants.ces.ncsu.edu/plants/helianthus-annuus/",
+      "supports": [
+        "taxonomy",
+        "annual lifecycle",
+        "form",
+        "flowering"
+      ]
+    },
+    "ncsu-marigold": {
+      "publisher": "NC State Extension",
+      "title": "Tagetes",
+      "url": "https://plants.ces.ncsu.edu/plants/tagetes/",
+      "supports": [
+        "taxonomy",
+        "form",
+        "height range",
+        "sun",
+        "soil"
+      ]
+    },
+    "ncsu-zinnia": {
+      "publisher": "NC State Extension",
+      "title": "Zinnia elegans",
+      "url": "https://plants.ces.ncsu.edu/plants/zinnia-elegans/",
+      "supports": [
+        "taxonomy",
+        "annual lifecycle",
+        "sun",
+        "soil",
+        "direct sowing"
+      ]
+    },
+    "ncsu-petunia": {
+      "publisher": "NC State Extension",
+      "title": "Garden Petunia — Petunia x hybrida",
+      "url": "https://plants.ces.ncsu.edu/plants/petunia-x-hybrida/common-name/garden-petunia/",
+      "supports": [
+        "taxonomy",
+        "form",
+        "sun",
+        "soil",
+        "spacing"
+      ]
+    },
+    "ncsu-pelargonium": {
+      "publisher": "NC State Extension",
+      "title": "Geranium — Pelargonium",
+      "url": "https://plants.ces.ncsu.edu/plants/pelargonium/common-name/geranium/",
+      "supports": [
+        "taxonomy",
+        "tender-perennial lifecycle",
+        "sun",
+        "soil",
+        "water"
+      ]
+    },
+    "ncsu-impatiens": {
+      "publisher": "NC State Extension",
+      "title": "Impatiens walleriana",
+      "url": "https://plants.ces.ncsu.edu/plants/impatiens-walleriana/",
+      "supports": [
+        "taxonomy",
+        "dimensions",
+        "shade",
+        "soil",
+        "hardiness"
+      ]
+    },
+    "ncsu-boxwood": {
+      "publisher": "NC State Extension",
+      "title": "Buxus (Boxwood)",
+      "url": "https://plants.ces.ncsu.edu/plants/buxus/",
+      "supports": [
+        "taxonomy",
+        "evergreen form",
+        "hardiness",
+        "light",
+        "soil"
+      ]
+    },
+    "ncsu-arborvitae": {
+      "publisher": "NC State Extension",
+      "title": "Thuja occidentalis",
+      "url": "https://plants.ces.ncsu.edu/plants/thuja-occidentalis/",
+      "supports": [
+        "taxonomy",
+        "dimensions",
+        "hardiness",
+        "light",
+        "soil",
+        "evergreen form"
+      ]
+    },
+    "ncsu-japanese-maple": {
+      "publisher": "NC State Extension",
+      "title": "Acer palmatum",
+      "url": "https://plants.ces.ncsu.edu/plants/acer-palmatum/",
+      "supports": [
+        "taxonomy",
+        "dimensions",
+        "hardiness",
+        "light",
+        "soil",
+        "form"
+      ]
+    }
+  },
+  "plants": [
+    {
+      "id": "tomato",
+      "name": "Tomatoes",
+      "scientificName": "Solanum lycopersicum",
+      "priority": 1,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "upright-fruiting",
+        "form": "herbaceous",
+        "leafShape": "compound",
+        "layers": 5,
+        "leaves": 24,
+        "fruit": true,
+        "widthIn": 36,
+        "heightIn": 96,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Determinate and indeterminate cultivars differ greatly.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "cucumbers",
+      "name": "Cucumbers",
+      "scientificName": "Cucumis sativus",
+      "priority": 2,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-cucumbers",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "upright-fruiting",
+        "form": "herbaceous",
+        "leafShape": "compound",
+        "layers": 5,
+        "leaves": 24,
+        "fruit": true,
+        "widthIn": 96,
+        "heightIn": 24,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Vining types may occupy several feet; trellising reduces ground footprint.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "peppers",
+      "name": "Peppers",
+      "scientificName": "Capsicum annuum (common garden types; other Capsicum spp. also grown)",
+      "priority": 3,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-peppers"
+      ],
+      "spec": {
+        "id": "upright-fruiting",
+        "form": "herbaceous",
+        "leafShape": "compound",
+        "layers": 5,
+        "leaves": 24,
+        "fruit": true,
+        "widthIn": 30,
+        "heightIn": 48,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Hot and sweet pepper cultivars range from compact to tall.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "beans",
+      "name": "Beans",
+      "scientificName": "Phaseolus vulgaris (common bush/pole beans)",
+      "priority": 4,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "upright-fruiting",
+        "form": "herbaceous",
+        "leafShape": "compound",
+        "layers": 5,
+        "leaves": 24,
+        "fruit": true,
+        "widthIn": 24,
+        "heightIn": 120,
+        "spacingIn": 8,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Habit must be chosen at cultivar/placement level: bush beans are compact; pole beans can exceed 6 ft.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "carrot",
+      "name": "Carrots",
+      "scientificName": "Daucus carota subsp. sativus",
+      "priority": 5,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-carrots",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 8,
+        "heightIn": 18,
+        "spacingIn": 4,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "scientificName": "Cucurbita pepo",
+      "priority": 6,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 60,
+        "heightIn": 36,
+        "spacingIn": 36,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "onions",
+      "name": "Onions",
+      "scientificName": "Allium cepa",
+      "priority": 7,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-onions"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 8,
+        "heightIn": 24,
+        "spacingIn": 6,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "scientificName": "Lactuca sativa",
+      "priority": 8,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 14,
+        "heightIn": 16,
+        "spacingIn": 12,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "scientificName": "Pisum sativum",
+      "priority": 9,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-peas",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "upright-fruiting",
+        "form": "herbaceous",
+        "leafShape": "compound",
+        "layers": 5,
+        "leaves": 24,
+        "fruit": true,
+        "widthIn": 18,
+        "heightIn": 72,
+        "spacingIn": 3,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Tall vines may reach about 5 ft; bush types commonly 2–3 ft.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "basil",
+      "name": "Basil",
+      "scientificName": "Ocimum basilicum",
+      "priority": 10,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-herbs",
+        "umn-basil"
+      ],
+      "spec": {
+        "id": "paired-herb",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 5,
+        "leaves": 20,
+        "widthIn": 24,
+        "heightIn": 36,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Compact basil may stay under 1 ft; Thai and vigorous types can reach 2–3 ft.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes",
+      "scientificName": "Solanum tuberosum",
+      "priority": 11,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "paired-herb",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 5,
+        "leaves": 20,
+        "widthIn": 30,
+        "heightIn": 36,
+        "spacingIn": 12,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "strawberries",
+      "name": "Strawberries",
+      "scientificName": "Fragaria × ananassa",
+      "priority": 12,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-strawberries"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 24,
+        "heightIn": 12,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Runners can rapidly extend beyond the mother-plant footprint.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "scientificName": "Zea mays",
+      "priority": 13,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 24,
+        "heightIn": 108,
+        "spacingIn": 12,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "scientificName": "Spinacia oleracea",
+      "priority": 14,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 12,
+        "heightIn": 12,
+        "spacingIn": 6,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "scientificName": "Allium sativum",
+      "priority": 15,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 8,
+        "heightIn": 36,
+        "spacingIn": 6,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "radishes",
+      "name": "Radishes",
+      "scientificName": "Raphanus sativus",
+      "priority": 16,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-radishes",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 12,
+        "heightIn": 18,
+        "spacingIn": 6,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "blueberry",
+      "name": "Blueberries",
+      "scientificName": "Vaccinium spp. (highbush/half-high types common in home gardens)",
+      "priority": 17,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-blueberries"
+      ],
+      "spec": {
+        "id": "rounded-shrub",
+        "form": "woody",
+        "leafShape": "oval",
+        "layers": 4,
+        "leaves": 32,
+        "fruit": true,
+        "widthIn": 72,
+        "heightIn": 84,
+        "spacingIn": 60,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Highbush and half-high blueberries vary strongly.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#73583d",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "kale",
+      "name": "Kale",
+      "scientificName": "Brassica oleracea var. sabellica",
+      "priority": 18,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 30,
+        "heightIn": 36,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "scientificName": "Mentha spp.",
+      "priority": 19,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-herbs"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 60,
+        "heightIn": 30,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Can spread indefinitely without containment.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "apples",
+      "name": "Apples",
+      "scientificName": "Malus domestica",
+      "priority": 20,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "broadleaf-tree",
+        "form": "woody",
+        "leafShape": "crown",
+        "layers": 4,
+        "leaves": 0,
+        "widthIn": 300,
+        "heightIn": 300,
+        "spacingIn": 300,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Rootstock and training system dominate mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#73583d",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley",
+      "scientificName": "Petroselinum crispum",
+      "priority": 21,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-herbs"
+      ],
+      "spec": {
+        "id": "paired-herb",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 5,
+        "leaves": 20,
+        "widthIn": 14,
+        "heightIn": 24,
+        "spacingIn": 12,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "scientificName": "Coriandrum sativum",
+      "priority": 22,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-herbs"
+      ],
+      "spec": {
+        "id": "paired-herb",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 5,
+        "leaves": 20,
+        "widthIn": 12,
+        "heightIn": 24,
+        "spacingIn": 8,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "rosemary",
+      "name": "Rosemary",
+      "scientificName": "Salvia rosmarinus",
+      "priority": 23,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-herbs"
+      ],
+      "spec": {
+        "id": "paired-herb",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 5,
+        "leaves": 20,
+        "widthIn": 48,
+        "heightIn": 60,
+        "spacingIn": 36,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme",
+      "scientificName": "Thymus vulgaris",
+      "priority": 24,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-herbs"
+      ],
+      "spec": {
+        "id": "paired-herb",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 5,
+        "leaves": 20,
+        "widthIn": 18,
+        "heightIn": 12,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "raspberries",
+      "name": "Raspberries",
+      "scientificName": "Rubus spp. (red/black raspberry cultivars)",
+      "priority": 25,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "rounded-shrub",
+        "form": "woody",
+        "leafShape": "oval",
+        "layers": 4,
+        "leaves": 32,
+        "fruit": true,
+        "widthIn": 48,
+        "heightIn": 84,
+        "spacingIn": 36,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#73583d",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "winter-squash",
+      "name": "Winter Squash",
+      "scientificName": "Cucurbita spp.",
+      "priority": 26,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 180,
+        "heightIn": 24,
+        "spacingIn": 72,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "beets",
+      "name": "Beets",
+      "scientificName": "Beta vulgaris",
+      "priority": 27,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 12,
+        "heightIn": 18,
+        "spacingIn": 4,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "dill",
+      "name": "Dill",
+      "scientificName": "Anethum graveolens",
+      "priority": 28,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-herbs",
+        "umn-dill"
+      ],
+      "spec": {
+        "id": "paired-herb",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 5,
+        "leaves": 20,
+        "widthIn": 18,
+        "heightIn": 60,
+        "spacingIn": 12,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "sage",
+      "name": "Sage",
+      "scientificName": "Salvia officinalis",
+      "priority": 29,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-herbs"
+      ],
+      "spec": {
+        "id": "paired-herb",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 5,
+        "leaves": 20,
+        "widthIn": 30,
+        "heightIn": 30,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "swiss-chard",
+      "name": "Swiss Chard",
+      "scientificName": "Beta vulgaris var. cicla",
+      "priority": 30,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 18,
+        "heightIn": 30,
+        "spacingIn": 12,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "arugula",
+      "name": "Arugula",
+      "scientificName": "Eruca vesicaria",
+      "priority": 31,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 12,
+        "heightIn": 18,
+        "spacingIn": 6,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-peony",
+      "name": "Garden Peony",
+      "scientificName": "Paeonia lactiflora",
+      "priority": 32,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "usda-plants"
+      ],
+      "spec": {
+        "id": "rounded-shrub",
+        "form": "woody",
+        "leafShape": "oval",
+        "layers": 4,
+        "leaves": 32,
+        "fruit": true,
+        "widthIn": 36,
+        "heightIn": 36,
+        "spacingIn": 36,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "layered",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#73583d",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-black-eyed-susan",
+      "name": "Black-eyed Susan",
+      "scientificName": "Rudbeckia hirta",
+      "priority": 33,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "csnap-native-plants"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 24,
+        "heightIn": 36,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "rayed",
+        "colors": {
+          "flower": null,
+          "center": "#483323",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "pears",
+      "name": "Pears",
+      "scientificName": "Pyrus communis (European pear; other Pyrus types also grown)",
+      "priority": 34,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "broadleaf-tree",
+        "form": "woody",
+        "leafShape": "crown",
+        "layers": 4,
+        "leaves": 0,
+        "widthIn": 240,
+        "heightIn": 300,
+        "spacingIn": 240,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Rootstock strongly controls tree size.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#73583d",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "plums",
+      "name": "Plums",
+      "scientificName": "Prunus spp. (European/Japanese plum types)",
+      "priority": 35,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "psu-stonefruit-spacing"
+      ],
+      "spec": {
+        "id": "broadleaf-tree",
+        "form": "woody",
+        "leafShape": "crown",
+        "layers": 4,
+        "leaves": 0,
+        "widthIn": 240,
+        "heightIn": 240,
+        "spacingIn": 264,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#73583d",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "sour-cherries",
+      "name": "Sour Cherries",
+      "scientificName": "Prunus cerasus",
+      "priority": 36,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "psu-stonefruit-spacing"
+      ],
+      "spec": {
+        "id": "broadleaf-tree",
+        "form": "woody",
+        "leafShape": "crown",
+        "layers": 4,
+        "leaves": 0,
+        "widthIn": 180,
+        "heightIn": 180,
+        "spacingIn": 300,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#73583d",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "bok-choy",
+      "name": "Bok Choy",
+      "scientificName": "Brassica rapa subsp. chinensis",
+      "priority": 37,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 14,
+        "heightIn": 18,
+        "spacingIn": 12,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "collards",
+      "name": "Collards",
+      "scientificName": "Brassica oleracea var. viridis",
+      "priority": 38,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 30,
+        "heightIn": 36,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "scientificName": "Brassica rapa subsp. rapa",
+      "priority": 39,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umn-climate-resilience"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 12,
+        "heightIn": 18,
+        "spacingIn": 6,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": null,
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-butterfly-weed",
+      "name": "Butterfly Weed",
+      "scientificName": "Asclepias tuberosa",
+      "priority": 40,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 24,
+        "heightIn": 36,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "cluster",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-bee-balm",
+      "name": "Wild Bergamot",
+      "scientificName": "Monarda fistulosa",
+      "priority": 41,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umass-pollinator-profiles",
+        "csnap-native-plants"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 30,
+        "heightIn": 48,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "cluster",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-blazing-star",
+      "name": "Blazing Star",
+      "scientificName": "Liatris spicata",
+      "priority": 42,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "ncsu-blazing-star"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 24,
+        "heightIn": 72,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "spike",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-red-columbine",
+      "name": "Red Columbine",
+      "scientificName": "Aquilegia canadensis",
+      "priority": 43,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "csnap-native-plants"
+      ],
+      "spec": {
+        "id": "flowering-perennial",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 3,
+        "leaves": 12,
+        "widthIn": 18,
+        "heightIn": 36,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "bell",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Schematic bloom form using the catalog color; cultivar and seasonal appearance may differ"
+      }
+    },
+    {
+      "id": "flower-wild-geranium",
+      "name": "Wild Geranium",
+      "scientificName": "Geranium maculatum",
+      "priority": 44,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "umass-pollinator-profiles",
+        "csnap-native-plants",
+        "ncsu-wild-geranium"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 24,
+        "heightIn": 24,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "radial",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-blue-flag-iris",
+      "name": "Blue Flag Iris",
+      "scientificName": "Iris versicolor",
+      "priority": 45,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "csnap-native-plants",
+        "ncsu-blue-flag"
+      ],
+      "spec": {
+        "id": "flowering-perennial",
+        "form": "herbaceous",
+        "leafShape": "oval",
+        "layers": 3,
+        "leaves": 12,
+        "widthIn": 30,
+        "heightIn": 36,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "iris",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Schematic bloom form using the catalog color; cultivar and seasonal appearance may differ"
+      }
+    },
+    {
+      "id": "flower-cardinal-flower",
+      "name": "Cardinal Flower",
+      "scientificName": "Lobelia cardinalis",
+      "priority": 46,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "csnap-native-plants"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 24,
+        "heightIn": 48,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "spike",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-wild-blue-phlox",
+      "name": "Wild Blue Phlox",
+      "scientificName": "Phlox divaricata",
+      "priority": 47,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "csnap-native-plants"
+      ],
+      "spec": {
+        "id": "low-rosette",
+        "form": "herbaceous",
+        "leafShape": "spoon",
+        "layers": 3,
+        "leaves": 21,
+        "widthIn": 24,
+        "heightIn": 18,
+        "spacingIn": 18,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "radial",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-smooth-aster",
+      "name": "Smooth Aster",
+      "scientificName": "Symphyotrichum laeve",
+      "priority": 48,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "ncsu-smooth-aster"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 48,
+        "heightIn": 48,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "rayed",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-goldenrod",
+      "name": "Wrinkle-leaved Goldenrod",
+      "scientificName": "Solidago rugosa",
+      "priority": 49,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "ncsu-goldenrod"
+      ],
+      "spec": {
+        "id": "fine-tuft",
+        "form": "herbaceous",
+        "leafShape": "frond",
+        "layers": 3,
+        "leaves": 30,
+        "widthIn": 36,
+        "heightIn": 60,
+        "spacingIn": 24,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "spray",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#4b743c",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    },
+    {
+      "id": "flower-virginia-rose",
+      "name": "Virginia Rose",
+      "scientificName": "Rosa virginiana",
+      "priority": 50,
+      "reviewStatus": "user-supplied-reference; horticultural verification pending",
+      "sourceIds": [
+        "source:community-guides",
+        "mdar-pollinator",
+        "ncsu-virginia-rose"
+      ],
+      "spec": {
+        "id": "rounded-shrub",
+        "form": "woody",
+        "leafShape": "oval",
+        "layers": 4,
+        "leaves": 32,
+        "fruit": true,
+        "widthIn": 72,
+        "heightIn": 72,
+        "spacingIn": 60,
+        "dimensionBasis": "Supplied general planning ranges; upper bounds used for display. Generalized planning range; cultivar and management can materially change mature dimensions.",
+        "flowerForm": "radial",
+        "colors": {
+          "flower": null,
+          "center": "#d4ae45",
+          "foliage": "#598653",
+          "stem": "#73583d",
+          "fruit": "#bf493c"
+        },
+        "description": "Illustrative plant form at mature planning dimensions"
+      }
+    }
+  ]
+}
