@@ -8,6 +8,8 @@ guide=guide.replace(/<figure>\s*([\s\S]*?)\s*<figcaption>([\s\S]*?)<\/figcaption
  const src=image.match(/src="([^"]+)"/)[1],alt=image.match(/alt="([^"]+)"/)[1];
  return `![${alt}](${src})\n\n*${caption}*`;
 });
+// Observable splits the digit boundary; GitHub's heading slug does not.
+guide=guide.replaceAll('](#explore-in-3-d)', '](#explore-in-3d)');
 guide=guide.replace('<small>Screenshots:','Screenshots:').replace('</small>','');
 guide=guide.replace('# Your garden, from first plan to next season','# Explore veggie.farm: a visual walkthrough\n\n[Project overview](../../README.md) · [Open the interactive guide](https://veggie.farm/guide) · [50 procedural plant shapes](../architecture/common-plant-shapes.md)');
 guide+='\n\nFor contributors: [capture method and theme support](captures.md).\n';

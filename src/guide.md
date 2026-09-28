@@ -17,7 +17,7 @@ This guide shows real sections of veggie.farm, using a **sample kitchen garden**
 | --- | --- |
 | Make your first plan | [Start with a bed](#start-with-a-bed) |
 | Choose and arrange plants | [Give each plant space](#give-each-plant-space) |
-| See the garden from another angle | [Explore in 3D](#explore-in-3d) |
+| See the garden from another angle | [Explore in 3D](#explore-in-3-d) |
 | Plan successive crops | [Plan through the season](#plan-through-the-season) |
 | Record a harvest or observation | [Keep the garden's history](#keep-the-gardens-history) |
 | Keep a copy or move to another device | [Save and back up](#save-and-back-up) |
