@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-09-28T09:14:34.793910+00:00",
+  "authenticated": false,
+  "checks": [
+    {
+      "url": "https://studio.veggie.farm/",
+      "userAgent": "browser",
+      "status": 200,
+      "finalUrl": "https://studio.veggie.farm/",
+      "bytes": 27734,
+      "sha256": "fb09ed94b1542d622a90462f0d33a97bd9874e93b09809b7b053a16b8b2bcb90"
+    },
+    {
+      "url": "https://studio.veggie.farm/",
+      "userAgent": "crawler",
+      "status": 200,
+      "finalUrl": "https://studio.veggie.farm/",
+      "bytes": 27734,
+      "sha256": "fb09ed94b1542d622a90462f0d33a97bd9874e93b09809b7b053a16b8b2bcb90"
+    },
+    {
+      "url": "https://d3db2n9ly8ygq2.cloudfront.net/studio.html",
+      "userAgent": "browser",
+      "status": 200,
+      "finalUrl": "https://d3db2n9ly8ygq2.cloudfront.net/studio.html",
+      "bytes": 27734,
+      "sha256": "fb09ed94b1542d622a90462f0d33a97bd9874e93b09809b7b053a16b8b2bcb90"
+    },
+    {
+      "url": "https://d3db2n9ly8ygq2.cloudfront.net/studio.html",
+      "userAgent": "crawler",
+      "status": 200,
+      "finalUrl": "https://d3db2n9ly8ygq2.cloudfront.net/studio.html",
+      "bytes": 27734,
+      "sha256": "fb09ed94b1542d622a90462f0d33a97bd9874e93b09809b7b053a16b8b2bcb90"
+    }
+  ],
+  "limits": "Anonymous HTTP reachability only; no new interactive acceptance, no AWS private scorer impersonation, no account writes or invalidations."
+}

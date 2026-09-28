@@ -16,3 +16,7 @@ S3 website hosting is already enabled. Its raw HTTP endpoint, http://veggie.farm
 The existing production origin is an S3 website endpoint. The community's [private S3/OAC deployment template](../../examples/aws/DEPLOYMENT.md) is an alternative hosting configuration, not a literal description of the current production origin. This verification did not alter bucket permissions, account-service authentication or DNS.
 
 Different hostnames have separate browser storage. Use the primary Studio hostname for normal work; exported JSON backups can transfer a local sample. Cloud login on the alternate AWS hostname was not tested or enabled for this check.
+
+## September 28 reachability recheck
+
+[Four anonymous HTTP checks](judging-access-2026-09-28.json) returned HTML with status 200 for the primary Studio URL and direct CloudFront fallback using browser and GPTBot user-agent strings. This is a later reachability observation, not a rerun of the September 26 interactive journey or verification of AWS’s private scoring system. No deployment or invalidation was performed.

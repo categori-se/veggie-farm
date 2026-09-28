@@ -1,5 +1,7 @@
 # veggie.farm — a garden to return to
 
+[![Community checks on main](https://github.com/categori-se/veggie-farm/actions/workflows/community.yml/badge.svg?branch=main)](https://github.com/categori-se/veggie-farm/actions/workflows/community.yml?query=branch%3Amain)
+
 veggie.farm connects plant knowledge to a garden you can design, tend and remember. Explore gardening guides and seasonal tools, then use Garden Planning Studio to arrange beds and plants in synchronized 2D/3D views and keep plans and observations over time. It is open source, running on AWS, and initially focused on Massachusetts gardeners.
 
 **[Try Garden Planning Studio](https://studio.veggie.farm)** · **[Explore veggie.farm](https://veggie.farm/)** · **[View the visual walkthrough](docs/user-guide/README.md)** · **[Browse source](https://github.com/categori-se/veggie-farm)** · **[Build / AWS evidence](#aws-and-coding-agent-evidence)**
@@ -22,7 +24,9 @@ I started with a problem I experience in my own garden: useful information about
 
 **The hackathon gave me the push to turn something I had imagined into something people can actually use.** The [personal story](src/about/index.md) explains the motivation; the dated delivery records below document the build and public application.
 
-## Try it in two minutes
+## Try a small garden
+
+**Primary demo:** [studio.veggie.farm](https://studio.veggie.farm/) · **No login:** Start with a 4 × 8 bed · **Fallback and access evidence:** [judging access](docs/evidence/judging-access.md).
 
 1. Open Studio and choose **Start with a 4 × 8 bed**. No account or home address is required.
 2. Name or resize the bed, choose plants and inspect their spacing and dimensions.
@@ -75,11 +79,13 @@ The documented inspirations include Dan Bridges, Christoph Pahmeyer, Claudio Esp
 
 Verification follows a garden through editing, save/reload and export/reimport. Automated behavior tests, plant/source validation, citation checks and public-source privacy checks complement real-browser acceptance. [Dated hosted checks](docs/evidence/hosted-browser.json) exercise a synthetic garden on desktop and mobile; the [GitHub CI record](docs/evidence/github-verification.json) identifies the published source snapshot it verified.
 
-The September 28 source candidate passed 443 application tests, seven notice tests and the community verification gate locally. Hosted guide checks verified seven screenshot pairs at desktop and mobile widths in both themes. These results and their scope are recorded in the deployment update below; local source verification and hosted acceptance remain separately identified.
+[CI on the September 28 main merge commit](https://github.com/categori-se/veggie-farm/actions/runs/36397381023) passed 443 application tests, seven notice tests, data validation and the build. The [exact-commit record](docs/evidence/main-ci-2026-09-28.json) identifies what ran; the badge above follows the latest main workflow. Hosted guide checks verified seven screenshot pairs at desktop and mobile widths in both themes. These results and their scope are recorded in the deployment update below; local source verification and hosted acceptance remain separately identified.
 
 ## AWS and coding-agent evidence
 
 S3 and CloudFront deliver the public application. Optional account services use Cognito, API Gateway and Lambda with private S3 records and server-side ownership/revision checks. Codex assisted implementation, diagnosis, testing and deployment verification; I directed the work, reviewed results and authorized publication.
+
+The [project timeline](docs/evidence/project-timeline.md) separates the owner’s origin account, earlier inputs and dated publication evidence.
 
 The [build evidence pack](docs/evidence/README.md) brings together the September 22 restricted agent-controlled AWS console inspection, the September 25 authenticated official AWS MCP Proxy/managed MCP Server stack read, development records and dated CI/browser observations. The [September 28 deployment update](docs/evidence/deployment-update-2026-09-28.md) documents continued agent-driven AWS SDK delivery, conditional S3 writes, completed CloudFront invalidation and hosted hash/browser verification. Authentic console and interface screenshots are hosted separately.
 
@@ -110,7 +116,7 @@ Observable Framework builds the resource site and Studio; the browser owns edita
 
 ### What I’m learning next
 
-The next step is to observe gardeners completing the small-bed journey: choose, edit, save, reload and recover a backup. Their experience should guide editor refinements and clearer explanations of plant evidence. See [data review status and coverage](docs/architecture/reusable-plant-data.md) for what has been checked and what remains uncertain.
+The next step is to observe gardeners completing the small-bed journey: choose, edit, save, reload and recover a backup. The [prepared usability exercise](docs/evidence/gardener-usability.md) defines observable steps, assistance and recovery outcomes; no participant results are claimed. Their experience should guide editor refinements and clearer explanations of plant evidence. See [data review status and coverage](docs/architecture/reusable-plant-data.md) for what has been checked and what remains uncertain.
 
 ### Run locally
 

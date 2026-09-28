@@ -6,6 +6,10 @@ This pack documents how veggie.farm and Garden Planning Studio were developed an
 
 [Read the dated deployment update](deployment-update-2026-09-28.md) for agent-driven AWS SDK publication, conditional writes, completed CDN invalidation, hosted screenshot/page hash checks and four themed browser checks. The [structured record](deployment-update-2026-09-28.json) preserves source hashes and distinguishes this delivery work from the earlier console and MCP connections. The original manifest describes its historical snapshot, not later index edits or additions.
 
+## Current source and chronology
+
+[Exact-main CI record](main-ci-2026-09-28.json) · [Project timeline](project-timeline.md) · [Prepared gardener usability exercise](gardener-usability.md). The September 28 merge commit has a successful push-triggered CI run; no human usability results are claimed.
+
 ## Visible console proof
 
 ![Actual redacted AWS console capture from the Codex-controlled browser, September 22](https://veggie.farm/evidence/aws-console-connection.png)

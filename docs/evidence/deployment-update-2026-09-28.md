@@ -31,3 +31,7 @@ The live guide and screenshots were published. The corresponding source branch a
 The [machine-readable update](deployment-update-2026-09-28.json) records the final page hashes, hosted checks, and SHA-256 references to retained deployment scripts, manifests and receipts. Public connection records and screenshot evidence are linked and hashed separately. Private records retain operational identifiers and rollback details; the public summary excludes account identifiers, credentials, local paths and private user data. Their hashes identify bytes, not independent verification or a full agent transcript.
 
 This is a retrospective summary of retained observations, not a new deployment or a reconstructed conversation. The original [evidence manifest](manifest.json) remains a historical snapshot; it is not a current checksum list for this updated index and subsequent additions.
+
+## Subsequent publication — September 28, 2026
+
+The source and documentation described above were subsequently pushed and merged to main in [PR #16](https://github.com/categori-se/veggie-farm/pull/16) at 08:26:31 UTC, merge commit `5a5b4c793c6e36624e5423c993c2f7122f483f3f`. [CI for that exact main commit](https://github.com/categori-se/veggie-farm/actions/runs/36397381023) then passed. The preceding publication-state paragraph and JSON record retain the earlier observation; this addendum records the later event without rewriting those historical bytes.
