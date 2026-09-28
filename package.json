@@ -22,10 +22,12 @@
     "verify:community": "npm run check:public && npm run check:public-git && npm test && npm run test:notices && npm run validate:data && npm run validate:plants && npm run validate:source-notices && npm run build",
     "validate:source-notices": "npm run check:dependency-notices && node scripts/build-dependency-notices.mjs --check --require-complete && node scripts/check-source-notice-scope.mjs",
     "setup:deploy": "node scripts/setup-deployment.mjs",
-    "build:common-plants": "node scripts/build-common-plants.mjs",
+    "build:common-plants": "node scripts/build-common-plants.mjs && node scripts/build-common-plant-shapes.mjs",
     "validate:common-plants": "node scripts/build-common-plants.mjs --check",
     "build:open-plants": "node scripts/build-open-plants.mjs",
-    "validate:open-plants": "node scripts/build-open-plants.mjs --check"
+    "validate:open-plants": "node scripts/build-open-plants.mjs --check",
+    "build:plant-shapes": "node scripts/build-common-plant-shapes.mjs",
+    "validate:plant-shapes": "node scripts/build-common-plant-shapes.mjs --check"
   },
   "dependencies": {
     "d3": "^7.9.0",

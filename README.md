@@ -6,7 +6,36 @@ A data-driven gardening resource and Garden Planning Studio for Massachusetts ga
 
 Both the resource site (`/`) and Studio (`/studio`) are open-source applications. Local gardens and notebook records require no account. They stay in your browser until you explicitly export them; keep backups before clearing browser data. Public-garden reconstructions are incomplete examples, not surveyed plans or verified planting inventories. Recommendations retain horticultural uncertainty.
 
-[Visual user guide](https://veggie.farm/guide) · [Guide source](src/guide.md)
+The aim is to make gardening information enjoyable to explore: start with a few
+plants, try an arrangement, look around, and follow your curiosity. You can
+[walk through the interface here on GitHub](docs/user-guide/README.md) before
+opening the app. The guide follows a sample bed from plant choice to 3D,
+seasonal planning, observations and a backup.
+
+<a href="docs/user-guide/README.md#explore-in-3d">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://veggie.farm/media/user-guide/20260927-themes/04-bed-in-3d-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://veggie.farm/media/user-guide/20260927-themes/04-bed-in-3d-light.png">
+  <img src="https://veggie.farm/media/user-guide/20260927-themes/04-bed-in-3d-light.png" alt="A sample bed with three plants shown in Studio’s 3D view" width="960" loading="lazy" style="max-width:100%;height:auto" />
+</picture>
+</a>
+
+*An illustrative garden you can explore. [See the complete visual walkthrough](docs/user-guide/README.md).*
+
+The repository includes [curated, source-linked horticultural evidence](src/data/horticultural-evidence.json)
+and its validation tools, alongside separately labeled planning profiles and
+archived open plant records. That vetted source-and-structure work does not mean
+every imported plant value has been independently checked; [review status and
+coverage](docs/architecture/reusable-plant-data.md) travel with the data.
+
+To make the visual code easy to try, we also provide a [starter collection of 50
+common-garden plant shapes](docs/architecture/common-plant-shapes.md). These are
+50 plant profiles with dimensions and procedural visual specifications, using
+shared shape families. Their order follows the project's garden-priority list,
+not measured popularity. The source and shape definitions are included; photos,
+screenshots and optional licensed GLB files remain separately hosted media.
+
+
 
 ## Learn how this was built
 
@@ -37,7 +66,7 @@ npm run build:dependency-notices
 npm run dev
 ```
 
-Open the preview URL printed by Observable, then `/studio` for the planner. Try the [bounded account sandbox](/demo), start a practice garden or import `data/demo/community-garden.json` with Studio's backup import control. The fixture is synthetic, uses local inch coordinates and contains no address, parcel ID or geographic location.
+Open the preview URL printed by Observable, then `/studio` for the planner. Try the [bounded account sandbox](src/demo.md), start a practice garden or import `data/demo/community-garden.json` with Studio's backup import control. The fixture is synthetic, uses local inch coordinates and contains no address, parcel ID or geographic location.
 
 ```sh
 npm test
@@ -54,6 +83,8 @@ Build output is `dist/`. The public build uses only bundled community inputs; no
 | --- | --- |
 | `src/content`, `src/tools`, `src/plants` | Articles, seasonal/decision tools and plant discovery |
 | `src/components`, `src/styles` | Shared UI and Studio rendering |
+| `src/lib/plants` | **Procedural 2D/3D plant visualization, archetypes and geometry generation** |
+| `src/data/api/v1/collections/models` | **Metadata catalog for optional licensed 3D plant models** |
 | `src/lib/garden`, `src/lib/spatial` | Garden state, persistence, geometry and interchange |
 | `src/lib/environment`, `src/lib/recommendations` | Environmental observations and evidence-based rules |
 | `src/lib/account` | Optional public clients and deployment-selected persistence |

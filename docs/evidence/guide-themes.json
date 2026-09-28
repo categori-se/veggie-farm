@@ -1,0 +1,114 @@
+{
+  "publishedDate": "2026-09-28",
+  "guideUrl": "https://veggie.farm/guide",
+  "scope": "Seven first-party interface captures in light and dark themes, using a fresh browser-local synthetic garden. No account writes or private user information.",
+  "mediaFiles": [
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/01-start-a-bed-dark.png",
+      "bytes": 20359,
+      "sha256": "8e7a08099342ee77ee027b34c073c062e22a0b8f938204f0c57bc62ecf06b13d"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/01-start-a-bed-light.png",
+      "bytes": 20187,
+      "sha256": "7628971ce7f9ff556a6502e691bbfbf6f896f85617b0a35fe6455a8799fdf2ce"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/02-choose-plants-dark.png",
+      "bytes": 61322,
+      "sha256": "9dc2032a74e267e51c7244d3a4e751fff6565ed295c306f58f067a00e79636b0"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/02-choose-plants-light.png",
+      "bytes": 61109,
+      "sha256": "6493c9289f3dfd80741535368324d59dfa58d00b5b6bcb31d9a0a4fe45e041aa"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/03-plant-inspector-dark.png",
+      "bytes": 47432,
+      "sha256": "2860546d326847da3c958be2d7f917e6e0dd1955edbe8e26f0fd0e381c8c533b"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/03-plant-inspector-light.png",
+      "bytes": 47014,
+      "sha256": "cd00ddd65460e11da20fa75b9f65274c63b69ca8eebc99df2e9a6ec4466c6e76"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/04-bed-in-3d-dark.png",
+      "bytes": 95076,
+      "sha256": "708eeb90560bbfe1f5c613471bb617f7a84892d5e06b405c36fe487bc18a0292"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/04-bed-in-3d-light.png",
+      "bytes": 97455,
+      "sha256": "64432fda9826573bec182908785254520d7ef44a07ed6a20810e592abf069832"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/05-plan-the-season-dark.png",
+      "bytes": 41523,
+      "sha256": "4cb5c1d58e236aed485ec8c8c69a2e4c9b905753a64224c1ba50dd9f3823a23d"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/05-plan-the-season-light.png",
+      "bytes": 40745,
+      "sha256": "4456e644c660eb117aad260b3e82acff74f31d929c21c0f7d27000837fe275ec"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/06-garden-history-dark.png",
+      "bytes": 73023,
+      "sha256": "4ef4457133807ae45fc40a856925ba0fdee9f64b657a6edc969022412472dd80"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/06-garden-history-light.png",
+      "bytes": 72350,
+      "sha256": "56a368cf942022137ff37db7c87e5fbd557c280897a43d0f7a25cbc2019b44ea"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/07-save-and-back-up-dark.png",
+      "bytes": 16360,
+      "sha256": "d2676ba877dd49413d0e928a67b9dfc866ac09d343673f22eba4f7bf9b51b40a"
+    },
+    {
+      "url": "https://veggie.farm/media/user-guide/20260927-themes/07-save-and-back-up-light.png",
+      "bytes": 16007,
+      "sha256": "3e53dd42df1944b8ffc15abd4d92585e439d7e2018483e521125b5b98d4392bc"
+    }
+  ],
+  "hostedChecks": [
+    {
+      "width": 1280,
+      "theme": "light",
+      "images": 7,
+      "decoded": true,
+      "themeSelected": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "images": 7,
+      "decoded": true,
+      "themeSelected": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "images": 7,
+      "decoded": true,
+      "themeSelected": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "images": 7,
+      "decoded": true,
+      "themeSelected": true,
+      "noOverflow": true
+    }
+  ],
+  "pageErrors": [],
+  "sourceOnly": true,
+  "notes": "Screenshot bytes are hosted separately. GitHub markup uses picture sources; hosted browser verification is for the application guide, not GitHub rendering."
+}

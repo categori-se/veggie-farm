@@ -53,5 +53,6 @@ await write('src/data/gardening-library.json',guides);
 console.log(`Community data: ${plants.length} plants, ${guides.length} guides; no private catalog input.`);
 
 await import('./build-common-plants.mjs');
+await import('./build-common-plant-shapes.mjs');
 
 await import('./build-open-plants.mjs');
