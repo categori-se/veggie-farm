@@ -22,7 +22,7 @@ This guide shows real sections of veggie.farm, using a **sample kitchen garden**
 
 ## Start with a bed
 
-In Studio, choose **Start with a 4 × 8 bed**. Give the garden a name and adjust the width and depth to your available space. Choose **Create bed and choose plants** to continue. You can begin without a map or an account.
+In Studio, open the **•••** garden menu beside **Save** and choose **Start with a 4 × 8 bed**. The current release opens a public-garden example first; the screenshots below show the earlier entry layout. Give the garden a name and adjust the width and depth to your available space. Choose **Create bed and choose plants** to continue. You can begin without a map or an account.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://veggie.farm/media/user-guide/20260927-themes/01-start-a-bed-dark.png">

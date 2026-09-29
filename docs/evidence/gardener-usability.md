@@ -1,6 +1,8 @@
 # Small-garden usability exercise
 
-**Status: prepared protocol; no participant sessions or results recorded.** This is separate from automated tests and synthetic browser acceptance. The aim is to learn whether gardeners unfamiliar with Studio can create and recover a useful plan.
+**Status: prepared protocol for structured follow-up.** The owner confirms that development included user run-throughs and feedback, synthesized into personas that guided refinements (September 29). This protocol builds on that participation; it is not a claim that the app has had no user testing. No sessions or quantitative results under this specific protocol are recorded here. Automated tests and synthetic browser acceptance provide separate technical evidence.
+
+The aim is to learn more about how gardeners unfamiliar with Studio create and recover a useful plan.
 
 ## Run a session
 
@@ -25,4 +27,4 @@ Keep raw observations outside Git. Suggested fields: anonymous session ID, date,
 
 Report participant count, completed/attempted tasks, unassisted completions, assisted completions, incomplete sessions and unavailable steps. State the denominator and timing basis; report median completion time only for clearly identified completed sessions. Summarize recurring friction with counts, and link any resulting changes to their verification. Do not turn this small convenience sample into claims about all gardeners, adoption, yields or environmental outcomes.
 
-Publish a short aggregate report only after sessions occur and any quoted feedback has consent. Until then, the repository's impact claims describe available functionality and reusable materials, not demonstrated gardener outcomes.
+Publish a short aggregate report only after sessions occur and any quoted feedback has consent. Development feedback can be described as such; task-success rates and measured gardener outcomes require their own recorded results.
