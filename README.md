@@ -20,7 +20,7 @@ veggie.farm connects plant knowledge to a garden you can design, tend and rememb
 
 veggie.farm is one of several project concepts I have carried in my head for years. I had registered the domain and imagined what it might become, but it had never turned into a real application. Discovering AWS Zero to Shipped on September 21, 2026 gave me the catalyst to finally build it.
 
-I started with a problem I experience in my own garden: useful information about plants, soil, weather and sunlight is scattered across resources. After researching, I still want to know what fits in my space, what it might look like, what happened last year and what I should change next season. During the challenge, that concept became an integrated gardening resource and editable garden plan, drawing on my experience with data, mapping, visualization and web applications.
+I love gardening, but over the years I have relied on more trial and error than I would like. Looking online for help often means working through pages crowded with ads and trying to distinguish general advice from information backed by data and research. I built veggie.farm for more immediate access to source-linked plant information, a place to explore how it applies to my own garden, and records that help me track what happens over time. During the challenge, that idea became an integrated gardening resource and editable garden plan, drawing on open-source software and my experience with data, mapping and visualization.
 
 **The hackathon gave me the push to turn something I had imagined into something people can actually use.** The [personal story](src/about/index.md) explains the motivation; the dated delivery records below document the build and public application.
 
@@ -28,7 +28,7 @@ I started with a problem I experience in my own garden: useful information about
 
 **Primary demo:** [studio.veggie.farm](https://studio.veggie.farm/) · **No login:** Start with a 4 × 8 bed · **Fallback and access evidence:** [judging access](docs/evidence/judging-access.md).
 
-1. Open Studio and choose **Start with a 4 × 8 bed**. No account or home address is required.
+1. Open Studio, open the **•••** garden menu beside **Save**, and choose **Start with a 4 × 8 bed**. No account or home address is required.
 2. Name or resize the bed, choose plants and inspect their spacing and dimensions.
 3. Compare the same garden in 2D and 3D.
 4. Change the date to explore the seasonal preview.
@@ -40,9 +40,9 @@ The [visual guide](docs/user-guide/README.md) follows the journey with light and
 
 **One garden record, many views.** Beds, plant identities, positions, dimensions and dates belong to a shared garden model. A tomato's plant record supplies its planning dimensions; placing it adds a bed, position and rotation. Those records drive its 2D footprint, 3D representation, date preview, geographic placement and persistence. Editing and restoring the garden preserve the relationships between those views.
 
-> **Procedural 3D plant library** — Studio generates dimensionally scaled 3D representations of crops, flowers, shrubs and trees directly from plant records, with deterministic plant archetypes, growth-stage scaling and procedural fallbacks. An optional model catalog supports separately hosted licensed GLB assets. See [src/lib/plants/](src/lib/plants/), [tests/plantVisuals.test.mjs](tests/plantVisuals.test.mjs), and [the model catalog](src/data/api/v1/collections/models/items.json).
+> **Procedural 3D plant library** — Studio generates dimensionally scaled 3D representations of crops, flowers, shrubs and trees directly from plant records, with deterministic plant archetypes, gardener-authored size scenarios and procedural fallbacks. An optional model catalog supports separately hosted licensed GLB assets. See [src/lib/plants/](src/lib/plants/), [tests/plantVisuals.test.mjs](tests/plantVisuals.test.mjs), and [the model catalog](src/data/api/v1/collections/models/items.json).
 
-The [starter collection of 50 common-garden plant profiles](docs/architecture/common-plant-shapes.md) makes this concrete: plant-specific dimensions and visual specifications use seven shared procedural families. Planning scale comes from the records. These are schematic representations, with reusable source definitions; photographs and optional licensed models remain separately hosted.
+The [starter collection of 50 common-garden plant profiles](docs/architecture/common-plant-shapes.md) makes this concrete: plant-specific dimensions and visual specifications use seven shared procedural families. Planning scale comes from the records. Optional size scenarios interpolate between gardener-specified dates and sizes; a planting date alone does not predict growth. These are schematic representations, with reusable source definitions; photographs and optional licensed models remain separately hosted.
 
 The contribution is the integrated application: plant information becomes planning geometry with an identity and history that can be inspected across views. Existing libraries, public datasets and visualization research provide the foundations.
 
@@ -68,6 +68,8 @@ MassGIS provides Massachusetts geographic context for locating a garden within i
 Massachusetts and New England home gardeners are the first community I am building for. A no-account practice garden lets someone explore without sharing an address; browser-local plans and portable JSON backups let them keep their work. The resource pages and spatial tools bring public plant, weather and geographic information closer to the scale of a bed and a season.
 
 Other builders can inspect and extend the open-source core, source-linked data, procedural plant structures and tests. The [builder walkthrough](https://github.com/categori-se/veggie-farm/blob/main/docs/building/README.md) follows the integration through a runnable example. Massachusetts is the starting geography; adapting the system elsewhere requires appropriate local data and horticultural review.
+
+I want to raise awareness of what open-source software makes possible and welcome people with limited coding experience into the developer community. veggie.farm is a fun invitation to experiment: connect an AI agent to AWS, find and visualize data around something you care about, and adapt a version for your own records and work. The open source, builder walkthrough and [agent connection guide](docs/architecture/codex-aws.md) provide a starting point. You can learn as you build, review access and costs, test changes and share what you learn. That is the spirit in which I want to encourage people to “vibe code” their ideas to life.
 
 ### Built with a generous community
 
@@ -109,14 +111,14 @@ Observable Framework builds the resource site and Studio; the browser owns edita
 | --- | --- |
 | Gardening resource and Studio | Live plant guides, seasonal tools, bed/plant editing, 2D/3D and geographic context. Public-garden examples remain incomplete studies. |
 | Persistence | Browser save/reload, JSON backups, optional account copies and reviewed shared collections. Notebook observations remain private; browser storage can be cleared. |
-| Plants and environment | Source and structure validation does not establish every imported value. Procedural forms and growth-stage scaling are planning representations, not biological simulations. Forecasts and modeled sunlight do not measure soil or establish surveyed geometry. |
+| Plants and environment | Source and structure validation does not establish every imported value. Procedural forms and authored size scenarios are planning representations, not biological simulations. Forecasts and modeled sunlight do not measure soil or establish surveyed geometry. |
 | Evidence integration | Source-linked guidance is implemented. The Trefle adapter is tested offline; live enrichment, automatic taxonomy reconciliation and conflict resolution remain pending. |
 | Release checks | Local source candidates and deployed changes have separate dated records. The September 28 candidate retained five existing unrelated link warnings and two documented tooling-only notice gaps. |
-| Outcomes | Independent gardener usability, adoption, yield improvements and environmental outcomes have not been established. |
+| Outcomes | Development included user run-throughs and feedback, synthesized into personas. Measured usability rates, adoption, yield improvements and environmental outcomes have not been established. |
 
 ### What I’m learning next
 
-The next step is to observe gardeners completing the small-bed journey: choose, edit, save, reload and recover a backup. The [prepared usability exercise](docs/evidence/gardener-usability.md) defines observable steps, assistance and recovery outcomes; no participant results are claimed. Their experience should guide editor refinements and clearer explanations of plant evidence. See [data review status and coverage](docs/architecture/reusable-plant-data.md) for what has been checked and what remains uncertain.
+User run-throughs and feedback during development helped shape the personas used to refine the app. I want more people to try it with their own gardening questions, suggest features and help guide the next changes. The [prepared usability exercise](docs/evidence/gardener-usability.md) offers a structured way to extend that feedback through the choose, edit, save, reload and backup-recovery journey. See [data review status and coverage](docs/architecture/reusable-plant-data.md) for what has been checked and what remains uncertain.
 
 ### Run locally
 

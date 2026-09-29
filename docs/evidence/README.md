@@ -42,3 +42,7 @@ The [capture script](../../scripts/check-hosted-evidence.mjs) uses disposable br
 To inspect source verification, open the linked GitHub run or clone its exact commit, install the locked dependencies, and run `npm run verify:community`. The approved source-only distribution documents two build-tool notice gaps; it does not redistribute those tools. This pack makes no claim of AWS organizer acceptance, human usability feedback or measured gardening outcomes.
 
 [Judging access and direct AWS hosting URL](judging-access.md) records the September 26 anonymous access checks and crawler policy.
+
+## Current narrative draft
+
+The [September 29 Builder replacement draft](builder-submission-draft.md) connects the owner’s gardening motivation, shared garden model, development feedback and invitation to build with open source and AI agents. It remains draft copy until separately published to Builder Center.
