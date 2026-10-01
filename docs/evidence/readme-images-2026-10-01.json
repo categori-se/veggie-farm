@@ -1,0 +1,35 @@
+{
+  "source": "Owner-supplied screenshots; filenames dated September 30, 2026. Capture time not independently verified.",
+  "scope": "Berkshire Botanical Garden public example, an incomplete illustrative reconstruction. Original PNG bytes, no image edits.",
+  "images": [
+    {
+      "url": "https://veggie.farm/media/readme/20261001/01-garden-walk.png",
+      "bytes": 403596,
+      "sha256": "db4062e3c5df6daee2f26c6e88d3a0bb9183aa9d6e8822b3e7ecfde1886b6aeb"
+    },
+    {
+      "url": "https://veggie.farm/media/readme/20261001/02-plant-2d-3d.png",
+      "bytes": 233715,
+      "sha256": "13b61272aea22bab9b4f680bc931b5024959ebbc5032005880f25b819c908e6a"
+    }
+  ],
+  "publication": {
+    "publishedAt": "2026-10-01T10:58:49.950500+00:00",
+    "written": [
+      {
+        "url": "https://veggie.farm/media/readme/20261001/01-garden-walk.png",
+        "sha256": "db4062e3c5df6daee2f26c6e88d3a0bb9183aa9d6e8822b3e7ecfde1886b6aeb"
+      },
+      {
+        "url": "https://veggie.farm/media/readme/20261001/02-plant-2d-3d.png",
+        "sha256": "13b61272aea22bab9b4f680bc931b5024959ebbc5032005880f25b819c908e6a"
+      }
+    ],
+    "verified": [
+      "https://veggie.farm/media/readme/20261001/01-garden-walk.png",
+      "https://veggie.farm/media/readme/20261001/02-plant-2d-3d.png"
+    ],
+    "deletions": 0,
+    "invalidations": 0
+  }
+}
