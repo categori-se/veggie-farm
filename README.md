@@ -4,7 +4,7 @@
 
 veggie.farm connects plant knowledge to a garden you can design, tend and remember. Explore gardening guides and seasonal tools, then use Garden Planning Studio to arrange beds and plants in synchronized 2D/3D views and keep plans and observations over time. It is open source, running on AWS, and initially focused on Massachusetts gardeners.
 
-**[Try Garden Planning Studio](https://studio.veggie.farm)** · **[Explore veggie.farm](https://veggie.farm/)** · **[View the visual walkthrough](docs/user-guide/README.md)** · **[Browse source](https://github.com/categori-se/veggie-farm)** · **[Build / AWS evidence](#aws-and-coding-agent-evidence)**
+**[Try Garden Planning Studio](https://studio.veggie.farm)** · **[Explore veggie.farm](https://veggie.farm/)** · **[View the visual walkthrough](docs/user-guide/README.md)** · **[Builder image kit](docs/evidence/builder-images-2026-09-30.md)** · **[Browse source](https://github.com/categori-se/veggie-farm)** · **[Build / AWS evidence](#aws-and-coding-agent-evidence)**
 
 **One garden record, many views:** plant data supplies the dimensions and identity shared by the plan, procedural 3D scene, seasonal preview and saved garden. Start with a few plants, try an arrangement and follow your curiosity.
 
