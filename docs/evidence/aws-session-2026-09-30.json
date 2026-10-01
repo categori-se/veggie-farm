@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-09-30",
+  "dateTimezone": "America/New_York",
+  "kind": "Fresh same-session read-only AWS MCP inspection and public HTTPS check",
+  "agent": "Codex",
+  "source": {
+    "repository": "https://github.com/categori-se/veggie-farm",
+    "baseCommit": "0c5177f9fc08823f9fa9d8ca7c0bd3123561b02b",
+    "baseRef": "public main fetched in this session",
+    "evidenceBranch": "docs/aws-evidence-20260930",
+    "baseWorktreeClean": true,
+    "originalWorkspaceHead": null,
+    "originalWorkspaceState": "Unborn HEAD with existing staged and untracked work; no commit exists.",
+    "existingCommunityCheckoutHead": "0bdd0b832f83d17c2f48304a31d85792d5d8490e",
+    "existingCommunityCheckoutDirty": true,
+    "hostedContentCommitVerified": false
+  },
+  "tools": {
+    "git": "2.55.0",
+    "node": "24.18.0",
+    "npm": "11.16.0",
+    "python": "3.14.6",
+    "curl": "8.15.0",
+    "curlTlsBackend": "OpenSSL/3.5.7",
+    "codexCli": "0.154.0",
+    "awsPluginPackage": "1.0.0",
+    "awsMcpTool": "mcp__codex_apps__aws_core_aws___run_script",
+    "awsMcpServerVersion": null,
+    "awsMcpServerVersionNote": "Not exposed by the connected tool; no historical proxy version reused."
+  },
+  "aws": {
+    "connection": "Existing native AWS Core MCP connector in this Codex session",
+    "authentication": "Two authentication-required responses preceded the successful tool call; no credentials retained.",
+    "status": "success",
+    "observedAt": "2026-10-01T01:40:24.339314+00:00",
+    "stack": {
+      "status": "UPDATE_COMPLETE",
+      "createdAt": "2026-09-22T21:38:28.888000+00:00",
+      "lastUpdatedAt": "2026-09-25T11:37:51.154000+00:00"
+    },
+    "cloudFront": {
+      "status": "Deployed",
+      "enabled": true,
+      "lastModifiedAt": "2026-09-24T23:46:31.823000+00:00",
+      "studioAliasMatched": true
+    },
+    "apiCalls": [
+      {
+        "service": "cloudformation",
+        "operation": "DescribeStacks",
+        "status": "success",
+        "n_items": {
+          "Stacks": 1
+        }
+      },
+      {
+        "service": "cloudfront",
+        "operation": "ListDistributions",
+        "status": "success"
+      },
+      {
+        "service": "cloudfront",
+        "operation": "GetDistribution",
+        "status": "success"
+      }
+    ],
+    "resourceWrites": 0,
+    "cloudFrontInvalidations": 0
+  },
+  "publicStudio": {
+    "requestedUrl": "https://studio.veggie.farm/",
+    "method": "GET",
+    "client": "curl",
+    "checkedByUtc": "2026-10-01T01:41:11Z",
+    "timestampMeaning": "Local timestamp recorded immediately after the successful request and source worktree preparation.",
+    "httpStatus": 200,
+    "effectiveUrl": "https://studio.veggie.farm/",
+    "redirectCount": 0,
+    "contentType": "text/html; charset=utf-8",
+    "downloadBytes": 43267,
+    "tlsVerifyResult": 0,
+    "title": "Garden Studio | veggie.farm",
+    "bodySha256": "84d96adaacbc6f496bedf4b019b87fc3459687164b6ba3aa6e6218a922f7a108",
+    "successful": true,
+    "initialSandboxAttempt": "DNS resolution blocked; successful request used approved network access.",
+    "javascriptExecuted": false
+  },
+  "deploymentTimestamp": {
+    "value": null,
+    "reason": "These APIs expose stack LastUpdatedTime and distribution LastModifiedTime, not the deployment time of current application content. The HTTP response does not establish a source-to-deployment mapping."
+  },
+  "sanitization": "Allowlisted status fields, timestamps, public URL, versions and hashes only. Account IDs, ARNs, resource IDs, outputs, origins, credentials, headers and private configuration excluded.",
+  "limits": [
+    "Same-session observation, not independent certification or competition acceptance.",
+    "Public HTTP success and matching title do not verify JavaScript or the complete gardening journey.",
+    "Source commit identifies the evidence base, not a proven deployed revision.",
+    "No deployment, Builder publication or Git push performed."
+  ]
+}

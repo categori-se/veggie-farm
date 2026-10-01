@@ -2,6 +2,10 @@
 
 This pack documents how veggie.farm and Garden Planning Studio were developed and verified. It combines a retained console observation with fresh AWS API and browser checks and independently accessible GitHub CI. Records and captions identify their dates and scope; screenshots are actual captures hosted separately from this media-free repository.
 
+## Fresh same-session verification — September 30, 2026
+
+[Read the bounded AWS MCP and Studio check](aws-session-2026-09-30.md) · [Machine-readable evidence](aws-session-2026-09-30.json). The native AWS MCP inspection returned stack UPDATE_COMPLETE and CloudFront Deployed/enabled; the same session received HTTP 200 from public Studio. Exact source revision, tool versions, timestamps and limits are recorded.
+
 ## Continued deployment — September 28
 
 [Read the dated deployment update](deployment-update-2026-09-28.md) for agent-driven AWS SDK publication, conditional writes, completed CDN invalidation, hosted screenshot/page hash checks and four themed browser checks. The [structured record](deployment-update-2026-09-28.json) preserves source hashes and distinguishes this delivery work from the earlier console and MCP connections. The original manifest describes its historical snapshot, not later index edits or additions.
