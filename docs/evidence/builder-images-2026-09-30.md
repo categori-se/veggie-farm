@@ -1,8 +1,12 @@
 # Builder image kit — September 30, 2026
 
-Six images to insert beside your existing story. Your Builder narrative does not need replacing. Use image 1 as the cover and images 2–6 where they support the adjacent paragraph; if space is tight, omit image 4.
+Six original images to accompany your existing story. Your Builder narrative does not need replacing. Use image 1 as the cover and images 2–6 where they support the adjacent paragraph; if space is tight, omit image 4.
 
 Four screenshots were captured from the public app on September 30 in New York (October 1 UTC). The season panel and AWS console are retained captures with their original dates. All image bytes are hosted separately; this GitHub page contains captions, links and provenance.
+
+## Using images on GitHub and Builder
+
+The Markdown below displays these hosted images on GitHub. Builder's image renderer inspected on September 30 rejected external veggie.farm image URLs and hid them in published content. Upload each PNG using the Builder body editor's **Insert image** control, then keep the generated image URLs. Uploading a cover alone does not insert body images.
 
 ## 1. Studio in 3D
 
@@ -129,6 +133,16 @@ September 22: Codex-controlled Chromium inspected the AWS stack through a tempor
 ```
 
 </details>
+
+## Additional 2D and site views
+
+![The synthetic kitchen garden in 2D, with tomato, basil and lettuce spacing footprints.](https://veggie.farm/media/builder/20260930/07-same-garden-2d.png)
+
+The same garden as the opening 3D capture, viewed in 2D.
+
+![Berkshire Botanical Garden site study with beds, paths, buildings and illustrative vegetation.](https://veggie.farm/media/builder/20260930/08-mapped-garden-site.png)
+
+An incomplete public-site reconstruction with aerial imagery switched off. [Capture provenance and hashes](builder-inline-product-2026-09-30.json).
 
 ## Provenance and useful links
 

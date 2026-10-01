@@ -8,13 +8,13 @@ veggie.farm connects plant knowledge to a garden you can design, tend and rememb
 
 **One garden record, many views:** plant data supplies the dimensions and identity shared by the plan, procedural 3D scene, seasonal preview and saved garden. Start with a few plants, try an arrangement and follow your curiosity.
 
-<a href="docs/user-guide/README.md#explore-in-3d">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://veggie.farm/media/user-guide/20260927-themes/04-bed-in-3d-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://veggie.farm/media/user-guide/20260927-themes/04-bed-in-3d-light.png">
-  <img src="https://veggie.farm/media/user-guide/20260927-themes/04-bed-in-3d-light.png" alt="A sample bed with three plants shown in Studio’s 3D view" width="960" loading="lazy" style="max-width:100%;height:auto" />
-</picture>
-</a>
+![Walk through the illustrative edible garden in Studio’s 3D view, with planted beds, buildings and surrounding trees.](https://veggie.farm/media/readme/20261001/01-garden-walk.png)
+
+**See the whole garden:** walk among beds and plantings in 3D, with buildings and trees providing site context.
+
+![A tomato planting shown simultaneously as a 2D footprint and a procedural 3D form, with seasonal date controls below.](https://veggie.farm/media/readme/20261001/02-plant-2d-3d.png)
+
+**Inspect one planting:** compare its 2D footprint and procedural 3D form alongside seasonal planning controls. Both screenshots show the Berkshire Botanical Garden public example, an incomplete illustrative reconstruction.
 
 ## From concept to working application
 

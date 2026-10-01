@@ -2,9 +2,9 @@
 
 This pack documents how veggie.farm and Garden Planning Studio were developed and verified. It combines a retained console observation with fresh AWS API and browser checks and independently accessible GitHub CI. Records and captions identify their dates and scope; screenshots are actual captures hosted separately from this media-free repository.
 
-## Builder-ready images — September 30
+## Product screenshots — September 30
 
-[Six-image gallery, captions and copyable Markdown](builder-images-2026-09-30.md) · [Image provenance and hashes](builder-images-2026-09-30.json). Four fresh public-app captures complement the retained season and authentic AWS Console images.
+[Image gallery, captions and upload instructions](builder-images-2026-09-30.md) · [Image provenance and hashes](builder-images-2026-09-30.json). Four fresh public-app captures complement the retained season and authentic AWS Console images. The gallery also includes [additional 2D and site captures](builder-inline-product-2026-09-30.json). Hosted-image Markdown works on GitHub; Builder needs native image uploads. The README uses two owner-supplied screenshots with [separate provenance](readme-images-2026-10-01.json).
 
 ## Fresh same-session verification — September 30, 2026
 
@@ -53,4 +53,4 @@ To inspect source verification, open the linked GitHub run or clone its exact co
 
 ## Current narrative draft
 
-The [September 29 Builder replacement draft](builder-submission-draft.md) connects the owner’s gardening motivation, shared garden model, development feedback and invitation to build with open source and AI agents. It remains draft copy until separately published to Builder Center.
+The [current Builder narrative](builder-submission-draft.md) is an unchanged copy of the owner’s local body Markdown synchronized on October 1, 2026. Its wording, captions and links are preserved exactly. This repository copy does not verify the live Builder publication; native Builder image URLs may differ from the externally hosted URLs retained here.

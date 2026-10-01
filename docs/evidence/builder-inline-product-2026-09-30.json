@@ -1,0 +1,52 @@
+{
+  "startedAt": "2026-10-01T02:37:35.765Z",
+  "captures": [
+    {
+      "filename": "07-same-garden-2d.png",
+      "capturedAt": "2026-10-01T02:37:43.188Z",
+      "sourceEnvironment": "https://studio.veggie.farm/",
+      "bytes": 435145,
+      "sha256": "08274083f92890e3ef5cb5dcd497f29cff3fc8ab2c327b2e48a98c8dccdf5964",
+      "width": 1600,
+      "height": 1000,
+      "publicUrl": "https://veggie.farm/media/builder/20260930/07-same-garden-2d.png"
+    },
+    {
+      "filename": "08-mapped-garden-site.png",
+      "capturedAt": "2026-10-01T02:37:49.407Z",
+      "sourceEnvironment": "https://studio.veggie.farm/",
+      "bytes": 305192,
+      "sha256": "e35a1d7e5704a8d319f87e0fd1081a05eb6a5ba75ed31784175a1a393c19002a",
+      "width": 1600,
+      "height": 1000,
+      "publicUrl": "https://veggie.farm/media/builder/20260930/08-mapped-garden-site.png"
+    }
+  ],
+  "errors": [],
+  "requests": 226,
+  "blocked": 77,
+  "studioHtmlSha256": "84d96adaacbc6f496bedf4b019b87fc3459687164b6ba3aa6e6218a922f7a108",
+  "kind": "Two authentic product captures supplement the existing Builder images",
+  "sourceCommit": null,
+  "sourceCommitNote": "Hosted revision not exposed; retained Studio HTML hash identifies served content.",
+  "redaction": "None; synthetic browser-local garden and public site study only.",
+  "siteScope": "Incomplete Berkshire Botanical Garden reconstruction; aerial imagery explicitly hidden.",
+  "sameGardenAsHero": true,
+  "selectedInlineImages": [
+    "https://veggie.farm/media/builder/20260930/01-studio-hero.png",
+    "https://veggie.farm/media/user-guide/20260927-themes/05-plan-the-season-light.png",
+    "https://veggie.farm/media/builder/20260930/07-same-garden-2d.png",
+    "https://veggie.farm/evidence/aws-console-connection.png",
+    "https://veggie.farm/media/builder/20260930/08-mapped-garden-site.png"
+  ],
+  "originalNarrativePreserved": true,
+  "liveBuilderEdited": false,
+  "publication": {
+    "publishedAt": "2026-10-01T02:38:20.291495+00:00",
+    "newImages": 2,
+    "publicHashesVerified": 2,
+    "bytes": 740337,
+    "deletions": 0,
+    "invalidations": 0
+  }
+}
